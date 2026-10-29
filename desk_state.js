@@ -6,12 +6,12 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 46252.83,
-  "cash": 3729.74,
+  "equity": 46204.82,
+  "cash": 1230.0,
   "realized_pnl": -6277.6,
-  "unrealized_pnl": 2530.43,
-  "day_pnl": -2851.42,
-  "day_pnl_pct": -0.05807,
+  "unrealized_pnl": 2482.42,
+  "day_pnl": -2899.43,
+  "day_pnl_pct": -0.05905,
   "day_baseline_date": "2026-10-29",
   "day_baseline_equity": 49104.25,
   "open_positions": [
@@ -176,9 +176,36 @@ window.__DESK_STATE__ = {
       "mark_at": "2026-10-29T16:07:36-03:00",
       "unrealized_pnl": 27.97,
       "exposure": 69917.57
+    },
+    {
+      "id": "2026-10-29_HBAR-USD_113",
+      "symbol": "HBAR-USD",
+      "side": "short",
+      "size": 685800.0,
+      "entry": 0.0729,
+      "notional": 49994.82,
+      "stop": 0.075816,
+      "target": 0.067068,
+      "target2": 0.064152,
+      "invalidation": "exit on any trade through stop 0.075816, at target, or on chaos rotate",
+      "risk_usd": 1999.79,
+      "risk_pct_equity": 0.04324,
+      "opened_at": "2026-10-29T16:07:43-03:00",
+      "card": "CHAOS_HBAR",
+      "reason": "CHAOS rotate HBAR-USD: momentum short into broad selloff \u2014 short (24h -4.18% from public stats open), notional $49,995 @ 20x paper (margin $2,500), stop 4.0% / tgt 8.0%/12.0%, risk $2,000 (4.3% eq; chaos cap 100%)",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-29T16:07:43-03:00 BRT (exch 2026-10-29T19:07:41.283745939Z) api.exchange.coinbase.com",
+      "override": null,
+      "paper_only": true,
+      "leverage": 20.0,
+      "margin": 2499.74,
+      "mark": 0.07297,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-10-29T16:07:35-03:00",
+      "unrealized_pnl": -48.01,
+      "exposure": 50042.83
     }
   ],
-  "open_count": 6,
+  "open_count": 7,
   "closed_positions": [
     {
       "type": "close",
@@ -976,7 +1003,7 @@ window.__DESK_STATE__ = {
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 46252.83,
+  "max_risk_usd": 46204.82,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -491042.5,
   "paused": false,
@@ -1031,13 +1058,13 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-10-29T16:07:42-03:00",
-      "note": "last: paper fill LTC-USD"
+      "last_run": "2026-10-29T16:07:43-03:00",
+      "note": "last: paper fill HBAR-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-10-29T16:07:42-03:00",
-      "note": "logged 2026-10-29_LTC-USD_112"
+      "last_run": "2026-10-29T16:07:43-03:00",
+      "note": "logged 2026-10-29_HBAR-USD_113"
     },
     "Equity": {
       "status": "ready",
@@ -1780,18 +1807,14 @@ window.__DESK_STATE__ = {
       "t": "2026-10-29T16:07:42-03:00",
       "equity": 46252.83,
       "kind": "fill"
+    },
+    {
+      "t": "2026-10-29T16:07:43-03:00",
+      "equity": 46204.82,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:33:32-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 245 XRP-USD @ 1.3339 \u00b7 stop 1.3 \u00b7 tgt 1.38 \u00b7 risk $8.31",
-      "reason": "Paper session: XRP strongest PASS name (+2.9% 24h, vol ~$61.6M) pressing 24h high 1.342",
-      "fill_id": "2026-10-27_XRP-USD_06",
-      "card": "SESS_XRP_01"
-    },
     {
       "t": "2026-10-27T23:33:32-03:00",
       "agent": "Rug Check",
@@ -3345,6 +3368,15 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "HBAR-USD PASS (chaos: non-blocking)",
       "reason": "vol $5.5M, spread 0.041%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
+    },
+    {
+      "t": "2026-10-29T16:07:43-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 685800 HBAR-USD @ 0.0729 \u00b7 notional $49,995 (20x, margin $2,500) \u00b7 stop 0.075816 \u00b7 tgt 0.067068 \u00b7 risk $1,999.79",
+      "reason": "CHAOS rotate HBAR-USD: momentum short into broad selloff \u2014 short (24h -4.18% from public stats open), notional $49,995 @ 20x paper (margin $2,500), stop 4.0% / tgt 8.0%/12.0%, risk $2,000 (4.3% eq; chaos cap 100%)",
+      "fill_id": "2026-10-29_HBAR-USD_113",
+      "card": "CHAOS_HBAR"
     }
   ],
   "scanner_feed": [
@@ -4311,8 +4343,8 @@ window.__DESK_STATE__ = {
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 39992.66,
-  "exposure": 795492.23,
-  "buying_power": 129564.37,
-  "effective_leverage": 17.2
+  "margin_used": 42492.4,
+  "exposure": 845535.06,
+  "buying_power": 78561.34,
+  "effective_leverage": 18.3
 };
