@@ -1,0 +1,4233 @@
+{
+  "schema_version": 1,
+  "desk": "Crypto Paper Terminal",
+  "paper_only": true,
+  "currency": "USD",
+  "rules_version": "2.0-chaos",
+  "starting_equity": 50000,
+  "equity": 50049.17,
+  "cash": 4347.05,
+  "realized_pnl": -157.35,
+  "unrealized_pnl": 206.52,
+  "day_pnl": 944.92,
+  "day_pnl_pct": 0.01924,
+  "day_baseline_date": "2026-10-29",
+  "day_baseline_equity": 49104.25,
+  "open_positions": [
+    {
+      "id": "2026-10-29_BTC-USD_87",
+      "symbol": "BTC-USD",
+      "side": "long",
+      "size": 3.457,
+      "entry": 80987.01,
+      "notional": 279972.09,
+      "stop": 79367.0,
+      "target": 84226.0,
+      "target2": 86656.0,
+      "invalidation": "exit on any trade through stop 79367, at target, or on chaos rotate",
+      "risk_usd": 5600.37,
+      "risk_pct_equity": 0.11283,
+      "opened_at": "2026-10-29T14:30:25-03:00",
+      "card": "CHAOS_BTC",
+      "reason": "CHAOS A BTC-USD: high-conviction momentum swing \u2014 long (24h +0.30% from public stats open), notional $279,972 @ 20x paper (margin $13,999), stop 2.0% / tgt 4.0%/7.0%, risk $5,600 (11.3% eq; chaos cap 100%)",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-29T14:30:25-03:00 BRT (exch 2026-10-29T17:30:23.752508440Z) api.exchange.coinbase.com",
+      "override": null,
+      "paper_only": true,
+      "leverage": 20.0,
+      "margin": 13998.6,
+      "mark": 81023.11,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-10-29T14:33:33-03:00",
+      "unrealized_pnl": 124.8,
+      "exposure": 280096.89
+    },
+    {
+      "id": "2026-10-29_SUI-USD_92",
+      "symbol": "SUI-USD",
+      "side": "long",
+      "size": 63610.0,
+      "entry": 0.9431,
+      "notional": 59990.59,
+      "stop": 0.90538,
+      "target": 1.0185,
+      "target2": 1.0563,
+      "invalidation": "exit on any trade through stop 0.90538, at target, or on chaos rotate",
+      "risk_usd": 2399.37,
+      "risk_pct_equity": 0.0482,
+      "opened_at": "2026-10-29T14:30:29-03:00",
+      "card": "CHAOS_SUI",
+      "reason": "CHAOS A SUI-USD: high-conviction momentum swing \u2014 long (24h +2.06% from public stats open), notional $59,991 @ 20x paper (margin $3,000), stop 4.0% / tgt 8.0%/12.0%, risk $2,399 (4.8% eq; chaos cap 100%)",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-29T14:30:28-03:00 BRT (exch 2026-10-29T17:30:23.563468375Z) api.exchange.coinbase.com",
+      "override": null,
+      "paper_only": true,
+      "leverage": 20.0,
+      "margin": 2999.53,
+      "mark": 0.9435,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-10-29T14:33:38-03:00",
+      "unrealized_pnl": 25.44,
+      "exposure": 60016.04
+    },
+    {
+      "id": "2026-10-29_ADA-USD_97",
+      "symbol": "ADA-USD",
+      "side": "long",
+      "size": 293300.0,
+      "entry": 0.20456,
+      "notional": 59997.45,
+      "stop": 0.19638,
+      "target": 0.22092,
+      "target2": 0.22911,
+      "invalidation": "exit on any trade through stop 0.19638, at target, or on chaos rotate",
+      "risk_usd": 2399.19,
+      "risk_pct_equity": 0.04792,
+      "opened_at": "2026-10-29T14:31:59-03:00",
+      "card": "CHAOS_ADA",
+      "reason": "CHAOS B ADA-USD: rotation swing \u2014 long (24h +1.14% from public stats open), notional $59,997 @ 20x paper (margin $3,000), stop 4.0% / tgt 8.0%/12.0%, risk $2,399 (4.8% eq; chaos cap 100%)",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-29T14:31:59-03:00 BRT (exch 2026-10-29T17:31:44.544787921Z) api.exchange.coinbase.com",
+      "override": null,
+      "paper_only": true,
+      "leverage": 20.0,
+      "margin": 2999.87,
+      "mark": 0.20455,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-10-29T14:33:31-03:00",
+      "unrealized_pnl": -2.93,
+      "exposure": 59994.51
+    },
+    {
+      "id": "2026-10-29_NEAR-USD_98",
+      "symbol": "NEAR-USD",
+      "side": "short",
+      "size": 13130.0,
+      "entry": 4.5692,
+      "notional": 59993.6,
+      "stop": 4.752,
+      "target": 4.2037,
+      "target2": 4.0209,
+      "invalidation": "exit on any trade through stop 4.752, at target, or on chaos rotate",
+      "risk_usd": 2400.16,
+      "risk_pct_equity": 0.04793,
+      "opened_at": "2026-10-29T14:32:00-03:00",
+      "card": "CHAOS_NEAR",
+      "reason": "CHAOS B NEAR-USD: rotation swing \u2014 short (24h -0.47% from public stats open), notional $59,994 @ 20x paper (margin $3,000), stop 4.0% / tgt 8.0%/12.0%, risk $2,400 (4.8% eq; chaos cap 100%)",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-29T14:31:59-03:00 BRT (exch 2026-10-29T17:31:56.334094194Z) api.exchange.coinbase.com",
+      "override": null,
+      "paper_only": true,
+      "leverage": 20.0,
+      "margin": 2999.68,
+      "mark": 4.5583,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-10-29T14:33:36-03:00",
+      "unrealized_pnl": 143.12,
+      "exposure": 59850.48
+    },
+    {
+      "id": "2026-10-29_LINK-USD_99",
+      "symbol": "LINK-USD",
+      "side": "long",
+      "size": 5079.0,
+      "entry": 11.812,
+      "notional": 59993.15,
+      "stop": 11.34,
+      "target": 12.757,
+      "target2": 13.229,
+      "invalidation": "exit on any trade through stop 11.34, at target, or on chaos rotate",
+      "risk_usd": 2397.29,
+      "risk_pct_equity": 0.04789,
+      "opened_at": "2026-10-29T14:32:00-03:00",
+      "card": "CHAOS_LINK",
+      "reason": "CHAOS B LINK-USD: rotation swing \u2014 long (24h +2.29% from public stats open), notional $59,993 @ 20x paper (margin $3,000), stop 4.0% / tgt 8.0%/12.0%, risk $2,397 (4.8% eq; chaos cap 100%)",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-29T14:32:00-03:00 BRT (exch 2026-10-29T17:31:29.595527078Z) api.exchange.coinbase.com",
+      "override": null,
+      "paper_only": true,
+      "leverage": 20.0,
+      "margin": 2999.66,
+      "mark": 11.808,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-10-29T14:33:36-03:00",
+      "unrealized_pnl": -20.32,
+      "exposure": 59972.83
+    },
+    {
+      "id": "2026-10-29_ETH-USD_102",
+      "symbol": "ETH-USD",
+      "side": "long",
+      "size": 76.61,
+      "entry": 2349.45,
+      "notional": 179991.36,
+      "stop": 2290.7,
+      "target": 2466.9,
+      "target2": 2537.4,
+      "invalidation": "exit on any trade through stop 2290.7, at target, or on chaos rotate",
+      "risk_usd": 4500.84,
+      "risk_pct_equity": 0.08951,
+      "opened_at": "2026-10-29T14:33:29-03:00",
+      "card": "CHAOS_ETH",
+      "reason": "CHAOS C ETH-USD: final high-conviction reload \u2014 long (24h +0.31% from public stats open), notional $179,991 @ 20x paper (margin $9,000), stop 2.5% / tgt 5.0%/8.0%, risk $4,501 (9.0% eq; chaos cap 100%)",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-29T14:33:29-03:00 BRT (exch 2026-10-29T17:33:28.002254Z) api.exchange.coinbase.com",
+      "override": null,
+      "paper_only": true,
+      "leverage": 20.0,
+      "margin": 8999.57,
+      "mark": 2348.72,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-10-29T14:33:34-03:00",
+      "unrealized_pnl": -55.93,
+      "exposure": 179935.44
+    },
+    {
+      "id": "2026-10-29_SOL-USD_103",
+      "symbol": "SOL-USD",
+      "side": "long",
+      "size": 1181.0,
+      "entry": 101.59,
+      "notional": 119977.79,
+      "stop": 98.542,
+      "target": 107.69,
+      "target2": 111.75,
+      "invalidation": "exit on any trade through stop 98.542, at target, or on chaos rotate",
+      "risk_usd": 3599.69,
+      "risk_pct_equity": 0.0715,
+      "opened_at": "2026-10-29T14:33:30-03:00",
+      "card": "CHAOS_SOL",
+      "reason": "CHAOS C SOL-USD: final high-conviction reload \u2014 long (24h +0.06% from public stats open), notional $119,978 @ 20x paper (margin $5,999), stop 3.0% / tgt 6.0%/10.0%, risk $3,600 (7.2% eq; chaos cap 100%)",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-29T14:33:30-03:00 BRT (exch 2026-10-29T17:33:28.702728373Z) api.exchange.coinbase.com",
+      "override": null,
+      "paper_only": true,
+      "leverage": 20.0,
+      "margin": 5998.89,
+      "mark": 101.56,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-10-29T14:33:38-03:00",
+      "unrealized_pnl": -35.43,
+      "exposure": 119942.36
+    },
+    {
+      "id": "2026-10-29_XRP-USD_104",
+      "symbol": "XRP-USD",
+      "side": "short",
+      "size": 69420.0,
+      "entry": 1.2964,
+      "notional": 89996.09,
+      "stop": 1.3353,
+      "target": 1.2186,
+      "target2": 1.1668,
+      "invalidation": "exit on any trade through stop 1.3353, at target, or on chaos rotate",
+      "risk_usd": 2700.44,
+      "risk_pct_equity": 0.0536,
+      "opened_at": "2026-10-29T14:33:31-03:00",
+      "card": "CHAOS_XRP",
+      "reason": "CHAOS C XRP-USD: final high-conviction reload \u2014 short (24h -1.46% from public stats open), notional $89,996 @ 20x paper (margin $4,500), stop 3.0% / tgt 6.0%/10.0%, risk $2,700 (5.4% eq; chaos cap 100%)",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-29T14:33:30-03:00 BRT (exch 2026-10-29T17:33:26.040447973Z) api.exchange.coinbase.com",
+      "override": null,
+      "paper_only": true,
+      "leverage": 20.0,
+      "margin": 4499.8,
+      "mark": 1.296,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-10-29T14:33:40-03:00",
+      "unrealized_pnl": 27.77,
+      "exposure": 89968.32
+    }
+  ],
+  "open_count": 8,
+  "closed_positions": [
+    {
+      "type": "close",
+      "id": "2026-10-27_SOL-USD_01",
+      "symbol": "SOL-USD",
+      "side": "long",
+      "size": 5.5,
+      "entry": 101.61,
+      "exit": 101.5,
+      "pnl": -0.6,
+      "closed_at": "2026-10-27T23:33:12-03:00",
+      "reason": "session rotate: free cash/slots for broader paper demo (owner-approved close at public market mark)",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-27T23:33:12-03:00 BRT (exch 2026-10-28T02:33:11.142794174Z) api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-27_ETH-USD_02",
+      "symbol": "ETH-USD",
+      "side": "long",
+      "size": 0.18,
+      "entry": 2355.41,
+      "exit": 2353.46,
+      "pnl": -0.35,
+      "closed_at": "2026-10-27T23:33:12-03:00",
+      "reason": "session rotate: free cash/slots for broader paper demo (owner-approved close at public market mark)",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-27T23:33:12-03:00 BRT (exch 2026-10-28T02:33:09.202304999Z) api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-27_XRP-USD_06",
+      "symbol": "XRP-USD",
+      "side": "long",
+      "size": 245.0,
+      "entry": 1.3339,
+      "exit": 1.3346,
+      "pnl": 0.17,
+      "closed_at": "2026-10-27T23:33:39-03:00",
+      "reason": "session rotate cycle: free slot/cash to rotate into deeper-liquidity ETH/SOL for paper demo (owner-approved)",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-27T23:33:33-03:00 BRT (exch 2026-10-28T02:33:28.163935915Z) api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-27_LTC-USD_07",
+      "symbol": "LTC-USD",
+      "side": "long",
+      "size": 5.9,
+      "entry": 57.366,
+      "exit": 57.389,
+      "pnl": 0.14,
+      "closed_at": "2026-10-27T23:33:39-03:00",
+      "reason": "session rotate cycle: free slot/cash to rotate into deeper-liquidity ETH/SOL for paper demo (owner-approved)",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-27T23:33:33-03:00 BRT (exch 2026-10-28T02:33:30.640295501Z) api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-27_BTC-USD_05",
+      "symbol": "BTC-USD",
+      "side": "long",
+      "size": 0.004,
+      "entry": 80814.58,
+      "exit": 80798.32,
+      "pnl": -0.07,
+      "closed_at": "2026-10-27T23:41:18-03:00",
+      "reason": "high-freq demo: flatten before aggressive rotate (owner-authorized t4u, public market mark)",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-27T23:41:18-03:00 BRT (exch 2026-10-28T02:41:17.666123453Z) api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-27_ETH-USD_10",
+      "symbol": "ETH-USD",
+      "side": "long",
+      "size": 0.14,
+      "entry": 2354.43,
+      "exit": 2353.76,
+      "pnl": -0.09,
+      "closed_at": "2026-10-27T23:41:18-03:00",
+      "reason": "high-freq demo: flatten before aggressive rotate (owner-authorized t4u, public market mark)",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-27T23:41:18-03:00 BRT (exch 2026-10-28T02:41:15.334400416Z) api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-27_SOL-USD_11",
+      "symbol": "SOL-USD",
+      "side": "long",
+      "size": 3.4,
+      "entry": 101.53,
+      "exit": 101.51,
+      "pnl": -0.07,
+      "closed_at": "2026-10-27T23:41:18-03:00",
+      "reason": "high-freq demo: flatten before aggressive rotate (owner-authorized t4u, public market mark)",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-27T23:41:18-03:00 BRT (exch 2026-10-28T02:41:16.355067922Z) api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-27_BTC-USD_15",
+      "symbol": "BTC-USD",
+      "side": "long",
+      "size": 0.001353,
+      "entry": 80797.87,
+      "exit": 80763.44,
+      "pnl": -0.05,
+      "closed_at": "2026-10-27T23:42:34-03:00",
+      "reason": "high-freq demo: hit rotate / tight target or stop simulation at market mark (batch 1 churn)",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-27T23:42:34-03:00 BRT (exch 2026-10-28T02:42:32.492362725Z) api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-27_ETH-USD_16",
+      "symbol": "ETH-USD",
+      "side": "long",
+      "size": 0.04646,
+      "entry": 2353.59,
+      "exit": 2352.15,
+      "pnl": -0.07,
+      "closed_at": "2026-10-27T23:42:34-03:00",
+      "reason": "high-freq demo: hit rotate / tight target or stop simulation at market mark (batch 1 churn)",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-27T23:42:34-03:00 BRT (exch 2026-10-28T02:42:33.025592724Z) api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-27_XRP-USD_17",
+      "symbol": "XRP-USD",
+      "side": "long",
+      "size": 82.06,
+      "entry": 1.3325,
+      "exit": 1.3313,
+      "pnl": -0.1,
+      "closed_at": "2026-10-27T23:42:34-03:00",
+      "reason": "high-freq demo: hit rotate / tight target or stop simulation at market mark (batch 1 churn)",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-27T23:42:34-03:00 BRT (exch 2026-10-28T02:42:33.026669835Z) api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-27_SUI-USD_20",
+      "symbol": "SUI-USD",
+      "side": "long",
+      "size": 116.8,
+      "entry": 0.9355,
+      "exit": 0.9344,
+      "pnl": -0.13,
+      "closed_at": "2026-10-27T23:42:34-03:00",
+      "reason": "high-freq demo: hit rotate / tight target or stop simulation at market mark (batch 1 churn)",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-27T23:42:34-03:00 BRT (exch 2026-10-28T02:42:33.027341969Z) api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-27_LTC-USD_21",
+      "symbol": "LTC-USD",
+      "side": "long",
+      "size": 1.905,
+      "entry": 57.375,
+      "exit": 57.381,
+      "pnl": 0.01,
+      "closed_at": "2026-10-27T23:42:34-03:00",
+      "reason": "high-freq demo: hit rotate / tight target or stop simulation at market mark (batch 1 churn)",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-27T23:42:34-03:00 BRT (exch 2026-10-28T02:42:31.410527990Z) api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-27_XLM-USD_22",
+      "symbol": "XLM-USD",
+      "side": "long",
+      "size": 637.5,
+      "entry": 0.171505,
+      "exit": 0.171358,
+      "pnl": -0.09,
+      "closed_at": "2026-10-27T23:42:35-03:00",
+      "reason": "high-freq demo: hit rotate / tight target or stop simulation at market mark (batch 1 churn)",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-27T23:42:35-03:00 BRT (exch 2026-10-28T02:42:34.674018677Z) api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-27_LINK-USD_23",
+      "symbol": "LINK-USD",
+      "side": "long",
+      "size": 9.358,
+      "entry": 11.684,
+      "exit": 11.673,
+      "pnl": -0.1,
+      "closed_at": "2026-10-27T23:42:35-03:00",
+      "reason": "high-freq demo: hit rotate / tight target or stop simulation at market mark (batch 1 churn)",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-27T23:42:35-03:00 BRT (exch 2026-10-28T02:42:22.759812988Z) api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-27_INJ-USD_35",
+      "symbol": "INJ-USD",
+      "side": "long",
+      "size": 19.32,
+      "entry": 7.952,
+      "exit": 7.952,
+      "pnl": 0.0,
+      "closed_at": "2026-10-27T23:42:47-03:00",
+      "reason": "high-freq demo: tight stop/target simulation at market mark + demo wind-down to \u22643 opens before restoring normal limits",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-27T23:42:47-03:00 BRT (exch 2026-10-28T02:42:04.607740959Z) api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-27_DOGE-USD_32",
+      "symbol": "DOGE-USD",
+      "side": "long",
+      "size": 1945.0,
+      "entry": 0.07898,
+      "exit": 0.07896,
+      "pnl": -0.04,
+      "closed_at": "2026-10-27T23:42:47-03:00",
+      "reason": "high-freq demo: tight stop/target simulation at market mark + demo wind-down to \u22643 opens before restoring normal limits",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-27T23:42:47-03:00 BRT (exch 2026-10-28T02:42:39.694860634Z) api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-27_SOL-USD_18",
+      "symbol": "SOL-USD",
+      "side": "long",
+      "size": 1.077,
+      "entry": 101.5,
+      "exit": 101.43,
+      "pnl": -0.08,
+      "closed_at": "2026-10-27T23:42:48-03:00",
+      "reason": "high-freq demo: tight stop/target simulation at market mark + demo wind-down to \u22643 opens before restoring normal limits",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-27T23:42:48-03:00 BRT (exch 2026-10-28T02:42:42.282245772Z) api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-27_NEAR-USD_19",
+      "symbol": "NEAR-USD",
+      "side": "long",
+      "size": 23.18,
+      "entry": 4.7166,
+      "exit": 4.7084,
+      "pnl": -0.19,
+      "closed_at": "2026-10-27T23:42:48-03:00",
+      "reason": "high-freq demo: tight stop/target simulation at market mark + demo wind-down to \u22643 opens before restoring normal limits",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-27T23:42:48-03:00 BRT (exch 2026-10-28T02:42:42.477935121Z) api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-27_ADA-USD_31",
+      "symbol": "ADA-USD",
+      "side": "long",
+      "size": 745.2,
+      "entry": 0.20616,
+      "exit": 0.20637,
+      "pnl": 0.16,
+      "closed_at": "2026-10-27T23:47:49-03:00",
+      "reason": "capital reset: flatten before raising paper equity to $50,000",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-27T23:47:49-03:00 BRT (exch 2026-10-28T02:47:40.772000280Z) api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-27_HBAR-USD_33",
+      "symbol": "HBAR-USD",
+      "side": "long",
+      "size": 2006.0,
+      "entry": 0.07656,
+      "exit": 0.07658,
+      "pnl": 0.04,
+      "closed_at": "2026-10-27T23:47:49-03:00",
+      "reason": "capital reset: flatten before raising paper equity to $50,000",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-27T23:47:49-03:00 BRT (exch 2026-10-28T02:47:37.216580775Z) api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-27_BCH-USD_34",
+      "symbol": "BCH-USD",
+      "side": "long",
+      "size": 0.5226,
+      "entry": 293.98,
+      "exit": 294.1,
+      "pnl": 0.06,
+      "closed_at": "2026-10-27T23:47:49-03:00",
+      "reason": "capital reset: flatten before raising paper equity to $50,000",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-27T23:47:49-03:00 BRT (exch 2026-10-28T02:47:48.738889511Z) api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-27_BTC-USD_43",
+      "symbol": "BTC-USD",
+      "side": "long",
+      "size": 0.1484,
+      "entry": 80825.0,
+      "exit": 80825.52,
+      "pnl": 0.08,
+      "closed_at": "2026-10-27T23:50:04-03:00",
+      "reason": "v1.1 batch 1 rotate: demo turnover \u2014 close at public mark to recycle cash into batch 2",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-27T23:50:04-03:00 BRT (exch 2026-10-28T02:50:03.494514664Z) api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-27_ETH-USD_44",
+      "symbol": "ETH-USD",
+      "side": "long",
+      "size": 4.245,
+      "entry": 2355.31,
+      "exit": 2355.04,
+      "pnl": -1.15,
+      "closed_at": "2026-10-27T23:50:04-03:00",
+      "reason": "v1.1 batch 1 rotate: demo turnover \u2014 close at public mark to recycle cash into batch 2",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-27T23:50:04-03:00 BRT (exch 2026-10-28T02:50:02.639739794Z) api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-27_XRP-USD_45",
+      "symbol": "XRP-USD",
+      "side": "long",
+      "size": 6000.0,
+      "entry": 1.3332,
+      "exit": 1.3342,
+      "pnl": 6.0,
+      "closed_at": "2026-10-27T23:50:04-03:00",
+      "reason": "v1.1 batch 1 rotate: demo turnover \u2014 close at public mark to recycle cash into batch 2",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-27T23:50:04-03:00 BRT (exch 2026-10-28T02:50:01.765518050Z) api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-27_SOL-USD_46",
+      "symbol": "SOL-USD",
+      "side": "long",
+      "size": 68.91,
+      "entry": 101.57,
+      "exit": 101.59,
+      "pnl": 1.38,
+      "closed_at": "2026-10-27T23:50:04-03:00",
+      "reason": "v1.1 batch 1 rotate: demo turnover \u2014 close at public mark to recycle cash into batch 2",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-27T23:50:04-03:00 BRT (exch 2026-10-28T02:50:02.790047704Z) api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-27_NEAR-USD_47",
+      "symbol": "NEAR-USD",
+      "side": "long",
+      "size": 955.2,
+      "entry": 4.711,
+      "exit": 4.7082,
+      "pnl": -2.67,
+      "closed_at": "2026-10-27T23:50:04-03:00",
+      "reason": "v1.1 batch 1 rotate: demo turnover \u2014 close at public mark to recycle cash into batch 2",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-27T23:50:04-03:00 BRT (exch 2026-10-28T02:49:57.662259976Z) api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-27_SUI-USD_48",
+      "symbol": "SUI-USD",
+      "side": "long",
+      "size": 4807.0,
+      "entry": 0.9361,
+      "exit": 0.9361,
+      "pnl": 0.0,
+      "closed_at": "2026-10-27T23:50:05-03:00",
+      "reason": "v1.1 batch 1 rotate: demo turnover \u2014 close at public mark to recycle cash into batch 2",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-27T23:50:05-03:00 BRT (exch 2026-10-28T02:49:47.494840877Z) api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-27_XLM-USD_49",
+      "symbol": "XLM-USD",
+      "side": "long",
+      "size": 23320.0,
+      "entry": 0.171516,
+      "exit": 0.17158,
+      "pnl": 1.49,
+      "closed_at": "2026-10-27T23:50:05-03:00",
+      "reason": "v1.1 batch 1 rotate: demo turnover \u2014 close at public mark to recycle cash into batch 2",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-27T23:50:05-03:00 BRT (exch 2026-10-28T02:49:55.992720237Z) api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-27_BTC-USD_57",
+      "symbol": "BTC-USD",
+      "side": "long",
+      "size": 0.1483,
+      "entry": 80863.67,
+      "exit": 80926.09,
+      "pnl": 9.26,
+      "closed_at": "2026-10-27T23:51:09-03:00",
+      "reason": "v1.1 batch 2 trim: weakest unrealized ($+0.00) at last mark \u2014 free cash for rotation",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-27T23:51:09-03:00 BRT (exch 2026-10-28T02:51:08.820932026Z) api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-27_ETH-USD_58",
+      "symbol": "ETH-USD",
+      "side": "long",
+      "size": 4.243,
+      "entry": 2356.63,
+      "exit": 2358.59,
+      "pnl": 8.32,
+      "closed_at": "2026-10-27T23:51:09-03:00",
+      "reason": "v1.1 batch 2 trim: weakest unrealized ($+0.00) at last mark \u2014 free cash for rotation",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-27T23:51:09-03:00 BRT (exch 2026-10-28T02:51:08.836020299Z) api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-27_XRP-USD_60",
+      "symbol": "XRP-USD",
+      "side": "long",
+      "size": 5245.0,
+      "entry": 1.3344,
+      "exit": 1.3131,
+      "pnl": -111.72,
+      "closed_at": "2026-10-28T12:14:32-03:00",
+      "reason": "stop hit: mark 1.3131 < stop 1.3144 (12:14 BRT scanner routine)",
+      "price_source": "coinbase exchange public ticker 12:13:59 BRT",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-27_NEAR-USD_63",
+      "symbol": "NEAR-USD",
+      "side": "long",
+      "size": 849.5,
+      "entry": 4.7082,
+      "exit": 4.6167,
+      "pnl": -77.73,
+      "closed_at": "2026-10-28T12:14:32-03:00",
+      "reason": "stop hit: mark 4.6167 < stop 4.6376 (12:14 BRT scanner routine)",
+      "price_source": "coinbase exchange public ticker 12:13:58 BRT",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-27_LTC-USD_61",
+      "symbol": "LTC-USD",
+      "side": "long",
+      "size": 69.62,
+      "entry": 57.452,
+      "exit": 59.184,
+      "pnl": 120.58,
+      "closed_at": "2026-10-28T20:10:02-03:00",
+      "reason": "target 1 hit (mark 59.184 >= tgt 58.888)",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-28T20:09:39-03:00 BRT api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-27_PEPE-USD_62",
+      "symbol": "PEPE-USD",
+      "side": "long",
+      "size": 817900000.0,
+      "entry": 4.89e-06,
+      "exit": 5.05e-06,
+      "pnl": 130.86,
+      "closed_at": "2026-10-28T20:10:03-03:00",
+      "reason": "target 1 hit (mark 5.05e-06 >= tgt 5.0367e-06)",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-28T20:09:39-03:00 BRT api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-28_XRP-USD_72",
+      "symbol": "XRP-USD",
+      "side": "long",
+      "size": 611.0,
+      "entry": 1.3248,
+      "exit": 1.2914,
+      "pnl": -20.41,
+      "closed_at": "2026-10-29T08:10:07-03:00",
+      "reason": "stop hit: mark 1.2914 < stop 1.3049 (08:10 BRT scanner routine)",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-29T08:10:01-03:00 BRT api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-28_NEAR-USD_75",
+      "symbol": "NEAR-USD",
+      "side": "long",
+      "size": 1686.9,
+      "entry": 4.7424,
+      "exit": 4.4189,
+      "pnl": -545.71,
+      "closed_at": "2026-10-29T08:10:07-03:00",
+      "reason": "stop hit: mark 4.4189 < stop 4.6713 (08:10 BRT scanner routine; gapped through stop overnight)",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-29T08:10:00-03:00 BRT api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-27_SOL-USD_59",
+      "symbol": "SOL-USD",
+      "side": "long",
+      "size": 78.72,
+      "entry": 101.62,
+      "exit": 101.56,
+      "pnl": -4.72,
+      "notional": 7999.53,
+      "leverage": 1,
+      "margin": 7999.53,
+      "closed_at": "2026-10-29T14:30:13-03:00",
+      "reason": "CHAOS flatten: close unlevered v1.1 position at public mark to free full cash as 20x paper margin",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-29T14:30:13-03:00 BRT (exch 2026-10-29T17:30:11.886539311Z) api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-27_SUI-USD_66",
+      "symbol": "SUI-USD",
+      "side": "long",
+      "size": 12270.0,
+      "entry": 0.9372,
+      "exit": 0.9439,
+      "pnl": 82.21,
+      "notional": 11499.44,
+      "leverage": 1,
+      "margin": 11499.44,
+      "closed_at": "2026-10-29T14:30:14-03:00",
+      "reason": "CHAOS flatten: close unlevered v1.1 position at public mark to free full cash as 20x paper margin",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-29T14:30:14-03:00 BRT (exch 2026-10-29T17:30:07.647102627Z) api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-27_XLM-USD_67",
+      "symbol": "XLM-USD",
+      "side": "long",
+      "size": 36090.0,
+      "entry": 0.171702,
+      "exit": 0.171353,
+      "pnl": -12.6,
+      "notional": 6196.73,
+      "leverage": 1,
+      "margin": 6196.73,
+      "closed_at": "2026-10-29T14:30:14-03:00",
+      "reason": "CHAOS flatten: close unlevered v1.1 position at public mark to free full cash as 20x paper margin",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-29T14:30:14-03:00 BRT (exch 2026-10-29T17:30:09.547735330Z) api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-28_BTC-USD_68",
+      "symbol": "BTC-USD",
+      "side": "long",
+      "size": 0.06543,
+      "entry": 81292.52,
+      "exit": 81006.67,
+      "pnl": -18.7,
+      "notional": 5318.97,
+      "leverage": 1,
+      "margin": 5318.97,
+      "closed_at": "2026-10-29T14:30:14-03:00",
+      "reason": "CHAOS flatten: close unlevered v1.1 position at public mark to free full cash as 20x paper margin",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-29T14:30:14-03:00 BRT (exch 2026-10-29T17:30:13.725161994Z) api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-28_ETH-USD_71",
+      "symbol": "ETH-USD",
+      "side": "long",
+      "size": 4.286,
+      "entry": 2332.95,
+      "exit": 2347.93,
+      "pnl": 64.2,
+      "notional": 9999.02,
+      "leverage": 1,
+      "margin": 9999.02,
+      "closed_at": "2026-10-29T14:30:15-03:00",
+      "reason": "CHAOS flatten: close unlevered v1.1 position at public mark to free full cash as 20x paper margin",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-29T14:30:15-03:00 BRT (exch 2026-10-29T17:30:14.311302731Z) api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-29_LTC-USD_78",
+      "symbol": "LTC-USD",
+      "side": "long",
+      "size": 69.0,
+      "entry": 57.827,
+      "exit": 58.208,
+      "pnl": 26.29,
+      "notional": 3990.06,
+      "leverage": 1,
+      "margin": 3990.06,
+      "closed_at": "2026-10-29T14:30:15-03:00",
+      "reason": "CHAOS flatten: close unlevered v1.1 position at public mark to free full cash as 20x paper margin",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-29T14:30:15-03:00 BRT (exch 2026-10-29T17:30:11.970268485Z) api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-29_XRP-USD_79",
+      "symbol": "XRP-USD",
+      "side": "long",
+      "size": 3069.0,
+      "entry": 1.303,
+      "exit": 1.296,
+      "pnl": -21.48,
+      "notional": 3998.91,
+      "leverage": 1,
+      "margin": 3998.91,
+      "closed_at": "2026-10-29T14:30:15-03:00",
+      "reason": "CHAOS flatten: close unlevered v1.1 position at public mark to free full cash as 20x paper margin",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-29T14:30:15-03:00 BRT (exch 2026-10-29T17:30:13.425197623Z) api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-29_SOL-USD_89",
+      "symbol": "SOL-USD",
+      "side": "short",
+      "size": 1379.0,
+      "entry": 101.52,
+      "exit": 101.6,
+      "pnl": -110.32,
+      "notional": 139996.08,
+      "leverage": 20.0,
+      "margin": 6999.8,
+      "closed_at": "2026-10-29T14:31:48-03:00",
+      "reason": "CHAOS rotate: cut weakest (uP&L $-110.32) \u2014 recycle margin into fresh swings",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-29T14:31:48-03:00 BRT (exch 2026-10-29T17:31:43.402628822Z) api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-29_XRP-USD_90",
+      "symbol": "XRP-USD",
+      "side": "short",
+      "size": 77200.0,
+      "entry": 1.2953,
+      "exit": 1.2962,
+      "pnl": -69.48,
+      "notional": 99997.16,
+      "leverage": 20.0,
+      "margin": 4999.86,
+      "closed_at": "2026-10-29T14:31:48-03:00",
+      "reason": "CHAOS rotate: cut weakest (uP&L $-69.48) \u2014 recycle margin into fresh swings",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-29T14:31:48-03:00 BRT (exch 2026-10-29T17:31:47.199888686Z) api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-29_DOGE-USD_91",
+      "symbol": "DOGE-USD",
+      "side": "long",
+      "size": 750800.0,
+      "entry": 0.07991,
+      "exit": 0.08006,
+      "pnl": 112.62,
+      "notional": 59996.43,
+      "leverage": 20.0,
+      "margin": 2999.82,
+      "closed_at": "2026-10-29T14:31:49-03:00",
+      "reason": "CHAOS rotate: cut weakest (uP&L $+112.62) \u2014 recycle margin into fresh swings",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-29T14:31:49-03:00 BRT (exch 2026-10-29T17:31:35.631771785Z) api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-29_LTC-USD_96",
+      "symbol": "LTC-USD",
+      "side": "short",
+      "size": 1372.0,
+      "entry": 58.271,
+      "exit": 58.294,
+      "pnl": -31.56,
+      "notional": 79947.81,
+      "leverage": 20.0,
+      "margin": 3997.39,
+      "closed_at": "2026-10-29T14:33:19-03:00",
+      "reason": "CHAOS churn: dump worst (uP&L $-31.56) and reload",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-29T14:33:19-03:00 BRT (exch 2026-10-29T17:33:16.986668380Z) api.exchange.coinbase.com",
+      "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-29_ETH-USD_88",
+      "symbol": "ETH-USD",
+      "side": "long",
+      "size": 85.21,
+      "entry": 2347.14,
+      "exit": 2350.75,
+      "pnl": 307.61,
+      "notional": 199999.8,
+      "leverage": 20.0,
+      "margin": 9999.99,
+      "closed_at": "2026-10-29T14:33:20-03:00",
+      "reason": "CHAOS churn: bank best (uP&L $+288.86) and reload",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-29T14:33:20-03:00 BRT (exch 2026-10-29T17:33:19.289025117Z) api.exchange.coinbase.com",
+      "paper_only": true
+    }
+  ],
+  "max_open": 50,
+  "max_risk_pct": 1.0,
+  "max_risk_usd": 50049.17,
+  "daily_loss_pause_pct": -10.0,
+  "daily_loss_pause_usd": -491042.5,
+  "paused": false,
+  "pause_reason": null,
+  "watchlist": [
+    "BTC-USD",
+    "ETH-USD",
+    "SOL-USD",
+    "XRP-USD",
+    "LTC-USD",
+    "LINK-USD",
+    "ADA-USD",
+    "DOGE-USD",
+    "BCH-USD",
+    "AVAX-USD",
+    "ATOM-USD",
+    "NEAR-USD",
+    "SUI-USD",
+    "APT-USD",
+    "ARB-USD",
+    "OP-USD",
+    "DOT-USD",
+    "UNI-USD",
+    "AAVE-USD",
+    "XLM-USD",
+    "HBAR-USD",
+    "INJ-USD",
+    "FIL-USD",
+    "SHIB-USD",
+    "PEPE-USD",
+    "SEI-USD",
+    "TIA-USD",
+    "ETC-USD",
+    "ICP-USD",
+    "POL-USD"
+  ],
+  "agents": {
+    "Scanner": {
+      "status": "idle",
+      "last_run": "2026-10-29T12:07:57-03:00",
+      "note": "12:07 BRT scan: 12 PASS / 18 FAIL"
+    },
+    "Rug Check": {
+      "status": "idle",
+      "last_run": "2026-10-29T14:33:31-03:00",
+      "note": "XRP-USD PASS (chaos: non-blocking)"
+    },
+    "Sizer": {
+      "status": "ready",
+      "last_run": "2026-10-29T08:10:38-03:00",
+      "note": "No re-entry in XRP-USD / NEAR-USD this cycle"
+    },
+    "Executor": {
+      "status": "ready",
+      "last_run": "2026-10-29T14:33:31-03:00",
+      "note": "last: paper fill XRP-USD"
+    },
+    "Logger": {
+      "status": "ready",
+      "last_run": "2026-10-29T14:33:40-03:00",
+      "note": "CHAOS: final chaos book \u00b7 eq $50,049 \u00b7 exposure $909,777 (18.18x)"
+    },
+    "Equity": {
+      "status": "ready",
+      "last_run": "2026-10-29T14:33:40-03:00",
+      "note": "equity $50049.17 \u00b7 day +944.92"
+    }
+  },
+  "equity_curve": [
+    {
+      "t": "2026-10-27T22:52:05-03:00",
+      "equity": 1000,
+      "kind": "start"
+    },
+    {
+      "t": "2026-10-27T23:12:05-03:00",
+      "equity": 1000.0,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-27T23:12:05-03:00",
+      "equity": 1000.0,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-27T23:12:05-03:00",
+      "equity": 999.71,
+      "kind": "mark"
+    },
+    {
+      "t": "2026-10-27T23:33:03-03:00",
+      "equity": 998.99,
+      "kind": "mark"
+    },
+    {
+      "t": "2026-10-27T23:33:12-03:00",
+      "equity": 999.05,
+      "kind": "mark"
+    },
+    {
+      "t": "2026-10-27T23:33:12-03:00",
+      "equity": 999.05,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-27T23:33:12-03:00",
+      "equity": 999.05,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-27T23:33:32-03:00",
+      "equity": 999.05,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-27T23:33:32-03:00",
+      "equity": 999.05,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-27T23:33:33-03:00",
+      "equity": 999.05,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-27T23:33:33-03:00",
+      "equity": 999.43,
+      "kind": "mark"
+    },
+    {
+      "t": "2026-10-27T23:33:39-03:00",
+      "equity": 999.43,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-27T23:33:39-03:00",
+      "equity": 999.43,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-27T23:33:40-03:00",
+      "equity": 999.41,
+      "kind": "mark"
+    },
+    {
+      "t": "2026-10-27T23:33:51-03:00",
+      "equity": 999.41,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-27T23:33:51-03:00",
+      "equity": 999.41,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-27T23:33:52-03:00",
+      "equity": 999.13,
+      "kind": "mark"
+    },
+    {
+      "t": "2026-10-27T23:41:18-03:00",
+      "equity": 999.19,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-27T23:41:18-03:00",
+      "equity": 999.13,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-27T23:41:18-03:00",
+      "equity": 999.13,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-27T23:41:20-03:00",
+      "equity": 999.13,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-27T23:41:20-03:00",
+      "equity": 999.14,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-27T23:41:20-03:00",
+      "equity": 999.14,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-27T23:41:21-03:00",
+      "equity": 999.15,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-27T23:41:21-03:00",
+      "equity": 999.15,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-27T23:41:21-03:00",
+      "equity": 999.15,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-27T23:41:21-03:00",
+      "equity": 999.2,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-27T23:41:21-03:00",
+      "equity": 999.2,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-27T23:41:21-03:00",
+      "equity": 999.2,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-27T23:41:23-03:00",
+      "equity": 999.17,
+      "kind": "mark"
+    },
+    {
+      "t": "2026-10-27T23:42:34-03:00",
+      "equity": 999.13,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-27T23:42:34-03:00",
+      "equity": 999.06,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-27T23:42:34-03:00",
+      "equity": 998.95,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-27T23:42:34-03:00",
+      "equity": 998.82,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-27T23:42:34-03:00",
+      "equity": 998.79,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-27T23:42:35-03:00",
+      "equity": 998.7,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-27T23:42:35-03:00",
+      "equity": 998.6,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-27T23:42:36-03:00",
+      "equity": 998.27,
+      "kind": "mark"
+    },
+    {
+      "t": "2026-10-27T23:42:37-03:00",
+      "equity": 998.27,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-27T23:42:37-03:00",
+      "equity": 998.27,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-27T23:42:37-03:00",
+      "equity": 998.27,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-27T23:42:37-03:00",
+      "equity": 998.27,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-27T23:42:37-03:00",
+      "equity": 998.27,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-27T23:42:38-03:00",
+      "equity": 998.23,
+      "kind": "mark"
+    },
+    {
+      "t": "2026-10-27T23:42:47-03:00",
+      "equity": 998.31,
+      "kind": "mark"
+    },
+    {
+      "t": "2026-10-27T23:42:47-03:00",
+      "equity": 998.31,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-27T23:42:47-03:00",
+      "equity": 998.31,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-27T23:42:48-03:00",
+      "equity": 998.31,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-27T23:42:48-03:00",
+      "equity": 998.31,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-27T23:43:38-03:00",
+      "equity": 998.27,
+      "kind": "mark"
+    },
+    {
+      "t": "2026-10-27T23:47:49-03:00",
+      "equity": 998.43,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-27T23:47:49-03:00",
+      "equity": 998.57,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-27T23:47:49-03:00",
+      "equity": 998.55,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-27T23:47:52-03:00",
+      "equity": 50000.0,
+      "kind": "reset"
+    },
+    {
+      "t": "2026-10-27T23:49:13-03:00",
+      "equity": 49995.04,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-27T23:49:13-03:00",
+      "equity": 49989.39,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-27T23:49:14-03:00",
+      "equity": 49983.99,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-27T23:49:14-03:00",
+      "equity": 49979.86,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-27T23:49:15-03:00",
+      "equity": 49972.79,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-27T23:49:15-03:00",
+      "equity": 49966.06,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-27T23:49:16-03:00",
+      "equity": 49964.66,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-27T23:49:19-03:00",
+      "equity": 50002.98,
+      "kind": "mark"
+    },
+    {
+      "t": "2026-10-27T23:50:04-03:00",
+      "equity": 50001.67,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-27T23:50:04-03:00",
+      "equity": 50000.52,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-27T23:50:04-03:00",
+      "equity": 50002.92,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-27T23:50:04-03:00",
+      "equity": 50004.3,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-27T23:50:04-03:00",
+      "equity": 50003.64,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-27T23:50:05-03:00",
+      "equity": 50003.64,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-27T23:50:05-03:00",
+      "equity": 50005.13,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-27T23:50:18-03:00",
+      "equity": 49999.5,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-27T23:50:19-03:00",
+      "equity": 49992.75,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-27T23:50:19-03:00",
+      "equity": 49991.18,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-27T23:50:20-03:00",
+      "equity": 49990.66,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-27T23:50:20-03:00",
+      "equity": 49988.85,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-27T23:50:21-03:00",
+      "equity": 49988.85,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-27T23:50:21-03:00",
+      "equity": 49988.85,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-27T23:50:24-03:00",
+      "equity": 50005.92,
+      "kind": "mark"
+    },
+    {
+      "t": "2026-10-27T23:51:09-03:00",
+      "equity": 50015.18,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-27T23:51:09-03:00",
+      "equity": 50023.5,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-27T23:51:13-03:00",
+      "equity": 50039.2,
+      "kind": "mark"
+    },
+    {
+      "t": "2026-10-27T23:51:13-03:00",
+      "equity": 50039.2,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-27T23:51:13-03:00",
+      "equity": 50039.2,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-27T23:51:17-03:00",
+      "equity": 50032.03,
+      "kind": "mark"
+    },
+    {
+      "t": "2026-10-27T23:51:52-03:00",
+      "equity": 50029.62,
+      "kind": "mark"
+    },
+    {
+      "t": "2026-10-28T08:08:32-03:00",
+      "equity": 50093.86,
+      "kind": "mark"
+    },
+    {
+      "t": "2026-10-28T08:08:58-03:00",
+      "equity": 50094.68,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-28T08:09:01-03:00",
+      "equity": 50071.13,
+      "kind": "mark"
+    },
+    {
+      "t": "2026-10-28T12:13:59-03:00",
+      "equity": 49536.73,
+      "kind": "mark"
+    },
+    {
+      "t": "2026-10-28T12:14:32-03:00",
+      "equity": 49536.73,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-28T12:14:32-03:00",
+      "equity": 49536.73,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-28T12:14:51-03:00",
+      "equity": 49536.99,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-28T16:10:20-03:00",
+      "equity": 49994.65,
+      "kind": "mark"
+    },
+    {
+      "t": "2026-10-28T16:10:51-03:00",
+      "equity": 49994.77,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-28T20:09:40-03:00",
+      "equity": 50362.43,
+      "kind": "mark"
+    },
+    {
+      "t": "2026-10-28T20:10:02-03:00",
+      "equity": 50362.43,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-28T20:10:03-03:00",
+      "equity": 50362.43,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-28T20:10:14-03:00",
+      "equity": 50356.53,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-29T08:10:01-03:00",
+      "equity": 49104.25,
+      "kind": "mark"
+    },
+    {
+      "t": "2026-10-29T08:10:07-03:00",
+      "equity": 49104.25,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-29T08:10:07-03:00",
+      "equity": 49104.25,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-29T08:10:38-03:00",
+      "equity": 49103.49,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-29T12:07:23-03:00",
+      "equity": 49612.73,
+      "kind": "mark"
+    },
+    {
+      "t": "2026-10-29T12:07:57-03:00",
+      "equity": 49611.5,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-29T14:30:13-03:00",
+      "equity": 49638.94,
+      "kind": "mark"
+    },
+    {
+      "t": "2026-10-29T14:30:13-03:00",
+      "equity": 49637.37,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-29T14:30:14-03:00",
+      "equity": 49637.37,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-29T14:30:14-03:00",
+      "equity": 49637.37,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-29T14:30:14-03:00",
+      "equity": 49637.03,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-29T14:30:15-03:00",
+      "equity": 49633.94,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-29T14:30:15-03:00",
+      "equity": 49634.08,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-29T14:30:15-03:00",
+      "equity": 49633.78,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-29T14:30:25-03:00",
+      "equity": 49696.49,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-29T14:30:26-03:00",
+      "equity": 49765.51,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-29T14:30:26-03:00",
+      "equity": 49724.14,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-29T14:30:27-03:00",
+      "equity": 49731.86,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-29T14:30:28-03:00",
+      "equity": 49776.91,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-29T14:30:29-03:00",
+      "equity": 49789.63,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-29T14:30:39-03:00",
+      "equity": 49453.88,
+      "kind": "mark"
+    },
+    {
+      "t": "2026-10-29T14:31:47-03:00",
+      "equity": 50192.48,
+      "kind": "mark"
+    },
+    {
+      "t": "2026-10-29T14:31:48-03:00",
+      "equity": 50192.48,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-29T14:31:48-03:00",
+      "equity": 50192.48,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-29T14:31:49-03:00",
+      "equity": 50192.48,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-29T14:31:57-03:00",
+      "equity": 50071.86,
+      "kind": "mark"
+    },
+    {
+      "t": "2026-10-29T14:31:58-03:00",
+      "equity": 50071.86,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-29T14:31:59-03:00",
+      "equity": 50071.86,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-29T14:32:00-03:00",
+      "equity": 50061.36,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-29T14:32:00-03:00",
+      "equity": 50061.36,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-29T14:32:09-03:00",
+      "equity": 50218.73,
+      "kind": "mark"
+    },
+    {
+      "t": "2026-10-29T14:33:19-03:00",
+      "equity": 50236.4,
+      "kind": "mark"
+    },
+    {
+      "t": "2026-10-29T14:33:19-03:00",
+      "equity": 50236.4,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-29T14:33:20-03:00",
+      "equity": 50255.15,
+      "kind": "close"
+    },
+    {
+      "t": "2026-10-29T14:33:28-03:00",
+      "equity": 50282.79,
+      "kind": "mark"
+    },
+    {
+      "t": "2026-10-29T14:33:29-03:00",
+      "equity": 50344.84,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-29T14:33:30-03:00",
+      "equity": 50380.27,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-29T14:33:31-03:00",
+      "equity": 50380.27,
+      "kind": "fill"
+    },
+    {
+      "t": "2026-10-29T14:33:40-03:00",
+      "equity": 50049.17,
+      "kind": "mark"
+    }
+  ],
+  "activity": [
+    {
+      "t": "2026-10-27T23:12:05-03:00",
+      "agent": "Sizer",
+      "kind": "size",
+      "text": "SOL size 5.5 \u00b7 risk $19.86 (2% cap $20)",
+      "reason": "size = risk_budget / |entry-stop|; notional under cash"
+    },
+    {
+      "t": "2026-10-27T23:12:05-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 5.5 SOL-USD @ 101.61 \u00b7 stop 98 \u00b7 tgt 108 \u00b7 risk $19.85",
+      "reason": "Paper demo: SOL bounce off round-number support with defined stop",
+      "fill_id": "2026-10-27_SOL-USD_01",
+      "card": "DEMO_SOL_01"
+    },
+    {
+      "t": "2026-10-27T23:12:05-03:00",
+      "agent": "Sizer",
+      "kind": "size",
+      "text": "ETH size 0.18 \u00b7 risk $13.57",
+      "reason": "cash after SOL; stop 2280 keeps risk under $20"
+    },
+    {
+      "t": "2026-10-27T23:12:05-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 0.18 ETH-USD @ 2355.41 \u00b7 stop 2280 \u00b7 tgt 2480 \u00b7 risk $13.57",
+      "reason": "Paper demo: ETH trend continuation with room to stop",
+      "fill_id": "2026-10-27_ETH-USD_02",
+      "card": "DEMO_ETH_01"
+    },
+    {
+      "t": "2026-10-27T23:33:04-03:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "Broad scan: 9 Coinbase USD majors \u00b7 5 PASS (BTC ETH SOL XRP LTC) \u00b7 4 FAIL vol<$5M (AVAX LINK DOGE ADA)",
+      "reason": "Owner asked for bigger paper session on broader liquid set; public marks + stats + L2 book; scan file scans/2026-10-27_2332_scan.md"
+    },
+    {
+      "t": "2026-10-27T23:33:04-03:00",
+      "agent": "Equity",
+      "kind": "marks",
+      "text": "Public marks fetched for 9-symbol watchlist",
+      "reason": "watchlist expanded for broader paper session; Coinbase Exchange public ticker, unauthenticated, display/mark only"
+    },
+    {
+      "t": "2026-10-27T23:33:11-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "AVAX-USD FAIL",
+      "reason": "24h vol ~$2.76M < $5M threshold (RISK_RULES \u00a74); skipped this session"
+    },
+    {
+      "t": "2026-10-27T23:33:11-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "LINK-USD FAIL",
+      "reason": "24h vol ~$4.93M < $5M threshold (RISK_RULES \u00a74); skipped this session"
+    },
+    {
+      "t": "2026-10-27T23:33:11-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "DOGE-USD FAIL",
+      "reason": "24h vol ~$4.21M < $5M threshold (RISK_RULES \u00a74); skipped this session"
+    },
+    {
+      "t": "2026-10-27T23:33:11-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "ADA-USD FAIL",
+      "reason": "24h vol ~$4.80M < $5M threshold (RISK_RULES \u00a74); skipped this session"
+    },
+    {
+      "t": "2026-10-27T23:33:12-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE SOL-USD @ 101.5 \u00b7 P&L $-0.60",
+      "reason": "session rotate: free cash/slots for broader paper demo (owner-approved close at public market mark)",
+      "fill_id": "2026-10-27_SOL-USD_01"
+    },
+    {
+      "t": "2026-10-27T23:33:12-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE ETH-USD @ 2353.46 \u00b7 P&L $-0.35",
+      "reason": "session rotate: free cash/slots for broader paper demo (owner-approved close at public market mark)",
+      "fill_id": "2026-10-27_ETH-USD_02"
+    },
+    {
+      "t": "2026-10-27T23:33:32-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "BTC-USD PASS",
+      "reason": "Coinbase online; 24h vol ~$353.5M; spread ~0.00%; depth \u00b11% ~$30.7M; listed >30d"
+    },
+    {
+      "t": "2026-10-27T23:33:32-03:00",
+      "agent": "Sizer",
+      "kind": "size",
+      "text": "BTC size 0.004 \u00b7 risk $7.66 \u00b7 notional $323.26",
+      "reason": "cash-bound sizing (~1/3 of cash per slot for full 3-slot book); risk well under 2% cap; stop 78900 is 2.37% from entry 80814.58"
+    },
+    {
+      "t": "2026-10-27T23:33:32-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 0.004 BTC-USD @ 80814.6 \u00b7 stop 78900 \u00b7 tgt 83500 \u00b7 risk $7.66",
+      "reason": "Paper session: BTC +1.5% 24h, holding upper half of 79.4k\u201381.2k range; stop under range low",
+      "fill_id": "2026-10-27_BTC-USD_05",
+      "card": "SESS_BTC_01"
+    },
+    {
+      "t": "2026-10-27T23:33:32-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "XRP-USD PASS",
+      "reason": "Coinbase online; 24h vol ~$61.6M; spread 0.015%; depth \u00b11% ~$9.9M; listed >30d"
+    },
+    {
+      "t": "2026-10-27T23:33:32-03:00",
+      "agent": "Sizer",
+      "kind": "size",
+      "text": "XRP size 245 \u00b7 risk $8.31 \u00b7 notional $326.81",
+      "reason": "cash-bound sizing (~1/3 of cash per slot for full 3-slot book); risk well under 2% cap; stop 1.300 is 2.54% from entry 1.3339"
+    },
+    {
+      "t": "2026-10-27T23:33:32-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 245 XRP-USD @ 1.3339 \u00b7 stop 1.3 \u00b7 tgt 1.38 \u00b7 risk $8.31",
+      "reason": "Paper session: XRP strongest PASS name (+2.9% 24h, vol ~$61.6M) pressing 24h high 1.342",
+      "fill_id": "2026-10-27_XRP-USD_06",
+      "card": "SESS_XRP_01"
+    },
+    {
+      "t": "2026-10-27T23:33:32-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "LTC-USD PASS",
+      "reason": "Coinbase online; 24h vol ~$5.53M (just above $5M floor); spread 0.038%; depth \u00b11% ~$0.87M (>> 50x notional); listed >30d"
+    },
+    {
+      "t": "2026-10-27T23:33:32-03:00",
+      "agent": "Sizer",
+      "kind": "size",
+      "text": "LTC size 5.9 \u00b7 risk $8.65 \u00b7 notional $338.46",
+      "reason": "cash-bound sizing (~1/3 of cash per slot for full 3-slot book); risk well under 2% cap; stop 55.90 is 2.56% from entry 57.366"
+    },
+    {
+      "t": "2026-10-27T23:33:33-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 5.9 LTC-USD @ 57.366 \u00b7 stop 55.9 \u00b7 tgt 59.5 \u00b7 risk $8.65",
+      "reason": "Paper session: LTC +1.8% 24h near 24h high 57.59; uses last slot with remaining cash",
+      "fill_id": "2026-10-27_LTC-USD_07",
+      "card": "SESS_LTC_01"
+    },
+    {
+      "t": "2026-10-27T23:33:39-03:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "Rotate cycle: book full 3/3 \u2014 rotate XRP + LTC out, ETH + SOL in",
+      "reason": "Owner asked for more visible activity; LTC is the thinnest PASS name (vol just over $5M) and XRP freed for re-allocation to ETH/SOL (deeper books); closes at public marks keep P&L tiny, far from \u22123% pause"
+    },
+    {
+      "t": "2026-10-27T23:33:39-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE XRP-USD @ 1.3346 \u00b7 P&L $+0.17",
+      "reason": "session rotate cycle: free slot/cash to rotate into deeper-liquidity ETH/SOL for paper demo (owner-approved)",
+      "fill_id": "2026-10-27_XRP-USD_06"
+    },
+    {
+      "t": "2026-10-27T23:33:39-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE LTC-USD @ 57.389 \u00b7 P&L $+0.14",
+      "reason": "session rotate cycle: free slot/cash to rotate into deeper-liquidity ETH/SOL for paper demo (owner-approved)",
+      "fill_id": "2026-10-27_LTC-USD_07"
+    },
+    {
+      "t": "2026-10-27T23:33:51-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "ETH-USD PASS",
+      "reason": "Coinbase online; 24h vol ~$167.4M; spread <0.01%; depth \u00b11% ~$14.6M; listed >30d"
+    },
+    {
+      "t": "2026-10-27T23:33:51-03:00",
+      "agent": "Sizer",
+      "kind": "size",
+      "text": "ETH size 0.14 \u00b7 risk $7.62 \u00b7 notional $329.62",
+      "reason": "cash-bound sizing for rotate slot; risk well under 2% cap; stop 2300 is 2.31% from entry 2354.43"
+    },
+    {
+      "t": "2026-10-27T23:33:51-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 0.14 ETH-USD @ 2354.43 \u00b7 stop 2300 \u00b7 tgt 2420 \u00b7 risk $7.62",
+      "reason": "Rotate-in: ETH +2.0% 24h, deep book (~$14.6M \u00b11%), holding near 24h high 2366",
+      "fill_id": "2026-10-27_ETH-USD_10",
+      "card": "SESS_ETH_02"
+    },
+    {
+      "t": "2026-10-27T23:33:51-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "SOL-USD PASS",
+      "reason": "Coinbase online; 24h vol ~$34.7M; spread ~0.01%; depth \u00b11% ~$8.1M; listed >30d"
+    },
+    {
+      "t": "2026-10-27T23:33:51-03:00",
+      "agent": "Sizer",
+      "kind": "size",
+      "text": "SOL size 3.4 \u00b7 risk $8.94 \u00b7 notional $345.20",
+      "reason": "cash-bound sizing for rotate slot; risk well under 2% cap; stop 98.9 is 2.59% from entry 101.53"
+    },
+    {
+      "t": "2026-10-27T23:33:51-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 3.4 SOL-USD @ 101.53 \u00b7 stop 98.9 \u00b7 tgt 105 \u00b7 risk $8.94",
+      "reason": "Rotate-in: SOL +1.4% 24h, upper half of 99.0\u2013101.9 range; stop under 24h low",
+      "fill_id": "2026-10-27_SOL-USD_11",
+      "card": "SESS_SOL_02"
+    },
+    {
+      "t": "2026-10-27T23:40:23-03:00",
+      "agent": "Equity",
+      "kind": "override",
+      "text": "TEMPORARY DEMO LIMITS: max_open 10, max risk 10%/trade, daily-loss pause ignored",
+      "reason": "HUMAN (Oskar) authorized temporary limits for a high-frequency PAPER demo this session only; backup saved to reviews/demo_limits_backup_2026-10-27.json; will restore RISK_RULES v1.0 after session"
+    },
+    {
+      "t": "2026-10-27T23:41:12-03:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "HF demo scan: 33/35 public marks; 14 tradeable (6 via demo-loosened vol gate)",
+      "reason": "broad universe for owner-authorized high-freq paper demo; scan scans/2026-10-27_2341_scan.md"
+    },
+    {
+      "t": "2026-10-27T23:41:18-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE BTC-USD @ 80798.3 \u00b7 P&L $-0.07",
+      "reason": "high-freq demo: flatten before aggressive rotate (owner-authorized t4u, public market mark)",
+      "fill_id": "2026-10-27_BTC-USD_05"
+    },
+    {
+      "t": "2026-10-27T23:41:18-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE ETH-USD @ 2353.76 \u00b7 P&L $-0.09",
+      "reason": "high-freq demo: flatten before aggressive rotate (owner-authorized t4u, public market mark)",
+      "fill_id": "2026-10-27_ETH-USD_10"
+    },
+    {
+      "t": "2026-10-27T23:41:18-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE SOL-USD @ 101.51 \u00b7 P&L $-0.07",
+      "reason": "high-freq demo: flatten before aggressive rotate (owner-authorized t4u, public market mark)",
+      "fill_id": "2026-10-27_SOL-USD_11"
+    },
+    {
+      "t": "2026-10-27T23:41:20-03:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "HF demo batch 0 (flatten) complete",
+      "reason": "high-freq paper demo batch checkpoint; marks refreshed, dashboard synced"
+    },
+    {
+      "t": "2026-10-27T23:41:20-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 0.001353 BTC-USD @ 80797.9 \u00b7 stop 80394 \u00b7 tgt 81606 \u00b7 risk $0.55",
+      "reason": "HF demo batch 1: tight-stop long BTC-USD (0.5% stop / 1.0% tgt) for fast turnover; cash split 9 ways; owner-authorized demo limits",
+      "fill_id": "2026-10-27_BTC-USD_15",
+      "card": "HF_BTC"
+    },
+    {
+      "t": "2026-10-27T23:41:20-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 0.04646 ETH-USD @ 2353.59 \u00b7 stop 2341.8 \u00b7 tgt 2377.1 \u00b7 risk $0.55",
+      "reason": "HF demo batch 1: tight-stop long ETH-USD (0.5% stop / 1.0% tgt) for fast turnover; cash split 9 ways; owner-authorized demo limits",
+      "fill_id": "2026-10-27_ETH-USD_16",
+      "card": "HF_ETH"
+    },
+    {
+      "t": "2026-10-27T23:41:20-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 82.06 XRP-USD @ 1.3325 \u00b7 stop 1.3258 \u00b7 tgt 1.3458 \u00b7 risk $0.55",
+      "reason": "HF demo batch 1: tight-stop long XRP-USD (0.5% stop / 1.0% tgt) for fast turnover; cash split 9 ways; owner-authorized demo limits",
+      "fill_id": "2026-10-27_XRP-USD_17",
+      "card": "HF_XRP"
+    },
+    {
+      "t": "2026-10-27T23:41:21-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 1.077 SOL-USD @ 101.5 \u00b7 stop 100.99 \u00b7 tgt 102.52 \u00b7 risk $0.55",
+      "reason": "HF demo batch 1: tight-stop long SOL-USD (0.5% stop / 1.0% tgt) for fast turnover; cash split 9 ways; owner-authorized demo limits",
+      "fill_id": "2026-10-27_SOL-USD_18",
+      "card": "HF_SOL"
+    },
+    {
+      "t": "2026-10-27T23:41:21-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 23.18 NEAR-USD @ 4.7166 \u00b7 stop 4.693 \u00b7 tgt 4.7638 \u00b7 risk $0.55",
+      "reason": "HF demo batch 1: tight-stop long NEAR-USD (0.5% stop / 1.0% tgt) for fast turnover; cash split 9 ways; owner-authorized demo limits",
+      "fill_id": "2026-10-27_NEAR-USD_19",
+      "card": "HF_NEAR"
+    },
+    {
+      "t": "2026-10-27T23:41:21-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 116.8 SUI-USD @ 0.9355 \u00b7 stop 0.93082 \u00b7 tgt 0.94486 \u00b7 risk $0.55",
+      "reason": "HF demo batch 1: tight-stop long SUI-USD (0.5% stop / 1.0% tgt) for fast turnover; cash split 9 ways; owner-authorized demo limits",
+      "fill_id": "2026-10-27_SUI-USD_20",
+      "card": "HF_SUI"
+    },
+    {
+      "t": "2026-10-27T23:41:21-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 1.905 LTC-USD @ 57.375 \u00b7 stop 57.088 \u00b7 tgt 57.949 \u00b7 risk $0.55",
+      "reason": "HF demo batch 1: tight-stop long LTC-USD (0.5% stop / 1.0% tgt) for fast turnover; cash split 9 ways; owner-authorized demo limits",
+      "fill_id": "2026-10-27_LTC-USD_21",
+      "card": "HF_LTC"
+    },
+    {
+      "t": "2026-10-27T23:41:21-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 637.5 XLM-USD @ 0.171505 \u00b7 stop 0.17065 \u00b7 tgt 0.17322 \u00b7 risk $0.55",
+      "reason": "HF demo batch 1: tight-stop long XLM-USD (0.5% stop / 1.0% tgt) for fast turnover; cash split 9 ways; owner-authorized demo limits",
+      "fill_id": "2026-10-27_XLM-USD_22",
+      "card": "HF_XLM"
+    },
+    {
+      "t": "2026-10-27T23:41:21-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 9.358 LINK-USD @ 11.684 \u00b7 stop 11.626 \u00b7 tgt 11.801 \u00b7 risk $0.54",
+      "reason": "HF demo batch 1: tight-stop long LINK-USD (0.5% stop / 1.0% tgt) for fast turnover; cash split 9 ways; owner-authorized demo limits",
+      "fill_id": "2026-10-27_LINK-USD_23",
+      "card": "HF_LINK"
+    },
+    {
+      "t": "2026-10-27T23:41:23-03:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "HF demo batch 1 (9 opens) complete",
+      "reason": "high-freq paper demo batch checkpoint; marks refreshed, dashboard synced"
+    },
+    {
+      "t": "2026-10-27T23:42:34-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE BTC-USD @ 80763.4 \u00b7 P&L $-0.05",
+      "reason": "high-freq demo: hit rotate / tight target or stop simulation at market mark (batch 1 churn)",
+      "fill_id": "2026-10-27_BTC-USD_15"
+    },
+    {
+      "t": "2026-10-27T23:42:34-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE ETH-USD @ 2352.15 \u00b7 P&L $-0.07",
+      "reason": "high-freq demo: hit rotate / tight target or stop simulation at market mark (batch 1 churn)",
+      "fill_id": "2026-10-27_ETH-USD_16"
+    },
+    {
+      "t": "2026-10-27T23:42:34-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE XRP-USD @ 1.3313 \u00b7 P&L $-0.10",
+      "reason": "high-freq demo: hit rotate / tight target or stop simulation at market mark (batch 1 churn)",
+      "fill_id": "2026-10-27_XRP-USD_17"
+    },
+    {
+      "t": "2026-10-27T23:42:34-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE SUI-USD @ 0.9344 \u00b7 P&L $-0.13",
+      "reason": "high-freq demo: hit rotate / tight target or stop simulation at market mark (batch 1 churn)",
+      "fill_id": "2026-10-27_SUI-USD_20"
+    },
+    {
+      "t": "2026-10-27T23:42:34-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE LTC-USD @ 57.381 \u00b7 P&L $+0.01",
+      "reason": "high-freq demo: hit rotate / tight target or stop simulation at market mark (batch 1 churn)",
+      "fill_id": "2026-10-27_LTC-USD_21"
+    },
+    {
+      "t": "2026-10-27T23:42:35-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE XLM-USD @ 0.171358 \u00b7 P&L $-0.09",
+      "reason": "high-freq demo: hit rotate / tight target or stop simulation at market mark (batch 1 churn)",
+      "fill_id": "2026-10-27_XLM-USD_22"
+    },
+    {
+      "t": "2026-10-27T23:42:35-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE LINK-USD @ 11.673 \u00b7 P&L $-0.10",
+      "reason": "high-freq demo: hit rotate / tight target or stop simulation at market mark (batch 1 churn)",
+      "fill_id": "2026-10-27_LINK-USD_23"
+    },
+    {
+      "t": "2026-10-27T23:42:36-03:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "HF demo batch 1 churn (7 closes) complete",
+      "reason": "high-freq paper demo batch checkpoint; marks refreshed, dashboard synced"
+    },
+    {
+      "t": "2026-10-27T23:42:37-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 745.2 ADA-USD @ 0.20616 \u00b7 stop 0.20534 \u00b7 tgt 0.20781 \u00b7 risk $0.61",
+      "reason": "HF demo batch 2: rotate into ADA-USD (demo-loosened vol gate) \u2014 tight 0.4% stop / 0.8% tgt for fast turnover; owner-authorized demo limits",
+      "fill_id": "2026-10-27_ADA-USD_31",
+      "card": "HF_ADA"
+    },
+    {
+      "t": "2026-10-27T23:42:37-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 1945 DOGE-USD @ 0.07898 \u00b7 stop 0.078664 \u00b7 tgt 0.079612 \u00b7 risk $0.61",
+      "reason": "HF demo batch 2: rotate into DOGE-USD (demo-loosened vol gate) \u2014 tight 0.4% stop / 0.8% tgt for fast turnover; owner-authorized demo limits",
+      "fill_id": "2026-10-27_DOGE-USD_32",
+      "card": "HF_DOGE"
+    },
+    {
+      "t": "2026-10-27T23:42:37-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 2006 HBAR-USD @ 0.07656 \u00b7 stop 0.076254 \u00b7 tgt 0.077172 \u00b7 risk $0.61",
+      "reason": "HF demo batch 2: rotate into HBAR-USD (demo-loosened vol gate) \u2014 tight 0.4% stop / 0.8% tgt for fast turnover; owner-authorized demo limits",
+      "fill_id": "2026-10-27_HBAR-USD_33",
+      "card": "HF_HBAR"
+    },
+    {
+      "t": "2026-10-27T23:42:37-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 0.5226 BCH-USD @ 293.98 \u00b7 stop 292.8 \u00b7 tgt 296.33 \u00b7 risk $0.62",
+      "reason": "HF demo batch 2: rotate into BCH-USD (demo-loosened vol gate) \u2014 tight 0.4% stop / 0.8% tgt for fast turnover; owner-authorized demo limits",
+      "fill_id": "2026-10-27_BCH-USD_34",
+      "card": "HF_BCH"
+    },
+    {
+      "t": "2026-10-27T23:42:37-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 19.32 INJ-USD @ 7.952 \u00b7 stop 7.9202 \u00b7 tgt 8.0156 \u00b7 risk $0.61",
+      "reason": "HF demo batch 2: rotate into INJ-USD (demo-loosened vol gate) \u2014 tight 0.4% stop / 0.8% tgt for fast turnover; owner-authorized demo limits",
+      "fill_id": "2026-10-27_INJ-USD_35",
+      "card": "HF_INJ"
+    },
+    {
+      "t": "2026-10-27T23:42:39-03:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "HF demo batch 2 (5 opens) complete",
+      "reason": "high-freq paper demo batch checkpoint; marks refreshed, dashboard synced"
+    },
+    {
+      "t": "2026-10-27T23:42:47-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE INJ-USD @ 7.952 \u00b7 P&L $+0.00",
+      "reason": "high-freq demo: tight stop/target simulation at market mark + demo wind-down to \u22643 opens before restoring normal limits",
+      "fill_id": "2026-10-27_INJ-USD_35"
+    },
+    {
+      "t": "2026-10-27T23:42:47-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE DOGE-USD @ 0.07896 \u00b7 P&L $-0.04",
+      "reason": "high-freq demo: tight stop/target simulation at market mark + demo wind-down to \u22643 opens before restoring normal limits",
+      "fill_id": "2026-10-27_DOGE-USD_32"
+    },
+    {
+      "t": "2026-10-27T23:42:48-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE SOL-USD @ 101.43 \u00b7 P&L $-0.08",
+      "reason": "high-freq demo: tight stop/target simulation at market mark + demo wind-down to \u22643 opens before restoring normal limits",
+      "fill_id": "2026-10-27_SOL-USD_18"
+    },
+    {
+      "t": "2026-10-27T23:42:48-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE NEAR-USD @ 4.7084 \u00b7 P&L $-0.19",
+      "reason": "high-freq demo: tight stop/target simulation at market mark + demo wind-down to \u22643 opens before restoring normal limits",
+      "fill_id": "2026-10-27_NEAR-USD_19"
+    },
+    {
+      "t": "2026-10-27T23:42:49-03:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "HF demo batch 2 churn + wind-down (\u22643 opens) complete",
+      "reason": "high-freq paper demo batch checkpoint; marks refreshed, dashboard synced"
+    },
+    {
+      "t": "2026-10-27T23:43:36-03:00",
+      "agent": "Equity",
+      "kind": "override",
+      "text": "NORMAL LIMITS RESTORED \u2014 RISK_RULES v1.0: max_open 3, 2% risk/trade, \u22123% daily pause (was {'max_open': 10, 'max_risk_pct': 0.1, 'daily_loss_pause_pct': -1.0})",
+      "reason": "high-freq paper demo ended; limits restored from reviews/demo_limits_backup_2026-10-27.json; book wound down to 3 opens first so restored rules are consistent"
+    },
+    {
+      "t": "2026-10-27T23:47:49-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE ADA-USD @ 0.20637 \u00b7 P&L $+0.16",
+      "reason": "capital reset: flatten before raising paper equity to $50,000",
+      "fill_id": "2026-10-27_ADA-USD_31"
+    },
+    {
+      "t": "2026-10-27T23:47:49-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE HBAR-USD @ 0.07658 \u00b7 P&L $+0.04",
+      "reason": "capital reset: flatten before raising paper equity to $50,000",
+      "fill_id": "2026-10-27_HBAR-USD_33"
+    },
+    {
+      "t": "2026-10-27T23:47:49-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE BCH-USD @ 294.1 \u00b7 P&L $+0.06",
+      "reason": "capital reset: flatten before raising paper equity to $50,000",
+      "fill_id": "2026-10-27_BCH-USD_34"
+    },
+    {
+      "t": "2026-10-27T23:47:52-03:00",
+      "agent": "Equity",
+      "kind": "reset",
+      "text": "PAPER EQUITY RESET \u2192 $50,000.00 (v1.0 book flattened at public marks; prior equity $998.55, realized $-1.45)",
+      "reason": "owner-authorized permanent capital raise (Oskar, t5u); realized/unrealized/day P&L zeroed for a clean $50k start; history kept in closed_positions + history_note"
+    },
+    {
+      "t": "2026-10-27T23:47:52-03:00",
+      "agent": "Logger",
+      "kind": "rules",
+      "text": "RISK_RULES v1.1 now in force \u2014 PERMANENT: 5% max risk/trade ($2,500 at start), max 8 open, daily pause \u22128% (\u2212$4,000 at start)",
+      "reason": "owner-authorized permanent loosening for this terminal (t5u) \u2014 not temporary, no restore; exit plan (\u00a75), liquidity/rug checks (\u00a74), paper-only (\u00a70) unchanged"
+    },
+    {
+      "t": "2026-10-27T23:47:52-03:00",
+      "agent": "Scanner",
+      "kind": "watchlist",
+      "text": "watchlist expanded to 30 Coinbase USD products",
+      "reason": "kept only products whose public ticker fetched OK (30/30)"
+    },
+    {
+      "t": "2026-10-27T23:49:13-03:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "v1.1 batch 1: 7 paper longs across Rug-Check-PASS names",
+      "reason": "high-turnover demo under permanent v1.1 limits (owner t5u); sizes by cash+depth, risk well under 5% cap"
+    },
+    {
+      "t": "2026-10-27T23:49:13-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "BTC-USD PASS",
+      "reason": "Coinbase BTC-USD status online; 24h vol $355.1M \u2265 $5M; spread 0.000% \u2264 0.25%; \u00b11% depth $15,462,818 \u2265 max($25k, 50\u00d7 notional $12,000); long-listed CEX major"
+    },
+    {
+      "t": "2026-10-27T23:49:13-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 0.1484 BTC-USD @ 80825 \u00b7 stop 79208 \u00b7 tgt 83250 \u00b7 risk $239.96",
+      "reason": "v1.1 batch 1 open BTC-USD: top-liquidity PASS name, momentum-neutral demo entry at public mark \u2014 notional $11,994, stop \u22122.0% / tgt +3.0%/+4.0%, risk $240 (0.48% eq, cap 5%); no leverage",
+      "fill_id": "2026-10-27_BTC-USD_43",
+      "card": "V11_BTC"
+    },
+    {
+      "t": "2026-10-27T23:49:13-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "ETH-USD PASS",
+      "reason": "Coinbase ETH-USD status online; 24h vol $168.6M \u2265 $5M; spread 0.000% \u2264 0.25%; \u00b11% depth $6,959,948 \u2265 max($25k, 50\u00d7 notional $10,000); long-listed CEX major"
+    },
+    {
+      "t": "2026-10-27T23:49:13-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 4.245 ETH-USD @ 2355.31 \u00b7 stop 2308.2 \u00b7 tgt 2426 \u00b7 risk $199.98",
+      "reason": "v1.1 batch 1 open ETH-USD: top-liquidity PASS name, momentum-neutral demo entry at public mark \u2014 notional $9,998, stop \u22122.0% / tgt +3.0%/+4.0%, risk $200 (0.40% eq, cap 5%); no leverage",
+      "fill_id": "2026-10-27_ETH-USD_44",
+      "card": "V11_ETH"
+    },
+    {
+      "t": "2026-10-27T23:49:14-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "XRP-USD PASS",
+      "reason": "Coinbase XRP-USD status online; 24h vol $62.1M \u2265 $5M; spread 0.007% \u2264 0.25%; \u00b11% depth $4,721,337 \u2265 max($25k, 50\u00d7 notional $8,000); long-listed CEX major"
+    },
+    {
+      "t": "2026-10-27T23:49:14-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 6000 XRP-USD @ 1.3332 \u00b7 stop 1.3065 \u00b7 tgt 1.3732 \u00b7 risk $160.20",
+      "reason": "v1.1 batch 1 open XRP-USD: top-liquidity PASS name, momentum-neutral demo entry at public mark \u2014 notional $7,999, stop \u22122.0% / tgt +3.0%/+4.5%, risk $160 (0.32% eq, cap 5%); no leverage",
+      "fill_id": "2026-10-27_XRP-USD_45",
+      "card": "V11_XRP"
+    },
+    {
+      "t": "2026-10-27T23:49:14-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "SOL-USD PASS",
+      "reason": "Coinbase SOL-USD status online; 24h vol $35.0M \u2265 $5M; spread 0.010% \u2264 0.25%; \u00b11% depth $3,464,122 \u2265 max($25k, 50\u00d7 notional $7,000); long-listed CEX major"
+    },
+    {
+      "t": "2026-10-27T23:49:14-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 68.91 SOL-USD @ 101.57 \u00b7 stop 99.539 \u00b7 tgt 104.62 \u00b7 risk $139.96",
+      "reason": "v1.1 batch 1 open SOL-USD: top-liquidity PASS name, momentum-neutral demo entry at public mark \u2014 notional $6,999, stop \u22122.0% / tgt +3.0%/+4.5%, risk $140 (0.28% eq, cap 5%); no leverage",
+      "fill_id": "2026-10-27_SOL-USD_46",
+      "card": "V11_SOL"
+    },
+    {
+      "t": "2026-10-27T23:49:15-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "NEAR-USD PASS",
+      "reason": "Coinbase NEAR-USD status online; 24h vol $22.0M \u2265 $5M; spread 0.066% \u2264 0.25%; \u00b11% depth $527,377 \u2265 max($25k, 50\u00d7 notional $4,500); long-listed CEX major"
+    },
+    {
+      "t": "2026-10-27T23:49:15-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 955.2 NEAR-USD @ 4.711 \u00b7 stop 4.6403 \u00b7 tgt 4.8288 \u00b7 risk $67.53",
+      "reason": "v1.1 batch 1 open NEAR-USD: top-liquidity PASS name, momentum-neutral demo entry at public mark \u2014 notional $4,500, stop \u22121.5% / tgt +2.5%/+3.5%, risk $68 (0.14% eq, cap 5%); no leverage",
+      "fill_id": "2026-10-27_NEAR-USD_47",
+      "card": "V11_NEAR"
+    },
+    {
+      "t": "2026-10-27T23:49:15-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "SUI-USD PASS",
+      "reason": "Coinbase SUI-USD status online; 24h vol $7.6M \u2265 $5M; spread 0.021% \u2264 0.25%; \u00b11% depth $519,817 \u2265 max($25k, 50\u00d7 notional $4,500); long-listed CEX major"
+    },
+    {
+      "t": "2026-10-27T23:49:15-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 4807 SUI-USD @ 0.9361 \u00b7 stop 0.92206 \u00b7 tgt 0.9595 \u00b7 risk $67.49",
+      "reason": "v1.1 batch 1 open SUI-USD: top-liquidity PASS name, momentum-neutral demo entry at public mark \u2014 notional $4,500, stop \u22121.5% / tgt +2.5%/+3.5%, risk $67 (0.14% eq, cap 5%); no leverage",
+      "fill_id": "2026-10-27_SUI-USD_48",
+      "card": "V11_SUI"
+    },
+    {
+      "t": "2026-10-27T23:49:16-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "XLM-USD PASS",
+      "reason": "Coinbase XLM-USD status online; 24h vol $5.1M \u2265 $5M; spread 0.032% \u2264 0.25%; \u00b11% depth $327,768 \u2265 max($25k, 50\u00d7 notional $4,000); long-listed CEX major"
+    },
+    {
+      "t": "2026-10-27T23:49:16-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 23320 XLM-USD @ 0.171516 \u00b7 stop 0.16894 \u00b7 tgt 0.1758 \u00b7 risk $60.07",
+      "reason": "v1.1 batch 1 open XLM-USD: top-liquidity PASS name, momentum-neutral demo entry at public mark \u2014 notional $4,000, stop \u22121.5% / tgt +2.5%/+3.5%, risk $60 (0.12% eq, cap 5%); no leverage",
+      "fill_id": "2026-10-27_XLM-USD_49",
+      "card": "V11_XLM"
+    },
+    {
+      "t": "2026-10-27T23:49:19-03:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "v1.1 $50k session: batch 1 opened (7)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
+    },
+    {
+      "t": "2026-10-27T23:50:04-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE BTC-USD @ 80825.5 \u00b7 P&L $+0.08",
+      "reason": "v1.1 batch 1 rotate: demo turnover \u2014 close at public mark to recycle cash into batch 2",
+      "fill_id": "2026-10-27_BTC-USD_43"
+    },
+    {
+      "t": "2026-10-27T23:50:04-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE ETH-USD @ 2355.04 \u00b7 P&L $-1.15",
+      "reason": "v1.1 batch 1 rotate: demo turnover \u2014 close at public mark to recycle cash into batch 2",
+      "fill_id": "2026-10-27_ETH-USD_44"
+    },
+    {
+      "t": "2026-10-27T23:50:04-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE XRP-USD @ 1.3342 \u00b7 P&L $+6.00",
+      "reason": "v1.1 batch 1 rotate: demo turnover \u2014 close at public mark to recycle cash into batch 2",
+      "fill_id": "2026-10-27_XRP-USD_45"
+    },
+    {
+      "t": "2026-10-27T23:50:04-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE SOL-USD @ 101.59 \u00b7 P&L $+1.38",
+      "reason": "v1.1 batch 1 rotate: demo turnover \u2014 close at public mark to recycle cash into batch 2",
+      "fill_id": "2026-10-27_SOL-USD_46"
+    },
+    {
+      "t": "2026-10-27T23:50:04-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE NEAR-USD @ 4.7082 \u00b7 P&L $-2.67",
+      "reason": "v1.1 batch 1 rotate: demo turnover \u2014 close at public mark to recycle cash into batch 2",
+      "fill_id": "2026-10-27_NEAR-USD_47"
+    },
+    {
+      "t": "2026-10-27T23:50:05-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE SUI-USD @ 0.9361 \u00b7 P&L $+0.00",
+      "reason": "v1.1 batch 1 rotate: demo turnover \u2014 close at public mark to recycle cash into batch 2",
+      "fill_id": "2026-10-27_SUI-USD_48"
+    },
+    {
+      "t": "2026-10-27T23:50:05-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE XLM-USD @ 0.17158 \u00b7 P&L $+1.49",
+      "reason": "v1.1 batch 1 rotate: demo turnover \u2014 close at public mark to recycle cash into batch 2",
+      "fill_id": "2026-10-27_XLM-USD_49"
+    },
+    {
+      "t": "2026-10-27T23:50:08-03:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "v1.1 $50k session: batch 1 closed (7)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
+    },
+    {
+      "t": "2026-10-27T23:50:18-03:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "v1.1 batch 2: 7 paper longs, tighter 1.5% stops",
+      "reason": "second churn batch; recycle full cash after batch 1 rotate"
+    },
+    {
+      "t": "2026-10-27T23:50:18-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "BTC-USD PASS",
+      "reason": "Coinbase BTC-USD status online; 24h vol $355.3M \u2265 $5M; spread 0.000% \u2264 0.25%; \u00b11% depth $15,551,867 \u2265 max($25k, 50\u00d7 notional $12,000); long-listed CEX major"
+    },
+    {
+      "t": "2026-10-27T23:50:18-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 0.1483 BTC-USD @ 80863.7 \u00b7 stop 79651 \u00b7 tgt 82885 \u00b7 risk $179.84",
+      "reason": "v1.1 batch 2 open BTC-USD: re-entry/rotation at public mark, faster 1.5\u20132% stop \u2014 notional $11,992, stop \u22121.5% / tgt +2.5%/+3.5%, risk $180 (0.36% eq, cap 5%); no leverage",
+      "fill_id": "2026-10-27_BTC-USD_57",
+      "card": "V11_BTC"
+    },
+    {
+      "t": "2026-10-27T23:50:19-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "ETH-USD PASS",
+      "reason": "Coinbase ETH-USD status online; 24h vol $168.8M \u2265 $5M; spread 0.000% \u2264 0.25%; \u00b11% depth $6,743,702 \u2265 max($25k, 50\u00d7 notional $10,000); long-listed CEX major"
+    },
+    {
+      "t": "2026-10-27T23:50:19-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 4.243 ETH-USD @ 2356.63 \u00b7 stop 2321.3 \u00b7 tgt 2415.5 \u00b7 risk $149.91",
+      "reason": "v1.1 batch 2 open ETH-USD: re-entry/rotation at public mark, faster 1.5\u20132% stop \u2014 notional $9,999, stop \u22121.5% / tgt +2.5%/+3.5%, risk $150 (0.30% eq, cap 5%); no leverage",
+      "fill_id": "2026-10-27_ETH-USD_58",
+      "card": "V11_ETH"
+    },
+    {
+      "t": "2026-10-27T23:50:19-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "SOL-USD PASS",
+      "reason": "Coinbase SOL-USD status online; 24h vol $35.1M \u2265 $5M; spread 0.010% \u2264 0.25%; \u00b11% depth $3,323,967 \u2265 max($25k, 50\u00d7 notional $8,000); long-listed CEX major"
+    },
+    {
+      "t": "2026-10-27T23:50:19-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 78.72 SOL-USD @ 101.62 \u00b7 stop 100.1 \u00b7 tgt 104.16 \u00b7 risk $119.65",
+      "reason": "v1.1 batch 2 open SOL-USD: re-entry/rotation at public mark, faster 1.5\u20132% stop \u2014 notional $8,000, stop \u22121.5% / tgt +2.5%/+4.0%, risk $120 (0.24% eq, cap 5%); no leverage",
+      "fill_id": "2026-10-27_SOL-USD_59",
+      "card": "V11_SOL"
+    },
+    {
+      "t": "2026-10-27T23:50:20-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "XRP-USD PASS",
+      "reason": "Coinbase XRP-USD status online; 24h vol $62.2M \u2265 $5M; spread 0.007% \u2264 0.25%; \u00b11% depth $4,479,279 \u2265 max($25k, 50\u00d7 notional $7,000); long-listed CEX major"
+    },
+    {
+      "t": "2026-10-27T23:50:20-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 5245 XRP-USD @ 1.3344 \u00b7 stop 1.3144 \u00b7 tgt 1.3678 \u00b7 risk $104.90",
+      "reason": "v1.1 batch 2 open XRP-USD: re-entry/rotation at public mark, faster 1.5\u20132% stop \u2014 notional $6,999, stop \u22121.5% / tgt +2.5%/+4.0%, risk $105 (0.21% eq, cap 5%); no leverage",
+      "fill_id": "2026-10-27_XRP-USD_60",
+      "card": "V11_XRP"
+    },
+    {
+      "t": "2026-10-27T23:50:20-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "LTC-USD PASS",
+      "reason": "Coinbase LTC-USD status online; 24h vol $5.6M \u2265 $5M; spread 0.026% \u2264 0.25%; \u00b11% depth $251,854 \u2265 max($25k, 50\u00d7 notional $4,000); long-listed CEX major"
+    },
+    {
+      "t": "2026-10-27T23:50:20-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 69.62 LTC-USD @ 57.452 \u00b7 stop 56.59 \u00b7 tgt 58.888 \u00b7 risk $60.01",
+      "reason": "v1.1 batch 2 open LTC-USD: re-entry/rotation at public mark, faster 1.5\u20132% stop \u2014 notional $4,000, stop \u22121.5% / tgt +2.5%/+3.5%, risk $60 (0.12% eq, cap 5%); no leverage",
+      "fill_id": "2026-10-27_LTC-USD_61",
+      "card": "V11_LTC"
+    },
+    {
+      "t": "2026-10-27T23:50:21-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "PEPE-USD PASS",
+      "reason": "Coinbase PEPE-USD status online; 24h vol $6.8M \u2265 $5M; spread 0.205% \u2264 0.25%; \u00b11% depth $365,491 \u2265 max($25k, 50\u00d7 notional $4,000); long-listed CEX major"
+    },
+    {
+      "t": "2026-10-27T23:50:21-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 8.179e+08 PEPE-USD @ 4.89e-06 \u00b7 stop 4.7922e-06 \u00b7 tgt 5.0367e-06 \u00b7 risk $79.99",
+      "reason": "v1.1 batch 2 open PEPE-USD: re-entry/rotation at public mark, faster 1.5\u20132% stop \u2014 notional $4,000, stop \u22122.0% / tgt +3.0%/+5.0%, risk $80 (0.16% eq, cap 5%); no leverage",
+      "fill_id": "2026-10-27_PEPE-USD_62",
+      "card": "V11_PEPE"
+    },
+    {
+      "t": "2026-10-27T23:50:21-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "NEAR-USD PASS",
+      "reason": "Coinbase NEAR-USD status online; 24h vol $22.0M \u2265 $5M; spread 0.053% \u2264 0.25%; \u00b11% depth $451,183 \u2265 max($25k, 50\u00d7 notional $4,000); long-listed CEX major"
+    },
+    {
+      "t": "2026-10-27T23:50:21-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 849.5 NEAR-USD @ 4.7082 \u00b7 stop 4.6376 \u00b7 tgt 4.8259 \u00b7 risk $59.97",
+      "reason": "v1.1 batch 2 open NEAR-USD: re-entry/rotation at public mark, faster 1.5\u20132% stop \u2014 notional $4,000, stop \u22121.5% / tgt +2.5%/+3.5%, risk $60 (0.12% eq, cap 5%); no leverage",
+      "fill_id": "2026-10-27_NEAR-USD_63",
+      "card": "V11_NEAR"
+    },
+    {
+      "t": "2026-10-27T23:50:24-03:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "v1.1 $50k session: batch 2 opened (7)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
+    },
+    {
+      "t": "2026-10-27T23:51:09-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE BTC-USD @ 80926.1 \u00b7 P&L $+9.26",
+      "reason": "v1.1 batch 2 trim: weakest unrealized ($+0.00) at last mark \u2014 free cash for rotation",
+      "fill_id": "2026-10-27_BTC-USD_57"
+    },
+    {
+      "t": "2026-10-27T23:51:09-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE ETH-USD @ 2358.59 \u00b7 P&L $+8.32",
+      "reason": "v1.1 batch 2 trim: weakest unrealized ($+0.00) at last mark \u2014 free cash for rotation",
+      "fill_id": "2026-10-27_ETH-USD_58"
+    },
+    {
+      "t": "2026-10-27T23:51:13-03:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "v1.1 $50k session: batch 2 trimmed (2 weakest closed)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
+    },
+    {
+      "t": "2026-10-27T23:51:13-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "SUI-USD PASS",
+      "reason": "Coinbase SUI-USD status online; 24h vol $7.7M \u2265 $5M; spread 0.021% \u2264 0.25%; \u00b11% depth $583,509 \u2265 max($25k, 50\u00d7 notional $11,508); long-listed CEX major"
+    },
+    {
+      "t": "2026-10-27T23:51:13-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 12270 SUI-USD @ 0.9372 \u00b7 stop 0.92314 \u00b7 tgt 0.96063 \u00b7 risk $172.52",
+      "reason": "v1.1 batch 3 rotate into SUI-USD: freed cash from trim, diversify book toward 7/8 opens \u2014 notional $11,499, stop \u22121.5% / tgt +2.5%/+3.5%, risk $173 (0.34% eq, cap 5%); no leverage",
+      "fill_id": "2026-10-27_SUI-USD_66",
+      "card": "V11_SUI"
+    },
+    {
+      "t": "2026-10-27T23:51:13-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "XLM-USD PASS",
+      "reason": "Coinbase XLM-USD status online; 24h vol $5.1M \u2265 $5M; spread 0.008% \u2264 0.25%; \u00b11% depth $309,890 \u2265 max($25k, 50\u00d7 notional $6,198); long-listed CEX major"
+    },
+    {
+      "t": "2026-10-27T23:51:13-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 36090 XLM-USD @ 0.171702 \u00b7 stop 0.16913 \u00b7 tgt 0.17599 \u00b7 risk $92.82",
+      "reason": "v1.1 batch 3 rotate into XLM-USD: freed cash from trim, diversify book toward 7/8 opens \u2014 notional $6,197, stop \u22121.5% / tgt +2.5%/+3.5%, risk $93 (0.19% eq, cap 5%); no leverage",
+      "fill_id": "2026-10-27_XLM-USD_67",
+      "card": "V11_XLM"
+    },
+    {
+      "t": "2026-10-27T23:51:17-03:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "v1.1 $50k session: final book",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
+    },
+    {
+      "t": "2026-10-27T23:51:32-03:00",
+      "agent": "Logger",
+      "kind": "note",
+      "text": "Correction: batch 2 trim of BTC/ETH (ids _57/_58) was a tie-break, not true weakest",
+      "reason": "at the prior refresh all batch-2 opens showed ~$0.00 unrealized, so the 'weakest' sort picked the first two (BTC, ETH); at the fresh close marks both were up (+$9.26 / +$8.32). Logged for honest record."
+    },
+    {
+      "t": "2026-10-27T23:51:48-03:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "v1.1 scan 23:48 BRT: 9/30 PASS (BTC ETH XRP SOL NEAR SUI PEPE LTC XLM)",
+      "reason": "RISK_RULES \u00a74 on public ticker+product+L2 book; 21 failed the $5M 24h volume gate"
+    },
+    {
+      "t": "2026-10-28T08:08:58-03:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "08:08 BRT scan: 7 PASS / 23 FAIL",
+      "reason": "Coinbase Exchange public ticker/product/L2 book; held LTC-USD and XLM-USD now below $5M 24h vol (entry gate only, positions kept; no new adds)"
+    },
+    {
+      "t": "2026-10-28T08:08:58-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "BTC-USD PASS",
+      "reason": "Coinbase BTC-USD status online; 24h vol $350.7M \u2265 $5M; spread 0.000% \u2264 0.25%; \u00b11% depth $13,268,384 \u2265 max($25k, 50\u00d7 notional $5,319); long-listed CEX major"
+    },
+    {
+      "t": "2026-10-28T08:08:58-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 0.06543 BTC-USD @ 81292.5 \u00b7 stop 80073 \u00b7 tgt 83325 \u00b7 risk $79.79",
+      "reason": "08:08 BRT scanner routine: BTC-USD top-liquidity Rug-Check PASS, only unheld PASS slot (8th of 8), cash-capped notional at public mark \u2014 notional $5,319, stop \u22121.5% / tgt +2.5%/+3.5%, risk $80 (0.16% eq, cap 5%); no leverage",
+      "fill_id": "2026-10-28_BTC-USD_68",
+      "card": "V11_BTC"
+    },
+    {
+      "t": "2026-10-28T08:09:01-03:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "v1.1 $50k session: 08:08 BRT scanner routine",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
+    },
+    {
+      "t": "2026-10-28T12:14:32-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE XRP-USD @ 1.3131 \u00b7 P&L $-111.72",
+      "reason": "stop hit: mark 1.3131 < stop 1.3144 (12:14 BRT scanner routine)",
+      "fill_id": "2026-10-27_XRP-USD_60"
+    },
+    {
+      "t": "2026-10-28T12:14:32-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE NEAR-USD @ 4.6167 \u00b7 P&L $-77.73",
+      "reason": "stop hit: mark 4.6167 < stop 4.6376 (12:14 BRT scanner routine)",
+      "fill_id": "2026-10-27_NEAR-USD_63"
+    },
+    {
+      "t": "2026-10-28T12:14:51-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 4.286 ETH-USD @ 2332.95 \u00b7 stop 2298 \u00b7 tgt 2391.3 \u00b7 risk $149.80",
+      "reason": "12:14 BRT scanner routine: ETH-USD Rug-Check PASS (vol $149.7M, spread 0.0004%, \u00b11% depth $7.37M), unheld, slot freed by XRP/NEAR stop-outs; notional ~$9,999 at public ask, stop -1.5% / tgt +2.5%/+3.5%, risk ~$150 (0.30% eq, cap 5%); no leverage",
+      "fill_id": "2026-10-28_ETH-USD_71",
+      "card": "V11_ETH"
+    },
+    {
+      "t": "2026-10-28T12:14:51-03:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "12:14 BRT scan: 7 PASS / 23 FAIL",
+      "reason": "Coinbase Exchange public ticker/product/L2 book; LTC-USD and XLM-USD held but below $5M 24h vol (entry gate only, kept)"
+    },
+    {
+      "t": "2026-10-28T12:14:51-03:00",
+      "agent": "Sizer",
+      "kind": "note",
+      "text": "No re-entry in XRP-USD / NEAR-USD this cycle",
+      "reason": "both PASS Rug Check but were just stopped out at 12:14 BRT; no same-cycle revenge re-entry; 7/8 open, slot left free"
+    },
+    {
+      "t": "2026-10-28T16:10:51-03:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "16:10 BRT scan: 8 PASS / 22 FAIL",
+      "reason": "Coinbase Exchange public ticker/product/L2 book; PEPE-USD (held) fails spread 0.41% > 0.25% (entry gate only, kept); XLM-USD (held) still < $5M vol; LTC-USD and ADA-USD back above $5M"
+    },
+    {
+      "t": "2026-10-28T16:10:51-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "XRP-USD PASS",
+      "reason": "Coinbase XRP-USD status online; 24h vol $62.0M \u2265 $5M; spread 0.015% \u2264 0.25%; \u00b11% depth $1,662,220 \u2265 max($25k, 50\u00d7 notional $809); long-listed CEX major"
+    },
+    {
+      "t": "2026-10-28T16:10:51-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 611 XRP-USD @ 1.3248 \u00b7 stop 1.3049 \u00b7 tgt 1.3579 \u00b7 risk $12.16",
+      "reason": "16:10 BRT scanner routine: XRP-USD top-liquidity unheld Rug-Check PASS, 8th of 8 slot; new cycle after 12:14 stop-out; cash-capped notional ~$809 at public ask, stop -1.5% / tgt +2.5%/+3.5%, risk ~$12 (0.02% eq, cap 5%); no leverage",
+      "fill_id": "2026-10-28_XRP-USD_72",
+      "card": "V11_XRP"
+    },
+    {
+      "t": "2026-10-28T20:10:02-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE LTC-USD @ 59.184 \u00b7 P&L $+120.58",
+      "reason": "target 1 hit (mark 59.184 >= tgt 58.888)",
+      "fill_id": "2026-10-27_LTC-USD_61"
+    },
+    {
+      "t": "2026-10-28T20:10:03-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE PEPE-USD @ 5.05e-06 \u00b7 P&L $+130.86",
+      "reason": "target 1 hit (mark 5.05e-06 >= tgt 5.0367e-06)",
+      "fill_id": "2026-10-27_PEPE-USD_62"
+    },
+    {
+      "t": "2026-10-28T20:10:13-03:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "20:09 BRT scan: see scans/2026-10-28_2009_scan.md",
+      "reason": "Coinbase Exchange public ticker/product/L2 book; PEPE-USD back inside spread gate (0.20%); LINK/DOGE back above $5M vol"
+    },
+    {
+      "t": "2026-10-28T20:10:13-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "NEAR-USD PASS",
+      "reason": "Coinbase NEAR-USD online; 24h vol $22.5M >= $5M; spread 0.06% <= 0.25%; \u00b11% depth $735,904 >= max($25k, 50x notional $8,000)"
+    },
+    {
+      "t": "2026-10-28T20:10:14-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 1686.9 NEAR-USD @ 4.7424 \u00b7 stop 4.6713 \u00b7 tgt 4.861 \u00b7 risk $119.94",
+      "reason": "20:09 BRT scanner routine: NEAR-USD top-liquidity unheld Rug-Check PASS after LTC/PEPE target exits freed 2 slots; cash-capped notional ~$8,000 at public ask, stop -1.5% / tgt +2.5%/+3.5%, risk ~$120 (0.24% eq, cap 5%); no leverage",
+      "fill_id": "2026-10-28_NEAR-USD_75",
+      "card": "V11_NEAR"
+    },
+    {
+      "t": "2026-10-29T08:10:07-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE XRP-USD @ 1.2914 \u00b7 P&L $-20.41",
+      "reason": "stop hit: mark 1.2914 < stop 1.3049 (08:10 BRT scanner routine)",
+      "fill_id": "2026-10-28_XRP-USD_72"
+    },
+    {
+      "t": "2026-10-29T08:10:07-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE NEAR-USD @ 4.4189 \u00b7 P&L $-545.71",
+      "reason": "stop hit: mark 4.4189 < stop 4.6713 (08:10 BRT scanner routine; gapped through stop overnight)",
+      "fill_id": "2026-10-28_NEAR-USD_75"
+    },
+    {
+      "t": "2026-10-29T08:10:38-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "LTC-USD PASS",
+      "reason": "Coinbase LTC-USD online; 24h vol $10.2M >= $5M; spread 0.028% <= 0.25%; \u00b11% depth $616,207 >= max($25k, 50x notional $3,990); long-listed CEX major"
+    },
+    {
+      "t": "2026-10-29T08:10:38-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 69 LTC-USD @ 57.827 \u00b7 stop 56.96 \u00b7 tgt 59.27 \u00b7 risk $59.82",
+      "reason": "08:10 BRT scanner routine: LTC-USD top-liquidity unheld Rug-Check PASS (XRP/NEAR skipped: just stopped out, no same-cycle re-entry; PEPE skipped: spread 0.21% near 0.25% gate); notional ~$3,990 at public ask, stop -1.5% / tgt +2.5%/+3.5%, risk ~$60 (0.12% eq, cap 5%); no leverage",
+      "fill_id": "2026-10-29_LTC-USD_78",
+      "card": "V11_LTC"
+    },
+    {
+      "t": "2026-10-29T08:10:38-03:00",
+      "agent": "Sizer",
+      "kind": "note",
+      "text": "No re-entry in XRP-USD / NEAR-USD this cycle",
+      "reason": "both PASS Rug Check but were stopped out at 08:10 BRT; 6/8 open, 2 slots left free"
+    },
+    {
+      "t": "2026-10-29T08:10:38-03:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "08:10 BRT scan: 13 PASS / 17 FAIL",
+      "reason": "Coinbase Exchange public ticker/product/L2 book; see scans/2026-10-29_0810_scan.md; HBAR/XLM back above $5M vol"
+    },
+    {
+      "t": "2026-10-29T12:07:57-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "XRP-USD PASS",
+      "reason": "Coinbase XRP-USD online; 24h vol $65.2M >= $5M; spread 0.008% <= 0.25%; \u00b11% depth $3,077,943 >= max($25k, 50x notional $4,000); long-listed CEX major"
+    },
+    {
+      "t": "2026-10-29T12:07:57-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 3069 XRP-USD @ 1.303 \u00b7 stop 1.2835 \u00b7 tgt 1.3356 \u00b7 risk $59.85",
+      "reason": "12:07 BRT scanner routine: XRP-USD top-liquidity unheld Rug-Check PASS (stopped out 08:10, re-entry allowed next cycle; PEPE FAIL spread 0.40%); notional ~$3,999 at public ask, stop -1.5% / tgt +2.5%/+3.5%, risk ~$60 (0.12% eq, cap 5%); no leverage; 1 slot left free",
+      "fill_id": "2026-10-29_XRP-USD_79",
+      "card": "V11_XRP"
+    },
+    {
+      "t": "2026-10-29T12:07:57-03:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "12:07 BRT scan: 12 PASS / 18 FAIL",
+      "reason": "Coinbase Exchange public ticker/product/L2 book; see scans/2026-10-29_1207_scan.md; UNI back above $5M vol, PEPE FAIL spread 0.40%, LINK below $5M vol"
+    },
+    {
+      "t": "2026-10-29T14:28:58-03:00",
+      "agent": "Human",
+      "kind": "override",
+      "text": "RULES \u2192 v2.0-CHAOS: max_open 50 \u00b7 max risk 100%/trade \u00b7 loss pause off (\u22121000%) \u00b7 paper leverage 20\u00d7 (margin model)",
+      "reason": "Owner Oskar authorized chaos mode through 2026-11-02 (t10u): 'remove all safeguards\u2026 make a million or lose it all'. PAPER ONLY unchanged; exit plan + public price source still required; rug checks now soft warnings. v1.1 backed up to reviews/pre_chaos_backup_2026-10-29/"
+    },
+    {
+      "t": "2026-10-29T14:30:04-03:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "CHAOS v2.0 session start: flatten v1.1 book, then concentrated 20x paper swings",
+      "reason": "owner t10u \u2014 'go crazy, make a million or lose it all'; paper only, public Coinbase marks only"
+    },
+    {
+      "t": "2026-10-29T14:30:13-03:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: pre-session marks \u00b7 eq $49,639 \u00b7 exposure $49,123 (0.99x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
+    },
+    {
+      "t": "2026-10-29T14:30:13-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE SOL-USD @ 101.56 \u00b7 P&L $-4.72",
+      "reason": "CHAOS flatten: close unlevered v1.1 position at public mark to free full cash as 20x paper margin",
+      "fill_id": "2026-10-27_SOL-USD_59"
+    },
+    {
+      "t": "2026-10-29T14:30:14-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE SUI-USD @ 0.9439 \u00b7 P&L $+82.21",
+      "reason": "CHAOS flatten: close unlevered v1.1 position at public mark to free full cash as 20x paper margin",
+      "fill_id": "2026-10-27_SUI-USD_66"
+    },
+    {
+      "t": "2026-10-29T14:30:14-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE XLM-USD @ 0.171353 \u00b7 P&L $-12.60",
+      "reason": "CHAOS flatten: close unlevered v1.1 position at public mark to free full cash as 20x paper margin",
+      "fill_id": "2026-10-27_XLM-USD_67"
+    },
+    {
+      "t": "2026-10-29T14:30:14-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE BTC-USD @ 81006.7 \u00b7 P&L $-18.70",
+      "reason": "CHAOS flatten: close unlevered v1.1 position at public mark to free full cash as 20x paper margin",
+      "fill_id": "2026-10-28_BTC-USD_68"
+    },
+    {
+      "t": "2026-10-29T14:30:15-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE ETH-USD @ 2347.93 \u00b7 P&L $+64.20",
+      "reason": "CHAOS flatten: close unlevered v1.1 position at public mark to free full cash as 20x paper margin",
+      "fill_id": "2026-10-28_ETH-USD_71"
+    },
+    {
+      "t": "2026-10-29T14:30:15-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE LTC-USD @ 58.208 \u00b7 P&L $+26.29",
+      "reason": "CHAOS flatten: close unlevered v1.1 position at public mark to free full cash as 20x paper margin",
+      "fill_id": "2026-10-29_LTC-USD_78"
+    },
+    {
+      "t": "2026-10-29T14:30:15-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE XRP-USD @ 1.296 \u00b7 P&L $-21.48",
+      "reason": "CHAOS flatten: close unlevered v1.1 position at public mark to free full cash as 20x paper margin",
+      "fill_id": "2026-10-29_XRP-USD_79"
+    },
+    {
+      "t": "2026-10-29T14:30:24-03:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: v1.1 book flattened \u00b7 eq $49,634 \u00b7 exposure $0 (0.0x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
+    },
+    {
+      "t": "2026-10-29T14:30:24-03:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "CHAOS batch A: 6 concentrated 20x paper swings (~$840k gross)",
+      "reason": "max aggression within 20x paper leverage; side = 24h momentum from public stats"
+    },
+    {
+      "t": "2026-10-29T14:30:25-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "BTC-USD PASS (chaos: non-blocking)",
+      "reason": "vol $502.2M, spread 0.000%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
+    },
+    {
+      "t": "2026-10-29T14:30:25-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 3.457 BTC-USD @ 80987 \u00b7 notional $279,972 (20x, margin $13,999) \u00b7 stop 79367 \u00b7 tgt 84226 \u00b7 risk $5,600.37",
+      "reason": "CHAOS A BTC-USD: high-conviction momentum swing \u2014 long (24h +0.30% from public stats open), notional $279,972 @ 20x paper (margin $13,999), stop 2.0% / tgt 4.0%/7.0%, risk $5,600 (11.3% eq; chaos cap 100%)",
+      "fill_id": "2026-10-29_BTC-USD_87",
+      "card": "CHAOS_BTC"
+    },
+    {
+      "t": "2026-10-29T14:30:26-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "ETH-USD PASS (chaos: non-blocking)",
+      "reason": "vol $236.2M, spread 0.000%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
+    },
+    {
+      "t": "2026-10-29T14:30:26-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 85.21 ETH-USD @ 2347.14 \u00b7 notional $200,000 (20x, margin $10,000) \u00b7 stop 2288.5 \u00b7 tgt 2464.5 \u00b7 risk $4,996.71",
+      "reason": "CHAOS A ETH-USD: high-conviction momentum swing \u2014 long (24h +0.21% from public stats open), notional $200,000 @ 20x paper (margin $10,000), stop 2.5% / tgt 5.0%/8.0%, risk $4,997 (10.1% eq; chaos cap 100%)",
+      "fill_id": "2026-10-29_ETH-USD_88",
+      "card": "CHAOS_ETH"
+    },
+    {
+      "t": "2026-10-29T14:30:26-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "SOL-USD PASS (chaos: non-blocking)",
+      "reason": "vol $57.5M, spread 0.010%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
+    },
+    {
+      "t": "2026-10-29T14:30:26-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 1379 SOL-USD @ 101.52 \u00b7 notional $139,996 (20x, margin $7,000) \u00b7 stop 104.57 \u00b7 tgt 95.429 \u00b7 risk $4,205.95",
+      "reason": "CHAOS A SOL-USD: high-conviction momentum swing \u2014 short (24h -0.01% from public stats open), notional $139,996 @ 20x paper (margin $7,000), stop 3.0% / tgt 6.0%/10.0%, risk $4,206 (8.5% eq; chaos cap 100%)",
+      "fill_id": "2026-10-29_SOL-USD_89",
+      "card": "CHAOS_SOL"
+    },
+    {
+      "t": "2026-10-29T14:30:27-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "XRP-USD PASS (chaos: non-blocking)",
+      "reason": "vol $69.4M, spread 0.015%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
+    },
+    {
+      "t": "2026-10-29T14:30:27-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 77200 XRP-USD @ 1.2953 \u00b7 notional $99,997 (20x, margin $5,000) \u00b7 stop 1.3342 \u00b7 tgt 1.2176 \u00b7 risk $3,003.08",
+      "reason": "CHAOS A XRP-USD: high-conviction momentum swing \u2014 short (24h -1.54% from public stats open), notional $99,997 @ 20x paper (margin $5,000), stop 3.0% / tgt 6.0%/10.0%, risk $3,003 (6.0% eq; chaos cap 100%)",
+      "fill_id": "2026-10-29_XRP-USD_90",
+      "card": "CHAOS_XRP"
+    },
+    {
+      "t": "2026-10-29T14:30:28-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "DOGE-USD PASS (chaos: non-blocking)",
+      "reason": "vol $5.7M, spread 0.025%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
+    },
+    {
+      "t": "2026-10-29T14:30:28-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 750800 DOGE-USD @ 0.07991 \u00b7 notional $59,996 (20x, margin $3,000) \u00b7 stop 0.076714 \u00b7 tgt 0.086303 \u00b7 risk $2,399.56",
+      "reason": "CHAOS A DOGE-USD: high-conviction momentum swing \u2014 long (24h +0.95% from public stats open), notional $59,996 @ 20x paper (margin $3,000), stop 4.0% / tgt 8.0%/12.0%, risk $2,400 (4.8% eq; chaos cap 100%)",
+      "fill_id": "2026-10-29_DOGE-USD_91",
+      "card": "CHAOS_DOGE"
+    },
+    {
+      "t": "2026-10-29T14:30:29-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "SUI-USD PASS (chaos: non-blocking)",
+      "reason": "vol $24.7M, spread 0.021%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
+    },
+    {
+      "t": "2026-10-29T14:30:29-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 63610 SUI-USD @ 0.9431 \u00b7 notional $59,991 (20x, margin $3,000) \u00b7 stop 0.90538 \u00b7 tgt 1.0185 \u00b7 risk $2,399.37",
+      "reason": "CHAOS A SUI-USD: high-conviction momentum swing \u2014 long (24h +2.06% from public stats open), notional $59,991 @ 20x paper (margin $3,000), stop 4.0% / tgt 8.0%/12.0%, risk $2,399 (4.8% eq; chaos cap 100%)",
+      "fill_id": "2026-10-29_SUI-USD_92",
+      "card": "CHAOS_SUI"
+    },
+    {
+      "t": "2026-10-29T14:30:39-03:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: batch A opened \u00b7 eq $49,454 \u00b7 exposure $839,724 (16.98x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
+    },
+    {
+      "t": "2026-10-29T14:31:47-03:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: batch A +60s \u00b7 eq $50,192 \u00b7 exposure $840,870 (16.75x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
+    },
+    {
+      "t": "2026-10-29T14:31:48-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE SOL-USD @ 101.6 \u00b7 P&L $-110.32",
+      "reason": "CHAOS rotate: cut weakest (uP&L $-110.32) \u2014 recycle margin into fresh swings",
+      "fill_id": "2026-10-29_SOL-USD_89"
+    },
+    {
+      "t": "2026-10-29T14:31:48-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE XRP-USD @ 1.2962 \u00b7 P&L $-69.48",
+      "reason": "CHAOS rotate: cut weakest (uP&L $-69.48) \u2014 recycle margin into fresh swings",
+      "fill_id": "2026-10-29_XRP-USD_90"
+    },
+    {
+      "t": "2026-10-29T14:31:49-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE DOGE-USD @ 0.08006 \u00b7 P&L $+112.62",
+      "reason": "CHAOS rotate: cut weakest (uP&L $+112.62) \u2014 recycle margin into fresh swings",
+      "fill_id": "2026-10-29_DOGE-USD_91"
+    },
+    {
+      "t": "2026-10-29T14:31:58-03:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: batch A weakest 3 cut \u00b7 eq $50,072 \u00b7 exposure $540,468 (10.79x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
+    },
+    {
+      "t": "2026-10-29T14:31:58-03:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "CHAOS batch B: 4 more 20x swings",
+      "reason": "rotate freed margin into next-most-liquid names, side by 24h momentum"
+    },
+    {
+      "t": "2026-10-29T14:31:58-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "LTC-USD PASS (chaos: non-blocking)",
+      "reason": "vol $8.8M, spread 0.029%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
+    },
+    {
+      "t": "2026-10-29T14:31:58-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 1372 LTC-USD @ 58.271 \u00b7 notional $79,948 (20x, margin $3,997) \u00b7 stop 60.019 \u00b7 tgt 54.775 \u00b7 risk $2,398.26",
+      "reason": "CHAOS B LTC-USD: rotation swing \u2014 short (24h -0.20% from public stats open), notional $79,948 @ 20x paper (margin $3,997), stop 3.0% / tgt 6.0%/10.0%, risk $2,398 (4.8% eq; chaos cap 100%)",
+      "fill_id": "2026-10-29_LTC-USD_96",
+      "card": "CHAOS_LTC"
+    },
+    {
+      "t": "2026-10-29T14:31:59-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "ADA-USD PASS (chaos: non-blocking)",
+      "reason": "vol $9.5M, spread 0.039%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
+    },
+    {
+      "t": "2026-10-29T14:31:59-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 293300 ADA-USD @ 0.20456 \u00b7 notional $59,997 (20x, margin $3,000) \u00b7 stop 0.19638 \u00b7 tgt 0.22092 \u00b7 risk $2,399.19",
+      "reason": "CHAOS B ADA-USD: rotation swing \u2014 long (24h +1.14% from public stats open), notional $59,997 @ 20x paper (margin $3,000), stop 4.0% / tgt 8.0%/12.0%, risk $2,399 (4.8% eq; chaos cap 100%)",
+      "fill_id": "2026-10-29_ADA-USD_97",
+      "card": "CHAOS_ADA"
+    },
+    {
+      "t": "2026-10-29T14:32:00-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "NEAR-USD PASS (chaos: non-blocking)",
+      "reason": "vol $37.3M, spread 0.020%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
+    },
+    {
+      "t": "2026-10-29T14:32:00-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 13130 NEAR-USD @ 4.5692 \u00b7 notional $59,994 (20x, margin $3,000) \u00b7 stop 4.752 \u00b7 tgt 4.2037 \u00b7 risk $2,400.16",
+      "reason": "CHAOS B NEAR-USD: rotation swing \u2014 short (24h -0.47% from public stats open), notional $59,994 @ 20x paper (margin $3,000), stop 4.0% / tgt 8.0%/12.0%, risk $2,400 (4.8% eq; chaos cap 100%)",
+      "fill_id": "2026-10-29_NEAR-USD_98",
+      "card": "CHAOS_NEAR"
+    },
+    {
+      "t": "2026-10-29T14:32:00-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "LINK-USD PASS (chaos: non-blocking)",
+      "reason": "vol $5.2M, spread 0.017%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
+    },
+    {
+      "t": "2026-10-29T14:32:00-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 5079 LINK-USD @ 11.812 \u00b7 notional $59,993 (20x, margin $3,000) \u00b7 stop 11.34 \u00b7 tgt 12.757 \u00b7 risk $2,397.29",
+      "reason": "CHAOS B LINK-USD: rotation swing \u2014 long (24h +2.29% from public stats open), notional $59,993 @ 20x paper (margin $3,000), stop 4.0% / tgt 8.0%/12.0%, risk $2,397 (4.8% eq; chaos cap 100%)",
+      "fill_id": "2026-10-29_LINK-USD_99",
+      "card": "CHAOS_LINK"
+    },
+    {
+      "t": "2026-10-29T14:32:09-03:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: batch B opened \u00b7 eq $50,219 \u00b7 exposure $800,810 (15.95x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
+    },
+    {
+      "t": "2026-10-29T14:33:19-03:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: batch B +60s \u00b7 eq $50,236 \u00b7 exposure $800,554 (15.94x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
+    },
+    {
+      "t": "2026-10-29T14:33:19-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE LTC-USD @ 58.294 \u00b7 P&L $-31.56",
+      "reason": "CHAOS churn: dump worst (uP&L $-31.56) and reload",
+      "fill_id": "2026-10-29_LTC-USD_96"
+    },
+    {
+      "t": "2026-10-29T14:33:20-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE ETH-USD @ 2350.75 \u00b7 P&L $+307.61",
+      "reason": "CHAOS churn: bank best (uP&L $+288.86) and reload",
+      "fill_id": "2026-10-29_ETH-USD_88"
+    },
+    {
+      "t": "2026-10-29T14:33:29-03:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: batch B churned \u00b7 eq $50,283 \u00b7 exposure $520,313 (10.35x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
+    },
+    {
+      "t": "2026-10-29T14:33:29-03:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "CHAOS batch C: final reload ETH-USD, SOL-USD, XRP-USD",
+      "reason": "leave a concentrated leveraged book open into the weekend"
+    },
+    {
+      "t": "2026-10-29T14:33:29-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "ETH-USD PASS (chaos: non-blocking)",
+      "reason": "vol $237.4M, spread 0.004%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
+    },
+    {
+      "t": "2026-10-29T14:33:29-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 76.61 ETH-USD @ 2349.45 \u00b7 notional $179,991 (20x, margin $9,000) \u00b7 stop 2290.7 \u00b7 tgt 2466.9 \u00b7 risk $4,500.84",
+      "reason": "CHAOS C ETH-USD: final high-conviction reload \u2014 long (24h +0.31% from public stats open), notional $179,991 @ 20x paper (margin $9,000), stop 2.5% / tgt 5.0%/8.0%, risk $4,501 (9.0% eq; chaos cap 100%)",
+      "fill_id": "2026-10-29_ETH-USD_102",
+      "card": "CHAOS_ETH"
+    },
+    {
+      "t": "2026-10-29T14:33:30-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "SOL-USD PASS (chaos: non-blocking)",
+      "reason": "vol $57.6M, spread 0.010%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
+    },
+    {
+      "t": "2026-10-29T14:33:30-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 1181 SOL-USD @ 101.59 \u00b7 notional $119,978 (20x, margin $5,999) \u00b7 stop 98.542 \u00b7 tgt 107.69 \u00b7 risk $3,599.69",
+      "reason": "CHAOS C SOL-USD: final high-conviction reload \u2014 long (24h +0.06% from public stats open), notional $119,978 @ 20x paper (margin $5,999), stop 3.0% / tgt 6.0%/10.0%, risk $3,600 (7.2% eq; chaos cap 100%)",
+      "fill_id": "2026-10-29_SOL-USD_103",
+      "card": "CHAOS_SOL"
+    },
+    {
+      "t": "2026-10-29T14:33:31-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "XRP-USD PASS (chaos: non-blocking)",
+      "reason": "vol $69.6M, spread 0.008%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
+    },
+    {
+      "t": "2026-10-29T14:33:31-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 69420 XRP-USD @ 1.2964 \u00b7 notional $89,996 (20x, margin $4,500) \u00b7 stop 1.3353 \u00b7 tgt 1.2186 \u00b7 risk $2,700.44",
+      "reason": "CHAOS C XRP-USD: final high-conviction reload \u2014 short (24h -1.46% from public stats open), notional $89,996 @ 20x paper (margin $4,500), stop 3.0% / tgt 6.0%/10.0%, risk $2,700 (5.4% eq; chaos cap 100%)",
+      "fill_id": "2026-10-29_XRP-USD_104",
+      "card": "CHAOS_XRP"
+    },
+    {
+      "t": "2026-10-29T14:33:40-03:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: final chaos book \u00b7 eq $50,049 \u00b7 exposure $909,777 (18.18x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
+    }
+  ],
+  "scanner_feed": [
+    {
+      "symbol": "BTC-USD",
+      "mark": {
+        "price": 81206.91,
+        "bid": 81206.91,
+        "ask": 81206.92,
+        "spread_pct": 1e-05,
+        "volume_24h_base": 5512.59672534,
+        "volume_24h_usd_approx": 447660946.0,
+        "exchange_time_utc": "2026-10-29T15:07:26.640131107Z",
+        "fetched_at": "2026-10-29T12:07:27-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "status": "online",
+      "depth_1pct_usd": 4073663,
+      "max_notional_by_depth": 81473.26,
+      "pass": true,
+      "flags": []
+    },
+    {
+      "symbol": "ETH-USD",
+      "mark": {
+        "price": 2347.34,
+        "bid": 2347.4,
+        "ask": 2347.41,
+        "spread_pct": 0.00043,
+        "volume_24h_base": 91096.2564895,
+        "volume_24h_usd_approx": 213833887.0,
+        "exchange_time_utc": "2026-10-29T15:07:24.169138656Z",
+        "fetched_at": "2026-10-29T12:07:27-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "status": "online",
+      "depth_1pct_usd": 2708222,
+      "max_notional_by_depth": 54164.44,
+      "pass": true,
+      "flags": []
+    },
+    {
+      "symbol": "XRP-USD",
+      "mark": {
+        "price": 1.3027,
+        "bid": 1.3027,
+        "ask": 1.3028,
+        "spread_pct": 0.00768,
+        "volume_24h_base": 50024499.049932,
+        "volume_24h_usd_approx": 65166915.0,
+        "exchange_time_utc": "2026-10-29T15:07:25.753818808Z",
+        "fetched_at": "2026-10-29T12:07:28-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "status": "online",
+      "depth_1pct_usd": 3077943,
+      "max_notional_by_depth": 61558.86,
+      "pass": true,
+      "flags": []
+    },
+    {
+      "symbol": "SOL-USD",
+      "mark": {
+        "price": 101.72,
+        "bid": 101.71,
+        "ask": 101.72,
+        "spread_pct": 0.00983,
+        "volume_24h_base": 546717.3712402,
+        "volume_24h_usd_approx": 55612091.0,
+        "exchange_time_utc": "2026-10-29T15:07:22.798579848Z",
+        "fetched_at": "2026-10-29T12:07:28-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "status": "online",
+      "depth_1pct_usd": 2929745,
+      "max_notional_by_depth": 58594.91,
+      "pass": true,
+      "flags": []
+    },
+    {
+      "symbol": "NEAR-USD",
+      "mark": {
+        "price": 4.5233,
+        "bid": 4.5216,
+        "ask": 4.5232,
+        "spread_pct": 0.03538,
+        "volume_24h_base": 7054615.972,
+        "volume_24h_usd_approx": 31910144.0,
+        "exchange_time_utc": "2026-10-29T15:07:23.579911441Z",
+        "fetched_at": "2026-10-29T12:07:31-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "status": "online",
+      "depth_1pct_usd": 768786,
+      "max_notional_by_depth": 15375.72,
+      "pass": true,
+      "flags": []
+    },
+    {
+      "symbol": "SUI-USD",
+      "mark": {
+        "price": 0.9417,
+        "bid": 0.9414,
+        "ask": 0.9416,
+        "spread_pct": 0.02124,
+        "volume_24h_base": 22674204.2,
+        "volume_24h_usd_approx": 21352298.0,
+        "exchange_time_utc": "2026-10-29T15:07:29.936260840Z",
+        "fetched_at": "2026-10-29T12:07:31-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "status": "online",
+      "depth_1pct_usd": 836233,
+      "max_notional_by_depth": 16724.66,
+      "pass": true,
+      "flags": []
+    },
+    {
+      "symbol": "PEPE-USD",
+      "mark": {
+        "price": 5.04e-06,
+        "bid": 5.03e-06,
+        "ask": 5.05e-06,
+        "spread_pct": 0.39683,
+        "volume_24h_base": 2675437060024.0,
+        "volume_24h_usd_approx": 13484203.0,
+        "exchange_time_utc": "2026-10-29T15:07:29.833913009Z",
+        "fetched_at": "2026-10-29T12:07:37-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "status": "online",
+      "depth_1pct_usd": 118726,
+      "max_notional_by_depth": 2374.53,
+      "pass": false,
+      "flags": [
+        "spread 0.39683% > 0.25%"
+      ]
+    },
+    {
+      "symbol": "LTC-USD",
+      "mark": {
+        "price": 57.848,
+        "bid": 57.845,
+        "ask": 57.849,
+        "spread_pct": 0.00691,
+        "volume_24h_base": 162790.83685459,
+        "volume_24h_usd_approx": 9417124.0,
+        "exchange_time_utc": "2026-10-29T15:07:19.949492503Z",
+        "fetched_at": "2026-10-29T12:07:28-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "status": "online",
+      "depth_1pct_usd": 505091,
+      "max_notional_by_depth": 10101.83,
+      "pass": true,
+      "flags": []
+    },
+    {
+      "symbol": "ADA-USD",
+      "mark": {
+        "price": 0.20379,
+        "bid": 0.20376,
+        "ask": 0.20385,
+        "spread_pct": 0.04416,
+        "volume_24h_base": 45294745.85561324,
+        "volume_24h_usd_approx": 9230616.0,
+        "exchange_time_utc": "2026-10-29T15:07:18.672079886Z",
+        "fetched_at": "2026-10-29T12:07:29-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "status": "online",
+      "depth_1pct_usd": 419390,
+      "max_notional_by_depth": 8387.8,
+      "pass": true,
+      "flags": []
+    },
+    {
+      "symbol": "UNI-USD",
+      "mark": {
+        "price": 7.276,
+        "bid": 7.2723,
+        "ask": 7.2751,
+        "spread_pct": 0.03849,
+        "volume_24h_base": 788808.846742,
+        "volume_24h_usd_approx": 5739373.0,
+        "exchange_time_utc": "2026-10-29T15:07:25.307102006Z",
+        "fetched_at": "2026-10-29T12:07:34-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "status": "online",
+      "depth_1pct_usd": 317387,
+      "max_notional_by_depth": 6347.73,
+      "pass": true,
+      "flags": []
+    },
+    {
+      "symbol": "HBAR-USD",
+      "mark": {
+        "price": 0.07448,
+        "bid": 0.07446,
+        "ask": 0.07449,
+        "spread_pct": 0.04028,
+        "volume_24h_base": 73651360.4,
+        "volume_24h_usd_approx": 5485553.0,
+        "exchange_time_utc": "2026-10-29T15:07:33.906053656Z",
+        "fetched_at": "2026-10-29T12:07:35-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "status": "online",
+      "depth_1pct_usd": 373576,
+      "max_notional_by_depth": 7471.51,
+      "pass": true,
+      "flags": []
+    },
+    {
+      "symbol": "DOGE-USD",
+      "mark": {
+        "price": 0.07977,
+        "bid": 0.07976,
+        "ask": 0.07978,
+        "spread_pct": 0.02507,
+        "volume_24h_base": 65308606.2,
+        "volume_24h_usd_approx": 5209668.0,
+        "exchange_time_utc": "2026-10-29T15:07:21.534081027Z",
+        "fetched_at": "2026-10-29T12:07:29-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "status": "online",
+      "depth_1pct_usd": 577760,
+      "max_notional_by_depth": 11555.2,
+      "pass": true,
+      "flags": []
+    },
+    {
+      "symbol": "XLM-USD",
+      "mark": {
+        "price": 0.171031,
+        "bid": 0.170984,
+        "ask": 0.17105,
+        "spread_pct": 0.03859,
+        "volume_24h_base": 29721818.62969725,
+        "volume_24h_usd_approx": 5083352.0,
+        "exchange_time_utc": "2026-10-29T15:07:28.280528737Z",
+        "fetched_at": "2026-10-29T12:07:35-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "status": "online",
+      "depth_1pct_usd": 369897,
+      "max_notional_by_depth": 7397.94,
+      "pass": true,
+      "flags": []
+    },
+    {
+      "symbol": "LINK-USD",
+      "mark": {
+        "price": 11.808,
+        "bid": 11.811,
+        "ask": 11.812,
+        "spread_pct": 0.00847,
+        "volume_24h_base": 392651.92,
+        "volume_24h_usd_approx": 4636434.0,
+        "exchange_time_utc": "2026-10-29T15:07:21.676115649Z",
+        "fetched_at": "2026-10-29T12:07:28-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "status": "online",
+      "depth_1pct_usd": 397380,
+      "max_notional_by_depth": 7947.6,
+      "pass": false,
+      "flags": [
+        "24h vol $4.64M < $5M"
+      ]
+    },
+    {
+      "symbol": "INJ-USD",
+      "mark": {
+        "price": 8.019,
+        "bid": 8.02,
+        "ask": 8.027,
+        "spread_pct": 0.08724,
+        "volume_24h_base": 516229.63,
+        "volume_24h_usd_approx": 4139645.0,
+        "exchange_time_utc": "2026-10-29T15:07:30.411175706Z",
+        "fetched_at": "2026-10-29T12:07:36-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "status": "online",
+      "depth_1pct_usd": 157777,
+      "max_notional_by_depth": 3155.53,
+      "pass": false,
+      "flags": [
+        "24h vol $4.14M < $5M"
+      ]
+    },
+    {
+      "symbol": "AVAX-USD",
+      "mark": {
+        "price": 8.898,
+        "bid": 8.893,
+        "ask": 8.898,
+        "spread_pct": 0.05621,
+        "volume_24h_base": 457458.00593513,
+        "volume_24h_usd_approx": 4070461.0,
+        "exchange_time_utc": "2026-10-29T15:07:29.368452644Z",
+        "fetched_at": "2026-10-29T12:07:30-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "status": "online",
+      "depth_1pct_usd": 349174,
+      "max_notional_by_depth": 6983.48,
+      "pass": false,
+      "flags": [
+        "24h vol $4.07M < $5M"
+      ]
+    },
+    {
+      "symbol": "AAVE-USD",
+      "mark": {
+        "price": 134.48,
+        "bid": 134.44,
+        "ask": 134.49,
+        "spread_pct": 0.03718,
+        "volume_24h_base": 27287.437,
+        "volume_24h_usd_approx": 3669615.0,
+        "exchange_time_utc": "2026-10-29T15:07:22.107891148Z",
+        "fetched_at": "2026-10-29T12:07:35-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "status": "online",
+      "depth_1pct_usd": 183307,
+      "max_notional_by_depth": 3666.14,
+      "pass": false,
+      "flags": [
+        "24h vol $3.67M < $5M"
+      ]
+    },
+    {
+      "symbol": "BCH-USD",
+      "mark": {
+        "price": 282.54,
+        "bid": 282.44,
+        "ask": 282.63,
+        "spread_pct": 0.06725,
+        "volume_24h_base": 10254.9862443,
+        "volume_24h_usd_approx": 2897444.0,
+        "exchange_time_utc": "2026-10-29T15:07:29.140835355Z",
+        "fetched_at": "2026-10-29T12:07:30-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "status": "online",
+      "depth_1pct_usd": 280730,
+      "max_notional_by_depth": 5614.61,
+      "pass": false,
+      "flags": [
+        "24h vol $2.90M < $5M"
+      ]
+    },
+    {
+      "symbol": "DOT-USD",
+      "mark": {
+        "price": 1.0033,
+        "bid": 1.0028,
+        "ask": 1.0034,
+        "spread_pct": 0.05981,
+        "volume_24h_base": 1619435.95863058,
+        "volume_24h_usd_approx": 1624780.0,
+        "exchange_time_utc": "2026-10-29T15:07:27.225480078Z",
+        "fetched_at": "2026-10-29T12:07:33-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "status": "online",
+      "depth_1pct_usd": 88296,
+      "max_notional_by_depth": 1765.91,
+      "pass": false,
+      "flags": [
+        "24h vol $1.62M < $5M"
+      ]
+    },
+    {
+      "symbol": "TIA-USD",
+      "mark": {
+        "price": 0.5444,
+        "bid": 0.5445,
+        "ask": 0.5447,
+        "spread_pct": 0.03672,
+        "volume_24h_base": 2949728.18,
+        "volume_24h_usd_approx": 1605832.0,
+        "exchange_time_utc": "2026-10-29T15:06:52.256584117Z",
+        "fetched_at": "2026-10-29T12:07:38-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "status": "online",
+      "depth_1pct_usd": 147221,
+      "max_notional_by_depth": 2944.41,
+      "pass": false,
+      "flags": [
+        "24h vol $1.61M < $5M"
+      ]
+    },
+    {
+      "symbol": "ARB-USD",
+      "mark": {
+        "price": 0.17186,
+        "bid": 0.17164,
+        "ask": 0.17176,
+        "spread_pct": 0.06989,
+        "volume_24h_base": 9134439.32,
+        "volume_24h_usd_approx": 1569845.0,
+        "exchange_time_utc": "2026-10-29T15:07:28.401600735Z",
+        "fetched_at": "2026-10-29T12:07:32-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "status": "online",
+      "depth_1pct_usd": 82751,
+      "max_notional_by_depth": 1655.02,
+      "pass": false,
+      "flags": [
+        "24h vol $1.57M < $5M"
+      ]
+    },
+    {
+      "symbol": "ICP-USD",
+      "mark": {
+        "price": 2.5986,
+        "bid": 2.5984,
+        "ask": 2.6006,
+        "spread_pct": 0.08463,
+        "volume_24h_base": 444603.8731,
+        "volume_24h_usd_approx": 1155348.0,
+        "exchange_time_utc": "2026-10-29T15:06:18.297358376Z",
+        "fetched_at": "2026-10-29T12:07:39-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "status": "online",
+      "depth_1pct_usd": 136249,
+      "max_notional_by_depth": 2724.98,
+      "pass": false,
+      "flags": [
+        "24h vol $1.16M < $5M"
+      ]
+    },
+    {
+      "symbol": "APT-USD",
+      "mark": {
+        "price": 0.6863,
+        "bid": 0.6858,
+        "ask": 0.6861,
+        "spread_pct": 0.04373,
+        "volume_24h_base": 1647781.167,
+        "volume_24h_usd_approx": 1130872.0,
+        "exchange_time_utc": "2026-10-29T15:07:25.370464306Z",
+        "fetched_at": "2026-10-29T12:07:31-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "status": "online",
+      "depth_1pct_usd": 49981,
+      "max_notional_by_depth": 999.63,
+      "pass": false,
+      "flags": [
+        "24h vol $1.13M < $5M"
+      ]
+    },
+    {
+      "symbol": "FIL-USD",
+      "mark": {
+        "price": 0.9133,
+        "bid": 0.9127,
+        "ask": 0.9132,
+        "spread_pct": 0.05477,
+        "volume_24h_base": 1196186.562,
+        "volume_24h_usd_approx": 1092477.0,
+        "exchange_time_utc": "2026-10-29T15:07:29.067382916Z",
+        "fetched_at": "2026-10-29T12:07:36-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "status": "online",
+      "depth_1pct_usd": 101012,
+      "max_notional_by_depth": 2020.24,
+      "pass": false,
+      "flags": [
+        "24h vol $1.09M < $5M"
+      ]
+    },
+    {
+      "symbol": "ATOM-USD",
+      "mark": {
+        "price": 1.6165,
+        "bid": 1.6153,
+        "ask": 1.6166,
+        "spread_pct": 0.08045,
+        "volume_24h_base": 421187.66,
+        "volume_24h_usd_approx": 680850.0,
+        "exchange_time_utc": "2026-10-29T15:07:20.193393532Z",
+        "fetched_at": "2026-10-29T12:07:30-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "status": "online",
+      "depth_1pct_usd": 89002,
+      "max_notional_by_depth": 1780.04,
+      "pass": false,
+      "flags": [
+        "24h vol $0.68M < $5M"
+      ]
+    },
+    {
+      "symbol": "OP-USD",
+      "mark": {
+        "price": 0.11187,
+        "bid": 0.11197,
+        "ask": 0.11206,
+        "spread_pct": 0.08035,
+        "volume_24h_base": 5000277.97,
+        "volume_24h_usd_approx": 559381.0,
+        "exchange_time_utc": "2026-10-29T15:07:18.031651524Z",
+        "fetched_at": "2026-10-29T12:07:33-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "status": "online",
+      "depth_1pct_usd": 59584,
+      "max_notional_by_depth": 1191.67,
+      "pass": false,
+      "flags": [
+        "24h vol $0.56M < $5M"
+      ]
+    },
+    {
+      "symbol": "ETC-USD",
+      "mark": {
+        "price": 7.542,
+        "bid": 7.543,
+        "ask": 7.549,
+        "spread_pct": 0.07951,
+        "volume_24h_base": 62803.03043906,
+        "volume_24h_usd_approx": 473660.0,
+        "exchange_time_utc": "2026-10-29T15:07:32.914184895Z",
+        "fetched_at": "2026-10-29T12:07:39-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "status": "online",
+      "depth_1pct_usd": 92840,
+      "max_notional_by_depth": 1856.8,
+      "pass": false,
+      "flags": [
+        "24h vol $0.47M < $5M"
+      ]
+    },
+    {
+      "symbol": "SEI-USD",
+      "mark": {
+        "price": 0.05243,
+        "bid": 0.05234,
+        "ask": 0.05238,
+        "spread_pct": 0.07639,
+        "volume_24h_base": 8288637.8,
+        "volume_24h_usd_approx": 434573.0,
+        "exchange_time_utc": "2026-10-29T15:05:47.084028268Z",
+        "fetched_at": "2026-10-29T12:07:38-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "status": "online",
+      "depth_1pct_usd": 83144,
+      "max_notional_by_depth": 1662.89,
+      "pass": false,
+      "flags": [
+        "24h vol $0.43M < $5M"
+      ]
+    },
+    {
+      "symbol": "POL-USD",
+      "mark": {
+        "price": 0.09209,
+        "bid": 0.09208,
+        "ask": 0.09212,
+        "spread_pct": 0.04343,
+        "volume_24h_base": 3753276.07,
+        "volume_24h_usd_approx": 345639.0,
+        "exchange_time_utc": "2026-10-29T15:07:27.339766565Z",
+        "fetched_at": "2026-10-29T12:07:40-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "status": "online",
+      "depth_1pct_usd": 108213,
+      "max_notional_by_depth": 2164.26,
+      "pass": false,
+      "flags": [
+        "24h vol $0.35M < $5M"
+      ]
+    },
+    {
+      "symbol": "SHIB-USD",
+      "mark": {
+        "price": 4.94e-06,
+        "bid": 4.95e-06,
+        "ask": 4.96e-06,
+        "spread_pct": 0.20182,
+        "volume_24h_base": 55168152976.0,
+        "volume_24h_usd_approx": 272531.0,
+        "exchange_time_utc": "2026-10-29T15:05:02.140974719Z",
+        "fetched_at": "2026-10-29T12:07:37-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "status": "online",
+      "depth_1pct_usd": 41204,
+      "max_notional_by_depth": 824.08,
+      "pass": false,
+      "flags": [
+        "24h vol $0.27M < $5M"
+      ]
+    }
+  ],
+  "quotes": {
+    "provider": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+    "purpose": "display_only",
+    "paper_only": true,
+    "marks": {
+      "BTC-USD": {
+        "price": 81023.11,
+        "bid": 81023.1,
+        "ask": 81023.11,
+        "spread_pct": 1e-05,
+        "volume_24h_base": 6212.90577214,
+        "volume_24h_usd_approx": 503388948.0,
+        "exchange_time_utc": "2026-10-29T17:33:32.100858212Z",
+        "fetched_at": "2026-10-29T14:33:33-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "ETH-USD": {
+        "price": 2348.72,
+        "bid": 2348.71,
+        "ask": 2348.72,
+        "spread_pct": 0.00043,
+        "volume_24h_base": 100994.32846511,
+        "volume_24h_usd_approx": 237207399.0,
+        "exchange_time_utc": "2026-10-29T17:33:33.600827193Z",
+        "fetched_at": "2026-10-29T14:33:34-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "SOL-USD": {
+        "price": 101.56,
+        "bid": 101.56,
+        "ask": 101.58,
+        "spread_pct": 0.01969,
+        "volume_24h_base": 567374.57680279,
+        "volume_24h_usd_approx": 57622562.0,
+        "exchange_time_utc": "2026-10-29T17:33:36.882477608Z",
+        "fetched_at": "2026-10-29T14:33:38-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "XRP-USD": {
+        "price": 1.296,
+        "bid": 1.2958,
+        "ask": 1.2959,
+        "spread_pct": 0.00772,
+        "volume_24h_base": 53658593.598445,
+        "volume_24h_usd_approx": 69541537.0,
+        "exchange_time_utc": "2026-10-29T17:33:37.066397429Z",
+        "fetched_at": "2026-10-29T14:33:40-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "LTC-USD": {
+        "price": 58.254,
+        "bid": 58.232,
+        "ask": 58.254,
+        "spread_pct": 0.03777,
+        "volume_24h_base": 150809.3780158,
+        "volume_24h_usd_approx": 8785250.0,
+        "exchange_time_utc": "2026-10-29T17:33:33.144941311Z",
+        "fetched_at": "2026-10-29T14:33:36-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "LINK-USD": {
+        "price": 11.808,
+        "bid": 11.806,
+        "ask": 11.808,
+        "spread_pct": 0.01694,
+        "volume_24h_base": 441621.31,
+        "volume_24h_usd_approx": 5214664.0,
+        "exchange_time_utc": "2026-10-29T17:33:34.378106502Z",
+        "fetched_at": "2026-10-29T14:33:36-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "ADA-USD": {
+        "price": 0.20455,
+        "bid": 0.20445,
+        "ask": 0.20453,
+        "spread_pct": 0.03912,
+        "volume_24h_base": 46487409.9180609,
+        "volume_24h_usd_approx": 9509000.0,
+        "exchange_time_utc": "2026-10-29T17:33:30.788341422Z",
+        "fetched_at": "2026-10-29T14:33:31-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "DOGE-USD": {
+        "price": 0.08007,
+        "bid": 0.08004,
+        "ask": 0.08006,
+        "spread_pct": 0.02498,
+        "volume_24h_base": 70934132.2,
+        "volume_24h_usd_approx": 5679696.0,
+        "exchange_time_utc": "2026-10-29T17:33:31.125560080Z",
+        "fetched_at": "2026-10-29T14:33:33-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "BCH-USD": {
+        "price": 290.64,
+        "bid": 290.45,
+        "ask": 290.6,
+        "spread_pct": 0.05163,
+        "volume_24h_base": 10451.08874087,
+        "volume_24h_usd_approx": 3037504.0,
+        "exchange_time_utc": "2026-10-29T17:33:30.615222899Z",
+        "fetched_at": "2026-10-29T14:33:33-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "AVAX-USD": {
+        "price": 8.93,
+        "bid": 8.926,
+        "ask": 8.93,
+        "spread_pct": 0.0448,
+        "volume_24h_base": 463105.90759203,
+        "volume_24h_usd_approx": 4135536.0,
+        "exchange_time_utc": "2026-10-29T17:33:12.549263702Z",
+        "fetched_at": "2026-10-29T14:33:32-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "ATOM-USD": {
+        "price": 1.6163,
+        "bid": 1.6146,
+        "ask": 1.6159,
+        "spread_pct": 0.08048,
+        "volume_24h_base": 433814.64,
+        "volume_24h_usd_approx": 701175.0,
+        "exchange_time_utc": "2026-10-29T17:33:28.705166995Z",
+        "fetched_at": "2026-10-29T14:33:32-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "NEAR-USD": {
+        "price": 4.5583,
+        "bid": 4.5569,
+        "ask": 4.56,
+        "spread_pct": 0.06801,
+        "volume_24h_base": 8165518.268,
+        "volume_24h_usd_approx": 37220882.0,
+        "exchange_time_utc": "2026-10-29T17:33:32.447981696Z",
+        "fetched_at": "2026-10-29T14:33:36-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "SUI-USD": {
+        "price": 0.9435,
+        "bid": 0.9434,
+        "ask": 0.9438,
+        "spread_pct": 0.04239,
+        "volume_24h_base": 26244343.0,
+        "volume_24h_usd_approx": 24761538.0,
+        "exchange_time_utc": "2026-10-29T17:33:36.807676644Z",
+        "fetched_at": "2026-10-29T14:33:38-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "APT-USD": {
+        "price": 0.6887,
+        "bid": 0.6862,
+        "ask": 0.6875,
+        "spread_pct": 0.18927,
+        "volume_24h_base": 1991738.111,
+        "volume_24h_usd_approx": 1371710.0,
+        "exchange_time_utc": "2026-10-29T17:31:52.603304952Z",
+        "fetched_at": "2026-10-29T14:33:32-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "ARB-USD": {
+        "price": 0.1713,
+        "bid": 0.1712,
+        "ask": 0.17134,
+        "spread_pct": 0.08174,
+        "volume_24h_base": 8943585.83,
+        "volume_24h_usd_approx": 1532036.0,
+        "exchange_time_utc": "2026-10-29T17:33:30.876868867Z",
+        "fetched_at": "2026-10-29T14:33:32-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "OP-USD": {
+        "price": 0.11236,
+        "bid": 0.11204,
+        "ask": 0.1121,
+        "spread_pct": 0.05354,
+        "volume_24h_base": 5032856.36,
+        "volume_24h_usd_approx": 565492.0,
+        "exchange_time_utc": "2026-10-29T17:32:44.248133781Z",
+        "fetched_at": "2026-10-29T14:33:37-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "DOT-USD": {
+        "price": 1.0028,
+        "bid": 1.0021,
+        "ask": 1.0024,
+        "spread_pct": 0.02993,
+        "volume_24h_base": 1647514.30146834,
+        "volume_24h_usd_approx": 1652127.0,
+        "exchange_time_utc": "2026-10-29T17:33:26.290052929Z",
+        "fetched_at": "2026-10-29T14:33:34-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "UNI-USD": {
+        "price": 7.3284,
+        "bid": 7.3256,
+        "ask": 7.3298,
+        "spread_pct": 0.05732,
+        "volume_24h_base": 1251512.688708,
+        "volume_24h_usd_approx": 9171586.0,
+        "exchange_time_utc": "2026-10-29T17:33:30.615526463Z",
+        "fetched_at": "2026-10-29T14:33:39-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "AAVE-USD": {
+        "price": 135.28,
+        "bid": 135.2,
+        "ask": 135.26,
+        "spread_pct": 0.04437,
+        "volume_24h_base": 33855.536,
+        "volume_24h_usd_approx": 4579977.0,
+        "exchange_time_utc": "2026-10-29T17:33:23.385271227Z",
+        "fetched_at": "2026-10-29T14:33:31-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "XLM-USD": {
+        "price": 0.171516,
+        "bid": 0.171461,
+        "ask": 0.171509,
+        "spread_pct": 0.02799,
+        "volume_24h_base": 32198427.15638894,
+        "volume_24h_usd_approx": 5522545.0,
+        "exchange_time_utc": "2026-10-29T17:33:34.967804611Z",
+        "fetched_at": "2026-10-29T14:33:39-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "HBAR-USD": {
+        "price": 0.07418,
+        "bid": 0.0741,
+        "ask": 0.07414,
+        "spread_pct": 0.05397,
+        "volume_24h_base": 78566780.4,
+        "volume_24h_usd_approx": 5828084.0,
+        "exchange_time_utc": "2026-10-29T17:33:24.497674330Z",
+        "fetched_at": "2026-10-29T14:33:35-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "INJ-USD": {
+        "price": 8.096,
+        "bid": 8.088,
+        "ask": 8.089,
+        "spread_pct": 0.01236,
+        "volume_24h_base": 560104.55,
+        "volume_24h_usd_approx": 4534606.0,
+        "exchange_time_utc": "2026-10-29T17:33:27.832675043Z",
+        "fetched_at": "2026-10-29T14:33:35-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "FIL-USD": {
+        "price": 0.908,
+        "bid": 0.9067,
+        "ask": 0.9073,
+        "spread_pct": 0.06615,
+        "volume_24h_base": 1106268.529,
+        "volume_24h_usd_approx": 1004492.0,
+        "exchange_time_utc": "2026-10-29T17:33:19.711709010Z",
+        "fetched_at": "2026-10-29T14:33:35-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "SHIB-USD": {
+        "price": 5e-06,
+        "bid": 4.99e-06,
+        "ask": 5.01e-06,
+        "spread_pct": 0.4,
+        "volume_24h_base": 61561702395.0,
+        "volume_24h_usd_approx": 307809.0,
+        "exchange_time_utc": "2026-10-29T17:33:34.300561689Z",
+        "fetched_at": "2026-10-29T14:33:38-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "PEPE-USD": {
+        "price": 5.46e-06,
+        "bid": 5.45e-06,
+        "ask": 5.46e-06,
+        "spread_pct": 0.18332,
+        "volume_24h_base": 3632866164809.0,
+        "volume_24h_usd_approx": 19835449.0,
+        "exchange_time_utc": "2026-10-29T17:33:21.299176861Z",
+        "fetched_at": "2026-10-29T14:33:37-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "SEI-USD": {
+        "price": 0.05269,
+        "bid": 0.05266,
+        "ask": 0.0527,
+        "spread_pct": 0.07593,
+        "volume_24h_base": 9163123.2,
+        "volume_24h_usd_approx": 482805.0,
+        "exchange_time_utc": "2026-10-29T17:33:31.027403288Z",
+        "fetched_at": "2026-10-29T14:33:37-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "TIA-USD": {
+        "price": 0.5454,
+        "bid": 0.5449,
+        "ask": 0.5451,
+        "spread_pct": 0.0367,
+        "volume_24h_base": 3180217.33,
+        "volume_24h_usd_approx": 1734491.0,
+        "exchange_time_utc": "2026-10-29T17:33:30.581421408Z",
+        "fetched_at": "2026-10-29T14:33:39-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "ETC-USD": {
+        "price": 7.571,
+        "bid": 7.554,
+        "ask": 7.558,
+        "spread_pct": 0.05294,
+        "volume_24h_base": 67897.15585777,
+        "volume_24h_usd_approx": 514049.0,
+        "exchange_time_utc": "2026-10-29T17:32:43.596448763Z",
+        "fetched_at": "2026-10-29T14:33:34-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "ICP-USD": {
+        "price": 2.5889,
+        "bid": 2.5871,
+        "ask": 2.5894,
+        "spread_pct": 0.08886,
+        "volume_24h_base": 473511.6641,
+        "volume_24h_usd_approx": 1225874.0,
+        "exchange_time_utc": "2026-10-29T17:33:07.212592987Z",
+        "fetched_at": "2026-10-29T14:33:35-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      },
+      "POL-USD": {
+        "price": 0.0926,
+        "bid": 0.0926,
+        "ask": 0.09268,
+        "spread_pct": 0.08636,
+        "volume_24h_base": 4640378.6,
+        "volume_24h_usd_approx": 429699.0,
+        "exchange_time_utc": "2026-10-29T17:33:29.444502007Z",
+        "fetched_at": "2026-10-29T14:33:37-03:00",
+        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
+      }
+    },
+    "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders.",
+    "last_fetch": "2026-10-29T14:33:40-03:00",
+    "ok": 30,
+    "total": 30
+  },
+  "updated_at": "2026-10-29T14:33:40-03:00",
+  "timezone_note": "All timestamps America/Sao_Paulo (UTC-03:00); exchange_time_utc fields are UTC as returned by the source.",
+  "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
+  "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
+  "chaos_mode": true,
+  "paper_leverage_max": 20,
+  "blown_up": false,
+  "chaos_window": {
+    "from": "2026-10-29",
+    "through": "2026-11-02",
+    "tz": "America/Chicago",
+    "authorized_by": "Oskar (owner) t10u",
+    "goal": "make $1M paper or blow up",
+    "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
+  },
+  "margin_used": 45495.6,
+  "exposure": 909776.87,
+  "buying_power": 91206.53,
+  "effective_leverage": 18.18
+}

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Crypto Paper Terminal — PAPER ONLY</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<!-- file:// fallback: state as JS, rewritten by scripts/refresh_dashboard.sh -->
+<script src="desk_state.js"></script>
+<style>
+:root{--bg:#07090c;--panel:#0d1117;--panel2:#11161d;--line:#1f2731;--txt:#c9d1d9;--mute:#6e7a87;--g:#2ecc71;--r:#ff5c5c;--y:#f5c542;--c:#3fb6ff;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"JetBrains Mono",monospace}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font:13px/1.45 Inter,system-ui,sans-serif}
+.banner{background:repeating-linear-gradient(45deg,#3a1d00,#3a1d00 12px,#2a1500 12px,#2a1500 24px);color:#ffb347;border-bottom:1px solid #6b3a00;text-align:center;font:700 12px var(--mono);letter-spacing:.18em;padding:7px}
+header{display:flex;align-items:center;gap:18px;padding:12px 18px;border-bottom:1px solid var(--line);background:#090c10}
+header h1{font:600 15px var(--mono);margin:0;letter-spacing:.06em}header h1 span{color:var(--c)}
+.kpis{display:flex;gap:22px;margin-left:auto;font-family:var(--mono)}
+.kpi small{display:block;color:var(--mute);font-size:10px;letter-spacing:.1em;text-transform:uppercase}.kpi b{font-size:18px}
+.pos{color:var(--g)}.neg{color:var(--r)}.warn{color:var(--y)}.mute{color:var(--mute)}
+main{display:grid;grid-template-columns:repeat(12,1fr);gap:10px;padding:12px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
+.panel h2{margin:0;padding:8px 12px;font:600 11px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mute);border-bottom:1px solid var(--line);background:var(--panel2);display:flex;justify-content:space-between}
+.body{padding:10px 12px;overflow:auto}
+.agents{grid-column:span 12;display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.agent{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:10px 12px;font-family:var(--mono);position:relative}
+.agent .n{font-weight:600;font-size:12px}.agent .s{font-size:10px;letter-spacing:.12em;text-transform:uppercase;margin:4px 0}
+.agent .note{color:var(--mute);font-size:11px;min-height:30px}.agent .t{color:#4a5562;font-size:10px}
+.dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:6px;background:var(--mute)}
+.dot.ready{background:var(--g);box-shadow:0 0 6px var(--g)}.dot.running{background:var(--c);box-shadow:0 0 6px var(--c)}.dot.idle{background:#56606b}.dot.paused,.dot.error{background:var(--r)}
+table{width:100%;border-collapse:collapse;font:12px var(--mono)}th{color:var(--mute);font-weight:500;text-align:left;font-size:10px;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--line);padding:5px 6px}
+td{padding:5px 6px;border-bottom:1px solid #151b22;white-space:nowrap}td.r,th.r{text-align:right}
+.empty{color:var(--mute);font:12px var(--mono);padding:14px 0;text-align:center}
+.log{font:12px var(--mono)}.log div{padding:4px 0;border-bottom:1px dashed #161c24}.log .a{color:var(--c)}.log .why{color:var(--mute)}
+.pill{font:10px var(--mono);padding:1px 6px;border:1px solid var(--line);border-radius:3px;color:var(--mute)}
+footer{color:#4a5562;font:11px var(--mono);padding:4px 18px 16px}
+@media(max-width:1100px){.agents{grid-template-columns:repeat(3,1fr)}main>.panel{grid-column:span 12!important}}
+</style>
+</head>
+<body>
+<div class="banner">■ PAPER ONLY ■ SIMULATED FILLS — NO LIVE KEYS · NO REAL ORDERS · NO WITHDRAWALS · NO REAL MONEY ■</div>
+<header>
+  <h1>CRYPTO<span>://</span>PAPER TERMINAL</h1>
+  <span class="pill" id="pauseFlag">ACTIVE</span>
+  <div class="kpis">
+    <div class="kpi"><small>Paper equity</small><b id="eq">—</b></div>
+    <div class="kpi"><small>Day P&amp;L</small><b id="day">—</b></div>
+    <div class="kpi"><small>Cash</small><b id="cash">—</b></div>
+    <div class="kpi"><small>Open</small><b id="open">—</b></div>
+    <div class="kpi"><small>Max risk / trade</small><b id="risk">—</b></div>
+    <div class="kpi"><small>Loss pause</small><b id="pause">—</b></div>
+    <div class="kpi"><small>Exposure / lev</small><b id="expo">—</b></div>
+    <div class="kpi"><small>Buying power</small><b id="bp">—</b></div>
+  </div>
+</header>
+<main>
+  <section class="agents" id="agents"></section>
+  <section class="panel" style="grid-column:span 7"><h2>Equity curve <span id="curveMeta"></span></h2><div class="body" style="height:240px"><canvas id="curve"></canvas></div></section>
+  <section class="panel" style="grid-column:span 5"><h2>Scanner feed <span id="scanMeta"></span></h2><div class="body" id="scan"></div></section>
+  <section class="panel" style="grid-column:span 7"><h2>Paper positions <span id="posMeta"></span></h2><div class="body" id="positions"></div></section>
+  <section class="panel" style="grid-column:span 5"><h2>Public marks <span>display only</span></h2><div class="body" id="marks"></div></section>
+  <section class="panel" style="grid-column:span 12"><h2>Recent activity / trade log <span>every decision has a reason</span></h2><div class="body log" id="activity" style="max-height:320px"></div></section>
+</main>
+<footer id="foot"></footer>
+<script>
+const $=id=>document.getElementById(id);
+const usd=(v,s)=>v==null?'—':(s&&v>0?'+':'')+(v<0?'-':'')+'$'+Math.abs(+v).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+const cls=v=>v>0?'pos':v<0?'neg':'mute';
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const tm=t=>t?String(t).replace('T',' ').slice(0,19):'—';
+let chart;
+function render(s){
+  if(!s){document.body.insertAdjacentHTML('beforeend','<div class="empty">No desk_state found. Run scripts/refresh_dashboard.sh</div>');return}
+  if(s.paper_only!==true){document.body.innerHTML='<div class="banner">REFUSING TO RENDER: state is not paper_only</div>';return}
+  $('eq').textContent=usd(s.equity);
+  $('day').innerHTML=`<span class="${cls(s.day_pnl)}">${usd(s.day_pnl,1)} (${((s.day_pnl_pct||0)*100).toFixed(2)}%)</span>`;
+  $('cash').textContent=usd(s.cash);
+  $('open').textContent=`${(s.open_positions||[]).length}/${s.max_open}`;
+  $('risk').textContent=`${usd(s.max_risk_usd??s.equity*s.max_risk_pct)} (${(s.max_risk_pct*100).toFixed(0)}%)`;
+  $('pause').innerHTML=`<span class="warn">${usd(s.daily_loss_pause_usd??s.starting_equity*s.daily_loss_pause_pct)}</span>`;
+  $('expo').innerHTML=s.exposure!=null?`${usd(s.exposure)} <span class="warn">(${s.effective_leverage??'—'}x / ${s.paper_leverage_max||1}x)</span>`:'—';
+  $('bp').textContent=s.buying_power!=null?usd(s.buying_power):'—';
+  if(s.chaos_mode)$('pause').innerHTML='<span class="neg">OFF (chaos)</span>';
+  const pf=$('pauseFlag');pf.textContent=s.blown_up?'BLOWN UP · PAPER':s.paused?'PAUSED':s.chaos_mode?'CHAOS v2 · PAPER':'ACTIVE · PAPER';pf.style.color=s.paused?'var(--r)':'var(--g)';pf.title=s.pause_reason||'';if(s.chaos_mode&&!s.paused)pf.style.color='#ff8a3d';
+  // agents
+  const order=['Scanner','Rug Check','Sizer','Executor','Logger','Equity'];
+  $('agents').innerHTML=order.map(n=>{const a=(s.agents||{})[n]||{};const st=s.paused&&n==='Executor'?'paused':(a.status||'idle');
+    return `<div class="agent"><div class="n"><span class="dot ${st}"></span>${n}</div><div class="s ${st==='ready'?'pos':st==='paused'?'neg':'mute'}">${st}</div><div class="note">${esc(a.note)}</div><div class="t">last run: ${tm(a.last_run)}</div></div>`}).join('');
+  // scanner
+  const sf=s.scanner_feed||[];$('scanMeta').textContent=sf.length+' rows';
+  $('scan').innerHTML=sf.length?`<table><tr><th>Symbol</th><th>Signal</th><th>Rug</th><th class="r">Px</th><th>Note</th></tr>${sf.map(r=>`<tr><td>${esc(r.symbol)}</td><td>${esc(r.signal??(r.pass===undefined?'':(r.pass?'candidate':'skip')))}</td><td class="${(r.rug_check??(r.pass===undefined?null:(r.pass?'PASS':'FAIL')))==='PASS'?'pos':(r.rug_check??r.pass)!=null?'neg':'mute'}">${esc(r.rug_check??(r.pass===undefined?'—':(r.pass?'PASS':'FAIL')))}</td><td class="r">${r.price??r.mark?.price??'—'}</td><td class="mute">${esc(r.note??(r.flags||[]).join('; '))}</td></tr>`).join('')}</table>`:'<div class="empty">No scans yet — scanner routine proposed, not yet created.</div>';
+  // positions
+  const ps=s.open_positions||[];$('posMeta').textContent=`${ps.length}/${s.max_open} open`;
+  $('positions').innerHTML=ps.length?`<table><tr><th>Symbol</th><th>Side</th><th class="r">Size</th><th class="r">Entry</th><th class="r">Mark</th><th class="r">Stop</th><th class="r">Target</th><th class="r">Lev</th><th class="r">Risk</th><th class="r">uP&amp;L</th><th>Invalidation</th></tr>${ps.map(p=>`<tr><td>${esc(p.symbol)}</td><td class="${p.side==='long'?'pos':'neg'}">${p.side}</td><td class="r">${p.size}</td><td class="r">${p.entry}</td><td class="r" title="${esc(p.mark_source)}">${p.mark??'—'}</td><td class="r neg">${p.stop}</td><td class="r pos">${p.target}${p.target2?' / '+p.target2:''}</td><td class="r">${p.leverage||1}x</td><td class="r">${usd(p.risk_usd)}</td><td class="r ${cls(p.unrealized_pnl)}">${usd(p.unrealized_pnl,1)}</td><td class="mute">${esc(p.invalidation)}</td></tr>`).join('')}</table>`:'<div class="empty">Flat — 0 open paper positions.</div>';
+  // marks
+  const m=(s.quotes||{}).marks||{};const mk=Object.keys(m);
+  $('marks').innerHTML=mk.length?`<table><tr><th>Product</th><th class="r">Last</th><th class="r">Spread %</th><th class="r">24h vol (USD≈)</th><th>Fetched</th></tr>${mk.map(k=>`<tr><td>${k}</td><td class="r">${m[k].price.toLocaleString()}</td><td class="r">${m[k].spread_pct??'—'}</td><td class="r">${m[k].volume_24h_usd_approx?('$'+(m[k].volume_24h_usd_approx/1e6).toFixed(1)+'M'):'—'}</td><td class="mute">${tm(m[k].fetched_at).slice(11)}</td></tr>`).join('')}</table><div class="mute" style="font-size:11px;margin-top:6px">src: ${esc(s.quotes.provider)}</div>`:`<div class="empty">No marks — ${esc((s.quotes||{}).note||'none fetched')}</div>`;
+  // activity
+  const act=(s.activity||[]).slice().reverse();
+  $('activity').innerHTML=act.length?act.map(e=>`<div><span class="mute">${tm(e.t)}</span> <span class="a">[${esc(e.agent)}]</span> <b>${esc(e.kind)}</b> ${esc(e.text)} <span class="why">— why: ${esc(e.reason)}</span></div>`).join(''):'<div class="empty">No activity yet.</div>';
+  // curve
+  const c=s.equity_curve||[];$('curveMeta').textContent=c.length+' pts';
+  const data={labels:c.map(p=>tm(p.t).slice(5,16)),datasets:[{label:'Paper equity',data:c.map(p=>p.equity),borderColor:'#3fb6ff',backgroundColor:'rgba(63,182,255,.08)',fill:true,tension:.2,pointRadius:c.length<40?3:0},{label:'Start',data:c.map(()=>s.starting_equity),borderColor:'#3a4450',borderDash:[4,4],pointRadius:0}]};
+  if(window.Chart){if(chart)chart.destroy();chart=new Chart($('curve'),{type:'line',data,options:{maintainAspectRatio:false,animation:false,plugins:{legend:{labels:{color:'#6e7a87',font:{family:'monospace',size:10}}}},scales:{x:{ticks:{color:'#6e7a87',font:{size:10}},grid:{color:'#141a21'}},y:{ticks:{color:'#6e7a87',callback:v=>'$'+v},grid:{color:'#141a21'}}}}})}
+  else $('curve').outerHTML='<div class="empty">Chart.js CDN unavailable — curve: '+c.map(p=>usd(p.equity)).join(' → ')+'</div>';
+  $('foot').textContent=`updated ${tm(s.updated_at)} (America/Sao_Paulo, UTC-03:00) · rules v${s.rules_version} · realized ${usd(s.realized_pnl,1)} · unrealized ${usd(s.unrealized_pnl,1)} · state: /workspace/crypto-desk/desk_state.json · refresh: scripts/refresh_dashboard.sh · PAPER ONLY`;
+}
+render(window.__DESK_STATE__);
+// When served over http, prefer the live JSON (falls back silently on file://)
+fetch('desk_state.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(s=>{if(s)render(s)}).catch(()=>{});
+</script>
+</body>
+</html>
