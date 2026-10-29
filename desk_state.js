@@ -6,12 +6,12 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 46224.86,
-  "cash": 7227.02,
+  "equity": 46252.83,
+  "cash": 3729.74,
   "realized_pnl": -6277.6,
-  "unrealized_pnl": 2502.46,
-  "day_pnl": -2879.39,
-  "day_pnl_pct": -0.05864,
+  "unrealized_pnl": 2530.43,
+  "day_pnl": -2851.42,
+  "day_pnl_pct": -0.05807,
   "day_baseline_date": "2026-10-29",
   "day_baseline_equity": 49104.25,
   "open_positions": [
@@ -149,9 +149,36 @@ window.__DESK_STATE__ = {
       "mark_at": "2026-10-29T16:07:38-03:00",
       "unrealized_pnl": -0.0,
       "exposure": 119946.84
+    },
+    {
+      "id": "2026-10-29_LTC-USD_112",
+      "symbol": "LTC-USD",
+      "side": "short",
+      "size": 1216.0,
+      "entry": 57.521,
+      "notional": 69945.54,
+      "stop": 59.247,
+      "target": 54.07,
+      "target2": 51.769,
+      "invalidation": "exit on any trade through stop 59.247, at target, or on chaos rotate",
+      "risk_usd": 2098.82,
+      "risk_pct_equity": 0.0454,
+      "opened_at": "2026-10-29T16:07:42-03:00",
+      "card": "CHAOS_LTC",
+      "reason": "CHAOS rotate LTC-USD: momentum short into broad selloff \u2014 short (24h -3.32% from public stats open), notional $69,946 @ 20x paper (margin $3,497), stop 3.0% / tgt 6.0%/10.0%, risk $2,099 (4.5% eq; chaos cap 100%)",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-29T16:07:42-03:00 BRT (exch 2026-10-29T19:07:40.167198376Z) api.exchange.coinbase.com",
+      "override": null,
+      "paper_only": true,
+      "leverage": 20.0,
+      "margin": 3497.28,
+      "mark": 57.498,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-10-29T16:07:36-03:00",
+      "unrealized_pnl": 27.97,
+      "exposure": 69917.57
     }
   ],
-  "open_count": 5,
+  "open_count": 6,
   "closed_positions": [
     {
       "type": "close",
@@ -949,7 +976,7 @@ window.__DESK_STATE__ = {
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 46224.86,
+  "max_risk_usd": 46252.83,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -491042.5,
   "paused": false,
@@ -1004,13 +1031,13 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-10-29T16:07:41-03:00",
-      "note": "last: paper fill SOL-USD"
+      "last_run": "2026-10-29T16:07:42-03:00",
+      "note": "last: paper fill LTC-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-10-29T16:07:41-03:00",
-      "note": "logged 2026-10-29_SOL-USD_111"
+      "last_run": "2026-10-29T16:07:42-03:00",
+      "note": "logged 2026-10-29_LTC-USD_112"
     },
     "Equity": {
       "status": "ready",
@@ -1748,16 +1775,14 @@ window.__DESK_STATE__ = {
       "t": "2026-10-29T16:07:41-03:00",
       "equity": 46224.86,
       "kind": "fill"
+    },
+    {
+      "t": "2026-10-29T16:07:42-03:00",
+      "equity": 46252.83,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:33:32-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "XRP-USD PASS",
-      "reason": "Coinbase online; 24h vol ~$61.6M; spread 0.015%; depth \u00b11% ~$9.9M; listed >30d"
-    },
     {
       "t": "2026-10-27T23:33:32-03:00",
       "agent": "Sizer",
@@ -3311,6 +3336,15 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "LTC-USD PASS (chaos: non-blocking)",
       "reason": "vol $8.2M, spread 0.037%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
+    },
+    {
+      "t": "2026-10-29T16:07:42-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 1216 LTC-USD @ 57.521 \u00b7 notional $69,946 (20x, margin $3,497) \u00b7 stop 59.247 \u00b7 tgt 54.07 \u00b7 risk $2,098.82",
+      "reason": "CHAOS rotate LTC-USD: momentum short into broad selloff \u2014 short (24h -3.32% from public stats open), notional $69,946 @ 20x paper (margin $3,497), stop 3.0% / tgt 6.0%/10.0%, risk $2,099 (4.5% eq; chaos cap 100%)",
+      "fill_id": "2026-10-29_LTC-USD_112",
+      "card": "CHAOS_LTC"
     }
   ],
   "scanner_feed": [
@@ -4277,8 +4311,8 @@ window.__DESK_STATE__ = {
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 36495.38,
-  "exposure": 725574.66,
-  "buying_power": 198922.54,
-  "effective_leverage": 15.7
+  "margin_used": 39992.66,
+  "exposure": 795492.23,
+  "buying_power": 129564.37,
+  "effective_leverage": 17.2
 };
