@@ -990,8 +990,8 @@ window.__DESK_STATE__ = {
     },
     "Rug Check": {
       "status": "idle",
-      "last_run": "2026-10-29T14:33:31-03:00",
-      "note": "XRP-USD PASS (chaos: non-blocking)"
+      "last_run": "2026-10-29T16:07:29-03:00",
+      "note": "16 watchlist names SOFT-WARN on 24h vol < $5M (non-blocking under chaos v2.0)"
     },
     "Sizer": {
       "status": "ready",
@@ -1707,15 +1707,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:12:05-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 5.5 SOL-USD @ 101.61 \u00b7 stop 98 \u00b7 tgt 108 \u00b7 risk $19.85",
-      "reason": "Paper demo: SOL bounce off round-number support with defined stop",
-      "fill_id": "2026-10-27_SOL-USD_01",
-      "card": "DEMO_SOL_01"
-    },
     {
       "t": "2026-10-27T23:12:05-03:00",
       "agent": "Sizer",
@@ -3266,6 +3257,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS cycle 16:05 BRT: 30/30 public marks; broad selloff (29/30 red on 24h, NEAR \u22127.5%, PEPE +6.0%)",
       "reason": "scheduled scanner run; scan file scans/2026-10-29_1607_scan.md"
+    },
+    {
+      "t": "2026-10-29T16:07:29-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "16 watchlist names SOFT-WARN on 24h vol < $5M (non-blocking under chaos v2.0)",
+      "reason": "all open/new names are liquid Coinbase majors; no hard blocks"
     }
   ],
   "scanner_feed": [
