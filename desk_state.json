@@ -1032,8 +1032,8 @@
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-10-29T18:06:13-03:00",
-      "note": "EOD review 2026-10-29 \u00b7 eq $62,618 \u00b7 day +27.52% \u00b7 5 open \u00b7 7.81x"
+      "last_run": "2026-10-29T20:04:18-03:00",
+      "note": "CHAOS: HBAR target closed \u00b7 eq $61,197 \u00b7 exposure $443,094 (7.24x)"
     },
     "Equity": {
       "status": "ready",
@@ -1814,15 +1814,6 @@
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:33:51-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 0.14 ETH-USD @ 2354.43 \u00b7 stop 2300 \u00b7 tgt 2420 \u00b7 risk $7.62",
-      "reason": "Rotate-in: ETH +2.0% 24h, deep book (~$14.6M \u00b11%), holding near 24h high 2366",
-      "fill_id": "2026-10-27_ETH-USD_10",
-      "card": "SESS_ETH_02"
-    },
     {
       "t": "2026-10-27T23:33:51-03:00",
       "agent": "Rug Check",
@@ -3375,6 +3366,13 @@
       "text": "PAPER CLOSE HBAR-USD @ 0.06912 \u00b7 P&L $+2592.32",
       "reason": "target 1 hit: public 5m candle low 0.06622 \u2264 target 0.067068 (exit plan: exit at target); closed at current public mark",
       "fill_id": "2026-10-29_HBAR-USD_113"
+    },
+    {
+      "t": "2026-10-29T20:04:18-03:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: HBAR target closed \u00b7 eq $61,197 \u00b7 exposure $443,094 (7.24x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
