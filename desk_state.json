@@ -5,12 +5,12 @@
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 46249.28,
-  "cash": 18002.31,
-  "realized_pnl": -4500.08,
-  "unrealized_pnl": 749.36,
-  "day_pnl": -2854.97,
-  "day_pnl_pct": -0.05814,
+  "equity": 46173.1,
+  "cash": 20113.15,
+  "realized_pnl": -5388.9,
+  "unrealized_pnl": 1562.0,
+  "day_pnl": -2931.15,
+  "day_pnl_pct": -0.05969,
   "day_baseline_date": "2026-10-29",
   "day_baseline_equity": 49104.25,
   "open_positions": [
@@ -96,33 +96,6 @@
       "exposure": 57772.0
     },
     {
-      "id": "2026-10-29_LINK-USD_99",
-      "symbol": "LINK-USD",
-      "side": "long",
-      "size": 5079.0,
-      "entry": 11.812,
-      "notional": 59993.15,
-      "stop": 11.34,
-      "target": 12.757,
-      "target2": 13.229,
-      "invalidation": "exit on any trade through stop 11.34, at target, or on chaos rotate",
-      "risk_usd": 2397.29,
-      "risk_pct_equity": 0.04789,
-      "opened_at": "2026-10-29T14:32:00-03:00",
-      "card": "CHAOS_LINK",
-      "reason": "CHAOS B LINK-USD: rotation swing \u2014 long (24h +2.29% from public stats open), notional $59,993 @ 20x paper (margin $3,000), stop 4.0% / tgt 8.0%/12.0%, risk $2,397 (4.8% eq; chaos cap 100%)",
-      "price_source": "coinbase_exchange_public_ticker 2026-10-29T14:32:00-03:00 BRT (exch 2026-10-29T17:31:29.595527078Z) api.exchange.coinbase.com",
-      "override": null,
-      "paper_only": true,
-      "leverage": 20.0,
-      "margin": 2999.66,
-      "mark": 11.652,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-10-29T16:05:44-03:00",
-      "unrealized_pnl": -812.64,
-      "exposure": 59180.51
-    },
-    {
       "id": "2026-10-29_XRP-USD_104",
       "symbol": "XRP-USD",
       "side": "short",
@@ -150,7 +123,7 @@
       "exposure": 89010.32
     }
   ],
-  "open_count": 5,
+  "open_count": 4,
   "closed_positions": [
     {
       "type": "close",
@@ -910,11 +883,28 @@
       "reason": "CHAOS rotate: alt long fighting a broad 24h selloff (public stats red) \u2014 invalidation per plan 'or on chaos rotate'; recycle margin into momentum shorts",
       "price_source": "coinbase_exchange_public_ticker 2026-10-29T16:07:30-03:00 BRT (exch 2026-10-29T19:07:23.273489099Z) api.exchange.coinbase.com",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-29_LINK-USD_99",
+      "symbol": "LINK-USD",
+      "side": "long",
+      "size": 5079.0,
+      "entry": 11.812,
+      "exit": 11.637,
+      "pnl": -888.82,
+      "notional": 59993.15,
+      "leverage": 20.0,
+      "margin": 2999.66,
+      "closed_at": "2026-10-29T16:07:31-03:00",
+      "reason": "CHAOS rotate: alt long fighting a broad 24h selloff (public stats red) \u2014 invalidation per plan 'or on chaos rotate'; recycle margin into momentum shorts",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-29T16:07:31-03:00 BRT (exch 2026-10-29T19:06:45.811607224Z) api.exchange.coinbase.com",
+      "paper_only": true
     }
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 46249.28,
+  "max_risk_usd": 46173.1,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -491042.5,
   "paused": false,
@@ -969,8 +959,8 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-10-29T16:07:30-03:00",
-      "note": "last: closed SUI-USD"
+      "last_run": "2026-10-29T16:07:31-03:00",
+      "note": "last: closed LINK-USD"
     },
     "Logger": {
       "status": "ready",
@@ -1688,16 +1678,14 @@
       "t": "2026-10-29T16:07:30-03:00",
       "equity": 46249.28,
       "kind": "close"
+    },
+    {
+      "t": "2026-10-29T16:07:31-03:00",
+      "equity": 46173.1,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:33:11-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "AVAX-USD FAIL",
-      "reason": "24h vol ~$2.76M < $5M threshold (RISK_RULES \u00a74); skipped this session"
-    },
     {
       "t": "2026-10-27T23:33:11-03:00",
       "agent": "Rug Check",
@@ -3249,6 +3237,14 @@
       "text": "PAPER CLOSE SUI-USD @ 0.9276 \u00b7 P&L $-985.96",
       "reason": "CHAOS rotate: alt long fighting a broad 24h selloff (public stats red) \u2014 invalidation per plan 'or on chaos rotate'; recycle margin into momentum shorts",
       "fill_id": "2026-10-29_SUI-USD_92"
+    },
+    {
+      "t": "2026-10-29T16:07:31-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE LINK-USD @ 11.637 \u00b7 P&L $-888.82",
+      "reason": "CHAOS rotate: alt long fighting a broad 24h selloff (public stats red) \u2014 invalidation per plan 'or on chaos rotate'; recycle margin into momentum shorts",
+      "fill_id": "2026-10-29_LINK-USD_99"
     }
   ],
   "scanner_feed": [
@@ -4200,7 +4196,7 @@
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-10-29T16:07:30-03:00",
+  "updated_at": "2026-10-29T16:07:31-03:00",
   "timezone_note": "All timestamps America/Sao_Paulo (UTC-03:00); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -4215,8 +4211,8 @@
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 27497.61,
-  "exposure": 544287.01,
-  "buying_power": 380698.59,
-  "effective_leverage": 11.77
+  "margin_used": 24497.95,
+  "exposure": 485106.5,
+  "buying_power": 438355.5,
+  "effective_leverage": 10.51
 }
