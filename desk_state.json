@@ -5,12 +5,12 @@
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 46257.37,
-  "cash": 22224.32,
+  "equity": 46224.86,
+  "cash": 13224.36,
   "realized_pnl": -6277.6,
-  "unrealized_pnl": 2534.97,
-  "day_pnl": -2846.88,
-  "day_pnl_pct": -0.05798,
+  "unrealized_pnl": 2502.46,
+  "day_pnl": -2879.39,
+  "day_pnl_pct": -0.05864,
   "day_baseline_date": "2026-10-29",
   "day_baseline_equity": 49104.25,
   "open_positions": [
@@ -94,9 +94,36 @@
       "mark_at": "2026-10-29T16:07:40-03:00",
       "unrealized_pnl": 1034.36,
       "exposure": 88961.73
+    },
+    {
+      "id": "2026-10-29_ETH-USD_110",
+      "symbol": "ETH-USD",
+      "side": "short",
+      "size": 77.4,
+      "entry": 2325.57,
+      "notional": 179999.12,
+      "stop": 2383.7,
+      "target": 2209.3,
+      "target2": 2139.5,
+      "invalidation": "exit on any trade through stop 2383.7, at target, or on chaos rotate",
+      "risk_usd": 4499.26,
+      "risk_pct_equity": 0.09727,
+      "opened_at": "2026-10-29T16:07:41-03:00",
+      "card": "CHAOS_ETH",
+      "reason": "CHAOS rotate ETH-USD: momentum short into broad selloff \u2014 short (24h -1.87% from public stats open), notional $179,999 @ 20x paper (margin $9,000), stop 2.5% / tgt 5.0%/8.0%, risk $4,499 (9.7% eq; chaos cap 100%)",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-29T16:07:40-03:00 BRT (exch 2026-10-29T19:07:40.282650290Z) api.exchange.coinbase.com",
+      "override": null,
+      "paper_only": true,
+      "leverage": 20.0,
+      "margin": 8999.96,
+      "mark": 2325.99,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-10-29T16:07:35-03:00",
+      "unrealized_pnl": -32.51,
+      "exposure": 180031.63
     }
   ],
-  "open_count": 3,
+  "open_count": 4,
   "closed_positions": [
     {
       "type": "close",
@@ -894,7 +921,7 @@
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 46257.37,
+  "max_risk_usd": 46224.86,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -491042.5,
   "paused": false,
@@ -949,13 +976,13 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-10-29T16:07:40-03:00",
-      "note": "CHAOS rotate: flip to momentum shorts ETH, SOL, LTC, HBAR at 20x paper"
+      "last_run": "2026-10-29T16:07:41-03:00",
+      "note": "last: paper fill ETH-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-10-29T16:07:40-03:00",
-      "note": "CHAOS: alt longs rotated out \u00b7 eq $46,257 \u00b7 exposure $425,596 (9.2x)"
+      "last_run": "2026-10-29T16:07:41-03:00",
+      "note": "logged 2026-10-29_ETH-USD_110"
     },
     "Equity": {
       "status": "ready",
@@ -1683,17 +1710,14 @@
       "t": "2026-10-29T16:07:40-03:00",
       "equity": 46257.37,
       "kind": "mark"
+    },
+    {
+      "t": "2026-10-29T16:07:41-03:00",
+      "equity": 46224.86,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:33:12-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE ETH-USD @ 2353.46 \u00b7 P&L $-0.35",
-      "reason": "session rotate: free cash/slots for broader paper demo (owner-approved close at public market mark)",
-      "fill_id": "2026-10-27_ETH-USD_02"
-    },
     {
       "t": "2026-10-27T23:33:32-03:00",
       "agent": "Rug Check",
@@ -3245,6 +3269,15 @@
       "kind": "check",
       "text": "ETH-USD PASS (chaos: non-blocking)",
       "reason": "vol $215.5M, spread 0.006%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
+    },
+    {
+      "t": "2026-10-29T16:07:41-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 77.4 ETH-USD @ 2325.57 \u00b7 notional $179,999 (20x, margin $9,000) \u00b7 stop 2383.7 \u00b7 tgt 2209.3 \u00b7 risk $4,499.26",
+      "reason": "CHAOS rotate ETH-USD: momentum short into broad selloff \u2014 short (24h -1.87% from public stats open), notional $179,999 @ 20x paper (margin $9,000), stop 2.5% / tgt 5.0%/8.0%, risk $4,499 (9.7% eq; chaos cap 100%)",
+      "fill_id": "2026-10-29_ETH-USD_110",
+      "card": "CHAOS_ETH"
     }
   ],
   "scanner_feed": [
@@ -4211,8 +4244,8 @@
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 21498.08,
-  "exposure": 425596.19,
-  "buying_power": 499551.21,
-  "effective_leverage": 9.2
+  "margin_used": 30498.04,
+  "exposure": 605627.82,
+  "buying_power": 318869.38,
+  "effective_leverage": 13.1
 }
