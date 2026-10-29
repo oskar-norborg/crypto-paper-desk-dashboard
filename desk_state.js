@@ -6,12 +6,12 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 46457.35,
-  "cash": 11513.34,
-  "realized_pnl": -1990.63,
-  "unrealized_pnl": -1552.02,
-  "day_pnl": -2646.9,
-  "day_pnl_pct": -0.0539,
+  "equity": 46351.06,
+  "cash": 15988.74,
+  "realized_pnl": -3514.12,
+  "unrealized_pnl": -134.82,
+  "day_pnl": -2753.19,
+  "day_pnl_pct": -0.05607,
   "day_baseline_date": "2026-10-29",
   "day_baseline_equity": 49104.25,
   "open_positions": [
@@ -151,33 +151,6 @@ window.__DESK_STATE__ = {
       "exposure": 59180.51
     },
     {
-      "id": "2026-10-29_SOL-USD_103",
-      "symbol": "SOL-USD",
-      "side": "long",
-      "size": 1181.0,
-      "entry": 101.59,
-      "notional": 119977.79,
-      "stop": 98.542,
-      "target": 107.69,
-      "target2": 111.75,
-      "invalidation": "exit on any trade through stop 98.542, at target, or on chaos rotate",
-      "risk_usd": 3599.69,
-      "risk_pct_equity": 0.0715,
-      "opened_at": "2026-10-29T14:33:30-03:00",
-      "card": "CHAOS_SOL",
-      "reason": "CHAOS C SOL-USD: final high-conviction reload \u2014 long (24h +0.06% from public stats open), notional $119,978 @ 20x paper (margin $5,999), stop 3.0% / tgt 6.0%/10.0%, risk $3,600 (7.2% eq; chaos cap 100%)",
-      "price_source": "coinbase_exchange_public_ticker 2026-10-29T14:33:30-03:00 BRT (exch 2026-10-29T17:33:28.702728373Z) api.exchange.coinbase.com",
-      "override": null,
-      "paper_only": true,
-      "leverage": 20.0,
-      "margin": 5998.89,
-      "mark": 100.39,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-10-29T16:05:47-03:00",
-      "unrealized_pnl": -1417.2,
-      "exposure": 118560.59
-    },
-    {
       "id": "2026-10-29_XRP-USD_104",
       "symbol": "XRP-USD",
       "side": "short",
@@ -205,7 +178,7 @@ window.__DESK_STATE__ = {
       "exposure": 89010.32
     }
   ],
-  "open_count": 7,
+  "open_count": 6,
   "closed_positions": [
     {
       "type": "close",
@@ -931,11 +904,28 @@ window.__DESK_STATE__ = {
       "reason": "CHAOS rotate: alt long fighting a broad 24h selloff (public stats red) \u2014 invalidation per plan 'or on chaos rotate'; recycle margin into momentum shorts",
       "price_source": "coinbase_exchange_public_ticker 2026-10-29T16:07:30-03:00 BRT (exch 2026-10-29T19:07:26.956752973Z) api.exchange.coinbase.com",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-29_SOL-USD_103",
+      "symbol": "SOL-USD",
+      "side": "long",
+      "size": 1181.0,
+      "entry": 101.59,
+      "exit": 100.3,
+      "pnl": -1523.49,
+      "notional": 119977.79,
+      "leverage": 20.0,
+      "margin": 5998.89,
+      "closed_at": "2026-10-29T16:07:30-03:00",
+      "reason": "CHAOS rotate: alt long fighting a broad 24h selloff (public stats red) \u2014 invalidation per plan 'or on chaos rotate'; recycle margin into momentum shorts",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-29T16:07:30-03:00 BRT (exch 2026-10-29T19:07:27.608244067Z) api.exchange.coinbase.com",
+      "paper_only": true
     }
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 46457.35,
+  "max_risk_usd": 46351.06,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -491042.5,
   "paused": false,
@@ -991,7 +981,7 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-10-29T16:07:30-03:00",
-      "note": "last: closed ETH-USD"
+      "note": "last: closed SOL-USD"
     },
     "Logger": {
       "status": "ready",
@@ -1699,16 +1689,14 @@ window.__DESK_STATE__ = {
       "t": "2026-10-29T16:07:30-03:00",
       "equity": 46457.35,
       "kind": "close"
+    },
+    {
+      "t": "2026-10-29T16:07:30-03:00",
+      "equity": 46351.06,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:33:04-03:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "Broad scan: 9 Coinbase USD majors \u00b7 5 PASS (BTC ETH SOL XRP LTC) \u00b7 4 FAIL vol<$5M (AVAX LINK DOGE ADA)",
-      "reason": "Owner asked for bigger paper session on broader liquid set; public marks + stats + L2 book; scan file scans/2026-10-27_2332_scan.md"
-    },
     {
       "t": "2026-10-27T23:33:04-03:00",
       "agent": "Equity",
@@ -3258,6 +3246,14 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE ETH-USD @ 2325.52 \u00b7 P&L $-1833.28",
       "reason": "CHAOS rotate: alt long fighting a broad 24h selloff (public stats red) \u2014 invalidation per plan 'or on chaos rotate'; recycle margin into momentum shorts",
       "fill_id": "2026-10-29_ETH-USD_102"
+    },
+    {
+      "t": "2026-10-29T16:07:30-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE SOL-USD @ 100.3 \u00b7 P&L $-1523.49",
+      "reason": "CHAOS rotate: alt long fighting a broad 24h selloff (public stats red) \u2014 invalidation per plan 'or on chaos rotate'; recycle margin into momentum shorts",
+      "fill_id": "2026-10-29_SOL-USD_103"
     }
   ],
   "scanner_feed": [
@@ -4224,8 +4220,8 @@ window.__DESK_STATE__ = {
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 36496.03,
-  "exposure": 721954.01,
-  "buying_power": 207192.99,
-  "effective_leverage": 15.54
+  "margin_used": 30497.14,
+  "exposure": 603393.42,
+  "buying_power": 323627.78,
+  "effective_leverage": 13.02
 };
