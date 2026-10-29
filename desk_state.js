@@ -7,7 +7,7 @@ window.__DESK_STATE__ = {
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
   "equity": 46224.86,
-  "cash": 13224.36,
+  "cash": 7227.02,
   "realized_pnl": -6277.6,
   "unrealized_pnl": 2502.46,
   "day_pnl": -2879.39,
@@ -122,9 +122,36 @@ window.__DESK_STATE__ = {
       "mark_at": "2026-10-29T16:07:35-03:00",
       "unrealized_pnl": -32.51,
       "exposure": 180031.63
+    },
+    {
+      "id": "2026-10-29_SOL-USD_111",
+      "symbol": "SOL-USD",
+      "side": "short",
+      "size": 1196.0,
+      "entry": 100.29,
+      "notional": 119946.84,
+      "stop": 103.3,
+      "target": 94.273,
+      "target2": 90.261,
+      "invalidation": "exit on any trade through stop 103.3, at target, or on chaos rotate",
+      "risk_usd": 3599.96,
+      "risk_pct_equity": 0.07788,
+      "opened_at": "2026-10-29T16:07:41-03:00",
+      "card": "CHAOS_SOL",
+      "reason": "CHAOS rotate SOL-USD: momentum short into broad selloff \u2014 short (24h -2.61% from public stats open), notional $119,947 @ 20x paper (margin $5,997), stop 3.0% / tgt 6.0%/10.0%, risk $3,600 (7.8% eq; chaos cap 100%)",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-29T16:07:41-03:00 BRT (exch 2026-10-29T19:07:36.656592906Z) api.exchange.coinbase.com",
+      "override": null,
+      "paper_only": true,
+      "leverage": 20.0,
+      "margin": 5997.34,
+      "mark": 100.29,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-10-29T16:07:38-03:00",
+      "unrealized_pnl": -0.0,
+      "exposure": 119946.84
     }
   ],
-  "open_count": 4,
+  "open_count": 5,
   "closed_positions": [
     {
       "type": "close",
@@ -978,12 +1005,12 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-10-29T16:07:41-03:00",
-      "note": "last: paper fill ETH-USD"
+      "note": "last: paper fill SOL-USD"
     },
     "Logger": {
       "status": "ready",
       "last_run": "2026-10-29T16:07:41-03:00",
-      "note": "logged 2026-10-29_ETH-USD_110"
+      "note": "logged 2026-10-29_SOL-USD_111"
     },
     "Equity": {
       "status": "ready",
@@ -1716,16 +1743,14 @@ window.__DESK_STATE__ = {
       "t": "2026-10-29T16:07:41-03:00",
       "equity": 46224.86,
       "kind": "fill"
+    },
+    {
+      "t": "2026-10-29T16:07:41-03:00",
+      "equity": 46224.86,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:33:32-03:00",
-      "agent": "Sizer",
-      "kind": "size",
-      "text": "BTC size 0.004 \u00b7 risk $7.66 \u00b7 notional $323.26",
-      "reason": "cash-bound sizing (~1/3 of cash per slot for full 3-slot book); risk well under 2% cap; stop 78900 is 2.37% from entry 80814.58"
-    },
     {
       "t": "2026-10-27T23:33:32-03:00",
       "agent": "Executor",
@@ -3279,6 +3304,15 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "SOL-USD PASS (chaos: non-blocking)",
       "reason": "vol $46.8M, spread 0.010%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
+    },
+    {
+      "t": "2026-10-29T16:07:41-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 1196 SOL-USD @ 100.29 \u00b7 notional $119,947 (20x, margin $5,997) \u00b7 stop 103.3 \u00b7 tgt 94.273 \u00b7 risk $3,599.96",
+      "reason": "CHAOS rotate SOL-USD: momentum short into broad selloff \u2014 short (24h -2.61% from public stats open), notional $119,947 @ 20x paper (margin $5,997), stop 3.0% / tgt 6.0%/10.0%, risk $3,600 (7.8% eq; chaos cap 100%)",
+      "fill_id": "2026-10-29_SOL-USD_111",
+      "card": "CHAOS_SOL"
     }
   ],
   "scanner_feed": [
@@ -4245,8 +4279,8 @@ window.__DESK_STATE__ = {
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 30498.04,
-  "exposure": 605627.82,
-  "buying_power": 318869.38,
-  "effective_leverage": 13.1
+  "margin_used": 36495.38,
+  "exposure": 725574.66,
+  "buying_power": 198922.54,
+  "effective_leverage": 15.7
 };
