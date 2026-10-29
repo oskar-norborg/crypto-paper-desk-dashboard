@@ -1028,8 +1028,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-10-29T20:04:09-03:00",
-      "note": "last: closed HBAR-USD"
+      "last_run": "2026-10-29T20:04:18-03:00",
+      "note": "CHAOS rotate: press momentum shorts BTC, NEAR, UNI at 20x paper"
     },
     "Logger": {
       "status": "ready",
@@ -1815,13 +1815,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:33:51-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "SOL-USD PASS",
-      "reason": "Coinbase online; 24h vol ~$34.7M; spread ~0.01%; depth \u00b11% ~$8.1M; listed >30d"
-    },
     {
       "t": "2026-10-27T23:33:51-03:00",
       "agent": "Sizer",
@@ -3374,6 +3367,13 @@ window.__DESK_STATE__ = {
       "kind": "batch",
       "text": "CHAOS: HBAR target closed \u00b7 eq $61,197 \u00b7 exposure $443,094 (7.24x)",
       "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
+    },
+    {
+      "t": "2026-10-29T20:04:18-03:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "CHAOS rotate: press momentum shorts BTC, NEAR, UNI at 20x paper",
+      "reason": "30/30 watchlist red on 24h public stats; BTC broke 79k, NEAR/UNI leading the downside with \u2265 $17M 24h vol; keep XRP/ETH/SOL/LTC shorts"
     }
   ],
   "scanner_feed": [
