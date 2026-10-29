@@ -1817,13 +1817,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-10-27T23:33:51-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "ETH-USD PASS",
-      "reason": "Coinbase online; 24h vol ~$167.4M; spread <0.01%; depth \u00b11% ~$14.6M; listed >30d"
-    },
-    {
-      "t": "2026-10-27T23:33:51-03:00",
       "agent": "Sizer",
       "kind": "size",
       "text": "ETH size 0.14 \u00b7 risk $7.62 \u00b7 notional $329.62",
@@ -3375,6 +3368,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "14 watchlist names SOFT-WARN on 24h vol < $5M (non-blocking under chaos v2.0)",
       "reason": "all open/new names are liquid Coinbase majors (vol \u2265 $5M); no hard blocks"
+    },
+    {
+      "t": "2026-10-29T20:04:09-03:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "HBAR-USD short target 1 0.067068 touched (public 5m candle low 0.06622); XRP/ETH/SOL/LTC shorts: no stop or target touched",
+      "reason": "stop/target/invalidation check vs Coinbase public 5m candles since entry"
     }
   ],
   "scanner_feed": [
