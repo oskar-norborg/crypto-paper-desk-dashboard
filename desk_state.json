@@ -1045,7 +1045,7 @@
     "Rug Check": {
       "status": "idle",
       "last_run": "2026-10-29T20:04:19-03:00",
-      "note": "BTC-USD PASS (chaos: non-blocking)"
+      "note": "NEAR-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -1846,13 +1846,6 @@
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:40:23-03:00",
-      "agent": "Equity",
-      "kind": "override",
-      "text": "TEMPORARY DEMO LIMITS: max_open 10, max risk 10%/trade, daily-loss pause ignored",
-      "reason": "HUMAN (Oskar) authorized temporary limits for a high-frequency PAPER demo this session only; backup saved to reviews/demo_limits_backup_2026-10-27.json; will restore RISK_RULES v1.0 after session"
-    },
     {
       "t": "2026-10-27T23:41:12-03:00",
       "agent": "Scanner",
@@ -3405,6 +3398,13 @@
       "reason": "CHAOS rotate BTC-USD: momentum short, selloff deepening \u2014 short (24h -3.17% from public stats open), notional $159,950 @ 20x paper (margin $7,997), stop 2.0% / tgt 4.0%/7.0%, risk $3,199 (5.2% eq; chaos cap 100%)",
       "fill_id": "2026-10-29_BTC-USD_117",
       "card": "CHAOS_BTC"
+    },
+    {
+      "t": "2026-10-29T20:04:19-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "NEAR-USD PASS (chaos: non-blocking)",
+      "reason": "vol $48.2M, spread 0.020%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
     }
   ],
   "scanner_feed": [
