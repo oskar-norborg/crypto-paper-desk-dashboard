@@ -1023,8 +1023,8 @@ window.__DESK_STATE__ = {
   "agents": {
     "Scanner": {
       "status": "idle",
-      "last_run": "2026-10-29T16:07:29-03:00",
-      "note": "CHAOS cycle 16:05 BRT: 30/30 public marks; broad selloff (29/30 red on 24h, NEAR \u22127.5%, PEPE +6.0%)"
+      "last_run": "2026-10-29T20:04:09-03:00",
+      "note": "CHAOS cycle 20:00 BRT: 30/30 public marks; selloff deepening (30/30 red on 24h; NEAR \u221213.8%, TIA \u221212.3%, PEPE \u221212.0%, UN"
     },
     "Rug Check": {
       "status": "idle",
@@ -1815,14 +1815,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:33:39-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE XRP-USD @ 1.3346 \u00b7 P&L $+0.17",
-      "reason": "session rotate cycle: free slot/cash to rotate into deeper-liquidity ETH/SOL for paper demo (owner-approved)",
-      "fill_id": "2026-10-27_XRP-USD_06"
-    },
     {
       "t": "2026-10-27T23:33:39-03:00",
       "agent": "Executor",
@@ -3377,6 +3369,13 @@ window.__DESK_STATE__ = {
       "kind": "review",
       "text": "EOD review 2026-10-29 \u00b7 eq $62,618 \u00b7 day +27.52% \u00b7 5 open \u00b7 7.81x",
       "reason": "EOD paper review routine: final public marks, exit plans enforced (BTC stop, NEAR target 1), review written to reviews/2026-10-29.md"
+    },
+    {
+      "t": "2026-10-29T20:04:09-03:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "CHAOS cycle 20:00 BRT: 30/30 public marks; selloff deepening (30/30 red on 24h; NEAR \u221213.8%, TIA \u221212.3%, PEPE \u221212.0%, UNI \u221211.6%, BTC \u22123.2%)",
+      "reason": "scheduled scanner run; scan file scans/2026-10-29_2003_scan.md"
     }
   ],
   "scanner_feed": [
@@ -4328,7 +4327,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-10-29T18:06:13-03:00",
+  "updated_at": "2026-10-29T20:04:09-03:00",
   "timezone_note": "All timestamps America/Sao_Paulo (UTC-03:00); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
