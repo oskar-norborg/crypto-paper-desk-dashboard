@@ -1017,8 +1017,8 @@
     },
     "Rug Check": {
       "status": "idle",
-      "last_run": "2026-10-29T20:04:09-03:00",
-      "note": "14 watchlist names SOFT-WARN on 24h vol < $5M (non-blocking under chaos v2.0)"
+      "last_run": "2026-10-29T20:04:19-03:00",
+      "note": "BTC-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -1814,13 +1814,6 @@
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:33:51-03:00",
-      "agent": "Sizer",
-      "kind": "size",
-      "text": "SOL size 3.4 \u00b7 risk $8.94 \u00b7 notional $345.20",
-      "reason": "cash-bound sizing for rotate slot; risk well under 2% cap; stop 98.9 is 2.59% from entry 101.53"
-    },
     {
       "t": "2026-10-27T23:33:51-03:00",
       "agent": "Executor",
@@ -3373,6 +3366,13 @@
       "kind": "plan",
       "text": "CHAOS rotate: press momentum shorts BTC, NEAR, UNI at 20x paper",
       "reason": "30/30 watchlist red on 24h public stats; BTC broke 79k, NEAR/UNI leading the downside with \u2265 $17M 24h vol; keep XRP/ETH/SOL/LTC shorts"
+    },
+    {
+      "t": "2026-10-29T20:04:19-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "BTC-USD PASS (chaos: non-blocking)",
+      "reason": "vol $704.9M, spread 0.002%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
     }
   ],
   "scanner_feed": [
@@ -4324,7 +4324,7 @@
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-10-29T20:04:18-03:00",
+  "updated_at": "2026-10-29T20:04:19-03:00",
   "timezone_note": "All timestamps America/Sao_Paulo (UTC-03:00); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
