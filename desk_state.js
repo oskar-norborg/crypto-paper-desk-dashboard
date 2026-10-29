@@ -7,41 +7,14 @@ window.__DESK_STATE__ = {
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
   "equity": 62618.33,
-  "cash": 1230.0,
-  "realized_pnl": -6277.6,
-  "unrealized_pnl": 18895.93,
+  "cash": 7686.77,
+  "realized_pnl": -13819.43,
+  "unrealized_pnl": 26437.76,
   "day_pnl": 13514.08,
   "day_pnl_pct": 0.27521,
   "day_baseline_date": "2026-10-29",
   "day_baseline_equity": 49104.25,
   "open_positions": [
-    {
-      "id": "2026-10-29_BTC-USD_87",
-      "symbol": "BTC-USD",
-      "side": "long",
-      "size": 3.457,
-      "entry": 80987.01,
-      "notional": 279972.09,
-      "stop": 79367.0,
-      "target": 84226.0,
-      "target2": 86656.0,
-      "invalidation": "exit on any trade through stop 79367, at target, or on chaos rotate",
-      "risk_usd": 5600.37,
-      "risk_pct_equity": 0.11283,
-      "opened_at": "2026-10-29T14:30:25-03:00",
-      "card": "CHAOS_BTC",
-      "reason": "CHAOS A BTC-USD: high-conviction momentum swing \u2014 long (24h +0.30% from public stats open), notional $279,972 @ 20x paper (margin $13,999), stop 2.0% / tgt 4.0%/7.0%, risk $5,600 (11.3% eq; chaos cap 100%)",
-      "price_source": "coinbase_exchange_public_ticker 2026-10-29T14:30:25-03:00 BRT (exch 2026-10-29T17:30:23.752508440Z) api.exchange.coinbase.com",
-      "override": null,
-      "paper_only": true,
-      "leverage": 20.0,
-      "margin": 13998.6,
-      "mark": 78805.4,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-10-29T18:05:26-03:00",
-      "unrealized_pnl": -7541.83,
-      "exposure": 272430.27
-    },
     {
       "id": "2026-10-29_NEAR-USD_98",
       "symbol": "NEAR-USD",
@@ -205,7 +178,7 @@ window.__DESK_STATE__ = {
       "exposure": 47567.09
     }
   ],
-  "open_count": 7,
+  "open_count": 6,
   "closed_positions": [
     {
       "type": "close",
@@ -999,6 +972,23 @@ window.__DESK_STATE__ = {
       "reason": "CHAOS rotate: alt long fighting a broad 24h selloff (public stats red) \u2014 invalidation per plan 'or on chaos rotate'; recycle margin into momentum shorts",
       "price_source": "coinbase_exchange_public_ticker 2026-10-29T16:07:31-03:00 BRT (exch 2026-10-29T19:07:17.411118805Z) api.exchange.coinbase.com",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-29_BTC-USD_87",
+      "symbol": "BTC-USD",
+      "side": "long",
+      "size": 3.457,
+      "entry": 80987.01,
+      "exit": 78805.4,
+      "pnl": -7541.83,
+      "notional": 279972.09,
+      "leverage": 20.0,
+      "margin": 13998.6,
+      "closed_at": "2026-10-29T18:05:50-03:00",
+      "reason": "stop hit at EOD review: mark 78805.4 < stop 79367 (exit plan: exit on any trade through stop)",
+      "price_source": "coinbase exchange public ticker (unauthenticated) 18:05 BRT EOD fetch",
+      "paper_only": true
     }
   ],
   "max_open": 50,
@@ -1058,8 +1048,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-10-29T16:07:43-03:00",
-      "note": "last: paper fill HBAR-USD"
+      "last_run": "2026-10-29T18:05:50-03:00",
+      "note": "last: closed BTC-USD"
     },
     "Logger": {
       "status": "ready",
@@ -1822,16 +1812,14 @@ window.__DESK_STATE__ = {
       "t": "2026-10-29T18:05:33-03:00",
       "equity": 62618.33,
       "kind": "mark"
+    },
+    {
+      "t": "2026-10-29T18:05:50-03:00",
+      "equity": 62618.33,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:33:32-03:00",
-      "agent": "Sizer",
-      "kind": "size",
-      "text": "LTC size 5.9 \u00b7 risk $8.65 \u00b7 notional $338.46",
-      "reason": "cash-bound sizing (~1/3 of cash per slot for full 3-slot book); risk well under 2% cap; stop 55.90 is 2.56% from entry 57.366"
-    },
     {
       "t": "2026-10-27T23:33:33-03:00",
       "agent": "Executor",
@@ -3387,6 +3375,14 @@ window.__DESK_STATE__ = {
       "kind": "batch",
       "text": "CHAOS: 16:05 cycle book \u00b7 eq $46,297 \u00b7 exposure $845,343 (18.26x)",
       "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
+    },
+    {
+      "t": "2026-10-29T18:05:50-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE BTC-USD @ 78805.4 \u00b7 P&L $-7541.83",
+      "reason": "stop hit at EOD review: mark 78805.4 < stop 79367 (exit plan: exit on any trade through stop)",
+      "fill_id": "2026-10-29_BTC-USD_87"
     }
   ],
   "scanner_feed": [
@@ -4338,7 +4334,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-10-29T18:05:33-03:00",
+  "updated_at": "2026-10-29T18:05:50-03:00",
   "timezone_note": "All timestamps America/Sao_Paulo (UTC-03:00); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -4353,8 +4349,8 @@ window.__DESK_STATE__ = {
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 42492.4,
-  "exposure": 815868.49,
-  "buying_power": 436498.11,
-  "effective_leverage": 13.03
+  "margin_used": 28493.8,
+  "exposure": 543438.22,
+  "buying_power": 708928.38,
+  "effective_leverage": 8.68
 };
