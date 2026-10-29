@@ -1708,13 +1708,6 @@
   "activity": [
     {
       "t": "2026-10-27T23:12:05-03:00",
-      "agent": "Sizer",
-      "kind": "size",
-      "text": "ETH size 0.18 \u00b7 risk $13.57",
-      "reason": "cash after SOL; stop 2280 keeps risk under $20"
-    },
-    {
-      "t": "2026-10-27T23:12:05-03:00",
       "agent": "Executor",
       "kind": "fill",
       "text": "PAPER FILL long 0.18 ETH-USD @ 2355.41 \u00b7 stop 2280 \u00b7 tgt 2480 \u00b7 risk $13.57",
@@ -3263,6 +3256,13 @@
       "kind": "check",
       "text": "16 watchlist names SOFT-WARN on 24h vol < $5M (non-blocking under chaos v2.0)",
       "reason": "all open/new names are liquid Coinbase majors; no hard blocks"
+    },
+    {
+      "t": "2026-10-29T16:07:29-03:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "No stop or target touched on any open position since entry (public 5m candles)",
+      "reason": "stop/target/invalidation check vs Coinbase public candles 14:30\u219216:05 BRT"
     }
   ],
   "scanner_feed": [
