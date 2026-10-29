@@ -1063,8 +1063,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-10-29T16:07:43-03:00",
-      "note": "logged 2026-10-29_HBAR-USD_113"
+      "last_run": "2026-10-29T16:07:52-03:00",
+      "note": "CHAOS: 16:05 cycle book \u00b7 eq $46,297 \u00b7 exposure $845,343 (18.26x)"
     },
     "Equity": {
       "status": "ready",
@@ -1820,13 +1820,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:33:32-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "LTC-USD PASS",
-      "reason": "Coinbase online; 24h vol ~$5.53M (just above $5M floor); spread 0.038%; depth \u00b11% ~$0.87M (>> 50x notional); listed >30d"
-    },
     {
       "t": "2026-10-27T23:33:32-03:00",
       "agent": "Sizer",
@@ -3382,6 +3375,13 @@ window.__DESK_STATE__ = {
       "reason": "CHAOS rotate HBAR-USD: momentum short into broad selloff \u2014 short (24h -4.18% from public stats open), notional $49,995 @ 20x paper (margin $2,500), stop 4.0% / tgt 8.0%/12.0%, risk $2,000 (4.3% eq; chaos cap 100%)",
       "fill_id": "2026-10-29_HBAR-USD_113",
       "card": "CHAOS_HBAR"
+    },
+    {
+      "t": "2026-10-29T16:07:52-03:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 16:05 cycle book \u00b7 eq $46,297 \u00b7 exposure $845,343 (18.26x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
