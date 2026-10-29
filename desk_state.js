@@ -6,12 +6,12 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 46563.84,
-  "cash": 4347.05,
-  "realized_pnl": -157.35,
-  "unrealized_pnl": -3278.81,
-  "day_pnl": -2540.41,
-  "day_pnl_pct": -0.05174,
+  "equity": 46457.35,
+  "cash": 11513.34,
+  "realized_pnl": -1990.63,
+  "unrealized_pnl": -1552.02,
+  "day_pnl": -2646.9,
+  "day_pnl_pct": -0.0539,
   "day_baseline_date": "2026-10-29",
   "day_baseline_equity": 49104.25,
   "open_positions": [
@@ -151,33 +151,6 @@ window.__DESK_STATE__ = {
       "exposure": 59180.51
     },
     {
-      "id": "2026-10-29_ETH-USD_102",
-      "symbol": "ETH-USD",
-      "side": "long",
-      "size": 76.61,
-      "entry": 2349.45,
-      "notional": 179991.36,
-      "stop": 2290.7,
-      "target": 2466.9,
-      "target2": 2537.4,
-      "invalidation": "exit on any trade through stop 2290.7, at target, or on chaos rotate",
-      "risk_usd": 4500.84,
-      "risk_pct_equity": 0.08951,
-      "opened_at": "2026-10-29T14:33:29-03:00",
-      "card": "CHAOS_ETH",
-      "reason": "CHAOS C ETH-USD: final high-conviction reload \u2014 long (24h +0.31% from public stats open), notional $179,991 @ 20x paper (margin $9,000), stop 2.5% / tgt 5.0%/8.0%, risk $4,501 (9.0% eq; chaos cap 100%)",
-      "price_source": "coinbase_exchange_public_ticker 2026-10-29T14:33:29-03:00 BRT (exch 2026-10-29T17:33:28.002254Z) api.exchange.coinbase.com",
-      "override": null,
-      "paper_only": true,
-      "leverage": 20.0,
-      "margin": 8999.57,
-      "mark": 2326.91,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-10-29T16:05:43-03:00",
-      "unrealized_pnl": -1726.79,
-      "exposure": 178264.58
-    },
-    {
       "id": "2026-10-29_SOL-USD_103",
       "symbol": "SOL-USD",
       "side": "long",
@@ -232,7 +205,7 @@ window.__DESK_STATE__ = {
       "exposure": 89010.32
     }
   ],
-  "open_count": 8,
+  "open_count": 7,
   "closed_positions": [
     {
       "type": "close",
@@ -941,11 +914,28 @@ window.__DESK_STATE__ = {
       "reason": "CHAOS churn: bank best (uP&L $+288.86) and reload",
       "price_source": "coinbase_exchange_public_ticker 2026-10-29T14:33:20-03:00 BRT (exch 2026-10-29T17:33:19.289025117Z) api.exchange.coinbase.com",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-29_ETH-USD_102",
+      "symbol": "ETH-USD",
+      "side": "long",
+      "size": 76.61,
+      "entry": 2349.45,
+      "exit": 2325.52,
+      "pnl": -1833.28,
+      "notional": 179991.36,
+      "leverage": 20.0,
+      "margin": 8999.57,
+      "closed_at": "2026-10-29T16:07:30-03:00",
+      "reason": "CHAOS rotate: alt long fighting a broad 24h selloff (public stats red) \u2014 invalidation per plan 'or on chaos rotate'; recycle margin into momentum shorts",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-29T16:07:30-03:00 BRT (exch 2026-10-29T19:07:26.956752973Z) api.exchange.coinbase.com",
+      "paper_only": true
     }
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 46563.84,
+  "max_risk_usd": 46457.35,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -491042.5,
   "paused": false,
@@ -1000,8 +990,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-10-29T14:33:31-03:00",
-      "note": "last: paper fill XRP-USD"
+      "last_run": "2026-10-29T16:07:30-03:00",
+      "note": "last: closed ETH-USD"
     },
     "Logger": {
       "status": "ready",
@@ -1704,18 +1694,14 @@ window.__DESK_STATE__ = {
       "t": "2026-10-29T16:05:48-03:00",
       "equity": 46563.84,
       "kind": "mark"
+    },
+    {
+      "t": "2026-10-29T16:07:30-03:00",
+      "equity": 46457.35,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:12:05-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 0.18 ETH-USD @ 2355.41 \u00b7 stop 2280 \u00b7 tgt 2480 \u00b7 risk $13.57",
-      "reason": "Paper demo: ETH trend continuation with room to stop",
-      "fill_id": "2026-10-27_ETH-USD_02",
-      "card": "DEMO_ETH_01"
-    },
     {
       "t": "2026-10-27T23:33:04-03:00",
       "agent": "Scanner",
@@ -3264,6 +3250,14 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "No stop or target touched on any open position since entry (public 5m candles)",
       "reason": "stop/target/invalidation check vs Coinbase public candles 14:30\u219216:05 BRT"
+    },
+    {
+      "t": "2026-10-29T16:07:30-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE ETH-USD @ 2325.52 \u00b7 P&L $-1833.28",
+      "reason": "CHAOS rotate: alt long fighting a broad 24h selloff (public stats red) \u2014 invalidation per plan 'or on chaos rotate'; recycle margin into momentum shorts",
+      "fill_id": "2026-10-29_ETH-USD_102"
     }
   ],
   "scanner_feed": [
@@ -4215,7 +4209,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-10-29T16:07:29-03:00",
+  "updated_at": "2026-10-29T16:07:30-03:00",
   "timezone_note": "All timestamps America/Sao_Paulo (UTC-03:00); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -4230,8 +4224,8 @@ window.__DESK_STATE__ = {
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 45495.6,
-  "exposure": 900218.59,
-  "buying_power": 31058.21,
-  "effective_leverage": 19.33
+  "margin_used": 36496.03,
+  "exposure": 721954.01,
+  "buying_power": 207192.99,
+  "effective_leverage": 15.54
 };
