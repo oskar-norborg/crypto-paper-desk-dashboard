@@ -1043,8 +1043,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-10-29T16:07:52-03:00",
-      "note": "CHAOS: 16:05 cycle book \u00b7 eq $46,297 \u00b7 exposure $845,343 (18.26x)"
+      "last_run": "2026-10-29T18:06:13-03:00",
+      "note": "EOD review 2026-10-29 \u00b7 eq $62,618 \u00b7 day +27.52% \u00b7 5 open \u00b7 7.81x"
     },
     "Equity": {
       "status": "ready",
@@ -1815,13 +1815,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:33:39-03:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "Rotate cycle: book full 3/3 \u2014 rotate XRP + LTC out, ETH + SOL in",
-      "reason": "Owner asked for more visible activity; LTC is the thinnest PASS name (vol just over $5M) and XRP freed for re-allocation to ETH/SOL (deeper books); closes at public marks keep P&L tiny, far from \u22123% pause"
-    },
     {
       "t": "2026-10-27T23:33:39-03:00",
       "agent": "Executor",
@@ -3377,6 +3370,13 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE NEAR-USD @ 4.1404 \u00b7 P&L $+5630.14",
       "reason": "target 1 hit at EOD review: short mark 4.1404 < target 4.2037 (exit plan: exit at target)",
       "fill_id": "2026-10-29_NEAR-USD_98"
+    },
+    {
+      "t": "2026-10-29T18:06:13-03:00",
+      "agent": "Logger",
+      "kind": "review",
+      "text": "EOD review 2026-10-29 \u00b7 eq $62,618 \u00b7 day +27.52% \u00b7 5 open \u00b7 7.81x",
+      "reason": "EOD paper review routine: final public marks, exit plans enforced (BTC stop, NEAR target 1), review written to reviews/2026-10-29.md"
     }
   ],
   "scanner_feed": [
@@ -4328,7 +4328,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-10-29T18:05:50-03:00",
+  "updated_at": "2026-10-29T18:06:13-03:00",
   "timezone_note": "All timestamps America/Sao_Paulo (UTC-03:00); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
