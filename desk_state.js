@@ -7,41 +7,14 @@ window.__DESK_STATE__ = {
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
   "equity": 62618.33,
-  "cash": 7686.77,
-  "realized_pnl": -13819.43,
-  "unrealized_pnl": 26437.76,
+  "cash": 16316.59,
+  "realized_pnl": -8189.29,
+  "unrealized_pnl": 20807.62,
   "day_pnl": 13514.08,
   "day_pnl_pct": 0.27521,
   "day_baseline_date": "2026-10-29",
   "day_baseline_equity": 49104.25,
   "open_positions": [
-    {
-      "id": "2026-10-29_NEAR-USD_98",
-      "symbol": "NEAR-USD",
-      "side": "short",
-      "size": 13130.0,
-      "entry": 4.5692,
-      "notional": 59993.6,
-      "stop": 4.752,
-      "target": 4.2037,
-      "target2": 4.0209,
-      "invalidation": "exit on any trade through stop 4.752, at target, or on chaos rotate",
-      "risk_usd": 2400.16,
-      "risk_pct_equity": 0.04793,
-      "opened_at": "2026-10-29T14:32:00-03:00",
-      "card": "CHAOS_NEAR",
-      "reason": "CHAOS B NEAR-USD: rotation swing \u2014 short (24h -0.47% from public stats open), notional $59,994 @ 20x paper (margin $3,000), stop 4.0% / tgt 8.0%/12.0%, risk $2,400 (4.8% eq; chaos cap 100%)",
-      "price_source": "coinbase_exchange_public_ticker 2026-10-29T14:31:59-03:00 BRT (exch 2026-10-29T17:31:56.334094194Z) api.exchange.coinbase.com",
-      "override": null,
-      "paper_only": true,
-      "leverage": 20.0,
-      "margin": 2999.68,
-      "mark": 4.1404,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-10-29T18:05:30-03:00",
-      "unrealized_pnl": 5630.14,
-      "exposure": 54363.45
-    },
     {
       "id": "2026-10-29_XRP-USD_104",
       "symbol": "XRP-USD",
@@ -178,7 +151,7 @@ window.__DESK_STATE__ = {
       "exposure": 47567.09
     }
   ],
-  "open_count": 6,
+  "open_count": 5,
   "closed_positions": [
     {
       "type": "close",
@@ -989,6 +962,23 @@ window.__DESK_STATE__ = {
       "reason": "stop hit at EOD review: mark 78805.4 < stop 79367 (exit plan: exit on any trade through stop)",
       "price_source": "coinbase exchange public ticker (unauthenticated) 18:05 BRT EOD fetch",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-29_NEAR-USD_98",
+      "symbol": "NEAR-USD",
+      "side": "short",
+      "size": 13130.0,
+      "entry": 4.5692,
+      "exit": 4.1404,
+      "pnl": 5630.14,
+      "notional": 59993.6,
+      "leverage": 20.0,
+      "margin": 2999.68,
+      "closed_at": "2026-10-29T18:05:50-03:00",
+      "reason": "target 1 hit at EOD review: short mark 4.1404 < target 4.2037 (exit plan: exit at target)",
+      "price_source": "coinbase exchange public ticker (unauthenticated) 18:05 BRT EOD fetch",
+      "paper_only": true
     }
   ],
   "max_open": 50,
@@ -1049,7 +1039,7 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-10-29T18:05:50-03:00",
-      "note": "last: closed BTC-USD"
+      "note": "last: closed NEAR-USD"
     },
     "Logger": {
       "status": "ready",
@@ -1817,18 +1807,14 @@ window.__DESK_STATE__ = {
       "t": "2026-10-29T18:05:50-03:00",
       "equity": 62618.33,
       "kind": "close"
+    },
+    {
+      "t": "2026-10-29T18:05:50-03:00",
+      "equity": 62618.33,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:33:33-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 5.9 LTC-USD @ 57.366 \u00b7 stop 55.9 \u00b7 tgt 59.5 \u00b7 risk $8.65",
-      "reason": "Paper session: LTC +1.8% 24h near 24h high 57.59; uses last slot with remaining cash",
-      "fill_id": "2026-10-27_LTC-USD_07",
-      "card": "SESS_LTC_01"
-    },
     {
       "t": "2026-10-27T23:33:39-03:00",
       "agent": "Scanner",
@@ -3383,6 +3369,14 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE BTC-USD @ 78805.4 \u00b7 P&L $-7541.83",
       "reason": "stop hit at EOD review: mark 78805.4 < stop 79367 (exit plan: exit on any trade through stop)",
       "fill_id": "2026-10-29_BTC-USD_87"
+    },
+    {
+      "t": "2026-10-29T18:05:50-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE NEAR-USD @ 4.1404 \u00b7 P&L $+5630.14",
+      "reason": "target 1 hit at EOD review: short mark 4.1404 < target 4.2037 (exit plan: exit at target)",
+      "fill_id": "2026-10-29_NEAR-USD_98"
     }
   ],
   "scanner_feed": [
@@ -4349,8 +4343,8 @@ window.__DESK_STATE__ = {
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 28493.8,
-  "exposure": 543438.22,
-  "buying_power": 708928.38,
-  "effective_leverage": 8.68
+  "margin_used": 25494.12,
+  "exposure": 489074.77,
+  "buying_power": 763291.83,
+  "effective_leverage": 7.81
 };
