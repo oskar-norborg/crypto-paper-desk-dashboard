@@ -955,8 +955,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-10-29T14:33:40-03:00",
-      "note": "CHAOS: final chaos book \u00b7 eq $50,049 \u00b7 exposure $909,777 (18.18x)"
+      "last_run": "2026-10-29T16:07:40-03:00",
+      "note": "CHAOS: alt longs rotated out \u00b7 eq $46,257 \u00b7 exposure $425,596 (9.2x)"
     },
     "Equity": {
       "status": "ready",
@@ -1687,13 +1687,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:33:11-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "DOGE-USD FAIL",
-      "reason": "24h vol ~$4.21M < $5M threshold (RISK_RULES \u00a74); skipped this session"
-    },
     {
       "t": "2026-10-27T23:33:11-03:00",
       "agent": "Rug Check",
@@ -3247,6 +3240,13 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE ADA-USD @ 0.20153 \u00b7 P&L $-888.70",
       "reason": "CHAOS rotate: alt long fighting a broad 24h selloff (public stats red) \u2014 invalidation per plan 'or on chaos rotate'; recycle margin into momentum shorts",
       "fill_id": "2026-10-29_ADA-USD_97"
+    },
+    {
+      "t": "2026-10-29T16:07:40-03:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: alt longs rotated out \u00b7 eq $46,257 \u00b7 exposure $425,596 (9.2x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
