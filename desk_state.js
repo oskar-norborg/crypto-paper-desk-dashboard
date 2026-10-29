@@ -6,12 +6,12 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 46173.1,
-  "cash": 20113.15,
-  "realized_pnl": -5388.9,
-  "unrealized_pnl": 1562.0,
-  "day_pnl": -2931.15,
-  "day_pnl_pct": -0.05969,
+  "equity": 46085.11,
+  "cash": 22224.32,
+  "realized_pnl": -6277.6,
+  "unrealized_pnl": 2362.71,
+  "day_pnl": -3019.14,
+  "day_pnl_pct": -0.06148,
   "day_baseline_date": "2026-10-29",
   "day_baseline_equity": 49104.25,
   "open_positions": [
@@ -41,33 +41,6 @@ window.__DESK_STATE__ = {
       "mark_at": "2026-10-29T16:05:41-03:00",
       "unrealized_pnl": -844.65,
       "exposure": 279127.44
-    },
-    {
-      "id": "2026-10-29_ADA-USD_97",
-      "symbol": "ADA-USD",
-      "side": "long",
-      "size": 293300.0,
-      "entry": 0.20456,
-      "notional": 59997.45,
-      "stop": 0.19638,
-      "target": 0.22092,
-      "target2": 0.22911,
-      "invalidation": "exit on any trade through stop 0.19638, at target, or on chaos rotate",
-      "risk_usd": 2399.19,
-      "risk_pct_equity": 0.04792,
-      "opened_at": "2026-10-29T14:31:59-03:00",
-      "card": "CHAOS_ADA",
-      "reason": "CHAOS B ADA-USD: rotation swing \u2014 long (24h +1.14% from public stats open), notional $59,997 @ 20x paper (margin $3,000), stop 4.0% / tgt 8.0%/12.0%, risk $2,399 (4.8% eq; chaos cap 100%)",
-      "price_source": "coinbase_exchange_public_ticker 2026-10-29T14:31:59-03:00 BRT (exch 2026-10-29T17:31:44.544787921Z) api.exchange.coinbase.com",
-      "override": null,
-      "paper_only": true,
-      "leverage": 20.0,
-      "margin": 2999.87,
-      "mark": 0.20183,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-10-29T16:05:39-03:00",
-      "unrealized_pnl": -800.71,
-      "exposure": 59196.74
     },
     {
       "id": "2026-10-29_NEAR-USD_98",
@@ -124,7 +97,7 @@ window.__DESK_STATE__ = {
       "exposure": 89010.32
     }
   ],
-  "open_count": 4,
+  "open_count": 3,
   "closed_positions": [
     {
       "type": "close",
@@ -901,11 +874,28 @@ window.__DESK_STATE__ = {
       "reason": "CHAOS rotate: alt long fighting a broad 24h selloff (public stats red) \u2014 invalidation per plan 'or on chaos rotate'; recycle margin into momentum shorts",
       "price_source": "coinbase_exchange_public_ticker 2026-10-29T16:07:31-03:00 BRT (exch 2026-10-29T19:06:45.811607224Z) api.exchange.coinbase.com",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-29_ADA-USD_97",
+      "symbol": "ADA-USD",
+      "side": "long",
+      "size": 293300.0,
+      "entry": 0.20456,
+      "exit": 0.20153,
+      "pnl": -888.7,
+      "notional": 59997.45,
+      "leverage": 20.0,
+      "margin": 2999.87,
+      "closed_at": "2026-10-29T16:07:31-03:00",
+      "reason": "CHAOS rotate: alt long fighting a broad 24h selloff (public stats red) \u2014 invalidation per plan 'or on chaos rotate'; recycle margin into momentum shorts",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-29T16:07:31-03:00 BRT (exch 2026-10-29T19:07:17.411118805Z) api.exchange.coinbase.com",
+      "paper_only": true
     }
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 46173.1,
+  "max_risk_usd": 46085.11,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -491042.5,
   "paused": false,
@@ -961,7 +951,7 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-10-29T16:07:31-03:00",
-      "note": "last: closed LINK-USD"
+      "note": "last: closed ADA-USD"
     },
     "Logger": {
       "status": "ready",
@@ -1684,16 +1674,14 @@ window.__DESK_STATE__ = {
       "t": "2026-10-29T16:07:31-03:00",
       "equity": 46173.1,
       "kind": "close"
+    },
+    {
+      "t": "2026-10-29T16:07:31-03:00",
+      "equity": 46085.11,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:33:11-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "LINK-USD FAIL",
-      "reason": "24h vol ~$4.93M < $5M threshold (RISK_RULES \u00a74); skipped this session"
-    },
     {
       "t": "2026-10-27T23:33:11-03:00",
       "agent": "Rug Check",
@@ -3246,6 +3234,14 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE LINK-USD @ 11.637 \u00b7 P&L $-888.82",
       "reason": "CHAOS rotate: alt long fighting a broad 24h selloff (public stats red) \u2014 invalidation per plan 'or on chaos rotate'; recycle margin into momentum shorts",
       "fill_id": "2026-10-29_LINK-USD_99"
+    },
+    {
+      "t": "2026-10-29T16:07:31-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE ADA-USD @ 0.20153 \u00b7 P&L $-888.70",
+      "reason": "CHAOS rotate: alt long fighting a broad 24h selloff (public stats red) \u2014 invalidation per plan 'or on chaos rotate'; recycle margin into momentum shorts",
+      "fill_id": "2026-10-29_ADA-USD_97"
     }
   ],
   "scanner_feed": [
@@ -4212,8 +4208,8 @@ window.__DESK_STATE__ = {
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 24497.95,
-  "exposure": 485106.5,
-  "buying_power": 438355.5,
-  "effective_leverage": 10.51
+  "margin_used": 21498.08,
+  "exposure": 425909.76,
+  "buying_power": 495792.44,
+  "effective_leverage": 9.24
 };
