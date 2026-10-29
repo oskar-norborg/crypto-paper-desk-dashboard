@@ -5,12 +5,12 @@
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 62618.33,
-  "cash": 16316.59,
-  "realized_pnl": -8189.29,
-  "unrealized_pnl": 20807.62,
-  "day_pnl": 13514.08,
-  "day_pnl_pct": 0.27521,
+  "equity": 62782.92,
+  "cash": 21408.65,
+  "realized_pnl": -5596.97,
+  "unrealized_pnl": 18379.89,
+  "day_pnl": 13678.67,
+  "day_pnl_pct": 0.27856,
   "day_baseline_date": "2026-10-29",
   "day_baseline_equity": 49104.25,
   "open_positions": [
@@ -121,36 +121,9 @@
       "mark_at": "2026-10-29T18:05:29-03:00",
       "unrealized_pnl": 3166.46,
       "exposure": 66779.07
-    },
-    {
-      "id": "2026-10-29_HBAR-USD_113",
-      "symbol": "HBAR-USD",
-      "side": "short",
-      "size": 685800.0,
-      "entry": 0.0729,
-      "notional": 49994.82,
-      "stop": 0.075816,
-      "target": 0.067068,
-      "target2": 0.064152,
-      "invalidation": "exit on any trade through stop 0.075816, at target, or on chaos rotate",
-      "risk_usd": 1999.79,
-      "risk_pct_equity": 0.04324,
-      "opened_at": "2026-10-29T16:07:43-03:00",
-      "card": "CHAOS_HBAR",
-      "reason": "CHAOS rotate HBAR-USD: momentum short into broad selloff \u2014 short (24h -4.18% from public stats open), notional $49,995 @ 20x paper (margin $2,500), stop 4.0% / tgt 8.0%/12.0%, risk $2,000 (4.3% eq; chaos cap 100%)",
-      "price_source": "coinbase_exchange_public_ticker 2026-10-29T16:07:43-03:00 BRT (exch 2026-10-29T19:07:41.283745939Z) api.exchange.coinbase.com",
-      "override": null,
-      "paper_only": true,
-      "leverage": 20.0,
-      "margin": 2499.74,
-      "mark": 0.06936,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-10-29T18:05:28-03:00",
-      "unrealized_pnl": 2427.73,
-      "exposure": 47567.09
     }
   ],
-  "open_count": 5,
+  "open_count": 4,
   "closed_positions": [
     {
       "type": "close",
@@ -978,11 +951,28 @@
       "reason": "target 1 hit at EOD review: short mark 4.1404 < target 4.2037 (exit plan: exit at target)",
       "price_source": "coinbase exchange public ticker (unauthenticated) 18:05 BRT EOD fetch",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-29_HBAR-USD_113",
+      "symbol": "HBAR-USD",
+      "side": "short",
+      "size": 685800.0,
+      "entry": 0.0729,
+      "exit": 0.06912,
+      "pnl": 2592.32,
+      "notional": 49994.82,
+      "leverage": 20.0,
+      "margin": 2499.74,
+      "closed_at": "2026-10-29T20:04:09-03:00",
+      "reason": "target 1 hit: public 5m candle low 0.06622 \u2264 target 0.067068 (exit plan: exit at target); closed at current public mark",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-29T20:04:09-03:00 BRT (exch 2026-10-29T23:04:00.659372840Z) api.exchange.coinbase.com",
+      "paper_only": true
     }
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 62618.33,
+  "max_risk_usd": 62782.92,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -491042.5,
   "paused": false,
@@ -1037,8 +1027,8 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-10-29T18:05:50-03:00",
-      "note": "last: closed NEAR-USD"
+      "last_run": "2026-10-29T20:04:09-03:00",
+      "note": "last: closed HBAR-USD"
     },
     "Logger": {
       "status": "ready",
@@ -1811,16 +1801,14 @@
       "t": "2026-10-29T18:05:50-03:00",
       "equity": 62618.33,
       "kind": "close"
+    },
+    {
+      "t": "2026-10-29T20:04:09-03:00",
+      "equity": 62782.92,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:33:51-03:00",
-      "agent": "Sizer",
-      "kind": "size",
-      "text": "ETH size 0.14 \u00b7 risk $7.62 \u00b7 notional $329.62",
-      "reason": "cash-bound sizing for rotate slot; risk well under 2% cap; stop 2300 is 2.31% from entry 2354.43"
-    },
     {
       "t": "2026-10-27T23:33:51-03:00",
       "agent": "Executor",
@@ -3374,6 +3362,14 @@
       "kind": "check",
       "text": "HBAR-USD short target 1 0.067068 touched (public 5m candle low 0.06622); XRP/ETH/SOL/LTC shorts: no stop or target touched",
       "reason": "stop/target/invalidation check vs Coinbase public 5m candles since entry"
+    },
+    {
+      "t": "2026-10-29T20:04:09-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE HBAR-USD @ 0.06912 \u00b7 P&L $+2592.32",
+      "reason": "target 1 hit: public 5m candle low 0.06622 \u2264 target 0.067068 (exit plan: exit at target); closed at current public mark",
+      "fill_id": "2026-10-29_HBAR-USD_113"
     }
   ],
   "scanner_feed": [
@@ -4340,8 +4336,8 @@
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 25494.12,
-  "exposure": 489074.77,
-  "buying_power": 763291.83,
-  "effective_leverage": 7.81
+  "margin_used": 22994.38,
+  "exposure": 441507.68,
+  "buying_power": 814150.72,
+  "effective_leverage": 7.03
 }
