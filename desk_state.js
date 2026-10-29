@@ -968,7 +968,7 @@ window.__DESK_STATE__ = {
     "Rug Check": {
       "status": "idle",
       "last_run": "2026-10-29T16:07:41-03:00",
-      "note": "ETH-USD PASS (chaos: non-blocking)"
+      "note": "SOL-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -1719,13 +1719,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:33:32-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "BTC-USD PASS",
-      "reason": "Coinbase online; 24h vol ~$353.5M; spread ~0.00%; depth \u00b11% ~$30.7M; listed >30d"
-    },
     {
       "t": "2026-10-27T23:33:32-03:00",
       "agent": "Sizer",
@@ -3279,6 +3272,13 @@ window.__DESK_STATE__ = {
       "reason": "CHAOS rotate ETH-USD: momentum short into broad selloff \u2014 short (24h -1.87% from public stats open), notional $179,999 @ 20x paper (margin $9,000), stop 2.5% / tgt 5.0%/8.0%, risk $4,499 (9.7% eq; chaos cap 100%)",
       "fill_id": "2026-10-29_ETH-USD_110",
       "card": "CHAOS_ETH"
+    },
+    {
+      "t": "2026-10-29T16:07:41-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "SOL-USD PASS (chaos: non-blocking)",
+      "reason": "vol $46.8M, spread 0.010%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
     }
   ],
   "scanner_feed": [
