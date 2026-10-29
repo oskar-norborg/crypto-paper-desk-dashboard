@@ -6,12 +6,12 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 46351.06,
-  "cash": 15988.74,
-  "realized_pnl": -3514.12,
-  "unrealized_pnl": -134.82,
-  "day_pnl": -2753.19,
-  "day_pnl_pct": -0.05607,
+  "equity": 46249.28,
+  "cash": 18002.31,
+  "realized_pnl": -4500.08,
+  "unrealized_pnl": 749.36,
+  "day_pnl": -2854.97,
+  "day_pnl_pct": -0.05814,
   "day_baseline_date": "2026-10-29",
   "day_baseline_equity": 49104.25,
   "open_positions": [
@@ -41,33 +41,6 @@ window.__DESK_STATE__ = {
       "mark_at": "2026-10-29T16:05:41-03:00",
       "unrealized_pnl": -844.65,
       "exposure": 279127.44
-    },
-    {
-      "id": "2026-10-29_SUI-USD_92",
-      "symbol": "SUI-USD",
-      "side": "long",
-      "size": 63610.0,
-      "entry": 0.9431,
-      "notional": 59990.59,
-      "stop": 0.90538,
-      "target": 1.0185,
-      "target2": 1.0563,
-      "invalidation": "exit on any trade through stop 0.90538, at target, or on chaos rotate",
-      "risk_usd": 2399.37,
-      "risk_pct_equity": 0.0482,
-      "opened_at": "2026-10-29T14:30:29-03:00",
-      "card": "CHAOS_SUI",
-      "reason": "CHAOS A SUI-USD: high-conviction momentum swing \u2014 long (24h +2.06% from public stats open), notional $59,991 @ 20x paper (margin $3,000), stop 4.0% / tgt 8.0%/12.0%, risk $2,399 (4.8% eq; chaos cap 100%)",
-      "price_source": "coinbase_exchange_public_ticker 2026-10-29T14:30:28-03:00 BRT (exch 2026-10-29T17:30:23.563468375Z) api.exchange.coinbase.com",
-      "override": null,
-      "paper_only": true,
-      "leverage": 20.0,
-      "margin": 2999.53,
-      "mark": 0.9292,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-10-29T16:05:47-03:00",
-      "unrealized_pnl": -884.18,
-      "exposure": 59106.41
     },
     {
       "id": "2026-10-29_ADA-USD_97",
@@ -178,7 +151,7 @@ window.__DESK_STATE__ = {
       "exposure": 89010.32
     }
   ],
-  "open_count": 6,
+  "open_count": 5,
   "closed_positions": [
     {
       "type": "close",
@@ -921,11 +894,28 @@ window.__DESK_STATE__ = {
       "reason": "CHAOS rotate: alt long fighting a broad 24h selloff (public stats red) \u2014 invalidation per plan 'or on chaos rotate'; recycle margin into momentum shorts",
       "price_source": "coinbase_exchange_public_ticker 2026-10-29T16:07:30-03:00 BRT (exch 2026-10-29T19:07:27.608244067Z) api.exchange.coinbase.com",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-29_SUI-USD_92",
+      "symbol": "SUI-USD",
+      "side": "long",
+      "size": 63610.0,
+      "entry": 0.9431,
+      "exit": 0.9276,
+      "pnl": -985.96,
+      "notional": 59990.59,
+      "leverage": 20.0,
+      "margin": 2999.53,
+      "closed_at": "2026-10-29T16:07:30-03:00",
+      "reason": "CHAOS rotate: alt long fighting a broad 24h selloff (public stats red) \u2014 invalidation per plan 'or on chaos rotate'; recycle margin into momentum shorts",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-29T16:07:30-03:00 BRT (exch 2026-10-29T19:07:23.273489099Z) api.exchange.coinbase.com",
+      "paper_only": true
     }
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 46351.06,
+  "max_risk_usd": 46249.28,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -491042.5,
   "paused": false,
@@ -981,7 +971,7 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-10-29T16:07:30-03:00",
-      "note": "last: closed SOL-USD"
+      "note": "last: closed SUI-USD"
     },
     "Logger": {
       "status": "ready",
@@ -1694,16 +1684,14 @@ window.__DESK_STATE__ = {
       "t": "2026-10-29T16:07:30-03:00",
       "equity": 46351.06,
       "kind": "close"
+    },
+    {
+      "t": "2026-10-29T16:07:30-03:00",
+      "equity": 46249.28,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:33:04-03:00",
-      "agent": "Equity",
-      "kind": "marks",
-      "text": "Public marks fetched for 9-symbol watchlist",
-      "reason": "watchlist expanded for broader paper session; Coinbase Exchange public ticker, unauthenticated, display/mark only"
-    },
     {
       "t": "2026-10-27T23:33:11-03:00",
       "agent": "Rug Check",
@@ -3254,6 +3242,14 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE SOL-USD @ 100.3 \u00b7 P&L $-1523.49",
       "reason": "CHAOS rotate: alt long fighting a broad 24h selloff (public stats red) \u2014 invalidation per plan 'or on chaos rotate'; recycle margin into momentum shorts",
       "fill_id": "2026-10-29_SOL-USD_103"
+    },
+    {
+      "t": "2026-10-29T16:07:30-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE SUI-USD @ 0.9276 \u00b7 P&L $-985.96",
+      "reason": "CHAOS rotate: alt long fighting a broad 24h selloff (public stats red) \u2014 invalidation per plan 'or on chaos rotate'; recycle margin into momentum shorts",
+      "fill_id": "2026-10-29_SUI-USD_92"
     }
   ],
   "scanner_feed": [
@@ -4220,8 +4216,8 @@ window.__DESK_STATE__ = {
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 30497.14,
-  "exposure": 603393.42,
-  "buying_power": 323627.78,
-  "effective_leverage": 13.02
+  "margin_used": 27497.61,
+  "exposure": 544287.01,
+  "buying_power": 380698.59,
+  "effective_leverage": 11.77
 };
