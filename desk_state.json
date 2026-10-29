@@ -6,7 +6,7 @@
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
   "equity": 61125.39,
-  "cash": 10412.9,
+  "cash": 8162.98,
   "realized_pnl": -5596.97,
   "unrealized_pnl": 16722.36,
   "day_pnl": 12021.14,
@@ -175,9 +175,36 @@
       "mark_at": "2026-10-29T20:04:15-03:00",
       "unrealized_pnl": -57.56,
       "exposure": 60023.02
+    },
+    {
+      "id": "2026-10-29_UNI-USD_119",
+      "symbol": "UNI-USD",
+      "side": "short",
+      "size": 7076.0,
+      "entry": 6.3593,
+      "notional": 44998.41,
+      "stop": 6.6773,
+      "target": 5.8506,
+      "target2": 5.5962,
+      "invalidation": "exit on any trade through stop 6.6773, at target, or on chaos rotate",
+      "risk_usd": 2250.17,
+      "risk_pct_equity": 0.03681,
+      "opened_at": "2026-10-29T20:04:20-03:00",
+      "card": "CHAOS_UNI",
+      "reason": "CHAOS rotate UNI-USD: momentum short, selloff deepening \u2014 short (24h -12.19% from public stats open), notional $44,998 @ 20x paper (margin $2,250), stop 5.0% / tgt 8.0%/12.0%, risk $2,250 (3.7% eq; chaos cap 100%)",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-29T20:04:20-03:00 BRT (exch 2026-10-29T23:04:11.236158877Z) api.exchange.coinbase.com",
+      "override": null,
+      "paper_only": true,
+      "leverage": 20.0,
+      "margin": 2249.92,
+      "mark": 6.3593,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-10-29T20:04:17-03:00",
+      "unrealized_pnl": -0.0,
+      "exposure": 44998.41
     }
   ],
-  "open_count": 6,
+  "open_count": 7,
   "closed_positions": [
     {
       "type": "close",
@@ -1081,13 +1108,13 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-10-29T20:04:19-03:00",
-      "note": "last: paper fill NEAR-USD"
+      "last_run": "2026-10-29T20:04:20-03:00",
+      "note": "last: paper fill UNI-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-10-29T20:04:19-03:00",
-      "note": "logged 2026-10-29_NEAR-USD_118"
+      "last_run": "2026-10-29T20:04:20-03:00",
+      "note": "logged 2026-10-29_UNI-USD_119"
     },
     "Equity": {
       "status": "ready",
@@ -1875,17 +1902,14 @@
       "t": "2026-10-29T20:04:19-03:00",
       "equity": 61125.39,
       "kind": "fill"
+    },
+    {
+      "t": "2026-10-29T20:04:20-03:00",
+      "equity": 61125.39,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:41:18-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE ETH-USD @ 2353.76 \u00b7 P&L $-0.09",
-      "reason": "high-freq demo: flatten before aggressive rotate (owner-authorized t4u, public market mark)",
-      "fill_id": "2026-10-27_ETH-USD_10"
-    },
     {
       "t": "2026-10-27T23:41:18-03:00",
       "agent": "Executor",
@@ -3438,6 +3462,15 @@
       "kind": "check",
       "text": "UNI-USD PASS (chaos: non-blocking)",
       "reason": "vol $17.1M, spread 0.049%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
+    },
+    {
+      "t": "2026-10-29T20:04:20-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 7076 UNI-USD @ 6.3593 \u00b7 notional $44,998 (20x, margin $2,250) \u00b7 stop 6.6773 \u00b7 tgt 5.8506 \u00b7 risk $2,250.17",
+      "reason": "CHAOS rotate UNI-USD: momentum short, selloff deepening \u2014 short (24h -12.19% from public stats open), notional $44,998 @ 20x paper (margin $2,250), stop 5.0% / tgt 8.0%/12.0%, risk $2,250 (3.7% eq; chaos cap 100%)",
+      "fill_id": "2026-10-29_UNI-USD_119",
+      "card": "CHAOS_UNI"
     }
   ],
   "scanner_feed": [
@@ -4404,8 +4437,8 @@
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 33990.13,
-  "exposure": 663080.37,
-  "buying_power": 559427.43,
-  "effective_leverage": 10.85
+  "margin_used": 36240.05,
+  "exposure": 708078.78,
+  "buying_power": 514429.02,
+  "effective_leverage": 11.58
 }
