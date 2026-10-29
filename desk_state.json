@@ -1113,8 +1113,8 @@
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-10-29T20:04:20-03:00",
-      "note": "logged 2026-10-29_UNI-USD_119"
+      "last_run": "2026-10-29T20:04:29-03:00",
+      "note": "CHAOS: 20:00 cycle book \u00b7 eq $61,241 \u00b7 exposure $707,963 (11.56x)"
     },
     "Equity": {
       "status": "ready",
@@ -1915,14 +1915,6 @@
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:41:18-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE SOL-USD @ 101.51 \u00b7 P&L $-0.07",
-      "reason": "high-freq demo: flatten before aggressive rotate (owner-authorized t4u, public market mark)",
-      "fill_id": "2026-10-27_SOL-USD_11"
-    },
     {
       "t": "2026-10-27T23:41:20-03:00",
       "agent": "Logger",
@@ -3476,6 +3468,13 @@
       "reason": "CHAOS rotate UNI-USD: momentum short, selloff deepening \u2014 short (24h -12.19% from public stats open), notional $44,998 @ 20x paper (margin $2,250), stop 5.0% / tgt 8.0%/12.0%, risk $2,250 (3.7% eq; chaos cap 100%)",
       "fill_id": "2026-10-29_UNI-USD_119",
       "card": "CHAOS_UNI"
+    },
+    {
+      "t": "2026-10-29T20:04:29-03:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 20:00 cycle book \u00b7 eq $61,241 \u00b7 exposure $707,963 (11.56x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
