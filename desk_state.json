@@ -1027,8 +1027,8 @@
     },
     "Rug Check": {
       "status": "idle",
-      "last_run": "2026-10-29T16:07:43-03:00",
-      "note": "HBAR-USD PASS (chaos: non-blocking)"
+      "last_run": "2026-10-29T20:04:09-03:00",
+      "note": "14 watchlist names SOFT-WARN on 24h vol < $5M (non-blocking under chaos v2.0)"
     },
     "Sizer": {
       "status": "ready",
@@ -1814,14 +1814,6 @@
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:33:39-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE LTC-USD @ 57.389 \u00b7 P&L $+0.14",
-      "reason": "session rotate cycle: free slot/cash to rotate into deeper-liquidity ETH/SOL for paper demo (owner-approved)",
-      "fill_id": "2026-10-27_LTC-USD_07"
-    },
     {
       "t": "2026-10-27T23:33:51-03:00",
       "agent": "Rug Check",
@@ -3375,6 +3367,13 @@
       "kind": "scan",
       "text": "CHAOS cycle 20:00 BRT: 30/30 public marks; selloff deepening (30/30 red on 24h; NEAR \u221213.8%, TIA \u221212.3%, PEPE \u221212.0%, UNI \u221211.6%, BTC \u22123.2%)",
       "reason": "scheduled scanner run; scan file scans/2026-10-29_2003_scan.md"
+    },
+    {
+      "t": "2026-10-29T20:04:09-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "14 watchlist names SOFT-WARN on 24h vol < $5M (non-blocking under chaos v2.0)",
+      "reason": "all open/new names are liquid Coinbase majors (vol \u2265 $5M); no hard blocks"
     }
   ],
   "scanner_feed": [
