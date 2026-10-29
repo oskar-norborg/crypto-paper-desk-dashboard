@@ -1021,8 +1021,8 @@ window.__DESK_STATE__ = {
     },
     "Rug Check": {
       "status": "idle",
-      "last_run": "2026-10-29T16:07:42-03:00",
-      "note": "LTC-USD PASS (chaos: non-blocking)"
+      "last_run": "2026-10-29T16:07:43-03:00",
+      "note": "HBAR-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -1783,13 +1783,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:33:32-03:00",
-      "agent": "Sizer",
-      "kind": "size",
-      "text": "XRP size 245 \u00b7 risk $8.31 \u00b7 notional $326.81",
-      "reason": "cash-bound sizing (~1/3 of cash per slot for full 3-slot book); risk well under 2% cap; stop 1.300 is 2.54% from entry 1.3339"
-    },
     {
       "t": "2026-10-27T23:33:32-03:00",
       "agent": "Executor",
@@ -3345,6 +3338,13 @@ window.__DESK_STATE__ = {
       "reason": "CHAOS rotate LTC-USD: momentum short into broad selloff \u2014 short (24h -3.32% from public stats open), notional $69,946 @ 20x paper (margin $3,497), stop 3.0% / tgt 6.0%/10.0%, risk $2,099 (4.5% eq; chaos cap 100%)",
       "fill_id": "2026-10-29_LTC-USD_112",
       "card": "CHAOS_LTC"
+    },
+    {
+      "t": "2026-10-29T16:07:43-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "HBAR-USD PASS (chaos: non-blocking)",
+      "reason": "vol $5.5M, spread 0.041%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
     }
   ],
   "scanner_feed": [
@@ -4296,7 +4296,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-10-29T16:07:42-03:00",
+  "updated_at": "2026-10-29T16:07:43-03:00",
   "timezone_note": "All timestamps America/Sao_Paulo (UTC-03:00); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
