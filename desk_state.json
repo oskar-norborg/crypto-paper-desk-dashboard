@@ -1173,8 +1173,8 @@
     },
     "Rug Check": {
       "status": "idle",
-      "last_run": "2026-10-30T08:08:36-03:00",
-      "note": "AAVE-USD PASS (chaos: non-blocking)"
+      "last_run": "2026-10-30T12:07:15-03:00",
+      "note": "12 watchlist names SOFT-WARN on 24h vol < $5M \u2014 non-blocking under chaos v2.0"
     },
     "Sizer": {
       "status": "ready",
@@ -2065,15 +2065,6 @@
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:42:37-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 19.32 INJ-USD @ 7.952 \u00b7 stop 7.9202 \u00b7 tgt 8.0156 \u00b7 risk $0.61",
-      "reason": "HF demo batch 2: rotate into INJ-USD (demo-loosened vol gate) \u2014 tight 0.4% stop / 0.8% tgt for fast turnover; owner-authorized demo limits",
-      "fill_id": "2026-10-27_INJ-USD_35",
-      "card": "HF_INJ"
-    },
     {
       "t": "2026-10-27T23:42:39-03:00",
       "agent": "Logger",
@@ -3608,6 +3599,13 @@
       "kind": "scan",
       "text": "CHAOS cycle 12:00 BRT: 30/30 public marks; selloff deepening (28/30 red on 24h; TIA \u221216.8%, INJ \u221212.2%, APT \u221210.4%, SOL \u22127.7%, AVAX \u22127.5%; BCH/POL flat-green)",
       "reason": "scheduled scanner run; scan file scans/2026-10-30_1207_scan.md"
+    },
+    {
+      "t": "2026-10-30T12:07:15-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "12 watchlist names SOFT-WARN on 24h vol < $5M \u2014 non-blocking under chaos v2.0",
+      "reason": "all new names are Coinbase majors with vol \u2265 $5M; no hard blocks"
     }
   ],
   "scanner_feed": [
