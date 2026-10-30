@@ -1282,7 +1282,7 @@ window.__DESK_STATE__ = {
     },
     "Rug Check": {
       "status": "idle",
-      "last_run": "2026-10-30T14:16:07-03:00",
+      "last_run": "2026-10-30T16:16:47-03:00",
       "note": "12 watchlist names SOFT-WARN on 24h vol < $5M \u2014 skipped for new opens"
     },
     "Sizer": {
@@ -2214,15 +2214,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:49:13-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 4.245 ETH-USD @ 2355.31 \u00b7 stop 2308.2 \u00b7 tgt 2426 \u00b7 risk $199.98",
-      "reason": "v1.1 batch 1 open ETH-USD: top-liquidity PASS name, momentum-neutral demo entry at public mark \u2014 notional $9,998, stop \u22122.0% / tgt +3.0%/+4.0%, risk $200 (0.40% eq, cap 5%); no leverage",
-      "fill_id": "2026-10-27_ETH-USD_44",
-      "card": "V11_ETH"
-    },
     {
       "t": "2026-10-27T23:49:14-03:00",
       "agent": "Rug Check",
@@ -3754,6 +3745,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS cycle 16:00 BRT: 30/30 public marks; selloff re-deepening (28/30 red on 24h: BTC \u22125.5% vs \u22124.6%, ETH \u22124.6%, DOGE \u22125.7%; TIA \u221216.4%, INJ \u221212.5%; OP/POL green)",
       "reason": "scheduled scanner run; scan file scans/2026-10-30_1616_scan.md"
+    },
+    {
+      "t": "2026-10-30T16:16:47-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "12 watchlist names SOFT-WARN on 24h vol < $5M \u2014 skipped for new opens",
+      "reason": "race-mode discipline: new opens only on liquid CEX names with vol \u2265 $5M and tight spreads"
     }
   ],
   "scanner_feed": [
