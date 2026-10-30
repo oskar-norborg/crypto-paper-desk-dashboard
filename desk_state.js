@@ -6,12 +6,12 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 57071.52,
-  "cash": 9327.64,
+  "equity": 57167.78,
+  "cash": 6328.37,
   "realized_pnl": 2319.53,
-  "unrealized_pnl": 4751.99,
-  "day_pnl": 2697.08,
-  "day_pnl_pct": 0.0496,
+  "unrealized_pnl": 4848.25,
+  "day_pnl": 2793.34,
+  "day_pnl_pct": 0.05137,
   "day_baseline_date": "2026-10-30",
   "day_baseline_equity": 54374.44,
   "open_positions": [
@@ -230,9 +230,36 @@ window.__DESK_STATE__ = {
       "mark_at": "2026-10-30T12:06:49-03:00",
       "unrealized_pnl": 64.76,
       "exposure": 59928.29
+    },
+    {
+      "id": "2026-10-30_ADA-USD_133",
+      "symbol": "ADA-USD",
+      "side": "short",
+      "size": 310500.0,
+      "entry": 0.19319,
+      "notional": 59985.5,
+      "stop": 0.20092,
+      "target": 0.17773,
+      "target2": 0.17001,
+      "invalidation": "exit on any trade through stop 0.20092, at target, or on chaos rotate",
+      "risk_usd": 2400.16,
+      "risk_pct_equity": 0.04206,
+      "opened_at": "2026-10-30T12:07:16-03:00",
+      "card": "CHAOS_ADA",
+      "reason": "CHAOS rotate ADA-USD: momentum short add, broad selloff deepening \u2014 short (24h -6.35% from public stats open), notional $59,985 @ 20x paper (margin $2,999), stop 4.0% / tgt 8.0%/12.0%, risk $2,400 (4.2% eq; chaos cap 100%)",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-30T12:07:16-03:00 BRT (exch 2026-10-30T15:07:15.949924818Z) api.exchange.coinbase.com",
+      "override": null,
+      "paper_only": true,
+      "leverage": 20.0,
+      "margin": 2999.27,
+      "mark": 0.19288,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-10-30T12:06:49-03:00",
+      "unrealized_pnl": 96.26,
+      "exposure": 59889.24
     }
   ],
-  "open_count": 8,
+  "open_count": 9,
   "closed_positions": [
     {
       "type": "close",
@@ -1183,7 +1210,7 @@ window.__DESK_STATE__ = {
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 57071.52,
+  "max_risk_usd": 57167.78,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -543744.4,
   "paused": false,
@@ -1239,12 +1266,12 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-10-30T12:07:16-03:00",
-      "note": "last: paper fill AVAX-USD"
+      "note": "last: paper fill ADA-USD"
     },
     "Logger": {
       "status": "ready",
       "last_run": "2026-10-30T12:07:16-03:00",
-      "note": "logged 2026-10-30_AVAX-USD_132"
+      "note": "logged 2026-10-30_ADA-USD_133"
     },
     "Equity": {
       "status": "ready",
@@ -2127,17 +2154,14 @@ window.__DESK_STATE__ = {
       "t": "2026-10-30T12:07:16-03:00",
       "equity": 57071.52,
       "kind": "fill"
+    },
+    {
+      "t": "2026-10-30T12:07:16-03:00",
+      "equity": 57167.78,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:47:49-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE ADA-USD @ 0.20637 \u00b7 P&L $+0.16",
-      "reason": "capital reset: flatten before raising paper equity to $50,000",
-      "fill_id": "2026-10-27_ADA-USD_31"
-    },
     {
       "t": "2026-10-27T23:47:49-03:00",
       "agent": "Executor",
@@ -3671,6 +3695,15 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "ADA-USD PASS (chaos: non-blocking)",
       "reason": "vol $15.4M, spread 0.021%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
+    },
+    {
+      "t": "2026-10-30T12:07:16-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 310500 ADA-USD @ 0.19319 \u00b7 notional $59,985 (20x, margin $2,999) \u00b7 stop 0.20092 \u00b7 tgt 0.17773 \u00b7 risk $2,400.16",
+      "reason": "CHAOS rotate ADA-USD: momentum short add, broad selloff deepening \u2014 short (24h -6.35% from public stats open), notional $59,985 @ 20x paper (margin $2,999), stop 4.0% / tgt 8.0%/12.0%, risk $2,400 (4.2% eq; chaos cap 100%)",
+      "fill_id": "2026-10-30_ADA-USD_133",
+      "card": "CHAOS_ADA"
     }
   ],
   "scanner_feed": [
@@ -4637,8 +4670,8 @@ window.__DESK_STATE__ = {
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 42991.89,
-  "exposure": 855086.05,
-  "buying_power": 286344.35,
-  "effective_leverage": 14.98
+  "margin_used": 45991.16,
+  "exposure": 914975.29,
+  "buying_power": 228380.31,
+  "effective_leverage": 16.01
 };
