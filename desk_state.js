@@ -1282,8 +1282,8 @@ window.__DESK_STATE__ = {
     },
     "Rug Check": {
       "status": "idle",
-      "last_run": "2026-10-30T16:16:47-03:00",
-      "note": "12 watchlist names SOFT-WARN on 24h vol < $5M \u2014 skipped for new opens"
+      "last_run": "2026-10-30T18:21:35-03:00",
+      "note": "12 watchlist names SOFT-WARN on 24h vol < $5M (OP, DOT, ICP, ARB, FIL, TIA, APT, SEI, ATOM, SHIB, POL, ETC) \u2014 skipped fo"
     },
     "Sizer": {
       "status": "ready",
@@ -2224,13 +2224,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:49:15-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "NEAR-USD PASS",
-      "reason": "Coinbase NEAR-USD status online; 24h vol $22.0M \u2265 $5M; spread 0.066% \u2264 0.25%; \u00b11% depth $527,377 \u2265 max($25k, 50\u00d7 notional $4,500); long-listed CEX major"
-    },
     {
       "t": "2026-10-27T23:49:15-03:00",
       "agent": "Executor",
@@ -3758,6 +3751,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS cycle 18:20 BRT: 30/30 public marks; selloff easing (24h BTC \u22122.9%, ETH \u22121.4%; 17/30 green, UNI +9.1%, OP +14.0%)",
       "reason": "scheduled scanner run; scan file scans/2026-10-30_1821_scan.md"
+    },
+    {
+      "t": "2026-10-30T18:21:35-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "12 watchlist names SOFT-WARN on 24h vol < $5M (OP, DOT, ICP, ARB, FIL, TIA, APT, SEI, ATOM, SHIB, POL, ETC) \u2014 skipped for new opens",
+      "reason": "tightened chaos discipline: new opens only liquid CEX names \u2265 $5M vol; all 10 open names PASS"
     }
   ],
   "scanner_feed": [
