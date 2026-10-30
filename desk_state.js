@@ -1292,8 +1292,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-10-30T12:07:17-03:00",
-      "note": "last: paper fill SUI-USD"
+      "last_run": "2026-10-30T14:16:07-03:00",
+      "note": "HOLD: no new opens this cycle; keep 10 shorts"
     },
     "Logger": {
       "status": "ready",
@@ -2204,13 +2204,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:49:13-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "BTC-USD PASS",
-      "reason": "Coinbase BTC-USD status online; 24h vol $355.1M \u2265 $5M; spread 0.000% \u2264 0.25%; \u00b11% depth $15,462,818 \u2265 max($25k, 50\u00d7 notional $12,000); long-listed CEX major"
-    },
     {
       "t": "2026-10-27T23:49:13-03:00",
       "agent": "Executor",
@@ -3746,6 +3739,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "No stop or target touched on any of the 10 shorts since entry",
       "reason": "stop/target check vs Coinbase public 5m candles since each entry; all 10 held (BTC low 76301 vs tgt 75530 closest)"
+    },
+    {
+      "t": "2026-10-30T14:16:07-03:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "HOLD: no new opens this cycle; keep 10 shorts",
+      "reason": "free cash $3,329 is the stop-funding buffer (margin-limited, not exposure-limited); selloff momentum fading from 12:00 lows, no fresh high-conviction edge on a liquid name"
     }
   ],
   "scanner_feed": [
