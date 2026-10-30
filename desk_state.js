@@ -1229,7 +1229,7 @@ window.__DESK_STATE__ = {
     "Rug Check": {
       "status": "idle",
       "last_run": "2026-10-30T12:07:16-03:00",
-      "note": "AVAX-USD PASS (chaos: non-blocking)"
+      "note": "ADA-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -2130,13 +2130,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:43:36-03:00",
-      "agent": "Equity",
-      "kind": "override",
-      "text": "NORMAL LIMITS RESTORED \u2014 RISK_RULES v1.0: max_open 3, 2% risk/trade, \u22123% daily pause (was {'max_open': 10, 'max_risk_pct': 0.1, 'daily_loss_pause_pct': -1.0})",
-      "reason": "high-freq paper demo ended; limits restored from reviews/demo_limits_backup_2026-10-27.json; book wound down to 3 opens first so restored rules are consistent"
-    },
     {
       "t": "2026-10-27T23:47:49-03:00",
       "agent": "Executor",
@@ -3671,6 +3664,13 @@ window.__DESK_STATE__ = {
       "reason": "CHAOS rotate AVAX-USD: momentum short add, broad selloff deepening \u2014 short (24h -7.37% from public stats open), notional $59,993 @ 20x paper (margin $3,000), stop 4.0% / tgt 8.0%/12.0%, risk $2,400 (4.2% eq; chaos cap 100%)",
       "fill_id": "2026-10-30_AVAX-USD_132",
       "card": "CHAOS_AVAX"
+    },
+    {
+      "t": "2026-10-30T12:07:16-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "ADA-USD PASS (chaos: non-blocking)",
+      "reason": "vol $15.4M, spread 0.021%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
     }
   ],
   "scanner_feed": [
