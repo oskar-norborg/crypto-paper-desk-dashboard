@@ -1297,8 +1297,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-10-30T12:07:17-03:00",
-      "note": "logged 2026-10-30_SUI-USD_134"
+      "last_run": "2026-10-30T12:07:20-03:00",
+      "note": "CHAOS: 12:00 cycle book \u00b7 eq $56,010 \u00b7 exposure $976,131 (17.43x)"
     },
     "Equity": {
       "status": "ready",
@@ -2199,13 +2199,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:47:52-03:00",
-      "agent": "Equity",
-      "kind": "reset",
-      "text": "PAPER EQUITY RESET \u2192 $50,000.00 (v1.0 book flattened at public marks; prior equity $998.55, realized $-1.45)",
-      "reason": "owner-authorized permanent capital raise (Oskar, t5u); realized/unrealized/day P&L zeroed for a clean $50k start; history kept in closed_positions + history_note"
-    },
     {
       "t": "2026-10-27T23:47:52-03:00",
       "agent": "Logger",
@@ -3741,6 +3734,13 @@ window.__DESK_STATE__ = {
       "reason": "CHAOS rotate SUI-USD: momentum short add, broad selloff deepening \u2014 short (24h -5.74% from public stats open), notional $59,997 @ 20x paper (margin $3,000), stop 4.0% / tgt 8.0%/12.0%, risk $2,400 (4.2% eq; chaos cap 100%)",
       "fill_id": "2026-10-30_SUI-USD_134",
       "card": "CHAOS_SUI"
+    },
+    {
+      "t": "2026-10-30T12:07:20-03:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 12:00 cycle book \u00b7 eq $56,010 \u00b7 exposure $976,131 (17.43x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
