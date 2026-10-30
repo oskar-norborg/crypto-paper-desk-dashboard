@@ -6,12 +6,12 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 57006.76,
-  "cash": 12327.29,
+  "equity": 57071.52,
+  "cash": 9327.64,
   "realized_pnl": 2319.53,
-  "unrealized_pnl": 4687.23,
-  "day_pnl": 2632.32,
-  "day_pnl_pct": 0.04841,
+  "unrealized_pnl": 4751.99,
+  "day_pnl": 2697.08,
+  "day_pnl_pct": 0.0496,
   "day_baseline_date": "2026-10-30",
   "day_baseline_equity": 54374.44,
   "open_positions": [
@@ -203,9 +203,36 @@ window.__DESK_STATE__ = {
       "mark_at": "2026-10-30T12:06:50-03:00",
       "unrealized_pnl": 7.34,
       "exposure": 79968.82
+    },
+    {
+      "id": "2026-10-30_AVAX-USD_132",
+      "symbol": "AVAX-USD",
+      "side": "short",
+      "size": 7196.0,
+      "entry": 8.337,
+      "notional": 59993.05,
+      "stop": 8.6705,
+      "target": 7.67,
+      "target2": 7.3366,
+      "invalidation": "exit on any trade through stop 8.6705, at target, or on chaos rotate",
+      "risk_usd": 2399.87,
+      "risk_pct_equity": 0.0421,
+      "opened_at": "2026-10-30T12:07:16-03:00",
+      "card": "CHAOS_AVAX",
+      "reason": "CHAOS rotate AVAX-USD: momentum short add, broad selloff deepening \u2014 short (24h -7.37% from public stats open), notional $59,993 @ 20x paper (margin $3,000), stop 4.0% / tgt 8.0%/12.0%, risk $2,400 (4.2% eq; chaos cap 100%)",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-30T12:07:16-03:00 BRT (exch 2026-10-30T15:07:15.181279491Z) api.exchange.coinbase.com",
+      "override": null,
+      "paper_only": true,
+      "leverage": 20.0,
+      "margin": 2999.65,
+      "mark": 8.328,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-10-30T12:06:49-03:00",
+      "unrealized_pnl": 64.76,
+      "exposure": 59928.29
     }
   ],
-  "open_count": 7,
+  "open_count": 8,
   "closed_positions": [
     {
       "type": "close",
@@ -1156,7 +1183,7 @@ window.__DESK_STATE__ = {
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 57006.76,
+  "max_risk_usd": 57071.52,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -543744.4,
   "paused": false,
@@ -1212,12 +1239,12 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-10-30T12:07:16-03:00",
-      "note": "last: paper fill NEAR-USD"
+      "note": "last: paper fill AVAX-USD"
     },
     "Logger": {
       "status": "ready",
       "last_run": "2026-10-30T12:07:16-03:00",
-      "note": "logged 2026-10-30_NEAR-USD_131"
+      "note": "logged 2026-10-30_AVAX-USD_132"
     },
     "Equity": {
       "status": "ready",
@@ -2095,16 +2122,14 @@ window.__DESK_STATE__ = {
       "t": "2026-10-30T12:07:16-03:00",
       "equity": 57006.76,
       "kind": "fill"
+    },
+    {
+      "t": "2026-10-30T12:07:16-03:00",
+      "equity": 57071.52,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:42:49-03:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "HF demo batch 2 churn + wind-down (\u22643 opens) complete",
-      "reason": "high-freq paper demo batch checkpoint; marks refreshed, dashboard synced"
-    },
     {
       "t": "2026-10-27T23:43:36-03:00",
       "agent": "Equity",
@@ -3637,6 +3662,15 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "AVAX-USD PASS (chaos: non-blocking)",
       "reason": "vol $8.5M, spread 0.048%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
+    },
+    {
+      "t": "2026-10-30T12:07:16-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 7196 AVAX-USD @ 8.337 \u00b7 notional $59,993 (20x, margin $3,000) \u00b7 stop 8.6705 \u00b7 tgt 7.67 \u00b7 risk $2,399.87",
+      "reason": "CHAOS rotate AVAX-USD: momentum short add, broad selloff deepening \u2014 short (24h -7.37% from public stats open), notional $59,993 @ 20x paper (margin $3,000), stop 4.0% / tgt 8.0%/12.0%, risk $2,400 (4.2% eq; chaos cap 100%)",
+      "fill_id": "2026-10-30_AVAX-USD_132",
+      "card": "CHAOS_AVAX"
     }
   ],
   "scanner_feed": [
@@ -4603,8 +4637,8 @@ window.__DESK_STATE__ = {
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 39992.24,
-  "exposure": 795157.76,
-  "buying_power": 344977.44,
-  "effective_leverage": 13.95
+  "margin_used": 42991.89,
+  "exposure": 855086.05,
+  "buying_power": 286344.35,
+  "effective_leverage": 14.98
 };
