@@ -1302,7 +1302,7 @@ window.__DESK_STATE__ = {
     },
     "Equity": {
       "status": "ready",
-      "last_run": "2026-10-30T16:16:13-03:00",
+      "last_run": "2026-10-30T16:16:47-03:00",
       "note": "equity $66069.66 \u00b7 day +11695.22"
     }
   },
