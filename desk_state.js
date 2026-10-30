@@ -1282,8 +1282,8 @@ window.__DESK_STATE__ = {
     },
     "Rug Check": {
       "status": "idle",
-      "last_run": "2026-10-30T12:07:17-03:00",
-      "note": "SUI-USD PASS (chaos: non-blocking)"
+      "last_run": "2026-10-30T14:16:07-03:00",
+      "note": "12 watchlist names SOFT-WARN on 24h vol < $5M \u2014 skipped for new opens"
     },
     "Sizer": {
       "status": "ready",
@@ -2204,13 +2204,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:47:52-03:00",
-      "agent": "Scanner",
-      "kind": "watchlist",
-      "text": "watchlist expanded to 30 Coinbase USD products",
-      "reason": "kept only products whose public ticker fetched OK (30/30)"
-    },
     {
       "t": "2026-10-27T23:49:13-03:00",
       "agent": "Executor",
@@ -3746,6 +3739,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS cycle 14:00 BRT: 30/30 public marks; selloff easing (28/30 red on 24h but drawdowns shrinking: BTC \u22124.6% vs \u22125.4%, ETH \u22124.2% vs \u22125.3%; TIA \u221217%, INJ \u221210.9%; XLM/BCH flat)",
       "reason": "scheduled scanner run; scan file scans/2026-10-30_1415_scan.md"
+    },
+    {
+      "t": "2026-10-30T14:16:07-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "12 watchlist names SOFT-WARN on 24h vol < $5M \u2014 skipped for new opens",
+      "reason": "race-mode discipline: new opens only on liquid CEX names with vol \u2265 $5M and tight spreads"
     }
   ],
   "scanner_feed": [
