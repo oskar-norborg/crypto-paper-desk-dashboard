@@ -1201,7 +1201,7 @@
     "Rug Check": {
       "status": "idle",
       "last_run": "2026-10-30T12:07:16-03:00",
-      "note": "NEAR-USD PASS (chaos: non-blocking)"
+      "note": "AVAX-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -2097,14 +2097,6 @@
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:42:48-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE NEAR-USD @ 4.7084 \u00b7 P&L $-0.19",
-      "reason": "high-freq demo: tight stop/target simulation at market mark + demo wind-down to \u22643 opens before restoring normal limits",
-      "fill_id": "2026-10-27_NEAR-USD_19"
-    },
     {
       "t": "2026-10-27T23:42:49-03:00",
       "agent": "Logger",
@@ -3637,6 +3629,13 @@
       "reason": "CHAOS rotate NEAR-USD: momentum short add, broad selloff deepening \u2014 short (24h -6.32% from public stats open), notional $79,976 @ 20x paper (margin $3,999), stop 4.0% / tgt 8.0%/12.0%, risk $3,198 (5.6% eq; chaos cap 100%)",
       "fill_id": "2026-10-30_NEAR-USD_131",
       "card": "CHAOS_NEAR"
+    },
+    {
+      "t": "2026-10-30T12:07:16-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "AVAX-USD PASS (chaos: non-blocking)",
+      "reason": "vol $8.5M, spread 0.048%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
     }
   ],
   "scanner_feed": [
