@@ -1184,8 +1184,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-10-30T08:08:36-03:00",
-      "note": "last: paper fill AAVE-USD"
+      "last_run": "2026-10-30T12:07:15-03:00",
+      "note": "CHAOS rotate: add 20x momentum shorts NEAR, AVAX, ADA, SUI using free margin; keep 6 existing shorts"
     },
     "Logger": {
       "status": "ready",
@@ -2066,14 +2066,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:42:47-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE INJ-USD @ 7.952 \u00b7 P&L $+0.00",
-      "reason": "high-freq demo: tight stop/target simulation at market mark + demo wind-down to \u22643 opens before restoring normal limits",
-      "fill_id": "2026-10-27_INJ-USD_35"
-    },
     {
       "t": "2026-10-27T23:42:47-03:00",
       "agent": "Executor",
@@ -3607,6 +3599,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "No stop or target touched on BTC/ETH/SOL/XRP/LINK/AAVE shorts since entry",
       "reason": "stop/target check vs Coinbase public 5m candles since entry; all 6 held"
+    },
+    {
+      "t": "2026-10-30T12:07:15-03:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "CHAOS rotate: add 20x momentum shorts NEAR, AVAX, ADA, SUI using free margin; keep 6 existing shorts",
+      "reason": "28/30 red on 24h public stats; liquid majors (vol \u2265 $5M) only; leave ~$3k cash buffer"
     }
   ],
   "scanner_feed": [
