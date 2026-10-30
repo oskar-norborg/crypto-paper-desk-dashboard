@@ -2067,13 +2067,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-10-27T23:42:39-03:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "HF demo batch 2 (5 opens) complete",
-      "reason": "high-freq paper demo batch checkpoint; marks refreshed, dashboard synced"
-    },
-    {
       "t": "2026-10-27T23:42:47-03:00",
       "agent": "Executor",
       "kind": "close",
@@ -3607,6 +3600,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "12 watchlist names SOFT-WARN on 24h vol < $5M \u2014 non-blocking under chaos v2.0",
       "reason": "all new names are Coinbase majors with vol \u2265 $5M; no hard blocks"
+    },
+    {
+      "t": "2026-10-30T12:07:15-03:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "No stop or target touched on BTC/ETH/SOL/XRP/LINK/AAVE shorts since entry",
+      "reason": "stop/target check vs Coinbase public 5m candles since entry; all 6 held"
     }
   ],
   "scanner_feed": [
