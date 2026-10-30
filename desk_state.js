@@ -1272,8 +1272,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-10-30T20:14:30-03:00",
-      "note": "last: closed AAVE-USD"
+      "last_run": "2026-10-30T20:14:53-03:00",
+      "note": "HOLD 8 shorts, no new opens"
     },
     "Logger": {
       "status": "ready",
@@ -2219,15 +2219,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:49:16-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 23320 XLM-USD @ 0.171516 \u00b7 stop 0.16894 \u00b7 tgt 0.1758 \u00b7 risk $60.07",
-      "reason": "v1.1 batch 1 open XLM-USD: top-liquidity PASS name, momentum-neutral demo entry at public mark \u2014 notional $4,000, stop \u22121.5% / tgt +2.5%/+3.5%, risk $60 (0.12% eq, cap 5%); no leverage",
-      "fill_id": "2026-10-27_XLM-USD_49",
-      "card": "V11_XLM"
-    },
     {
       "t": "2026-10-27T23:49:19-03:00",
       "agent": "Logger",
@@ -3751,6 +3742,13 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE AAVE-USD @ 128.43 \u00b7 P&L $-1147.40",
       "reason": "CHAOS rotate: short fighting strong alt bounce (24h +7.7% public stats) \u2014 momentum-short thesis invalidated by relative strength; invalidation per plan 'or on chaos rotate'; cut before stop 131.06",
       "fill_id": "2026-10-30_AAVE-USD_130"
+    },
+    {
+      "t": "2026-10-30T20:14:53-03:00",
+      "agent": "Executor",
+      "kind": "hold",
+      "text": "HOLD 8 shorts, no new opens",
+      "reason": "no stops/targets touched (5m candles); cut LINK/AAVE shorts on +7% bounce; no high-conviction edge in mixed regime"
     }
   ],
   "scanner_feed": [
@@ -4456,7 +4454,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-10-30T20:14:30-03:00",
+  "updated_at": "2026-10-30T20:14:53-03:00",
   "timezone_note": "All timestamps America/Sao_Paulo (UTC-03:00); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
