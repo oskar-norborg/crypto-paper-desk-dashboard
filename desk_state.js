@@ -1174,8 +1174,8 @@ window.__DESK_STATE__ = {
     },
     "Rug Check": {
       "status": "idle",
-      "last_run": "2026-10-30T12:07:15-03:00",
-      "note": "12 watchlist names SOFT-WARN on 24h vol < $5M \u2014 non-blocking under chaos v2.0"
+      "last_run": "2026-10-30T12:07:16-03:00",
+      "note": "NEAR-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -2066,14 +2066,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:42:47-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE DOGE-USD @ 0.07896 \u00b7 P&L $-0.04",
-      "reason": "high-freq demo: tight stop/target simulation at market mark + demo wind-down to \u22643 opens before restoring normal limits",
-      "fill_id": "2026-10-27_DOGE-USD_32"
-    },
     {
       "t": "2026-10-27T23:42:48-03:00",
       "agent": "Executor",
@@ -3606,6 +3598,13 @@ window.__DESK_STATE__ = {
       "kind": "plan",
       "text": "CHAOS rotate: add 20x momentum shorts NEAR, AVAX, ADA, SUI using free margin; keep 6 existing shorts",
       "reason": "28/30 red on 24h public stats; liquid majors (vol \u2265 $5M) only; leave ~$3k cash buffer"
+    },
+    {
+      "t": "2026-10-30T12:07:16-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "NEAR-USD PASS (chaos: non-blocking)",
+      "reason": "vol $67.2M, spread 0.055%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
     }
   ],
   "scanner_feed": [
@@ -4557,7 +4556,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-10-30T12:07:15-03:00",
+  "updated_at": "2026-10-30T12:07:16-03:00",
   "timezone_note": "All timestamps America/Sao_Paulo (UTC-03:00); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
