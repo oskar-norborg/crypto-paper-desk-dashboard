@@ -1292,7 +1292,7 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-10-30T16:16:47-03:00",
+      "last_run": "2026-10-30T18:21:35-03:00",
       "note": "HOLD: no new opens this cycle; keep 10 shorts"
     },
     "Logger": {
@@ -2224,13 +2224,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:49:15-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "SUI-USD PASS",
-      "reason": "Coinbase SUI-USD status online; 24h vol $7.6M \u2265 $5M; spread 0.021% \u2264 0.25%; \u00b11% depth $519,817 \u2265 max($25k, 50\u00d7 notional $4,500); long-listed CEX major"
-    },
     {
       "t": "2026-10-27T23:49:15-03:00",
       "agent": "Executor",
@@ -3756,6 +3749,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "No stop or target touched on any of the 10 shorts since entry",
       "reason": "Coinbase public 5m candles since each entry; closest to target: BTC low 76141 vs tgt 75530; closest to stop: NEAR high 4.4236 vs stop 4.5302"
+    },
+    {
+      "t": "2026-10-30T18:21:35-03:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "HOLD: no new opens this cycle; keep 10 shorts",
+      "reason": "book ~16.5x effective with free cash $3,329 as stop-funding buffer (margin-limited); selloff bouncing (alts turning green on 24h), no fresh short edge"
     }
   ],
   "scanner_feed": [
