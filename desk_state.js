@@ -2206,13 +2206,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-10-27T23:49:13-03:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "v1.1 batch 1: 7 paper longs across Rug-Check-PASS names",
-      "reason": "high-turnover demo under permanent v1.1 limits (owner t5u); sizes by cash+depth, risk well under 5% cap"
-    },
-    {
-      "t": "2026-10-27T23:49:13-03:00",
       "agent": "Rug Check",
       "kind": "check",
       "text": "BTC-USD PASS",
@@ -3746,6 +3739,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "12 watchlist names SOFT-WARN on 24h vol < $5M \u2014 skipped for new opens",
       "reason": "race-mode discipline: new opens only on liquid CEX names with vol \u2265 $5M and tight spreads"
+    },
+    {
+      "t": "2026-10-30T14:16:07-03:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "No stop or target touched on any of the 10 shorts since entry",
+      "reason": "stop/target check vs Coinbase public 5m candles since each entry; all 10 held (BTC low 76301 vs tgt 75530 closest)"
     }
   ],
   "scanner_feed": [
