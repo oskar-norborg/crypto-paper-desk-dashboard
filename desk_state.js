@@ -2216,13 +2216,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-10-27T23:49:14-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "XRP-USD PASS",
-      "reason": "Coinbase XRP-USD status online; 24h vol $62.1M \u2265 $5M; spread 0.007% \u2264 0.25%; \u00b11% depth $4,721,337 \u2265 max($25k, 50\u00d7 notional $8,000); long-listed CEX major"
-    },
-    {
-      "t": "2026-10-27T23:49:14-03:00",
       "agent": "Executor",
       "kind": "fill",
       "text": "PAPER FILL long 6000 XRP-USD @ 1.3332 \u00b7 stop 1.3065 \u00b7 tgt 1.3732 \u00b7 risk $160.20",
@@ -3752,6 +3745,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "12 watchlist names SOFT-WARN on 24h vol < $5M \u2014 skipped for new opens",
       "reason": "race-mode discipline: new opens only on liquid CEX names with vol \u2265 $5M and tight spreads"
+    },
+    {
+      "t": "2026-10-30T16:16:47-03:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "No stop or target touched on any of the 10 shorts since entry",
+      "reason": "stop/target check vs Coinbase public 5m candles since each entry; closest: BTC low 76141 vs tgt 75530, LINK low 10.872 vs tgt 10.195"
     }
   ],
   "scanner_feed": [
