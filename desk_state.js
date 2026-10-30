@@ -2226,15 +2226,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-10-27T23:49:15-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 955.2 NEAR-USD @ 4.711 \u00b7 stop 4.6403 \u00b7 tgt 4.8288 \u00b7 risk $67.53",
-      "reason": "v1.1 batch 1 open NEAR-USD: top-liquidity PASS name, momentum-neutral demo entry at public mark \u2014 notional $4,500, stop \u22121.5% / tgt +2.5%/+3.5%, risk $68 (0.14% eq, cap 5%); no leverage",
-      "fill_id": "2026-10-27_NEAR-USD_47",
-      "card": "V11_NEAR"
-    },
-    {
-      "t": "2026-10-27T23:49:15-03:00",
       "agent": "Rug Check",
       "kind": "check",
       "text": "SUI-USD PASS",
@@ -3758,6 +3749,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "12 watchlist names SOFT-WARN on 24h vol < $5M (OP, DOT, ICP, ARB, FIL, TIA, APT, SEI, ATOM, SHIB, POL, ETC) \u2014 skipped for new opens",
       "reason": "tightened chaos discipline: new opens only liquid CEX names \u2265 $5M vol; all 10 open names PASS"
+    },
+    {
+      "t": "2026-10-30T18:21:35-03:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "No stop or target touched on any of the 10 shorts since entry",
+      "reason": "Coinbase public 5m candles since each entry; closest to target: BTC low 76141 vs tgt 75530; closest to stop: NEAR high 4.4236 vs stop 4.5302"
     }
   ],
   "scanner_feed": [
