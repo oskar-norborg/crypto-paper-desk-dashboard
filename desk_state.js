@@ -1169,8 +1169,8 @@ window.__DESK_STATE__ = {
   "agents": {
     "Scanner": {
       "status": "idle",
-      "last_run": "2026-10-30T08:08:32-03:00",
-      "note": "CHAOS cycle 08:00 BRT: 30/30 public marks; selloff continuing but cooling (27/30 red on 24h; TIA \u221212.4%, INJ \u22128.2%, BTC "
+      "last_run": "2026-10-30T12:07:15-03:00",
+      "note": "CHAOS cycle 12:00 BRT: 30/30 public marks; selloff deepening (28/30 red on 24h; TIA \u221216.8%, INJ \u221212.2%, APT \u221210.4%, SOL "
     },
     "Rug Check": {
       "status": "idle",
@@ -2066,15 +2066,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:42:37-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 0.5226 BCH-USD @ 293.98 \u00b7 stop 292.8 \u00b7 tgt 296.33 \u00b7 risk $0.62",
-      "reason": "HF demo batch 2: rotate into BCH-USD (demo-loosened vol gate) \u2014 tight 0.4% stop / 0.8% tgt for fast turnover; owner-authorized demo limits",
-      "fill_id": "2026-10-27_BCH-USD_34",
-      "card": "HF_BCH"
-    },
     {
       "t": "2026-10-27T23:42:37-03:00",
       "agent": "Executor",
@@ -3611,6 +3602,13 @@ window.__DESK_STATE__ = {
       "kind": "batch",
       "text": "CHAOS: 08:00 cycle book \u00b7 eq $54,722 \u00b7 exposure $717,466 (13.11x)",
       "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
+    },
+    {
+      "t": "2026-10-30T12:07:15-03:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "CHAOS cycle 12:00 BRT: 30/30 public marks; selloff deepening (28/30 red on 24h; TIA \u221216.8%, INJ \u221212.2%, APT \u221210.4%, SOL \u22127.7%, AVAX \u22127.5%; BCH/POL flat-green)",
+      "reason": "scheduled scanner run; scan file scans/2026-10-30_1207_scan.md"
     }
   ],
   "scanner_feed": [
@@ -4562,7 +4560,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-10-30T12:06:52-03:00",
+  "updated_at": "2026-10-30T12:07:15-03:00",
   "timezone_note": "All timestamps America/Sao_Paulo (UTC-03:00); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
