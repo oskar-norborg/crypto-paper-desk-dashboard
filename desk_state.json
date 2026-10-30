@@ -6,9 +6,9 @@
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
   "equity": 55124.63,
-  "cash": 3328.51,
-  "realized_pnl": 2319.53,
-  "unrealized_pnl": 2805.1,
+  "cash": 5204.97,
+  "realized_pnl": 696.06,
+  "unrealized_pnl": 4428.57,
   "day_pnl": 750.19,
   "day_pnl_pct": 0.0138,
   "day_baseline_date": "2026-10-30",
@@ -121,33 +121,6 @@
       "mark_at": "2026-10-30T20:14:02-03:00",
       "unrealized_pnl": 183.52,
       "exposure": 99809.31
-    },
-    {
-      "id": "2026-10-30_LINK-USD_129",
-      "symbol": "LINK-USD",
-      "side": "short",
-      "size": 6317.0,
-      "entry": 11.081,
-      "notional": 69998.68,
-      "stop": 11.524,
-      "target": 10.195,
-      "target2": 9.7513,
-      "invalidation": "exit on any trade through stop 11.524, at target, or on chaos rotate",
-      "risk_usd": 2798.43,
-      "risk_pct_equity": 0.05136,
-      "opened_at": "2026-10-30T08:08:36-03:00",
-      "card": "CHAOS_LINK",
-      "reason": "CHAOS rotate LINK-USD: momentum short re-entry, selloff continuing \u2014 short (24h -4.63% from public stats open), notional $69,999 @ 20x paper (margin $3,500), stop 4.0% / tgt 8.0%/12.0%, risk $2,798 (5.1% eq; chaos cap 100%)",
-      "price_source": "coinbase_exchange_public_ticker 2026-10-30T08:08:36-03:00 BRT (exch 2026-10-30T11:08:35.608436641Z) api.exchange.coinbase.com",
-      "override": null,
-      "paper_only": true,
-      "leverage": 20.0,
-      "margin": 3499.93,
-      "mark": 11.338,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-10-30T20:14:00-03:00",
-      "unrealized_pnl": -1623.47,
-      "exposure": 71622.15
     },
     {
       "id": "2026-10-30_AAVE-USD_130",
@@ -285,7 +258,7 @@
       "exposure": 60130.73
     }
   ],
-  "open_count": 10,
+  "open_count": 9,
   "closed_positions": [
     {
       "type": "close",
@@ -1232,6 +1205,23 @@
       "reason": "stop touched overnight: public 5m candle stop 6.6773 (5m high 6.9); exit plan = exit on trade through stop; closed at current public mark",
       "price_source": "coinbase_exchange_public_ticker 2026-10-30T08:08:33-03:00 BRT (exch 2026-10-30T11:08:32.580282813Z) api.exchange.coinbase.com",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-30_LINK-USD_129",
+      "symbol": "LINK-USD",
+      "side": "short",
+      "size": 6317.0,
+      "entry": 11.081,
+      "exit": 11.338,
+      "pnl": -1623.47,
+      "notional": 69998.68,
+      "leverage": 20.0,
+      "margin": 3499.93,
+      "closed_at": "2026-10-30T20:14:30-03:00",
+      "reason": "CHAOS rotate: short fighting strong alt bounce (24h +7.1% public stats) \u2014 momentum-short thesis invalidated by relative strength; invalidation per plan 'or on chaos rotate'; cut before stop 11.524",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-30T20:14:25-03:00 BRT (exch 2026-10-30T23:14:19Z) api.exchange.coinbase.com",
+      "paper_only": true
     }
   ],
   "max_open": 50,
@@ -1291,8 +1281,8 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-10-30T18:21:35-03:00",
-      "note": "HOLD: no new opens this cycle; keep 10 shorts"
+      "last_run": "2026-10-30T20:14:30-03:00",
+      "note": "last: closed LINK-USD"
     },
     "Logger": {
       "status": "ready",
@@ -2225,18 +2215,14 @@
       "t": "2026-10-30T20:14:02-03:00",
       "equity": 55124.63,
       "kind": "mark"
+    },
+    {
+      "t": "2026-10-30T20:14:30-03:00",
+      "equity": 55124.63,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:49:15-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 4807 SUI-USD @ 0.9361 \u00b7 stop 0.92206 \u00b7 tgt 0.9595 \u00b7 risk $67.49",
-      "reason": "v1.1 batch 1 open SUI-USD: top-liquidity PASS name, momentum-neutral demo entry at public mark \u2014 notional $4,500, stop \u22121.5% / tgt +2.5%/+3.5%, risk $67 (0.14% eq, cap 5%); no leverage",
-      "fill_id": "2026-10-27_SUI-USD_48",
-      "card": "V11_SUI"
-    },
     {
       "t": "2026-10-27T23:49:16-03:00",
       "agent": "Rug Check",
@@ -3760,6 +3746,14 @@
       "kind": "plan",
       "text": "HOLD: no new opens this cycle; keep 10 shorts",
       "reason": "book ~16.5x effective with free cash $3,329 as stop-funding buffer (margin-limited); selloff bouncing (alts turning green on 24h), no fresh short edge"
+    },
+    {
+      "t": "2026-10-30T20:14:30-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE LINK-USD @ 11.338 \u00b7 P&L $-1623.47",
+      "reason": "CHAOS rotate: short fighting strong alt bounce (24h +7.1% public stats) \u2014 momentum-short thesis invalidated by relative strength; invalidation per plan 'or on chaos rotate'; cut before stop 11.524",
+      "fill_id": "2026-10-30_LINK-USD_129"
     }
   ],
   "scanner_feed": [
@@ -4465,7 +4459,7 @@
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-10-30T20:14:02-03:00",
+  "updated_at": "2026-10-30T20:14:30-03:00",
   "timezone_note": "All timestamps America/Sao_Paulo (UTC-03:00); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -4480,8 +4474,8 @@
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 48991.02,
-  "exposure": 977015.67,
-  "buying_power": 125476.93,
-  "effective_leverage": 17.72
+  "margin_used": 45491.09,
+  "exposure": 905393.52,
+  "buying_power": 197099.08,
+  "effective_leverage": 16.42
 }
