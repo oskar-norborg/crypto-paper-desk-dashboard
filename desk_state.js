@@ -1255,8 +1255,8 @@ window.__DESK_STATE__ = {
     },
     "Rug Check": {
       "status": "idle",
-      "last_run": "2026-10-30T12:07:16-03:00",
-      "note": "ADA-USD PASS (chaos: non-blocking)"
+      "last_run": "2026-10-30T12:07:17-03:00",
+      "note": "SUI-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -2162,14 +2162,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:47:49-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE HBAR-USD @ 0.07658 \u00b7 P&L $+0.04",
-      "reason": "capital reset: flatten before raising paper equity to $50,000",
-      "fill_id": "2026-10-27_HBAR-USD_33"
-    },
     {
       "t": "2026-10-27T23:47:49-03:00",
       "agent": "Executor",
@@ -3704,6 +3696,13 @@ window.__DESK_STATE__ = {
       "reason": "CHAOS rotate ADA-USD: momentum short add, broad selloff deepening \u2014 short (24h -6.35% from public stats open), notional $59,985 @ 20x paper (margin $2,999), stop 4.0% / tgt 8.0%/12.0%, risk $2,400 (4.2% eq; chaos cap 100%)",
       "fill_id": "2026-10-30_ADA-USD_133",
       "card": "CHAOS_ADA"
+    },
+    {
+      "t": "2026-10-30T12:07:17-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "SUI-USD PASS (chaos: non-blocking)",
+      "reason": "vol $26.3M, spread 0.045%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
     }
   ],
   "scanner_feed": [
@@ -4655,7 +4654,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-10-30T12:07:16-03:00",
+  "updated_at": "2026-10-30T12:07:17-03:00",
   "timezone_note": "All timestamps America/Sao_Paulo (UTC-03:00); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
