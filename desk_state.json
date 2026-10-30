@@ -5,12 +5,12 @@
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 56999.42,
-  "cash": 16326.1,
+  "equity": 57006.76,
+  "cash": 12327.29,
   "realized_pnl": 2319.53,
-  "unrealized_pnl": 4679.89,
-  "day_pnl": 2624.98,
-  "day_pnl_pct": 0.04828,
+  "unrealized_pnl": 4687.23,
+  "day_pnl": 2632.32,
+  "day_pnl_pct": 0.04841,
   "day_baseline_date": "2026-10-30",
   "day_baseline_equity": 54374.44,
   "open_positions": [
@@ -175,9 +175,36 @@
       "mark_at": "2026-10-30T12:06:49-03:00",
       "unrealized_pnl": -290.42,
       "exposure": 60288.54
+    },
+    {
+      "id": "2026-10-30_NEAR-USD_131",
+      "symbol": "NEAR-USD",
+      "side": "short",
+      "size": 18360.0,
+      "entry": 4.356,
+      "notional": 79976.16,
+      "stop": 4.5302,
+      "target": 4.0075,
+      "target2": 3.8333,
+      "invalidation": "exit on any trade through stop 4.5302, at target, or on chaos rotate",
+      "risk_usd": 3198.31,
+      "risk_pct_equity": 0.05611,
+      "opened_at": "2026-10-30T12:07:16-03:00",
+      "card": "CHAOS_NEAR",
+      "reason": "CHAOS rotate NEAR-USD: momentum short add, broad selloff deepening \u2014 short (24h -6.32% from public stats open), notional $79,976 @ 20x paper (margin $3,999), stop 4.0% / tgt 8.0%/12.0%, risk $3,198 (5.6% eq; chaos cap 100%)",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-30T12:07:16-03:00 BRT (exch 2026-10-30T15:07:15.373666393Z) api.exchange.coinbase.com",
+      "override": null,
+      "paper_only": true,
+      "leverage": 20.0,
+      "margin": 3998.81,
+      "mark": 4.3556,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-10-30T12:06:50-03:00",
+      "unrealized_pnl": 7.34,
+      "exposure": 79968.82
     }
   ],
-  "open_count": 6,
+  "open_count": 7,
   "closed_positions": [
     {
       "type": "close",
@@ -1128,7 +1155,7 @@
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 56999.42,
+  "max_risk_usd": 57006.76,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -543744.4,
   "paused": false,
@@ -1183,13 +1210,13 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-10-30T12:07:15-03:00",
-      "note": "CHAOS rotate: add 20x momentum shorts NEAR, AVAX, ADA, SUI using free margin; keep 6 existing shorts"
+      "last_run": "2026-10-30T12:07:16-03:00",
+      "note": "last: paper fill NEAR-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-10-30T08:08:39-03:00",
-      "note": "CHAOS: 08:00 cycle book \u00b7 eq $54,722 \u00b7 exposure $717,466 (13.11x)"
+      "last_run": "2026-10-30T12:07:16-03:00",
+      "note": "logged 2026-10-30_NEAR-USD_131"
     },
     "Equity": {
       "status": "ready",
@@ -2062,17 +2089,14 @@
       "t": "2026-10-30T12:06:52-03:00",
       "equity": 56999.42,
       "kind": "mark"
+    },
+    {
+      "t": "2026-10-30T12:07:16-03:00",
+      "equity": 57006.76,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:42:48-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE SOL-USD @ 101.43 \u00b7 P&L $-0.08",
-      "reason": "high-freq demo: tight stop/target simulation at market mark + demo wind-down to \u22643 opens before restoring normal limits",
-      "fill_id": "2026-10-27_SOL-USD_18"
-    },
     {
       "t": "2026-10-27T23:42:48-03:00",
       "agent": "Executor",
@@ -3604,6 +3628,15 @@
       "kind": "check",
       "text": "NEAR-USD PASS (chaos: non-blocking)",
       "reason": "vol $67.2M, spread 0.055%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
+    },
+    {
+      "t": "2026-10-30T12:07:16-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 18360 NEAR-USD @ 4.356 \u00b7 notional $79,976 (20x, margin $3,999) \u00b7 stop 4.5302 \u00b7 tgt 4.0075 \u00b7 risk $3,198.31",
+      "reason": "CHAOS rotate NEAR-USD: momentum short add, broad selloff deepening \u2014 short (24h -6.32% from public stats open), notional $79,976 @ 20x paper (margin $3,999), stop 4.0% / tgt 8.0%/12.0%, risk $3,198 (5.6% eq; chaos cap 100%)",
+      "fill_id": "2026-10-30_NEAR-USD_131",
+      "card": "CHAOS_NEAR"
     }
   ],
   "scanner_feed": [
@@ -4570,8 +4603,8 @@
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 35993.43,
-  "exposure": 715188.94,
-  "buying_power": 424799.46,
-  "effective_leverage": 12.55
+  "margin_used": 39992.24,
+  "exposure": 795157.76,
+  "buying_power": 344977.44,
+  "effective_leverage": 13.95
 }
