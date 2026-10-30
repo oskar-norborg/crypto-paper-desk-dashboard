@@ -7,9 +7,9 @@ window.__DESK_STATE__ = {
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
   "equity": 55124.63,
-  "cash": 5204.97,
-  "realized_pnl": 696.06,
-  "unrealized_pnl": 4428.57,
+  "cash": 7057.48,
+  "realized_pnl": -451.34,
+  "unrealized_pnl": 5575.97,
   "day_pnl": 750.19,
   "day_pnl_pct": 0.0138,
   "day_baseline_date": "2026-10-30",
@@ -124,33 +124,6 @@ window.__DESK_STATE__ = {
       "exposure": 99809.31
     },
     {
-      "id": "2026-10-30_AAVE-USD_130",
-      "symbol": "AAVE-USD",
-      "side": "short",
-      "size": 476.1,
-      "entry": 126.02,
-      "notional": 59998.12,
-      "stop": 131.06,
-      "target": 115.94,
-      "target2": 110.9,
-      "invalidation": "exit on any trade through stop 131.06, at target, or on chaos rotate",
-      "risk_usd": 2399.54,
-      "risk_pct_equity": 0.04405,
-      "opened_at": "2026-10-30T08:08:36-03:00",
-      "card": "CHAOS_AAVE",
-      "reason": "CHAOS rotate AAVE-USD: momentum short re-entry, selloff continuing \u2014 short (24h -5.33% from public stats open), notional $59,998 @ 20x paper (margin $3,000), stop 4.0% / tgt 8.0%/12.0%, risk $2,400 (4.4% eq; chaos cap 100%)",
-      "price_source": "coinbase_exchange_public_ticker 2026-10-30T08:08:36-03:00 BRT (exch 2026-10-30T11:08:24.967829276Z) api.exchange.coinbase.com",
-      "override": null,
-      "paper_only": true,
-      "leverage": 20.0,
-      "margin": 2999.91,
-      "mark": 128.43,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-10-30T20:13:58-03:00",
-      "unrealized_pnl": -1147.4,
-      "exposure": 61145.52
-    },
-    {
       "id": "2026-10-30_NEAR-USD_131",
       "symbol": "NEAR-USD",
       "side": "short",
@@ -259,7 +232,7 @@ window.__DESK_STATE__ = {
       "exposure": 60130.73
     }
   ],
-  "open_count": 9,
+  "open_count": 8,
   "closed_positions": [
     {
       "type": "close",
@@ -1223,6 +1196,23 @@ window.__DESK_STATE__ = {
       "reason": "CHAOS rotate: short fighting strong alt bounce (24h +7.1% public stats) \u2014 momentum-short thesis invalidated by relative strength; invalidation per plan 'or on chaos rotate'; cut before stop 11.524",
       "price_source": "coinbase_exchange_public_ticker 2026-10-30T20:14:25-03:00 BRT (exch 2026-10-30T23:14:19Z) api.exchange.coinbase.com",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-30_AAVE-USD_130",
+      "symbol": "AAVE-USD",
+      "side": "short",
+      "size": 476.1,
+      "entry": 126.02,
+      "exit": 128.43,
+      "pnl": -1147.4,
+      "notional": 59998.12,
+      "leverage": 20.0,
+      "margin": 2999.91,
+      "closed_at": "2026-10-30T20:14:30-03:00",
+      "reason": "CHAOS rotate: short fighting strong alt bounce (24h +7.7% public stats) \u2014 momentum-short thesis invalidated by relative strength; invalidation per plan 'or on chaos rotate'; cut before stop 131.06",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-30T20:14:25-03:00 BRT (exch 2026-10-30T23:13:43Z) api.exchange.coinbase.com",
+      "paper_only": true
     }
   ],
   "max_open": 50,
@@ -1283,7 +1273,7 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-10-30T20:14:30-03:00",
-      "note": "last: closed LINK-USD"
+      "note": "last: closed AAVE-USD"
     },
     "Logger": {
       "status": "ready",
@@ -2221,16 +2211,14 @@ window.__DESK_STATE__ = {
       "t": "2026-10-30T20:14:30-03:00",
       "equity": 55124.63,
       "kind": "close"
+    },
+    {
+      "t": "2026-10-30T20:14:30-03:00",
+      "equity": 55124.63,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:49:16-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "XLM-USD PASS",
-      "reason": "Coinbase XLM-USD status online; 24h vol $5.1M \u2265 $5M; spread 0.032% \u2264 0.25%; \u00b11% depth $327,768 \u2265 max($25k, 50\u00d7 notional $4,000); long-listed CEX major"
-    },
     {
       "t": "2026-10-27T23:49:16-03:00",
       "agent": "Executor",
@@ -3755,6 +3743,14 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE LINK-USD @ 11.338 \u00b7 P&L $-1623.47",
       "reason": "CHAOS rotate: short fighting strong alt bounce (24h +7.1% public stats) \u2014 momentum-short thesis invalidated by relative strength; invalidation per plan 'or on chaos rotate'; cut before stop 11.524",
       "fill_id": "2026-10-30_LINK-USD_129"
+    },
+    {
+      "t": "2026-10-30T20:14:30-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE AAVE-USD @ 128.43 \u00b7 P&L $-1147.40",
+      "reason": "CHAOS rotate: short fighting strong alt bounce (24h +7.7% public stats) \u2014 momentum-short thesis invalidated by relative strength; invalidation per plan 'or on chaos rotate'; cut before stop 131.06",
+      "fill_id": "2026-10-30_AAVE-USD_130"
     }
   ],
   "scanner_feed": [
@@ -4475,8 +4471,8 @@ window.__DESK_STATE__ = {
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 45491.09,
-  "exposure": 905393.52,
-  "buying_power": 197099.08,
-  "effective_leverage": 16.42
+  "margin_used": 42491.18,
+  "exposure": 844248.0,
+  "buying_power": 258244.6,
+  "effective_leverage": 15.32
 };
