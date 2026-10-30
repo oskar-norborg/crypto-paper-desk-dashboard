@@ -1297,8 +1297,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-10-30T12:07:20-03:00",
-      "note": "CHAOS: 12:00 cycle book \u00b7 eq $56,010 \u00b7 exposure $976,131 (17.43x)"
+      "last_run": "2026-10-30T14:16:10-03:00",
+      "note": "CHAOS: 14:00 cycle book \u00b7 held"
     },
     "Equity": {
       "status": "ready",
@@ -2209,15 +2209,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:49:13-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 0.1484 BTC-USD @ 80825 \u00b7 stop 79208 \u00b7 tgt 83250 \u00b7 risk $239.96",
-      "reason": "v1.1 batch 1 open BTC-USD: top-liquidity PASS name, momentum-neutral demo entry at public mark \u2014 notional $11,994, stop \u22122.0% / tgt +3.0%/+4.0%, risk $240 (0.48% eq, cap 5%); no leverage",
-      "fill_id": "2026-10-27_BTC-USD_43",
-      "card": "V11_BTC"
-    },
     {
       "t": "2026-10-27T23:49:13-03:00",
       "agent": "Rug Check",
@@ -3751,6 +3742,13 @@ window.__DESK_STATE__ = {
       "kind": "plan",
       "text": "HOLD: no new opens this cycle; keep 10 shorts",
       "reason": "free cash $3,329 is the stop-funding buffer (margin-limited, not exposure-limited); selloff momentum fading from 12:00 lows, no fresh high-conviction edge on a liquid name"
+    },
+    {
+      "t": "2026-10-30T14:16:10-03:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 14:00 cycle book \u00b7 held",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
