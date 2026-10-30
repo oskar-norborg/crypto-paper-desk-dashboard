@@ -6,12 +6,12 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 57167.78,
-  "cash": 6328.37,
+  "equity": 57281.27,
+  "cash": 3328.51,
   "realized_pnl": 2319.53,
-  "unrealized_pnl": 4848.25,
-  "day_pnl": 2793.34,
-  "day_pnl_pct": 0.05137,
+  "unrealized_pnl": 4961.74,
+  "day_pnl": 2906.83,
+  "day_pnl_pct": 0.05346,
   "day_baseline_date": "2026-10-30",
   "day_baseline_equity": 54374.44,
   "open_positions": [
@@ -257,9 +257,36 @@ window.__DESK_STATE__ = {
       "mark_at": "2026-10-30T12:06:49-03:00",
       "unrealized_pnl": 96.26,
       "exposure": 59889.24
+    },
+    {
+      "id": "2026-10-30_SUI-USD_134",
+      "symbol": "SUI-USD",
+      "side": "short",
+      "size": 66760.0,
+      "entry": 0.8987,
+      "notional": 59997.21,
+      "stop": 0.93465,
+      "target": 0.8268,
+      "target2": 0.79086,
+      "invalidation": "exit on any trade through stop 0.93465, at target, or on chaos rotate",
+      "risk_usd": 2400.02,
+      "risk_pct_equity": 0.04198,
+      "opened_at": "2026-10-30T12:07:17-03:00",
+      "card": "CHAOS_SUI",
+      "reason": "CHAOS rotate SUI-USD: momentum short add, broad selloff deepening \u2014 short (24h -5.74% from public stats open), notional $59,997 @ 20x paper (margin $3,000), stop 4.0% / tgt 8.0%/12.0%, risk $2,400 (4.2% eq; chaos cap 100%)",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-30T12:07:16-03:00 BRT (exch 2026-10-30T15:07:15.173230394Z) api.exchange.coinbase.com",
+      "override": null,
+      "paper_only": true,
+      "leverage": 20.0,
+      "margin": 2999.86,
+      "mark": 0.897,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-10-30T12:06:51-03:00",
+      "unrealized_pnl": 113.49,
+      "exposure": 59883.72
     }
   ],
-  "open_count": 9,
+  "open_count": 10,
   "closed_positions": [
     {
       "type": "close",
@@ -1210,7 +1237,7 @@ window.__DESK_STATE__ = {
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 57167.78,
+  "max_risk_usd": 57281.27,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -543744.4,
   "paused": false,
@@ -1265,13 +1292,13 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-10-30T12:07:16-03:00",
-      "note": "last: paper fill ADA-USD"
+      "last_run": "2026-10-30T12:07:17-03:00",
+      "note": "last: paper fill SUI-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-10-30T12:07:16-03:00",
-      "note": "logged 2026-10-30_ADA-USD_133"
+      "last_run": "2026-10-30T12:07:17-03:00",
+      "note": "logged 2026-10-30_SUI-USD_134"
     },
     "Equity": {
       "status": "ready",
@@ -2159,17 +2186,14 @@ window.__DESK_STATE__ = {
       "t": "2026-10-30T12:07:16-03:00",
       "equity": 57167.78,
       "kind": "fill"
+    },
+    {
+      "t": "2026-10-30T12:07:17-03:00",
+      "equity": 57281.27,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:47:49-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE BCH-USD @ 294.1 \u00b7 P&L $+0.06",
-      "reason": "capital reset: flatten before raising paper equity to $50,000",
-      "fill_id": "2026-10-27_BCH-USD_34"
-    },
     {
       "t": "2026-10-27T23:47:52-03:00",
       "agent": "Equity",
@@ -3703,6 +3727,15 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "SUI-USD PASS (chaos: non-blocking)",
       "reason": "vol $26.3M, spread 0.045%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
+    },
+    {
+      "t": "2026-10-30T12:07:17-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 66760 SUI-USD @ 0.8987 \u00b7 notional $59,997 (20x, margin $3,000) \u00b7 stop 0.93465 \u00b7 tgt 0.8268 \u00b7 risk $2,400.02",
+      "reason": "CHAOS rotate SUI-USD: momentum short add, broad selloff deepening \u2014 short (24h -5.74% from public stats open), notional $59,997 @ 20x paper (margin $3,000), stop 4.0% / tgt 8.0%/12.0%, risk $2,400 (4.2% eq; chaos cap 100%)",
+      "fill_id": "2026-10-30_SUI-USD_134",
+      "card": "CHAOS_SUI"
     }
   ],
   "scanner_feed": [
@@ -4669,8 +4702,8 @@ window.__DESK_STATE__ = {
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 45991.16,
-  "exposure": 914975.29,
-  "buying_power": 228380.31,
-  "effective_leverage": 16.01
+  "margin_used": 48991.02,
+  "exposure": 974859.01,
+  "buying_power": 170766.39,
+  "effective_leverage": 17.02
 };
