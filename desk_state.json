@@ -5,12 +5,12 @@
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 51694.81,
-  "cash": 3000.1,
-  "realized_pnl": -2030.66,
-  "unrealized_pnl": 3725.47,
-  "day_pnl": 7259.08,
-  "day_pnl_pct": 0.16336,
+  "equity": 51328.89,
+  "cash": 12397.38,
+  "realized_pnl": -3631.56,
+  "unrealized_pnl": 4960.45,
+  "day_pnl": 6893.16,
+  "day_pnl_pct": 0.15513,
   "day_baseline_date": "2026-10-31",
   "day_baseline_equity": 44435.73,
   "open_positions": [
@@ -40,33 +40,6 @@
       "mark_at": "2026-10-31T17:00:41-03:00",
       "unrealized_pnl": 2508.01,
       "exposure": 157441.68
-    },
-    {
-      "id": "2026-10-30_SOL-USD_143",
-      "symbol": "SOL-USD",
-      "side": "long",
-      "size": 2287.0,
-      "entry": 96.18,
-      "notional": 219963.66,
-      "stop": 93.295,
-      "target": 101.95,
-      "target2": 105.8,
-      "invalidation": "exit on any trade through stop 93.295, at target, or if a 15m candle closes below the 4h low (bounce fails)",
-      "risk_usd": 6598.0,
-      "risk_pct_equity": 0.12656,
-      "opened_at": "2026-10-30T21:04:10-03:00",
-      "card": "RACE_SOL",
-      "reason": "RACE SOL: most liquid alt ($105M 24h), +1.9% 4h higher lows off 94.51, reclaiming 96 \u2014 long, notional $219,964 @ 20x paper (margin $10,998), stop 3% / tgt 6%/10%, risk $6,598 (12.7% eq)",
-      "price_source": "coinbase_exchange_public_ticker 2026-10-30T21:04:10-03:00 BRT (exch 2026-10-31T00:04:07.978801813Z) api.exchange.coinbase.com",
-      "override": null,
-      "paper_only": true,
-      "leverage": 20.0,
-      "margin": 10998.18,
-      "mark": 95.64,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-10-31T17:00:43-03:00",
-      "unrealized_pnl": -1234.98,
-      "exposure": 218728.68
     },
     {
       "id": "2026-10-30_LINK-USD_144",
@@ -177,7 +150,7 @@
       "exposure": 98219.32
     }
   ],
-  "open_count": 6,
+  "open_count": 5,
   "closed_positions": [
     {
       "type": "close",
@@ -1277,11 +1250,28 @@
       "reason": "thesis broken: momentum reversed \u2014 NEAR short premise was 'still weakening'; now +1.4% 1h / +1.1% 4h on public 15m candles and +9% 24h; take small profit before stop, recycle margin into a long",
       "price_source": "coinbase_exchange_public_ticker 2026-10-30T21:59:26-03:00 BRT (exch 2026-10-31T00:59:04.837345055Z) api.exchange.coinbase.com",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-30_SOL-USD_143",
+      "symbol": "SOL-USD",
+      "side": "long",
+      "size": 2287.0,
+      "entry": 96.18,
+      "exit": 95.48,
+      "pnl": -1600.9,
+      "notional": 219963.66,
+      "leverage": 20.0,
+      "margin": 10998.18,
+      "closed_at": "2026-10-31T17:58:44-03:00",
+      "reason": "Invalidation: 15m candle 20:30Z closed 95.46 below prior 4h low 95.56 (bounce failed) \u2014 close at public mark",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-31T17:58:44-03:00 BRT (exch 2026-10-31T20:58:43.236003536Z) api.exchange.coinbase.com",
+      "paper_only": true
     }
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 51694.81,
+  "max_risk_usd": 51328.89,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -444357.3,
   "paused": false,
@@ -1336,8 +1326,8 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-10-31T17:00:40-03:00",
-      "note": "HOLD 6: book ~18x with ~$3k stop-funding cushion; no free margin for a new open, nothing invalidated to fund a rotation,"
+      "last_run": "2026-10-31T17:58:44-03:00",
+      "note": "last: closed SOL-USD"
     },
     "Logger": {
       "status": "ready",
@@ -2430,17 +2420,14 @@
       "t": "2026-10-31T17:00:43-03:00",
       "equity": 51694.81,
       "kind": "mark"
+    },
+    {
+      "t": "2026-10-31T17:58:44-03:00",
+      "equity": 51328.89,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T14:31:48-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE SOL-USD @ 101.6 \u00b7 P&L $-110.32",
-      "reason": "CHAOS rotate: cut weakest (uP&L $-110.32) \u2014 recycle margin into fresh swings",
-      "fill_id": "2026-10-29_SOL-USD_89"
-    },
     {
       "t": "2026-10-29T14:31:48-03:00",
       "agent": "Executor",
@@ -3916,6 +3903,14 @@
       "kind": "check",
       "text": "Exit check vs public 5m/15m candles: no stop or target touched. SOL 20:30Z 15m closed 95.46 below prior 4h low 95.56 = bounce-failed invalidation. SUI 15m closes 0.8975/0.8968 below prior 4h lows (0.8984/0.8966) and making new lows = momentum reversed",
       "reason": "rotate losers that invalidate before stops; LINK/UNI/XLM/BTC theses intact"
+    },
+    {
+      "t": "2026-10-31T17:58:44-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE SOL-USD @ 95.48 \u00b7 P&L $-1600.90",
+      "reason": "Invalidation: 15m candle 20:30Z closed 95.46 below prior 4h low 95.56 (bounce failed) \u2014 close at public mark",
+      "fill_id": "2026-10-30_SOL-USD_143"
     }
   ],
   "scanner_feed": [
@@ -4880,8 +4875,8 @@
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 44969.24,
-  "exposure": 898094.48,
-  "buying_power": 135801.72,
-  "effective_leverage": 17.37
+  "margin_used": 33971.06,
+  "exposure": 679365.8,
+  "buying_power": 347212.0,
+  "effective_leverage": 13.24
 }
