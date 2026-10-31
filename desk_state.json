@@ -5,12 +5,12 @@
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 52898.0,
-  "cash": 3795.0,
-  "realized_pnl": -2217.93,
-  "unrealized_pnl": 5115.93,
-  "day_pnl": -1476.44,
-  "day_pnl_pct": -0.02715,
+  "equity": 52894.33,
+  "cash": 7981.08,
+  "realized_pnl": -2030.66,
+  "unrealized_pnl": 4924.99,
+  "day_pnl": -1480.11,
+  "day_pnl_pct": -0.02722,
   "day_baseline_date": "2026-10-30",
   "day_baseline_equity": 54374.44,
   "open_positions": [
@@ -40,33 +40,6 @@
       "mark_at": "2026-10-30T21:58:22-03:00",
       "unrealized_pnl": 2662.32,
       "exposure": 157287.38
-    },
-    {
-      "id": "2026-10-30_NEAR-USD_131",
-      "symbol": "NEAR-USD",
-      "side": "short",
-      "size": 18360.0,
-      "entry": 4.356,
-      "notional": 79976.16,
-      "stop": 4.5302,
-      "target": 4.0075,
-      "target2": 3.8333,
-      "invalidation": "exit on any trade through stop 4.5302, at target, or on chaos rotate",
-      "risk_usd": 3198.31,
-      "risk_pct_equity": 0.05611,
-      "opened_at": "2026-10-30T12:07:16-03:00",
-      "card": "CHAOS_NEAR",
-      "reason": "CHAOS rotate NEAR-USD: momentum short add, broad selloff deepening \u2014 short (24h -6.32% from public stats open), notional $79,976 @ 20x paper (margin $3,999), stop 4.0% / tgt 8.0%/12.0%, risk $3,198 (5.6% eq; chaos cap 100%)",
-      "price_source": "coinbase_exchange_public_ticker 2026-10-30T12:07:16-03:00 BRT (exch 2026-10-30T15:07:15.373666393Z) api.exchange.coinbase.com",
-      "override": null,
-      "paper_only": true,
-      "leverage": 20.0,
-      "margin": 3998.81,
-      "mark": 4.3456,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-10-30T21:58:23-03:00",
-      "unrealized_pnl": 190.94,
-      "exposure": 79785.22
     },
     {
       "id": "2026-10-30_SOL-USD_143",
@@ -177,7 +150,7 @@
       "exposure": 119215.04
     }
   ],
-  "open_count": 6,
+  "open_count": 5,
   "closed_positions": [
     {
       "type": "close",
@@ -1260,11 +1233,28 @@
       "reason": "thesis broken: momentum reversed \u2014 broad alt bounce, rising on 1h/4h public 15m candles and green on 24h; exit plan 'or on chaos rotate'; recycle margin into longs",
       "price_source": "coinbase_exchange_public_ticker 2026-10-30T21:04:07-03:00 BRT (exch 2026-10-31T00:04:03.861693182Z) api.exchange.coinbase.com",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-30_NEAR-USD_131",
+      "symbol": "NEAR-USD",
+      "side": "short",
+      "size": 18360.0,
+      "entry": 4.356,
+      "exit": 4.3458,
+      "pnl": 187.27,
+      "notional": 79976.16,
+      "leverage": 20.0,
+      "margin": 3998.81,
+      "closed_at": "2026-10-30T21:59:26-03:00",
+      "reason": "thesis broken: momentum reversed \u2014 NEAR short premise was 'still weakening'; now +1.4% 1h / +1.1% 4h on public 15m candles and +9% 24h; take small profit before stop, recycle margin into a long",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-30T21:59:26-03:00 BRT (exch 2026-10-31T00:59:04.837345055Z) api.exchange.coinbase.com",
+      "paper_only": true
     }
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 52898.0,
+  "max_risk_usd": 52894.33,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -543744.4,
   "paused": false,
@@ -1319,8 +1309,8 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-10-30T21:04:11-03:00",
-      "note": "last: paper fill XLM-USD"
+      "last_run": "2026-10-30T21:59:26-03:00",
+      "note": "last: closed NEAR-USD"
     },
     "Logger": {
       "status": "ready",
@@ -2333,17 +2323,14 @@
       "t": "2026-10-30T21:58:24-03:00",
       "equity": 52898.0,
       "kind": "mark"
+    },
+    {
+      "t": "2026-10-30T21:59:26-03:00",
+      "equity": 52894.33,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:51:09-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE BTC-USD @ 80926.1 \u00b7 P&L $+9.26",
-      "reason": "v1.1 batch 2 trim: weakest unrealized ($+0.00) at last mark \u2014 free cash for rotation",
-      "fill_id": "2026-10-27_BTC-USD_57"
-    },
     {
       "t": "2026-10-27T23:51:09-03:00",
       "agent": "Executor",
@@ -3859,6 +3846,14 @@
       "kind": "check",
       "text": "Exit check vs public 5m candles since entry: no stop or target touched on any of 6 positions; no 15m close below 4h low on longs",
       "reason": "SOL lo 95.99, LINK lo 11.451, UNI lo 7.1085, XLM lo 0.1699 \u2014 all well above stops"
+    },
+    {
+      "t": "2026-10-30T21:59:26-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE NEAR-USD @ 4.3458 \u00b7 P&L $+187.27",
+      "reason": "thesis broken: momentum reversed \u2014 NEAR short premise was 'still weakening'; now +1.4% 1h / +1.1% 4h on public 15m candles and +9% 24h; take small profit before stop, recycle margin into a long",
+      "fill_id": "2026-10-30_NEAR-USD_131"
     }
   ],
   "scanner_feed": [
@@ -4579,8 +4574,8 @@
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 43987.07,
-  "exposure": 879150.96,
-  "buying_power": 178809.04,
-  "effective_leverage": 16.62
+  "margin_used": 39988.26,
+  "exposure": 799365.74,
+  "buying_power": 258520.86,
+  "effective_leverage": 15.11
 }
