@@ -1336,8 +1336,8 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-10-31T03:56:23-03:00",
-      "note": "HOLD: no margin to deploy (free cash = ~$3k stop-funding cushion) and no position invalidated"
+      "last_run": "2026-10-31T09:54:22-03:00",
+      "note": "HOLD 6: buying power $0 (exposure above equity\u00d720) and cash at ~$3k stop-funding cushion \u2014 no margin for new fills; no t"
     },
     "Logger": {
       "status": "ready",
@@ -2393,14 +2393,6 @@
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-28T20:10:02-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE LTC-USD @ 59.184 \u00b7 P&L $+120.58",
-      "reason": "target 1 hit (mark 59.184 >= tgt 58.888)",
-      "fill_id": "2026-10-27_LTC-USD_61"
-    },
     {
       "t": "2026-10-28T20:10:03-03:00",
       "agent": "Executor",
@@ -3905,6 +3897,13 @@
       "kind": "check",
       "text": "Exit check vs public 5m candles since entry: no stop or target touched on any of 6 positions; no 15m close below 4h low on longs; all longs green 1h \u2014 momentum intact, no rotation",
       "reason": "UNI lo 6.8675 vs stop 6.8508 (closest); BTC short hi 77588 vs stop 80250"
+    },
+    {
+      "t": "2026-10-31T09:54:22-03:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "HOLD 6: buying power $0 (exposure above equity\u00d720) and cash at ~$3k stop-funding cushion \u2014 no margin for new fills; no thesis broken to rotate",
+      "reason": "race mode: stay fully deployed, cut only on invalidation"
     }
   ],
   "scanner_feed": [
