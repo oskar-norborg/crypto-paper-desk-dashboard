@@ -1327,8 +1327,8 @@ window.__DESK_STATE__ = {
     },
     "Rug Check": {
       "status": "idle",
-      "last_run": "2026-10-30T23:53:48-03:00",
-      "note": "16 names SOFT-WARN <$5M vol (BCH, HBAR, AAVE slipped under); new opens restricted to \u2265$5M names"
+      "last_run": "2026-10-31T03:56:23-03:00",
+      "note": "16 names SOFT-WARN <$5M vol; new opens restricted to \u2265$5M names"
     },
     "Sizer": {
       "status": "ready",
@@ -2379,13 +2379,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-28T08:09:01-03:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "v1.1 $50k session: 08:08 BRT scanner routine",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
     {
       "t": "2026-10-28T12:14:32-03:00",
       "agent": "Executor",
@@ -3897,6 +3890,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 03:56 BRT: 30/30 public marks; overnight chop (BTC -1.6%, ETH -0.4%, SOL -2.3% 24h; held alts 1h -0.1% to +1.3%)",
       "reason": "scheduled race cycle; scan scans/2026-10-31_0356_scan.md"
+    },
+    {
+      "t": "2026-10-31T03:56:23-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "16 names SOFT-WARN <$5M vol; new opens restricted to \u2265$5M names",
+      "reason": "prefer liquid Coinbase majors"
     }
   ],
   "scanner_feed": [
@@ -4602,7 +4602,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-10-31T03:56:22-03:00",
+  "updated_at": "2026-10-31T03:56:23-03:00",
   "timezone_note": "All timestamps America/Sao_Paulo (UTC-03:00); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
