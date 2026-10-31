@@ -2467,15 +2467,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-10-29T14:31:59-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 293300 ADA-USD @ 0.20456 \u00b7 notional $59,997 (20x, margin $3,000) \u00b7 stop 0.19638 \u00b7 tgt 0.22092 \u00b7 risk $2,399.19",
-      "reason": "CHAOS B ADA-USD: rotation swing \u2014 long (24h +1.14% from public stats open), notional $59,997 @ 20x paper (margin $3,000), stop 4.0% / tgt 8.0%/12.0%, risk $2,399 (4.8% eq; chaos cap 100%)",
-      "fill_id": "2026-10-29_ADA-USD_97",
-      "card": "CHAOS_ADA"
-    },
-    {
       "t": "2026-10-29T14:32:00-03:00",
       "agent": "Rug Check",
       "kind": "check",
@@ -3948,6 +3939,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 19:00 BRT: 30 public marks, 0 failed; quiet weekend tape (BTC +0.96%, ETH +0.96%, SOL +0.05%, LINK +5.6%); no fresh breakout/breakdown clearing $5M vol",
       "reason": "scheduled race cycle; scan scans/2026-10-31_1900_scan.md"
+    },
+    {
+      "t": "2026-10-31T19:01:04-03:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "Exit check vs public 5m/15m candles (last 60m): no stop or target touched on BTC/LINK/UNI/XLM/SOL. No invalidation: LINK/UNI/XLM above prior 4h lows, SOL short below stop 96.91 with 15m closing back at entry, BTC short under 4h high",
+      "reason": "hold all 5; theses intact"
     }
   ],
   "scanner_feed": [
