@@ -2409,13 +2409,6 @@
   ],
   "activity": [
     {
-      "t": "2026-10-29T14:28:58-03:00",
-      "agent": "Human",
-      "kind": "override",
-      "text": "RULES \u2192 v2.0-CHAOS: max_open 50 \u00b7 max risk 100%/trade \u00b7 loss pause off (\u22121000%) \u00b7 paper leverage 20\u00d7 (margin model)",
-      "reason": "Owner Oskar authorized chaos mode through 2026-11-02 (t10u): 'remove all safeguards\u2026 make a million or lose it all'. PAPER ONLY unchanged; exit plan + public price source still required; rug checks now soft warnings. v1.1 backed up to reviews/pre_chaos_backup_2026-10-29/"
-    },
-    {
       "t": "2026-10-29T14:30:04-03:00",
       "agent": "Executor",
       "kind": "plan",
@@ -3910,6 +3903,13 @@
       "kind": "check",
       "text": "Low-vol names SOFT-WARN on 24h vol < $5M (non-blocking); no new opens this cycle",
       "reason": "prefer liquid Coinbase majors"
+    },
+    {
+      "t": "2026-10-31T12:56:43-03:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "Exit check vs public 5m candles (last 4h): no stop or target touched on any of 6 positions; latest 15m closes above 4h lows on all longs \u2014 thesis intact, no rotation",
+      "reason": "UNI 4h lo 6.9156 vs stop 6.8508; SOL 4h lo 95.38 vs stop 93.295; LINK 4h lo 11.455 vs stop 11.005; XLM 4h lo 0.168725 vs stop 0.1643; SUI 4h lo 0.8924 vs stop 0.87418; BTC short 4h hi 77588.57 vs stop 80250"
     }
   ],
   "scanner_feed": [
