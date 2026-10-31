@@ -1317,8 +1317,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-10-31T17:58:45-03:00",
-      "note": "last: closed SUI-USD"
+      "last_run": "2026-10-31T17:58:47-03:00",
+      "note": "Flip SOL short with freed margin (~$257,154 notional @20x): most liquid alt broke its 4h low with BTC also at 4h low; ke"
     },
     "Logger": {
       "status": "ready",
@@ -2429,13 +2429,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T14:31:58-03:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: batch A weakest 3 cut \u00b7 eq $50,072 \u00b7 exposure $540,468 (10.79x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
     {
       "t": "2026-10-29T14:31:58-03:00",
       "agent": "Executor",
@@ -3911,6 +3904,13 @@ window.__DESK_STATE__ = {
       "kind": "batch",
       "text": "CHAOS: 17:58 SOL/SUI cut \u00b7 eq $49,611 \u00b7 exposure $579,402 (11.68x)",
       "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
+    },
+    {
+      "t": "2026-10-31T17:58:47-03:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "Flip SOL short with freed margin (~$257,154 notional @20x): most liquid alt broke its 4h low with BTC also at 4h low; keep ~$3k stop cushion",
+      "reason": "race mode: use longs AND shorts; deploy freed cash into a concentrated swing"
     }
   ],
   "scanner_feed": [
