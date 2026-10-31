@@ -2430,15 +2430,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-10-29T14:30:28-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 750800 DOGE-USD @ 0.07991 \u00b7 notional $59,996 (20x, margin $3,000) \u00b7 stop 0.076714 \u00b7 tgt 0.086303 \u00b7 risk $2,399.56",
-      "reason": "CHAOS A DOGE-USD: high-conviction momentum swing \u2014 long (24h +0.95% from public stats open), notional $59,996 @ 20x paper (margin $3,000), stop 4.0% / tgt 8.0%/12.0%, risk $2,400 (4.8% eq; chaos cap 100%)",
-      "fill_id": "2026-10-29_DOGE-USD_91",
-      "card": "CHAOS_DOGE"
-    },
-    {
       "t": "2026-10-29T14:30:29-03:00",
       "agent": "Rug Check",
       "kind": "check",
@@ -3916,6 +3907,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "XLM (held) SOFT-WARN 24h vol $4.0M < $5M; no new opens this cycle",
       "reason": "prefer liquid Coinbase majors"
+    },
+    {
+      "t": "2026-10-31T17:00:40-03:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "Exit check vs public 5m candles since open: no stop or target touched on 6 positions. SUI tested its 4h low (in-progress 15m at 0.898 vs 0.8984); waited for the 20:00Z close: 0.8975 vs 4h low 0.8969, not invalidated \u2014 hold, watch next cycle",
+      "reason": "SOL lo 95.01 vs 93.295; LINK lo 11.297 vs 11.005; UNI lo 6.8675 vs 6.8508; XLM lo 0.168131 vs 0.1643; SUI lo 0.8913 vs 0.87418; BTC short hi 77645.12 vs 80250"
     }
   ],
   "scanner_feed": [
