@@ -1342,8 +1342,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-10-31T03:56:38-03:00",
-      "note": "CHAOS: race cycle 03:56 hold \u00b7 eq $44,436 \u00b7 exposure $889,933 (20.03x)"
+      "last_run": "2026-10-31T09:54:24-03:00",
+      "note": "CHAOS: 09:54 race hold \u00b7 eq $46,134 \u00b7 exposure $892,414 (19.34x)"
     },
     "Equity": {
       "status": "ready",
@@ -2399,14 +2399,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-28T20:10:03-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE PEPE-USD @ 5.05e-06 \u00b7 P&L $+130.86",
-      "reason": "target 1 hit (mark 5.05e-06 >= tgt 5.0367e-06)",
-      "fill_id": "2026-10-27_PEPE-USD_62"
-    },
     {
       "t": "2026-10-28T20:10:13-03:00",
       "agent": "Scanner",
@@ -3910,6 +3902,13 @@ window.__DESK_STATE__ = {
       "kind": "plan",
       "text": "HOLD 6: buying power $0 (exposure above equity\u00d720) and cash at ~$3k stop-funding cushion \u2014 no margin for new fills; no thesis broken to rotate",
       "reason": "race mode: stay fully deployed, cut only on invalidation"
+    },
+    {
+      "t": "2026-10-31T09:54:24-03:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 09:54 race hold \u00b7 eq $46,134 \u00b7 exposure $892,414 (19.34x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
