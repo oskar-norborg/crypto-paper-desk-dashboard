@@ -1327,8 +1327,8 @@ window.__DESK_STATE__ = {
     },
     "Rug Check": {
       "status": "idle",
-      "last_run": "2026-10-31T13:53:16-03:00",
-      "note": "Low-vol names SOFT-WARN on 24h vol < $5M (non-blocking); no new opens this cycle"
+      "last_run": "2026-10-31T14:56:34-03:00",
+      "note": "Low-vol names SOFT-WARN on 24h vol < $5M (XLM now $4.7M, held position); no new opens this cycle"
     },
     "Sizer": {
       "status": "ready",
@@ -2419,13 +2419,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T14:30:24-03:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: v1.1 book flattened \u00b7 eq $49,634 \u00b7 exposure $0 (0.0x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
     {
       "t": "2026-10-29T14:30:24-03:00",
       "agent": "Executor",
@@ -3914,6 +3907,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 14:56 BRT: 30 public marks, 0 failed; quiet weekend tape (BTC +0.7%, ETH +0.6%, SOL +1.8% 24h); NEAR +6.1% and AAVE +7.2% lead (AAVE thin, $3.1M vol)",
       "reason": "scheduled race cycle; scan scans/2026-10-31_1456_scan.md"
+    },
+    {
+      "t": "2026-10-31T14:56:34-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "Low-vol names SOFT-WARN on 24h vol < $5M (XLM now $4.7M, held position); no new opens this cycle",
+      "reason": "prefer liquid Coinbase majors"
     }
   ],
   "scanner_feed": [
