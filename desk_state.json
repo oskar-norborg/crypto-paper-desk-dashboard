@@ -1341,8 +1341,8 @@
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-10-31T13:53:19-03:00",
-      "note": "CHAOS: 13:53 race hold \u00b7 eq $48,115 \u00b7 exposure $894,562 (18.59x)"
+      "last_run": "2026-10-31T14:56:38-03:00",
+      "note": "CHAOS: 14:56 race hold \u00b7 eq $49,335 \u00b7 exposure $896,354 (18.17x)"
     },
     "Equity": {
       "status": "ready",
@@ -2423,15 +2423,6 @@
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T14:30:25-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 3.457 BTC-USD @ 80987 \u00b7 notional $279,972 (20x, margin $13,999) \u00b7 stop 79367 \u00b7 tgt 84226 \u00b7 risk $5,600.37",
-      "reason": "CHAOS A BTC-USD: high-conviction momentum swing \u2014 long (24h +0.30% from public stats open), notional $279,972 @ 20x paper (margin $13,999), stop 2.0% / tgt 4.0%/7.0%, risk $5,600 (11.3% eq; chaos cap 100%)",
-      "fill_id": "2026-10-29_BTC-USD_87",
-      "card": "CHAOS_BTC"
-    },
     {
       "t": "2026-10-29T14:30:26-03:00",
       "agent": "Rug Check",
@@ -3918,6 +3909,13 @@
       "kind": "plan",
       "text": "HOLD 6: book near 20x cap with ~$3k stop-funding cushion and no buying power; NEAR breakout still noted but nothing invalidated to fund a rotation",
       "reason": "race mode: stay fully deployed, cut only on invalidation"
+    },
+    {
+      "t": "2026-10-31T14:56:38-03:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 14:56 race hold \u00b7 eq $49,335 \u00b7 exposure $896,354 (18.17x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
