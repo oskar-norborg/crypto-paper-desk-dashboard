@@ -6,12 +6,12 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 52018.29,
-  "cash": 8438.03,
-  "realized_pnl": -2070.44,
-  "unrealized_pnl": 4088.73,
-  "day_pnl": -2356.15,
-  "day_pnl_pct": -0.04333,
+  "equity": 51990.34,
+  "cash": 10834.93,
+  "realized_pnl": -2672.81,
+  "unrealized_pnl": 4663.15,
+  "day_pnl": -2384.1,
+  "day_pnl_pct": -0.04385,
   "day_baseline_date": "2026-10-30",
   "day_baseline_equity": 54374.44,
   "open_positions": [
@@ -151,33 +151,6 @@ window.__DESK_STATE__ = {
       "exposure": 78696.47
     },
     {
-      "id": "2026-10-30_ADA-USD_133",
-      "symbol": "ADA-USD",
-      "side": "short",
-      "size": 310500.0,
-      "entry": 0.19319,
-      "notional": 59985.5,
-      "stop": 0.20092,
-      "target": 0.17773,
-      "target2": 0.17001,
-      "invalidation": "exit on any trade through stop 0.20092, at target, or on chaos rotate",
-      "risk_usd": 2400.16,
-      "risk_pct_equity": 0.04206,
-      "opened_at": "2026-10-30T12:07:16-03:00",
-      "card": "CHAOS_ADA",
-      "reason": "CHAOS rotate ADA-USD: momentum short add, broad selloff deepening \u2014 short (24h -6.35% from public stats open), notional $59,985 @ 20x paper (margin $2,999), stop 4.0% / tgt 8.0%/12.0%, risk $2,400 (4.2% eq; chaos cap 100%)",
-      "price_source": "coinbase_exchange_public_ticker 2026-10-30T12:07:16-03:00 BRT (exch 2026-10-30T15:07:15.949924818Z) api.exchange.coinbase.com",
-      "override": null,
-      "paper_only": true,
-      "leverage": 20.0,
-      "margin": 2999.27,
-      "mark": 0.19504,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-10-30T21:03:06-03:00",
-      "unrealized_pnl": -574.42,
-      "exposure": 60559.92
-    },
-    {
       "id": "2026-10-30_SUI-USD_134",
       "symbol": "SUI-USD",
       "side": "short",
@@ -205,7 +178,7 @@ window.__DESK_STATE__ = {
       "exposure": 60444.5
     }
   ],
-  "open_count": 7,
+  "open_count": 6,
   "closed_positions": [
     {
       "type": "close",
@@ -1203,11 +1176,28 @@ window.__DESK_STATE__ = {
       "reason": "thesis broken: momentum reversed \u2014 broad alt bounce, rising on 1h/4h public 15m candles and green on 24h; exit plan 'or on chaos rotate'; recycle margin into longs",
       "price_source": "coinbase_exchange_public_ticker 2026-10-30T21:04:06-03:00 BRT (exch 2026-10-31T00:04:00.743962029Z) api.exchange.coinbase.com",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-30_ADA-USD_133",
+      "symbol": "ADA-USD",
+      "side": "short",
+      "size": 310500.0,
+      "entry": 0.19319,
+      "exit": 0.19513,
+      "pnl": -602.37,
+      "notional": 59985.5,
+      "leverage": 20.0,
+      "margin": 2999.27,
+      "closed_at": "2026-10-30T21:04:07-03:00",
+      "reason": "thesis broken: momentum reversed \u2014 broad alt bounce, rising on 1h/4h public 15m candles and green on 24h; exit plan 'or on chaos rotate'; recycle margin into longs",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-30T21:04:07-03:00 BRT (exch 2026-10-31T00:04:05.114267547Z) api.exchange.coinbase.com",
+      "paper_only": true
     }
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 52018.29,
+  "max_risk_usd": 51990.34,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -543744.4,
   "paused": false,
@@ -1262,8 +1252,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-10-30T21:04:06-03:00",
-      "note": "last: closed AVAX-USD"
+      "last_run": "2026-10-30T21:04:07-03:00",
+      "note": "last: closed ADA-USD"
     },
     "Logger": {
       "status": "ready",
@@ -2216,17 +2206,14 @@ window.__DESK_STATE__ = {
       "t": "2026-10-30T21:04:06-03:00",
       "equity": 52018.29,
       "kind": "close"
+    },
+    {
+      "t": "2026-10-30T21:04:07-03:00",
+      "equity": 51990.34,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:50:04-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE NEAR-USD @ 4.7082 \u00b7 P&L $-2.67",
-      "reason": "v1.1 batch 1 rotate: demo turnover \u2014 close at public mark to recycle cash into batch 2",
-      "fill_id": "2026-10-27_NEAR-USD_47"
-    },
     {
       "t": "2026-10-27T23:50:05-03:00",
       "agent": "Executor",
@@ -3746,6 +3733,14 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE AVAX-USD @ 8.562 \u00b7 P&L $-1619.10",
       "reason": "thesis broken: momentum reversed \u2014 broad alt bounce, rising on 1h/4h public 15m candles and green on 24h; exit plan 'or on chaos rotate'; recycle margin into longs",
       "fill_id": "2026-10-30_AVAX-USD_132"
+    },
+    {
+      "t": "2026-10-30T21:04:07-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE ADA-USD @ 0.19513 \u00b7 P&L $-602.37",
+      "reason": "thesis broken: momentum reversed \u2014 broad alt bounce, rising on 1h/4h public 15m candles and green on 24h; exit plan 'or on chaos rotate'; recycle margin into longs",
+      "fill_id": "2026-10-30_ADA-USD_133"
     }
   ],
   "scanner_feed": [
@@ -4451,7 +4446,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-10-30T21:04:06-03:00",
+  "updated_at": "2026-10-30T21:04:07-03:00",
   "timezone_note": "All timestamps America/Sao_Paulo (UTC-03:00); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -4466,8 +4461,8 @@ window.__DESK_STATE__ = {
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 39491.53,
-  "exposure": 785742.17,
-  "buying_power": 254623.63,
-  "effective_leverage": 15.11
+  "margin_used": 36492.26,
+  "exposure": 725182.25,
+  "buying_power": 314624.55,
+  "effective_leverage": 13.95
 };
