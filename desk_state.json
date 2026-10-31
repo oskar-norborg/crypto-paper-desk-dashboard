@@ -1336,8 +1336,8 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-10-31T12:56:43-03:00",
-      "note": "HOLD 6: book at ~20x cap with ~$3k thin stop-funding cushion and zero buying power \u2014 no free margin for a new fill; no l"
+      "last_run": "2026-10-31T12:56:55-03:00",
+      "note": "Correction 12:56: after mark refresh buying power is $65.9k but free cash is only $3,000 (the thin stop-funding cushion)"
     },
     "Logger": {
       "status": "ready",
@@ -2413,14 +2413,6 @@
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T14:30:13-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE SOL-USD @ 101.56 \u00b7 P&L $-4.72",
-      "reason": "CHAOS flatten: close unlevered v1.1 position at public mark to free full cash as 20x paper margin",
-      "fill_id": "2026-10-27_SOL-USD_59"
-    },
     {
       "t": "2026-10-29T14:30:14-03:00",
       "agent": "Executor",
@@ -3915,6 +3907,13 @@
       "kind": "batch",
       "text": "CHAOS: 12:56 race hold \u00b7 eq $48,017 \u00b7 exposure $894,486 (18.63x)",
       "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
+    },
+    {
+      "t": "2026-10-31T12:56:55-03:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "Correction 12:56: after mark refresh buying power is $65.9k but free cash is only $3,000 (the thin stop-funding cushion); a new 20x fill would consume it. Best candidate NEAR-USD (+3.9% 24h, $23.7M vol, pressing 24h high 4.476) noted for next cycle if a long hits target or cash frees",
+      "reason": "race mode: keep book deployed, keep only stop-funding cushion"
     }
   ],
   "scanner_feed": [
@@ -4864,7 +4863,7 @@
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-10-31T12:56:46-03:00",
+  "updated_at": "2026-10-31T12:56:55-03:00",
   "timezone_note": "All timestamps America/Sao_Paulo (UTC-03:00); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
