@@ -7,7 +7,7 @@ window.__DESK_STATE__ = {
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
   "equity": 49611.14,
-  "cash": 15857.7,
+  "cash": 3001.32,
   "realized_pnl": -5152.22,
   "unrealized_pnl": 4763.36,
   "day_pnl": 5175.41,
@@ -122,9 +122,36 @@ window.__DESK_STATE__ = {
       "mark_at": "2026-10-31T17:58:47-03:00",
       "unrealized_pnl": -1193.27,
       "exposure": 118795.09
+    },
+    {
+      "id": "2026-10-31_SOL-USD_151",
+      "symbol": "SOL-USD",
+      "side": "short",
+      "size": 2693.0,
+      "entry": 95.48,
+      "notional": 257127.64,
+      "stop": 96.912,
+      "target": 92.616,
+      "target2": 90.706,
+      "invalidation": "exit on any trade through stop 96.912, at target, or on chaos rotate",
+      "risk_usd": 3856.38,
+      "risk_pct_equity": 0.07773,
+      "opened_at": "2026-10-31T17:58:47-03:00",
+      "card": "CHAOS_SOL",
+      "reason": "RACE SOL flip: most liquid alt ($56M 24h) broke 4h low 95.56 on 15m close, BTC at 4h low, weekend bounce failing \u2014 short (24h +0.44% from public stats open), notional $257,128 @ 20x paper (margin $12,856), stop 1.5% / tgt 3.0%/5.0%, risk $3,856 (7.8% eq; chaos cap 100%)",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-31T17:58:47-03:00 BRT (exch 2026-10-31T20:58:44.987045150Z) api.exchange.coinbase.com",
+      "override": null,
+      "paper_only": true,
+      "leverage": 20.0,
+      "margin": 12856.38,
+      "mark": 95.48,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-10-31T17:58:47-03:00",
+      "unrealized_pnl": -0.0,
+      "exposure": 257127.64
     }
   ],
-  "open_count": 4,
+  "open_count": 5,
   "closed_positions": [
     {
       "type": "close",
@@ -1318,12 +1345,12 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-10-31T17:58:47-03:00",
-      "note": "Flip SOL short with freed margin (~$257,154 notional @20x): most liquid alt broke its 4h low with BTC also at 4h low; ke"
+      "note": "last: paper fill SOL-USD"
     },
     "Logger": {
       "status": "ready",
       "last_run": "2026-10-31T17:58:47-03:00",
-      "note": "CHAOS: 17:58 SOL/SUI cut \u00b7 eq $49,611 \u00b7 exposure $579,402 (11.68x)"
+      "note": "logged 2026-10-31_SOL-USD_151"
     },
     "Equity": {
       "status": "ready",
@@ -2426,16 +2453,14 @@ window.__DESK_STATE__ = {
       "t": "2026-10-31T17:58:47-03:00",
       "equity": 49611.14,
       "kind": "mark"
+    },
+    {
+      "t": "2026-10-31T17:58:47-03:00",
+      "equity": 49611.14,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T14:31:58-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "LTC-USD PASS (chaos: non-blocking)",
-      "reason": "vol $8.8M, spread 0.029%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
-    },
     {
       "t": "2026-10-29T14:31:58-03:00",
       "agent": "Executor",
@@ -3911,6 +3936,15 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "SOL-USD PASS (chaos: non-blocking)",
       "reason": "vol $55.8M, spread 0.010%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
+    },
+    {
+      "t": "2026-10-31T17:58:47-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 2693 SOL-USD @ 95.48 \u00b7 notional $257,128 (20x, margin $12,856) \u00b7 stop 96.912 \u00b7 tgt 92.616 \u00b7 risk $3,856.38",
+      "reason": "RACE SOL flip: most liquid alt ($56M 24h) broke 4h low 95.56 on 15m close, BTC at 4h low, weekend bounce failing \u2014 short (24h +0.44% from public stats open), notional $257,128 @ 20x paper (margin $12,856), stop 1.5% / tgt 3.0%/5.0%, risk $3,856 (7.8% eq; chaos cap 100%)",
+      "fill_id": "2026-10-31_SOL-USD_151",
+      "card": "CHAOS_SOL"
     }
   ],
   "scanner_feed": [
@@ -4875,8 +4909,8 @@ window.__DESK_STATE__ = {
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 28990.08,
-  "exposure": 579402.13,
-  "buying_power": 412820.67,
-  "effective_leverage": 11.68
+  "margin_used": 41846.46,
+  "exposure": 836529.77,
+  "buying_power": 155693.03,
+  "effective_leverage": 16.86
 };
