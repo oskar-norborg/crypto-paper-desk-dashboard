@@ -101,7 +101,7 @@ function render(s){
   const data={labels:c.map(p=>tm(p.t).slice(5,16)),datasets:[{label:'Paper equity',data:c.map(p=>p.equity),borderColor:'#3fb6ff',backgroundColor:'rgba(63,182,255,.08)',fill:true,tension:.2,pointRadius:c.length<40?3:0},{label:'Start',data:c.map(()=>s.starting_equity),borderColor:'#3a4450',borderDash:[4,4],pointRadius:0}]};
   if(window.Chart){if(chart)chart.destroy();chart=new Chart($('curve'),{type:'line',data,options:{maintainAspectRatio:false,animation:false,plugins:{legend:{labels:{color:'#6e7a87',font:{family:'monospace',size:10}}}},scales:{x:{ticks:{color:'#6e7a87',font:{size:10}},grid:{color:'#141a21'}},y:{ticks:{color:'#6e7a87',callback:v=>'$'+v},grid:{color:'#141a21'}}}}})}
   else $('curve').outerHTML='<div class="empty">Chart.js CDN unavailable — curve: '+c.map(p=>usd(p.equity)).join(' → ')+'</div>';
-  $('foot').textContent=`updated ${tm(s.updated_at)} (America/Sao_Paulo, UTC-03:00) · rules v${s.rules_version} · realized ${usd(s.realized_pnl,1)} · unrealized ${usd(s.unrealized_pnl,1)} · state: /workspace/crypto-desk/desk_state.json · refresh: scripts/refresh_dashboard.sh · PAPER ONLY`;
+  $('foot').textContent=`updated ${tm(s.updated_at)} (America/New_York) · rules v${s.rules_version} · realized ${usd(s.realized_pnl,1)} · unrealized ${usd(s.unrealized_pnl,1)} · state: /workspace/crypto-desk/desk_state.json · refresh: scripts/refresh_dashboard.sh · PAPER ONLY`;
 }
 render(window.__DESK_STATE__);
 // When served over http, prefer the live JSON (falls back silently on file://)

@@ -2472,13 +2472,6 @@
   "activity": [
     {
       "t": "2026-10-29T14:32:00-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "LINK-USD PASS (chaos: non-blocking)",
-      "reason": "vol $5.2M, spread 0.017%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
-    },
-    {
-      "t": "2026-10-29T14:32:00-03:00",
       "agent": "Executor",
       "kind": "fill",
       "text": "PAPER FILL long 5079 LINK-USD @ 11.812 \u00b7 notional $59,993 (20x, margin $3,000) \u00b7 stop 11.34 \u00b7 tgt 12.757 \u00b7 risk $2,397.29",
@@ -3948,6 +3941,21 @@
       "kind": "batch",
       "text": "CHAOS: 19:00 race hold \u00b7 eq $50,106 \u00b7 exposure $838,703 (16.74x)",
       "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
+    },
+    {
+      "t": "2026-10-31T18:16:46-04:00",
+      "agent": "Ops",
+      "kind": "timezone",
+      "text": "Operating timezone switched America/Sao_Paulo \u2192 America/New_York",
+      "reason": "Owner (via Chief of Staff) required ET as default; BRT was a leftover from box /etc/localtime set 2026-10-24 and mirrored into desk_lib + CRON_TZ, not an intentional desk choice",
+      "from_tz": "America/Sao_Paulo",
+      "to_tz": "America/New_York",
+      "box_localtime": "America/New_York",
+      "routines": [
+        "crypto-scanner-run",
+        "crypto-eod-paper-review"
+      ],
+      "restore_routine": "already America/New_York"
     }
   ],
   "scanner_feed": [
@@ -4897,7 +4905,7 @@
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-10-31T19:01:07-03:00",
+  "updated_at": "2026-10-31T18:16:46-04:00",
   "timezone_note": "All timestamps America/Sao_Paulo (UTC-03:00); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -4915,5 +4923,6 @@
   "margin_used": 41846.46,
   "exposure": 838703.29,
   "buying_power": 163422.31,
-  "effective_leverage": 16.74
+  "effective_leverage": 16.74,
+  "operating_timezone": "America/New_York"
 }
