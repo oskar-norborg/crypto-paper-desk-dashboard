@@ -1342,8 +1342,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-10-31T14:56:38-03:00",
-      "note": "CHAOS: 14:56 race hold \u00b7 eq $49,335 \u00b7 exposure $896,354 (18.17x)"
+      "last_run": "2026-10-31T15:56:59-03:00",
+      "note": "CHAOS: 15:56 race hold \u00b7 eq $50,541 \u00b7 exposure $897,088 (17.75x)"
     },
     "Equity": {
       "status": "ready",
@@ -2429,13 +2429,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T14:30:27-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "XRP-USD PASS (chaos: non-blocking)",
-      "reason": "vol $69.4M, spread 0.015%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
-    },
     {
       "t": "2026-10-29T14:30:27-03:00",
       "agent": "Executor",
@@ -3918,6 +3911,13 @@ window.__DESK_STATE__ = {
       "kind": "plan",
       "text": "HOLD 6: book ~18x with ~$3k stop-funding cushion; no free margin for a new open and nothing invalidated to fund a rotation",
       "reason": "race mode: stay fully deployed, cut only on invalidation"
+    },
+    {
+      "t": "2026-10-31T15:56:59-03:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 15:56 race hold \u00b7 eq $50,541 \u00b7 exposure $897,088 (17.75x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
