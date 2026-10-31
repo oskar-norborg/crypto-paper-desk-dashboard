@@ -1349,8 +1349,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-10-31T17:58:50-03:00",
-      "note": "CHAOS: 17:58 race SOL flip \u00b7 eq $49,584 \u00b7 exposure $836,557 (16.87x)"
+      "last_run": "2026-10-31T19:01:07-03:00",
+      "note": "CHAOS: 19:00 race hold \u00b7 eq $50,106 \u00b7 exposure $838,703 (16.74x)"
     },
     "Equity": {
       "status": "ready",
@@ -2471,15 +2471,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T14:32:00-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 13130 NEAR-USD @ 4.5692 \u00b7 notional $59,994 (20x, margin $3,000) \u00b7 stop 4.752 \u00b7 tgt 4.2037 \u00b7 risk $2,400.16",
-      "reason": "CHAOS B NEAR-USD: rotation swing \u2014 short (24h -0.47% from public stats open), notional $59,994 @ 20x paper (margin $3,000), stop 4.0% / tgt 8.0%/12.0%, risk $2,400 (4.8% eq; chaos cap 100%)",
-      "fill_id": "2026-10-29_NEAR-USD_98",
-      "card": "CHAOS_NEAR"
-    },
     {
       "t": "2026-10-29T14:32:00-03:00",
       "agent": "Rug Check",
@@ -3951,6 +3942,13 @@ window.__DESK_STATE__ = {
       "kind": "plan",
       "text": "No new opens: free cash \u2248 $3k is the stop-funding cushion only; book already ~17x of 20x cap",
       "reason": "race mode \u2014 fully deployed; no idle margin to put to work"
+    },
+    {
+      "t": "2026-10-31T19:01:07-03:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 19:00 race hold \u00b7 eq $50,106 \u00b7 exposure $838,703 (16.74x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
