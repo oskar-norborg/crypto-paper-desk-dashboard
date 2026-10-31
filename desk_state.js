@@ -1327,7 +1327,7 @@ window.__DESK_STATE__ = {
     },
     "Rug Check": {
       "status": "idle",
-      "last_run": "2026-10-31T09:54:22-03:00",
+      "last_run": "2026-10-31T10:58:43-03:00",
       "note": "16 names SOFT-WARN on 24h vol < $5M (non-blocking); no new opens this cycle"
     },
     "Sizer": {
@@ -2399,13 +2399,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-28T20:10:13-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "NEAR-USD PASS",
-      "reason": "Coinbase NEAR-USD online; 24h vol $22.5M >= $5M; spread 0.06% <= 0.25%; \u00b11% depth $735,904 >= max($25k, 50x notional $8,000)"
-    },
     {
       "t": "2026-10-28T20:10:14-03:00",
       "agent": "Executor",
@@ -3909,6 +3902,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 10:58 BRT: 30/30 public marks; quiet weekend tape (BTC +0.5%, ETH +1.2% 24h); alts slipping slightly 1h (SOL -0.3%, LINK -0.3%, UNI -0.2%)",
       "reason": "scheduled race cycle; scan scans/2026-10-31_1058_scan.md"
+    },
+    {
+      "t": "2026-10-31T10:58:43-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "16 names SOFT-WARN on 24h vol < $5M (non-blocking); no new opens this cycle",
+      "reason": "prefer liquid Coinbase majors"
     }
   ],
   "scanner_feed": [
