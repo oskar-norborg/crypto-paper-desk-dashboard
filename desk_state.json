@@ -1341,8 +1341,8 @@
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-10-31T12:56:46-03:00",
-      "note": "CHAOS: 12:56 race hold \u00b7 eq $48,017 \u00b7 exposure $894,486 (18.63x)"
+      "last_run": "2026-10-31T13:53:19-03:00",
+      "note": "CHAOS: 13:53 race hold \u00b7 eq $48,115 \u00b7 exposure $894,562 (18.59x)"
     },
     "Equity": {
       "status": "ready",
@@ -2418,14 +2418,6 @@
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T14:30:15-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE LTC-USD @ 58.208 \u00b7 P&L $+26.29",
-      "reason": "CHAOS flatten: close unlevered v1.1 position at public mark to free full cash as 20x paper margin",
-      "fill_id": "2026-10-29_LTC-USD_78"
-    },
     {
       "t": "2026-10-29T14:30:15-03:00",
       "agent": "Executor",
@@ -3915,6 +3907,13 @@
       "kind": "plan",
       "text": "HOLD 6: book at ~20x cap with ~$3k stop-funding cushion and no buying power; NEAR breakout noted but no position has invalidated, so no rotation to fund it",
       "reason": "race mode: stay fully deployed, cut only on invalidation"
+    },
+    {
+      "t": "2026-10-31T13:53:19-03:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 13:53 race hold \u00b7 eq $48,115 \u00b7 exposure $894,562 (18.59x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
