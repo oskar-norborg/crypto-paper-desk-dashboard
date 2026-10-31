@@ -1321,8 +1321,8 @@
   "agents": {
     "Scanner": {
       "status": "idle",
-      "last_run": "2026-10-31T11:53:01-03:00",
-      "note": "CHAOS race cycle 11:52 BRT: 30/30 public marks; flat weekend tape (BTC +0.4%, ETH +0.6%, SOL +1.5% 24h); held longs tick"
+      "last_run": "2026-10-31T12:56:43-03:00",
+      "note": "CHAOS race cycle 12:56 BRT: 30/30 public marks; quiet weekend tape (BTC 0.0%, ETH +1.1%, SOL +1.1% 24h); all 5 held long"
     },
     "Rug Check": {
       "status": "idle",
@@ -2408,15 +2408,6 @@
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T12:07:57-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 3069 XRP-USD @ 1.303 \u00b7 stop 1.2835 \u00b7 tgt 1.3356 \u00b7 risk $59.85",
-      "reason": "12:07 BRT scanner routine: XRP-USD top-liquidity unheld Rug-Check PASS (stopped out 08:10, re-entry allowed next cycle; PEPE FAIL spread 0.40%); notional ~$3,999 at public ask, stop -1.5% / tgt +2.5%/+3.5%, risk ~$60 (0.12% eq, cap 5%); no leverage; 1 slot left free",
-      "fill_id": "2026-10-29_XRP-USD_79",
-      "card": "V11_XRP"
-    },
     {
       "t": "2026-10-29T12:07:57-03:00",
       "agent": "Scanner",
@@ -3912,6 +3903,13 @@
       "kind": "batch",
       "text": "CHAOS: 11:52 race hold \u00b7 eq $43,941 \u00b7 exposure $889,963 (20.25x)",
       "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
+    },
+    {
+      "t": "2026-10-31T12:56:43-03:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "CHAOS race cycle 12:56 BRT: 30/30 public marks; quiet weekend tape (BTC 0.0%, ETH +1.1%, SOL +1.1% 24h); all 5 held longs green over last 1h (XLM +1.3%, LINK +0.8%)",
+      "reason": "scheduled race cycle; scan scans/2026-10-31_1256_scan.md"
     }
   ],
   "scanner_feed": [
@@ -4861,7 +4859,7 @@
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-10-31T11:53:04-03:00",
+  "updated_at": "2026-10-31T12:56:43-03:00",
   "timezone_note": "All timestamps America/Sao_Paulo (UTC-03:00); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
