@@ -1217,8 +1217,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-10-30T18:04:44-03:00",
-      "note": "EOD review 2026-10-30: equity $58,243.41, day +$3,868.97 (+7.12%), 10 shorts held, 16.72x"
+      "last_run": "2026-10-30T21:04:10-03:00",
+      "note": "CHAOS: alt shorts cut \u00b7 eq $52,133 \u00b7 exposure $235,575 (4.52x)"
     },
     "Equity": {
       "status": "ready",
@@ -2199,13 +2199,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:50:18-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "BTC-USD PASS",
-      "reason": "Coinbase BTC-USD status online; 24h vol $355.3M \u2265 $5M; spread 0.000% \u2264 0.25%; \u00b11% depth $15,551,867 \u2265 max($25k, 50\u00d7 notional $12,000); long-listed CEX major"
-    },
     {
       "t": "2026-10-27T23:50:18-03:00",
       "agent": "Executor",
@@ -3728,6 +3721,13 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE ETH-USD @ 2241.41 \u00b7 P&L $+206.78",
       "reason": "thesis broken: momentum reversed \u2014 broad alt bounce, rising on 1h/4h public 15m candles and green on 24h; exit plan 'or on chaos rotate'; recycle margin into longs",
       "fill_id": "2026-10-30_ETH-USD_126"
+    },
+    {
+      "t": "2026-10-30T21:04:10-03:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: alt shorts cut \u00b7 eq $52,133 \u00b7 exposure $235,575 (4.52x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
