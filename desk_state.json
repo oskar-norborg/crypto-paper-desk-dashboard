@@ -1321,8 +1321,8 @@
   "agents": {
     "Scanner": {
       "status": "idle",
-      "last_run": "2026-10-31T09:54:22-03:00",
-      "note": "CHAOS race cycle 09:54 BRT: 30/30 public marks; quiet tape (BTC +0.1%, ETH +0.8% 24h); alts firming 1h (LINK +0.8%, UNI "
+      "last_run": "2026-10-31T10:58:43-03:00",
+      "note": "CHAOS race cycle 10:58 BRT: 30/30 public marks; quiet weekend tape (BTC +0.5%, ETH +1.2% 24h); alts slipping slightly 1h"
     },
     "Rug Check": {
       "status": "idle",
@@ -2398,13 +2398,6 @@
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-28T20:10:13-03:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "20:09 BRT scan: see scans/2026-10-28_2009_scan.md",
-      "reason": "Coinbase Exchange public ticker/product/L2 book; PEPE-USD back inside spread gate (0.20%); LINK/DOGE back above $5M vol"
-    },
     {
       "t": "2026-10-28T20:10:13-03:00",
       "agent": "Rug Check",
@@ -3908,6 +3901,13 @@
       "kind": "batch",
       "text": "CHAOS: 09:54 race hold \u00b7 eq $46,134 \u00b7 exposure $892,414 (19.34x)",
       "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
+    },
+    {
+      "t": "2026-10-31T10:58:43-03:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "CHAOS race cycle 10:58 BRT: 30/30 public marks; quiet weekend tape (BTC +0.5%, ETH +1.2% 24h); alts slipping slightly 1h (SOL -0.3%, LINK -0.3%, UNI -0.2%)",
+      "reason": "scheduled race cycle; scan scans/2026-10-31_1058_scan.md"
     }
   ],
   "scanner_feed": [
@@ -4857,7 +4857,7 @@
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-10-31T09:54:24-03:00",
+  "updated_at": "2026-10-31T10:58:43-03:00",
   "timezone_note": "All timestamps America/Sao_Paulo (UTC-03:00); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
