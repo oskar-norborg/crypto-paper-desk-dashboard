@@ -1327,8 +1327,8 @@ window.__DESK_STATE__ = {
     },
     "Rug Check": {
       "status": "idle",
-      "last_run": "2026-10-30T21:59:29-03:00",
-      "note": "SUI-USD PASS"
+      "last_run": "2026-10-30T23:53:48-03:00",
+      "note": "16 names SOFT-WARN <$5M vol (BCH, HBAR, AAVE slipped under); new opens restricted to \u2265$5M names"
     },
     "Sizer": {
       "status": "ready",
@@ -2374,13 +2374,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:51:32-03:00",
-      "agent": "Logger",
-      "kind": "note",
-      "text": "Correction: batch 2 trim of BTC/ETH (ids _57/_58) was a tie-break, not true weakest",
-      "reason": "at the prior refresh all batch-2 opens showed ~$0.00 unrealized, so the 'weakest' sort picked the first two (BTC, ETH); at the fresh close marks both were up (+$9.26 / +$8.32). Logged for honest record."
-    },
     {
       "t": "2026-10-27T23:51:48-03:00",
       "agent": "Scanner",
@@ -3894,6 +3887,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 23:53 BRT: 30/30 public marks; chop (BTC +0.1%, ETH +1.7% 24h; 1h moves within \u00b10.3% on all held names)",
       "reason": "scheduled race cycle; scan scans/2026-10-30_2353_scan.md"
+    },
+    {
+      "t": "2026-10-30T23:53:48-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "16 names SOFT-WARN <$5M vol (BCH, HBAR, AAVE slipped under); new opens restricted to \u2265$5M names",
+      "reason": "prefer liquid Coinbase majors"
     }
   ],
   "scanner_feed": [
