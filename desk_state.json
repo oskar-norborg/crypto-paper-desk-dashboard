@@ -2399,15 +2399,6 @@
   ],
   "activity": [
     {
-      "t": "2026-10-28T20:10:14-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 1686.9 NEAR-USD @ 4.7424 \u00b7 stop 4.6713 \u00b7 tgt 4.861 \u00b7 risk $119.94",
-      "reason": "20:09 BRT scanner routine: NEAR-USD top-liquidity unheld Rug-Check PASS after LTC/PEPE target exits freed 2 slots; cash-capped notional ~$8,000 at public ask, stop -1.5% / tgt +2.5%/+3.5%, risk ~$120 (0.24% eq, cap 5%); no leverage",
-      "fill_id": "2026-10-28_NEAR-USD_75",
-      "card": "V11_NEAR"
-    },
-    {
       "t": "2026-10-29T08:10:07-03:00",
       "agent": "Executor",
       "kind": "close",
@@ -3908,6 +3899,13 @@
       "kind": "check",
       "text": "16 names SOFT-WARN on 24h vol < $5M (non-blocking); no new opens this cycle",
       "reason": "prefer liquid Coinbase majors"
+    },
+    {
+      "t": "2026-10-31T10:58:43-03:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "Exit check vs public 5m candles since entry: no stop or target touched on any of 6 positions; no 15m close below 4h low on longs; longs drifting -0.2/-0.3% 1h but above 4h lows \u2014 thesis intact, no rotation",
+      "reason": "UNI lo 6.8675 vs stop 6.8508 (closest); SOL 95.58 vs 4h low 95.27; BTC short hi 77588 vs stop 80250"
     }
   ],
   "scanner_feed": [
