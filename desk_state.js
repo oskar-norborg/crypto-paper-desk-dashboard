@@ -7,7 +7,7 @@ window.__DESK_STATE__ = {
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
   "equity": 52133.05,
-  "cash": 9794.42,
+  "cash": 3795.0,
   "realized_pnl": -2217.93,
   "unrealized_pnl": 4350.98,
   "day_pnl": -2241.39,
@@ -149,9 +149,36 @@ window.__DESK_STATE__ = {
       "mark_at": "2026-10-30T21:04:10-03:00",
       "unrealized_pnl": 0.0,
       "exposure": 139940.88
+    },
+    {
+      "id": "2026-10-30_XLM-USD_146",
+      "symbol": "XLM-USD",
+      "side": "long",
+      "size": 701100.0,
+      "entry": 0.171143,
+      "notional": 119988.36,
+      "stop": 0.1643,
+      "target": 0.18483,
+      "target2": 0.19168,
+      "invalidation": "exit on any trade through stop 0.1643, at target, or if a 15m candle closes below the 4h low (bounce fails)",
+      "risk_usd": 4797.63,
+      "risk_pct_equity": 0.09203,
+      "opened_at": "2026-10-30T21:04:11-03:00",
+      "card": "RACE_XLM",
+      "reason": "RACE XLM: +6.2% 24h, +1.3% 1h at 24h high on $12M vol \u2014 long, notional $119,988 @ 20x paper (margin $5,999), stop 4% / tgt 8%/12%, risk $4,798 (9.2% eq)",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-30T21:04:11-03:00 BRT (exch 2026-10-31T00:03:56.479434440Z) api.exchange.coinbase.com",
+      "override": null,
+      "paper_only": true,
+      "leverage": 20.0,
+      "margin": 5999.42,
+      "mark": 0.171143,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-10-30T21:04:10-03:00",
+      "unrealized_pnl": 0.0,
+      "exposure": 119988.36
     }
   ],
-  "open_count": 5,
+  "open_count": 6,
   "closed_positions": [
     {
       "type": "close",
@@ -1293,13 +1320,13 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-10-30T21:04:10-03:00",
-      "note": "last: paper fill UNI-USD"
+      "last_run": "2026-10-30T21:04:11-03:00",
+      "note": "last: paper fill XLM-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-10-30T21:04:10-03:00",
-      "note": "logged 2026-10-30_UNI-USD_145"
+      "last_run": "2026-10-30T21:04:11-03:00",
+      "note": "logged 2026-10-30_XLM-USD_146"
     },
     "Equity": {
       "status": "ready",
@@ -2292,18 +2319,14 @@ window.__DESK_STATE__ = {
       "t": "2026-10-30T21:04:10-03:00",
       "equity": 52133.05,
       "kind": "fill"
+    },
+    {
+      "t": "2026-10-30T21:04:11-03:00",
+      "equity": 52133.05,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:50:20-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 69.62 LTC-USD @ 57.452 \u00b7 stop 56.59 \u00b7 tgt 58.888 \u00b7 risk $60.01",
-      "reason": "v1.1 batch 2 open LTC-USD: re-entry/rotation at public mark, faster 1.5\u20132% stop \u2014 notional $4,000, stop \u22121.5% / tgt +2.5%/+3.5%, risk $60 (0.12% eq, cap 5%); no leverage",
-      "fill_id": "2026-10-27_LTC-USD_61",
-      "card": "V11_LTC"
-    },
     {
       "t": "2026-10-27T23:50:21-03:00",
       "agent": "Rug Check",
@@ -3822,6 +3845,15 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "XLM-USD PASS",
       "reason": "vol $12.1M, spread 0.054%; Coinbase-listed major"
+    },
+    {
+      "t": "2026-10-30T21:04:11-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 701100 XLM-USD @ 0.171143 \u00b7 notional $119,988 (20x, margin $5,999) \u00b7 stop 0.1643 \u00b7 tgt 0.18483 \u00b7 risk $4,797.63",
+      "reason": "RACE XLM: +6.2% 24h, +1.3% 1h at 24h high on $12M vol \u2014 long, notional $119,988 @ 20x paper (margin $5,999), stop 4% / tgt 8%/12%, risk $4,798 (9.2% eq)",
+      "fill_id": "2026-10-30_XLM-USD_146",
+      "card": "RACE_XLM"
     }
   ],
   "scanner_feed": [
@@ -4542,8 +4574,8 @@ window.__DESK_STATE__ = {
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 37987.65,
-  "exposure": 755402.21,
-  "buying_power": 287258.79,
-  "effective_leverage": 14.49
+  "margin_used": 43987.07,
+  "exposure": 875390.57,
+  "buying_power": 167270.43,
+  "effective_leverage": 16.79
 };
