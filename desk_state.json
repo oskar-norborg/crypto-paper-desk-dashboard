@@ -2394,15 +2394,6 @@
   ],
   "activity": [
     {
-      "t": "2026-10-28T16:10:51-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 611 XRP-USD @ 1.3248 \u00b7 stop 1.3049 \u00b7 tgt 1.3579 \u00b7 risk $12.16",
-      "reason": "16:10 BRT scanner routine: XRP-USD top-liquidity unheld Rug-Check PASS, 8th of 8 slot; new cycle after 12:14 stop-out; cash-capped notional ~$809 at public ask, stop -1.5% / tgt +2.5%/+3.5%, risk ~$12 (0.02% eq, cap 5%); no leverage",
-      "fill_id": "2026-10-28_XRP-USD_72",
-      "card": "V11_XRP"
-    },
-    {
       "t": "2026-10-28T20:10:02-03:00",
       "agent": "Executor",
       "kind": "close",
@@ -3907,6 +3898,13 @@
       "kind": "check",
       "text": "16 names SOFT-WARN on 24h vol < $5M (non-blocking); no new opens this cycle",
       "reason": "prefer liquid Coinbase majors"
+    },
+    {
+      "t": "2026-10-31T09:54:22-03:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "Exit check vs public 5m candles since entry: no stop or target touched on any of 6 positions; no 15m close below 4h low on longs; all longs green 1h \u2014 momentum intact, no rotation",
+      "reason": "UNI lo 6.8675 vs stop 6.8508 (closest); BTC short hi 77588 vs stop 80250"
     }
   ],
   "scanner_feed": [
