@@ -1307,8 +1307,8 @@ window.__DESK_STATE__ = {
     },
     "Rug Check": {
       "status": "idle",
-      "last_run": "2026-10-31T17:00:40-03:00",
-      "note": "XLM (held) SOFT-WARN 24h vol $4.0M < $5M; no new opens this cycle"
+      "last_run": "2026-10-31T17:58:47-03:00",
+      "note": "SOL-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -2429,13 +2429,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T14:31:58-03:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "CHAOS batch B: 4 more 20x swings",
-      "reason": "rotate freed margin into next-most-liquid names, side by 24h momentum"
-    },
     {
       "t": "2026-10-29T14:31:58-03:00",
       "agent": "Rug Check",
@@ -3911,6 +3904,13 @@ window.__DESK_STATE__ = {
       "kind": "plan",
       "text": "Flip SOL short with freed margin (~$257,154 notional @20x): most liquid alt broke its 4h low with BTC also at 4h low; keep ~$3k stop cushion",
       "reason": "race mode: use longs AND shorts; deploy freed cash into a concentrated swing"
+    },
+    {
+      "t": "2026-10-31T17:58:47-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "SOL-USD PASS (chaos: non-blocking)",
+      "reason": "vol $55.8M, spread 0.010%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
     }
   ],
   "scanner_feed": [
