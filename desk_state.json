@@ -1256,8 +1256,8 @@
   "agents": {
     "Scanner": {
       "status": "idle",
-      "last_run": "2026-10-30T20:14:59-03:00",
-      "note": "30/30 marks, regime mixed"
+      "last_run": "2026-10-30T21:04:06-03:00",
+      "note": "CHAOS race cycle 21:03 BRT: 30/30 public marks; broad bounce (BTC +0.2%, ETH +1.0% 24h; 15m candles: UNI +3.6%, LINK +3."
     },
     "Rug Check": {
       "status": "idle",
@@ -2223,14 +2223,6 @@
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:50:04-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE BTC-USD @ 80825.5 \u00b7 P&L $+0.08",
-      "reason": "v1.1 batch 1 rotate: demo turnover \u2014 close at public mark to recycle cash into batch 2",
-      "fill_id": "2026-10-27_BTC-USD_43"
-    },
     {
       "t": "2026-10-27T23:50:04-03:00",
       "agent": "Executor",
@@ -3753,6 +3745,13 @@
       "kind": "scan",
       "text": "30/30 marks, regime mixed",
       "reason": "BTC -1.1%/ETH -0.6% 24h; 26/30 alts green (OP +15.6%, PEPE +10%, UNI +9.4%); report scans/2026-10-30_2014_scan.md"
+    },
+    {
+      "t": "2026-10-30T21:04:06-03:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "CHAOS race cycle 21:03 BRT: 30/30 public marks; broad bounce (BTC +0.2%, ETH +1.0% 24h; 15m candles: UNI +3.6%, LINK +3.0%, XLM +2.2%, SOL +1.9% over 4h; NEAR \u22121.2% 4h)",
+      "reason": "race escalation (owner via Chief of Staff); scan scans/2026-10-30_2103_scan.md"
     }
   ],
   "scanner_feed": [
@@ -4458,7 +4457,7 @@
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-10-30T21:03:09-03:00",
+  "updated_at": "2026-10-30T21:04:06-03:00",
   "timezone_note": "All timestamps America/Sao_Paulo (UTC-03:00); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
