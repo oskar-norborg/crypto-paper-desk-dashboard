@@ -2425,13 +2425,6 @@
   "activity": [
     {
       "t": "2026-10-29T14:30:26-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "SOL-USD PASS (chaos: non-blocking)",
-      "reason": "vol $57.5M, spread 0.010%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
-    },
-    {
-      "t": "2026-10-29T14:30:26-03:00",
       "agent": "Executor",
       "kind": "fill",
       "text": "PAPER FILL short 1379 SOL-USD @ 101.52 \u00b7 notional $139,996 (20x, margin $7,000) \u00b7 stop 104.57 \u00b7 tgt 95.429 \u00b7 risk $4,205.95",
@@ -3914,6 +3907,13 @@
       "kind": "check",
       "text": "Low-vol names SOFT-WARN on 24h vol < $5M (XLM $4.2M, held position); no new opens this cycle",
       "reason": "prefer liquid Coinbase majors"
+    },
+    {
+      "t": "2026-10-31T15:56:56-03:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "Exit check vs public 5m candles since open: no stop or target touched on any of 6 positions; last 15m closes above 4h lows on all longs \u2014 thesis intact, no rotation",
+      "reason": "SOL lo 95.01 vs stop 93.295; LINK lo 11.297 vs 11.005; UNI lo 6.8675 vs 6.8508; XLM lo 0.168131 vs 0.1643; SUI lo 0.8913 vs 0.87418; BTC short hi 77645.12 vs 80250"
     }
   ],
   "scanner_feed": [
