@@ -1257,7 +1257,7 @@ window.__DESK_STATE__ = {
     "Rug Check": {
       "status": "idle",
       "last_run": "2026-10-30T21:04:10-03:00",
-      "note": "LINK-USD PASS"
+      "note": "UNI-USD PASS"
     },
     "Sizer": {
       "status": "ready",
@@ -2263,13 +2263,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:50:20-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "XRP-USD PASS",
-      "reason": "Coinbase XRP-USD status online; 24h vol $62.2M \u2265 $5M; spread 0.007% \u2264 0.25%; \u00b11% depth $4,479,279 \u2265 max($25k, 50\u00d7 notional $7,000); long-listed CEX major"
-    },
     {
       "t": "2026-10-27T23:50:20-03:00",
       "agent": "Executor",
@@ -3790,6 +3783,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE LINK: +9.3% 24h, +3.0% 4h, pressing 24h high 11.47 on $20M vol \u2014 long, notional $159,923 @ 20x paper (margin $7,996), stop 4% / tgt 8%/12%, risk $6,403 (12.3% eq)",
       "fill_id": "2026-10-30_LINK-USD_144",
       "card": "RACE_LINK"
+    },
+    {
+      "t": "2026-10-30T21:04:10-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "UNI-USD PASS",
+      "reason": "vol $14.8M, spread 0.039%; Coinbase-listed major"
     }
   ],
   "scanner_feed": [
