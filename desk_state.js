@@ -1342,8 +1342,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-10-31T11:53:04-03:00",
-      "note": "CHAOS: 11:52 race hold \u00b7 eq $43,941 \u00b7 exposure $889,963 (20.25x)"
+      "last_run": "2026-10-31T12:56:46-03:00",
+      "note": "CHAOS: 12:56 race hold \u00b7 eq $48,017 \u00b7 exposure $894,486 (18.63x)"
     },
     "Equity": {
       "status": "ready",
@@ -2414,13 +2414,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T14:30:13-03:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: pre-session marks \u00b7 eq $49,639 \u00b7 exposure $49,123 (0.99x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
     {
       "t": "2026-10-29T14:30:13-03:00",
       "agent": "Executor",
@@ -3916,6 +3909,13 @@ window.__DESK_STATE__ = {
       "kind": "plan",
       "text": "HOLD 6: book at ~20x cap with ~$3k thin stop-funding cushion and zero buying power \u2014 no free margin for a new fill; no liquid setup clearly better than the current book; nothing invalidated to rotate",
       "reason": "race mode: stay fully deployed, cut only on invalidation"
+    },
+    {
+      "t": "2026-10-31T12:56:46-03:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 12:56 race hold \u00b7 eq $48,017 \u00b7 exposure $894,486 (18.63x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
