@@ -1314,8 +1314,8 @@
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-10-30T21:04:39-03:00",
-      "note": "Race cycle 21:03 BRT: cut 6 shorts (net \u2212$1,767), opened SOL/LINK/UNI/XLM 20x longs (~$640k); eq $52.1k"
+      "last_run": "2026-10-30T21:59:28-03:00",
+      "note": "CHAOS: NEAR short cut \u00b7 eq $52,584 \u00b7 exposure $799,148 (15.2x)"
     },
     "Equity": {
       "status": "ready",
@@ -2336,14 +2336,6 @@
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:51:09-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE ETH-USD @ 2358.59 \u00b7 P&L $+8.32",
-      "reason": "v1.1 batch 2 trim: weakest unrealized ($+0.00) at last mark \u2014 free cash for rotation",
-      "fill_id": "2026-10-27_ETH-USD_58"
-    },
     {
       "t": "2026-10-27T23:51:13-03:00",
       "agent": "Logger",
@@ -3859,6 +3851,13 @@
       "text": "PAPER CLOSE NEAR-USD @ 4.3458 \u00b7 P&L $+187.27",
       "reason": "thesis broken: momentum reversed \u2014 NEAR short premise was 'still weakening'; now +1.4% 1h / +1.1% 4h on public 15m candles and +9% 24h; take small profit before stop, recycle margin into a long",
       "fill_id": "2026-10-30_NEAR-USD_131"
+    },
+    {
+      "t": "2026-10-30T21:59:28-03:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: NEAR short cut \u00b7 eq $52,584 \u00b7 exposure $799,148 (15.2x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
