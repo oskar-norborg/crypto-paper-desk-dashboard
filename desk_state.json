@@ -1309,8 +1309,8 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-10-30T21:59:26-03:00",
-      "note": "last: closed NEAR-USD"
+      "last_run": "2026-10-30T21:59:28-03:00",
+      "note": "RACE: rotate freed NEAR margin into SUI long (strongest liquid 4h trend); keep BTC short as hedge"
     },
     "Logger": {
       "status": "ready",
@@ -2336,13 +2336,6 @@
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:51:13-03:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "v1.1 $50k session: batch 2 trimmed (2 weakest closed)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
     {
       "t": "2026-10-27T23:51:13-03:00",
       "agent": "Rug Check",
@@ -3858,6 +3851,13 @@
       "kind": "batch",
       "text": "CHAOS: NEAR short cut \u00b7 eq $52,584 \u00b7 exposure $799,148 (15.2x)",
       "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
+    },
+    {
+      "t": "2026-10-30T21:59:28-03:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "RACE: rotate freed NEAR margin into SUI long (strongest liquid 4h trend); keep BTC short as hedge",
+      "reason": "deploy free cash, keep ~$3k stop-funding cushion"
     }
   ],
   "scanner_feed": [
