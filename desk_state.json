@@ -2434,13 +2434,6 @@
   ],
   "activity": [
     {
-      "t": "2026-10-29T14:31:47-03:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: batch A +60s \u00b7 eq $50,192 \u00b7 exposure $840,870 (16.75x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
-    {
       "t": "2026-10-29T14:31:48-03:00",
       "agent": "Executor",
       "kind": "close",
@@ -3916,6 +3909,13 @@
       "kind": "scan",
       "text": "CHAOS race cycle 17:58 BRT: 30 public marks, 0 failed; flat weekend tape fading (BTC +0.8%, SOL +0.5%, LINK +5.5% off 11.93 high); BTC, SOL, SUI printing fresh 4h lows",
       "reason": "scheduled race cycle; scan scans/2026-10-31_1758_scan.md"
+    },
+    {
+      "t": "2026-10-31T17:58:44-03:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "Exit check vs public 5m/15m candles: no stop or target touched. SOL 20:30Z 15m closed 95.46 below prior 4h low 95.56 = bounce-failed invalidation. SUI 15m closes 0.8975/0.8968 below prior 4h lows (0.8984/0.8966) and making new lows = momentum reversed",
+      "reason": "rotate losers that invalidate before stops; LINK/UNI/XLM/BTC theses intact"
     }
   ],
   "scanner_feed": [
