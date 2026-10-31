@@ -2406,13 +2406,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-10-29T08:10:38-03:00",
-      "agent": "Sizer",
-      "kind": "note",
-      "text": "No re-entry in XRP-USD / NEAR-USD this cycle",
-      "reason": "both PASS Rug Check but were stopped out at 08:10 BRT; 6/8 open, 2 slots left free"
-    },
-    {
-      "t": "2026-10-29T08:10:38-03:00",
       "agent": "Scanner",
       "kind": "scan",
       "text": "08:10 BRT scan: 13 PASS / 17 FAIL",
@@ -3908,6 +3901,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "Low-vol names SOFT-WARN on 24h vol < $5M (non-blocking); no new opens this cycle",
       "reason": "prefer liquid Coinbase majors"
+    },
+    {
+      "t": "2026-10-31T11:53:01-03:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "Exit check vs public 5m candles (last 4h): no stop or target touched on any of 6 positions; latest 15m closes above 4h lows on all longs \u2014 thesis intact, no rotation",
+      "reason": "UNI 4h lo 6.9156 vs stop 6.8508; SOL 4h lo 95.38 vs stop 93.295; LINK 4h lo 11.473 vs stop 11.005; BTC short 4h hi 77588.57 vs stop 80250"
     }
   ],
   "scanner_feed": [
