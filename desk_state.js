@@ -7,7 +7,7 @@ window.__DESK_STATE__ = {
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
   "equity": 52133.05,
-  "cash": 24787.6,
+  "cash": 16791.46,
   "realized_pnl": -2217.93,
   "unrealized_pnl": 4350.98,
   "day_pnl": -2241.39,
@@ -95,9 +95,36 @@ window.__DESK_STATE__ = {
       "mark_at": "2026-10-30T21:04:09-03:00",
       "unrealized_pnl": 0.0,
       "exposure": 219963.66
+    },
+    {
+      "id": "2026-10-30_LINK-USD_144",
+      "symbol": "LINK-USD",
+      "side": "long",
+      "size": 13950.0,
+      "entry": 11.464,
+      "notional": 159922.8,
+      "stop": 11.005,
+      "target": 12.381,
+      "target2": 12.84,
+      "invalidation": "exit on any trade through stop 11.005, at target, or if a 15m candle closes below the 4h low (bounce fails)",
+      "risk_usd": 6403.05,
+      "risk_pct_equity": 0.12282,
+      "opened_at": "2026-10-30T21:04:10-03:00",
+      "card": "RACE_LINK",
+      "reason": "RACE LINK: +9.3% 24h, +3.0% 4h, pressing 24h high 11.47 on $20M vol \u2014 long, notional $159,923 @ 20x paper (margin $7,996), stop 4% / tgt 8%/12%, risk $6,403 (12.3% eq)",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-30T21:04:10-03:00 BRT (exch 2026-10-31T00:04:07.682019501Z) api.exchange.coinbase.com",
+      "override": null,
+      "paper_only": true,
+      "leverage": 20.0,
+      "margin": 7996.14,
+      "mark": 11.464,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-10-30T21:04:09-03:00",
+      "unrealized_pnl": 0.0,
+      "exposure": 159922.8
     }
   ],
-  "open_count": 3,
+  "open_count": 4,
   "closed_positions": [
     {
       "type": "close",
@@ -1240,12 +1267,12 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-10-30T21:04:10-03:00",
-      "note": "last: paper fill SOL-USD"
+      "note": "last: paper fill LINK-USD"
     },
     "Logger": {
       "status": "ready",
       "last_run": "2026-10-30T21:04:10-03:00",
-      "note": "logged 2026-10-30_SOL-USD_143"
+      "note": "logged 2026-10-30_LINK-USD_144"
     },
     "Equity": {
       "status": "ready",
@@ -2228,18 +2255,14 @@ window.__DESK_STATE__ = {
       "t": "2026-10-30T21:04:10-03:00",
       "equity": 52133.05,
       "kind": "fill"
+    },
+    {
+      "t": "2026-10-30T21:04:10-03:00",
+      "equity": 52133.05,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:50:19-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 78.72 SOL-USD @ 101.62 \u00b7 stop 100.1 \u00b7 tgt 104.16 \u00b7 risk $119.65",
-      "reason": "v1.1 batch 2 open SOL-USD: re-entry/rotation at public mark, faster 1.5\u20132% stop \u2014 notional $8,000, stop \u22121.5% / tgt +2.5%/+4.0%, risk $120 (0.24% eq, cap 5%); no leverage",
-      "fill_id": "2026-10-27_SOL-USD_59",
-      "card": "V11_SOL"
-    },
     {
       "t": "2026-10-27T23:50:20-03:00",
       "agent": "Rug Check",
@@ -3758,6 +3781,15 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "LINK-USD PASS",
       "reason": "vol $20.5M, spread 0.026%; Coinbase-listed major"
+    },
+    {
+      "t": "2026-10-30T21:04:10-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 13950 LINK-USD @ 11.464 \u00b7 notional $159,923 (20x, margin $7,996) \u00b7 stop 11.005 \u00b7 tgt 12.381 \u00b7 risk $6,403.05",
+      "reason": "RACE LINK: +9.3% 24h, +3.0% 4h, pressing 24h high 11.47 on $20M vol \u2014 long, notional $159,923 @ 20x paper (margin $7,996), stop 4% / tgt 8%/12%, risk $6,403 (12.3% eq)",
+      "fill_id": "2026-10-30_LINK-USD_144",
+      "card": "RACE_LINK"
     }
   ],
   "scanner_feed": [
@@ -4478,8 +4510,8 @@ window.__DESK_STATE__ = {
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 22994.47,
-  "exposure": 455538.53,
-  "buying_power": 587122.47,
-  "effective_leverage": 8.74
+  "margin_used": 30990.61,
+  "exposure": 615461.33,
+  "buying_power": 427199.67,
+  "effective_leverage": 11.81
 };
