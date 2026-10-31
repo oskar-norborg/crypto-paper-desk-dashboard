@@ -1342,8 +1342,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-10-30T21:59:32-03:00",
-      "note": "CHAOS: race book \u00b7 eq $52,605 \u00b7 exposure $898,792 (17.09x)"
+      "last_run": "2026-10-30T21:59:42-03:00",
+      "note": "Race cycle 21:58 BRT: cut NEAR short (+$187), opened SUI 20x long"
     },
     "Equity": {
       "status": "ready",
@@ -2374,15 +2374,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:51:13-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 36090 XLM-USD @ 0.171702 \u00b7 stop 0.16913 \u00b7 tgt 0.17599 \u00b7 risk $92.82",
-      "reason": "v1.1 batch 3 rotate into XLM-USD: freed cash from trim, diversify book toward 7/8 opens \u2014 notional $6,197, stop \u22121.5% / tgt +2.5%/+3.5%, risk $93 (0.19% eq, cap 5%); no leverage",
-      "fill_id": "2026-10-27_XLM-USD_67",
-      "card": "V11_XLM"
-    },
     {
       "t": "2026-10-27T23:51:17-03:00",
       "agent": "Logger",
@@ -3896,6 +3887,13 @@ window.__DESK_STATE__ = {
       "kind": "batch",
       "text": "CHAOS: race book \u00b7 eq $52,605 \u00b7 exposure $898,792 (17.09x)",
       "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
+    },
+    {
+      "t": "2026-10-30T21:59:42-03:00",
+      "agent": "Logger",
+      "kind": "note",
+      "text": "Race cycle 21:58 BRT: cut NEAR short (+$187), opened SUI 20x long",
+      "reason": "scan note scans/2026-10-30_2158_scan.md"
     }
   ],
   "scanner_feed": [
@@ -4601,7 +4599,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-10-30T21:59:32-03:00",
+  "updated_at": "2026-10-30T21:59:42-03:00",
   "timezone_note": "All timestamps America/Sao_Paulo (UTC-03:00); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
