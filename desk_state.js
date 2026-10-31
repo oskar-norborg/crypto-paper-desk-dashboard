@@ -6,12 +6,12 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 51328.89,
-  "cash": 12397.38,
-  "realized_pnl": -3631.56,
-  "unrealized_pnl": 4960.45,
-  "day_pnl": 6893.16,
-  "day_pnl_pct": 0.15513,
+  "equity": 51208.55,
+  "cash": 15857.7,
+  "realized_pnl": -5152.22,
+  "unrealized_pnl": 6360.77,
+  "day_pnl": 6772.82,
+  "day_pnl_pct": 0.15242,
   "day_baseline_date": "2026-10-31",
   "day_baseline_equity": 44435.73,
   "open_positions": [
@@ -122,36 +122,9 @@ window.__DESK_STATE__ = {
       "mark_at": "2026-10-31T17:00:43-03:00",
       "unrealized_pnl": -1026.41,
       "exposure": 118961.95
-    },
-    {
-      "id": "2026-10-30_SUI-USD_148",
-      "symbol": "SUI-USD",
-      "side": "long",
-      "size": 109400.0,
-      "entry": 0.9106,
-      "notional": 99619.64,
-      "stop": 0.87418,
-      "target": 0.98345,
-      "target2": 1.0199,
-      "invalidation": "exit on any trade through stop 0.87418, at target, or if a 15m candle closes below the 4h low (bounce fails)",
-      "risk_usd": 3984.35,
-      "risk_pct_equity": 0.07577,
-      "opened_at": "2026-10-30T21:59:29-03:00",
-      "card": "RACE_SUI",
-      "reason": "RACE SUI: +6.5% 24h, +2.9% 4h, +0.9% 1h, pressing 4h high 0.9128 on $15M vol \u2014 long, notional $99,620 @ 20x paper (margin $4,981), stop 4% / tgt 8%/12%, risk $3,984 (7.6% eq)",
-      "price_source": "coinbase_exchange_public_ticker 2026-10-30T21:59:29-03:00 BRT (exch 2026-10-31T00:59:26.837250461Z) api.exchange.coinbase.com",
-      "override": null,
-      "paper_only": true,
-      "leverage": 20.0,
-      "margin": 4980.98,
-      "mark": 0.8978,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-10-31T17:00:43-03:00",
-      "unrealized_pnl": -1400.32,
-      "exposure": 98219.32
     }
   ],
-  "open_count": 5,
+  "open_count": 4,
   "closed_positions": [
     {
       "type": "close",
@@ -1268,11 +1241,28 @@ window.__DESK_STATE__ = {
       "reason": "Invalidation: 15m candle 20:30Z closed 95.46 below prior 4h low 95.56 (bounce failed) \u2014 close at public mark",
       "price_source": "coinbase_exchange_public_ticker 2026-10-31T17:58:44-03:00 BRT (exch 2026-10-31T20:58:43.236003536Z) api.exchange.coinbase.com",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-30_SUI-USD_148",
+      "symbol": "SUI-USD",
+      "side": "long",
+      "size": 109400.0,
+      "entry": 0.9106,
+      "exit": 0.8967,
+      "pnl": -1520.66,
+      "notional": 99619.64,
+      "leverage": 20.0,
+      "margin": 4980.98,
+      "closed_at": "2026-10-31T17:58:45-03:00",
+      "reason": "Momentum reversed: 15m closes below prior 4h low and fresh lows, loser vs entry 0.9106 \u2014 rotate before stop",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-31T17:58:45-03:00 BRT (exch 2026-10-31T20:58:43.522284430Z) api.exchange.coinbase.com",
+      "paper_only": true
     }
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 51328.89,
+  "max_risk_usd": 51208.55,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -444357.3,
   "paused": false,
@@ -1327,8 +1317,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-10-31T17:58:44-03:00",
-      "note": "last: closed SOL-USD"
+      "last_run": "2026-10-31T17:58:45-03:00",
+      "note": "last: closed SUI-USD"
     },
     "Logger": {
       "status": "ready",
@@ -2426,17 +2416,14 @@ window.__DESK_STATE__ = {
       "t": "2026-10-31T17:58:44-03:00",
       "equity": 51328.89,
       "kind": "close"
+    },
+    {
+      "t": "2026-10-31T17:58:45-03:00",
+      "equity": 51208.55,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T14:31:48-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE XRP-USD @ 1.2962 \u00b7 P&L $-69.48",
-      "reason": "CHAOS rotate: cut weakest (uP&L $-69.48) \u2014 recycle margin into fresh swings",
-      "fill_id": "2026-10-29_XRP-USD_90"
-    },
     {
       "t": "2026-10-29T14:31:49-03:00",
       "agent": "Executor",
@@ -3912,6 +3899,14 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE SOL-USD @ 95.48 \u00b7 P&L $-1600.90",
       "reason": "Invalidation: 15m candle 20:30Z closed 95.46 below prior 4h low 95.56 (bounce failed) \u2014 close at public mark",
       "fill_id": "2026-10-30_SOL-USD_143"
+    },
+    {
+      "t": "2026-10-31T17:58:45-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE SUI-USD @ 0.8967 \u00b7 P&L $-1520.66",
+      "reason": "Momentum reversed: 15m closes below prior 4h low and fresh lows, loser vs entry 0.9106 \u2014 rotate before stop",
+      "fill_id": "2026-10-30_SUI-USD_148"
     }
   ],
   "scanner_feed": [
@@ -4861,7 +4856,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-10-31T17:58:44-03:00",
+  "updated_at": "2026-10-31T17:58:45-03:00",
   "timezone_note": "All timestamps America/Sao_Paulo (UTC-03:00); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -4876,8 +4871,8 @@ window.__DESK_STATE__ = {
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 33971.06,
-  "exposure": 679365.8,
-  "buying_power": 347212.0,
-  "effective_leverage": 13.24
+  "margin_used": 28990.08,
+  "exposure": 581146.48,
+  "buying_power": 443024.52,
+  "effective_leverage": 11.35
 };
