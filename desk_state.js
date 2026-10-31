@@ -2338,13 +2338,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-10-27T23:50:24-03:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "v1.1 $50k session: batch 2 opened (7)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
-    {
       "t": "2026-10-27T23:51:09-03:00",
       "agent": "Executor",
       "kind": "close",
@@ -3860,6 +3853,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "14 names SOFT-WARN on 24h vol < $5M (non-blocking); new opens restricted to \u2265 $5M names",
       "reason": "prefer liquid Coinbase majors"
+    },
+    {
+      "t": "2026-10-30T21:59:26-03:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "Exit check vs public 5m candles since entry: no stop or target touched on any of 6 positions; no 15m close below 4h low on longs",
+      "reason": "SOL lo 95.99, LINK lo 11.451, UNI lo 7.1085, XLM lo 0.1699 \u2014 all well above stops"
     }
   ],
   "scanner_feed": [
@@ -4565,7 +4565,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-10-30T21:59:25-03:00",
+  "updated_at": "2026-10-30T21:59:26-03:00",
   "timezone_note": "All timestamps America/Sao_Paulo (UTC-03:00); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
