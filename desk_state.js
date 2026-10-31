@@ -1325,8 +1325,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-10-30T21:04:11-03:00",
-      "note": "logged 2026-10-30_XLM-USD_146"
+      "last_run": "2026-10-30T21:04:15-03:00",
+      "note": "CHAOS: race book \u00b7 eq $52,092 \u00b7 exposure $875,349 (16.8x)"
     },
     "Equity": {
       "status": "ready",
@@ -2332,13 +2332,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:50:21-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "PEPE-USD PASS",
-      "reason": "Coinbase PEPE-USD status online; 24h vol $6.8M \u2265 $5M; spread 0.205% \u2264 0.25%; \u00b11% depth $365,491 \u2265 max($25k, 50\u00d7 notional $4,000); long-listed CEX major"
-    },
     {
       "t": "2026-10-27T23:50:21-03:00",
       "agent": "Executor",
@@ -3859,6 +3852,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE XLM: +6.2% 24h, +1.3% 1h at 24h high on $12M vol \u2014 long, notional $119,988 @ 20x paper (margin $5,999), stop 4% / tgt 8%/12%, risk $4,798 (9.2% eq)",
       "fill_id": "2026-10-30_XLM-USD_146",
       "card": "RACE_XLM"
+    },
+    {
+      "t": "2026-10-30T21:04:15-03:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: race book \u00b7 eq $52,092 \u00b7 exposure $875,349 (16.8x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
