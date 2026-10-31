@@ -1348,8 +1348,8 @@
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-10-31T17:58:47-03:00",
-      "note": "logged 2026-10-31_SOL-USD_151"
+      "last_run": "2026-10-31T17:58:50-03:00",
+      "note": "CHAOS: 17:58 race SOL flip \u00b7 eq $49,584 \u00b7 exposure $836,557 (16.87x)"
     },
     "Equity": {
       "status": "ready",
@@ -2465,15 +2465,6 @@
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T14:31:58-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 1372 LTC-USD @ 58.271 \u00b7 notional $79,948 (20x, margin $3,997) \u00b7 stop 60.019 \u00b7 tgt 54.775 \u00b7 risk $2,398.26",
-      "reason": "CHAOS B LTC-USD: rotation swing \u2014 short (24h -0.20% from public stats open), notional $79,948 @ 20x paper (margin $3,997), stop 3.0% / tgt 6.0%/10.0%, risk $2,398 (4.8% eq; chaos cap 100%)",
-      "fill_id": "2026-10-29_LTC-USD_96",
-      "card": "CHAOS_LTC"
-    },
     {
       "t": "2026-10-29T14:31:59-03:00",
       "agent": "Rug Check",
@@ -3949,6 +3940,13 @@
       "reason": "RACE SOL flip: most liquid alt ($56M 24h) broke 4h low 95.56 on 15m close, BTC at 4h low, weekend bounce failing \u2014 short (24h +0.44% from public stats open), notional $257,128 @ 20x paper (margin $12,856), stop 1.5% / tgt 3.0%/5.0%, risk $3,856 (7.8% eq; chaos cap 100%)",
       "fill_id": "2026-10-31_SOL-USD_151",
       "card": "CHAOS_SOL"
+    },
+    {
+      "t": "2026-10-31T17:58:50-03:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 17:58 race SOL flip \u00b7 eq $49,584 \u00b7 exposure $836,557 (16.87x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
