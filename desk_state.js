@@ -1337,8 +1337,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-10-30T23:53:48-03:00",
-      "note": "HOLD: no fresh edge; free cash = ~$3k stop-funding cushion only, no margin to deploy; no position has invalidated moment"
+      "last_run": "2026-10-31T03:56:23-03:00",
+      "note": "HOLD: no margin to deploy (free cash = ~$3k stop-funding cushion) and no position invalidated"
     },
     "Logger": {
       "status": "ready",
@@ -2379,14 +2379,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-28T12:14:32-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE NEAR-USD @ 4.6167 \u00b7 P&L $-77.73",
-      "reason": "stop hit: mark 4.6167 < stop 4.6376 (12:14 BRT scanner routine)",
-      "fill_id": "2026-10-27_NEAR-USD_63"
-    },
     {
       "t": "2026-10-28T12:14:51-03:00",
       "agent": "Executor",
@@ -3896,6 +3888,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "Exit check vs public 5m candles since entry: no stop or target touched on any of 6 positions; no 15m close below 4h low on longs",
       "reason": "UNI lo 6.8675 vs stop 6.8508 (close call, now +1.25% 1h); SOL lo 95.43, LINK lo 11.342, XLM lo 0.168468, SUI lo 0.8913, BTC hi 77957.75 vs stop 80250"
+    },
+    {
+      "t": "2026-10-31T03:56:23-03:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "HOLD: no margin to deploy (free cash = ~$3k stop-funding cushion) and no position invalidated",
+      "reason": "overnight chop; rotating would only pay spread; UNI recovered off near-stop low"
     }
   ],
   "scanner_feed": [
