@@ -1262,8 +1262,8 @@ window.__DESK_STATE__ = {
     },
     "Rug Check": {
       "status": "idle",
-      "last_run": "2026-10-30T18:21:35-03:00",
-      "note": "12 watchlist names SOFT-WARN on 24h vol < $5M (OP, DOT, ICP, ARB, FIL, TIA, APT, SEI, ATOM, SHIB, POL, ETC) \u2014 skipped fo"
+      "last_run": "2026-10-30T21:04:06-03:00",
+      "note": "15 names SOFT-WARN on 24h vol < $5M (non-blocking); all trades restricted to \u2265 $5M names"
     },
     "Sizer": {
       "status": "ready",
@@ -2224,14 +2224,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:50:04-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE ETH-USD @ 2355.04 \u00b7 P&L $-1.15",
-      "reason": "v1.1 batch 1 rotate: demo turnover \u2014 close at public mark to recycle cash into batch 2",
-      "fill_id": "2026-10-27_ETH-USD_44"
-    },
     {
       "t": "2026-10-27T23:50:04-03:00",
       "agent": "Executor",
@@ -3753,6 +3745,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 21:03 BRT: 30/30 public marks; broad bounce (BTC +0.2%, ETH +1.0% 24h; 15m candles: UNI +3.6%, LINK +3.0%, XLM +2.2%, SOL +1.9% over 4h; NEAR \u22121.2% 4h)",
       "reason": "race escalation (owner via Chief of Staff); scan scans/2026-10-30_2103_scan.md"
+    },
+    {
+      "t": "2026-10-30T21:04:06-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "15 names SOFT-WARN on 24h vol < $5M (non-blocking); all trades restricted to \u2265 $5M names",
+      "reason": "prefer liquid Coinbase majors"
     }
   ],
   "scanner_feed": [
