@@ -7,7 +7,7 @@ window.__DESK_STATE__ = {
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
   "equity": 52583.89,
-  "cash": 7981.08,
+  "cash": 3000.1,
   "realized_pnl": -2030.66,
   "unrealized_pnl": 4614.55,
   "day_pnl": -1790.55,
@@ -149,9 +149,36 @@ window.__DESK_STATE__ = {
       "mark_at": "2026-10-30T21:59:28-03:00",
       "unrealized_pnl": -881.28,
       "exposure": 119107.07
+    },
+    {
+      "id": "2026-10-30_SUI-USD_148",
+      "symbol": "SUI-USD",
+      "side": "long",
+      "size": 109400.0,
+      "entry": 0.9106,
+      "notional": 99619.64,
+      "stop": 0.87418,
+      "target": 0.98345,
+      "target2": 1.0199,
+      "invalidation": "exit on any trade through stop 0.87418, at target, or if a 15m candle closes below the 4h low (bounce fails)",
+      "risk_usd": 3984.35,
+      "risk_pct_equity": 0.07577,
+      "opened_at": "2026-10-30T21:59:29-03:00",
+      "card": "RACE_SUI",
+      "reason": "RACE SUI: +6.5% 24h, +2.9% 4h, +0.9% 1h, pressing 4h high 0.9128 on $15M vol \u2014 long, notional $99,620 @ 20x paper (margin $4,981), stop 4% / tgt 8%/12%, risk $3,984 (7.6% eq)",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-30T21:59:29-03:00 BRT (exch 2026-10-31T00:59:26.837250461Z) api.exchange.coinbase.com",
+      "override": null,
+      "paper_only": true,
+      "leverage": 20.0,
+      "margin": 4980.98,
+      "mark": 0.9106,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-10-30T21:59:28-03:00",
+      "unrealized_pnl": 0.0,
+      "exposure": 99619.64
     }
   ],
-  "open_count": 5,
+  "open_count": 6,
   "closed_positions": [
     {
       "type": "close",
@@ -1310,13 +1337,13 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-10-30T21:59:28-03:00",
-      "note": "RACE: rotate freed NEAR margin into SUI long (strongest liquid 4h trend); keep BTC short as hedge"
+      "last_run": "2026-10-30T21:59:29-03:00",
+      "note": "last: paper fill SUI-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-10-30T21:59:28-03:00",
-      "note": "CHAOS: NEAR short cut \u00b7 eq $52,584 \u00b7 exposure $799,148 (15.2x)"
+      "last_run": "2026-10-30T21:59:29-03:00",
+      "note": "logged 2026-10-30_SUI-USD_148"
     },
     "Equity": {
       "status": "ready",
@@ -2334,18 +2361,14 @@ window.__DESK_STATE__ = {
       "t": "2026-10-30T21:59:28-03:00",
       "equity": 52583.89,
       "kind": "mark"
+    },
+    {
+      "t": "2026-10-30T21:59:29-03:00",
+      "equity": 52583.89,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:51:13-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 12270 SUI-USD @ 0.9372 \u00b7 stop 0.92314 \u00b7 tgt 0.96063 \u00b7 risk $172.52",
-      "reason": "v1.1 batch 3 rotate into SUI-USD: freed cash from trim, diversify book toward 7/8 opens \u2014 notional $11,499, stop \u22121.5% / tgt +2.5%/+3.5%, risk $173 (0.34% eq, cap 5%); no leverage",
-      "fill_id": "2026-10-27_SUI-USD_66",
-      "card": "V11_SUI"
-    },
     {
       "t": "2026-10-27T23:51:13-03:00",
       "agent": "Rug Check",
@@ -3859,6 +3882,15 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "SUI-USD PASS",
       "reason": "vol $15.4M, spread 0.022%; Coinbase-listed major"
+    },
+    {
+      "t": "2026-10-30T21:59:29-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 109400 SUI-USD @ 0.9106 \u00b7 notional $99,620 (20x, margin $4,981) \u00b7 stop 0.87418 \u00b7 tgt 0.98345 \u00b7 risk $3,984.35",
+      "reason": "RACE SUI: +6.5% 24h, +2.9% 4h, +0.9% 1h, pressing 4h high 0.9128 on $15M vol \u2014 long, notional $99,620 @ 20x paper (margin $4,981), stop 4% / tgt 8%/12%, risk $3,984 (7.6% eq)",
+      "fill_id": "2026-10-30_SUI-USD_148",
+      "card": "RACE_SUI"
     }
   ],
   "scanner_feed": [
@@ -4579,8 +4611,8 @@ window.__DESK_STATE__ = {
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 39988.26,
-  "exposure": 799147.69,
-  "buying_power": 252530.11,
-  "effective_leverage": 15.2
+  "margin_used": 44969.24,
+  "exposure": 898767.33,
+  "buying_power": 152910.47,
+  "effective_leverage": 17.09
 };
