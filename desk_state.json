@@ -5,12 +5,12 @@
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 51990.34,
-  "cash": 10834.93,
-  "realized_pnl": -2672.81,
-  "unrealized_pnl": 4663.15,
-  "day_pnl": -2384.1,
-  "day_pnl_pct": -0.04385,
+  "equity": 52010.37,
+  "cash": 13407.53,
+  "realized_pnl": -3100.07,
+  "unrealized_pnl": 5110.44,
+  "day_pnl": -2364.07,
+  "day_pnl_pct": -0.04348,
   "day_baseline_date": "2026-10-30",
   "day_baseline_equity": 54374.44,
   "open_positions": [
@@ -148,36 +148,9 @@
       "mark_at": "2026-10-30T21:03:08-03:00",
       "unrealized_pnl": 1279.69,
       "exposure": 78696.47
-    },
-    {
-      "id": "2026-10-30_SUI-USD_134",
-      "symbol": "SUI-USD",
-      "side": "short",
-      "size": 66760.0,
-      "entry": 0.8987,
-      "notional": 59997.21,
-      "stop": 0.93465,
-      "target": 0.8268,
-      "target2": 0.79086,
-      "invalidation": "exit on any trade through stop 0.93465, at target, or on chaos rotate",
-      "risk_usd": 2400.02,
-      "risk_pct_equity": 0.04198,
-      "opened_at": "2026-10-30T12:07:17-03:00",
-      "card": "CHAOS_SUI",
-      "reason": "CHAOS rotate SUI-USD: momentum short add, broad selloff deepening \u2014 short (24h -5.74% from public stats open), notional $59,997 @ 20x paper (margin $3,000), stop 4.0% / tgt 8.0%/12.0%, risk $2,400 (4.2% eq; chaos cap 100%)",
-      "price_source": "coinbase_exchange_public_ticker 2026-10-30T12:07:16-03:00 BRT (exch 2026-10-30T15:07:15.173230394Z) api.exchange.coinbase.com",
-      "override": null,
-      "paper_only": true,
-      "leverage": 20.0,
-      "margin": 2999.86,
-      "mark": 0.9054,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-10-30T21:03:08-03:00",
-      "unrealized_pnl": -447.29,
-      "exposure": 60444.5
     }
   ],
-  "open_count": 6,
+  "open_count": 5,
   "closed_positions": [
     {
       "type": "close",
@@ -1192,11 +1165,28 @@
       "reason": "thesis broken: momentum reversed \u2014 broad alt bounce, rising on 1h/4h public 15m candles and green on 24h; exit plan 'or on chaos rotate'; recycle margin into longs",
       "price_source": "coinbase_exchange_public_ticker 2026-10-30T21:04:07-03:00 BRT (exch 2026-10-31T00:04:05.114267547Z) api.exchange.coinbase.com",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-30_SUI-USD_134",
+      "symbol": "SUI-USD",
+      "side": "short",
+      "size": 66760.0,
+      "entry": 0.8987,
+      "exit": 0.9051,
+      "pnl": -427.26,
+      "notional": 59997.21,
+      "leverage": 20.0,
+      "margin": 2999.86,
+      "closed_at": "2026-10-30T21:04:07-03:00",
+      "reason": "thesis broken: momentum reversed \u2014 broad alt bounce, rising on 1h/4h public 15m candles and green on 24h; exit plan 'or on chaos rotate'; recycle margin into longs",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-30T21:04:07-03:00 BRT (exch 2026-10-31T00:03:56.111330679Z) api.exchange.coinbase.com",
+      "paper_only": true
     }
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 51990.34,
+  "max_risk_usd": 52010.37,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -543744.4,
   "paused": false,
@@ -1252,7 +1242,7 @@
     "Executor": {
       "status": "ready",
       "last_run": "2026-10-30T21:04:07-03:00",
-      "note": "last: closed ADA-USD"
+      "note": "last: closed SUI-USD"
     },
     "Logger": {
       "status": "ready",
@@ -2210,17 +2200,14 @@
       "t": "2026-10-30T21:04:07-03:00",
       "equity": 51990.34,
       "kind": "close"
+    },
+    {
+      "t": "2026-10-30T21:04:07-03:00",
+      "equity": 52010.37,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:50:05-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE SUI-USD @ 0.9361 \u00b7 P&L $+0.00",
-      "reason": "v1.1 batch 1 rotate: demo turnover \u2014 close at public mark to recycle cash into batch 2",
-      "fill_id": "2026-10-27_SUI-USD_48"
-    },
     {
       "t": "2026-10-27T23:50:05-03:00",
       "agent": "Executor",
@@ -3740,6 +3727,14 @@
       "text": "PAPER CLOSE ADA-USD @ 0.19513 \u00b7 P&L $-602.37",
       "reason": "thesis broken: momentum reversed \u2014 broad alt bounce, rising on 1h/4h public 15m candles and green on 24h; exit plan 'or on chaos rotate'; recycle margin into longs",
       "fill_id": "2026-10-30_ADA-USD_133"
+    },
+    {
+      "t": "2026-10-30T21:04:07-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE SUI-USD @ 0.9051 \u00b7 P&L $-427.26",
+      "reason": "thesis broken: momentum reversed \u2014 broad alt bounce, rising on 1h/4h public 15m candles and green on 24h; exit plan 'or on chaos rotate'; recycle margin into longs",
+      "fill_id": "2026-10-30_SUI-USD_134"
     }
   ],
   "scanner_feed": [
@@ -4460,8 +4455,8 @@
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 36492.26,
-  "exposure": 725182.25,
-  "buying_power": 314624.55,
-  "effective_leverage": 13.95
+  "margin_used": 33492.4,
+  "exposure": 664737.75,
+  "buying_power": 375469.65,
+  "effective_leverage": 12.78
 }
