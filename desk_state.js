@@ -1327,8 +1327,8 @@ window.__DESK_STATE__ = {
     },
     "Rug Check": {
       "status": "idle",
-      "last_run": "2026-10-31T10:58:43-03:00",
-      "note": "16 names SOFT-WARN on 24h vol < $5M (non-blocking); no new opens this cycle"
+      "last_run": "2026-10-31T11:53:01-03:00",
+      "note": "Low-vol names SOFT-WARN on 24h vol < $5M (non-blocking); no new opens this cycle"
     },
     "Sizer": {
       "status": "ready",
@@ -2404,15 +2404,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T08:10:38-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 69 LTC-USD @ 57.827 \u00b7 stop 56.96 \u00b7 tgt 59.27 \u00b7 risk $59.82",
-      "reason": "08:10 BRT scanner routine: LTC-USD top-liquidity unheld Rug-Check PASS (XRP/NEAR skipped: just stopped out, no same-cycle re-entry; PEPE skipped: spread 0.21% near 0.25% gate); notional ~$3,990 at public ask, stop -1.5% / tgt +2.5%/+3.5%, risk ~$60 (0.12% eq, cap 5%); no leverage",
-      "fill_id": "2026-10-29_LTC-USD_78",
-      "card": "V11_LTC"
-    },
     {
       "t": "2026-10-29T08:10:38-03:00",
       "agent": "Sizer",
@@ -3910,6 +3901,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 11:52 BRT: 30/30 public marks; flat weekend tape (BTC +0.4%, ETH +0.6%, SOL +1.5% 24h); held longs ticking up 1h except LINK",
       "reason": "scheduled race cycle; scan scans/2026-10-31_1152_scan.md"
+    },
+    {
+      "t": "2026-10-31T11:53:01-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "Low-vol names SOFT-WARN on 24h vol < $5M (non-blocking); no new opens this cycle",
+      "reason": "prefer liquid Coinbase majors"
     }
   ],
   "scanner_feed": [
