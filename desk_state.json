@@ -1341,8 +1341,8 @@
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-10-30T21:59:29-03:00",
-      "note": "logged 2026-10-30_SUI-USD_148"
+      "last_run": "2026-10-30T21:59:32-03:00",
+      "note": "CHAOS: race book \u00b7 eq $52,605 \u00b7 exposure $898,792 (17.09x)"
     },
     "Equity": {
       "status": "ready",
@@ -2373,13 +2373,6 @@
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:51:13-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "XLM-USD PASS",
-      "reason": "Coinbase XLM-USD status online; 24h vol $5.1M \u2265 $5M; spread 0.008% \u2264 0.25%; \u00b11% depth $309,890 \u2265 max($25k, 50\u00d7 notional $6,198); long-listed CEX major"
-    },
     {
       "t": "2026-10-27T23:51:13-03:00",
       "agent": "Executor",
@@ -3895,6 +3888,13 @@
       "reason": "RACE SUI: +6.5% 24h, +2.9% 4h, +0.9% 1h, pressing 4h high 0.9128 on $15M vol \u2014 long, notional $99,620 @ 20x paper (margin $4,981), stop 4% / tgt 8%/12%, risk $3,984 (7.6% eq)",
       "fill_id": "2026-10-30_SUI-USD_148",
       "card": "RACE_SUI"
+    },
+    {
+      "t": "2026-10-30T21:59:32-03:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: race book \u00b7 eq $52,605 \u00b7 exposure $898,792 (17.09x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
