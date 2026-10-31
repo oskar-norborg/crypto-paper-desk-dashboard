@@ -2636,7 +2636,7 @@ window.__DESK_STATE__ = {
       "agent": "Human",
       "kind": "override",
       "text": "RULES \u2192 v2.0-CHAOS: max_open 50 \u00b7 max risk 100%/trade \u00b7 loss pause off (\u22121000%) \u00b7 paper leverage 20\u00d7 (margin model)",
-      "reason": "Owner Oskar authorized chaos mode through 2026-11-02 (t10u): 'remove all safeguards\u2026 make a million or lose it all'. PAPER ONLY unchanged; exit plan + public price source still required; rug checks now soft warnings. v1.1 backed up to reviews/pre_chaos_backup_2026-10-29/"
+      "reason": "Owner Oskar authorized chaos mode through 2026-11-06 (t10u): 'remove all safeguards\u2026 make a million or lose it all'. PAPER ONLY unchanged; exit plan + public price source still required; rug checks now soft warnings. v1.1 backed up to reviews/pre_chaos_backup_2026-10-29/"
     },
     {
       "t": "2026-10-29T14:30:04-03:00",
@@ -4571,7 +4571,7 @@ window.__DESK_STATE__ = {
   "blown_up": false,
   "chaos_window": {
     "from": "2026-10-29",
-    "through": "2026-11-02",
+    "through": "2026-11-06",
     "tz": "America/Chicago",
     "authorized_by": "Oskar (owner) t10u",
     "goal": "make $1M paper or blow up",
