@@ -1326,8 +1326,8 @@
     },
     "Rug Check": {
       "status": "idle",
-      "last_run": "2026-10-31T15:56:56-03:00",
-      "note": "Low-vol names SOFT-WARN on 24h vol < $5M (XLM $4.2M, held position); no new opens this cycle"
+      "last_run": "2026-10-31T17:00:40-03:00",
+      "note": "XLM (held) SOFT-WARN 24h vol $4.0M < $5M; no new opens this cycle"
     },
     "Sizer": {
       "status": "ready",
@@ -2428,13 +2428,6 @@
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T14:30:28-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "DOGE-USD PASS (chaos: non-blocking)",
-      "reason": "vol $5.7M, spread 0.025%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
-    },
     {
       "t": "2026-10-29T14:30:28-03:00",
       "agent": "Executor",
@@ -3915,6 +3908,13 @@
       "kind": "scan",
       "text": "CHAOS race cycle 16:55 BRT: 30 public marks, 0 failed; quiet weekend tape (BTC +0.9%, ETH +0.7%, SOL +1.1% 24h); LINK +6.9% at new 24h high 11.889; NEAR faded to +2.7%",
       "reason": "scheduled race cycle; scan scans/2026-10-31_1655_scan.md"
+    },
+    {
+      "t": "2026-10-31T17:00:40-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "XLM (held) SOFT-WARN 24h vol $4.0M < $5M; no new opens this cycle",
+      "reason": "prefer liquid Coinbase majors"
     }
   ],
   "scanner_feed": [
