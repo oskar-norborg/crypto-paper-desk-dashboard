@@ -1336,8 +1336,8 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-10-31T13:53:16-03:00",
-      "note": "HOLD 6: book at ~20x cap with ~$3k stop-funding cushion and no buying power; NEAR breakout noted but no position has inv"
+      "last_run": "2026-10-31T14:56:34-03:00",
+      "note": "HOLD 6: book near 20x cap with ~$3k stop-funding cushion and no buying power; NEAR breakout still noted but nothing inva"
     },
     "Logger": {
       "status": "ready",
@@ -2418,13 +2418,6 @@
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T14:30:25-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "BTC-USD PASS (chaos: non-blocking)",
-      "reason": "vol $502.2M, spread 0.000%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
-    },
     {
       "t": "2026-10-29T14:30:25-03:00",
       "agent": "Executor",
@@ -3913,6 +3906,13 @@
       "kind": "check",
       "text": "Exit check vs public 5m candles (last 4h): no stop or target touched on any of 6 positions; longs grinding up, last closes above 4h lows \u2014 thesis intact, no rotation",
       "reason": "UNI 4h lo 6.9405 vs stop 6.8508; SOL 4h lo 95.38 vs 93.295; LINK 4h lo 11.455 vs 11.005; XLM 4h lo 0.168725 vs 0.1643; SUI 4h lo 0.8924 vs 0.87418; BTC short 4h hi 77609.99 vs 80250"
+    },
+    {
+      "t": "2026-10-31T14:56:34-03:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "HOLD 6: book near 20x cap with ~$3k stop-funding cushion and no buying power; NEAR breakout still noted but nothing invalidated to fund a rotation",
+      "reason": "race mode: stay fully deployed, cut only on invalidation"
     }
   ],
   "scanner_feed": [
