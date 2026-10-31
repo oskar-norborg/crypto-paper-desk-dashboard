@@ -1310,8 +1310,8 @@ window.__DESK_STATE__ = {
     },
     "Rug Check": {
       "status": "idle",
-      "last_run": "2026-10-30T21:04:11-03:00",
-      "note": "XLM-USD PASS"
+      "last_run": "2026-10-30T21:59:25-03:00",
+      "note": "14 names SOFT-WARN on 24h vol < $5M (non-blocking); new opens restricted to \u2265 $5M names"
     },
     "Sizer": {
       "status": "ready",
@@ -2337,15 +2337,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:50:21-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 849.5 NEAR-USD @ 4.7082 \u00b7 stop 4.6376 \u00b7 tgt 4.8259 \u00b7 risk $59.97",
-      "reason": "v1.1 batch 2 open NEAR-USD: re-entry/rotation at public mark, faster 1.5\u20132% stop \u2014 notional $4,000, stop \u22121.5% / tgt +2.5%/+3.5%, risk $60 (0.12% eq, cap 5%); no leverage",
-      "fill_id": "2026-10-27_NEAR-USD_63",
-      "card": "V11_NEAR"
-    },
     {
       "t": "2026-10-27T23:50:24-03:00",
       "agent": "Logger",
@@ -3862,6 +3853,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 21:58 BRT: 30/30 public marks; bounce holding (BTC +0.4%, ETH +1.2% 24h; 15m: SUI +2.9% 4h, NEAR +1.1% 4h / +1.4% 1h)",
       "reason": "scheduled race cycle; scan scans/2026-10-30_2158_scan.md"
+    },
+    {
+      "t": "2026-10-30T21:59:25-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "14 names SOFT-WARN on 24h vol < $5M (non-blocking); new opens restricted to \u2265 $5M names",
+      "reason": "prefer liquid Coinbase majors"
     }
   ],
   "scanner_feed": [
