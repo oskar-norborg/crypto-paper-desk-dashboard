@@ -1336,8 +1336,8 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-10-30T21:59:29-03:00",
-      "note": "last: paper fill SUI-USD"
+      "last_run": "2026-10-30T23:53:48-03:00",
+      "note": "HOLD: no fresh edge; free cash = ~$3k stop-funding cushion only, no margin to deploy; no position has invalidated moment"
     },
     "Logger": {
       "status": "ready",
@@ -2373,13 +2373,6 @@
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-28T08:08:58-03:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "08:08 BRT scan: 7 PASS / 23 FAIL",
-      "reason": "Coinbase Exchange public ticker/product/L2 book; held LTC-USD and XLM-USD now below $5M 24h vol (entry gate only, positions kept; no new adds)"
-    },
     {
       "t": "2026-10-28T08:08:58-03:00",
       "agent": "Rug Check",
@@ -3893,6 +3886,13 @@
       "kind": "check",
       "text": "Exit check vs public 5m candles since entry: no stop or target touched on any of 6 positions; no 15m close below 4h low on longs",
       "reason": "SOL lo 95.99, LINK lo 11.451, UNI lo 6.9927, XLM lo 0.169056, SUI lo 0.8988, BTC hi 78490.99 \u2014 all clear of stops"
+    },
+    {
+      "t": "2026-10-30T23:53:48-03:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "HOLD: no fresh edge; free cash = ~$3k stop-funding cushion only, no margin to deploy; no position has invalidated momentum",
+      "reason": "chop regime, 1h moves \u00b10.3%; rotation would just pay spread"
     }
   ],
   "scanner_feed": [
