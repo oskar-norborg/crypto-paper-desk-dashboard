@@ -1341,8 +1341,8 @@
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-10-31T15:56:59-03:00",
-      "note": "CHAOS: 15:56 race hold \u00b7 eq $50,541 \u00b7 exposure $897,088 (17.75x)"
+      "last_run": "2026-10-31T17:00:43-03:00",
+      "note": "CHAOS: 16:55 race hold \u00b7 eq $51,695 \u00b7 exposure $898,094 (17.37x)"
     },
     "Equity": {
       "status": "ready",
@@ -2433,15 +2433,6 @@
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T14:30:29-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 63610 SUI-USD @ 0.9431 \u00b7 notional $59,991 (20x, margin $3,000) \u00b7 stop 0.90538 \u00b7 tgt 1.0185 \u00b7 risk $2,399.37",
-      "reason": "CHAOS A SUI-USD: high-conviction momentum swing \u2014 long (24h +2.06% from public stats open), notional $59,991 @ 20x paper (margin $3,000), stop 4.0% / tgt 8.0%/12.0%, risk $2,399 (4.8% eq; chaos cap 100%)",
-      "fill_id": "2026-10-29_SUI-USD_92",
-      "card": "CHAOS_SUI"
-    },
     {
       "t": "2026-10-29T14:30:39-03:00",
       "agent": "Logger",
@@ -3918,6 +3909,13 @@
       "kind": "plan",
       "text": "HOLD 6: book ~18x with ~$3k stop-funding cushion; no free margin for a new open, nothing invalidated to fund a rotation, no new high-conviction setup in a flat weekend tape",
       "reason": "race mode: stay fully deployed, cut only on invalidation"
+    },
+    {
+      "t": "2026-10-31T17:00:43-03:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 16:55 race hold \u00b7 eq $51,695 \u00b7 exposure $898,094 (17.37x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
