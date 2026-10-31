@@ -1230,7 +1230,7 @@ window.__DESK_STATE__ = {
     "Rug Check": {
       "status": "idle",
       "last_run": "2026-10-30T21:04:10-03:00",
-      "note": "SOL-USD PASS"
+      "note": "LINK-USD PASS"
     },
     "Sizer": {
       "status": "ready",
@@ -2231,13 +2231,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:50:19-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "SOL-USD PASS",
-      "reason": "Coinbase SOL-USD status online; 24h vol $35.1M \u2265 $5M; spread 0.010% \u2264 0.25%; \u00b11% depth $3,323,967 \u2265 max($25k, 50\u00d7 notional $8,000); long-listed CEX major"
-    },
     {
       "t": "2026-10-27T23:50:19-03:00",
       "agent": "Executor",
@@ -3758,6 +3751,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE SOL: most liquid alt ($105M 24h), +1.9% 4h higher lows off 94.51, reclaiming 96 \u2014 long, notional $219,964 @ 20x paper (margin $10,998), stop 3% / tgt 6%/10%, risk $6,598 (12.7% eq)",
       "fill_id": "2026-10-30_SOL-USD_143",
       "card": "RACE_SOL"
+    },
+    {
+      "t": "2026-10-30T21:04:10-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "LINK-USD PASS",
+      "reason": "vol $20.5M, spread 0.026%; Coinbase-listed major"
     }
   ],
   "scanner_feed": [
