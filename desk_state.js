@@ -1337,8 +1337,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-10-31T09:54:22-03:00",
-      "note": "HOLD 6: buying power $0 (exposure above equity\u00d720) and cash at ~$3k stop-funding cushion \u2014 no margin for new fills; no t"
+      "last_run": "2026-10-31T10:58:43-03:00",
+      "note": "HOLD 6: book at ~19x of 20x cap and cash at ~$3k thin stop-funding cushion \u2014 no free margin for a new high-conviction fi"
     },
     "Logger": {
       "status": "ready",
@@ -2399,14 +2399,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T08:10:07-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE XRP-USD @ 1.2914 \u00b7 P&L $-20.41",
-      "reason": "stop hit: mark 1.2914 < stop 1.3049 (08:10 BRT scanner routine)",
-      "fill_id": "2026-10-28_XRP-USD_72"
-    },
     {
       "t": "2026-10-29T08:10:07-03:00",
       "agent": "Executor",
@@ -3907,6 +3899,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "Exit check vs public 5m candles since entry: no stop or target touched on any of 6 positions; no 15m close below 4h low on longs; longs drifting -0.2/-0.3% 1h but above 4h lows \u2014 thesis intact, no rotation",
       "reason": "UNI lo 6.8675 vs stop 6.8508 (closest); SOL 95.58 vs 4h low 95.27; BTC short hi 77588 vs stop 80250"
+    },
+    {
+      "t": "2026-10-31T10:58:43-03:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "HOLD 6: book at ~19x of 20x cap and cash at ~$3k thin stop-funding cushion \u2014 no free margin for a new high-conviction fill; no liquid setup better than current book; no thesis broken to rotate",
+      "reason": "race mode: stay fully deployed, cut only on invalidation"
     }
   ],
   "scanner_feed": [
