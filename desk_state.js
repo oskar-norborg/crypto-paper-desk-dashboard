@@ -1202,8 +1202,8 @@ window.__DESK_STATE__ = {
     },
     "Rug Check": {
       "status": "idle",
-      "last_run": "2026-10-30T21:04:06-03:00",
-      "note": "15 names SOFT-WARN on 24h vol < $5M (non-blocking); all trades restricted to \u2265 $5M names"
+      "last_run": "2026-10-30T21:04:10-03:00",
+      "note": "SOL-USD PASS"
     },
     "Sizer": {
       "status": "ready",
@@ -2199,13 +2199,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:50:19-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "ETH-USD PASS",
-      "reason": "Coinbase ETH-USD status online; 24h vol $168.8M \u2265 $5M; spread 0.000% \u2264 0.25%; \u00b11% depth $6,743,702 \u2265 max($25k, 50\u00d7 notional $10,000); long-listed CEX major"
-    },
     {
       "t": "2026-10-27T23:50:19-03:00",
       "agent": "Executor",
@@ -3726,6 +3719,13 @@ window.__DESK_STATE__ = {
       "kind": "plan",
       "text": "RACE rotate: flip to concentrated 20x longs in the strongest liquid bouncers (SOL, LINK, UNI, XLM); keep BTC + NEAR shorts as in-profit hedge",
       "reason": "bounce is broad and grinding up on 1h/4h; NEAR still weakening; fewer larger positions to move equity"
+    },
+    {
+      "t": "2026-10-30T21:04:10-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "SOL-USD PASS",
+      "reason": "vol $104.8M, spread 0.010%; Coinbase-listed major"
     }
   ],
   "scanner_feed": [
