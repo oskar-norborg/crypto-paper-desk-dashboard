@@ -5,12 +5,12 @@
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 51962.49,
-  "cash": 18223.65,
-  "realized_pnl": -3283.59,
-  "unrealized_pnl": 5246.08,
-  "day_pnl": -2411.95,
-  "day_pnl_pct": -0.04436,
+  "equity": 51989.33,
+  "cash": 25579.82,
+  "realized_pnl": -2424.71,
+  "unrealized_pnl": 4414.04,
+  "day_pnl": -2385.11,
+  "day_pnl_pct": -0.04386,
   "day_baseline_date": "2026-10-30",
   "day_baseline_equity": 54374.44,
   "open_positions": [
@@ -69,33 +69,6 @@
       "exposure": 199831.24
     },
     {
-      "id": "2026-10-30_SOL-USD_127",
-      "symbol": "SOL-USD",
-      "side": "short",
-      "size": 1342.0,
-      "entry": 96.83,
-      "notional": 129945.86,
-      "stop": 99.735,
-      "target": 91.02,
-      "target2": 87.147,
-      "invalidation": "exit on any trade through stop 99.735, at target, or on chaos rotate",
-      "risk_usd": 3898.51,
-      "risk_pct_equity": 0.07155,
-      "opened_at": "2026-10-30T08:08:36-03:00",
-      "card": "CHAOS_SOL",
-      "reason": "CHAOS rotate SOL-USD: momentum short re-entry, selloff continuing \u2014 short (24h -3.42% from public stats open), notional $129,946 @ 20x paper (margin $6,497), stop 3.0% / tgt 6.0%/10.0%, risk $3,899 (7.2% eq; chaos cap 100%)",
-      "price_source": "coinbase_exchange_public_ticker 2026-10-30T08:08:35-03:00 BRT (exch 2026-10-30T11:08:35.522682246Z) api.exchange.coinbase.com",
-      "override": null,
-      "paper_only": true,
-      "leverage": 20.0,
-      "margin": 6497.29,
-      "mark": 96.21,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-10-30T21:03:08-03:00",
-      "unrealized_pnl": 832.04,
-      "exposure": 129113.82
-    },
-    {
       "id": "2026-10-30_NEAR-USD_131",
       "symbol": "NEAR-USD",
       "side": "short",
@@ -123,7 +96,7 @@
       "exposure": 78696.47
     }
   ],
-  "open_count": 4,
+  "open_count": 3,
   "closed_positions": [
     {
       "type": "close",
@@ -1172,11 +1145,28 @@
       "reason": "thesis broken: momentum reversed \u2014 broad alt bounce, rising on 1h/4h public 15m candles and green on 24h; exit plan 'or on chaos rotate'; recycle margin into longs",
       "price_source": "coinbase_exchange_public_ticker 2026-10-30T21:04:07-03:00 BRT (exch 2026-10-31T00:04:06.052654907Z) api.exchange.coinbase.com",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-30_SOL-USD_127",
+      "symbol": "SOL-USD",
+      "side": "short",
+      "size": 1342.0,
+      "entry": 96.83,
+      "exit": 96.19,
+      "pnl": 858.88,
+      "notional": 129945.86,
+      "leverage": 20.0,
+      "margin": 6497.29,
+      "closed_at": "2026-10-30T21:04:07-03:00",
+      "reason": "thesis broken: momentum reversed \u2014 broad alt bounce, rising on 1h/4h public 15m candles and green on 24h; exit plan 'or on chaos rotate'; recycle margin into longs",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-30T21:04:07-03:00 BRT (exch 2026-10-31T00:04:05.724438979Z) api.exchange.coinbase.com",
+      "paper_only": true
     }
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 51962.49,
+  "max_risk_usd": 51989.33,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -543744.4,
   "paused": false,
@@ -1232,7 +1222,7 @@
     "Executor": {
       "status": "ready",
       "last_run": "2026-10-30T21:04:07-03:00",
-      "note": "last: closed XRP-USD"
+      "note": "last: closed SOL-USD"
     },
     "Logger": {
       "status": "ready",
@@ -2200,16 +2190,14 @@
       "t": "2026-10-30T21:04:07-03:00",
       "equity": 51962.49,
       "kind": "close"
+    },
+    {
+      "t": "2026-10-30T21:04:07-03:00",
+      "equity": 51989.33,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:50:08-03:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "v1.1 $50k session: batch 1 closed (7)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
     {
       "t": "2026-10-27T23:50:18-03:00",
       "agent": "Executor",
@@ -3730,6 +3718,14 @@
       "text": "PAPER CLOSE XRP-USD @ 1.2555 \u00b7 P&L $-183.52",
       "reason": "thesis broken: momentum reversed \u2014 broad alt bounce, rising on 1h/4h public 15m candles and green on 24h; exit plan 'or on chaos rotate'; recycle margin into longs",
       "fill_id": "2026-10-30_XRP-USD_128"
+    },
+    {
+      "t": "2026-10-30T21:04:07-03:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE SOL-USD @ 96.19 \u00b7 P&L $+858.88",
+      "reason": "thesis broken: momentum reversed \u2014 broad alt bounce, rising on 1h/4h public 15m candles and green on 24h; exit plan 'or on chaos rotate'; recycle margin into longs",
+      "fill_id": "2026-10-30_SOL-USD_127"
     }
   ],
   "scanner_feed": [
@@ -4450,8 +4446,8 @@
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 28492.76,
-  "exposure": 564609.28,
-  "buying_power": 474640.52,
-  "effective_leverage": 10.87
+  "margin_used": 21995.47,
+  "exposure": 435495.46,
+  "buying_power": 604291.14,
+  "effective_leverage": 8.38
 }
