@@ -1321,8 +1321,8 @@
   "agents": {
     "Scanner": {
       "status": "idle",
-      "last_run": "2026-10-31T08:52:54-03:00",
-      "note": "08:52 race cycle: hold 6, no fills"
+      "last_run": "2026-10-31T09:54:22-03:00",
+      "note": "CHAOS race cycle 09:54 BRT: 30/30 public marks; quiet tape (BTC +0.1%, ETH +0.8% 24h); alts firming 1h (LINK +0.8%, UNI "
     },
     "Rug Check": {
       "status": "idle",
@@ -2393,13 +2393,6 @@
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-28T16:10:51-03:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "16:10 BRT scan: 8 PASS / 22 FAIL",
-      "reason": "Coinbase Exchange public ticker/product/L2 book; PEPE-USD (held) fails spread 0.41% > 0.25% (entry gate only, kept); XLM-USD (held) still < $5M vol; LTC-USD and ADA-USD back above $5M"
-    },
     {
       "t": "2026-10-28T16:10:51-03:00",
       "agent": "Rug Check",
@@ -3907,6 +3900,13 @@
       "kind": "scan",
       "text": "08:52 race cycle: hold 6, no fills",
       "reason": "No stops/targets/invalidations hit; at 20.8x cap, buying power 0; equity 42767.57, gap to 1M 957232.43 (scans/2026-10-31_0852_scan.md)"
+    },
+    {
+      "t": "2026-10-31T09:54:22-03:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "CHAOS race cycle 09:54 BRT: 30/30 public marks; quiet tape (BTC +0.1%, ETH +0.8% 24h); alts firming 1h (LINK +0.8%, UNI +0.8%)",
+      "reason": "scheduled race cycle; scan scans/2026-10-31_0954_scan.md"
     }
   ],
   "scanner_feed": [
@@ -4856,7 +4856,7 @@
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-10-31T08:52:54-03:00",
+  "updated_at": "2026-10-31T09:54:22-03:00",
   "timezone_note": "All timestamps America/Sao_Paulo (UTC-03:00); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
