@@ -1337,8 +1337,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-10-31T10:58:43-03:00",
-      "note": "HOLD 6: book at ~19x of 20x cap and cash at ~$3k thin stop-funding cushion \u2014 no free margin for a new high-conviction fi"
+      "last_run": "2026-10-31T11:53:02-03:00",
+      "note": "HOLD 6: book at ~20x cap with ~$3k thin stop-funding cushion and zero buying power \u2014 no free margin for a new fill; no l"
     },
     "Logger": {
       "status": "ready",
@@ -2404,13 +2404,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T08:10:38-03:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "08:10 BRT scan: 13 PASS / 17 FAIL",
-      "reason": "Coinbase Exchange public ticker/product/L2 book; see scans/2026-10-29_0810_scan.md; HBAR/XLM back above $5M vol"
-    },
     {
       "t": "2026-10-29T12:07:57-03:00",
       "agent": "Rug Check",
@@ -3908,6 +3901,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "Exit check vs public 5m candles (last 4h): no stop or target touched on any of 6 positions; latest 15m closes above 4h lows on all longs \u2014 thesis intact, no rotation",
       "reason": "UNI 4h lo 6.9156 vs stop 6.8508; SOL 4h lo 95.38 vs stop 93.295; LINK 4h lo 11.473 vs stop 11.005; BTC short 4h hi 77588.57 vs stop 80250"
+    },
+    {
+      "t": "2026-10-31T11:53:02-03:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "HOLD 6: book at ~20x cap with ~$3k thin stop-funding cushion and zero buying power \u2014 no free margin for a new fill; no liquid setup clearly better than the current book; nothing invalidated to rotate",
+      "reason": "race mode: stay fully deployed, cut only on invalidation"
     }
   ],
   "scanner_feed": [
@@ -4857,7 +4857,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-10-31T11:53:01-03:00",
+  "updated_at": "2026-10-31T11:53:02-03:00",
   "timezone_note": "All timestamps America/Sao_Paulo (UTC-03:00); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
