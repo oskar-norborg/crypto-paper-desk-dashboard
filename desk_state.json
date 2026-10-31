@@ -2382,14 +2382,6 @@
       "t": "2026-10-28T12:14:32-03:00",
       "agent": "Executor",
       "kind": "close",
-      "text": "PAPER CLOSE XRP-USD @ 1.3131 \u00b7 P&L $-111.72",
-      "reason": "stop hit: mark 1.3131 < stop 1.3144 (12:14 BRT scanner routine)",
-      "fill_id": "2026-10-27_XRP-USD_60"
-    },
-    {
-      "t": "2026-10-28T12:14:32-03:00",
-      "agent": "Executor",
-      "kind": "close",
       "text": "PAPER CLOSE NEAR-USD @ 4.6167 \u00b7 P&L $-77.73",
       "reason": "stop hit: mark 4.6167 < stop 4.6376 (12:14 BRT scanner routine)",
       "fill_id": "2026-10-27_NEAR-USD_63"
@@ -3896,6 +3888,13 @@
       "kind": "check",
       "text": "16 names SOFT-WARN <$5M vol; new opens restricted to \u2265$5M names",
       "reason": "prefer liquid Coinbase majors"
+    },
+    {
+      "t": "2026-10-31T03:56:23-03:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "Exit check vs public 5m candles since entry: no stop or target touched on any of 6 positions; no 15m close below 4h low on longs",
+      "reason": "UNI lo 6.8675 vs stop 6.8508 (close call, now +1.25% 1h); SOL lo 95.43, LINK lo 11.342, XLM lo 0.168468, SUI lo 0.8913, BTC hi 77957.75 vs stop 80250"
     }
   ],
   "scanner_feed": [
