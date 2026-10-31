@@ -1321,8 +1321,8 @@
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-10-31T17:00:43-03:00",
-      "note": "CHAOS: 16:55 race hold \u00b7 eq $51,695 \u00b7 exposure $898,094 (17.37x)"
+      "last_run": "2026-10-31T17:58:47-03:00",
+      "note": "CHAOS: 17:58 SOL/SUI cut \u00b7 eq $49,611 \u00b7 exposure $579,402 (11.68x)"
     },
     "Equity": {
       "status": "ready",
@@ -2428,14 +2428,6 @@
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T14:31:49-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE DOGE-USD @ 0.08006 \u00b7 P&L $+112.62",
-      "reason": "CHAOS rotate: cut weakest (uP&L $+112.62) \u2014 recycle margin into fresh swings",
-      "fill_id": "2026-10-29_DOGE-USD_91"
-    },
     {
       "t": "2026-10-29T14:31:58-03:00",
       "agent": "Logger",
@@ -3911,6 +3903,13 @@
       "text": "PAPER CLOSE SUI-USD @ 0.8967 \u00b7 P&L $-1520.66",
       "reason": "Momentum reversed: 15m closes below prior 4h low and fresh lows, loser vs entry 0.9106 \u2014 rotate before stop",
       "fill_id": "2026-10-30_SUI-USD_148"
+    },
+    {
+      "t": "2026-10-31T17:58:47-03:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 17:58 SOL/SUI cut \u00b7 eq $49,611 \u00b7 exposure $579,402 (11.68x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
