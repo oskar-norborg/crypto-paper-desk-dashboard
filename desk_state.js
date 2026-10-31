@@ -2477,13 +2477,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-10-29T14:32:09-03:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: batch B opened \u00b7 eq $50,219 \u00b7 exposure $800,810 (15.95x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
-    {
       "t": "2026-10-29T14:33:19-03:00",
       "agent": "Logger",
       "kind": "batch",
@@ -3960,6 +3953,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 19:01 ET: 30 public marks, 0 failed; quiet weekend tape (BTC +0.29%, ETH +0.44%, SOL -0.87%, LINK +2.6%); no fresh breakout/breakdown clearing $5M vol",
       "reason": "scheduled race cycle; scan scans/2026-10-31_1901_scan.md"
+    },
+    {
+      "t": "2026-10-31T19:02:04-04:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "Exit check vs public 5m/15m candles (last 60m): no stop or target touched. LINK fading toward 4h low 11.718 but last 15m close 11.736 holds; UNI/XLM above 4h lows; SOL 60m high 96.07 < stop 96.91; BTC under 4h high 77623",
+      "reason": "hold all 5; theses intact"
     }
   ],
   "scanner_feed": [
