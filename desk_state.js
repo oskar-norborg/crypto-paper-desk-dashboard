@@ -1327,7 +1327,7 @@ window.__DESK_STATE__ = {
     },
     "Rug Check": {
       "status": "idle",
-      "last_run": "2026-10-31T12:56:43-03:00",
+      "last_run": "2026-10-31T13:53:16-03:00",
       "note": "Low-vol names SOFT-WARN on 24h vol < $5M (non-blocking); no new opens this cycle"
     },
     "Sizer": {
@@ -2414,14 +2414,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T14:30:14-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE XLM-USD @ 0.171353 \u00b7 P&L $-12.60",
-      "reason": "CHAOS flatten: close unlevered v1.1 position at public mark to free full cash as 20x paper margin",
-      "fill_id": "2026-10-27_XLM-USD_67"
-    },
     {
       "t": "2026-10-29T14:30:14-03:00",
       "agent": "Executor",
@@ -3914,6 +3906,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 13:53 BRT: 30 public marks; quiet weekend tape (BTC +0.3%, ETH +0.9%, SOL +1.1% 24h); NEAR +5.5% pressing 24h high on $23.7M vol is the only standout",
       "reason": "scheduled race cycle; scan scans/2026-10-31_1353_scan.md"
+    },
+    {
+      "t": "2026-10-31T13:53:16-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "Low-vol names SOFT-WARN on 24h vol < $5M (non-blocking); no new opens this cycle",
+      "reason": "prefer liquid Coinbase majors"
     }
   ],
   "scanner_feed": [
