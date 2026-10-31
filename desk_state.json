@@ -1211,8 +1211,8 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-10-30T21:04:07-03:00",
-      "note": "last: closed ETH-USD"
+      "last_run": "2026-10-30T21:04:10-03:00",
+      "note": "RACE rotate: flip to concentrated 20x longs in the strongest liquid bouncers (SOL, LINK, UNI, XLM); keep BTC + NEAR shor"
     },
     "Logger": {
       "status": "ready",
@@ -2198,15 +2198,6 @@
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:50:18-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 0.1483 BTC-USD @ 80863.7 \u00b7 stop 79651 \u00b7 tgt 82885 \u00b7 risk $179.84",
-      "reason": "v1.1 batch 2 open BTC-USD: re-entry/rotation at public mark, faster 1.5\u20132% stop \u2014 notional $11,992, stop \u22121.5% / tgt +2.5%/+3.5%, risk $180 (0.36% eq, cap 5%); no leverage",
-      "fill_id": "2026-10-27_BTC-USD_57",
-      "card": "V11_BTC"
-    },
     {
       "t": "2026-10-27T23:50:19-03:00",
       "agent": "Rug Check",
@@ -3727,6 +3718,13 @@
       "kind": "batch",
       "text": "CHAOS: alt shorts cut \u00b7 eq $52,133 \u00b7 exposure $235,575 (4.52x)",
       "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
+    },
+    {
+      "t": "2026-10-30T21:04:10-03:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "RACE rotate: flip to concentrated 20x longs in the strongest liquid bouncers (SOL, LINK, UNI, XLM); keep BTC + NEAR shorts as in-profit hedge",
+      "reason": "bounce is broad and grinding up on 1h/4h; NEAR still weakening; fewer larger positions to move equity"
     }
   ],
   "scanner_feed": [
