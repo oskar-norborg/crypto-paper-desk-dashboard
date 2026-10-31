@@ -1343,8 +1343,8 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-10-31T17:58:47-03:00",
-      "note": "last: paper fill SOL-USD"
+      "last_run": "2026-10-31T19:01:04-03:00",
+      "note": "No new opens: free cash \u2248 $3k is the stop-funding cushion only; book already ~17x of 20x cap"
     },
     "Logger": {
       "status": "ready",
@@ -2465,13 +2465,6 @@
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T14:32:00-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "NEAR-USD PASS (chaos: non-blocking)",
-      "reason": "vol $37.3M, spread 0.020%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
-    },
     {
       "t": "2026-10-29T14:32:00-03:00",
       "agent": "Executor",
@@ -3945,6 +3938,13 @@
       "kind": "check",
       "text": "Exit check vs public 5m/15m candles (last 60m): no stop or target touched on BTC/LINK/UNI/XLM/SOL. No invalidation: LINK/UNI/XLM above prior 4h lows, SOL short below stop 96.91 with 15m closing back at entry, BTC short under 4h high",
       "reason": "hold all 5; theses intact"
+    },
+    {
+      "t": "2026-10-31T19:01:04-03:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "No new opens: free cash \u2248 $3k is the stop-funding cushion only; book already ~17x of 20x cap",
+      "reason": "race mode \u2014 fully deployed; no idle margin to put to work"
     }
   ],
   "scanner_feed": [
