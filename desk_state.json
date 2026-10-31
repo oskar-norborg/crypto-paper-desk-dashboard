@@ -1348,8 +1348,8 @@
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-10-31T19:01:07-03:00",
-      "note": "CHAOS: 19:00 race hold \u00b7 eq $50,106 \u00b7 exposure $838,703 (16.74x)"
+      "last_run": "2026-10-31T19:02:06-04:00",
+      "note": "CHAOS: 19:01 ET race hold \u00b7 eq $49,635 \u00b7 exposure $835,516 (16.83x)"
     },
     "Equity": {
       "status": "ready",
@@ -2480,14 +2480,6 @@
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T14:33:19-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE LTC-USD @ 58.294 \u00b7 P&L $-31.56",
-      "reason": "CHAOS churn: dump worst (uP&L $-31.56) and reload",
-      "fill_id": "2026-10-29_LTC-USD_96"
-    },
     {
       "t": "2026-10-29T14:33:20-03:00",
       "agent": "Executor",
@@ -3964,6 +3956,13 @@
       "kind": "plan",
       "text": "No new opens: free cash \u2248 $3.0k is the stop-funding cushion only; book already ~17x of 20x cap",
       "reason": "race mode \u2014 fully deployed; no idle margin to put to work"
+    },
+    {
+      "t": "2026-10-31T19:02:06-04:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 19:01 ET race hold \u00b7 eq $49,635 \u00b7 exposure $835,516 (16.83x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
