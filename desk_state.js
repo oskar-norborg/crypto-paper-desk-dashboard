@@ -1342,8 +1342,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-10-30T21:59:42-03:00",
-      "note": "Race cycle 21:58 BRT: cut NEAR short (+$187), opened SUI 20x long"
+      "last_run": "2026-10-30T23:54:00-03:00",
+      "note": "CHAOS: race cycle 23:53 hold \u00b7 eq $49,338 \u00b7 exposure $895,152 (18.14x)"
     },
     "Equity": {
       "status": "ready",
@@ -2379,13 +2379,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-28T08:08:58-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "BTC-USD PASS",
-      "reason": "Coinbase BTC-USD status online; 24h vol $350.7M \u2265 $5M; spread 0.000% \u2264 0.25%; \u00b11% depth $13,268,384 \u2265 max($25k, 50\u00d7 notional $5,319); long-listed CEX major"
-    },
     {
       "t": "2026-10-28T08:08:58-03:00",
       "agent": "Executor",
@@ -3899,6 +3892,13 @@ window.__DESK_STATE__ = {
       "kind": "plan",
       "text": "HOLD: no fresh edge; free cash = ~$3k stop-funding cushion only, no margin to deploy; no position has invalidated momentum",
       "reason": "chop regime, 1h moves \u00b10.3%; rotation would just pay spread"
+    },
+    {
+      "t": "2026-10-30T23:54:00-03:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: race cycle 23:53 hold \u00b7 eq $49,338 \u00b7 exposure $895,152 (18.14x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
@@ -4604,7 +4604,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-10-30T23:53:51-03:00",
+  "updated_at": "2026-10-30T23:54:00-03:00",
   "timezone_note": "All timestamps America/Sao_Paulo (UTC-03:00); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
