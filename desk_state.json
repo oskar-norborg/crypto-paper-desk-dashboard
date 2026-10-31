@@ -6,7 +6,7 @@
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
   "equity": 52133.05,
-  "cash": 16791.46,
+  "cash": 9794.42,
   "realized_pnl": -2217.93,
   "unrealized_pnl": 4350.98,
   "day_pnl": -2241.39,
@@ -121,9 +121,36 @@
       "mark_at": "2026-10-30T21:04:09-03:00",
       "unrealized_pnl": 0.0,
       "exposure": 159922.8
+    },
+    {
+      "id": "2026-10-30_UNI-USD_145",
+      "symbol": "UNI-USD",
+      "side": "long",
+      "size": 19610.0,
+      "entry": 7.1362,
+      "notional": 139940.88,
+      "stop": 6.8508,
+      "target": 7.7071,
+      "target2": 7.9925,
+      "invalidation": "exit on any trade through stop 6.8508, at target, or if a 15m candle closes below the 4h low (bounce fails)",
+      "risk_usd": 5596.69,
+      "risk_pct_equity": 0.10735,
+      "opened_at": "2026-10-30T21:04:10-03:00",
+      "card": "RACE_UNI",
+      "reason": "RACE UNI: +9.7% 24h, +2.3% last hour, strongest liquid relative strength ($15M vol) \u2014 long, notional $139,941 @ 20x paper (margin $6,997), stop 4% / tgt 8%/12%, risk $5,597 (10.7% eq)",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-30T21:04:10-03:00 BRT (exch 2026-10-31T00:04:09.216990399Z) api.exchange.coinbase.com",
+      "override": null,
+      "paper_only": true,
+      "leverage": 20.0,
+      "margin": 6997.04,
+      "mark": 7.1362,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-10-30T21:04:10-03:00",
+      "unrealized_pnl": 0.0,
+      "exposure": 139940.88
     }
   ],
-  "open_count": 4,
+  "open_count": 5,
   "closed_positions": [
     {
       "type": "close",
@@ -1266,12 +1293,12 @@
     "Executor": {
       "status": "ready",
       "last_run": "2026-10-30T21:04:10-03:00",
-      "note": "last: paper fill LINK-USD"
+      "note": "last: paper fill UNI-USD"
     },
     "Logger": {
       "status": "ready",
       "last_run": "2026-10-30T21:04:10-03:00",
-      "note": "logged 2026-10-30_LINK-USD_144"
+      "note": "logged 2026-10-30_UNI-USD_145"
     },
     "Equity": {
       "status": "ready",
@@ -2259,18 +2286,14 @@
       "t": "2026-10-30T21:04:10-03:00",
       "equity": 52133.05,
       "kind": "fill"
+    },
+    {
+      "t": "2026-10-30T21:04:10-03:00",
+      "equity": 52133.05,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-27T23:50:20-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 5245 XRP-USD @ 1.3344 \u00b7 stop 1.3144 \u00b7 tgt 1.3678 \u00b7 risk $104.90",
-      "reason": "v1.1 batch 2 open XRP-USD: re-entry/rotation at public mark, faster 1.5\u20132% stop \u2014 notional $6,999, stop \u22121.5% / tgt +2.5%/+4.0%, risk $105 (0.21% eq, cap 5%); no leverage",
-      "fill_id": "2026-10-27_XRP-USD_60",
-      "card": "V11_XRP"
-    },
     {
       "t": "2026-10-27T23:50:20-03:00",
       "agent": "Rug Check",
@@ -3789,6 +3812,15 @@
       "kind": "check",
       "text": "UNI-USD PASS",
       "reason": "vol $14.8M, spread 0.039%; Coinbase-listed major"
+    },
+    {
+      "t": "2026-10-30T21:04:10-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 19610 UNI-USD @ 7.1362 \u00b7 notional $139,941 (20x, margin $6,997) \u00b7 stop 6.8508 \u00b7 tgt 7.7071 \u00b7 risk $5,596.69",
+      "reason": "RACE UNI: +9.7% 24h, +2.3% last hour, strongest liquid relative strength ($15M vol) \u2014 long, notional $139,941 @ 20x paper (margin $6,997), stop 4% / tgt 8%/12%, risk $5,597 (10.7% eq)",
+      "fill_id": "2026-10-30_UNI-USD_145",
+      "card": "RACE_UNI"
     }
   ],
   "scanner_feed": [
@@ -4509,8 +4541,8 @@
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 30990.61,
-  "exposure": 615461.33,
-  "buying_power": 427199.67,
-  "effective_leverage": 11.81
+  "margin_used": 37987.65,
+  "exposure": 755402.21,
+  "buying_power": 287258.79,
+  "effective_leverage": 14.49
 }
