@@ -1337,8 +1337,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-10-31T14:56:34-03:00",
-      "note": "HOLD 6: book near 20x cap with ~$3k stop-funding cushion and no buying power; NEAR breakout still noted but nothing inva"
+      "last_run": "2026-10-31T15:56:56-03:00",
+      "note": "HOLD 6: book ~18x with ~$3k stop-funding cushion; no free margin for a new open and nothing invalidated to fund a rotati"
     },
     "Logger": {
       "status": "ready",
@@ -2424,15 +2424,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T14:30:26-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 1379 SOL-USD @ 101.52 \u00b7 notional $139,996 (20x, margin $7,000) \u00b7 stop 104.57 \u00b7 tgt 95.429 \u00b7 risk $4,205.95",
-      "reason": "CHAOS A SOL-USD: high-conviction momentum swing \u2014 short (24h -0.01% from public stats open), notional $139,996 @ 20x paper (margin $7,000), stop 3.0% / tgt 6.0%/10.0%, risk $4,206 (8.5% eq; chaos cap 100%)",
-      "fill_id": "2026-10-29_SOL-USD_89",
-      "card": "CHAOS_SOL"
-    },
     {
       "t": "2026-10-29T14:30:27-03:00",
       "agent": "Rug Check",
@@ -3915,6 +3906,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "Exit check vs public 5m candles since open: no stop or target touched on any of 6 positions; last 15m closes above 4h lows on all longs \u2014 thesis intact, no rotation",
       "reason": "SOL lo 95.01 vs stop 93.295; LINK lo 11.297 vs 11.005; UNI lo 6.8675 vs 6.8508; XLM lo 0.168131 vs 0.1643; SUI lo 0.8913 vs 0.87418; BTC short hi 77645.12 vs 80250"
+    },
+    {
+      "t": "2026-10-31T15:56:56-03:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "HOLD 6: book ~18x with ~$3k stop-funding cushion; no free margin for a new open and nothing invalidated to fund a rotation",
+      "reason": "race mode: stay fully deployed, cut only on invalidation"
     }
   ],
   "scanner_feed": [
