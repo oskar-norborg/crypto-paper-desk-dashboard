@@ -2414,14 +2414,6 @@
   ],
   "activity": [
     {
-      "t": "2026-10-29T14:30:14-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE BTC-USD @ 81006.7 \u00b7 P&L $-18.70",
-      "reason": "CHAOS flatten: close unlevered v1.1 position at public mark to free full cash as 20x paper margin",
-      "fill_id": "2026-10-28_BTC-USD_68"
-    },
-    {
       "t": "2026-10-29T14:30:15-03:00",
       "agent": "Executor",
       "kind": "close",
@@ -3912,6 +3904,13 @@
       "kind": "check",
       "text": "Low-vol names SOFT-WARN on 24h vol < $5M (non-blocking); no new opens this cycle",
       "reason": "prefer liquid Coinbase majors"
+    },
+    {
+      "t": "2026-10-31T13:53:16-03:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "Exit check vs public 5m candles (last 4h): no stop or target touched on any of 6 positions; last 15m closes above 4h lows on all longs \u2014 thesis intact, no rotation",
+      "reason": "UNI 4h lo 6.9405 vs stop 6.8508; SOL 4h lo 95.38 vs 93.295; LINK 4h lo 11.455 vs 11.005; XLM 4h lo 0.168725 vs 0.1643; SUI 4h lo 0.8924 vs 0.87418; BTC short 4h hi 77543.79 vs 80250"
     }
   ],
   "scanner_feed": [
