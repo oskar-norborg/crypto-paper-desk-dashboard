@@ -1343,7 +1343,7 @@ window.__DESK_STATE__ = {
     },
     "Sizer": {
       "status": "ready",
-      "last_run": "2026-11-01T09:01:11-05:00",
+      "last_run": "2026-11-01T10:05:38-05:00",
       "note": "No new open this cycle"
     },
     "Executor": {
@@ -2560,14 +2560,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T20:04:09-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE HBAR-USD @ 0.06912 \u00b7 P&L $+2592.32",
-      "reason": "target 1 hit: public 5m candle low 0.06622 \u2264 target 0.067068 (exit plan: exit at target); closed at current public mark",
-      "fill_id": "2026-10-29_HBAR-USD_113"
-    },
     {
       "t": "2026-10-29T20:04:18-03:00",
       "agent": "Logger",
@@ -4030,6 +4022,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "Exit check vs public 5m candles since 09:00 ET: no stop/target touched. ETH lo 2262.06 > stop 2229.7, hi 2270.09 < tgt 2331.6; UNI lo 7.272 > stop 6.8508, hi 7.3941 < tgt 7.7071",
       "reason": "Hold both: UNI still +4.2% 24h, holding near highs; ETH above entry 2263.65, pressing 24h high 2275 \u2014 thesis intact"
+    },
+    {
+      "t": "2026-11-01T10:05:38-05:00",
+      "agent": "Sizer",
+      "kind": "skip",
+      "text": "No new open this cycle",
+      "reason": "Sunday range: no liquid name broke its 24h range on 5m (BTC 77.8-78.0k mid-range, ETH below 2275 high, SOL/XRP/NEAR/LINK flat or fading). Mid-range 20x entry is a coin flip; ~$26.6k free cash held for a confirmed ETH>2275 or BTC>78.13k break"
     }
   ],
   "scanner_feed": [
