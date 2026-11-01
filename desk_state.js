@@ -1339,8 +1339,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-10-31T20:04:06-04:00",
-      "note": "CHAOS: 20:03 ET race cycle \u00b7 closed LINK +$2,609 \u00b7 eq $47,811 \u00b7 exposure $671,156 (14.04x)"
+      "last_run": "2026-10-31T21:03:10-04:00",
+      "note": "CHAOS: 21:02 ET race hold \u00b7 eq $46,469 \u00b7 exposure $672,071 (14.46x)"
     },
     "Equity": {
       "status": "ready",
@@ -2486,15 +2486,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T14:33:31-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 69420 XRP-USD @ 1.2964 \u00b7 notional $89,996 (20x, margin $4,500) \u00b7 stop 1.3353 \u00b7 tgt 1.2186 \u00b7 risk $2,700.44",
-      "reason": "CHAOS C XRP-USD: final high-conviction reload \u2014 short (24h -1.46% from public stats open), notional $89,996 @ 20x paper (margin $4,500), stop 3.0% / tgt 6.0%/10.0%, risk $2,700 (5.4% eq; chaos cap 100%)",
-      "fill_id": "2026-10-29_XRP-USD_104",
-      "card": "CHAOS_XRP"
-    },
     {
       "t": "2026-10-29T14:33:40-03:00",
       "agent": "Logger",
@@ -3965,6 +3956,13 @@ window.__DESK_STATE__ = {
       "kind": "plan",
       "text": "No new opens: no liquid (>=$5M vol) setup with momentum on a dead weekend tape; ~$13.6k free cash held. Watch ETH > 2265 (24h high break) as next long trigger",
       "reason": "race mode deploys into high-conviction edges only; not forcing a fill"
+    },
+    {
+      "t": "2026-10-31T21:03:10-04:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 21:02 ET race hold \u00b7 eq $46,469 \u00b7 exposure $672,071 (14.46x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
