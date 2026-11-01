@@ -1343,8 +1343,8 @@
     },
     "Equity": {
       "status": "ready",
-      "last_run": "2026-10-31T20:03:31-04:00",
-      "note": "equity $47797.33 \u00b7 day +3361.60"
+      "last_run": "2026-10-31T20:04:01-04:00",
+      "note": "equity $47811.28 \u00b7 day +3375.55"
     }
   },
   "equity_curve": [
