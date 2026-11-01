@@ -2550,14 +2550,6 @@
   ],
   "activity": [
     {
-      "t": "2026-10-29T18:05:50-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE NEAR-USD @ 4.1404 \u00b7 P&L $+5630.14",
-      "reason": "target 1 hit at EOD review: short mark 4.1404 < target 4.2037 (exit plan: exit at target)",
-      "fill_id": "2026-10-29_NEAR-USD_98"
-    },
-    {
       "t": "2026-10-29T18:06:13-03:00",
       "agent": "Logger",
       "kind": "review",
@@ -4020,6 +4012,13 @@
       "kind": "scan",
       "text": "CHAOS race cycle 09:00 ET: 30 public marks; Sunday range chop continues \u2014 BTC 77867 (+0.65%) inside 77222-78126, ETH 2264 (+0.7%), SOL 94.78 (-0.8%), UNI 7.323 (+4.8%, near 24h high 7.343)",
       "reason": "scheduled race cycle; scan scans/2026-11-01_0900_scan.md"
+    },
+    {
+      "t": "2026-11-01T09:01:11-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "Exit check vs public 5m candles since 08:00 ET: no stop/target touched. ETH lo 2258.58 > stop 2229.7, hi 2265.68 < tgt 2331.6; UNI lo 7.2333 > stop 6.8508, hi 7.3101 < tgt 7.7071",
+      "reason": "Hold both: UNI winner with higher 15m closes, still strongest liquid RS; ETH 15m closes rising off 2257, above entry 2263.65 \u2014 thesis intact"
     }
   ],
   "scanner_feed": [
