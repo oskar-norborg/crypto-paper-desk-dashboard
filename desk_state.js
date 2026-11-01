@@ -1360,8 +1360,8 @@ window.__DESK_STATE__ = {
   "agents": {
     "Scanner": {
       "status": "idle",
-      "last_run": "2026-11-01T10:05:38-05:00",
-      "note": "10:05 ET race scan: 30/30 marks, 6 liquid PASS"
+      "last_run": "2026-11-01T11:01:30-05:00",
+      "note": "11:00 ET race scan: 30/30 marks, 6 liquid PASS"
     },
     "Rug Check": {
       "status": "idle",
@@ -2597,13 +2597,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T20:04:19-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "BTC-USD PASS (chaos: non-blocking)",
-      "reason": "vol $704.9M, spread 0.002%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
-    },
     {
       "t": "2026-10-29T20:04:19-03:00",
       "agent": "Executor",
@@ -4068,6 +4061,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE NEAR short: -4.2% 24h, weakest liquid name ($14.7M vol), 15m close 4.3251 broke prior 4h low 4.3266 after 8 straight lower 15m closes; new 24h low 4.3175. Short @ bid, 20x paper, stop above 15m lower-high structure 4.38, risk ~$2.5k (~5% eq)",
       "fill_id": "2026-11-01_NEAR-USD_159",
       "card": "CHAOS_NEAR"
+    },
+    {
+      "t": "2026-11-01T11:01:30-05:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "11:00 ET race scan: 30/30 marks, 6 liquid PASS",
+      "reason": "BTC/ETH/SOL/XRP/NEAR/LINK >= $5M vol; UNI $4.1M soft-warn"
     }
   ],
   "scanner_feed": [
@@ -5031,7 +5031,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-01T11:01:22-05:00",
+  "updated_at": "2026-11-01T11:01:30-05:00",
   "timezone_note": "All timestamps America/Sao_Paulo (UTC-03:00); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
