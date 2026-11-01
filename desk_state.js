@@ -2483,13 +2483,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-10-29T14:33:29-03:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "CHAOS batch C: final reload ETH-USD, SOL-USD, XRP-USD",
-      "reason": "leave a concentrated leveraged book open into the weekend"
-    },
-    {
-      "t": "2026-10-29T14:33:29-03:00",
       "agent": "Rug Check",
       "kind": "check",
       "text": "ETH-USD PASS (chaos: non-blocking)",
@@ -3964,6 +3957,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 20:03 ET: 30 public marks, 0 failed; flat weekend tape (BTC +0.01%, ETH +0.31%, SOL -1.33%, NEAR +1.88%); liquid names ~0% over 1h/4h",
       "reason": "scheduled race cycle; scan scans/2026-10-31_2003_scan.md"
+    },
+    {
+      "t": "2026-10-31T20:04:01-04:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "Exit check vs public 5m/15m candles: LINK 19:45 15m close 11.631 < prior 4h low 11.649 -> invalidation, closed +$2,609. UNI (7.0638 vs 4h lo 7.0453) and XLM (0.169438 vs 0.168919) hold above 4h lows; BTC/SOL shorts well under stops",
+      "reason": "hold 4; close LINK"
     }
   ],
   "scanner_feed": [
