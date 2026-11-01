@@ -5,42 +5,15 @@
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 46664.21,
-  "cash": 17749.05,
-  "realized_pnl": -4381.7,
-  "unrealized_pnl": 1045.91,
-  "day_pnl": -415.39,
-  "day_pnl_pct": -0.00882,
+  "equity": 46564.2,
+  "cash": 24669.61,
+  "realized_pnl": -4458.18,
+  "unrealized_pnl": 1022.38,
+  "day_pnl": -515.4,
+  "day_pnl_pct": -0.01095,
   "day_baseline_date": "2026-11-01",
   "day_baseline_equity": 47079.6,
   "open_positions": [
-    {
-      "id": "2026-10-30_UNI-USD_145",
-      "symbol": "UNI-USD",
-      "side": "long",
-      "size": 19610.0,
-      "entry": 7.1362,
-      "notional": 139940.88,
-      "stop": 6.8508,
-      "target": 7.7071,
-      "target2": 7.9925,
-      "invalidation": "exit on any trade through stop 6.8508, at target, or if a 15m candle closes below the 4h low (bounce fails)",
-      "risk_usd": 5596.69,
-      "risk_pct_equity": 0.10735,
-      "opened_at": "2026-10-30T21:04:10-03:00",
-      "card": "RACE_UNI",
-      "reason": "RACE UNI: +9.7% 24h, +2.3% last hour, strongest liquid relative strength ($15M vol) \u2014 long, notional $139,941 @ 20x paper (margin $6,997), stop 4% / tgt 8%/12%, risk $5,597 (10.7% eq)",
-      "price_source": "coinbase_exchange_public_ticker 2026-10-30T21:04:10-03:00 BRT (exch 2026-10-31T00:04:09.216990399Z) api.exchange.coinbase.com",
-      "override": null,
-      "paper_only": true,
-      "leverage": 20.0,
-      "margin": 6997.04,
-      "mark": 7.1374,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-01T13:05:41-05:00",
-      "unrealized_pnl": 23.53,
-      "exposure": 139964.41
-    },
     {
       "id": "2026-10-31_ETH-USD_154",
       "symbol": "ETH-USD",
@@ -96,7 +69,7 @@
       "exposure": 176271.3
     }
   ],
-  "open_count": 3,
+  "open_count": 2,
   "closed_positions": [
     {
       "type": "close",
@@ -1315,11 +1288,28 @@
       "reason": "thesis broken: 24h-high breakout failed \u2014 BTC rejected 78126, 4h of lower highs, back to the 77748 breakout level with low 77605 just $55 above stop; rotate loser before it kisses stop",
       "price_source": "coinbase_exchange_public_ticker 2026-11-01T08:01:35-05:00 BRT (exch 2026-11-01T13:01:34.541423138Z) api.exchange.coinbase.com",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-30_UNI-USD_145",
+      "symbol": "UNI-USD",
+      "side": "long",
+      "size": 19610.0,
+      "entry": 7.1362,
+      "exit": 7.1323,
+      "pnl": -76.48,
+      "notional": 139940.88,
+      "leverage": 20.0,
+      "margin": 6997.04,
+      "closed_at": "2026-11-01T13:06:15-05:00",
+      "reason": "thesis broken: bounce failed \u2014 UNI faded from 7.386 4h high to new 4h low 7.121 on 15m; rotate before stop; also sub-$5M 24h vol",
+      "price_source": "coinbase exchange public ticker bid 13:06 ET",
+      "paper_only": true
     }
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 46664.21,
+  "max_risk_usd": 46564.2,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -470796.0,
   "paused": false,
@@ -1374,8 +1364,8 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-01T11:01:19-05:00",
-      "note": "last: paper fill NEAR-USD"
+      "last_run": "2026-11-01T13:06:15-05:00",
+      "note": "last: closed UNI-USD"
     },
     "Logger": {
       "status": "ready",
@@ -2603,16 +2593,14 @@
       "t": "2026-11-01T13:05:41-05:00",
       "equity": 46664.21,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-01T13:06:15-05:00",
+      "equity": 46564.2,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T20:04:29-03:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: 20:00 cycle book \u00b7 eq $61,241 \u00b7 exposure $707,963 (11.56x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
     {
       "t": "2026-10-30T08:08:32-03:00",
       "agent": "Scanner",
@@ -4071,6 +4059,14 @@
       "kind": "batch",
       "text": "CHAOS: 12:07 ET race cycle \u00b7 hold ETH + UNI longs, NEAR short \u00b7 no fills/closes",
       "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
+    },
+    {
+      "t": "2026-11-01T13:06:15-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE UNI-USD @ 7.1323 \u00b7 P&L $-76.48",
+      "reason": "thesis broken: bounce failed \u2014 UNI faded from 7.386 4h high to new 4h low 7.121 on 15m; rotate before stop; also sub-$5M 24h vol",
+      "fill_id": "2026-10-30_UNI-USD_145"
     }
   ],
   "scanner_feed": [
@@ -5035,7 +5031,7 @@
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-01T13:05:41-05:00",
+  "updated_at": "2026-11-01T13:06:15-05:00",
   "timezone_note": "All timestamps America/Sao_Paulo (UTC-03:00); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -5050,9 +5046,9 @@
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 27869.25,
-  "exposure": 555979.09,
-  "buying_power": 377305.11,
-  "effective_leverage": 11.91,
+  "margin_used": 20872.21,
+  "exposure": 416014.68,
+  "buying_power": 515269.32,
+  "effective_leverage": 8.93,
   "operating_timezone": "America/New_York"
 }
