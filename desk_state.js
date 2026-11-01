@@ -1343,7 +1343,7 @@ window.__DESK_STATE__ = {
     },
     "Sizer": {
       "status": "ready",
-      "last_run": "2026-11-01T08:01:35-05:00",
+      "last_run": "2026-11-01T09:01:11-05:00",
       "note": "No new open this cycle"
     },
     "Executor": {
@@ -2550,13 +2550,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T18:06:13-03:00",
-      "agent": "Logger",
-      "kind": "review",
-      "text": "EOD review 2026-10-29 \u00b7 eq $62,618 \u00b7 day +27.52% \u00b7 5 open \u00b7 7.81x",
-      "reason": "EOD paper review routine: final public marks, exit plans enforced (BTC stop, NEAR target 1), review written to reviews/2026-10-29.md"
-    },
     {
       "t": "2026-10-29T20:04:09-03:00",
       "agent": "Scanner",
@@ -4020,6 +4013,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "Exit check vs public 5m candles since 08:00 ET: no stop/target touched. ETH lo 2258.58 > stop 2229.7, hi 2265.68 < tgt 2331.6; UNI lo 7.2333 > stop 6.8508, hi 7.3101 < tgt 7.7071",
       "reason": "Hold both: UNI winner with higher 15m closes, still strongest liquid RS; ETH 15m closes rising off 2257, above entry 2263.65 \u2014 thesis intact"
+    },
+    {
+      "t": "2026-11-01T09:01:11-05:00",
+      "agent": "Sizer",
+      "kind": "skip",
+      "text": "No new open this cycle",
+      "reason": "No liquid (>=$5M vol) name is breaking its 24h range on 5m/15m; BTC/SOL/XRP/NEAR/LINK all mid-range. Forcing a 20x entry mid-range is a coin flip, not an edge; ~$26.6k free cash stays ready for a confirmed break"
     }
   ],
   "scanner_feed": [
