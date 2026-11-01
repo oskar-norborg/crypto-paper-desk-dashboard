@@ -5,12 +5,12 @@
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 46564.2,
-  "cash": 24669.61,
+  "equity": 46504.2,
+  "cash": 15213.61,
   "realized_pnl": -4458.18,
-  "unrealized_pnl": 1022.38,
-  "day_pnl": -515.4,
-  "day_pnl_pct": -0.01095,
+  "unrealized_pnl": 962.38,
+  "day_pnl": -575.4,
+  "day_pnl_pct": -0.01222,
   "day_baseline_date": "2026-11-01",
   "day_baseline_equity": 47079.6,
   "open_positions": [
@@ -67,9 +67,36 @@
       "mark_at": "2026-11-01T13:05:40-05:00",
       "unrealized_pnl": 1225.9,
       "exposure": 176271.3
+    },
+    {
+      "id": "2026-11-01_SOL-USD_161",
+      "symbol": "SOL-USD",
+      "side": "short",
+      "size": 2000.0,
+      "entry": 94.56,
+      "notional": 189120.0,
+      "stop": 95.25,
+      "target": 92.6,
+      "target2": 92.0,
+      "invalidation": "exit on any trade through stop 95.25, at target, or if a 15m candle closes back above 95.00 (breakdown fails)",
+      "risk_usd": 1380.0,
+      "risk_pct_equity": 0.02964,
+      "opened_at": "2026-11-01T13:06:15-05:00",
+      "card": null,
+      "reason": "breakdown continuation: SOL -1.4% 24h pressing 24h low 94.18, lower highs on 15m, broad alt fade; liquid $37.6M vol",
+      "price_source": "coinbase exchange public ticker bid 94.56 @ 18:06:09Z",
+      "override": null,
+      "paper_only": true,
+      "leverage": 20.0,
+      "margin": 9456.0,
+      "mark": 94.59,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-01T13:05:40-05:00",
+      "unrealized_pnl": -60.0,
+      "exposure": 189180.0
     }
   ],
-  "open_count": 2,
+  "open_count": 3,
   "closed_positions": [
     {
       "type": "close",
@@ -1309,7 +1336,7 @@
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 46564.2,
+  "max_risk_usd": 46504.2,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -470796.0,
   "paused": false,
@@ -1365,12 +1392,12 @@
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-01T13:06:15-05:00",
-      "note": "last: closed UNI-USD"
+      "note": "last: paper fill SOL-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-01T12:07:58-05:00",
-      "note": "CHAOS: 12:07 ET race cycle \u00b7 hold ETH + UNI longs, NEAR short \u00b7 no fills/closes"
+      "last_run": "2026-11-01T13:06:15-05:00",
+      "note": "logged 2026-11-01_SOL-USD_161"
     },
     "Equity": {
       "status": "ready",
@@ -2598,16 +2625,14 @@
       "t": "2026-11-01T13:06:15-05:00",
       "equity": 46564.2,
       "kind": "close"
+    },
+    {
+      "t": "2026-11-01T13:06:15-05:00",
+      "equity": 46504.2,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-30T08:08:32-03:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS cycle 08:00 BRT: 30/30 public marks; selloff continuing but cooling (27/30 red on 24h; TIA \u221212.4%, INJ \u22128.2%, BTC \u22123.1%; PEPE +6.9%, BCH +2.4%)",
-      "reason": "scheduled scanner run; scan file scans/2026-10-30_0808_scan.md"
-    },
     {
       "t": "2026-10-30T08:08:32-03:00",
       "agent": "Rug Check",
@@ -4067,6 +4092,15 @@
       "text": "PAPER CLOSE UNI-USD @ 7.1323 \u00b7 P&L $-76.48",
       "reason": "thesis broken: bounce failed \u2014 UNI faded from 7.386 4h high to new 4h low 7.121 on 15m; rotate before stop; also sub-$5M 24h vol",
       "fill_id": "2026-10-30_UNI-USD_145"
+    },
+    {
+      "t": "2026-11-01T13:06:15-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 2000 SOL-USD @ 94.56 \u00b7 notional $189,120 (20x, margin $9,456) \u00b7 stop 95.25 \u00b7 tgt 92.6 \u00b7 risk $1,380.00",
+      "reason": "breakdown continuation: SOL -1.4% 24h pressing 24h low 94.18, lower highs on 15m, broad alt fade; liquid $37.6M vol",
+      "fill_id": "2026-11-01_SOL-USD_161",
+      "card": null
     }
   ],
   "scanner_feed": [
@@ -5046,9 +5080,9 @@
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 20872.21,
-  "exposure": 416014.68,
-  "buying_power": 515269.32,
-  "effective_leverage": 8.93,
+  "margin_used": 30328.21,
+  "exposure": 605194.68,
+  "buying_power": 324889.32,
+  "effective_leverage": 13.01,
   "operating_timezone": "America/New_York"
 }
