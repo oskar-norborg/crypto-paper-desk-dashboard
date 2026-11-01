@@ -6,12 +6,12 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 51317.22,
-  "cash": 7205.61,
-  "realized_pnl": -4458.18,
-  "unrealized_pnl": 5775.4,
-  "day_pnl": 4237.62,
-  "day_pnl_pct": 0.09001,
+  "equity": 52073.22,
+  "cash": 17873.61,
+  "realized_pnl": -1798.18,
+  "unrealized_pnl": 3871.4,
+  "day_pnl": 4993.62,
+  "day_pnl_pct": 0.10607,
   "day_baseline_date": "2026-11-01",
   "day_baseline_equity": 47079.6,
   "open_positions": [
@@ -95,36 +95,9 @@ window.__DESK_STATE__ = {
       "mark_at": "2026-11-01T18:00:23-05:00",
       "unrealized_pnl": 1640.0,
       "exposure": 187480.0
-    },
-    {
-      "id": "2026-11-01_LINK-USD_162",
-      "symbol": "LINK-USD",
-      "side": "short",
-      "size": 14000.0,
-      "entry": 11.44,
-      "notional": 160160.0,
-      "stop": 11.53,
-      "target": 11.25,
-      "target2": 11.15,
-      "invalidation": "exit on any trade through stop 11.53, at target, or if a 15m candle closes back above 11.50 (fade fails)",
-      "risk_usd": 1260.0,
-      "risk_pct_equity": 0.02576,
-      "opened_at": "2026-11-01T14:07:53-05:00",
-      "card": null,
-      "reason": "alt-fade continuation: LINK 8 of last 8 15m closes lower-or-flat from 11.54, pressing 4h low 11.419 while SOL/NEAR break down; liquid $7.4M vol",
-      "price_source": "coinbase exchange public ticker bid 11.44 @ 19:07:53Z",
-      "override": null,
-      "paper_only": true,
-      "leverage": 20.0,
-      "margin": 8008.0,
-      "mark": 11.304,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-01T18:00:22-05:00",
-      "unrealized_pnl": 1904.0,
-      "exposure": 158256.0
     }
   ],
-  "open_count": 4,
+  "open_count": 3,
   "closed_positions": [
     {
       "type": "close",
@@ -1360,11 +1333,28 @@ window.__DESK_STATE__ = {
       "reason": "thesis broken: bounce failed \u2014 UNI faded from 7.386 4h high to new 4h low 7.121 on 15m; rotate before stop; also sub-$5M 24h vol",
       "price_source": "coinbase exchange public ticker bid 13:06 ET",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-01_LINK-USD_162",
+      "symbol": "LINK-USD",
+      "side": "short",
+      "size": 14000.0,
+      "entry": 11.44,
+      "exit": 11.25,
+      "pnl": 2660.0,
+      "notional": 160160.0,
+      "leverage": 20.0,
+      "margin": 8008.0,
+      "closed_at": "2026-11-01T18:00:38-05:00",
+      "reason": "target 1 hit: 5m candle 17:15 ET low 11.25, 17:20 ET low 11.218 (Coinbase public 5m candles)",
+      "price_source": "coinbase exchange public 5m candles 17:15-17:20 ET (api.exchange.coinbase.com), filled at target level",
+      "paper_only": true
     }
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 51317.22,
+  "max_risk_usd": 52073.22,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -470796.0,
   "paused": false,
@@ -1419,8 +1409,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-01T14:07:53-05:00",
-      "note": "last: paper fill LINK-USD"
+      "last_run": "2026-11-01T18:00:38-05:00",
+      "note": "last: closed LINK-USD"
     },
     "Logger": {
       "status": "ready",
@@ -2693,17 +2683,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-01T18:00:23-05:00",
       "equity": 51317.22,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-01T18:00:38-05:00",
+      "equity": 52073.22,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-30T08:08:32-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE ETH-USD @ 2243.83 \u00b7 P&L $+6326.68",
-      "reason": "target 1 touched overnight: public 5m candle target 2209.3 (5m low 2170.03); exit plan = exit at target; closed at current public mark (price retraced above target before this cycle)",
-      "fill_id": "2026-10-29_ETH-USD_110"
-    },
     {
       "t": "2026-10-30T08:08:32-03:00",
       "agent": "Executor",
@@ -4165,6 +4152,14 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "15:03 ET race cycle: 0 new, 4 held",
       "reason": "no trigger fired; XRP<1.2413 short / BTC>78126 long watched; scan scans/2026-11-01_1503_scan.md"
+    },
+    {
+      "t": "2026-11-01T18:00:38-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE LINK-USD @ 11.25 \u00b7 P&L $+2660.00",
+      "reason": "target 1 hit: 5m candle 17:15 ET low 11.25, 17:20 ET low 11.218 (Coinbase public 5m candles)",
+      "fill_id": "2026-11-01_LINK-USD_162"
     }
   ],
   "scanner_feed": [
@@ -5129,7 +5124,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-01T18:00:23-05:00",
+  "updated_at": "2026-11-01T18:00:38-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -5144,10 +5139,10 @@ window.__DESK_STATE__ = {
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 38336.21,
-  "exposure": 760015.9,
-  "buying_power": 266328.5,
-  "effective_leverage": 14.81,
+  "margin_used": 30328.21,
+  "exposure": 601759.9,
+  "buying_power": 439704.5,
+  "effective_leverage": 11.56,
   "operating_timezone": "America/New_York",
   "events": [
     {
