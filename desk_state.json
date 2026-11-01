@@ -1352,8 +1352,8 @@
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-01T04:01:38-05:00",
-      "note": "CHAOS: 04:00 ET race cycle \u00b7 closed SOL short + BTC short (bounce invalidation) \u00b7 opened BTC long \u00b7 eq $49,963 \u00b7 exposur"
+      "last_run": "2026-11-01T08:01:38-05:00",
+      "note": "CHAOS: 08:00 ET race cycle \u00b7 closed BTC long (failed breakout) \u00b7 hold ETH + UNI longs \u00b7 no new opens \u00b7 eq $47,366 \u00b7 expo"
     },
     "Equity": {
       "status": "ready",
@@ -2549,13 +2549,6 @@
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T16:07:52-03:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: 16:05 cycle book \u00b7 eq $46,297 \u00b7 exposure $845,343 (18.26x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
     {
       "t": "2026-10-29T18:05:50-03:00",
       "agent": "Executor",
@@ -4021,6 +4014,13 @@
       "kind": "skip",
       "text": "No new open this cycle",
       "reason": "Sunday chop: no liquid name shows a clean breakout or breakdown on 5m/15m; majors drifting inside 24h ranges. Idle only because no high-conviction edge clears checks"
+    },
+    {
+      "t": "2026-11-01T08:01:38-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 08:00 ET race cycle \u00b7 closed BTC long (failed breakout) \u00b7 hold ETH + UNI longs \u00b7 no new opens \u00b7 eq $47,366 \u00b7 exposure $381,636 (8.06x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
