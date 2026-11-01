@@ -6,12 +6,12 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 46468.83,
-  "cash": 13606.11,
-  "realized_pnl": -2543.57,
-  "unrealized_pnl": -987.6,
-  "day_pnl": 2033.1,
-  "day_pnl_pct": 0.04575,
+  "equity": 46372.07,
+  "cash": 17982.48,
+  "realized_pnl": -4166.62,
+  "unrealized_pnl": 538.69,
+  "day_pnl": 1936.34,
+  "day_pnl_pct": 0.04358,
   "day_baseline_date": "2026-10-31",
   "day_baseline_equity": 44435.73,
   "open_positions": [
@@ -70,33 +70,6 @@ window.__DESK_STATE__ = {
       "exposure": 138505.43
     },
     {
-      "id": "2026-10-30_XLM-USD_146",
-      "symbol": "XLM-USD",
-      "side": "long",
-      "size": 701100.0,
-      "entry": 0.171143,
-      "notional": 119988.36,
-      "stop": 0.1643,
-      "target": 0.18483,
-      "target2": 0.19168,
-      "invalidation": "exit on any trade through stop 0.1643, at target, or if a 15m candle closes below the 4h low (bounce fails)",
-      "risk_usd": 4797.63,
-      "risk_pct_equity": 0.09203,
-      "opened_at": "2026-10-30T21:04:11-03:00",
-      "card": "RACE_XLM",
-      "reason": "RACE XLM: +6.2% 24h, +1.3% 1h at 24h high on $12M vol \u2014 long, notional $119,988 @ 20x paper (margin $5,999), stop 4% / tgt 8%/12%, risk $4,798 (9.2% eq)",
-      "price_source": "coinbase_exchange_public_ticker 2026-10-30T21:04:11-03:00 BRT (exch 2026-10-31T00:03:56.479434440Z) api.exchange.coinbase.com",
-      "override": null,
-      "paper_only": true,
-      "leverage": 20.0,
-      "margin": 5999.42,
-      "mark": 0.168966,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-10-31T21:03:10-04:00",
-      "unrealized_pnl": -1526.29,
-      "exposure": 118462.06
-    },
-    {
       "id": "2026-10-31_SOL-USD_151",
       "symbol": "SOL-USD",
       "side": "short",
@@ -124,7 +97,7 @@ window.__DESK_STATE__ = {
       "exposure": 257423.87
     }
   ],
-  "open_count": 4,
+  "open_count": 3,
   "closed_positions": [
     {
       "type": "close",
@@ -1275,11 +1248,28 @@ window.__DESK_STATE__ = {
       "reason": "Invalidation: 19:45 ET 15m candle closed 11.631 below prior 4h low 11.649 (bounce failed); bank +$2.6k before fade reaches stop",
       "price_source": "coinbase_exchange_public_ticker 2026-10-31T20:03:42-04:00 ET (exch 2026-11-01T00:03:30Z) api.exchange.coinbase.com",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-30_XLM-USD_146",
+      "symbol": "XLM-USD",
+      "side": "long",
+      "size": 701100.0,
+      "entry": 0.171143,
+      "exit": 0.168828,
+      "pnl": -1623.05,
+      "notional": 119988.36,
+      "leverage": 20.0,
+      "margin": 5999.42,
+      "closed_at": "2026-10-31T22:08:47-04:00",
+      "reason": "invalidation: 15m close 0.168829 below 4h low 0.169064 (bounce failed); rotate loser",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-31T22:08:47-04:00 BRT (exch 2026-11-01T02:08:45.558438192Z) api.exchange.coinbase.com",
+      "paper_only": true
     }
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 46468.83,
+  "max_risk_usd": 46372.07,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -444357.3,
   "paused": false,
@@ -1334,8 +1324,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-10-31T21:03:07-04:00",
-      "note": "No new opens: no liquid (>=$5M vol) setup with momentum on a dead weekend tape; ~$13.6k free cash held. Watch ETH > 2265"
+      "last_run": "2026-10-31T22:08:47-04:00",
+      "note": "last: closed XLM-USD"
     },
     "Logger": {
       "status": "ready",
@@ -2483,16 +2473,14 @@ window.__DESK_STATE__ = {
       "t": "2026-10-31T21:03:10-04:00",
       "equity": 46468.83,
       "kind": "mark"
+    },
+    {
+      "t": "2026-10-31T22:08:47-04:00",
+      "equity": 46372.07,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T16:07:29-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "16 watchlist names SOFT-WARN on 24h vol < $5M (non-blocking under chaos v2.0)",
-      "reason": "all open/new names are liquid Coinbase majors; no hard blocks"
-    },
     {
       "t": "2026-10-29T16:07:29-03:00",
       "agent": "Risk",
@@ -3963,6 +3951,14 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "Exit check vs public 5m/15m candles: no stop/target touched. BTC 65m hi 77687 << stop 80250; SOL 65m hi 95.80 < stop 96.912; UNI 15m close 7.1054 > 4h low 7.038; XLM 15m candle closed 0.168829 below prior 4h low 0.169064 (new low 0.168361) -> invalidation hit",
       "reason": "XLM bounce thesis broken; hold BTC, SOL, UNI"
+    },
+    {
+      "t": "2026-10-31T22:08:47-04:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE XLM-USD @ 0.168828 \u00b7 P&L $-1623.05",
+      "reason": "invalidation: 15m close 0.168829 below 4h low 0.169064 (bounce failed); rotate loser",
+      "fill_id": "2026-10-30_XLM-USD_146"
     }
   ],
   "scanner_feed": [
@@ -4927,9 +4923,9 @@ window.__DESK_STATE__ = {
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 33850.32,
-  "exposure": 672070.68,
-  "buying_power": 257305.92,
-  "effective_leverage": 14.46,
+  "margin_used": 27850.9,
+  "exposure": 553608.62,
+  "buying_power": 373832.78,
+  "effective_leverage": 11.94,
   "operating_timezone": "America/New_York"
 };
