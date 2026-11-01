@@ -2562,13 +2562,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-10-29T20:04:09-03:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "HBAR-USD short target 1 0.067068 touched (public 5m candle low 0.06622); XRP/ETH/SOL/LTC shorts: no stop or target touched",
-      "reason": "stop/target/invalidation check vs Coinbase public 5m candles since entry"
-    },
-    {
-      "t": "2026-10-29T20:04:09-03:00",
       "agent": "Executor",
       "kind": "close",
       "text": "PAPER CLOSE HBAR-USD @ 0.06912 \u00b7 P&L $+2592.32",
@@ -4030,6 +4023,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "10:05 ET race scan: 30/30 marks, 6 liquid PASS",
       "reason": "BTC/ETH/SOL/XRP/NEAR/LINK >= $5M vol; UNI $4.1M soft-warn"
+    },
+    {
+      "t": "2026-11-01T10:05:38-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "Exit check vs public 5m candles since 09:00 ET: no stop/target touched. ETH lo 2262.06 > stop 2229.7, hi 2270.09 < tgt 2331.6; UNI lo 7.272 > stop 6.8508, hi 7.3941 < tgt 7.7071",
+      "reason": "Hold both: UNI still +4.2% 24h, holding near highs; ETH above entry 2263.65, pressing 24h high 2275 \u2014 thesis intact"
     }
   ],
   "scanner_feed": [
