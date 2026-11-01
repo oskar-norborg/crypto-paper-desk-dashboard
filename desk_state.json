@@ -2550,15 +2550,6 @@
   ],
   "activity": [
     {
-      "t": "2026-10-29T16:07:42-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 1216 LTC-USD @ 57.521 \u00b7 notional $69,946 (20x, margin $3,497) \u00b7 stop 59.247 \u00b7 tgt 54.07 \u00b7 risk $2,098.82",
-      "reason": "CHAOS rotate LTC-USD: momentum short into broad selloff \u2014 short (24h -3.32% from public stats open), notional $69,946 @ 20x paper (margin $3,497), stop 3.0% / tgt 6.0%/10.0%, risk $2,099 (4.5% eq; chaos cap 100%)",
-      "fill_id": "2026-10-29_LTC-USD_112",
-      "card": "CHAOS_LTC"
-    },
-    {
       "t": "2026-10-29T16:07:43-03:00",
       "agent": "Rug Check",
       "kind": "check",
@@ -4024,6 +4015,13 @@
       "kind": "scan",
       "text": "CHAOS race cycle 08:00 ET: 30 public marks; bounce faded \u2014 BTC rejected 78126 and back to 77772 (4h lower highs), ETH 2259, SOL 94.75 (-0.9%), UNI 7.236 (+4.1%); no fresh high-conviction breakout",
       "reason": "scheduled race cycle; scan scans/2026-11-01_0801_scan.md"
+    },
+    {
+      "t": "2026-11-01T08:01:35-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "Exit check vs public 5m candles since 04:01 ET: no stop/target touched. BTC lo 77605 > stop 77550, hi 78126 < tgt 79072; ETH lo 2251.56 > stop 2229.7; UNI lo 7.1596 > stop 6.8508",
+      "reason": "BTC long breakout failed (gave back the 77748->78126 break, lower highs 4h, low came within $55 of stop): rotate loser before stop. Hold ETH (wide stop, ~flat) and UNI (winner, still strongest RS)"
     }
   ],
   "scanner_feed": [
