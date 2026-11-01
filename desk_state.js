@@ -2488,13 +2488,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-10-29T16:07:29-03:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS cycle 16:05 BRT: 30/30 public marks; broad selloff (29/30 red on 24h, NEAR \u22127.5%, PEPE +6.0%)",
-      "reason": "scheduled scanner run; scan file scans/2026-10-29_1607_scan.md"
-    },
-    {
-      "t": "2026-10-29T16:07:29-03:00",
       "agent": "Rug Check",
       "kind": "check",
       "text": "16 watchlist names SOFT-WARN on 24h vol < $5M (non-blocking under chaos v2.0)",
@@ -3963,6 +3956,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 22:08 ET: 30 public marks, 0 failed; ETH broke 24h high 2265 (new hi 2273, last 15m close 2268.42); NEAR +3.1% 24h; BTC/SOL flat",
       "reason": "scheduled race cycle; scan scans/2026-10-31_2208_scan.md"
+    },
+    {
+      "t": "2026-10-31T22:08:47-04:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "Exit check vs public 5m/15m candles: no stop/target touched. BTC 65m hi 77687 << stop 80250; SOL 65m hi 95.80 < stop 96.912; UNI 15m close 7.1054 > 4h low 7.038; XLM 15m candle closed 0.168829 below prior 4h low 0.169064 (new low 0.168361) -> invalidation hit",
+      "reason": "XLM bounce thesis broken; hold BTC, SOL, UNI"
     }
   ],
   "scanner_feed": [
