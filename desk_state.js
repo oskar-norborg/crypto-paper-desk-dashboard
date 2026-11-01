@@ -1334,8 +1334,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-10-31T20:03:45-04:00",
-      "note": "last: closed LINK-USD"
+      "last_run": "2026-10-31T20:04:01-04:00",
+      "note": "No new opens: no liquid (>=$5M vol) setup with momentum \u2014 BTC/ETH/XRP/NEAR/LTC all within \u00b10.3% over 1h and 4h; freed LI"
     },
     "Logger": {
       "status": "ready",
@@ -2481,13 +2481,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T14:33:29-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "ETH-USD PASS (chaos: non-blocking)",
-      "reason": "vol $237.4M, spread 0.004%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
-    },
     {
       "t": "2026-10-29T14:33:29-03:00",
       "agent": "Executor",
@@ -3964,6 +3957,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "Exit check vs public 5m/15m candles: LINK 19:45 15m close 11.631 < prior 4h low 11.649 -> invalidation, closed +$2,609. UNI (7.0638 vs 4h lo 7.0453) and XLM (0.169438 vs 0.168919) hold above 4h lows; BTC/SOL shorts well under stops",
       "reason": "hold 4; close LINK"
+    },
+    {
+      "t": "2026-10-31T20:04:01-04:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "No new opens: no liquid (>=$5M vol) setup with momentum \u2014 BTC/ETH/XRP/NEAR/LTC all within \u00b10.3% over 1h and 4h; freed LINK margin held as cash until an edge clears",
+      "reason": "race mode says deploy into high-conviction edges only; none present, not forcing a fill on a dead tape"
     }
   ],
   "scanner_feed": [
