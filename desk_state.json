@@ -5,12 +5,12 @@
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 47797.33,
-  "cash": 3001.32,
-  "realized_pnl": -5152.22,
-  "unrealized_pnl": 2949.55,
-  "day_pnl": 3361.6,
-  "day_pnl_pct": 0.07565,
+  "equity": 47811.28,
+  "cash": 13606.11,
+  "realized_pnl": -2543.57,
+  "unrealized_pnl": 354.85,
+  "day_pnl": 3375.55,
+  "day_pnl_pct": 0.07596,
   "day_baseline_date": "2026-10-31",
   "day_baseline_equity": 44435.73,
   "open_positions": [
@@ -40,33 +40,6 @@
       "mark_at": "2026-10-31T20:03:29-04:00",
       "unrealized_pnl": 2590.98,
       "exposure": 157358.71
-    },
-    {
-      "id": "2026-10-30_LINK-USD_144",
-      "symbol": "LINK-USD",
-      "side": "long",
-      "size": 13950.0,
-      "entry": 11.464,
-      "notional": 159922.8,
-      "stop": 11.005,
-      "target": 12.381,
-      "target2": 12.84,
-      "invalidation": "exit on any trade through stop 11.005, at target, or if a 15m candle closes below the 4h low (bounce fails)",
-      "risk_usd": 6403.05,
-      "risk_pct_equity": 0.12282,
-      "opened_at": "2026-10-30T21:04:10-03:00",
-      "card": "RACE_LINK",
-      "reason": "RACE LINK: +9.3% 24h, +3.0% 4h, pressing 24h high 11.47 on $20M vol \u2014 long, notional $159,923 @ 20x paper (margin $7,996), stop 4% / tgt 8%/12%, risk $6,403 (12.3% eq)",
-      "price_source": "coinbase_exchange_public_ticker 2026-10-30T21:04:10-03:00 BRT (exch 2026-10-31T00:04:07.682019501Z) api.exchange.coinbase.com",
-      "override": null,
-      "paper_only": true,
-      "leverage": 20.0,
-      "margin": 7996.14,
-      "mark": 11.65,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-10-31T20:03:30-04:00",
-      "unrealized_pnl": 2594.7,
-      "exposure": 162517.5
     },
     {
       "id": "2026-10-30_UNI-USD_145",
@@ -150,7 +123,7 @@
       "exposure": 256615.97
     }
   ],
-  "open_count": 5,
+  "open_count": 4,
   "closed_positions": [
     {
       "type": "close",
@@ -1284,11 +1257,28 @@
       "reason": "Momentum reversed: 15m closes below prior 4h low and fresh lows, loser vs entry 0.9106 \u2014 rotate before stop",
       "price_source": "coinbase_exchange_public_ticker 2026-10-31T17:58:45-03:00 BRT (exch 2026-10-31T20:58:43.522284430Z) api.exchange.coinbase.com",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-30_LINK-USD_144",
+      "symbol": "LINK-USD",
+      "side": "long",
+      "size": 13950.0,
+      "entry": 11.464,
+      "exit": 11.651,
+      "pnl": 2608.65,
+      "notional": 159922.8,
+      "leverage": 20.0,
+      "margin": 7996.14,
+      "closed_at": "2026-10-31T20:03:45-04:00",
+      "reason": "Invalidation: 19:45 ET 15m candle closed 11.631 below prior 4h low 11.649 (bounce failed); bank +$2.6k before fade reaches stop",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-31T20:03:42-04:00 ET (exch 2026-11-01T00:03:30Z) api.exchange.coinbase.com",
+      "paper_only": true
     }
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 47797.33,
+  "max_risk_usd": 47811.28,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -444357.3,
   "paused": false,
@@ -1343,8 +1333,8 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-10-31T19:02:04-04:00",
-      "note": "No new opens: free cash \u2248 $3.0k is the stop-funding cushion only; book already ~17x of 20x cap"
+      "last_run": "2026-10-31T20:03:45-04:00",
+      "note": "last: closed LINK-USD"
     },
     "Logger": {
       "status": "ready",
@@ -2482,17 +2472,14 @@
       "t": "2026-10-31T20:03:31-04:00",
       "equity": 47797.33,
       "kind": "mark"
+    },
+    {
+      "t": "2026-10-31T20:03:45-04:00",
+      "equity": 47811.28,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T14:33:20-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE ETH-USD @ 2350.75 \u00b7 P&L $+307.61",
-      "reason": "CHAOS churn: bank best (uP&L $+288.86) and reload",
-      "fill_id": "2026-10-29_ETH-USD_88"
-    },
     {
       "t": "2026-10-29T14:33:29-03:00",
       "agent": "Logger",
@@ -3968,6 +3955,14 @@
       "kind": "batch",
       "text": "CHAOS: 19:01 ET race hold \u00b7 eq $49,635 \u00b7 exposure $835,516 (16.83x)",
       "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
+    },
+    {
+      "t": "2026-10-31T20:03:45-04:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE LINK-USD @ 11.651 \u00b7 P&L $+2608.65",
+      "reason": "Invalidation: 19:45 ET 15m candle closed 11.631 below prior 4h low 11.649 (bounce failed); bank +$2.6k before fade reaches stop",
+      "fill_id": "2026-10-30_LINK-USD_144"
     }
   ],
   "scanner_feed": [
@@ -4917,7 +4912,7 @@
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-10-31T20:03:31-04:00",
+  "updated_at": "2026-10-31T20:03:45-04:00",
   "timezone_note": "All timestamps America/Sao_Paulo (UTC-03:00); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -4932,9 +4927,9 @@
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 41846.46,
-  "exposure": 833673.63,
-  "buying_power": 122272.97,
-  "effective_leverage": 17.44,
+  "margin_used": 33850.32,
+  "exposure": 671156.13,
+  "buying_power": 285069.47,
+  "effective_leverage": 14.04,
   "operating_timezone": "America/New_York"
 }
