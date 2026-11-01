@@ -1332,8 +1332,8 @@
   "agents": {
     "Scanner": {
       "status": "idle",
-      "last_run": "2026-11-01T08:01:35-05:00",
-      "note": "CHAOS race cycle 08:00 ET: 30 public marks; bounce faded \u2014 BTC rejected 78126 and back to 77772 (4h lower highs), ETH 22"
+      "last_run": "2026-11-01T09:01:11-05:00",
+      "note": "CHAOS race cycle 09:00 ET: 30 public marks; Sunday range chop continues \u2014 BTC 77867 (+0.65%) inside 77222-78126, ETH 226"
     },
     "Rug Check": {
       "status": "idle",
@@ -2549,14 +2549,6 @@
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T18:05:50-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE BTC-USD @ 78805.4 \u00b7 P&L $-7541.83",
-      "reason": "stop hit at EOD review: mark 78805.4 < stop 79367 (exit plan: exit on any trade through stop)",
-      "fill_id": "2026-10-29_BTC-USD_87"
-    },
     {
       "t": "2026-10-29T18:05:50-03:00",
       "agent": "Executor",
@@ -4021,6 +4013,13 @@
       "kind": "batch",
       "text": "CHAOS: 08:00 ET race cycle \u00b7 closed BTC long (failed breakout) \u00b7 hold ETH + UNI longs \u00b7 no new opens \u00b7 eq $47,366 \u00b7 exposure $381,636 (8.06x)",
       "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
+    },
+    {
+      "t": "2026-11-01T09:01:11-05:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "CHAOS race cycle 09:00 ET: 30 public marks; Sunday range chop continues \u2014 BTC 77867 (+0.65%) inside 77222-78126, ETH 2264 (+0.7%), SOL 94.78 (-0.8%), UNI 7.323 (+4.8%, near 24h high 7.343)",
+      "reason": "scheduled race cycle; scan scans/2026-11-01_0900_scan.md"
     }
   ],
   "scanner_feed": [
@@ -4970,7 +4969,7 @@
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-01T08:01:38-05:00",
+  "updated_at": "2026-11-01T09:01:11-05:00",
   "timezone_note": "All timestamps America/Sao_Paulo (UTC-03:00); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
