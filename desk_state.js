@@ -1319,8 +1319,8 @@ window.__DESK_STATE__ = {
   "agents": {
     "Scanner": {
       "status": "idle",
-      "last_run": "2026-10-31T20:04:01-04:00",
-      "note": "CHAOS race cycle 20:03 ET: 30 public marks, 0 failed; flat weekend tape (BTC +0.01%, ETH +0.31%, SOL -1.33%, NEAR +1.88%"
+      "last_run": "2026-10-31T21:03:07-04:00",
+      "note": "CHAOS race cycle 21:02 ET: 30 public marks, 0 failed; flat weekend tape (BTC +0.4%, ETH +0.8% 24h; liquid majors within "
     },
     "Rug Check": {
       "status": "idle",
@@ -2481,13 +2481,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T14:33:30-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "SOL-USD PASS (chaos: non-blocking)",
-      "reason": "vol $57.6M, spread 0.010%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
-    },
     {
       "t": "2026-10-29T14:33:30-03:00",
       "agent": "Executor",
@@ -3962,6 +3955,13 @@ window.__DESK_STATE__ = {
       "kind": "batch",
       "text": "CHAOS: 20:03 ET race cycle \u00b7 closed LINK +$2,609 \u00b7 eq $47,811 \u00b7 exposure $671,156 (14.04x)",
       "reason": "batch checkpoint \u2014 marks refreshed, equity recomputed, dashboard synced; public push failed"
+    },
+    {
+      "t": "2026-10-31T21:03:07-04:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "CHAOS race cycle 21:02 ET: 30 public marks, 0 failed; flat weekend tape (BTC +0.4%, ETH +0.8% 24h; liquid majors within \u00b10.4% over 1h/4h); ETH 2259 just under 24h high 2265, no breakout",
+      "reason": "scheduled race cycle; scan scans/2026-10-31_2102_scan.md"
     }
   ],
   "scanner_feed": [
@@ -4911,7 +4911,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-10-31T20:04:06-04:00",
+  "updated_at": "2026-10-31T21:03:07-04:00",
   "timezone_note": "All timestamps America/Sao_Paulo (UTC-03:00); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
