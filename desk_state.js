@@ -1321,8 +1321,8 @@ window.__DESK_STATE__ = {
     },
     "Rug Check": {
       "status": "idle",
-      "last_run": "2026-10-31T22:08:47-04:00",
-      "note": "ETH-USD PASS (chaos: non-blocking)"
+      "last_run": "2026-11-01T04:01:35-05:00",
+      "note": "BTC-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -2513,15 +2513,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T16:07:41-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 77.4 ETH-USD @ 2325.57 \u00b7 notional $179,999 (20x, margin $9,000) \u00b7 stop 2383.7 \u00b7 tgt 2209.3 \u00b7 risk $4,499.26",
-      "reason": "CHAOS rotate ETH-USD: momentum short into broad selloff \u2014 short (24h -1.87% from public stats open), notional $179,999 @ 20x paper (margin $9,000), stop 2.5% / tgt 5.0%/8.0%, risk $4,499 (9.7% eq; chaos cap 100%)",
-      "fill_id": "2026-10-29_ETH-USD_110",
-      "card": "CHAOS_ETH"
-    },
     {
       "t": "2026-10-29T16:07:41-03:00",
       "agent": "Rug Check",
@@ -3990,6 +3981,13 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE BTC-USD @ 78057.4 \u00b7 P&L $+1259.06",
       "reason": "thesis broken: BTC broke 24h high 77748 -> 78126 on 15m closes, selloff no longer deepening; lock short profit and flip",
       "fill_id": "2026-10-29_BTC-USD_117"
+    },
+    {
+      "t": "2026-11-01T04:01:35-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "BTC-USD PASS (chaos: non-blocking)",
+      "reason": "vol $151.3M, spread 0.000%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
     }
   ],
   "scanner_feed": [
