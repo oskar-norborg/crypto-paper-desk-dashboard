@@ -1380,8 +1380,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-01T11:01:19-05:00",
-      "note": "logged 2026-11-01_NEAR-USD_159"
+      "last_run": "2026-11-01T11:01:30-05:00",
+      "note": "CHAOS: 11:00 ET race cycle \u00b7 hold ETH + UNI longs \u00b7 NEW NEAR short 41,000 @ 4.3292 (4h-low breakdown)"
     },
     "Equity": {
       "status": "ready",
@@ -2597,13 +2597,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T20:04:19-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "NEAR-USD PASS (chaos: non-blocking)",
-      "reason": "vol $48.2M, spread 0.020%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
-    },
     {
       "t": "2026-10-29T20:04:19-03:00",
       "agent": "Executor",
@@ -4066,6 +4059,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "Exit check vs public 5m candles 10:00-11:00 ET: no stop/target touched. ETH lo 2263.25 > stop 2229.7, hi 2269.84 < tgt 2331.6; UNI lo 7.229 > stop 6.8508, hi 7.3372 < tgt 7.7071",
       "reason": "Hold both: UNI 15m close 7.229 still above prior 4h low 7.1596 (invalidation not hit) though fading; ETH ~flat vs entry, thesis intact"
+    },
+    {
+      "t": "2026-11-01T11:01:30-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 11:00 ET race cycle \u00b7 hold ETH + UNI longs \u00b7 NEW NEAR short 41,000 @ 4.3292 (4h-low breakdown)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
