@@ -6,12 +6,12 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 49053.39,
-  "cash": 26623.91,
+  "equity": 47585.59,
+  "cash": 17749.05,
   "realized_pnl": -4381.7,
-  "unrealized_pnl": 3435.09,
-  "day_pnl": 1973.79,
-  "day_pnl_pct": 0.04192,
+  "unrealized_pnl": 1967.29,
+  "day_pnl": 505.99,
+  "day_pnl_pct": 0.01075,
   "day_baseline_date": "2026-11-01",
   "day_baseline_equity": 47079.6,
   "open_positions": [
@@ -68,9 +68,36 @@ window.__DESK_STATE__ = {
       "mark_at": "2026-11-01T10:05:15-05:00",
       "unrealized_pnl": 436.72,
       "exposure": 240383.62
+    },
+    {
+      "id": "2026-11-01_NEAR-USD_159",
+      "symbol": "NEAR-USD",
+      "side": "short",
+      "size": 41000.0,
+      "entry": 4.3292,
+      "notional": 177497.2,
+      "stop": 4.39,
+      "target": 4.2,
+      "target2": 4.12,
+      "invalidation": "exit on any trade through stop 4.39, at target, or if a 15m candle closes back above 4.3726 (breakdown fails)",
+      "risk_usd": 2492.8,
+      "risk_pct_equity": 0.05082,
+      "opened_at": "2026-11-01T11:01:19-05:00",
+      "card": "CHAOS_NEAR",
+      "reason": "RACE NEAR short: -4.2% 24h, weakest liquid name ($14.7M vol), 15m close 4.3251 broke prior 4h low 4.3266 after 8 straight lower 15m closes; new 24h low 4.3175. Short @ bid, 20x paper, stop above 15m lower-high structure 4.38, risk ~$2.5k (~5% eq)",
+      "price_source": "coinbase_exchange_public_ticker bid 4.3292 @ 2026-11-01T16:01:05Z (11:01 ET) api.exchange.coinbase.com",
+      "override": null,
+      "paper_only": true,
+      "leverage": 20.0,
+      "margin": 8874.86,
+      "mark": 4.365,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-01T10:05:15-05:00",
+      "unrealized_pnl": -1467.8,
+      "exposure": 178965.0
     }
   ],
-  "open_count": 2,
+  "open_count": 3,
   "closed_positions": [
     {
       "type": "close",
@@ -1293,7 +1320,7 @@ window.__DESK_STATE__ = {
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 49053.39,
+  "max_risk_usd": 47585.59,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -470796.0,
   "paused": false,
@@ -1348,13 +1375,13 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-01T08:01:35-05:00",
-      "note": "last: closed BTC-USD"
+      "last_run": "2026-11-01T11:01:19-05:00",
+      "note": "last: paper fill NEAR-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-01T10:05:38-05:00",
-      "note": "CHAOS: 10:05 ET race cycle \u00b7 hold ETH + UNI longs \u00b7 no stops/targets hit \u00b7 no new opens"
+      "last_run": "2026-11-01T11:01:19-05:00",
+      "note": "logged 2026-11-01_NEAR-USD_159"
     },
     "Equity": {
       "status": "ready",
@@ -2557,16 +2584,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-01T10:05:16-05:00",
       "equity": 49053.39,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-01T11:01:19-05:00",
+      "equity": 47585.59,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T20:04:18-03:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "CHAOS rotate: press momentum shorts BTC, NEAR, UNI at 20x paper",
-      "reason": "30/30 watchlist red on 24h public stats; BTC broke 79k, NEAR/UNI leading the downside with \u2265 $17M 24h vol; keep XRP/ETH/SOL/LTC shorts"
-    },
     {
       "t": "2026-10-29T20:04:19-03:00",
       "agent": "Rug Check",
@@ -4029,6 +4054,15 @@ window.__DESK_STATE__ = {
       "kind": "batch",
       "text": "CHAOS: 10:05 ET race cycle \u00b7 hold ETH + UNI longs \u00b7 no stops/targets hit \u00b7 no new opens",
       "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
+    },
+    {
+      "t": "2026-11-01T11:01:19-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 41000 NEAR-USD @ 4.3292 \u00b7 notional $177,497 (20x, margin $8,875) \u00b7 stop 4.39 \u00b7 tgt 4.2 \u00b7 risk $2,492.80",
+      "reason": "RACE NEAR short: -4.2% 24h, weakest liquid name ($14.7M vol), 15m close 4.3251 broke prior 4h low 4.3266 after 8 straight lower 15m closes; new 24h low 4.3175. Short @ bid, 20x paper, stop above 15m lower-high structure 4.38, risk ~$2.5k (~5% eq)",
+      "fill_id": "2026-11-01_NEAR-USD_159",
+      "card": "CHAOS_NEAR"
     }
   ],
   "scanner_feed": [
@@ -4992,7 +5026,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-01T10:05:38-05:00",
+  "updated_at": "2026-11-01T11:01:19-05:00",
   "timezone_note": "All timestamps America/Sao_Paulo (UTC-03:00); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -5007,9 +5041,9 @@ window.__DESK_STATE__ = {
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 18994.39,
-  "exposure": 383322.87,
-  "buying_power": 597744.93,
-  "effective_leverage": 7.81,
+  "margin_used": 27869.25,
+  "exposure": 562287.87,
+  "buying_power": 389423.93,
+  "effective_leverage": 11.82,
   "operating_timezone": "America/New_York"
 };
