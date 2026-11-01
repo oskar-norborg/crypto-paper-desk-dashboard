@@ -5,12 +5,12 @@
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 49962.51,
-  "cash": 12668.45,
-  "realized_pnl": -3338.44,
+  "equity": 48919.25,
+  "cash": 26623.91,
+  "realized_pnl": -4381.7,
   "unrealized_pnl": 3300.95,
-  "day_pnl": 2882.91,
-  "day_pnl_pct": 0.06123,
+  "day_pnl": 1839.65,
+  "day_pnl_pct": 0.03908,
   "day_baseline_date": "2026-11-01",
   "day_baseline_equity": 47079.6,
   "open_positions": [
@@ -67,36 +67,9 @@
       "mark_at": "2026-11-01T04:01:37-05:00",
       "unrealized_pnl": 779.1,
       "exposure": 240726.0
-    },
-    {
-      "id": "2026-11-01_BTC-USD_157",
-      "symbol": "BTC-USD",
-      "side": "long",
-      "size": 3.843,
-      "entry": 78057.37,
-      "notional": 299974.47,
-      "stop": 77550.0,
-      "target": 79072.0,
-      "target2": 79775.0,
-      "invalidation": "exit on any trade through stop 77550, at target, or on chaos rotate",
-      "risk_usd": 1949.82,
-      "risk_pct_equity": 0.04269,
-      "opened_at": "2026-11-01T04:01:36-05:00",
-      "card": "CHAOS_BTC",
-      "reason": "RACE BTC flip: 24h-high breakout 77748 -> 78126, two 15m closes holding above (78110, 78097) on $150M vol; stop under 4h low 77631 \u2014 long (24h +0.95% from public stats open), notional $299,974 @ 20x paper (margin $14,999), stop 0.7% / tgt 1.3%/2.2%, risk $1,950 (4.3% eq; chaos cap 100%)",
-      "price_source": "coinbase_exchange_public_ticker 2026-11-01T04:01:35-05:00 BRT (exch 2026-11-01T09:01:33.939451225Z) api.exchange.coinbase.com",
-      "override": null,
-      "paper_only": true,
-      "leverage": 20.0,
-      "margin": 14998.72,
-      "mark": 78057.37,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-01T04:01:36-05:00",
-      "unrealized_pnl": 0.0,
-      "exposure": 299974.47
     }
   ],
-  "open_count": 3,
+  "open_count": 2,
   "closed_positions": [
     {
       "type": "close",
@@ -1298,11 +1271,28 @@
       "reason": "thesis broken: BTC broke 24h high 77748 -> 78126 on 15m closes, selloff no longer deepening; lock short profit and flip",
       "price_source": "coinbase_exchange_public_ticker 2026-11-01T04:01:35-05:00 BRT (exch 2026-11-01T09:01:33.939451225Z) api.exchange.coinbase.com",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-01_BTC-USD_157",
+      "symbol": "BTC-USD",
+      "side": "long",
+      "size": 3.843,
+      "entry": 78057.37,
+      "exit": 77785.9,
+      "pnl": -1043.26,
+      "notional": 299974.47,
+      "leverage": 20.0,
+      "margin": 14998.72,
+      "closed_at": "2026-11-01T08:01:35-05:00",
+      "reason": "thesis broken: 24h-high breakout failed \u2014 BTC rejected 78126, 4h of lower highs, back to the 77748 breakout level with low 77605 just $55 above stop; rotate loser before it kisses stop",
+      "price_source": "coinbase_exchange_public_ticker 2026-11-01T08:01:35-05:00 BRT (exch 2026-11-01T13:01:34.541423138Z) api.exchange.coinbase.com",
+      "paper_only": true
     }
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 49962.51,
+  "max_risk_usd": 48919.25,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -470796.0,
   "paused": false,
@@ -1357,8 +1347,8 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-01T04:01:36-05:00",
-      "note": "last: paper fill BTC-USD"
+      "last_run": "2026-11-01T08:01:35-05:00",
+      "note": "last: closed BTC-USD"
     },
     "Logger": {
       "status": "ready",
@@ -2546,16 +2536,14 @@
       "t": "2026-11-01T04:01:38-05:00",
       "equity": 49962.51,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-01T08:01:35-05:00",
+      "equity": 48919.25,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T16:07:43-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "HBAR-USD PASS (chaos: non-blocking)",
-      "reason": "vol $5.5M, spread 0.041%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
-    },
     {
       "t": "2026-10-29T16:07:43-03:00",
       "agent": "Executor",
@@ -4022,6 +4010,14 @@
       "kind": "check",
       "text": "Exit check vs public 5m candles since 04:01 ET: no stop/target touched. BTC lo 77605 > stop 77550, hi 78126 < tgt 79072; ETH lo 2251.56 > stop 2229.7; UNI lo 7.1596 > stop 6.8508",
       "reason": "BTC long breakout failed (gave back the 77748->78126 break, lower highs 4h, low came within $55 of stop): rotate loser before stop. Hold ETH (wide stop, ~flat) and UNI (winner, still strongest RS)"
+    },
+    {
+      "t": "2026-11-01T08:01:35-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE BTC-USD @ 77785.9 \u00b7 P&L $-1043.26",
+      "reason": "thesis broken: 24h-high breakout failed \u2014 BTC rejected 78126, 4h of lower highs, back to the 77748 breakout level with low 77605 just $55 above stop; rotate loser before it kisses stop",
+      "fill_id": "2026-11-01_BTC-USD_157"
     }
   ],
   "scanner_feed": [
@@ -4986,9 +4982,9 @@
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 33993.11,
-  "exposure": 683163.2,
-  "buying_power": 316087.0,
-  "effective_leverage": 13.67,
+  "margin_used": 18994.39,
+  "exposure": 383188.73,
+  "buying_power": 595196.27,
+  "effective_leverage": 7.83,
   "operating_timezone": "America/New_York"
 }
