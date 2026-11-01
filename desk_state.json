@@ -1333,8 +1333,8 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-10-31T20:04:01-04:00",
-      "note": "No new opens: no liquid (>=$5M vol) setup with momentum \u2014 BTC/ETH/XRP/NEAR/LTC all within \u00b10.3% over 1h and 4h; freed LI"
+      "last_run": "2026-10-31T21:03:07-04:00",
+      "note": "No new opens: no liquid (>=$5M vol) setup with momentum on a dead weekend tape; ~$13.6k free cash held. Watch ETH > 2265"
     },
     "Logger": {
       "status": "ready",
@@ -2480,13 +2480,6 @@
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T14:33:31-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "XRP-USD PASS (chaos: non-blocking)",
-      "reason": "vol $69.6M, spread 0.008%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
-    },
     {
       "t": "2026-10-29T14:33:31-03:00",
       "agent": "Executor",
@@ -3959,6 +3952,13 @@
       "kind": "check",
       "text": "Exit check vs public 5m/15m candles (last 60m): no stop/target touched. BTC 60m hi 77560 << stop 80250; SOL 60m hi 95.60 < stop 96.912; UNI last 15m close 7.0697 > 4h low 7.038; XLM last 15m close 0.169111 > 4h low 0.169064 (thin margin)",
       "reason": "hold all 4; theses intact"
+    },
+    {
+      "t": "2026-10-31T21:03:07-04:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "No new opens: no liquid (>=$5M vol) setup with momentum on a dead weekend tape; ~$13.6k free cash held. Watch ETH > 2265 (24h high break) as next long trigger",
+      "reason": "race mode deploys into high-conviction edges only; not forcing a fill"
     }
   ],
   "scanner_feed": [
