@@ -1380,8 +1380,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-01T11:01:30-05:00",
-      "note": "CHAOS: 11:00 ET race cycle \u00b7 hold ETH + UNI longs \u00b7 NEW NEAR short 41,000 @ 4.3292 (4h-low breakdown)"
+      "last_run": "2026-11-01T12:07:58-05:00",
+      "note": "CHAOS: 12:07 ET race cycle \u00b7 hold ETH + UNI longs, NEAR short \u00b7 no fills/closes"
     },
     "Equity": {
       "status": "ready",
@@ -2602,15 +2602,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T20:04:20-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 7076 UNI-USD @ 6.3593 \u00b7 notional $44,998 (20x, margin $2,250) \u00b7 stop 6.6773 \u00b7 tgt 5.8506 \u00b7 risk $2,250.17",
-      "reason": "CHAOS rotate UNI-USD: momentum short, selloff deepening \u2014 short (24h -12.19% from public stats open), notional $44,998 @ 20x paper (margin $2,250), stop 5.0% / tgt 8.0%/12.0%, risk $2,250 (3.7% eq; chaos cap 100%)",
-      "fill_id": "2026-10-29_UNI-USD_119",
-      "card": "CHAOS_UNI"
-    },
     {
       "t": "2026-10-29T20:04:29-03:00",
       "agent": "Logger",
@@ -4069,6 +4060,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "Exit check vs public 5m candles 10:55-12:07 ET: no stop/target/invalidation hit. ETH lo 2262.9 > stop 2229.7; UNI lo 7.1528 > stop 6.8508, 15m closes not below 4h low; NEAR hi 4.3334 < stop 4.39, 15m closes well under 4.3726",
       "reason": "Hold all 3. No new opens: BTC below 24h hi 78125.9 (no breakout), SOL above 24h lo 94.18 (no breakdown); watch triggers set"
+    },
+    {
+      "t": "2026-11-01T12:07:58-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 12:07 ET race cycle \u00b7 hold ETH + UNI longs, NEAR short \u00b7 no fills/closes",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
