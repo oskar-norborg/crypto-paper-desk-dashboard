@@ -1376,8 +1376,8 @@
   "agents": {
     "Scanner": {
       "status": "idle",
-      "last_run": "2026-11-01T12:07:58-05:00",
-      "note": "12:07 ET race scan: 30/30 marks, 6 liquid PASS"
+      "last_run": "2026-11-01T13:06:29-05:00",
+      "note": "13:06 ET race cycle"
     },
     "Rug Check": {
       "status": "idle",
@@ -2638,13 +2638,6 @@
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-30T08:08:32-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "13 watchlist names SOFT-WARN on 24h vol < $5M (PEPE also spread) \u2014 non-blocking under chaos v2.0",
-      "reason": "all new names are liquid Coinbase majors (vol \u2265 $5M); no hard blocks"
-    },
     {
       "t": "2026-10-30T08:08:32-03:00",
       "agent": "Risk",
@@ -4106,6 +4099,13 @@
       "reason": "breakdown continuation: SOL -1.4% 24h pressing 24h low 94.18, lower highs on 15m, broad alt fade; liquid $37.6M vol",
       "fill_id": "2026-11-01_SOL-USD_161",
       "card": null
+    },
+    {
+      "t": "2026-11-01T13:06:29-05:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "13:06 ET race cycle",
+      "reason": "closed UNI (thesis broken), opened SOL short"
     }
   ],
   "scanner_feed": [
