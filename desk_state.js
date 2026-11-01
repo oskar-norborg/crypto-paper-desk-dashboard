@@ -1314,8 +1314,8 @@ window.__DESK_STATE__ = {
     },
     "Rug Check": {
       "status": "idle",
-      "last_run": "2026-10-31T17:58:47-03:00",
-      "note": "SOL-USD PASS (chaos: non-blocking)"
+      "last_run": "2026-10-31T22:08:47-04:00",
+      "note": "ETH-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -2481,13 +2481,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T16:07:29-03:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "No stop or target touched on any open position since entry (public 5m candles)",
-      "reason": "stop/target/invalidation check vs Coinbase public candles 14:30\u219216:05 BRT"
-    },
     {
       "t": "2026-10-29T16:07:30-03:00",
       "agent": "Executor",
@@ -3959,6 +3952,13 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE XLM-USD @ 0.168828 \u00b7 P&L $-1623.05",
       "reason": "invalidation: 15m close 0.168829 below 4h low 0.169064 (bounce failed); rotate loser",
       "fill_id": "2026-10-30_XLM-USD_146"
+    },
+    {
+      "t": "2026-10-31T22:08:47-04:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "ETH-USD PASS (chaos: non-blocking)",
+      "reason": "vol $87.6M, spread 0.000%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
     }
   ],
   "scanner_feed": [
