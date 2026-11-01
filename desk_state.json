@@ -2521,14 +2521,6 @@
       "t": "2026-10-29T16:07:31-03:00",
       "agent": "Executor",
       "kind": "close",
-      "text": "PAPER CLOSE LINK-USD @ 11.637 \u00b7 P&L $-888.82",
-      "reason": "CHAOS rotate: alt long fighting a broad 24h selloff (public stats red) \u2014 invalidation per plan 'or on chaos rotate'; recycle margin into momentum shorts",
-      "fill_id": "2026-10-29_LINK-USD_99"
-    },
-    {
-      "t": "2026-10-29T16:07:31-03:00",
-      "agent": "Executor",
-      "kind": "close",
       "text": "PAPER CLOSE ADA-USD @ 0.20153 \u00b7 P&L $-888.70",
       "reason": "CHAOS rotate: alt long fighting a broad 24h selloff (public stats red) \u2014 invalidation per plan 'or on chaos rotate'; recycle margin into momentum shorts",
       "fill_id": "2026-10-29_ADA-USD_97"
@@ -3994,6 +3986,13 @@
       "kind": "scan",
       "text": "CHAOS race cycle 00:00 ET: 30 public marks; market compressed (BTC 115m range 77520-77712, ETH 2261-2269, SOL 95.17-95.68)",
       "reason": "scheduled race cycle; scan scans/2026-11-01_0000_scan.md"
+    },
+    {
+      "t": "2026-11-01T00:00:36-04:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "Exit check vs public 5m/15m candles: no stop/target touched. BTC hi 77712 << stop 80250; SOL hi 95.68 < stop 96.912; ETH lo 2260.83 > stop 2229.7; UNI 15m close 7.1123 > 4h low 7.038",
+      "reason": "hold all 4; no new fill: no setup cleared (tight midnight ranges, no breakout), free cash ~$6k is stop-funding cushion at ~17x"
     }
   ],
   "scanner_feed": [
