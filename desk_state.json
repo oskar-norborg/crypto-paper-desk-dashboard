@@ -2524,13 +2524,6 @@
   "activity": [
     {
       "t": "2026-10-29T16:07:40-03:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: alt longs rotated out \u00b7 eq $46,257 \u00b7 exposure $425,596 (9.2x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
-    {
-      "t": "2026-10-29T16:07:40-03:00",
       "agent": "Executor",
       "kind": "plan",
       "text": "CHAOS rotate: flip to momentum shorts ETH, SOL, LTC, HBAR at 20x paper",
@@ -3997,6 +3990,13 @@
       "kind": "scan",
       "text": "CHAOS race cycle 04:00 ET: 30 public marks; bounce on \u2014 BTC new 24h high 78126 (prior 77748), ETH 2275 hi, LINK +3.0%, UNI +4.7%; SOL 96.07 hi",
       "reason": "scheduled race cycle; scan scans/2026-11-01_0401_scan.md"
+    },
+    {
+      "t": "2026-11-01T04:01:35-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "Exit check vs public 5m/15m candles: no stop/target touched. BTC hi 78126 < stop 80250; SOL hi 96.07 < stop 96.912; UNI lo 6.9405 > stop 6.8508; ETH lo 2260.83 > stop 2229.7",
+      "reason": "momentum reversed up: close SOL short (now a loser above entry, bounce invalidates breakdown thesis) and BTC short (selloff thesis broken by 24h-high break; lock profit); hold UNI and ETH longs"
     }
   ],
   "scanner_feed": [
