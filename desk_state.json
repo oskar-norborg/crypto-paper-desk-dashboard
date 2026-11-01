@@ -2598,15 +2598,6 @@
   "activity": [
     {
       "t": "2026-10-29T20:04:19-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 2.033 BTC-USD @ 78676.7 \u00b7 notional $159,950 (20x, margin $7,997) \u00b7 stop 80250 \u00b7 tgt 75530 \u00b7 risk $3,198.56",
-      "reason": "CHAOS rotate BTC-USD: momentum short, selloff deepening \u2014 short (24h -3.17% from public stats open), notional $159,950 @ 20x paper (margin $7,997), stop 2.0% / tgt 4.0%/7.0%, risk $3,199 (5.2% eq; chaos cap 100%)",
-      "fill_id": "2026-10-29_BTC-USD_117",
-      "card": "CHAOS_BTC"
-    },
-    {
-      "t": "2026-10-29T20:04:19-03:00",
       "agent": "Rug Check",
       "kind": "check",
       "text": "NEAR-USD PASS (chaos: non-blocking)",
@@ -4067,6 +4058,13 @@
       "kind": "scan",
       "text": "11:00 ET race scan: 30/30 marks, 6 liquid PASS",
       "reason": "BTC/ETH/SOL/XRP/NEAR/LINK >= $5M vol; UNI $4.1M soft-warn"
+    },
+    {
+      "t": "2026-11-01T11:01:30-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "Exit check vs public 5m candles 10:00-11:00 ET: no stop/target touched. ETH lo 2263.25 > stop 2229.7, hi 2269.84 < tgt 2331.6; UNI lo 7.229 > stop 6.8508, hi 7.3372 < tgt 7.7071",
+      "reason": "Hold both: UNI 15m close 7.229 still above prior 4h low 7.1596 (invalidation not hit) though fading; ETH ~flat vs entry, thesis intact"
     }
   ],
   "scanner_feed": [
