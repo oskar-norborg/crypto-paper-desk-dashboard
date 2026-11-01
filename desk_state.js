@@ -1339,8 +1339,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-10-31T19:02:06-04:00",
-      "note": "CHAOS: 19:01 ET race hold \u00b7 eq $49,635 \u00b7 exposure $835,516 (16.83x)"
+      "last_run": "2026-10-31T20:04:06-04:00",
+      "note": "CHAOS: 20:03 ET race cycle \u00b7 closed LINK +$2,609 \u00b7 eq $47,811 \u00b7 exposure $671,156 (14.04x)"
     },
     "Equity": {
       "status": "ready",
@@ -2481,15 +2481,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T14:33:29-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 76.61 ETH-USD @ 2349.45 \u00b7 notional $179,991 (20x, margin $9,000) \u00b7 stop 2290.7 \u00b7 tgt 2466.9 \u00b7 risk $4,500.84",
-      "reason": "CHAOS C ETH-USD: final high-conviction reload \u2014 long (24h +0.31% from public stats open), notional $179,991 @ 20x paper (margin $9,000), stop 2.5% / tgt 5.0%/8.0%, risk $4,501 (9.0% eq; chaos cap 100%)",
-      "fill_id": "2026-10-29_ETH-USD_102",
-      "card": "CHAOS_ETH"
-    },
     {
       "t": "2026-10-29T14:33:30-03:00",
       "agent": "Rug Check",
@@ -3964,6 +3955,13 @@ window.__DESK_STATE__ = {
       "kind": "plan",
       "text": "No new opens: no liquid (>=$5M vol) setup with momentum \u2014 BTC/ETH/XRP/NEAR/LTC all within \u00b10.3% over 1h and 4h; freed LINK margin held as cash until an edge clears",
       "reason": "race mode says deploy into high-conviction edges only; none present, not forcing a fill on a dead tape"
+    },
+    {
+      "t": "2026-10-31T20:04:06-04:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 20:03 ET race cycle \u00b7 closed LINK +$2,609 \u00b7 eq $47,811 \u00b7 exposure $671,156 (14.04x)",
+      "reason": "batch checkpoint \u2014 marks refreshed, equity recomputed, dashboard synced; public push failed"
     }
   ],
   "scanner_feed": [
@@ -4913,7 +4911,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-10-31T20:04:01-04:00",
+  "updated_at": "2026-10-31T20:04:06-04:00",
   "timezone_note": "All timestamps America/Sao_Paulo (UTC-03:00); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
