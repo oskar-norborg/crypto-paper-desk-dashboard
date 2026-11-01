@@ -2603,13 +2603,6 @@
   "activity": [
     {
       "t": "2026-10-29T20:04:20-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "UNI-USD PASS (chaos: non-blocking)",
-      "reason": "vol $17.1M, spread 0.049%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
-    },
-    {
-      "t": "2026-10-29T20:04:20-03:00",
       "agent": "Executor",
       "kind": "fill",
       "text": "PAPER FILL short 7076 UNI-USD @ 6.3593 \u00b7 notional $44,998 (20x, margin $2,250) \u00b7 stop 6.6773 \u00b7 tgt 5.8506 \u00b7 risk $2,250.17",
@@ -4068,6 +4061,13 @@
       "kind": "scan",
       "text": "12:07 ET race scan: 30/30 marks, 6 liquid PASS",
       "reason": "BTC/ETH/SOL/XRP/NEAR/LINK >= $5M vol; UNI $4.5M soft-warn; table scans/2026-11-01_1207_scan.md"
+    },
+    {
+      "t": "2026-11-01T12:07:58-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "Exit check vs public 5m candles 10:55-12:07 ET: no stop/target/invalidation hit. ETH lo 2262.9 > stop 2229.7; UNI lo 7.1528 > stop 6.8508, 15m closes not below 4h low; NEAR hi 4.3334 < stop 4.39, 15m closes well under 4.3726",
+      "reason": "Hold all 3. No new opens: BTC below 24h hi 78125.9 (no breakout), SOL above 24h lo 94.18 (no breakdown); watch triggers set"
     }
   ],
   "scanner_feed": [
