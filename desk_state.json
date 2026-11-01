@@ -1352,8 +1352,8 @@
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-01T08:01:38-05:00",
-      "note": "CHAOS: 08:00 ET race cycle \u00b7 closed BTC long (failed breakout) \u00b7 hold ETH + UNI longs \u00b7 no new opens \u00b7 eq $47,366 \u00b7 expo"
+      "last_run": "2026-11-01T09:01:15-05:00",
+      "note": "CHAOS: 09:00 ET race cycle \u00b7 hold ETH + UNI longs \u00b7 no stops/targets hit \u00b7 no new opens \u00b7 eq $49,213 \u00b7 exposure $383,483"
     },
     "Equity": {
       "status": "ready",
@@ -2554,13 +2554,6 @@
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T20:04:09-03:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS cycle 20:00 BRT: 30/30 public marks; selloff deepening (30/30 red on 24h; NEAR \u221213.8%, TIA \u221212.3%, PEPE \u221212.0%, UNI \u221211.6%, BTC \u22123.2%)",
-      "reason": "scheduled scanner run; scan file scans/2026-10-29_2003_scan.md"
-    },
     {
       "t": "2026-10-29T20:04:09-03:00",
       "agent": "Rug Check",
@@ -4024,6 +4017,13 @@
       "kind": "skip",
       "text": "No new open this cycle",
       "reason": "No liquid (>=$5M vol) name is breaking its 24h range on 5m/15m; BTC/SOL/XRP/NEAR/LINK all mid-range. Forcing a 20x entry mid-range is a coin flip, not an edge; ~$26.6k free cash stays ready for a confirmed break"
+    },
+    {
+      "t": "2026-11-01T09:01:15-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 09:00 ET race cycle \u00b7 hold ETH + UNI longs \u00b7 no stops/targets hit \u00b7 no new opens \u00b7 eq $49,213 \u00b7 exposure $383,483 (7.79x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
