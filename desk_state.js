@@ -1343,8 +1343,8 @@ window.__DESK_STATE__ = {
     },
     "Sizer": {
       "status": "ready",
-      "last_run": "2026-10-29T08:10:38-03:00",
-      "note": "No re-entry in XRP-USD / NEAR-USD this cycle"
+      "last_run": "2026-11-01T08:01:35-05:00",
+      "note": "No new open this cycle"
     },
     "Executor": {
       "status": "ready",
@@ -2545,15 +2545,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T16:07:43-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 685800 HBAR-USD @ 0.0729 \u00b7 notional $49,995 (20x, margin $2,500) \u00b7 stop 0.075816 \u00b7 tgt 0.067068 \u00b7 risk $1,999.79",
-      "reason": "CHAOS rotate HBAR-USD: momentum short into broad selloff \u2014 short (24h -4.18% from public stats open), notional $49,995 @ 20x paper (margin $2,500), stop 4.0% / tgt 8.0%/12.0%, risk $2,000 (4.3% eq; chaos cap 100%)",
-      "fill_id": "2026-10-29_HBAR-USD_113",
-      "card": "CHAOS_HBAR"
-    },
     {
       "t": "2026-10-29T16:07:52-03:00",
       "agent": "Logger",
@@ -4019,6 +4010,13 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE BTC-USD @ 77785.9 \u00b7 P&L $-1043.26",
       "reason": "thesis broken: 24h-high breakout failed \u2014 BTC rejected 78126, 4h of lower highs, back to the 77748 breakout level with low 77605 just $55 above stop; rotate loser before it kisses stop",
       "fill_id": "2026-11-01_BTC-USD_157"
+    },
+    {
+      "t": "2026-11-01T08:01:35-05:00",
+      "agent": "Sizer",
+      "kind": "skip",
+      "text": "No new open this cycle",
+      "reason": "Sunday chop: no liquid name shows a clean breakout or breakdown on 5m/15m; majors drifting inside 24h ranges. Idle only because no high-conviction edge clears checks"
     }
   ],
   "scanner_feed": [
