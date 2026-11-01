@@ -1353,8 +1353,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-01T09:01:15-05:00",
-      "note": "CHAOS: 09:00 ET race cycle \u00b7 hold ETH + UNI longs \u00b7 no stops/targets hit \u00b7 no new opens \u00b7 eq $49,213 \u00b7 exposure $383,483"
+      "last_run": "2026-11-01T10:05:38-05:00",
+      "note": "CHAOS: 10:05 ET race cycle \u00b7 hold ETH + UNI longs \u00b7 no stops/targets hit \u00b7 no new opens"
     },
     "Equity": {
       "status": "ready",
@@ -2560,13 +2560,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T20:04:18-03:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: HBAR target closed \u00b7 eq $61,197 \u00b7 exposure $443,094 (7.24x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
     {
       "t": "2026-10-29T20:04:18-03:00",
       "agent": "Executor",
@@ -4029,6 +4022,13 @@ window.__DESK_STATE__ = {
       "kind": "skip",
       "text": "No new open this cycle",
       "reason": "Sunday range: no liquid name broke its 24h range on 5m (BTC 77.8-78.0k mid-range, ETH below 2275 high, SOL/XRP/NEAR/LINK flat or fading). Mid-range 20x entry is a coin flip; ~$26.6k free cash held for a confirmed ETH>2275 or BTC>78.13k break"
+    },
+    {
+      "t": "2026-11-01T10:05:38-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 10:05 ET race cycle \u00b7 hold ETH + UNI longs \u00b7 no stops/targets hit \u00b7 no new opens",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
