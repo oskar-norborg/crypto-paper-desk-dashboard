@@ -1356,8 +1356,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-10-31T22:08:47-04:00",
-      "note": "logged 2026-10-31_ETH-USD_154"
+      "last_run": "2026-10-31T22:08:50-04:00",
+      "note": "CHAOS: 22:08 ET race cycle \u00b7 closed XLM (invalidation) \u00b7 opened ETH long \u00b7 eq $47,082 \u00b7 exposure $793,460 (16.85x)"
     },
     "Equity": {
       "status": "ready",
@@ -2518,14 +2518,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T16:07:30-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE SOL-USD @ 100.3 \u00b7 P&L $-1523.49",
-      "reason": "CHAOS rotate: alt long fighting a broad 24h selloff (public stats red) \u2014 invalidation per plan 'or on chaos rotate'; recycle margin into momentum shorts",
-      "fill_id": "2026-10-29_SOL-USD_103"
-    },
     {
       "t": "2026-10-29T16:07:30-03:00",
       "agent": "Executor",
@@ -3997,6 +3989,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE ETH: watched trigger fired, 24h-high breakout 2265 -> 2273 on $87M vol, 15m closes holding above; stop under 24h low 2233 \u2014 long (24h +0.94% from public stats open), notional $239,947 @ 20x paper (margin $11,997), stop 1.5% / tgt 3.0%/5.0%, risk $3,599 (7.8% eq; chaos cap 100%)",
       "fill_id": "2026-10-31_ETH-USD_154",
       "card": "CHAOS_ETH"
+    },
+    {
+      "t": "2026-10-31T22:08:50-04:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 22:08 ET race cycle \u00b7 closed XLM (invalidation) \u00b7 opened ETH long \u00b7 eq $47,082 \u00b7 exposure $793,460 (16.85x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
