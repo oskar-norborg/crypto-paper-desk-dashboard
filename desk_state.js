@@ -6,42 +6,15 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 46487.14,
-  "cash": 18410.63,
-  "realized_pnl": -4597.5,
-  "unrealized_pnl": 1084.64,
-  "day_pnl": -592.46,
-  "day_pnl_pct": -0.01258,
+  "equity": 45668.98,
+  "cash": 27667.17,
+  "realized_pnl": -3338.44,
+  "unrealized_pnl": -992.58,
+  "day_pnl": -1410.62,
+  "day_pnl_pct": -0.02996,
   "day_baseline_date": "2026-11-01",
   "day_baseline_equity": 47079.6,
   "open_positions": [
-    {
-      "id": "2026-10-29_BTC-USD_117",
-      "symbol": "BTC-USD",
-      "side": "short",
-      "size": 2.033,
-      "entry": 78676.68,
-      "notional": 159949.69,
-      "stop": 80250.0,
-      "target": 75530.0,
-      "target2": 73169.0,
-      "invalidation": "exit on any trade through stop 80250, at target, or on chaos rotate",
-      "risk_usd": 3198.56,
-      "risk_pct_equity": 0.05227,
-      "opened_at": "2026-10-29T20:04:19-03:00",
-      "card": "CHAOS_BTC",
-      "reason": "CHAOS rotate BTC-USD: momentum short, selloff deepening \u2014 short (24h -3.17% from public stats open), notional $159,950 @ 20x paper (margin $7,997), stop 2.0% / tgt 4.0%/7.0%, risk $3,199 (5.2% eq; chaos cap 100%)",
-      "price_source": "coinbase_exchange_public_ticker 2026-10-29T20:04:18-03:00 BRT (exch 2026-10-29T23:04:17.766185750Z) api.exchange.coinbase.com",
-      "override": null,
-      "paper_only": true,
-      "leverage": 20.0,
-      "margin": 7997.48,
-      "mark": 77654.93,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-01T00:00:37-04:00",
-      "unrealized_pnl": 2077.22,
-      "exposure": 157872.47
-    },
     {
       "id": "2026-10-30_UNI-USD_145",
       "symbol": "UNI-USD",
@@ -97,7 +70,7 @@ window.__DESK_STATE__ = {
       "exposure": 240060.32
     }
   ],
-  "open_count": 3,
+  "open_count": 2,
   "closed_positions": [
     {
       "type": "close",
@@ -1282,11 +1255,28 @@ window.__DESK_STATE__ = {
       "reason": "thesis broken: bounce on, SOL above entry 95.48 and 4h-low breakdown reclaimed (1h +0.5%, hi 96.07); rotate loser before stop",
       "price_source": "coinbase_exchange_public_ticker 2026-11-01T04:01:35-05:00 BRT (exch 2026-11-01T09:01:34.097230505Z) api.exchange.coinbase.com",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-29_BTC-USD_117",
+      "symbol": "BTC-USD",
+      "side": "short",
+      "size": 2.033,
+      "entry": 78676.68,
+      "exit": 78057.37,
+      "pnl": 1259.06,
+      "notional": 159949.69,
+      "leverage": 20.0,
+      "margin": 7997.48,
+      "closed_at": "2026-11-01T04:01:35-05:00",
+      "reason": "thesis broken: BTC broke 24h high 77748 -> 78126 on 15m closes, selloff no longer deepening; lock short profit and flip",
+      "price_source": "coinbase_exchange_public_ticker 2026-11-01T04:01:35-05:00 BRT (exch 2026-11-01T09:01:33.939451225Z) api.exchange.coinbase.com",
+      "paper_only": true
     }
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 46487.14,
+  "max_risk_usd": 45668.98,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -470796.0,
   "paused": false,
@@ -1342,7 +1332,7 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-01T04:01:35-05:00",
-      "note": "last: closed SOL-USD"
+      "note": "last: closed BTC-USD"
     },
     "Logger": {
       "status": "ready",
@@ -2515,16 +2505,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-01T04:01:35-05:00",
       "equity": 46487.14,
       "kind": "close"
+    },
+    {
+      "t": "2026-11-01T04:01:35-05:00",
+      "equity": 45668.98,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T16:07:41-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "ETH-USD PASS (chaos: non-blocking)",
-      "reason": "vol $215.5M, spread 0.006%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
-    },
     {
       "t": "2026-10-29T16:07:41-03:00",
       "agent": "Executor",
@@ -3994,6 +3982,14 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE SOL-USD @ 95.64 \u00b7 P&L $-430.88",
       "reason": "thesis broken: bounce on, SOL above entry 95.48 and 4h-low breakdown reclaimed (1h +0.5%, hi 96.07); rotate loser before stop",
       "fill_id": "2026-10-31_SOL-USD_151"
+    },
+    {
+      "t": "2026-11-01T04:01:35-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE BTC-USD @ 78057.4 \u00b7 P&L $+1259.06",
+      "reason": "thesis broken: BTC broke 24h high 77748 -> 78126 on 15m closes, selloff no longer deepening; lock short profit and flip",
+      "fill_id": "2026-10-29_BTC-USD_117"
     }
   ],
   "scanner_feed": [
@@ -4958,9 +4954,9 @@ window.__DESK_STATE__ = {
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 26991.87,
-  "exposure": 536767.67,
-  "buying_power": 392975.13,
-  "effective_leverage": 11.55,
+  "margin_used": 18994.39,
+  "exposure": 378895.2,
+  "buying_power": 534484.4,
+  "effective_leverage": 8.3,
   "operating_timezone": "America/New_York"
 };
