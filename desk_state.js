@@ -6,12 +6,12 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 47079.6,
-  "cash": 5985.13,
-  "realized_pnl": -4166.62,
-  "unrealized_pnl": 1246.22,
-  "day_pnl": 0.0,
-  "day_pnl_pct": 0.0,
+  "equity": 46487.14,
+  "cash": 18410.63,
+  "realized_pnl": -4597.5,
+  "unrealized_pnl": 1084.64,
+  "day_pnl": -592.46,
+  "day_pnl_pct": -0.01258,
   "day_baseline_date": "2026-11-01",
   "day_baseline_equity": 47079.6,
   "open_positions": [
@@ -70,33 +70,6 @@ window.__DESK_STATE__ = {
       "exposure": 138834.88
     },
     {
-      "id": "2026-10-31_SOL-USD_151",
-      "symbol": "SOL-USD",
-      "side": "short",
-      "size": 2693.0,
-      "entry": 95.48,
-      "notional": 257127.64,
-      "stop": 96.912,
-      "target": 92.616,
-      "target2": 90.706,
-      "invalidation": "exit on any trade through stop 96.912, at target, or on chaos rotate",
-      "risk_usd": 3856.38,
-      "risk_pct_equity": 0.07773,
-      "opened_at": "2026-10-31T17:58:47-03:00",
-      "card": "CHAOS_SOL",
-      "reason": "RACE SOL flip: most liquid alt ($56M 24h) broke 4h low 95.56 on 15m close, BTC at 4h low, weekend bounce failing \u2014 short (24h +0.44% from public stats open), notional $257,128 @ 20x paper (margin $12,856), stop 1.5% / tgt 3.0%/5.0%, risk $3,856 (7.8% eq; chaos cap 100%)",
-      "price_source": "coinbase_exchange_public_ticker 2026-10-31T17:58:47-03:00 BRT (exch 2026-10-31T20:58:44.987045150Z) api.exchange.coinbase.com",
-      "override": null,
-      "paper_only": true,
-      "leverage": 20.0,
-      "margin": 12856.38,
-      "mark": 95.42,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-01T00:00:39-04:00",
-      "unrealized_pnl": 161.58,
-      "exposure": 256966.06
-    },
-    {
       "id": "2026-10-31_ETH-USD_154",
       "symbol": "ETH-USD",
       "side": "long",
@@ -124,7 +97,7 @@ window.__DESK_STATE__ = {
       "exposure": 240060.32
     }
   ],
-  "open_count": 4,
+  "open_count": 3,
   "closed_positions": [
     {
       "type": "close",
@@ -1292,11 +1265,28 @@ window.__DESK_STATE__ = {
       "reason": "invalidation: 15m close 0.168829 below 4h low 0.169064 (bounce failed); rotate loser",
       "price_source": "coinbase_exchange_public_ticker 2026-10-31T22:08:47-04:00 BRT (exch 2026-11-01T02:08:45.558438192Z) api.exchange.coinbase.com",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-31_SOL-USD_151",
+      "symbol": "SOL-USD",
+      "side": "short",
+      "size": 2693.0,
+      "entry": 95.48,
+      "exit": 95.64,
+      "pnl": -430.88,
+      "notional": 257127.64,
+      "leverage": 20.0,
+      "margin": 12856.38,
+      "closed_at": "2026-11-01T04:01:35-05:00",
+      "reason": "thesis broken: bounce on, SOL above entry 95.48 and 4h-low breakdown reclaimed (1h +0.5%, hi 96.07); rotate loser before stop",
+      "price_source": "coinbase_exchange_public_ticker 2026-11-01T04:01:35-05:00 BRT (exch 2026-11-01T09:01:34.097230505Z) api.exchange.coinbase.com",
+      "paper_only": true
     }
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 47079.6,
+  "max_risk_usd": 46487.14,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -470796.0,
   "paused": false,
@@ -1351,8 +1341,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-10-31T22:08:47-04:00",
-      "note": "last: paper fill ETH-USD"
+      "last_run": "2026-11-01T04:01:35-05:00",
+      "note": "last: closed SOL-USD"
     },
     "Logger": {
       "status": "ready",
@@ -2520,16 +2510,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-01T00:00:40-04:00",
       "equity": 47079.6,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-01T04:01:35-05:00",
+      "equity": 46487.14,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T16:07:40-03:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "CHAOS rotate: flip to momentum shorts ETH, SOL, LTC, HBAR at 20x paper",
-      "reason": "29/30 watchlist names red on 24h public stats; keep BTC long (weakest decliner) + NEAR/XRP shorts"
-    },
     {
       "t": "2026-10-29T16:07:41-03:00",
       "agent": "Rug Check",
@@ -3998,6 +3986,14 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "Exit check vs public 5m/15m candles: no stop/target touched. BTC hi 78126 < stop 80250; SOL hi 96.07 < stop 96.912; UNI lo 6.9405 > stop 6.8508; ETH lo 2260.83 > stop 2229.7",
       "reason": "momentum reversed up: close SOL short (now a loser above entry, bounce invalidates breakdown thesis) and BTC short (selloff thesis broken by 24h-high break; lock profit); hold UNI and ETH longs"
+    },
+    {
+      "t": "2026-11-01T04:01:35-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE SOL-USD @ 95.64 \u00b7 P&L $-430.88",
+      "reason": "thesis broken: bounce on, SOL above entry 95.48 and 4h-low breakdown reclaimed (1h +0.5%, hi 96.07); rotate loser before stop",
+      "fill_id": "2026-10-31_SOL-USD_151"
     }
   ],
   "scanner_feed": [
@@ -4962,9 +4958,9 @@ window.__DESK_STATE__ = {
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 39848.25,
-  "exposure": 793733.73,
-  "buying_power": 147858.27,
-  "effective_leverage": 16.86,
+  "margin_used": 26991.87,
+  "exposure": 536767.67,
+  "buying_power": 392975.13,
+  "effective_leverage": 11.55,
   "operating_timezone": "America/New_York"
 };
