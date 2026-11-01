@@ -1363,8 +1363,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-01T04:01:36-05:00",
-      "note": "logged 2026-11-01_BTC-USD_157"
+      "last_run": "2026-11-01T04:01:38-05:00",
+      "note": "CHAOS: 04:00 ET race cycle \u00b7 closed SOL short + BTC short (bounce invalidation) \u00b7 opened BTC long \u00b7 eq $49,963 \u00b7 exposur"
     },
     "Equity": {
       "status": "ready",
@@ -2550,15 +2550,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T16:07:41-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 1196 SOL-USD @ 100.29 \u00b7 notional $119,947 (20x, margin $5,997) \u00b7 stop 103.3 \u00b7 tgt 94.273 \u00b7 risk $3,599.96",
-      "reason": "CHAOS rotate SOL-USD: momentum short into broad selloff \u2014 short (24h -2.61% from public stats open), notional $119,947 @ 20x paper (margin $5,997), stop 3.0% / tgt 6.0%/10.0%, risk $3,600 (7.8% eq; chaos cap 100%)",
-      "fill_id": "2026-10-29_SOL-USD_111",
-      "card": "CHAOS_SOL"
-    },
     {
       "t": "2026-10-29T16:07:42-03:00",
       "agent": "Rug Check",
@@ -4027,6 +4018,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE BTC flip: 24h-high breakout 77748 -> 78126, two 15m closes holding above (78110, 78097) on $150M vol; stop under 4h low 77631 \u2014 long (24h +0.95% from public stats open), notional $299,974 @ 20x paper (margin $14,999), stop 0.7% / tgt 1.3%/2.2%, risk $1,950 (4.3% eq; chaos cap 100%)",
       "fill_id": "2026-11-01_BTC-USD_157",
       "card": "CHAOS_BTC"
+    },
+    {
+      "t": "2026-11-01T04:01:38-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 04:00 ET race cycle \u00b7 closed SOL short + BTC short (bounce invalidation) \u00b7 opened BTC long \u00b7 eq $49,963 \u00b7 exposure $683,163 (13.67x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
