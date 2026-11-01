@@ -1404,8 +1404,8 @@ window.__DESK_STATE__ = {
   "agents": {
     "Scanner": {
       "status": "idle",
-      "last_run": "2026-11-01T13:06:29-05:00",
-      "note": "13:06 ET race cycle"
+      "last_run": "2026-11-01T15:04:34-05:00",
+      "note": "15:03 ET race cycle: 0 new, 4 held"
     },
     "Rug Check": {
       "status": "idle",
@@ -2681,14 +2681,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-30T08:08:32-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE XRP-USD @ 1.2532 \u00b7 P&L $+2998.94",
-      "reason": "target 1 touched overnight: public 5m candle target 1.2186 (5m low 1.1975); exit plan = exit at target; closed at current public mark (price retraced above target before this cycle)",
-      "fill_id": "2026-10-29_XRP-USD_104"
-    },
     {
       "t": "2026-10-30T08:08:32-03:00",
       "agent": "Executor",
@@ -4151,6 +4143,13 @@ window.__DESK_STATE__ = {
       "reason": "alt-fade continuation: LINK 8 of last 8 15m closes lower-or-flat from 11.54, pressing 4h low 11.419 while SOL/NEAR break down; liquid $7.4M vol",
       "fill_id": "2026-11-01_LINK-USD_162",
       "card": null
+    },
+    {
+      "t": "2026-11-01T15:04:34-05:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "15:03 ET race cycle: 0 new, 4 held",
+      "reason": "no trigger fired; XRP<1.2413 short / BTC>78126 long watched; scan scans/2026-11-01_1503_scan.md"
     }
   ],
   "scanner_feed": [
@@ -5115,7 +5114,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-01T15:03:55-05:00",
+  "updated_at": "2026-11-01T15:04:34-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
