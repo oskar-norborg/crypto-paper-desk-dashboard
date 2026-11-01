@@ -1342,8 +1342,8 @@
   "agents": {
     "Scanner": {
       "status": "idle",
-      "last_run": "2026-11-01T04:01:35-05:00",
-      "note": "CHAOS race cycle 04:00 ET: 30 public marks; bounce on \u2014 BTC new 24h high 78126 (prior 77748), ETH 2275 hi, LINK +3.0%, U"
+      "last_run": "2026-11-01T08:01:35-05:00",
+      "note": "CHAOS race cycle 08:00 ET: 30 public marks; bounce faded \u2014 BTC rejected 78126 and back to 77772 (4h lower highs), ETH 22"
     },
     "Rug Check": {
       "status": "idle",
@@ -2549,13 +2549,6 @@
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T16:07:42-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "LTC-USD PASS (chaos: non-blocking)",
-      "reason": "vol $8.2M, spread 0.037%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
-    },
     {
       "t": "2026-10-29T16:07:42-03:00",
       "agent": "Executor",
@@ -4024,6 +4017,13 @@
       "kind": "batch",
       "text": "CHAOS: 04:00 ET race cycle \u00b7 closed SOL short + BTC short (bounce invalidation) \u00b7 opened BTC long \u00b7 eq $49,963 \u00b7 exposure $683,163 (13.67x)",
       "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
+    },
+    {
+      "t": "2026-11-01T08:01:35-05:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "CHAOS race cycle 08:00 ET: 30 public marks; bounce faded \u2014 BTC rejected 78126 and back to 77772 (4h lower highs), ETH 2259, SOL 94.75 (-0.9%), UNI 7.236 (+4.1%); no fresh high-conviction breakout",
+      "reason": "scheduled race cycle; scan scans/2026-11-01_0801_scan.md"
     }
   ],
   "scanner_feed": [
@@ -4973,7 +4973,7 @@
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-01T04:01:38-05:00",
+  "updated_at": "2026-11-01T08:01:35-05:00",
   "timezone_note": "All timestamps America/Sao_Paulo (UTC-03:00); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
