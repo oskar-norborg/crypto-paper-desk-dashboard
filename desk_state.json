@@ -2481,15 +2481,6 @@
   ],
   "activity": [
     {
-      "t": "2026-10-29T14:33:30-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 1181 SOL-USD @ 101.59 \u00b7 notional $119,978 (20x, margin $5,999) \u00b7 stop 98.542 \u00b7 tgt 107.69 \u00b7 risk $3,599.69",
-      "reason": "CHAOS C SOL-USD: final high-conviction reload \u2014 long (24h +0.06% from public stats open), notional $119,978 @ 20x paper (margin $5,999), stop 3.0% / tgt 6.0%/10.0%, risk $3,600 (7.2% eq; chaos cap 100%)",
-      "fill_id": "2026-10-29_SOL-USD_103",
-      "card": "CHAOS_SOL"
-    },
-    {
       "t": "2026-10-29T14:33:31-03:00",
       "agent": "Rug Check",
       "kind": "check",
@@ -3961,6 +3952,13 @@
       "kind": "scan",
       "text": "CHAOS race cycle 21:02 ET: 30 public marks, 0 failed; flat weekend tape (BTC +0.4%, ETH +0.8% 24h; liquid majors within \u00b10.4% over 1h/4h); ETH 2259 just under 24h high 2265, no breakout",
       "reason": "scheduled race cycle; scan scans/2026-10-31_2102_scan.md"
+    },
+    {
+      "t": "2026-10-31T21:03:07-04:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "Exit check vs public 5m/15m candles (last 60m): no stop/target touched. BTC 60m hi 77560 << stop 80250; SOL 60m hi 95.60 < stop 96.912; UNI last 15m close 7.0697 > 4h low 7.038; XLM last 15m close 0.169111 > 4h low 0.169064 (thin margin)",
+      "reason": "hold all 4; theses intact"
     }
   ],
   "scanner_feed": [
