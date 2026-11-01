@@ -5,12 +5,12 @@
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 45668.98,
-  "cash": 27667.17,
+  "equity": 44122.4,
+  "cash": 12668.45,
   "realized_pnl": -3338.44,
-  "unrealized_pnl": -992.58,
-  "day_pnl": -1410.62,
-  "day_pnl_pct": -0.02996,
+  "unrealized_pnl": -2539.16,
+  "day_pnl": -2957.2,
+  "day_pnl_pct": -0.06281,
   "day_baseline_date": "2026-11-01",
   "day_baseline_equity": 47079.6,
   "open_positions": [
@@ -67,9 +67,36 @@
       "mark_at": "2026-11-01T00:00:37-04:00",
       "unrealized_pnl": 113.42,
       "exposure": 240060.32
+    },
+    {
+      "id": "2026-11-01_BTC-USD_157",
+      "symbol": "BTC-USD",
+      "side": "long",
+      "size": 3.843,
+      "entry": 78057.37,
+      "notional": 299974.47,
+      "stop": 77550.0,
+      "target": 79072.0,
+      "target2": 79775.0,
+      "invalidation": "exit on any trade through stop 77550, at target, or on chaos rotate",
+      "risk_usd": 1949.82,
+      "risk_pct_equity": 0.04269,
+      "opened_at": "2026-11-01T04:01:36-05:00",
+      "card": "CHAOS_BTC",
+      "reason": "RACE BTC flip: 24h-high breakout 77748 -> 78126, two 15m closes holding above (78110, 78097) on $150M vol; stop under 4h low 77631 \u2014 long (24h +0.95% from public stats open), notional $299,974 @ 20x paper (margin $14,999), stop 0.7% / tgt 1.3%/2.2%, risk $1,950 (4.3% eq; chaos cap 100%)",
+      "price_source": "coinbase_exchange_public_ticker 2026-11-01T04:01:35-05:00 BRT (exch 2026-11-01T09:01:33.939451225Z) api.exchange.coinbase.com",
+      "override": null,
+      "paper_only": true,
+      "leverage": 20.0,
+      "margin": 14998.72,
+      "mark": 77654.93,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-01T00:00:37-04:00",
+      "unrealized_pnl": -1546.58,
+      "exposure": 298427.9
     }
   ],
-  "open_count": 2,
+  "open_count": 3,
   "closed_positions": [
     {
       "type": "close",
@@ -1275,7 +1302,7 @@
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 45668.98,
+  "max_risk_usd": 44122.4,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -470796.0,
   "paused": false,
@@ -1330,13 +1357,13 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-01T04:01:35-05:00",
-      "note": "last: closed BTC-USD"
+      "last_run": "2026-11-01T04:01:36-05:00",
+      "note": "last: paper fill BTC-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-10-31T22:08:50-04:00",
-      "note": "CHAOS: 22:08 ET race cycle \u00b7 closed XLM (invalidation) \u00b7 opened ETH long \u00b7 eq $47,082 \u00b7 exposure $793,460 (16.85x)"
+      "last_run": "2026-11-01T04:01:36-05:00",
+      "note": "logged 2026-11-01_BTC-USD_157"
     },
     "Equity": {
       "status": "ready",
@@ -2509,16 +2536,14 @@
       "t": "2026-11-01T04:01:35-05:00",
       "equity": 45668.98,
       "kind": "close"
+    },
+    {
+      "t": "2026-11-01T04:01:36-05:00",
+      "equity": 44122.4,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T16:07:41-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "SOL-USD PASS (chaos: non-blocking)",
-      "reason": "vol $46.8M, spread 0.010%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
-    },
     {
       "t": "2026-10-29T16:07:41-03:00",
       "agent": "Executor",
@@ -3987,6 +4012,15 @@
       "kind": "check",
       "text": "BTC-USD PASS (chaos: non-blocking)",
       "reason": "vol $151.3M, spread 0.000%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
+    },
+    {
+      "t": "2026-11-01T04:01:36-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 3.843 BTC-USD @ 78057.4 \u00b7 notional $299,974 (20x, margin $14,999) \u00b7 stop 77550 \u00b7 tgt 79072 \u00b7 risk $1,949.82",
+      "reason": "RACE BTC flip: 24h-high breakout 77748 -> 78126, two 15m closes holding above (78110, 78097) on $150M vol; stop under 4h low 77631 \u2014 long (24h +0.95% from public stats open), notional $299,974 @ 20x paper (margin $14,999), stop 0.7% / tgt 1.3%/2.2%, risk $1,950 (4.3% eq; chaos cap 100%)",
+      "fill_id": "2026-11-01_BTC-USD_157",
+      "card": "CHAOS_BTC"
     }
   ],
   "scanner_feed": [
@@ -4936,7 +4970,7 @@
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-01T04:01:35-05:00",
+  "updated_at": "2026-11-01T04:01:36-05:00",
   "timezone_note": "All timestamps America/Sao_Paulo (UTC-03:00); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -4951,9 +4985,9 @@
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 18994.39,
-  "exposure": 378895.2,
-  "buying_power": 534484.4,
-  "effective_leverage": 8.3,
+  "margin_used": 33993.11,
+  "exposure": 677323.1,
+  "buying_power": 205124.9,
+  "effective_leverage": 15.35,
   "operating_timezone": "America/New_York"
 }
