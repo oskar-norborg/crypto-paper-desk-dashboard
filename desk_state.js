@@ -6,12 +6,12 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 46372.07,
-  "cash": 17982.48,
+  "equity": 45867.51,
+  "cash": 5985.13,
   "realized_pnl": -4166.62,
-  "unrealized_pnl": 538.69,
-  "day_pnl": 1936.34,
-  "day_pnl_pct": 0.04358,
+  "unrealized_pnl": 34.13,
+  "day_pnl": 1431.78,
+  "day_pnl_pct": 0.03222,
   "day_baseline_date": "2026-10-31",
   "day_baseline_equity": 44435.73,
   "open_positions": [
@@ -95,9 +95,36 @@ window.__DESK_STATE__ = {
       "mark_at": "2026-10-31T21:03:10-04:00",
       "unrealized_pnl": -296.23,
       "exposure": 257423.87
+    },
+    {
+      "id": "2026-10-31_ETH-USD_154",
+      "symbol": "ETH-USD",
+      "side": "long",
+      "size": 106.0,
+      "entry": 2263.65,
+      "notional": 239946.9,
+      "stop": 2229.7,
+      "target": 2331.6,
+      "target2": 2376.8,
+      "invalidation": "exit on any trade through stop 2229.7, at target, or on chaos rotate",
+      "risk_usd": 3598.7,
+      "risk_pct_equity": 0.0776,
+      "opened_at": "2026-10-31T22:08:47-04:00",
+      "card": "CHAOS_ETH",
+      "reason": "RACE ETH: watched trigger fired, 24h-high breakout 2265 -> 2273 on $87M vol, 15m closes holding above; stop under 24h low 2233 \u2014 long (24h +0.94% from public stats open), notional $239,947 @ 20x paper (margin $11,997), stop 1.5% / tgt 3.0%/5.0%, risk $3,599 (7.8% eq; chaos cap 100%)",
+      "price_source": "coinbase_exchange_public_ticker 2026-10-31T22:08:47-04:00 BRT (exch 2026-11-01T02:08:46.049211762Z) api.exchange.coinbase.com",
+      "override": null,
+      "paper_only": true,
+      "leverage": 20.0,
+      "margin": 11997.35,
+      "mark": 2258.89,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-10-31T21:03:09-04:00",
+      "unrealized_pnl": -504.56,
+      "exposure": 239442.34
     }
   ],
-  "open_count": 3,
+  "open_count": 4,
   "closed_positions": [
     {
       "type": "close",
@@ -1269,7 +1296,7 @@ window.__DESK_STATE__ = {
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 46372.07,
+  "max_risk_usd": 45867.51,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -444357.3,
   "paused": false,
@@ -1325,12 +1352,12 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-10-31T22:08:47-04:00",
-      "note": "last: closed XLM-USD"
+      "note": "last: paper fill ETH-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-10-31T21:03:10-04:00",
-      "note": "CHAOS: 21:02 ET race hold \u00b7 eq $46,469 \u00b7 exposure $672,071 (14.46x)"
+      "last_run": "2026-10-31T22:08:47-04:00",
+      "note": "logged 2026-10-31_ETH-USD_154"
     },
     "Equity": {
       "status": "ready",
@@ -2478,17 +2505,14 @@ window.__DESK_STATE__ = {
       "t": "2026-10-31T22:08:47-04:00",
       "equity": 46372.07,
       "kind": "close"
+    },
+    {
+      "t": "2026-10-31T22:08:47-04:00",
+      "equity": 45867.51,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-29T16:07:30-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE ETH-USD @ 2325.52 \u00b7 P&L $-1833.28",
-      "reason": "CHAOS rotate: alt long fighting a broad 24h selloff (public stats red) \u2014 invalidation per plan 'or on chaos rotate'; recycle margin into momentum shorts",
-      "fill_id": "2026-10-29_ETH-USD_102"
-    },
     {
       "t": "2026-10-29T16:07:30-03:00",
       "agent": "Executor",
@@ -3959,6 +3983,15 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "ETH-USD PASS (chaos: non-blocking)",
       "reason": "vol $87.6M, spread 0.000%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
+    },
+    {
+      "t": "2026-10-31T22:08:47-04:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 106 ETH-USD @ 2263.65 \u00b7 notional $239,947 (20x, margin $11,997) \u00b7 stop 2229.7 \u00b7 tgt 2331.6 \u00b7 risk $3,598.70",
+      "reason": "RACE ETH: watched trigger fired, 24h-high breakout 2265 -> 2273 on $87M vol, 15m closes holding above; stop under 24h low 2233 \u2014 long (24h +0.94% from public stats open), notional $239,947 @ 20x paper (margin $11,997), stop 1.5% / tgt 3.0%/5.0%, risk $3,599 (7.8% eq; chaos cap 100%)",
+      "fill_id": "2026-10-31_ETH-USD_154",
+      "card": "CHAOS_ETH"
     }
   ],
   "scanner_feed": [
@@ -4923,9 +4956,9 @@ window.__DESK_STATE__ = {
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 27850.9,
-  "exposure": 553608.62,
-  "buying_power": 373832.78,
-  "effective_leverage": 11.94,
+  "margin_used": 39848.25,
+  "exposure": 793050.96,
+  "buying_power": 124299.24,
+  "effective_leverage": 17.29,
   "operating_timezone": "America/New_York"
 };
