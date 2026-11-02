@@ -22,11 +22,11 @@ window.__DESK_STATE__ = {
       "size": 6.0,
       "entry": 77554.34,
       "notional": 465326.04,
-      "stop": 77280.0,
+      "stop": 77100.0,
       "target": 76500.0,
       "target2": 75800.0,
-      "invalidation": "5m close > 77,280 (above 13:05\u201313:10 ET highs 77,268.24)",
-      "risk_usd": -1646.04,
+      "invalidation": "5m close > 77,100 (above 14:00-15:00 ET high 76,967 + buffer)",
+      "risk_usd": -2726.04,
       "risk_pct_equity": -0.02797,
       "opened_at": "2026-11-02T11:04:39-05:00",
       "card": null,
@@ -1442,8 +1442,8 @@ window.__DESK_STATE__ = {
   "agents": {
     "Scanner": {
       "status": "idle",
-      "last_run": "2026-11-02T14:00:02-05:00",
-      "note": "No new triggers; trailed BTC/NEAR/SOL stops"
+      "last_run": "2026-11-02T15:05:17-05:00",
+      "note": "BTC-USD stop trailed 77,280 -> 77,100"
     },
     "Rug Check": {
       "status": "idle",
@@ -2859,13 +2859,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-30T12:07:17-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "SUI-USD PASS (chaos: non-blocking)",
-      "reason": "vol $26.3M, spread 0.045%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
-    },
     {
       "t": "2026-10-30T12:07:17-03:00",
       "agent": "Executor",
@@ -4322,6 +4315,13 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE SOL-USD @ 91.79 \u00b7 P&L $+669.20",
       "reason": "target 1 touched: 5m low 90.70 (14:35-14:45 ET) < T1 91.00; exit plan = exit at target; closed at current public ask because price bounced back above target before this cycle",
       "fill_id": "2026-11-02_SOL-USD_171"
+    },
+    {
+      "t": "2026-11-02T15:05:17-05:00",
+      "agent": "Scanner",
+      "kind": "risk",
+      "text": "BTC-USD stop trailed 77,280 -> 77,100",
+      "reason": "14:00-15:00 ET 5m high 76,967; locks ~+$2,726 at stop amid 15:00 bounce"
     }
   ],
   "scanner_feed": [
