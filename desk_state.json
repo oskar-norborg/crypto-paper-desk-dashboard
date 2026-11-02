@@ -21,11 +21,11 @@
       "size": 106.0,
       "entry": 2263.65,
       "notional": 239946.9,
-      "stop": 2284.0,
+      "stop": 2287.0,
       "target": 2331.6,
       "target2": 2376.8,
-      "invalidation": "exit on any trade through trailed stop 2284 (under 21:05-22:05 ET 5m low 2286.64 while holding near 24h high 2295.65), at target, or on chaos rotate",
-      "risk_usd": -2157.1,
+      "invalidation": "exit on any trade through trailed stop 2287 (under 23:50-00:00 ET 5m low 2288.43 after failed push to 24h high 2314.92), at target, or on chaos rotate",
+      "risk_usd": -2475.1,
       "risk_pct_equity": 0.0776,
       "opened_at": "2026-10-31T22:08:47-04:00",
       "card": "CHAOS_ETH",
@@ -2744,15 +2744,6 @@
   "activity": [
     {
       "t": "2026-10-30T08:08:36-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 1342 SOL-USD @ 96.83 \u00b7 notional $129,946 (20x, margin $6,497) \u00b7 stop 99.735 \u00b7 tgt 91.02 \u00b7 risk $3,898.51",
-      "reason": "CHAOS rotate SOL-USD: momentum short re-entry, selloff continuing \u2014 short (24h -3.42% from public stats open), notional $129,946 @ 20x paper (margin $6,497), stop 3.0% / tgt 6.0%/10.0%, risk $3,899 (7.2% eq; chaos cap 100%)",
-      "fill_id": "2026-10-30_SOL-USD_127",
-      "card": "CHAOS_SOL"
-    },
-    {
-      "t": "2026-10-30T08:08:36-03:00",
       "agent": "Rug Check",
       "kind": "check",
       "text": "XRP-USD PASS (chaos: non-blocking)",
@@ -4210,6 +4201,13 @@
       "kind": "scan",
       "text": "2206 scan: hold ETH, trail stop 2284, no new opens",
       "reason": "BTC no break of 78.5k/77.5k; alts chop; scan scans/2026-11-01_2206_scan.md"
+    },
+    {
+      "t": "2026-11-02T00:02:16-05:00",
+      "agent": "Risk",
+      "kind": "trail",
+      "text": "ETH-USD stop 2284 -> 2287",
+      "reason": "ETH pushed to 24h high 2314.92 then faded to 2290; trail under 2h 5m low 2288.43, lock ~+$2,474"
     }
   ],
   "scanner_feed": [
@@ -5174,7 +5172,7 @@
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-02T00:01:52-05:00",
+  "updated_at": "2026-11-02T00:02:16-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
