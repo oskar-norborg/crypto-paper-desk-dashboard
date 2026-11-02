@@ -6,12 +6,12 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 48603.02,
-  "cash": 5535.47,
-  "realized_pnl": -1118.78,
-  "unrealized_pnl": -278.2,
-  "day_pnl": 1523.42,
-  "day_pnl_pct": 0.03236,
+  "equity": 46897.5,
+  "cash": 33515.79,
+  "realized_pnl": -4486.86,
+  "unrealized_pnl": 1384.36,
+  "day_pnl": -182.1,
+  "day_pnl_pct": -0.00387,
   "day_baseline_date": "2026-11-01",
   "day_baseline_equity": 47079.6,
   "open_positions": [
@@ -41,36 +41,9 @@ window.__DESK_STATE__ = {
       "mark_at": "2026-11-01T20:07:08-05:00",
       "unrealized_pnl": 1384.36,
       "exposure": 241331.26
-    },
-    {
-      "id": "2026-11-01_BTC-USD_166",
-      "symbol": "BTC-USD",
-      "side": "long",
-      "size": 8.0,
-      "entry": 78371.01,
-      "notional": 626968.08,
-      "stop": 77950.0,
-      "target": 79200.0,
-      "target2": 80000.0,
-      "invalidation": "exit on any trade through stop 77950, at target, or if a 15m candle closes back below 78,100 (breakout fails back into range)",
-      "risk_usd": 3368.08,
-      "risk_pct_equity": 0.06663,
-      "opened_at": "2026-11-01T19:04:50-05:00",
-      "card": "CHAOS_BTC",
-      "reason": "RACE BTC long: 24h-high breakout 78,312 -> 78,387 on $233M vol; 15m closes stair-stepping 77,571 -> 78,372 over 6 bars, broad alt bounce (ETH new 24h high, SOL/NEAR/LINK reclaiming). Stop under 23:15 ET 15m close structure 77,974; 20x paper, notional ~$627k, risk ~$3.4k (~6.7% eq; chaos cap 100%)",
-      "price_source": "coinbase_exchange_public_ticker ask 78371.01 @ 2026-11-02T00:04:33Z (19:04 ET) api.exchange.coinbase.com",
-      "override": null,
-      "paper_only": true,
-      "leverage": 20.0,
-      "margin": 31348.4,
-      "mark": 78163.19,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-01T20:07:08-05:00",
-      "unrealized_pnl": -1662.56,
-      "exposure": 625305.52
     }
   ],
-  "open_count": 2,
+  "open_count": 1,
   "closed_positions": [
     {
       "type": "close",
@@ -1357,11 +1330,28 @@ window.__DESK_STATE__ = {
       "reason": "Momentum reversed: 15m closes 4.249->4.310 (5 higher closes) into broad bounce; gave back most of +$2.7k open gain \u2014 lock remaining profit, do not stay all-short into the bounce",
       "price_source": "coinbase_exchange_public_ticker ask @ 2026-11-02T00:04:33Z (19:04 ET) api.exchange.coinbase.com",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-01_BTC-USD_166",
+      "symbol": "BTC-USD",
+      "side": "long",
+      "size": 8.0,
+      "entry": 78371.01,
+      "exit": 77950.0,
+      "pnl": -3368.08,
+      "notional": 626968.08,
+      "leverage": 20.0,
+      "margin": 31348.4,
+      "closed_at": "2026-11-01T20:07:28-05:00",
+      "reason": "STOP HIT: 19:15 ET 5m candle low 77,906.03 traded through stop 77,950; breakout failed back into range (15m closes 78,030/77,957/78,000 below 78,100 invalidation)",
+      "price_source": "coinbase_exchange_public 5m candles 19:15 ET bucket low 77906.03 (api.exchange.coinbase.com, fetched 20:07 ET); filled at stop level",
+      "paper_only": true
     }
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 48603.02,
+  "max_risk_usd": 46897.5,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -470796.0,
   "paused": false,
@@ -1416,8 +1406,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-01T19:04:50-05:00",
-      "note": "last: paper fill BTC-USD"
+      "last_run": "2026-11-01T20:07:28-05:00",
+      "note": "last: closed BTC-USD"
     },
     "Logger": {
       "status": "ready",
@@ -2725,16 +2715,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-01T20:07:10-05:00",
       "equity": 48603.02,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-01T20:07:28-05:00",
+      "equity": 46897.5,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-30T08:08:35-03:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: overnight exits closed \u00b7 eq $54,484 \u00b7 exposure $157,785 (2.9x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
     {
       "t": "2026-10-30T08:08:35-03:00",
       "agent": "Executor",
@@ -4197,6 +4185,14 @@ window.__DESK_STATE__ = {
       "reason": "RACE BTC long: 24h-high breakout 78,312 -> 78,387 on $233M vol; 15m closes stair-stepping 77,571 -> 78,372 over 6 bars, broad alt bounce (ETH new 24h high, SOL/NEAR/LINK reclaiming). Stop under 23:15 ET 15m close structure 77,974; 20x paper, notional ~$627k, risk ~$3.4k (~6.7% eq; chaos cap 100%)",
       "fill_id": "2026-11-01_BTC-USD_166",
       "card": "CHAOS_BTC"
+    },
+    {
+      "t": "2026-11-01T20:07:28-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE BTC-USD @ 77950 \u00b7 P&L $-3368.08",
+      "reason": "STOP HIT: 19:15 ET 5m candle low 77,906.03 traded through stop 77,950; breakout failed back into range (15m closes 78,030/77,957/78,000 below 78,100 invalidation)",
+      "fill_id": "2026-11-01_BTC-USD_166"
     }
   ],
   "scanner_feed": [
@@ -5161,7 +5157,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-01T20:07:10-05:00",
+  "updated_at": "2026-11-01T20:07:28-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -5176,10 +5172,10 @@ window.__DESK_STATE__ = {
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 43345.75,
-  "exposure": 866636.78,
-  "buying_power": 105423.62,
-  "effective_leverage": 17.83,
+  "margin_used": 11997.35,
+  "exposure": 241331.26,
+  "buying_power": 696618.74,
+  "effective_leverage": 5.15,
   "operating_timezone": "America/New_York",
   "events": [
     {
