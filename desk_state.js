@@ -1442,8 +1442,8 @@ window.__DESK_STATE__ = {
   "agents": {
     "Scanner": {
       "status": "idle",
-      "last_run": "2026-11-02T15:05:34-05:00",
-      "note": "15:04 scan: 2 T1 closes, BTC trail, no new triggers"
+      "last_run": "2026-11-02T17:05:58-05:00",
+      "note": "17:05 scan: 0 triggers, BTC short HOLD"
     },
     "Rug Check": {
       "status": "idle",
@@ -2869,13 +2869,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-30T14:16:07-03:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS cycle 14:00 BRT: 30/30 public marks; selloff easing (28/30 red on 24h but drawdowns shrinking: BTC \u22124.6% vs \u22125.4%, ETH \u22124.2% vs \u22125.3%; TIA \u221217%, INJ \u221210.9%; XLM/BCH flat)",
-      "reason": "scheduled scanner run; scan file scans/2026-10-30_1415_scan.md"
-    },
     {
       "t": "2026-10-30T14:16:07-03:00",
       "agent": "Rug Check",
@@ -4330,6 +4323,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "16:00 ET scan (scans/2026-11-02_1600_scan.md): BTC short held, stop 77,100 not hit, T1 missed by $70; no new triggers. Equity $59,430.44, gap to $1M $940,569.56.",
       "reason": "scheduled scanner cycle"
+    },
+    {
+      "t": "2026-11-02T17:05:58-05:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "17:05 scan: 0 triggers, BTC short HOLD",
+      "reason": "BTC 5m hi 76,861 < stop 77,100, lo 76,565 > T1 76,500; ETH/NEAR/SOL triggers not hit"
     }
   ],
   "scanner_feed": [
@@ -5294,7 +5294,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-02T17:05:30-05:00",
+  "updated_at": "2026-11-02T17:05:58-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
