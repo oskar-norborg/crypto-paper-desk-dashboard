@@ -6,12 +6,12 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 50781.24,
-  "cash": 27049.61,
-  "realized_pnl": -2078.18,
-  "unrealized_pnl": 2859.42,
-  "day_pnl": 3701.64,
-  "day_pnl_pct": 0.07863,
+  "equity": 50547.54,
+  "cash": 36883.87,
+  "realized_pnl": -1118.78,
+  "unrealized_pnl": 1666.32,
+  "day_pnl": 3467.94,
+  "day_pnl_pct": 0.07366,
   "day_baseline_date": "2026-11-01",
   "day_baseline_equity": 47079.6,
   "open_positions": [
@@ -41,36 +41,9 @@ window.__DESK_STATE__ = {
       "mark_at": "2026-11-01T19:03:48-05:00",
       "unrealized_pnl": 1666.32,
       "exposure": 241613.22
-    },
-    {
-      "id": "2026-11-01_NEAR-USD_159",
-      "symbol": "NEAR-USD",
-      "side": "short",
-      "size": 41000.0,
-      "entry": 4.3292,
-      "notional": 177497.2,
-      "stop": 4.39,
-      "target": 4.2,
-      "target2": 4.12,
-      "invalidation": "exit on any trade through stop 4.39, at target, or if a 15m candle closes back above 4.3726 (breakdown fails)",
-      "risk_usd": 2492.8,
-      "risk_pct_equity": 0.05082,
-      "opened_at": "2026-11-01T11:01:19-05:00",
-      "card": "CHAOS_NEAR",
-      "reason": "RACE NEAR short: -4.2% 24h, weakest liquid name ($14.7M vol), 15m close 4.3251 broke prior 4h low 4.3266 after 8 straight lower 15m closes; new 24h low 4.3175. Short @ bid, 20x paper, stop above 15m lower-high structure 4.38, risk ~$2.5k (~5% eq)",
-      "price_source": "coinbase_exchange_public_ticker bid 4.3292 @ 2026-11-01T16:01:05Z (11:01 ET) api.exchange.coinbase.com",
-      "override": null,
-      "paper_only": true,
-      "leverage": 20.0,
-      "margin": 8874.86,
-      "mark": 4.3001,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-01T19:03:49-05:00",
-      "unrealized_pnl": 1193.1,
-      "exposure": 176304.1
     }
   ],
-  "open_count": 2,
+  "open_count": 1,
   "closed_positions": [
     {
       "type": "close",
@@ -1340,11 +1313,28 @@ window.__DESK_STATE__ = {
       "reason": "Thesis broken / rotate loser: broad bounce (BTC & ETH new 24h highs), SOL 15m closes 93.60->94.76 over 5 bars reclaiming above entry 94.56; breakdown failed before stop 95.25 \u2014 cover at ask",
       "price_source": "coinbase_exchange_public_ticker ask @ 2026-11-02T00:04:33Z (19:04 ET) api.exchange.coinbase.com",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-01_NEAR-USD_159",
+      "symbol": "NEAR-USD",
+      "side": "short",
+      "size": 41000.0,
+      "entry": 4.3292,
+      "exit": 4.3058,
+      "pnl": 959.4,
+      "notional": 177497.2,
+      "leverage": 20.0,
+      "margin": 8874.86,
+      "closed_at": "2026-11-01T19:04:41-05:00",
+      "reason": "Momentum reversed: 15m closes 4.249->4.310 (5 higher closes) into broad bounce; gave back most of +$2.7k open gain \u2014 lock remaining profit, do not stay all-short into the bounce",
+      "price_source": "coinbase_exchange_public_ticker ask @ 2026-11-02T00:04:33Z (19:04 ET) api.exchange.coinbase.com",
+      "paper_only": true
     }
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 50781.24,
+  "max_risk_usd": 50547.54,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -470796.0,
   "paused": false,
@@ -1400,7 +1390,7 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-01T19:04:41-05:00",
-      "note": "last: closed SOL-USD"
+      "note": "last: closed NEAR-USD"
     },
     "Logger": {
       "status": "ready",
@@ -2688,17 +2678,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-01T19:04:41-05:00",
       "equity": 50781.24,
       "kind": "close"
+    },
+    {
+      "t": "2026-11-01T19:04:41-05:00",
+      "equity": 50547.54,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-30T08:08:32-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE LTC-USD @ 55.533 \u00b7 P&L $+2417.41",
-      "reason": "target 1 touched overnight: public 5m candle target 54.07 (5m low 52.776); exit plan = exit at target; closed at current public mark (price retraced above target before this cycle)",
-      "fill_id": "2026-10-29_LTC-USD_112"
-    },
     {
       "t": "2026-10-30T08:08:33-03:00",
       "agent": "Executor",
@@ -4160,6 +4147,14 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE SOL-USD @ 94.7 \u00b7 P&L $-280.00",
       "reason": "Thesis broken / rotate loser: broad bounce (BTC & ETH new 24h highs), SOL 15m closes 93.60->94.76 over 5 bars reclaiming above entry 94.56; breakdown failed before stop 95.25 \u2014 cover at ask",
       "fill_id": "2026-11-01_SOL-USD_161"
+    },
+    {
+      "t": "2026-11-01T19:04:41-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE NEAR-USD @ 4.3058 \u00b7 P&L $+959.40",
+      "reason": "Momentum reversed: 15m closes 4.249->4.310 (5 higher closes) into broad bounce; gave back most of +$2.7k open gain \u2014 lock remaining profit, do not stay all-short into the bounce",
+      "fill_id": "2026-11-01_NEAR-USD_159"
     }
   ],
   "scanner_feed": [
@@ -5139,10 +5134,10 @@ window.__DESK_STATE__ = {
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 20872.21,
-  "exposure": 417917.32,
-  "buying_power": 597707.48,
-  "effective_leverage": 8.23,
+  "margin_used": 11997.35,
+  "exposure": 241613.22,
+  "buying_power": 769337.58,
+  "effective_leverage": 4.78,
   "operating_timezone": "America/New_York",
   "events": [
     {
