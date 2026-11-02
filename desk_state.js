@@ -22,11 +22,11 @@ window.__DESK_STATE__ = {
       "size": 6.0,
       "entry": 77554.34,
       "notional": 465326.04,
-      "stop": 77960.0,
+      "stop": 77400.0,
       "target": 76500.0,
       "target2": 75800.0,
-      "invalidation": "5m close > 77,960 (back above 10:45 ET high)",
-      "risk_usd": 2433.96,
+      "invalidation": "5m close > 77,400 (back above 12:05\u201312:15 ET highs 77,398.99)",
+      "risk_usd": -926.04,
       "risk_pct_equity": 0.05072,
       "opened_at": "2026-11-02T11:04:39-05:00",
       "card": null,
@@ -49,11 +49,11 @@ window.__DESK_STATE__ = {
       "size": 49800.0,
       "entry": 4.0122,
       "notional": 199807.56,
-      "stop": 4.07,
+      "stop": 3.99,
       "target": 3.85,
       "target2": 3.75,
-      "invalidation": "5m close > 4.07 (above 10:45 ET high 4.0646)",
-      "risk_usd": 2878.44,
+      "invalidation": "5m close > 3.99 (above 12:10 ET high 3.9869)",
+      "risk_usd": -1105.56,
       "risk_pct_equity": 0.05984,
       "opened_at": "2026-11-02T11:04:39-05:00",
       "card": null,
@@ -2823,20 +2823,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-10-30T12:07:15-03:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "No stop or target touched on BTC/ETH/SOL/XRP/LINK/AAVE shorts since entry",
-      "reason": "stop/target check vs Coinbase public 5m candles since entry; all 6 held"
-    },
-    {
-      "t": "2026-10-30T12:07:15-03:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "CHAOS rotate: add 20x momentum shorts NEAR, AVAX, ADA, SUI using free margin; keep 6 existing shorts",
-      "reason": "28/30 red on 24h public stats; liquid majors (vol \u2265 $5M) only; leave ~$3k cash buffer"
-    },
-    {
       "t": "2026-10-30T12:07:16-03:00",
       "agent": "Rug Check",
       "kind": "check",
@@ -4287,6 +4273,20 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "0 new; hold BTC+NEAR shorts",
       "reason": "no stops/targets hit; ETH/SOL triggers not met; scan scans/2026-11-02_1210_scan.md"
+    },
+    {
+      "t": "2026-11-02T13:02:37-05:00",
+      "agent": "Risk",
+      "kind": "adjust",
+      "text": "BTC-USD short stop trailed 77960 \u2192 77,400 (locks +$926 at stop)",
+      "reason": "above 12:05\u201312:15 ET 5m highs 77,398.99; Coinbase public 5m candles"
+    },
+    {
+      "t": "2026-11-02T13:02:37-05:00",
+      "agent": "Risk",
+      "kind": "adjust",
+      "text": "NEAR-USD short stop trailed 4.07 \u2192 3.99 (locks +$1,106 at stop)",
+      "reason": "above 12:10 ET 5m high 3.9869; Coinbase public 5m candles"
     }
   ],
   "scanner_feed": [
@@ -5251,7 +5251,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-02T13:02:12-05:00",
+  "updated_at": "2026-11-02T13:02:37-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
