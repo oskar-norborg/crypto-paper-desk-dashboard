@@ -22,11 +22,11 @@ window.__DESK_STATE__ = {
       "size": 106.0,
       "entry": 2263.65,
       "notional": 239946.9,
-      "stop": 2272.0,
+      "stop": 2284.0,
       "target": 2331.6,
       "target2": 2376.8,
-      "invalidation": "exit on any trade through trailed stop 2272 (under 20:00-21:00 ET 5m low 2273.1 after 24h-high push to 2295.65), at target, or on chaos rotate",
-      "risk_usd": -885.1,
+      "invalidation": "exit on any trade through trailed stop 2284 (under 21:05-22:05 ET 5m low 2286.64 while holding near 24h high 2295.65), at target, or on chaos rotate",
+      "risk_usd": -2157.1,
       "risk_pct_equity": 0.0776,
       "opened_at": "2026-10-31T22:08:47-04:00",
       "card": "CHAOS_ETH",
@@ -2735,15 +2735,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-10-30T08:08:35-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 89.13 ETH-USD @ 2243.73 \u00b7 notional $199,984 (20x, margin $9,999) \u00b7 stop 2299.8 \u00b7 tgt 2131.5 \u00b7 risk $4,997.52",
-      "reason": "CHAOS rotate ETH-USD: momentum short re-entry, selloff continuing \u2014 short (24h -3.38% from public stats open), notional $199,984 @ 20x paper (margin $9,999), stop 2.5% / tgt 5.0%/8.0%, risk $4,998 (9.2% eq; chaos cap 100%)",
-      "fill_id": "2026-10-30_ETH-USD_126",
-      "card": "CHAOS_ETH"
-    },
-    {
-      "t": "2026-10-30T08:08:35-03:00",
       "agent": "Rug Check",
       "kind": "check",
       "text": "SOL-USD PASS (chaos: non-blocking)",
@@ -4203,6 +4194,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "2102 scan: hold ETH, trail stop 2272, no new opens",
       "reason": "BTC failed 78.4k reclaim again; alts chop"
+    },
+    {
+      "t": "2026-11-01T22:06:58-05:00",
+      "agent": "Risk",
+      "kind": "trail",
+      "text": "ETH-USD stop 2272.0 -> 2284",
+      "reason": "1h 5m low 2286.64 held, price 2292 pressing 24h high 2295.65; lock ~+$2,157"
     }
   ],
   "scanner_feed": [
@@ -5156,7 +5154,7 @@ window.__DESK_STATE__ = {
     "ok": 29,
     "total": 30
   },
-  "updated_at": "2026-11-01T21:02:51-05:00",
+  "updated_at": "2026-11-01T22:06:58-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
