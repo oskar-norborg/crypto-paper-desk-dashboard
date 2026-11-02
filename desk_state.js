@@ -6,12 +6,12 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 57489.8,
-  "cash": 3729.2,
-  "realized_pnl": -2011.76,
-  "unrealized_pnl": 9501.56,
-  "day_pnl": 9114.66,
-  "day_pnl_pct": 0.18842,
+  "equity": 57509.72,
+  "cash": 18824.08,
+  "realized_pnl": 3092.74,
+  "unrealized_pnl": 4416.98,
+  "day_pnl": 9134.58,
+  "day_pnl_pct": 0.18883,
   "day_baseline_date": "2026-11-02",
   "day_baseline_equity": 48375.14,
   "open_positions": [
@@ -43,33 +43,6 @@ window.__DESK_STATE__ = {
       "exposure": 461434.86
     },
     {
-      "id": "2026-11-02_NEAR-USD_170",
-      "symbol": "NEAR-USD",
-      "side": "short",
-      "size": 49800.0,
-      "entry": 4.0122,
-      "notional": 199807.56,
-      "stop": 3.95,
-      "target": 3.85,
-      "target2": 3.75,
-      "invalidation": "5m close > 3.95 (above 13:10 ET high 3.9457)",
-      "risk_usd": -3097.56,
-      "risk_pct_equity": -0.05263,
-      "opened_at": "2026-11-02T11:04:39-05:00",
-      "card": null,
-      "reason": "10:55 ET 5m close 4.006 below 4.025 trigger and new 24h wick low 4.0286; vol $23M; lower highs all morning",
-      "price_source": "coinbase_exchange_public_ticker bid 2026-11-02T16:04:29Z (11:04 ET) api.exchange.coinbase.com",
-      "override": null,
-      "paper_only": true,
-      "leverage": 20.0,
-      "margin": 9990.38,
-      "mark": 3.9101,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-02T15:04:56-05:00",
-      "unrealized_pnl": 5084.58,
-      "exposure": 194722.98
-    },
-    {
       "id": "2026-11-02_SOL-USD_171",
       "symbol": "SOL-USD",
       "side": "short",
@@ -97,7 +70,7 @@ window.__DESK_STATE__ = {
       "exposure": 219521.5
     }
   ],
-  "open_count": 3,
+  "open_count": 2,
   "closed_positions": [
     {
       "type": "close",
@@ -1418,11 +1391,28 @@ window.__DESK_STATE__ = {
       "reason": "trailed stop 2287 hit: 00:10 ET 5m candle traded to 2285.06 (stop-level paper fill)",
       "price_source": "coinbase_exchange_public 5m candles 2026-11-02T05:10Z (00:10 ET), low 2285.06; filled at stop level",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-02_NEAR-USD_170",
+      "symbol": "NEAR-USD",
+      "side": "short",
+      "size": 49800.0,
+      "entry": 4.0122,
+      "exit": 3.9097,
+      "pnl": 5104.5,
+      "notional": 199807.56,
+      "leverage": 20.0,
+      "margin": 9990.38,
+      "closed_at": "2026-11-02T15:05:17-05:00",
+      "reason": "target 1 touched: 5m low 3.8375 (14:35-14:45 ET) < T1 3.85; exit plan = exit at target; closed at current public ask because price bounced back above target before this cycle (V-bounce into 15:00 ET)",
+      "price_source": "coinbase_exchange_public_ticker ask 2026-11-02T20:04:55Z (15:04 ET) api.exchange.coinbase.com",
+      "paper_only": true
     }
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 57489.8,
+  "max_risk_usd": 57509.72,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -483751.4,
   "paused": false,
@@ -1477,8 +1467,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-02T13:02:37-05:00",
-      "note": "last: paper fill SOL-USD"
+      "last_run": "2026-11-02T15:05:17-05:00",
+      "note": "last: closed NEAR-USD"
     },
     "Logger": {
       "status": "ready",
@@ -2866,16 +2856,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-02T15:04:57-05:00",
       "equity": 57489.8,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-02T15:05:17-05:00",
+      "equity": 57509.72,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-30T12:07:16-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "ADA-USD PASS (chaos: non-blocking)",
-      "reason": "vol $15.4M, spread 0.021%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
-    },
     {
       "t": "2026-10-30T12:07:16-03:00",
       "agent": "Executor",
@@ -4332,6 +4320,14 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "No new triggers; trailed BTC/NEAR/SOL stops",
       "reason": "no stops/targets hit; scan scans/2026-11-02_1400_scan.md"
+    },
+    {
+      "t": "2026-11-02T15:05:17-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE NEAR-USD @ 3.9097 \u00b7 P&L $+5104.50",
+      "reason": "target 1 touched: 5m low 3.8375 (14:35-14:45 ET) < T1 3.85; exit plan = exit at target; closed at current public ask because price bounced back above target before this cycle (V-bounce into 15:00 ET)",
+      "fill_id": "2026-11-02_NEAR-USD_170"
     }
   ],
   "scanner_feed": [
@@ -5296,7 +5292,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-02T15:04:57-05:00",
+  "updated_at": "2026-11-02T15:05:17-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -5311,10 +5307,10 @@ window.__DESK_STATE__ = {
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 44259.04,
-  "exposure": 875679.34,
-  "buying_power": 274116.66,
-  "effective_leverage": 15.23,
+  "margin_used": 34268.66,
+  "exposure": 680956.36,
+  "buying_power": 469238.04,
+  "effective_leverage": 11.84,
   "operating_timezone": "America/New_York",
   "events": [
     {
