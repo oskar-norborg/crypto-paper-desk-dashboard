@@ -1461,8 +1461,8 @@
   "agents": {
     "Scanner": {
       "status": "idle",
-      "last_run": "2026-11-02T13:02:56-05:00",
-      "note": "SOL short triggered; trailed BTC/NEAR stops"
+      "last_run": "2026-11-02T14:00:02-05:00",
+      "note": "No new triggers; trailed BTC/NEAR/SOL stops"
     },
     "Rug Check": {
       "status": "idle",
@@ -2863,15 +2863,6 @@
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-30T12:07:16-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 7196 AVAX-USD @ 8.337 \u00b7 notional $59,993 (20x, margin $3,000) \u00b7 stop 8.6705 \u00b7 tgt 7.67 \u00b7 risk $2,399.87",
-      "reason": "CHAOS rotate AVAX-USD: momentum short add, broad selloff deepening \u2014 short (24h -7.37% from public stats open), notional $59,993 @ 20x paper (margin $3,000), stop 4.0% / tgt 8.0%/12.0%, risk $2,400 (4.2% eq; chaos cap 100%)",
-      "fill_id": "2026-10-30_AVAX-USD_132",
-      "card": "CHAOS_AVAX"
-    },
     {
       "t": "2026-10-30T12:07:16-03:00",
       "agent": "Rug Check",
@@ -4328,6 +4319,13 @@
       "kind": "adjust",
       "text": "Trailed stops: BTC 77,400\u219277,280, NEAR 3.99\u21923.95, SOL 93.40\u219292.60",
       "reason": "above 13:05\u201313:10 ET 5m highs; Coinbase public 5m candles"
+    },
+    {
+      "t": "2026-11-02T14:00:02-05:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "No new triggers; trailed BTC/NEAR/SOL stops",
+      "reason": "no stops/targets hit; scan scans/2026-11-02_1400_scan.md"
     }
   ],
   "scanner_feed": [
@@ -5292,7 +5290,7 @@
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-02T13:59:50-05:00",
+  "updated_at": "2026-11-02T14:00:02-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
