@@ -1462,8 +1462,8 @@ window.__DESK_STATE__ = {
   "agents": {
     "Scanner": {
       "status": "idle",
-      "last_run": "2026-11-02T12:11:25-05:00",
-      "note": "0 new; hold BTC+NEAR shorts"
+      "last_run": "2026-11-02T13:02:56-05:00",
+      "note": "SOL short triggered; trailed BTC/NEAR stops"
     },
     "Rug Check": {
       "status": "idle",
@@ -2859,15 +2859,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-30T12:07:16-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 18360 NEAR-USD @ 4.356 \u00b7 notional $79,976 (20x, margin $3,999) \u00b7 stop 4.5302 \u00b7 tgt 4.0075 \u00b7 risk $3,198.31",
-      "reason": "CHAOS rotate NEAR-USD: momentum short add, broad selloff deepening \u2014 short (24h -6.32% from public stats open), notional $79,976 @ 20x paper (margin $3,999), stop 4.0% / tgt 8.0%/12.0%, risk $3,198 (5.6% eq; chaos cap 100%)",
-      "fill_id": "2026-10-30_NEAR-USD_131",
-      "card": "CHAOS_NEAR"
-    },
     {
       "t": "2026-10-30T12:07:16-03:00",
       "agent": "Rug Check",
@@ -4326,6 +4317,13 @@ window.__DESK_STATE__ = {
       "reason": "12:45 ET 5m close 91.72 broke 92.90 trigger (low 91.42); lower highs since 12:05; selling joined by BTC/ETH/NEAR; entering on 12:55 retest bounce",
       "fill_id": "2026-11-02_SOL-USD_171",
       "card": null
+    },
+    {
+      "t": "2026-11-02T13:02:56-05:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "SOL short triggered; trailed BTC/NEAR stops",
+      "reason": "SOL 5m close 91.72 < 92.90; no stops/targets hit; scan scans/2026-11-02_1302_scan.md"
     }
   ],
   "scanner_feed": [
@@ -5290,7 +5288,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-02T13:02:40-05:00",
+  "updated_at": "2026-11-02T13:02:56-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
