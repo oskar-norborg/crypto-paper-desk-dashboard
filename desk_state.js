@@ -1391,8 +1391,8 @@ window.__DESK_STATE__ = {
   "agents": {
     "Scanner": {
       "status": "idle",
-      "last_run": "2026-11-01T15:04:34-05:00",
-      "note": "15:03 ET race cycle: 0 new, 4 held"
+      "last_run": "2026-11-01T21:02:51-05:00",
+      "note": "2102 scan: hold ETH, trail stop 2272, no new opens"
     },
     "Rug Check": {
       "status": "idle",
@@ -2733,13 +2733,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-30T08:08:35-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "ETH-USD PASS (chaos: non-blocking)",
-      "reason": "vol $585.9M, spread 0.000%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
-    },
     {
       "t": "2026-10-30T08:08:35-03:00",
       "agent": "Executor",
@@ -4203,6 +4196,13 @@ window.__DESK_STATE__ = {
       "kind": "trail",
       "text": "ETH-USD stop 2263.65 -> 2272",
       "reason": "24h high broke to 2295.65 then faded to ~2287; lock ~+$885 under hour low 2273.1"
+    },
+    {
+      "t": "2026-11-01T21:02:51-05:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "2102 scan: hold ETH, trail stop 2272, no new opens",
+      "reason": "BTC failed 78.4k reclaim again; alts chop"
     }
   ],
   "scanner_feed": [
