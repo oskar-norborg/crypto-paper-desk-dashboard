@@ -1380,8 +1380,8 @@ window.__DESK_STATE__ = {
   "agents": {
     "Scanner": {
       "status": "idle",
-      "last_run": "2026-11-02T04:00:21-05:00",
-      "note": "0 new; ETH stopped"
+      "last_run": "2026-11-02T08:11:50-05:00",
+      "note": "0 new (scans/2026-11-02_0810_scan.md)"
     },
     "Rug Check": {
       "status": "idle",
@@ -2742,15 +2742,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-30T08:08:36-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 6317 LINK-USD @ 11.081 \u00b7 notional $69,999 (20x, margin $3,500) \u00b7 stop 11.524 \u00b7 tgt 10.195 \u00b7 risk $2,798.43",
-      "reason": "CHAOS rotate LINK-USD: momentum short re-entry, selloff continuing \u2014 short (24h -4.63% from public stats open), notional $69,999 @ 20x paper (margin $3,500), stop 4.0% / tgt 8.0%/12.0%, risk $2,798 (5.1% eq; chaos cap 100%)",
-      "fill_id": "2026-10-30_LINK-USD_129",
-      "card": "CHAOS_LINK"
-    },
     {
       "t": "2026-10-30T08:08:36-03:00",
       "agent": "Rug Check",
@@ -4207,6 +4198,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "0 new; ETH stopped",
       "reason": "ETH trailed stop 2287 hit 00:10 ET; majors range-bound, no high-conviction setup"
+    },
+    {
+      "t": "2026-11-02T08:11:50-05:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "0 new (scans/2026-11-02_0810_scan.md)",
+      "reason": "all short triggers tested and held; no long triggers; flat"
     }
   ],
   "scanner_feed": [
@@ -5171,7 +5169,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-02T08:11:42-05:00",
+  "updated_at": "2026-11-02T08:11:50-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
