@@ -5,12 +5,12 @@
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 57509.72,
-  "cash": 18824.08,
-  "realized_pnl": 3092.74,
-  "unrealized_pnl": 4416.98,
-  "day_pnl": 9134.58,
-  "day_pnl_pct": 0.18883,
+  "equity": 57653.12,
+  "cash": 30495.64,
+  "realized_pnl": 3761.94,
+  "unrealized_pnl": 3891.18,
+  "day_pnl": 9277.98,
+  "day_pnl_pct": 0.19179,
   "day_baseline_date": "2026-11-02",
   "day_baseline_equity": 48375.14,
   "open_positions": [
@@ -40,36 +40,9 @@
       "mark_at": "2026-11-02T15:04:55-05:00",
       "unrealized_pnl": 3891.18,
       "exposure": 461434.86
-    },
-    {
-      "id": "2026-11-02_SOL-USD_171",
-      "symbol": "SOL-USD",
-      "side": "short",
-      "size": 2390.0,
-      "entry": 92.07,
-      "notional": 220047.3,
-      "stop": 92.6,
-      "target": 91.0,
-      "target2": 90.0,
-      "invalidation": "5m close > 92.60 (above 13:05 ET high 92.53)",
-      "risk_usd": 1266.7,
-      "risk_pct_equity": 0.02152,
-      "opened_at": "2026-11-02T13:02:37-05:00",
-      "card": null,
-      "reason": "12:45 ET 5m close 91.72 broke 92.90 trigger (low 91.42); lower highs since 12:05; selling joined by BTC/ETH/NEAR; entering on 12:55 retest bounce",
-      "price_source": "coinbase_exchange_public_ticker bid 92.07 2026-11-02T18:02:28Z (13:02 ET) api.exchange.coinbase.com",
-      "override": null,
-      "paper_only": true,
-      "leverage": 20.0,
-      "margin": 11002.36,
-      "mark": 91.85,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-02T15:04:56-05:00",
-      "unrealized_pnl": 525.8,
-      "exposure": 219521.5
     }
   ],
-  "open_count": 2,
+  "open_count": 1,
   "closed_positions": [
     {
       "type": "close",
@@ -1407,11 +1380,28 @@
       "reason": "target 1 touched: 5m low 3.8375 (14:35-14:45 ET) < T1 3.85; exit plan = exit at target; closed at current public ask because price bounced back above target before this cycle (V-bounce into 15:00 ET)",
       "price_source": "coinbase_exchange_public_ticker ask 2026-11-02T20:04:55Z (15:04 ET) api.exchange.coinbase.com",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-02_SOL-USD_171",
+      "symbol": "SOL-USD",
+      "side": "short",
+      "size": 2390.0,
+      "entry": 92.07,
+      "exit": 91.79,
+      "pnl": 669.2,
+      "notional": 220047.3,
+      "leverage": 20.0,
+      "margin": 11002.36,
+      "closed_at": "2026-11-02T15:05:17-05:00",
+      "reason": "target 1 touched: 5m low 90.70 (14:35-14:45 ET) < T1 91.00; exit plan = exit at target; closed at current public ask because price bounced back above target before this cycle",
+      "price_source": "coinbase_exchange_public_ticker ask 2026-11-02T20:04:53Z (15:04 ET) api.exchange.coinbase.com",
+      "paper_only": true
     }
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 57509.72,
+  "max_risk_usd": 57653.12,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -483751.4,
   "paused": false,
@@ -1467,7 +1457,7 @@
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-02T15:05:17-05:00",
-      "note": "last: closed NEAR-USD"
+      "note": "last: closed SOL-USD"
     },
     "Logger": {
       "status": "ready",
@@ -2860,18 +2850,14 @@
       "t": "2026-11-02T15:05:17-05:00",
       "equity": 57509.72,
       "kind": "close"
+    },
+    {
+      "t": "2026-11-02T15:05:17-05:00",
+      "equity": 57653.12,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-30T12:07:16-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 310500 ADA-USD @ 0.19319 \u00b7 notional $59,985 (20x, margin $2,999) \u00b7 stop 0.20092 \u00b7 tgt 0.17773 \u00b7 risk $2,400.16",
-      "reason": "CHAOS rotate ADA-USD: momentum short add, broad selloff deepening \u2014 short (24h -6.35% from public stats open), notional $59,985 @ 20x paper (margin $2,999), stop 4.0% / tgt 8.0%/12.0%, risk $2,400 (4.2% eq; chaos cap 100%)",
-      "fill_id": "2026-10-30_ADA-USD_133",
-      "card": "CHAOS_ADA"
-    },
     {
       "t": "2026-10-30T12:07:17-03:00",
       "agent": "Rug Check",
@@ -4327,6 +4313,14 @@
       "text": "PAPER CLOSE NEAR-USD @ 3.9097 \u00b7 P&L $+5104.50",
       "reason": "target 1 touched: 5m low 3.8375 (14:35-14:45 ET) < T1 3.85; exit plan = exit at target; closed at current public ask because price bounced back above target before this cycle (V-bounce into 15:00 ET)",
       "fill_id": "2026-11-02_NEAR-USD_170"
+    },
+    {
+      "t": "2026-11-02T15:05:17-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE SOL-USD @ 91.79 \u00b7 P&L $+669.20",
+      "reason": "target 1 touched: 5m low 90.70 (14:35-14:45 ET) < T1 91.00; exit plan = exit at target; closed at current public ask because price bounced back above target before this cycle",
+      "fill_id": "2026-11-02_SOL-USD_171"
     }
   ],
   "scanner_feed": [
@@ -5306,10 +5300,10 @@
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 34268.66,
-  "exposure": 680956.36,
-  "buying_power": 469238.04,
-  "effective_leverage": 11.84,
+  "margin_used": 23266.3,
+  "exposure": 461434.86,
+  "buying_power": 691627.54,
+  "effective_leverage": 8.0,
   "operating_timezone": "America/New_York",
   "events": [
     {
