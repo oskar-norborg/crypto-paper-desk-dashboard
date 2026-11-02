@@ -6,44 +6,16 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 48779.0,
-  "cash": 33515.79,
-  "realized_pnl": -4486.86,
-  "unrealized_pnl": 3265.86,
-  "day_pnl": 403.86,
-  "day_pnl_pct": 0.00835,
+  "equity": 47988.24,
+  "cash": 47988.24,
+  "realized_pnl": -2011.76,
+  "unrealized_pnl": 0.0,
+  "day_pnl": -386.9,
+  "day_pnl_pct": -0.008,
   "day_baseline_date": "2026-11-02",
   "day_baseline_equity": 48375.14,
-  "open_positions": [
-    {
-      "id": "2026-10-31_ETH-USD_154",
-      "symbol": "ETH-USD",
-      "side": "long",
-      "size": 106.0,
-      "entry": 2263.65,
-      "notional": 239946.9,
-      "stop": 2287.0,
-      "target": 2331.6,
-      "target2": 2376.8,
-      "invalidation": "exit on any trade through trailed stop 2287 (under 23:50-00:00 ET 5m low 2288.43 after failed push to 24h high 2314.92), at target, or on chaos rotate",
-      "risk_usd": -2475.1,
-      "risk_pct_equity": 0.0776,
-      "opened_at": "2026-10-31T22:08:47-04:00",
-      "card": "CHAOS_ETH",
-      "reason": "RACE ETH: watched trigger fired, 24h-high breakout 2265 -> 2273 on $87M vol, 15m closes holding above; stop under 24h low 2233 \u2014 long (24h +0.94% from public stats open), notional $239,947 @ 20x paper (margin $11,997), stop 1.5% / tgt 3.0%/5.0%, risk $3,599 (7.8% eq; chaos cap 100%)",
-      "price_source": "coinbase_exchange_public_ticker 2026-10-31T22:08:47-04:00 BRT (exch 2026-11-01T02:08:46.049211762Z) api.exchange.coinbase.com",
-      "override": null,
-      "paper_only": true,
-      "leverage": 20.0,
-      "margin": 11997.35,
-      "mark": 2294.46,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-02T03:59:37-05:00",
-      "unrealized_pnl": 3265.86,
-      "exposure": 243212.76
-    }
-  ],
-  "open_count": 1,
+  "open_positions": [],
+  "open_count": 0,
   "closed_positions": [
     {
       "type": "close",
@@ -1347,11 +1319,28 @@ window.__DESK_STATE__ = {
       "reason": "STOP HIT: 19:15 ET 5m candle low 77,906.03 traded through stop 77,950; breakout failed back into range (15m closes 78,030/77,957/78,000 below 78,100 invalidation)",
       "price_source": "coinbase_exchange_public 5m candles 19:15 ET bucket low 77906.03 (api.exchange.coinbase.com, fetched 20:07 ET); filled at stop level",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-10-31_ETH-USD_154",
+      "symbol": "ETH-USD",
+      "side": "long",
+      "size": 106.0,
+      "entry": 2263.65,
+      "exit": 2287.0,
+      "pnl": 2475.1,
+      "notional": 239946.9,
+      "leverage": 20.0,
+      "margin": 11997.35,
+      "closed_at": "2026-11-02T04:00:07-05:00",
+      "reason": "trailed stop 2287 hit: 00:10 ET 5m candle traded to 2285.06 (stop-level paper fill)",
+      "price_source": "coinbase_exchange_public 5m candles 2026-11-02T05:10Z (00:10 ET), low 2285.06; filled at stop level",
+      "paper_only": true
     }
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 48779.0,
+  "max_risk_usd": 47988.24,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -483751.4,
   "paused": false,
@@ -1406,8 +1395,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-01T20:07:28-05:00",
-      "note": "last: closed BTC-USD"
+      "last_run": "2026-11-02T04:00:07-05:00",
+      "note": "last: closed ETH-USD"
     },
     "Logger": {
       "status": "ready",
@@ -2745,18 +2734,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-02T03:59:39-05:00",
       "equity": 48779.0,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-02T04:00:07-05:00",
+      "equity": 47988.24,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-30T08:08:36-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 79790 XRP-USD @ 1.2532 \u00b7 notional $99,993 (20x, margin $5,000) \u00b7 stop 1.2908 \u00b7 tgt 1.178 \u00b7 risk $3,000.10",
-      "reason": "CHAOS rotate XRP-USD: momentum short re-entry, selloff continuing \u2014 short (24h -2.90% from public stats open), notional $99,993 @ 20x paper (margin $5,000), stop 3.0% / tgt 6.0%/10.0%, risk $3,000 (5.5% eq; chaos cap 100%)",
-      "fill_id": "2026-10-30_XRP-USD_128",
-      "card": "CHAOS_XRP"
-    },
     {
       "t": "2026-10-30T08:08:36-03:00",
       "agent": "Rug Check",
@@ -4214,6 +4199,14 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "0001 scan: hold ETH, trail stop 2287, no new opens",
       "reason": "ETH/BTC failed breakouts (2314.92 / 78,762 faded); alts chop; scan scans/2026-11-02_0001_scan.md"
+    },
+    {
+      "t": "2026-11-02T04:00:07-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE ETH-USD @ 2287 \u00b7 P&L $+2475.10",
+      "reason": "trailed stop 2287 hit: 00:10 ET 5m candle traded to 2285.06 (stop-level paper fill)",
+      "fill_id": "2026-10-31_ETH-USD_154"
     }
   ],
   "scanner_feed": [
@@ -5178,7 +5171,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-02T03:59:39-05:00",
+  "updated_at": "2026-11-02T04:00:07-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -5193,10 +5186,10 @@ window.__DESK_STATE__ = {
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 11997.35,
-  "exposure": 243212.76,
-  "buying_power": 732367.24,
-  "effective_leverage": 4.99,
+  "margin_used": 0,
+  "exposure": 0.0,
+  "buying_power": 959764.8,
+  "effective_leverage": 0.0,
   "operating_timezone": "America/New_York",
   "events": [
     {
