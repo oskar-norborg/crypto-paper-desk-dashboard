@@ -6,12 +6,12 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 54798.78,
-  "cash": 14731.56,
+  "equity": 54750.98,
+  "cash": 3729.2,
   "realized_pnl": -2011.76,
-  "unrealized_pnl": 6810.54,
-  "day_pnl": 6423.64,
-  "day_pnl_pct": 0.13279,
+  "unrealized_pnl": 6762.74,
+  "day_pnl": 6375.84,
+  "day_pnl_pct": 0.1318,
   "day_baseline_date": "2026-11-02",
   "day_baseline_equity": 48375.14,
   "open_positions": [
@@ -68,9 +68,36 @@ window.__DESK_STATE__ = {
       "mark_at": "2026-11-02T13:02:11-05:00",
       "unrealized_pnl": 3959.1,
       "exposure": 195848.46
+    },
+    {
+      "id": "2026-11-02_SOL-USD_171",
+      "symbol": "SOL-USD",
+      "side": "short",
+      "size": 2390.0,
+      "entry": 92.07,
+      "notional": 220047.3,
+      "stop": 93.4,
+      "target": 91.0,
+      "target2": 90.0,
+      "invalidation": "5m close > 93.40 (above 12:05\u201312:15 ET highs 93.37)",
+      "risk_usd": 3178.7,
+      "risk_pct_equity": 0.05801,
+      "opened_at": "2026-11-02T13:02:37-05:00",
+      "card": null,
+      "reason": "12:45 ET 5m close 91.72 broke 92.90 trigger (low 91.42); lower highs since 12:05; selling joined by BTC/ETH/NEAR; entering on 12:55 retest bounce",
+      "price_source": "coinbase_exchange_public_ticker bid 92.07 2026-11-02T18:02:28Z (13:02 ET) api.exchange.coinbase.com",
+      "override": null,
+      "paper_only": true,
+      "leverage": 20.0,
+      "margin": 11002.36,
+      "mark": 92.09,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-02T13:02:11-05:00",
+      "unrealized_pnl": -47.8,
+      "exposure": 220095.1
     }
   ],
-  "open_count": 2,
+  "open_count": 3,
   "closed_positions": [
     {
       "type": "close",
@@ -1395,7 +1422,7 @@ window.__DESK_STATE__ = {
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 54798.78,
+  "max_risk_usd": 54750.98,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -483751.4,
   "paused": false,
@@ -1450,13 +1477,13 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-02T11:04:39-05:00",
-      "note": "last: paper fill NEAR-USD"
+      "last_run": "2026-11-02T13:02:37-05:00",
+      "note": "last: paper fill SOL-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-02T11:04:39-05:00",
-      "note": "logged 2026-11-02_NEAR-USD_170"
+      "last_run": "2026-11-02T13:02:37-05:00",
+      "note": "logged 2026-11-02_SOL-USD_171"
     },
     "Equity": {
       "status": "ready",
@@ -2819,16 +2846,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-02T13:02:12-05:00",
       "equity": 54798.78,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-02T13:02:37-05:00",
+      "equity": 54750.98,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-30T12:07:16-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "NEAR-USD PASS (chaos: non-blocking)",
-      "reason": "vol $67.2M, spread 0.055%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
-    },
     {
       "t": "2026-10-30T12:07:16-03:00",
       "agent": "Executor",
@@ -4287,6 +4312,15 @@ window.__DESK_STATE__ = {
       "kind": "adjust",
       "text": "NEAR-USD short stop trailed 4.07 \u2192 3.99 (locks +$1,106 at stop)",
       "reason": "above 12:10 ET 5m high 3.9869; Coinbase public 5m candles"
+    },
+    {
+      "t": "2026-11-02T13:02:37-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 2390 SOL-USD @ 92.07 \u00b7 notional $220,047 (20x, margin $11,002) \u00b7 stop 93.4 \u00b7 tgt 91 \u00b7 risk $3,178.70",
+      "reason": "12:45 ET 5m close 91.72 broke 92.90 trigger (low 91.42); lower highs since 12:05; selling joined by BTC/ETH/NEAR; entering on 12:55 retest bounce",
+      "fill_id": "2026-11-02_SOL-USD_171",
+      "card": null
     }
   ],
   "scanner_feed": [
@@ -5266,10 +5300,10 @@ window.__DESK_STATE__ = {
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 33256.68,
-  "exposure": 658323.06,
-  "buying_power": 437652.54,
-  "effective_leverage": 12.01,
+  "margin_used": 44259.04,
+  "exposure": 878418.16,
+  "buying_power": 216601.44,
+  "effective_leverage": 16.04,
   "operating_timezone": "America/New_York",
   "events": [
     {
