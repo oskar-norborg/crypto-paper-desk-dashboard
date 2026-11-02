@@ -1466,8 +1466,8 @@
     },
     "Equity": {
       "status": "ready",
-      "last_run": "2026-11-02T17:51:34-05:00",
-      "note": "equity $58510.34 \u00b7 day +10135.20"
+      "last_run": "2026-11-02T17:52:20-05:00",
+      "note": "EOD review 2026-11-02: equity $58,510.34, day +$10,135.20, gap $941,489.66"
     }
   },
   "equity_curve": [
@@ -2873,13 +2873,6 @@
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-30T14:16:07-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "12 watchlist names SOFT-WARN on 24h vol < $5M \u2014 skipped for new opens",
-      "reason": "race-mode discipline: new opens only on liquid CEX names with vol \u2265 $5M and tight spreads"
-    },
     {
       "t": "2026-10-30T14:16:07-03:00",
       "agent": "Risk",
@@ -4334,6 +4327,13 @@
       "kind": "scan",
       "text": "17:05 scan: 0 triggers, BTC short HOLD",
       "reason": "BTC 5m hi 76,861 < stop 77,100, lo 76,565 > T1 76,500; ETH/NEAR/SOL triggers not hit"
+    },
+    {
+      "t": "2026-11-02T17:52:20-05:00",
+      "agent": "Equity",
+      "kind": "review",
+      "text": "EOD review 2026-11-02: equity $58,510.34, day +$10,135.20, gap $941,489.66",
+      "reason": "scheduled EOD paper review; reviews/2026-11-02.md; final Coinbase public marks 17:51 ET"
     }
   ],
   "scanner_feed": [
@@ -5298,7 +5298,7 @@
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-02T17:51:34-05:00",
+  "updated_at": "2026-11-02T17:52:20-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
