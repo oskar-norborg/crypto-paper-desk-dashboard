@@ -6,12 +6,12 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 48098.52,
-  "cash": 24721.94,
+  "equity": 47969.04,
+  "cash": 14731.56,
   "realized_pnl": -2011.76,
-  "unrealized_pnl": 110.28,
-  "day_pnl": -276.62,
-  "day_pnl_pct": -0.00572,
+  "unrealized_pnl": -19.2,
+  "day_pnl": -406.1,
+  "day_pnl_pct": -0.00839,
   "day_baseline_date": "2026-11-02",
   "day_baseline_equity": 48375.14,
   "open_positions": [
@@ -41,9 +41,36 @@ window.__DESK_STATE__ = {
       "mark_at": "2026-11-02T11:04:14-05:00",
       "unrealized_pnl": 110.28,
       "exposure": 465215.76
+    },
+    {
+      "id": "2026-11-02_NEAR-USD_170",
+      "symbol": "NEAR-USD",
+      "side": "short",
+      "size": 49800.0,
+      "entry": 4.0122,
+      "notional": 199807.56,
+      "stop": 4.07,
+      "target": 3.85,
+      "target2": 3.75,
+      "invalidation": "5m close > 4.07 (above 10:45 ET high 4.0646)",
+      "risk_usd": 2878.44,
+      "risk_pct_equity": 0.05984,
+      "opened_at": "2026-11-02T11:04:39-05:00",
+      "card": null,
+      "reason": "10:55 ET 5m close 4.006 below 4.025 trigger and new 24h wick low 4.0286; vol $23M; lower highs all morning",
+      "price_source": "coinbase_exchange_public_ticker bid 2026-11-02T16:04:29Z (11:04 ET) api.exchange.coinbase.com",
+      "override": null,
+      "paper_only": true,
+      "leverage": 20.0,
+      "margin": 9990.38,
+      "mark": 4.0148,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-02T11:04:15-05:00",
+      "unrealized_pnl": -129.48,
+      "exposure": 199937.04
     }
   ],
-  "open_count": 1,
+  "open_count": 2,
   "closed_positions": [
     {
       "type": "close",
@@ -1368,7 +1395,7 @@ window.__DESK_STATE__ = {
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 48098.52,
+  "max_risk_usd": 47969.04,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -483751.4,
   "paused": false,
@@ -1424,12 +1451,12 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-02T11:04:39-05:00",
-      "note": "last: paper fill BTC-USD"
+      "note": "last: paper fill NEAR-USD"
     },
     "Logger": {
       "status": "ready",
       "last_run": "2026-11-02T11:04:39-05:00",
-      "note": "logged 2026-11-02_BTC-USD_169"
+      "note": "logged 2026-11-02_NEAR-USD_170"
     },
     "Equity": {
       "status": "ready",
@@ -2772,16 +2799,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-02T11:04:39-05:00",
       "equity": 48098.52,
       "kind": "fill"
+    },
+    {
+      "t": "2026-11-02T11:04:39-05:00",
+      "equity": 47969.04,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-30T08:08:39-03:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: 08:00 cycle book \u00b7 eq $54,722 \u00b7 exposure $717,466 (13.11x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
     {
       "t": "2026-10-30T12:07:15-03:00",
       "agent": "Scanner",
@@ -4238,6 +4263,15 @@ window.__DESK_STATE__ = {
       "reason": "10:55 ET 5m close 77,384.93 broke 77,450 range-low trigger after US-open fade; lower highs since 10:10 ET",
       "fill_id": "2026-11-02_BTC-USD_169",
       "card": null
+    },
+    {
+      "t": "2026-11-02T11:04:39-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 49800 NEAR-USD @ 4.0122 \u00b7 notional $199,808 (20x, margin $9,990) \u00b7 stop 4.07 \u00b7 tgt 3.85 \u00b7 risk $2,878.44",
+      "reason": "10:55 ET 5m close 4.006 below 4.025 trigger and new 24h wick low 4.0286; vol $23M; lower highs all morning",
+      "fill_id": "2026-11-02_NEAR-USD_170",
+      "card": null
     }
   ],
   "scanner_feed": [
@@ -5217,10 +5251,10 @@ window.__DESK_STATE__ = {
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 23266.3,
-  "exposure": 465215.76,
-  "buying_power": 496754.64,
-  "effective_leverage": 9.67,
+  "margin_used": 33256.68,
+  "exposure": 665152.8,
+  "buying_power": 294228.0,
+  "effective_leverage": 13.87,
   "operating_timezone": "America/New_York",
   "events": [
     {
