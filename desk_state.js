@@ -1380,8 +1380,8 @@ window.__DESK_STATE__ = {
   "agents": {
     "Scanner": {
       "status": "idle",
-      "last_run": "2026-11-02T08:11:50-05:00",
-      "note": "0 new (scans/2026-11-02_0810_scan.md)"
+      "last_run": "2026-11-02T09:15:05-05:00",
+      "note": "0 candidates"
     },
     "Rug Check": {
       "status": "idle",
@@ -2742,13 +2742,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-30T08:08:36-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "AAVE-USD PASS (chaos: non-blocking)",
-      "reason": "vol $11.8M, spread 0.008%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
-    },
     {
       "t": "2026-10-30T08:08:36-03:00",
       "agent": "Executor",
@@ -4205,6 +4198,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "0 new (scans/2026-11-02_0810_scan.md)",
       "reason": "all short triggers tested and held; no long triggers; flat"
+    },
+    {
+      "t": "2026-11-02T09:15:05-05:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "0 candidates",
+      "reason": "09:14 ET: post-8:30 spike faded, all majors inside range; no trigger cleared. Flat. scans/2026-11-02_0914_scan.md"
     }
   ],
   "scanner_feed": [
@@ -5169,7 +5169,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-02T09:14:33-05:00",
+  "updated_at": "2026-11-02T09:15:05-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
