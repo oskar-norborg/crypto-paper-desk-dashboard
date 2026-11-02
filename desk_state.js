@@ -22,10 +22,10 @@ window.__DESK_STATE__ = {
       "size": 106.0,
       "entry": 2263.65,
       "notional": 239946.9,
-      "stop": 2229.7,
+      "stop": 2263.65,
       "target": 2331.6,
       "target2": 2376.8,
-      "invalidation": "exit on any trade through stop 2229.7, at target, or on chaos rotate",
+      "invalidation": "exit on any trade through breakeven stop 2263.65 (trailed 19:04 ET after 24h-high breakout to 2280), at target, or on chaos rotate",
       "risk_usd": 3598.7,
       "risk_pct_equity": 0.0776,
       "opened_at": "2026-10-31T22:08:47-04:00",
@@ -2690,14 +2690,6 @@ window.__DESK_STATE__ = {
       "t": "2026-10-30T08:08:33-03:00",
       "agent": "Executor",
       "kind": "close",
-      "text": "PAPER CLOSE NEAR-USD @ 4.3432 \u00b7 P&L $-4140.18",
-      "reason": "stop touched overnight: public 5m candle stop 4.2658 (5m high 4.3816); exit plan = exit on trade through stop; closed at current public mark",
-      "fill_id": "2026-10-29_NEAR-USD_118"
-    },
-    {
-      "t": "2026-10-30T08:08:33-03:00",
-      "agent": "Executor",
-      "kind": "close",
       "text": "PAPER CLOSE UNI-USD @ 6.8981 \u00b7 P&L $-3812.55",
       "reason": "stop touched overnight: public 5m candle stop 6.6773 (5m high 6.9); exit plan = exit on trade through stop; closed at current public mark",
       "fill_id": "2026-10-29_UNI-USD_119"
@@ -4155,6 +4147,13 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE NEAR-USD @ 4.3058 \u00b7 P&L $+959.40",
       "reason": "Momentum reversed: 15m closes 4.249->4.310 (5 higher closes) into broad bounce; gave back most of +$2.7k open gain \u2014 lock remaining profit, do not stay all-short into the bounce",
       "fill_id": "2026-11-01_NEAR-USD_159"
+    },
+    {
+      "t": "2026-11-01T19:04:41-05:00",
+      "agent": "Executor",
+      "kind": "update",
+      "text": "ETH-USD long stop trailed 2229.7 -> 2263.65 (breakeven)",
+      "reason": "new 24h high 2280.2; lock risk-free hedge"
     }
   ],
   "scanner_feed": [
