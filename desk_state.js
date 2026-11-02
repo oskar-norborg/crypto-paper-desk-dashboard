@@ -2865,13 +2865,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-10-30T12:07:20-03:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: 12:00 cycle book \u00b7 eq $56,010 \u00b7 exposure $976,131 (17.43x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
-    {
       "t": "2026-10-30T14:16:07-03:00",
       "agent": "Scanner",
       "kind": "scan",
@@ -4325,6 +4318,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "15:04 scan: 2 T1 closes, BTC trail, no new triggers",
       "reason": "NEAR/SOL T1 hit then bounced; scan scans/2026-11-02_1504_scan.md"
+    },
+    {
+      "t": "2026-11-02T16:01:31-05:00",
+      "agent": "Crypto Paper Terminal",
+      "kind": "scan",
+      "text": "16:00 ET scan (scans/2026-11-02_1600_scan.md): BTC short held, stop 77,100 not hit, T1 missed by $70; no new triggers. Equity $59,430.44, gap to $1M $940,569.56.",
+      "reason": "scheduled scanner cycle"
     }
   ],
   "scanner_feed": [
@@ -5289,7 +5289,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-02T16:01:00-05:00",
+  "updated_at": "2026-11-02T16:01:31-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
