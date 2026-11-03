@@ -1499,7 +1499,7 @@ window.__DESK_STATE__ = {
     "Rug Check": {
       "status": "idle",
       "last_run": "2026-11-03T08:09:11-05:00",
-      "note": "BTC-USD PASS (chaos: non-blocking)"
+      "note": "ETH-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -2977,13 +2977,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-10-30T21:04:06-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "15 names SOFT-WARN on 24h vol < $5M (non-blocking); all trades restricted to \u2265 $5M names",
-      "reason": "prefer liquid Coinbase majors"
-    },
-    {
-      "t": "2026-10-30T21:04:06-03:00",
       "agent": "Risk",
       "kind": "check",
       "text": "Exit check vs public 5m candles since entry: no stop or target touched on any of 8 shorts",
@@ -4443,6 +4436,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE long: BTC reclaimed 76850 overnight-high on 5m closes, higher lows 76453->77054->77199, holding ~77.2k on pullback from 77383; deepest liquidity ($543M vol). Invalidation: 5m close < 76850 \u2014 long (24h -0.77% from public stats open), notional $599,973 @ 20x paper (margin $29,999), stop 0.6% / tgt 0.9%/1.6%, risk $3,597 (7.1% eq; chaos cap 100%)",
       "fill_id": "2026-11-03_BTC-USD_179",
       "card": "CHAOS_BTC"
+    },
+    {
+      "t": "2026-11-03T08:09:11-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "ETH-USD PASS (chaos: non-blocking)",
+      "reason": "vol $186.0M, spread 0.000%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
     }
   ],
   "scanner_feed": [
