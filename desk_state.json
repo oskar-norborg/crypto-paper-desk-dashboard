@@ -1514,7 +1514,7 @@
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-03T14:08:32-05:00",
-      "note": "last: closed BTC-USD"
+      "note": "No new opens: ETH>2305 (max 5m close 2300.24), SOL>93.75 (max close 93.75, not >), XRP>1.2900 (max 1.2841) not fired; ma"
     },
     "Logger": {
       "status": "ready",
@@ -3032,13 +3032,6 @@
   "activity": [
     {
       "t": "2026-10-30T21:59:25-03:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 21:58 BRT: 30/30 public marks; bounce holding (BTC +0.4%, ETH +1.2% 24h; 15m: SUI +2.9% 4h, NEAR +1.1% 4h / +1.4% 1h)",
-      "reason": "scheduled race cycle; scan scans/2026-10-30_2158_scan.md"
-    },
-    {
-      "t": "2026-10-30T21:59:25-03:00",
       "agent": "Rug Check",
       "kind": "check",
       "text": "14 names SOFT-WARN on 24h vol < $5M (non-blocking); new opens restricted to \u2265 $5M names",
@@ -4488,6 +4481,13 @@
       "text": "PAPER CLOSE BTC-USD @ 77500 \u00b7 P&L $+2356.55",
       "reason": "STOP HIT: trailed stop 77500 traded through (5m low 77462.67 @13:55 ET); lower highs 77805->77736->77518, momentum rolled over; banks ~+$2,357",
       "fill_id": "2026-11-03_BTC-USD_179"
+    },
+    {
+      "t": "2026-11-03T14:08:32-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "No new opens: ETH>2305 (max 5m close 2300.24), SOL>93.75 (max close 93.75, not >), XRP>1.2900 (max 1.2841) not fired; majors fading from 13:30 highs",
+      "reason": "no clean edge in midday fade inside 24h range; armed for 15:00 ET: short BTC on 5m close <77400, long BTC on 5m close >77810, long ETH >2305/SOL >93.85"
     }
   ],
   "scanner_feed": [
