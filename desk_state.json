@@ -5,44 +5,16 @@
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 56531.84,
-  "cash": 30495.64,
-  "realized_pnl": 3761.94,
-  "unrealized_pnl": 2769.9,
-  "day_pnl": 8156.7,
-  "day_pnl_pct": 0.16861,
+  "equity": 56487.98,
+  "cash": 56487.98,
+  "realized_pnl": 6487.98,
+  "unrealized_pnl": 0.0,
+  "day_pnl": 8112.84,
+  "day_pnl_pct": 0.16771,
   "day_baseline_date": "2026-11-02",
   "day_baseline_equity": 48375.14,
-  "open_positions": [
-    {
-      "id": "2026-11-02_BTC-USD_169",
-      "symbol": "BTC-USD",
-      "side": "short",
-      "size": 6.0,
-      "entry": 77554.34,
-      "notional": 465326.04,
-      "stop": 77100.0,
-      "target": 76500.0,
-      "target2": 75800.0,
-      "invalidation": "5m close > 77,100 (above 14:00-15:00 ET high 76,967 + buffer)",
-      "risk_usd": -2726.04,
-      "risk_pct_equity": -0.02797,
-      "opened_at": "2026-11-02T11:04:39-05:00",
-      "card": null,
-      "reason": "10:55 ET 5m close 77,384.93 broke 77,450 range-low trigger after US-open fade; lower highs since 10:10 ET",
-      "price_source": "coinbase_exchange_public_ticker bid 2026-11-02T16:04:32Z (11:04 ET) api.exchange.coinbase.com",
-      "override": null,
-      "paper_only": true,
-      "leverage": 20.0,
-      "margin": 23266.3,
-      "mark": 77092.69,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-02T20:07:43-05:00",
-      "unrealized_pnl": 2769.9,
-      "exposure": 462556.14
-    }
-  ],
-  "open_count": 1,
+  "open_positions": [],
+  "open_count": 0,
   "closed_positions": [
     {
       "type": "close",
@@ -1397,11 +1369,28 @@
       "reason": "target 1 touched: 5m low 90.70 (14:35-14:45 ET) < T1 91.00; exit plan = exit at target; closed at current public ask because price bounced back above target before this cycle",
       "price_source": "coinbase_exchange_public_ticker ask 2026-11-02T20:04:53Z (15:04 ET) api.exchange.coinbase.com",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-02_BTC-USD_169",
+      "symbol": "BTC-USD",
+      "side": "short",
+      "size": 6.0,
+      "entry": 77554.34,
+      "exit": 77100.0,
+      "pnl": 2726.04,
+      "notional": 465326.04,
+      "leverage": 20.0,
+      "margin": 23266.3,
+      "closed_at": "2026-11-02T20:07:54-05:00",
+      "reason": "stop hit: 19:35 ET 5m high 77,129.31 > stop 77,100 after evening bounce; T1 76,500 missed by $16.60 (19:05 low 76,516.60)",
+      "price_source": "coinbase_exchange_public 5m candle 2026-11-03T00:35Z (19:35 ET) high 77,129.31; filled at stop level 77,100",
+      "paper_only": true
     }
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 56531.84,
+  "max_risk_usd": 56487.98,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -483751.4,
   "paused": false,
@@ -1456,8 +1445,8 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-02T15:05:17-05:00",
-      "note": "last: closed SOL-USD"
+      "last_run": "2026-11-02T20:07:54-05:00",
+      "note": "last: closed BTC-USD"
     },
     "Logger": {
       "status": "ready",
@@ -2885,16 +2874,14 @@
       "t": "2026-11-02T20:07:46-05:00",
       "equity": 56531.84,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-02T20:07:54-05:00",
+      "equity": 56487.98,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-30T14:16:07-03:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "No stop or target touched on any of the 10 shorts since entry",
-      "reason": "stop/target check vs Coinbase public 5m candles since each entry; all 10 held (BTC low 76301 vs tgt 75530 closest)"
-    },
     {
       "t": "2026-10-30T14:16:07-03:00",
       "agent": "Executor",
@@ -4349,6 +4336,14 @@
       "kind": "review",
       "text": "EOD review 2026-11-02: equity $58,510.34, day +$10,135.20, gap $941,489.66",
       "reason": "scheduled EOD paper review; reviews/2026-11-02.md; final Coinbase public marks 17:51 ET"
+    },
+    {
+      "t": "2026-11-02T20:07:54-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE BTC-USD @ 77100 \u00b7 P&L $+2726.04",
+      "reason": "stop hit: 19:35 ET 5m high 77,129.31 > stop 77,100 after evening bounce; T1 76,500 missed by $16.60 (19:05 low 76,516.60)",
+      "fill_id": "2026-11-02_BTC-USD_169"
     }
   ],
   "scanner_feed": [
@@ -5313,7 +5308,7 @@
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-02T20:07:46-05:00",
+  "updated_at": "2026-11-02T20:07:54-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -5328,10 +5323,10 @@
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 23266.3,
-  "exposure": 462556.14,
-  "buying_power": 668080.66,
-  "effective_leverage": 8.18,
+  "margin_used": 0,
+  "exposure": 0.0,
+  "buying_power": 1129759.6,
+  "effective_leverage": 0.0,
   "operating_timezone": "America/New_York",
   "events": [
     {
