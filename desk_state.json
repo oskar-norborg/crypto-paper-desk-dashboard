@@ -1539,8 +1539,8 @@
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-03T08:09:11-05:00",
-      "note": "logged 2026-11-03_ETH-USD_180"
+      "last_run": "2026-11-03T08:09:15-05:00",
+      "note": "CHAOS: 08:08 ET race cycle \u00b7 opened BTC + ETH longs on confirmed bounce breakouts \u00b7 eq $50,793 \u00b7 exposure $899,832 (17.7"
     },
     "Equity": {
       "status": "ready",
@@ -3012,14 +3012,6 @@
   ],
   "activity": [
     {
-      "t": "2026-10-30T21:04:06-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE AVAX-USD @ 8.562 \u00b7 P&L $-1619.10",
-      "reason": "thesis broken: momentum reversed \u2014 broad alt bounce, rising on 1h/4h public 15m candles and green on 24h; exit plan 'or on chaos rotate'; recycle margin into longs",
-      "fill_id": "2026-10-30_AVAX-USD_132"
-    },
-    {
       "t": "2026-10-30T21:04:07-03:00",
       "agent": "Executor",
       "kind": "close",
@@ -4481,6 +4473,13 @@
       "reason": "RACE long: ETH broke 2260 on 5m closes, flagging 2277-2281 under 4h high 2282.8; $186M vol. Invalidation: 5m close < 2260 \u2014 long (24h -0.29% from public stats open), notional $299,881 @ 20x paper (margin $14,994), stop 0.8% / tgt 1.2%/2.0%, risk $2,397 (5.3% eq; chaos cap 100%)",
       "fill_id": "2026-11-03_ETH-USD_180",
       "card": "CHAOS_ETH"
+    },
+    {
+      "t": "2026-11-03T08:09:15-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 08:08 ET race cycle \u00b7 opened BTC + ETH longs on confirmed bounce breakouts \u00b7 eq $50,793 \u00b7 exposure $899,832 (17.72x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
