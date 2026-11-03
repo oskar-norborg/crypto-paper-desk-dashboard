@@ -1520,8 +1520,8 @@ window.__DESK_STATE__ = {
   "agents": {
     "Scanner": {
       "status": "idle",
-      "last_run": "2026-11-03T08:09:10-05:00",
-      "note": "CHAOS race cycle 08:08 ET: 30 public marks; overnight bounce \u2014 BTC 77218 (4h hi 77383), ETH 2277, SOL 92.75, NEAR 3.88, "
+      "last_run": "2026-11-03T09:03:41-05:00",
+      "note": "CHAOS race cycle 09:02 ET: 30/30 public marks; BTC pushed to 77745 @08:30 then rolled to ~77.0k, ETH spiked 2304.6 then "
     },
     "Rug Check": {
       "status": "idle",
@@ -3021,14 +3021,6 @@ window.__DESK_STATE__ = {
       "t": "2026-10-30T21:04:07-03:00",
       "agent": "Executor",
       "kind": "close",
-      "text": "PAPER CLOSE ADA-USD @ 0.19513 \u00b7 P&L $-602.37",
-      "reason": "thesis broken: momentum reversed \u2014 broad alt bounce, rising on 1h/4h public 15m candles and green on 24h; exit plan 'or on chaos rotate'; recycle margin into longs",
-      "fill_id": "2026-10-30_ADA-USD_133"
-    },
-    {
-      "t": "2026-10-30T21:04:07-03:00",
-      "agent": "Executor",
-      "kind": "close",
       "text": "PAPER CLOSE SUI-USD @ 0.9051 \u00b7 P&L $-427.26",
       "reason": "thesis broken: momentum reversed \u2014 broad alt bounce, rising on 1h/4h public 15m candles and green on 24h; exit plan 'or on chaos rotate'; recycle margin into longs",
       "fill_id": "2026-10-30_SUI-USD_134"
@@ -4486,6 +4478,13 @@ window.__DESK_STATE__ = {
       "kind": "batch",
       "text": "CHAOS: 08:08 ET race cycle \u00b7 opened BTC + ETH longs on confirmed bounce breakouts \u00b7 eq $50,793 \u00b7 exposure $899,832 (17.72x)",
       "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
+    },
+    {
+      "t": "2026-11-03T09:03:41-05:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "CHAOS race cycle 09:02 ET: 30/30 public marks; BTC pushed to 77745 @08:30 then rolled to ~77.0k, ETH spiked 2304.6 then 2284",
+      "reason": "scheduled race cycle; scan scans/2026-11-03_0902_scan.md"
     }
   ],
   "scanner_feed": [
@@ -5442,7 +5441,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-03T09:03:14-05:00",
+  "updated_at": "2026-11-03T09:03:41-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
