@@ -3024,13 +3024,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-10-30T21:04:10-03:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "RACE rotate: flip to concentrated 20x longs in the strongest liquid bouncers (SOL, LINK, UNI, XLM); keep BTC + NEAR shorts as in-profit hedge",
-      "reason": "bounce is broad and grinding up on 1h/4h; NEAR still weakening; fewer larger positions to move equity"
-    },
-    {
-      "t": "2026-10-30T21:04:10-03:00",
       "agent": "Rug Check",
       "kind": "check",
       "text": "SOL-USD PASS",
@@ -4487,6 +4480,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 11:02 ET: public marks refreshed; BTC broke 77.36k range top at 10:40 ET, high 77714.70, ETH up to 2299.94, SOL 93.75 high",
       "reason": "scheduled race cycle; public Coinbase 5m candles 10:00-10:55 ET"
+    },
+    {
+      "t": "2026-11-03T11:03:32-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "BTC long: stop 76734 untouched (low 77100.53), T1 77892 not reached (high 77714.70) -> HOLD; stop trailed 76734 -> 77190 (~entry)",
+      "reason": "protect 20x book after range breakout; T1/T2 unchanged"
     }
   ],
   "scanner_feed": [
