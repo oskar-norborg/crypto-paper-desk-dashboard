@@ -1469,8 +1469,8 @@
     },
     "Rug Check": {
       "status": "idle",
-      "last_run": "2026-11-02T22:03:41-05:00",
-      "note": "NEAR-USD PASS (chaos: non-blocking)"
+      "last_run": "2026-11-03T08:09:11-05:00",
+      "note": "BTC-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -2942,13 +2942,6 @@
   ],
   "activity": [
     {
-      "t": "2026-10-30T20:14:59-03:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "30/30 marks, regime mixed",
-      "reason": "BTC -1.1%/ETH -0.6% 24h; 26/30 alts green (OP +15.6%, PEPE +10%, UNI +9.4%); report scans/2026-10-30_2014_scan.md"
-    },
-    {
       "t": "2026-10-30T21:04:06-03:00",
       "agent": "Scanner",
       "kind": "scan",
@@ -4407,6 +4400,13 @@
       "kind": "check",
       "text": "Armed long triggers confirmed on closed 5m candles 06:00-07:45 ET: BTC >76850 (max close 77336.89 @07:35), ETH >2260 (2280.70 @07:45), SOL >92.25 (93.13 @07:20), NEAR >3.83 (3.9157 @07:45); all short triggers untouched",
       "reason": "Desk flat before cycle; no exits to check. Bounce is on -> longs"
+    },
+    {
+      "t": "2026-11-03T08:09:11-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "BTC-USD PASS (chaos: non-blocking)",
+      "reason": "vol $542.8M, spread 0.000%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
     }
   ],
   "scanner_feed": [
