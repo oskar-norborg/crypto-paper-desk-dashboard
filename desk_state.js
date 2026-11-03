@@ -1464,8 +1464,8 @@ window.__DESK_STATE__ = {
     },
     "Rug Check": {
       "status": "idle",
-      "last_run": "2026-11-02T22:03:40-05:00",
-      "note": "BTC-USD PASS (chaos: non-blocking)"
+      "last_run": "2026-11-02T22:03:41-05:00",
+      "note": "NEAR-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -2916,13 +2916,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-30T16:16:47-03:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "No stop or target touched on any of the 10 shorts since entry",
-      "reason": "stop/target check vs Coinbase public 5m candles since each entry; closest: BTC low 76141 vs tgt 75530, LINK low 10.872 vs tgt 10.195"
-    },
     {
       "t": "2026-10-30T16:16:47-03:00",
       "agent": "Executor",
@@ -4380,6 +4373,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE short: BTC lost 76850 on 5m closes, lower highs 77005\u219276930\u219276846, broke 24h low 76516 into 76462; deepest liquidity ($579M vol). Invalidation: 5m close back > 76850 \u2014 short (24h -2.47% from public stats open), notional $699,973 @ 20x paper (margin $34,999), stop 0.5% / tgt 1.4%/2.5%, risk $3,499 (6.2% eq; chaos cap 100%)",
       "fill_id": "2026-11-02_BTC-USD_175",
       "card": "CHAOS_BTC"
+    },
+    {
+      "t": "2026-11-02T22:03:41-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "NEAR-USD PASS (chaos: non-blocking)",
+      "reason": "vol $34.0M, spread 0.029%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
     }
   ],
   "scanner_feed": [
@@ -5344,7 +5344,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-02T22:03:40-05:00",
+  "updated_at": "2026-11-02T22:03:41-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
