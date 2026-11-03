@@ -10,10 +10,10 @@ window.__DESK_STATE__ = {
   "cash": 50815.53,
   "realized_pnl": 815.53,
   "unrealized_pnl": 0.0,
-  "day_pnl": -2201.31,
-  "day_pnl_pct": -0.04152,
+  "day_pnl": 0.0,
+  "day_pnl_pct": 0.0,
   "day_baseline_date": "2026-11-03",
-  "day_baseline_equity": 53016.84,
+  "day_baseline_equity": 50815.53,
   "open_positions": [],
   "open_count": 0,
   "closed_positions": [
@@ -1427,7 +1427,7 @@ window.__DESK_STATE__ = {
   "max_risk_pct": 1.0,
   "max_risk_usd": 50815.53,
   "daily_loss_pause_pct": -10.0,
-  "daily_loss_pause_usd": -530168.4,
+  "daily_loss_pause_usd": -508155.3,
   "paused": false,
   "pause_reason": null,
   "watchlist": [
@@ -2944,13 +2944,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-10-30T18:21:35-03:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "No stop or target touched on any of the 10 shorts since entry",
-      "reason": "Coinbase public 5m candles since each entry; closest to target: BTC low 76141 vs tgt 75530; closest to stop: NEAR high 4.4236 vs stop 4.5302"
-    },
-    {
-      "t": "2026-10-30T18:21:35-03:00",
       "agent": "Executor",
       "kind": "plan",
       "text": "HOLD: no new opens this cycle; keep 10 shorts",
@@ -4410,6 +4403,13 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE NEAR-USD @ 3.8572 \u00b7 P&L $-2173.70",
       "reason": "STOP HIT: 23:25 ET 5m candle high 3.8675 traded through stop 3.8572; 5m closes back above 3.83 invalidation from 23:15. T1 3.7032 never reached (low since entry 3.7852).",
       "fill_id": "2026-11-02_NEAR-USD_176"
+    },
+    {
+      "t": "2026-11-03T00:05:13-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "Day baseline 2026-11-03 set to $50,815.53",
+      "reason": "Both stops traded at 23:25 ET Nov 2 (booked at 00:04); losses belong to Nov 2, which closed at $50,815.53 (+$2,440.39 vs Nov 2 baseline $48,375.14)"
     }
   ],
   "scanner_feed": [
@@ -5374,7 +5374,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-03T00:05:01-05:00",
+  "updated_at": "2026-11-03T00:05:13-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
