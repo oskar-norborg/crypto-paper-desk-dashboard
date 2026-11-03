@@ -2943,13 +2943,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-10-30T20:14:53-03:00",
-      "agent": "Executor",
-      "kind": "hold",
-      "text": "HOLD 8 shorts, no new opens",
-      "reason": "no stops/targets touched (5m candles); cut LINK/AAVE shorts on +7% bounce; no high-conviction edge in mixed regime"
-    },
-    {
       "t": "2026-10-30T20:14:59-03:00",
       "agent": "Scanner",
       "kind": "scan",
@@ -4408,6 +4401,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 08:08 ET: 30 public marks; overnight bounce \u2014 BTC 77218 (4h hi 77383), ETH 2277, SOL 92.75, NEAR 3.88, XRP +2%",
       "reason": "scheduled race cycle; scan scans/2026-11-03_0808_scan.md"
+    },
+    {
+      "t": "2026-11-03T08:09:11-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "Armed long triggers confirmed on closed 5m candles 06:00-07:45 ET: BTC >76850 (max close 77336.89 @07:35), ETH >2260 (2280.70 @07:45), SOL >92.25 (93.13 @07:20), NEAR >3.83 (3.9157 @07:45); all short triggers untouched",
+      "reason": "Desk flat before cycle; no exits to check. Bounce is on -> longs"
     }
   ],
   "scanner_feed": [
@@ -5364,7 +5364,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-03T08:09:10-05:00",
+  "updated_at": "2026-11-03T08:09:11-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
