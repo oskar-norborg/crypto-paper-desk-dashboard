@@ -1518,8 +1518,8 @@
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-03T13:01:47-05:00",
-      "note": "CHAOS: 13:01 ET race cycle \u00b7 BTC held, stop trailed to 77500 \u00b7 eq $53,540 \u00b7 exposure $602,794 (11.26x)"
+      "last_run": "2026-11-03T14:08:35-05:00",
+      "note": "CHAOS: 14:08 ET race cycle \u00b7 BTC long stopped at 77500, flat \u00b7 eq $53,076 \u00b7 exposure $0 (0.0x)"
     },
     "Equity": {
       "status": "ready",
@@ -3031,13 +3031,6 @@
   ],
   "activity": [
     {
-      "t": "2026-10-30T21:59:25-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "14 names SOFT-WARN on 24h vol < $5M (non-blocking); new opens restricted to \u2265 $5M names",
-      "reason": "prefer liquid Coinbase majors"
-    },
-    {
       "t": "2026-10-30T21:59:26-03:00",
       "agent": "Risk",
       "kind": "check",
@@ -4488,6 +4481,13 @@
       "kind": "plan",
       "text": "No new opens: ETH>2305 (max 5m close 2300.24), SOL>93.75 (max close 93.75, not >), XRP>1.2900 (max 1.2841) not fired; majors fading from 13:30 highs",
       "reason": "no clean edge in midday fade inside 24h range; armed for 15:00 ET: short BTC on 5m close <77400, long BTC on 5m close >77810, long ETH >2305/SOL >93.85"
+    },
+    {
+      "t": "2026-11-03T14:08:35-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 14:08 ET race cycle \u00b7 BTC long stopped at 77500, flat \u00b7 eq $53,076 \u00b7 exposure $0 (0.0x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
