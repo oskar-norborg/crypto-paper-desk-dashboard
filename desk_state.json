@@ -5,44 +5,16 @@
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 53016.84,
-  "cash": 45489.59,
-  "realized_pnl": 2989.23,
-  "unrealized_pnl": 27.61,
-  "day_pnl": 0.0,
-  "day_pnl_pct": 0.0,
+  "equity": 50815.53,
+  "cash": 50815.53,
+  "realized_pnl": 815.53,
+  "unrealized_pnl": 0.0,
+  "day_pnl": -2201.31,
+  "day_pnl_pct": -0.04152,
   "day_baseline_date": "2026-11-03",
   "day_baseline_equity": 53016.84,
-  "open_positions": [
-    {
-      "id": "2026-11-02_NEAR-USD_176",
-      "symbol": "NEAR-USD",
-      "side": "short",
-      "size": 39450.0,
-      "entry": 3.8021,
-      "notional": 149992.85,
-      "stop": 3.8572,
-      "target": 3.7032,
-      "target2": 3.631,
-      "invalidation": "exit on any trade through stop 3.8572, at target, or on chaos rotate",
-      "risk_usd": 2173.7,
-      "risk_pct_equity": 0.0412,
-      "opened_at": "2026-11-02T22:03:41-05:00",
-      "card": "CHAOS_NEAR",
-      "reason": "RACE short: NEAR -11.5% day trend, lost 3.83 on 5m closes, 21:30 lower high 3.8524 rejected, new low 3.79; $34M vol (depth thin ~$0.7M \u00b11%, sized down). Invalidation: 5m close > 3.83 \u2014 short (24h -11.41% from public stats open), notional $149,993 @ 20x paper (margin $7,500), stop 1.5% / tgt 2.6%/4.5%, risk $2,174 (4.1% eq; chaos cap 100%)",
-      "price_source": "coinbase_exchange_public_ticker 2026-11-02T22:03:41-05:00 BRT (exch 2026-11-03T03:03:34.209728261Z) api.exchange.coinbase.com",
-      "override": null,
-      "paper_only": true,
-      "leverage": 20.0,
-      "margin": 7499.64,
-      "mark": 3.8014,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-02T22:03:42-05:00",
-      "unrealized_pnl": 27.61,
-      "exposure": 149965.23
-    }
-  ],
-  "open_count": 1,
+  "open_positions": [],
+  "open_count": 0,
   "closed_positions": [
     {
       "type": "close",
@@ -1431,11 +1403,28 @@
       "reason": "STOP HIT: 23:25 ET 5m candle high 77,020.18 traded through stop 76,941; late-evening bounce reclaimed 76,850 invalidation (23:25 close 76,973). T1 75,487 never reached (low since entry 76,412 at 22:00).",
       "price_source": "coinbase_exchange_public 5m candles (unauthenticated), 23:25 ET candle; filled at stop level",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-02_NEAR-USD_176",
+      "symbol": "NEAR-USD",
+      "side": "short",
+      "size": 39450.0,
+      "entry": 3.8021,
+      "exit": 3.8572,
+      "pnl": -2173.7,
+      "notional": 149992.85,
+      "leverage": 20.0,
+      "margin": 7499.64,
+      "closed_at": "2026-11-03T00:04:49-05:00",
+      "reason": "STOP HIT: 23:25 ET 5m candle high 3.8675 traded through stop 3.8572; 5m closes back above 3.83 invalidation from 23:15. T1 3.7032 never reached (low since entry 3.7852).",
+      "price_source": "coinbase_exchange_public 5m candles (unauthenticated), 23:25 ET candle; filled at stop level",
+      "paper_only": true
     }
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 53016.84,
+  "max_risk_usd": 50815.53,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -530168.4,
   "paused": false,
@@ -1491,7 +1480,7 @@
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-03T00:04:49-05:00",
-      "note": "last: closed BTC-USD"
+      "note": "last: closed NEAR-USD"
     },
     "Logger": {
       "status": "ready",
@@ -2944,16 +2933,14 @@
       "t": "2026-11-03T00:04:49-05:00",
       "equity": 53016.84,
       "kind": "close"
+    },
+    {
+      "t": "2026-11-03T00:04:49-05:00",
+      "equity": 50815.53,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-30T18:21:35-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "12 watchlist names SOFT-WARN on 24h vol < $5M (OP, DOT, ICP, ARB, FIL, TIA, APT, SEI, ATOM, SHIB, POL, ETC) \u2014 skipped for new opens",
-      "reason": "tightened chaos discipline: new opens only liquid CEX names \u2265 $5M vol; all 10 open names PASS"
-    },
     {
       "t": "2026-10-30T18:21:35-03:00",
       "agent": "Risk",
@@ -4414,6 +4401,14 @@
       "text": "PAPER CLOSE BTC-USD @ 76941 \u00b7 P&L $-3498.75",
       "reason": "STOP HIT: 23:25 ET 5m candle high 77,020.18 traded through stop 76,941; late-evening bounce reclaimed 76,850 invalidation (23:25 close 76,973). T1 75,487 never reached (low since entry 76,412 at 22:00).",
       "fill_id": "2026-11-02_BTC-USD_175"
+    },
+    {
+      "t": "2026-11-03T00:04:49-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE NEAR-USD @ 3.8572 \u00b7 P&L $-2173.70",
+      "reason": "STOP HIT: 23:25 ET 5m candle high 3.8675 traded through stop 3.8572; 5m closes back above 3.83 invalidation from 23:15. T1 3.7032 never reached (low since entry 3.7852).",
+      "fill_id": "2026-11-02_NEAR-USD_176"
     }
   ],
   "scanner_feed": [
@@ -5393,10 +5388,10 @@
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 7499.64,
-  "exposure": 149965.23,
-  "buying_power": 910371.57,
-  "effective_leverage": 2.83,
+  "margin_used": 0,
+  "exposure": 0.0,
+  "buying_power": 1016310.6,
+  "effective_leverage": 0.0,
   "operating_timezone": "America/New_York",
   "events": [
     {
