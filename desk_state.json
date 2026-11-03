@@ -2883,13 +2883,6 @@
   ],
   "activity": [
     {
-      "t": "2026-10-30T14:16:10-03:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: 14:00 cycle book \u00b7 held",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
-    {
       "t": "2026-10-30T16:16:47-03:00",
       "agent": "Scanner",
       "kind": "scan",
@@ -4344,6 +4337,13 @@
       "kind": "scan",
       "text": "CHAOS race cycle 22:03 ET: 30 public marks; broad leg lower \u2014 BTC 76567 (-2.5%) new 24h low 76462.7, NEAR 3.80 (-11.5%) new low 3.79, SOL 91.68, ETH 2247",
       "reason": "scheduled race cycle; scan scans/2026-11-02_2203_scan.md"
+    },
+    {
+      "t": "2026-11-02T22:03:40-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "Armed triggers confirmed on closed 5m candles: BTC closes <76850 since 21:05, accelerated 21:55 close 76582.5; NEAR closes <3.83 since 21:40, 21:50 close 3.7983",
+      "reason": "Desk flat before cycle; no exits to check"
     }
   ],
   "scanner_feed": [
