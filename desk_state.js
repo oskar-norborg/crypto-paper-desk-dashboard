@@ -3034,13 +3034,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-10-30T21:04:11-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "XLM-USD PASS",
-      "reason": "vol $12.1M, spread 0.054%; Coinbase-listed major"
-    },
-    {
-      "t": "2026-10-30T21:04:11-03:00",
       "agent": "Executor",
       "kind": "fill",
       "text": "PAPER FILL long 701100 XLM-USD @ 0.171143 \u00b7 notional $119,988 (20x, margin $5,999) \u00b7 stop 0.1643 \u00b7 tgt 0.18483 \u00b7 risk $4,797.63",
@@ -4491,6 +4484,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 13:01 ET: 30/30 public marks; BTC 77540 (+0.85%), ETH 2293.7, SOL 93.25, XRP 1.2816",
       "reason": "scheduled race cycle; scan scans/2026-11-03_1301_scan.md"
+    },
+    {
+      "t": "2026-11-03T13:01:44-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "BTC long: stop 77240 untouched (5m low 77519.52 @12:30), T1 77892 not reached (high 77704.59 @12:05) -> HOLD; stop trailed 77240 -> 77500",
+      "reason": "BTC chopping 77.52k-77.70k with lower highs; trail 20x stop under 12:30 ET swing low to lock ~+$2.3k"
     }
   ],
   "scanner_feed": [
