@@ -1530,8 +1530,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-03T09:03:44-05:00",
-      "note": "CHAOS: 09:02 ET race cycle \u00b7 ETH closed at T1-touch; BTC long held vs invalidation \u00b7 eq $49,757 \u00b7 exposure $599,011 (12."
+      "last_run": "2026-11-03T11:03:36-05:00",
+      "note": "CHAOS: 11:02 ET race cycle \u00b7 BTC held, stop trailed to ~breakeven \u00b7 eq $53,366 \u00b7 exposure $602,620 (11.29x)"
     },
     "Equity": {
       "status": "ready",
@@ -3029,15 +3029,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-10-30T21:04:10-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 2287 SOL-USD @ 96.18 \u00b7 notional $219,964 (20x, margin $10,998) \u00b7 stop 93.295 \u00b7 tgt 101.95 \u00b7 risk $6,598.00",
-      "reason": "RACE SOL: most liquid alt ($105M 24h), +1.9% 4h higher lows off 94.51, reclaiming 96 \u2014 long, notional $219,964 @ 20x paper (margin $10,998), stop 3% / tgt 6%/10%, risk $6,598 (12.7% eq)",
-      "fill_id": "2026-10-30_SOL-USD_143",
-      "card": "RACE_SOL"
-    },
-    {
-      "t": "2026-10-30T21:04:10-03:00",
       "agent": "Rug Check",
       "kind": "check",
       "text": "LINK-USD PASS",
@@ -4492,6 +4483,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "Armed triggers: ETH >2305 (max close 2296.22) not fired; SOL >93.60 (max close 93.60, not above) not fired; XRP >1.2900 (max close 1.2789) not fired; shorts not fired",
       "reason": "no new open: no trigger fired, avoid stacking correlated 20x long below trigger"
+    },
+    {
+      "t": "2026-11-03T11:03:36-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 11:02 ET race cycle \u00b7 BTC held, stop trailed to ~breakeven \u00b7 eq $53,366 \u00b7 exposure $602,620 (11.29x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
@@ -5448,7 +5446,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-03T11:03:35-05:00",
+  "updated_at": "2026-11-03T11:03:36-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
