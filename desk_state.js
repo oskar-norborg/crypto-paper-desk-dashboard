@@ -6,12 +6,12 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 45407.77,
-  "cash": 20816.86,
+  "equity": 42327.31,
+  "cash": 5822.82,
   "realized_pnl": 815.53,
-  "unrealized_pnl": -5407.76,
-  "day_pnl": -5407.76,
-  "day_pnl_pct": -0.10642,
+  "unrealized_pnl": -8488.22,
+  "day_pnl": -8488.22,
+  "day_pnl_pct": -0.16704,
   "day_baseline_date": "2026-11-03",
   "day_baseline_equity": 50815.53,
   "open_positions": [
@@ -41,9 +41,36 @@ window.__DESK_STATE__ = {
       "mark_at": "2026-11-03T04:01:17-05:00",
       "unrealized_pnl": -5407.76,
       "exposure": 594565.69
+    },
+    {
+      "id": "2026-11-03_ETH-USD_180",
+      "symbol": "ETH-USD",
+      "side": "long",
+      "size": 131.7,
+      "entry": 2277.0,
+      "notional": 299880.9,
+      "stop": 2258.8,
+      "target": 2304.3,
+      "target2": 2322.5,
+      "invalidation": "exit on any trade through stop 2258.8, at target, or on chaos rotate",
+      "risk_usd": 2396.94,
+      "risk_pct_equity": 0.05279,
+      "opened_at": "2026-11-03T08:09:11-05:00",
+      "card": "CHAOS_ETH",
+      "reason": "RACE long: ETH broke 2260 on 5m closes, flagging 2277-2281 under 4h high 2282.8; $186M vol. Invalidation: 5m close < 2260 \u2014 long (24h -0.29% from public stats open), notional $299,881 @ 20x paper (margin $14,994), stop 0.8% / tgt 1.2%/2.0%, risk $2,397 (5.3% eq; chaos cap 100%)",
+      "price_source": "coinbase_exchange_public_ticker 2026-11-03T08:09:11-05:00 BRT (exch 2026-11-03T13:09:09.656127199Z) api.exchange.coinbase.com",
+      "override": null,
+      "paper_only": true,
+      "leverage": 20.0,
+      "margin": 14994.04,
+      "mark": 2253.61,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-03T04:01:17-05:00",
+      "unrealized_pnl": -3080.46,
+      "exposure": 296800.44
     }
   ],
-  "open_count": 1,
+  "open_count": 2,
   "closed_positions": [
     {
       "type": "close",
@@ -1453,7 +1480,7 @@ window.__DESK_STATE__ = {
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 45407.77,
+  "max_risk_usd": 42327.31,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -508155.3,
   "paused": false,
@@ -1509,12 +1536,12 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-03T08:09:11-05:00",
-      "note": "last: paper fill BTC-USD"
+      "note": "last: paper fill ETH-USD"
     },
     "Logger": {
       "status": "ready",
       "last_run": "2026-11-03T08:09:11-05:00",
-      "note": "logged 2026-11-03_BTC-USD_179"
+      "note": "logged 2026-11-03_ETH-USD_180"
     },
     "Equity": {
       "status": "ready",
@@ -2972,16 +2999,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-03T08:09:11-05:00",
       "equity": 45407.77,
       "kind": "fill"
+    },
+    {
+      "t": "2026-11-03T08:09:11-05:00",
+      "equity": 42327.31,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-30T21:04:06-03:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "Exit check vs public 5m candles since entry: no stop or target touched on any of 8 shorts",
-      "reason": "AVAX nearest stop (hi 8.556 vs 8.6705)"
-    },
     {
       "t": "2026-10-30T21:04:06-03:00",
       "agent": "Executor",
@@ -4443,6 +4468,15 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "ETH-USD PASS (chaos: non-blocking)",
       "reason": "vol $186.0M, spread 0.000%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
+    },
+    {
+      "t": "2026-11-03T08:09:11-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 131.7 ETH-USD @ 2277 \u00b7 notional $299,881 (20x, margin $14,994) \u00b7 stop 2258.8 \u00b7 tgt 2304.3 \u00b7 risk $2,396.94",
+      "reason": "RACE long: ETH broke 2260 on 5m closes, flagging 2277-2281 under 4h high 2282.8; $186M vol. Invalidation: 5m close < 2260 \u2014 long (24h -0.29% from public stats open), notional $299,881 @ 20x paper (margin $14,994), stop 0.8% / tgt 1.2%/2.0%, risk $2,397 (5.3% eq; chaos cap 100%)",
+      "fill_id": "2026-11-03_ETH-USD_180",
+      "card": "CHAOS_ETH"
     }
   ],
   "scanner_feed": [
@@ -5414,10 +5448,10 @@ window.__DESK_STATE__ = {
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 29998.67,
-  "exposure": 594565.69,
-  "buying_power": 313589.71,
-  "effective_leverage": 13.09,
+  "margin_used": 44992.71,
+  "exposure": 891366.13,
+  "buying_power": 0.0,
+  "effective_leverage": 21.06,
   "operating_timezone": "America/New_York",
   "events": [
     {
