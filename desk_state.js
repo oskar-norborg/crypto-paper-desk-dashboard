@@ -1436,7 +1436,7 @@ window.__DESK_STATE__ = {
     },
     "Rug Check": {
       "status": "idle",
-      "last_run": "2026-11-01T04:01:35-05:00",
+      "last_run": "2026-11-02T22:03:40-05:00",
       "note": "BTC-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
@@ -2883,13 +2883,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-30T16:16:47-03:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS cycle 16:00 BRT: 30/30 public marks; selloff re-deepening (28/30 red on 24h: BTC \u22125.5% vs \u22124.6%, ETH \u22124.6%, DOGE \u22125.7%; TIA \u221216.4%, INJ \u221212.5%; OP/POL green)",
-      "reason": "scheduled scanner run; scan file scans/2026-10-30_1616_scan.md"
-    },
     {
       "t": "2026-10-30T16:16:47-03:00",
       "agent": "Rug Check",
@@ -4345,6 +4338,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "Armed triggers confirmed on closed 5m candles: BTC closes <76850 since 21:05, accelerated 21:55 close 76582.5; NEAR closes <3.83 since 21:40, 21:50 close 3.7983",
       "reason": "Desk flat before cycle; no exits to check"
+    },
+    {
+      "t": "2026-11-02T22:03:40-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "BTC-USD PASS (chaos: non-blocking)",
+      "reason": "vol $578.9M, spread 0.000%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
     }
   ],
   "scanner_feed": [
