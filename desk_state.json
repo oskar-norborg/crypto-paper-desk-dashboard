@@ -1513,8 +1513,8 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-03T14:08:32-05:00",
-      "note": "No new opens: ETH>2305 (max 5m close 2300.24), SOL>93.75 (max close 93.75, not >), XRP>1.2900 (max 1.2841) not fired; ma"
+      "last_run": "2026-11-03T15:00:36-05:00",
+      "note": "No new opens: no armed trigger fired 14:05-14:55 ET (BTC 77421-77582 range); flat"
     },
     "Logger": {
       "status": "ready",
@@ -3031,14 +3031,6 @@
   ],
   "activity": [
     {
-      "t": "2026-10-30T21:59:26-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE NEAR-USD @ 4.3458 \u00b7 P&L $+187.27",
-      "reason": "thesis broken: momentum reversed \u2014 NEAR short premise was 'still weakening'; now +1.4% 1h / +1.1% 4h on public 15m candles and +9% 24h; take small profit before stop, recycle margin into a long",
-      "fill_id": "2026-10-30_NEAR-USD_131"
-    },
-    {
       "t": "2026-10-30T21:59:28-03:00",
       "agent": "Logger",
       "kind": "batch",
@@ -4488,6 +4480,13 @@
       "kind": "scan",
       "text": "CHAOS race cycle 15:00 ET: 30/30 public marks; BTC 77523 (+0.74%), ETH 2284.3, SOL 93.19, XRP 1.2759",
       "reason": "scheduled race cycle; scan scans/2026-11-03_1500_scan.md"
+    },
+    {
+      "t": "2026-11-03T15:00:36-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "No new opens: no armed trigger fired 14:05-14:55 ET (BTC 77421-77582 range); flat",
+      "reason": "no edge in tight chop; armed for 16:00 ET: BTC <77400 short / >77810 long, ETH >2305 long / <2280 short, SOL >93.85 long"
     }
   ],
   "scanner_feed": [
