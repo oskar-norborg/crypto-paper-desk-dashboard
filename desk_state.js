@@ -1525,8 +1525,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-03T12:03:50-05:00",
-      "note": "No new opens: ETH>2305 (max close 2295.45), SOL>93.75 (max 93.45), XRP>1.29 (max 1.2779) triggers not fired"
+      "last_run": "2026-11-03T13:01:44-05:00",
+      "note": "No new opens: ETH>2305 (max 5m close 2298.28), SOL>93.75 (max 93.49), XRP>1.2900 (max 1.2840) triggers not fired"
     },
     "Logger": {
       "status": "ready",
@@ -3033,15 +3033,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-10-30T21:04:10-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 19610 UNI-USD @ 7.1362 \u00b7 notional $139,941 (20x, margin $6,997) \u00b7 stop 6.8508 \u00b7 tgt 7.7071 \u00b7 risk $5,596.69",
-      "reason": "RACE UNI: +9.7% 24h, +2.3% last hour, strongest liquid relative strength ($15M vol) \u2014 long, notional $139,941 @ 20x paper (margin $6,997), stop 4% / tgt 8%/12%, risk $5,597 (10.7% eq)",
-      "fill_id": "2026-10-30_UNI-USD_145",
-      "card": "RACE_UNI"
-    },
-    {
       "t": "2026-10-30T21:04:11-03:00",
       "agent": "Rug Check",
       "kind": "check",
@@ -4493,6 +4484,13 @@ window.__DESK_STATE__ = {
       "kind": "plan",
       "text": "No new opens: ETH>2305 (max close 2295.45), SOL>93.75 (max 93.45), XRP>1.29 (max 1.2779) triggers not fired",
       "reason": "avoid stacking correlated 20x longs below trigger; triggers re-armed for 13:00 ET"
+    },
+    {
+      "t": "2026-11-03T13:01:44-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "No new opens: ETH>2305 (max 5m close 2298.28), SOL>93.75 (max 93.49), XRP>1.2900 (max 1.2840) triggers not fired",
+      "reason": "avoid stacking correlated 20x longs below trigger in a flat midday range; triggers re-armed for 14:00 ET"
     }
   ],
   "scanner_feed": [
