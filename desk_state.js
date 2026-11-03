@@ -1506,8 +1506,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-02T22:03:41-05:00",
-      "note": "logged 2026-11-02_NEAR-USD_176"
+      "last_run": "2026-11-02T22:03:44-05:00",
+      "note": "CHAOS: 22:03 ET race cycle \u00b7 opened BTC + NEAR shorts on confirmed breakdowns \u00b7 eq $56,501 \u00b7 exposure $849,952 (15.04x)"
     },
     "Equity": {
       "status": "ready",
@@ -2953,13 +2953,6 @@ window.__DESK_STATE__ = {
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-30T18:04:44-03:00",
-      "agent": "Logger",
-      "kind": "review",
-      "text": "EOD review 2026-10-30: equity $58,243.41, day +$3,868.97 (+7.12%), 10 shorts held, 16.72x",
-      "reason": "scheduled EOD paper review; no stops/targets touched since 16:16; review reviews/2026-10-30.md"
-    },
     {
       "t": "2026-10-30T18:21:35-03:00",
       "agent": "Scanner",
@@ -4419,6 +4412,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE short: NEAR -11.5% day trend, lost 3.83 on 5m closes, 21:30 lower high 3.8524 rejected, new low 3.79; $34M vol (depth thin ~$0.7M \u00b11%, sized down). Invalidation: 5m close > 3.83 \u2014 short (24h -11.41% from public stats open), notional $149,993 @ 20x paper (margin $7,500), stop 1.5% / tgt 2.6%/4.5%, risk $2,174 (4.1% eq; chaos cap 100%)",
       "fill_id": "2026-11-02_NEAR-USD_176",
       "card": "CHAOS_NEAR"
+    },
+    {
+      "t": "2026-11-02T22:03:44-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 22:03 ET race cycle \u00b7 opened BTC + NEAR shorts on confirmed breakdowns \u00b7 eq $56,501 \u00b7 exposure $849,952 (15.04x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
