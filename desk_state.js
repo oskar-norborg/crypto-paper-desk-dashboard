@@ -3021,14 +3021,6 @@ window.__DESK_STATE__ = {
       "t": "2026-10-30T21:04:07-03:00",
       "agent": "Executor",
       "kind": "close",
-      "text": "PAPER CLOSE SUI-USD @ 0.9051 \u00b7 P&L $-427.26",
-      "reason": "thesis broken: momentum reversed \u2014 broad alt bounce, rising on 1h/4h public 15m candles and green on 24h; exit plan 'or on chaos rotate'; recycle margin into longs",
-      "fill_id": "2026-10-30_SUI-USD_134"
-    },
-    {
-      "t": "2026-10-30T21:04:07-03:00",
-      "agent": "Executor",
-      "kind": "close",
       "text": "PAPER CLOSE XRP-USD @ 1.2555 \u00b7 P&L $-183.52",
       "reason": "thesis broken: momentum reversed \u2014 broad alt bounce, rising on 1h/4h public 15m candles and green on 24h; exit plan 'or on chaos rotate'; recycle margin into longs",
       "fill_id": "2026-10-30_XRP-USD_128"
@@ -4485,6 +4477,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 09:02 ET: 30/30 public marks; BTC pushed to 77745 @08:30 then rolled to ~77.0k, ETH spiked 2304.6 then 2284",
       "reason": "scheduled race cycle; scan scans/2026-11-03_0902_scan.md"
+    },
+    {
+      "t": "2026-11-03T09:03:41-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH T1 2304.3 touched (5m high 2304.62 @08:30 ET) -> exit per plan; BTC stop 76734 untouched (low 76980.51), T1 77892 not reached (high 77745.38), invalidation 5m close<76850 not hit",
+      "reason": "public Coinbase 5m candles 08:05-09:00 ET"
     }
   ],
   "scanner_feed": [
