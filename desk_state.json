@@ -1509,8 +1509,8 @@
   "agents": {
     "Scanner": {
       "status": "idle",
-      "last_run": "2026-11-03T10:01:34-05:00",
-      "note": "10:00 ET race cycle: 0 new \u00b7 BTC long held"
+      "last_run": "2026-11-03T11:03:32-05:00",
+      "note": "CHAOS race cycle 11:02 ET: public marks refreshed; BTC broke 77.36k range top at 10:40 ET, high 77714.70, ETH up to 2299"
     },
     "Rug Check": {
       "status": "idle",
@@ -3023,13 +3023,6 @@
   "activity": [
     {
       "t": "2026-10-30T21:04:10-03:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: alt shorts cut \u00b7 eq $52,133 \u00b7 exposure $235,575 (4.52x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
-    {
-      "t": "2026-10-30T21:04:10-03:00",
       "agent": "Executor",
       "kind": "plan",
       "text": "RACE rotate: flip to concentrated 20x longs in the strongest liquid bouncers (SOL, LINK, UNI, XLM); keep BTC + NEAR shorts as in-profit hedge",
@@ -4486,6 +4479,13 @@
       "kind": "scan",
       "text": "10:00 ET race cycle: 0 new \u00b7 BTC long held",
       "reason": "no armed trigger fired; majors range-bound; BTC long above invalidation 76,850; scan scans/2026-11-03_1000_scan.md"
+    },
+    {
+      "t": "2026-11-03T11:03:32-05:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "CHAOS race cycle 11:02 ET: public marks refreshed; BTC broke 77.36k range top at 10:40 ET, high 77714.70, ETH up to 2299.94, SOL 93.75 high",
+      "reason": "scheduled race cycle; public Coinbase 5m candles 10:00-10:55 ET"
     }
   ],
   "scanner_feed": [
