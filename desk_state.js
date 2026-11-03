@@ -6,12 +6,12 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 52763.3,
-  "cash": 21489.34,
+  "equity": 51702.09,
+  "cash": 13989.7,
   "realized_pnl": 6487.98,
-  "unrealized_pnl": -3724.68,
-  "day_pnl": 4388.16,
-  "day_pnl_pct": 0.09071,
+  "unrealized_pnl": -4785.89,
+  "day_pnl": 3326.95,
+  "day_pnl_pct": 0.06877,
   "day_baseline_date": "2026-11-02",
   "day_baseline_equity": 48375.14,
   "open_positions": [
@@ -41,9 +41,36 @@ window.__DESK_STATE__ = {
       "mark_at": "2026-11-02T21:04:49-05:00",
       "unrealized_pnl": -3724.68,
       "exposure": 703697.49
+    },
+    {
+      "id": "2026-11-02_NEAR-USD_176",
+      "symbol": "NEAR-USD",
+      "side": "short",
+      "size": 39450.0,
+      "entry": 3.8021,
+      "notional": 149992.85,
+      "stop": 3.8572,
+      "target": 3.7032,
+      "target2": 3.631,
+      "invalidation": "exit on any trade through stop 3.8572, at target, or on chaos rotate",
+      "risk_usd": 2173.7,
+      "risk_pct_equity": 0.0412,
+      "opened_at": "2026-11-02T22:03:41-05:00",
+      "card": "CHAOS_NEAR",
+      "reason": "RACE short: NEAR -11.5% day trend, lost 3.83 on 5m closes, 21:30 lower high 3.8524 rejected, new low 3.79; $34M vol (depth thin ~$0.7M \u00b11%, sized down). Invalidation: 5m close > 3.83 \u2014 short (24h -11.41% from public stats open), notional $149,993 @ 20x paper (margin $7,500), stop 1.5% / tgt 2.6%/4.5%, risk $2,174 (4.1% eq; chaos cap 100%)",
+      "price_source": "coinbase_exchange_public_ticker 2026-11-02T22:03:41-05:00 BRT (exch 2026-11-03T03:03:34.209728261Z) api.exchange.coinbase.com",
+      "override": null,
+      "paper_only": true,
+      "leverage": 20.0,
+      "margin": 7499.64,
+      "mark": 3.829,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-02T21:04:51-05:00",
+      "unrealized_pnl": -1061.21,
+      "exposure": 151054.05
     }
   ],
-  "open_count": 1,
+  "open_count": 2,
   "closed_positions": [
     {
       "type": "close",
@@ -1419,7 +1446,7 @@ window.__DESK_STATE__ = {
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 52763.3,
+  "max_risk_usd": 51702.09,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -483751.4,
   "paused": false,
@@ -1474,13 +1501,13 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-02T22:03:40-05:00",
-      "note": "last: paper fill BTC-USD"
+      "last_run": "2026-11-02T22:03:41-05:00",
+      "note": "last: paper fill NEAR-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-02T22:03:40-05:00",
-      "note": "logged 2026-11-02_BTC-USD_175"
+      "last_run": "2026-11-02T22:03:41-05:00",
+      "note": "logged 2026-11-02_NEAR-USD_176"
     },
     "Equity": {
       "status": "ready",
@@ -2913,16 +2940,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-02T22:03:40-05:00",
       "equity": 52763.3,
       "kind": "fill"
+    },
+    {
+      "t": "2026-11-02T22:03:41-05:00",
+      "equity": 51702.09,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-30T16:16:47-03:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "HOLD: no new opens this cycle; keep 10 shorts",
-      "reason": "book already ~14.7x effective; free cash $3,329 is the stop-funding buffer (margin-limited); remaining liquid names (DOGE, LTC, UNI) already \u22124\u20136% on the day with no fresh edge worth draining the buffer"
-    },
     {
       "t": "2026-10-30T18:04:44-03:00",
       "agent": "Logger",
@@ -4380,6 +4405,15 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "NEAR-USD PASS (chaos: non-blocking)",
       "reason": "vol $34.0M, spread 0.029%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
+    },
+    {
+      "t": "2026-11-02T22:03:41-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 39450 NEAR-USD @ 3.8021 \u00b7 notional $149,993 (20x, margin $7,500) \u00b7 stop 3.8572 \u00b7 tgt 3.7032 \u00b7 risk $2,173.70",
+      "reason": "RACE short: NEAR -11.5% day trend, lost 3.83 on 5m closes, 21:30 lower high 3.8524 rejected, new low 3.79; $34M vol (depth thin ~$0.7M \u00b11%, sized down). Invalidation: 5m close > 3.83 \u2014 short (24h -11.41% from public stats open), notional $149,993 @ 20x paper (margin $7,500), stop 1.5% / tgt 2.6%/4.5%, risk $2,174 (4.1% eq; chaos cap 100%)",
+      "fill_id": "2026-11-02_NEAR-USD_176",
+      "card": "CHAOS_NEAR"
     }
   ],
   "scanner_feed": [
@@ -5359,10 +5393,10 @@ window.__DESK_STATE__ = {
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 34998.64,
-  "exposure": 703697.49,
-  "buying_power": 351568.51,
-  "effective_leverage": 13.34,
+  "margin_used": 42498.28,
+  "exposure": 854751.54,
+  "buying_power": 179290.26,
+  "effective_leverage": 16.53,
   "operating_timezone": "America/New_York",
   "events": [
     {
