@@ -3024,13 +3024,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-10-30T21:04:10-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "SOL-USD PASS",
-      "reason": "vol $104.8M, spread 0.010%; Coinbase-listed major"
-    },
-    {
-      "t": "2026-10-30T21:04:10-03:00",
       "agent": "Executor",
       "kind": "fill",
       "text": "PAPER FILL long 2287 SOL-USD @ 96.18 \u00b7 notional $219,964 (20x, margin $10,998) \u00b7 stop 93.295 \u00b7 tgt 101.95 \u00b7 risk $6,598.00",
@@ -4487,6 +4480,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "BTC long: stop 76734 untouched (low 77100.53), T1 77892 not reached (high 77714.70) -> HOLD; stop trailed 76734 -> 77190 (~entry)",
       "reason": "protect 20x book after range breakout; T1/T2 unchanged"
+    },
+    {
+      "t": "2026-11-03T11:03:32-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "Armed triggers: ETH >2305 (max close 2296.22) not fired; SOL >93.60 (max close 93.60, not above) not fired; XRP >1.2900 (max close 1.2789) not fired; shorts not fired",
+      "reason": "no new open: no trigger fired, avoid stacking correlated 20x long below trigger"
     }
   ],
   "scanner_feed": [
