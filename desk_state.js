@@ -3038,13 +3038,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-10-30T21:04:15-03:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: race book \u00b7 eq $52,092 \u00b7 exposure $875,349 (16.8x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
-    {
       "t": "2026-10-30T21:04:39-03:00",
       "agent": "Logger",
       "kind": "note",
@@ -4494,6 +4487,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 14:08 ET: 30/30 public marks; BTC 77471 (+0.68%), ETH 2287.2, SOL 93.29, XRP 1.2771",
       "reason": "scheduled race cycle; scan scans/2026-11-03_1408_scan.md"
+    },
+    {
+      "t": "2026-11-03T14:08:32-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "BTC long STOP HIT: trailed stop 77500 traded through on public 5m candle 13:55 ET (low 77462.67, high 77510.75); T1 77892 never reached (13:00-14:05 high 77805.27 @13:30)",
+      "reason": "close on paper at stop level 77500, a price inside the 13:55 ET candle range"
     }
   ],
   "scanner_feed": [
