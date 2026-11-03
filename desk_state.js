@@ -1525,8 +1525,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-03T09:03:41-05:00",
-      "note": "last: closed ETH-USD"
+      "last_run": "2026-11-03T12:03:50-05:00",
+      "note": "No new opens: ETH>2305 (max close 2295.45), SOL>93.75 (max 93.45), XRP>1.29 (max 1.2779) triggers not fired"
     },
     "Logger": {
       "status": "ready",
@@ -3029,13 +3029,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-10-30T21:04:10-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "UNI-USD PASS",
-      "reason": "vol $14.8M, spread 0.039%; Coinbase-listed major"
-    },
-    {
-      "t": "2026-10-30T21:04:10-03:00",
       "agent": "Executor",
       "kind": "fill",
       "text": "PAPER FILL long 19610 UNI-USD @ 7.1362 \u00b7 notional $139,941 (20x, margin $6,997) \u00b7 stop 6.8508 \u00b7 tgt 7.7071 \u00b7 risk $5,596.69",
@@ -4488,6 +4481,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "BTC long: stop 77190 untouched (5m low 77250.11 @11:20), T1 77892 not reached (high 77691.16) -> HOLD, stop trailed 77190 -> 77240",
       "reason": "BTC held higher low 77250 (11:20 ET) and pushed to 77691 by 12:00; trail 20x stop under swing low to lock ~+$335"
+    },
+    {
+      "t": "2026-11-03T12:03:50-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "No new opens: ETH>2305 (max close 2295.45), SOL>93.75 (max 93.45), XRP>1.29 (max 1.2779) triggers not fired",
+      "reason": "avoid stacking correlated 20x longs below trigger; triggers re-armed for 13:00 ET"
     }
   ],
   "scanner_feed": [
