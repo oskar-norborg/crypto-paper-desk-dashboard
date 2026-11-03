@@ -22,10 +22,10 @@ window.__DESK_STATE__ = {
       "size": 7.772,
       "entry": 77196.79,
       "notional": 599973.45,
-      "stop": 77240.0,
+      "stop": 77500.0,
       "target": 77892.0,
       "target2": 78432.0,
-      "invalidation": "exit on any trade through trailed stop 77240 (below 11:20 ET swing low 77250.11), at target, or on 5m close < 77240",
+      "invalidation": "exit on any trade through trailed stop 77500 (below 12:30 ET swing low 77519.52), at target, or on 5m close < 77500",
       "risk_usd": -335.83,
       "risk_pct_equity": 0.07078,
       "opened_at": "2026-11-03T08:09:11-05:00",
@@ -1510,8 +1510,8 @@ window.__DESK_STATE__ = {
   "agents": {
     "Scanner": {
       "status": "idle",
-      "last_run": "2026-11-03T13:01:44-05:00",
-      "note": "CHAOS race cycle 13:01 ET: 30/30 public marks; BTC 77540 (+0.85%), ETH 2293.7, SOL 93.25, XRP 1.2816"
+      "last_run": "2026-11-03T12:03:50-05:00",
+      "note": "CHAOS race cycle 12:02 ET: 30/30 public marks; BTC 77662 (+0.82%), ETH 2295, SOL 93.46, XRP 1.2787"
     },
     "Rug Check": {
       "status": "idle",
@@ -3033,6 +3033,22 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
+      "t": "2026-10-30T21:04:10-03:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 19610 UNI-USD @ 7.1362 \u00b7 notional $139,941 (20x, margin $6,997) \u00b7 stop 6.8508 \u00b7 tgt 7.7071 \u00b7 risk $5,596.69",
+      "reason": "RACE UNI: +9.7% 24h, +2.3% last hour, strongest liquid relative strength ($15M vol) \u2014 long, notional $139,941 @ 20x paper (margin $6,997), stop 4% / tgt 8%/12%, risk $5,597 (10.7% eq)",
+      "fill_id": "2026-10-30_UNI-USD_145",
+      "card": "RACE_UNI"
+    },
+    {
+      "t": "2026-10-30T21:04:11-03:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "XLM-USD PASS",
+      "reason": "vol $12.1M, spread 0.054%; Coinbase-listed major"
+    },
+    {
       "t": "2026-10-30T21:04:11-03:00",
       "agent": "Executor",
       "kind": "fill",
@@ -4477,20 +4493,6 @@ window.__DESK_STATE__ = {
       "kind": "plan",
       "text": "No new opens: ETH>2305 (max close 2295.45), SOL>93.75 (max 93.45), XRP>1.29 (max 1.2779) triggers not fired",
       "reason": "avoid stacking correlated 20x longs below trigger; triggers re-armed for 13:00 ET"
-    },
-    {
-      "t": "2026-11-03T13:01:44-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 13:01 ET: 30/30 public marks; BTC 77540 (+0.85%), ETH 2293.7, SOL 93.25, XRP 1.2816",
-      "reason": "scheduled race cycle; scan scans/2026-11-03_1301_scan.md"
-    },
-    {
-      "t": "2026-11-03T13:01:44-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "BTC long: stop 77240 untouched (5m low 77519.52 @12:30), T1 77892 not reached (high 77704.59 @12:05) -> HOLD; stop trailed 77240 -> 77500",
-      "reason": "BTC chopping 77.52k-77.70k with lower highs; trail 20x stop under 12:30 ET swing low to lock ~+$2.3k"
     }
   ],
   "scanner_feed": [
