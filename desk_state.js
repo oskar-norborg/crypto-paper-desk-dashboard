@@ -3029,15 +3029,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-10-30T21:04:10-03:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 13950 LINK-USD @ 11.464 \u00b7 notional $159,923 (20x, margin $7,996) \u00b7 stop 11.005 \u00b7 tgt 12.381 \u00b7 risk $6,403.05",
-      "reason": "RACE LINK: +9.3% 24h, +3.0% 4h, pressing 24h high 11.47 on $20M vol \u2014 long, notional $159,923 @ 20x paper (margin $7,996), stop 4% / tgt 8%/12%, risk $6,403 (12.3% eq)",
-      "fill_id": "2026-10-30_LINK-USD_144",
-      "card": "RACE_LINK"
-    },
-    {
-      "t": "2026-10-30T21:04:10-03:00",
       "agent": "Rug Check",
       "kind": "check",
       "text": "UNI-USD PASS",
@@ -4490,6 +4481,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 12:02 ET: 30/30 public marks; BTC 77662 (+0.82%), ETH 2295, SOL 93.46, XRP 1.2787",
       "reason": "scheduled race cycle; scan scans/2026-11-03_1203_scan.md"
+    },
+    {
+      "t": "2026-11-03T12:03:50-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "BTC long: stop 77190 untouched (5m low 77250.11 @11:20), T1 77892 not reached (high 77691.16) -> HOLD, stop trailed 77190 -> 77240",
+      "reason": "BTC held higher low 77250 (11:20 ET) and pushed to 77691 by 12:00; trail 20x stop under swing low to lock ~+$335"
     }
   ],
   "scanner_feed": [
