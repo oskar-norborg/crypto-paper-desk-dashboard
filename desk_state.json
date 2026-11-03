@@ -5,16 +5,44 @@
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 56487.98,
-  "cash": 56487.98,
+  "equity": 52763.3,
+  "cash": 21489.34,
   "realized_pnl": 6487.98,
-  "unrealized_pnl": 0.0,
-  "day_pnl": 8112.84,
-  "day_pnl_pct": 0.16771,
+  "unrealized_pnl": -3724.68,
+  "day_pnl": 4388.16,
+  "day_pnl_pct": 0.09071,
   "day_baseline_date": "2026-11-02",
   "day_baseline_equity": 48375.14,
-  "open_positions": [],
-  "open_count": 0,
+  "open_positions": [
+    {
+      "id": "2026-11-02_BTC-USD_175",
+      "symbol": "BTC-USD",
+      "side": "short",
+      "size": 9.143,
+      "entry": 76558.33,
+      "notional": 699972.81,
+      "stop": 76941.0,
+      "target": 75487.0,
+      "target2": 74644.0,
+      "invalidation": "exit on any trade through stop 76941, at target, or on chaos rotate",
+      "risk_usd": 3498.75,
+      "risk_pct_equity": 0.06194,
+      "opened_at": "2026-11-02T22:03:40-05:00",
+      "card": "CHAOS_BTC",
+      "reason": "RACE short: BTC lost 76850 on 5m closes, lower highs 77005\u219276930\u219276846, broke 24h low 76516 into 76462; deepest liquidity ($579M vol). Invalidation: 5m close back > 76850 \u2014 short (24h -2.47% from public stats open), notional $699,973 @ 20x paper (margin $34,999), stop 0.5% / tgt 1.4%/2.5%, risk $3,499 (6.2% eq; chaos cap 100%)",
+      "price_source": "coinbase_exchange_public_ticker 2026-11-02T22:03:40-05:00 BRT (exch 2026-11-03T03:03:39.579349379Z) api.exchange.coinbase.com",
+      "override": null,
+      "paper_only": true,
+      "leverage": 20.0,
+      "margin": 34998.64,
+      "mark": 76965.71,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-02T21:04:49-05:00",
+      "unrealized_pnl": -3724.68,
+      "exposure": 703697.49
+    }
+  ],
+  "open_count": 1,
   "closed_positions": [
     {
       "type": "close",
@@ -1390,7 +1418,7 @@
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 56487.98,
+  "max_risk_usd": 52763.3,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -483751.4,
   "paused": false,
@@ -1445,13 +1473,13 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-02T20:07:54-05:00",
-      "note": "last: closed BTC-USD"
+      "last_run": "2026-11-02T22:03:40-05:00",
+      "note": "last: paper fill BTC-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-02T13:02:37-05:00",
-      "note": "logged 2026-11-02_SOL-USD_171"
+      "last_run": "2026-11-02T22:03:40-05:00",
+      "note": "logged 2026-11-02_BTC-USD_175"
     },
     "Equity": {
       "status": "ready",
@@ -2879,16 +2907,14 @@
       "t": "2026-11-02T20:07:54-05:00",
       "equity": 56487.98,
       "kind": "close"
+    },
+    {
+      "t": "2026-11-02T22:03:40-05:00",
+      "equity": 52763.3,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-30T16:16:47-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "12 watchlist names SOFT-WARN on 24h vol < $5M \u2014 skipped for new opens",
-      "reason": "race-mode discipline: new opens only on liquid CEX names with vol \u2265 $5M and tight spreads"
-    },
     {
       "t": "2026-10-30T16:16:47-03:00",
       "agent": "Risk",
@@ -4344,6 +4370,15 @@
       "kind": "check",
       "text": "BTC-USD PASS (chaos: non-blocking)",
       "reason": "vol $578.9M, spread 0.000%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
+    },
+    {
+      "t": "2026-11-02T22:03:40-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 9.143 BTC-USD @ 76558.3 \u00b7 notional $699,973 (20x, margin $34,999) \u00b7 stop 76941 \u00b7 tgt 75487 \u00b7 risk $3,498.75",
+      "reason": "RACE short: BTC lost 76850 on 5m closes, lower highs 77005\u219276930\u219276846, broke 24h low 76516 into 76462; deepest liquidity ($579M vol). Invalidation: 5m close back > 76850 \u2014 short (24h -2.47% from public stats open), notional $699,973 @ 20x paper (margin $34,999), stop 0.5% / tgt 1.4%/2.5%, risk $3,499 (6.2% eq; chaos cap 100%)",
+      "fill_id": "2026-11-02_BTC-USD_175",
+      "card": "CHAOS_BTC"
     }
   ],
   "scanner_feed": [
@@ -5323,10 +5358,10 @@
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 0,
-  "exposure": 0.0,
-  "buying_power": 1129759.6,
-  "effective_leverage": 0.0,
+  "margin_used": 34998.64,
+  "exposure": 703697.49,
+  "buying_power": 351568.51,
+  "effective_leverage": 13.34,
   "operating_timezone": "America/New_York",
   "events": [
     {
