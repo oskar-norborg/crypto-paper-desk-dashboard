@@ -1627,8 +1627,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-04T10:09:33-05:00",
-      "note": "10:07 ET: banked ETH T1; re-entered ETH long on breakout continuation"
+      "last_run": "2026-11-04T11:00:21-05:00",
+      "note": "11:00 ET: hold ETH long, no new opens"
     },
     "Logger": {
       "status": "ready",
@@ -3275,13 +3275,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-10-31T12:56:55-03:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "Correction 12:56: after mark refresh buying power is $65.9k but free cash is only $3,000 (the thin stop-funding cushion); a new 20x fill would consume it. Best candidate NEAR-USD (+3.9% 24h, $23.7M vol, pressing 24h high 4.476) noted for next cycle if a long hits target or cash frees",
-      "reason": "race mode: keep book deployed, keep only stop-funding cushion"
-    },
-    {
       "t": "2026-10-31T13:53:16-03:00",
       "agent": "Scanner",
       "kind": "scan",
@@ -4745,6 +4738,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "ETH-USD long HOLD: no stop/invalidation hit (low 2,415.50 > 2,395; lowest 5m close 2,417.27 > 2,400; BTC lowest 5m close 80,087 > 79,400)",
       "reason": "Coinbase public 5m candles 10:10-10:55 ET"
+    },
+    {
+      "t": "2026-11-04T11:00:21-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "11:00 ET: hold ETH long, no new opens",
+      "reason": "momentum cooling off 10:15 highs; no fresh high-conviction edge; adding BTC/SOL would stack the same thesis"
     }
   ],
   "scanner_feed": [
@@ -5698,7 +5698,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-04T11:00:20-05:00",
+  "updated_at": "2026-11-04T11:00:21-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
