@@ -3291,13 +3291,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-10-31T14:56:34-03:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 14:56 BRT: 30 public marks, 0 failed; quiet weekend tape (BTC +0.7%, ETH +0.6%, SOL +1.8% 24h); NEAR +6.1% and AAVE +7.2% lead (AAVE thin, $3.1M vol)",
-      "reason": "scheduled race cycle; scan scans/2026-10-31_1456_scan.md"
-    },
-    {
-      "t": "2026-10-31T14:56:34-03:00",
       "agent": "Rug Check",
       "kind": "check",
       "text": "Low-vol names SOFT-WARN on 24h vol < $5M (XLM now $4.7M, held position); no new opens this cycle",
@@ -4760,6 +4753,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 14:05 ET: 30/30 public marks; afternoon fade \u2014 BTC 80,108 (+3.3%), ETH 2,414.7 (+5.7%), SOL 94.84 (+1.8%), NEAR 4.02 (+5.4%)",
       "reason": "scheduled race cycle; scan scans/2026-11-04_1405_scan.md"
+    },
+    {
+      "t": "2026-11-04T14:06:11-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD long 309 @ 2,426.18: no stop/invalidation touch (low since 13:05 ET 2,411.13 > stop 2,395; lowest 5m close 2,412.37 > 2,400; BTC lowest 5m close 80,155 > 79,400) but momentum reversed: 14:00 ET 5m broke the 2,417.8 midday range floor with lower highs",
+      "reason": "Coinbase public 5m candles 13:05-14:05 ET; routine rule: rotate losers that invalidate momentum before they kiss stops"
     }
   ],
   "scanner_feed": [
