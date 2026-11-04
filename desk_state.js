@@ -1616,8 +1616,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-04T14:06:11-05:00",
-      "note": "14:05 ET: rotated out of ETH long on momentum reversal; flat, no new open"
+      "last_run": "2026-11-04T14:58:52-05:00",
+      "note": "14:58 ET: flat, no new open \u2014 neither pre-set trigger fired"
     },
     "Logger": {
       "status": "ready",
@@ -3285,13 +3285,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-10-31T15:56:56-03:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 15:56 BRT: 30 public marks, 0 failed; quiet weekend tape (BTC +1.3%, ETH +1.1%, SOL +1.9% 24h); LINK +5.4%, NEAR +5.4%, AAVE +7.0% (AAVE thin, $3.0M vol)",
-      "reason": "scheduled race cycle; scan scans/2026-10-31_1556_scan.md"
-    },
-    {
-      "t": "2026-10-31T15:56:56-03:00",
       "agent": "Rug Check",
       "kind": "check",
       "text": "Low-vol names SOFT-WARN on 24h vol < $5M (XLM $4.2M, held position); no new opens this cycle",
@@ -4755,6 +4748,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 14:58 ET: 30/30 public marks; slow fade \u2014 BTC 79,951 (+3.1%), ETH 2,404.2 (+5.3%), SOL 94.50 (+1.4%), NEAR 3.98 (+4.2%)",
       "reason": "scheduled race cycle; scan scans/2026-11-04_1458_scan.md"
+    },
+    {
+      "t": "2026-11-04T14:58:52-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "14:58 ET: flat, no new open \u2014 neither pre-set trigger fired",
+      "reason": "ETH lowest 5m close 2,406.03 (short trigger <2,395 w/ BTC <79,900 not met); ETH high 2,426.7 (long trigger 2,435 not met). Next: short on ETH 5m close <2,398 + BTC <79,850; long on ETH >2,427 + BTC >80,320"
     }
   ],
   "scanner_feed": [
@@ -5430,7 +5430,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-04T14:58:51-05:00",
+  "updated_at": "2026-11-04T14:58:52-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
