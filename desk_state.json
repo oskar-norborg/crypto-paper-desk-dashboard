@@ -1614,8 +1614,8 @@
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-04T04:07:26-05:00",
-      "note": "logged 2026-11-04_ETH-USD_190"
+      "last_run": "2026-11-04T04:07:28-05:00",
+      "note": "CHAOS: 04:06 ET race cycle \u00b7 ETH long T1 2,304 closed; re-entered ETH long continuation \u00b7 eq $71,472 \u00b7 exposure $578,852"
     },
     "Equity": {
       "status": "ready",
@@ -3223,13 +3223,6 @@
   "activity": [
     {
       "t": "2026-10-31T09:54:22-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "16 names SOFT-WARN on 24h vol < $5M (non-blocking); no new opens this cycle",
-      "reason": "prefer liquid Coinbase majors"
-    },
-    {
-      "t": "2026-10-31T09:54:22-03:00",
       "agent": "Risk",
       "kind": "check",
       "text": "Exit check vs public 5m candles since entry: no stop or target touched on any of 6 positions; no 15m close below 4h low on longs; all longs green 1h \u2014 momentum intact, no rotation",
@@ -4689,6 +4682,13 @@
       "reason": "RACE long continuation: ETH trend up all night (2,273 to 2,325.72 at 03:35 ET) with higher lows 2,285/2,298/2,314; first pullback holding 2,315-2,318 above the 03:00-03:15 breakout base; BTC confirming 78.3k near 78.4k high. Notional $578,780 at 20x (margin $28,939), risk $4,530 (6.3% eq). T1 2,345, T2 2,370.",
       "fill_id": "2026-11-04_ETH-USD_190",
       "card": "RACE_ETH_LONG"
+    },
+    {
+      "t": "2026-11-04T04:07:28-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 04:06 ET race cycle \u00b7 ETH long T1 2,304 closed; re-entered ETH long continuation \u00b7 eq $71,472 \u00b7 exposure $578,852 (8.1x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
