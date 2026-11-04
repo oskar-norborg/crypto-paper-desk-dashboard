@@ -1609,8 +1609,8 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-04T04:07:26-05:00",
-      "note": "last: paper fill ETH-USD"
+      "last_run": "2026-11-04T08:08:11-05:00",
+      "note": "No new opens 08:07 ET"
     },
     "Logger": {
       "status": "ready",
@@ -3223,13 +3223,6 @@
   "activity": [
     {
       "t": "2026-10-31T10:58:43-03:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 10:58 BRT: 30/30 public marks; quiet weekend tape (BTC +0.5%, ETH +1.2% 24h); alts slipping slightly 1h (SOL -0.3%, LINK -0.3%, UNI -0.2%)",
-      "reason": "scheduled race cycle; scan scans/2026-10-31_1058_scan.md"
-    },
-    {
-      "t": "2026-10-31T10:58:43-03:00",
       "agent": "Rug Check",
       "kind": "check",
       "text": "16 names SOFT-WARN on 24h vol < $5M (non-blocking); no new opens this cycle",
@@ -4689,6 +4682,13 @@
       "kind": "check",
       "text": "ETH-USD long 250 @ 2,315.12 HOLD: stop 2,297 not touched (low 2,306.93 at 07:50 ET), no 5m close < 2,299, BTC lowest 5m close 77,967 > 77,900; T1 2,345 not reached (high 2,336.79 at 06:45 ET)",
       "reason": "Coinbase public 5m candles 04:05-08:05 ET; invalidation intact, thesis dented by 07:00 ET flush but base held"
+    },
+    {
+      "t": "2026-11-04T08:08:11-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "No new opens 08:07 ET",
+      "reason": "post-flush chop: ETH/BTC lower highs since 06:45 ET, no clean high-conviction setup; adding correlated longs would stack risk on the same thesis; free margin kept for a confirmed break"
     }
   ],
   "scanner_feed": [
