@@ -3228,13 +3228,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-10-31T10:58:43-03:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "HOLD 6: book at ~19x of 20x cap and cash at ~$3k thin stop-funding cushion \u2014 no free margin for a new high-conviction fill; no liquid setup better than current book; no thesis broken to rotate",
-      "reason": "race mode: stay fully deployed, cut only on invalidation"
-    },
-    {
       "t": "2026-10-31T10:58:46-03:00",
       "agent": "Logger",
       "kind": "batch",
@@ -4695,6 +4688,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 09:03 ET: 30/30 public marks; BTC 78,135 (+1.2%), ETH 2,311.10 (+1.2%), SOL 92.56, NEAR 3.97 (+3.0%); 08:05-09:00 tight range ETH 2,311.9-2,319.1, BTC 78.19k-78.40k, then 09:00 ET dip (ETH 2,309.51, BTC 78,087)",
       "reason": "scheduled race cycle; scan scans/2026-11-04_0903_scan.md"
+    },
+    {
+      "t": "2026-11-04T09:04:02-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD long 250 @ 2,315.12 HOLD: stop 2,297 not touched (low since 08:05 ET 2,309.51 on in-progress 09:00 candle), no completed 5m close < 2,299 (lowest 2,314.90 @08:05), BTC lowest 5m close 78,246.97 (>77,900; live 09:00 candle 78,133); T1 2,345 not reached (high 2,319.11 @08:25)",
+      "reason": "Coinbase public 5m candles 08:05-09:00 ET; invalidation intact; momentum stalled (5h range-bound, lower highs) \u2014 watching 2,306.9 07:50 low"
     }
   ],
   "scanner_feed": [
