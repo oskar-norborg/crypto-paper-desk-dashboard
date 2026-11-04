@@ -1612,8 +1612,8 @@ window.__DESK_STATE__ = {
   "agents": {
     "Scanner": {
       "status": "idle",
-      "last_run": "2026-11-04T12:00:11-05:00",
-      "note": "CHAOS race cycle 11:59 ET: 30/30 public marks; ETH 2,433 grinding under 2,444 high, BTC 80.5k ranging"
+      "last_run": "2026-11-04T13:09:20-05:00",
+      "note": "30/30 marks; ETH long HOLD; no new opens"
     },
     "Rug Check": {
       "status": "idle",
@@ -3290,13 +3290,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-10-31T13:53:16-03:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "HOLD 6: book at ~20x cap with ~$3k stop-funding cushion and no buying power; NEAR breakout noted but no position has invalidated, so no rotation to fund it",
-      "reason": "race mode: stay fully deployed, cut only on invalidation"
-    },
-    {
       "t": "2026-10-31T13:53:19-03:00",
       "agent": "Logger",
       "kind": "batch",
@@ -4760,616 +4753,345 @@ window.__DESK_STATE__ = {
       "kind": "plan",
       "text": "11:59 ET: hold ETH long, no new opens",
       "reason": "tight range under highs; no fresh high-conviction edge; BTC/SOL longs would stack the same thesis"
+    },
+    {
+      "t": "2026-11-04T13:09:20-05:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "30/30 marks; ETH long HOLD; no new opens",
+      "reason": "midday range under highs, no fresh trigger; ETH 5m low 2417.8 > stop 2395; BTC > 79.4k; scan md scans/2026-11-04_1309_scan.md"
     }
   ],
   "scanner_feed": [
     {
-      "symbol": "BTC-USD",
-      "mark": {
-        "price": 75996.18,
-        "bid": 75996.18,
-        "ask": 75996.19,
-        "spread_pct": 1e-05,
-        "volume_24h_base": 7874.02034878,
-        "volume_24h_usd_approx": 598395468.0,
-        "exchange_time_utc": "2026-11-04T03:04:40.023721746Z",
-        "fetched_at": "2026-11-03T22:04:40-05:00",
-        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
-      },
-      "chg24": -1.05,
-      "hi": 77981.38,
-      "lo": 75680.0,
-      "depth": 13276144,
-      "flags": []
+      "sym": "BTC-USD",
+      "price": 80594.94,
+      "chg": 3.9960876434955495,
+      "spread": 1.2407726061183254e-05,
+      "vol": 1047869672.1704112,
+      "depth": 9845653.672531765,
+      "hi": "81130.79",
+      "lo": "75600.64",
+      "time": "2026-11-04T18:08:57.889358407Z"
     },
     {
-      "symbol": "ETH-USD",
-      "mark": {
-        "price": 2235.73,
-        "bid": 2236.18,
-        "ask": 2236.19,
-        "spread_pct": 0.00045,
-        "volume_24h_base": 86085.6957899,
-        "volume_24h_usd_approx": 192464373.0,
-        "exchange_time_utc": "2026-11-04T03:04:40.486798592Z",
-        "fetched_at": "2026-11-03T22:04:41-05:00",
-        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
-      },
-      "chg24": -0.62,
-      "hi": 2304.62,
-      "lo": 2223.58,
-      "depth": 3917947,
-      "flags": []
+      "sym": "ETH-USD",
+      "price": 2430.76,
+      "chg": 6.136991804245029,
+      "spread": 0.0004114015834749664,
+      "vol": 412543892.7902531,
+      "depth": 7205763.717190206,
+      "hi": "2448.26",
+      "lo": "2223",
+      "time": "2026-11-04T18:08:56.754773805Z"
     },
     {
-      "symbol": "XRP-USD",
-      "mark": {
-        "price": 1.2486,
-        "bid": 1.2484,
-        "ask": 1.2486,
-        "spread_pct": 0.01602,
-        "volume_24h_base": 56600626.704225,
-        "volume_24h_usd_approx": 70671543.0,
-        "exchange_time_utc": "2026-11-04T03:04:40.729720339Z",
-        "fetched_at": "2026-11-03T22:04:41-05:00",
-        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
-      },
-      "chg24": -0.06,
-      "hi": 1.2894,
-      "lo": 1.2407,
-      "depth": 1956755,
-      "flags": []
+      "sym": "SOL-USD",
+      "price": 95.88,
+      "chg": 2.7212341975572985,
+      "spread": 0.01042915993117288,
+      "vol": 118523947.00247885,
+      "depth": 3017991.6961886887,
+      "hi": "98.06",
+      "lo": "89.73",
+      "time": "2026-11-04T18:08:57.508463205Z"
     },
     {
-      "symbol": "SOL-USD",
-      "mark": {
-        "price": 90.67,
-        "bid": 90.65,
-        "ask": 90.67,
-        "spread_pct": 0.02206,
-        "volume_24h_base": 621630.6750284,
-        "volume_24h_usd_approx": 56363253.0,
-        "exchange_time_utc": "2026-11-04T03:04:41.289560308Z",
-        "fetched_at": "2026-11-03T22:04:41-05:00",
-        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
-      },
-      "chg24": -1.45,
-      "hi": 93.84,
-      "lo": 89.73,
-      "depth": 2096993,
-      "flags": []
+      "sym": "XRP-USD",
+      "price": 1.3149,
+      "chg": 2.83100023461329,
+      "spread": 0.015210282150732222,
+      "vol": 96684354.70672604,
+      "depth": 2149650.4061780716,
+      "hi": "1.34",
+      "lo": "1.2398",
+      "time": "2026-11-04T18:08:53.075566551Z"
     },
     {
-      "symbol": "NEAR-USD",
-      "mark": {
-        "price": 3.7252,
-        "bid": 3.7247,
-        "ask": 3.7254,
-        "spread_pct": 0.01879,
-        "volume_24h_base": 8814747.9,
-        "volume_24h_usd_approx": 32836699.0,
-        "exchange_time_utc": "2026-11-04T03:04:40.541948691Z",
-        "fetched_at": "2026-11-03T22:04:44-05:00",
-        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
-      },
-      "chg24": -2.55,
-      "hi": 3.9336,
-      "lo": 3.6879,
-      "depth": 445433,
-      "flags": []
+      "sym": "NEAR-USD",
+      "price": 4.1349,
+      "chg": 8.348400282996614,
+      "spread": 0.05562206019274178,
+      "vol": 52668994.1349957,
+      "depth": 685641.7614361,
+      "hi": "4.2665",
+      "lo": "3.6879",
+      "time": "2026-11-04T18:08:58.261223083Z"
     },
     {
-      "symbol": "SUI-USD",
-      "mark": {
-        "price": 0.8644,
-        "bid": 0.8642,
-        "ask": 0.8645,
-        "spread_pct": 0.03471,
-        "volume_24h_base": 8587682.7,
-        "volume_24h_usd_approx": 7423193.0,
-        "exchange_time_utc": "2026-11-04T03:04:42.055159225Z",
-        "fetched_at": "2026-11-03T22:04:44-05:00",
-        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
-      },
-      "chg24": -0.18,
-      "hi": 0.903,
-      "lo": 0.8564,
-      "depth": 462864,
-      "flags": []
+      "sym": "SUI-USD",
+      "price": 0.9395,
+      "chg": 4.960339626857335,
+      "spread": 0.02128565346955917,
+      "vol": 18180072.842,
+      "depth": 436839.5227,
+      "hi": "0.9556",
+      "lo": "0.8564",
+      "time": "2026-11-04T18:08:56.358476798Z"
     },
     {
-      "symbol": "ADA-USD",
-      "mark": {
-        "price": 0.18446,
-        "bid": 0.18446,
-        "ask": 0.18449,
-        "spread_pct": 0.01626,
-        "volume_24h_base": 39131202.94086044,
-        "volume_24h_usd_approx": 7218142.0,
-        "exchange_time_utc": "2026-11-04T03:04:42.161811129Z",
-        "fetched_at": "2026-11-03T22:04:42-05:00",
-        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
-      },
-      "chg24": -2.11,
-      "hi": 0.19238,
-      "lo": 0.1825,
-      "depth": 166082,
-      "flags": []
+      "sym": "LINK-USD",
+      "price": 11.582,
+      "chg": 4.455266955266968,
+      "spread": 0.03455126544010828,
+      "vol": 15612039.132200003,
+      "depth": 485149.47897,
+      "hi": "11.783",
+      "lo": "10.616",
+      "time": "2026-11-04T18:08:22.185918871Z"
     },
     {
-      "symbol": "UNI-USD",
-      "mark": {
-        "price": 7.0047,
-        "bid": 7.0025,
-        "ask": 7.0068,
-        "spread_pct": 0.06139,
-        "volume_24h_base": 1000250.401887,
-        "volume_24h_usd_approx": 7006454.0,
-        "exchange_time_utc": "2026-11-04T03:04:44.588715952Z",
-        "fetched_at": "2026-11-03T22:04:46-05:00",
-        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
-      },
-      "chg24": 1.28,
-      "hi": 7.3949,
-      "lo": 6.8922,
-      "depth": 267505,
-      "flags": []
+      "sym": "UNI-USD",
+      "price": 7.6777,
+      "chg": 6.161419228163334,
+      "spread": 0.009116898170761391,
+      "vol": 13348548.883240955,
+      "depth": 390512.5992915586,
+      "hi": "7.776",
+      "lo": "6.93",
+      "time": "2026-11-04T18:08:57.274409474Z"
     },
     {
-      "symbol": "XLM-USD",
-      "mark": {
-        "price": 0.157958,
-        "bid": 0.157955,
-        "ask": 0.158036,
-        "spread_pct": 0.05127,
-        "volume_24h_base": 40888935.62482185,
-        "volume_24h_usd_approx": 6458734.0,
-        "exchange_time_utc": "2026-11-04T03:04:33.998151003Z",
-        "fetched_at": "2026-11-03T22:04:46-05:00",
-        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
-      },
-      "chg24": -2.43,
-      "hi": 0.167068,
-      "lo": 0.156996,
-      "depth": 226940,
-      "flags": []
+      "sym": "ADA-USD",
+      "price": 0.19724,
+      "chg": 3.898019384745033,
+      "spread": 0.005068038415722192,
+      "vol": 12350137.977045543,
+      "depth": 72187.72874914632,
+      "hi": "0.20156",
+      "lo": "0.1825",
+      "time": "2026-11-04T18:08:51.513476821Z"
     },
     {
-      "symbol": "LINK-USD",
-      "mark": {
-        "price": 10.704,
-        "bid": 10.708,
-        "ask": 10.709,
-        "spread_pct": 0.00934,
-        "volume_24h_base": 565301.99,
-        "volume_24h_usd_approx": 6050993.0,
-        "exchange_time_utc": "2026-11-04T03:04:41.265667166Z",
-        "fetched_at": "2026-11-03T22:04:42-05:00",
-        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
-      },
-      "chg24": -3.63,
-      "hi": 11.292,
-      "lo": 10.616,
-      "depth": 470936,
-      "flags": []
+      "sym": "XLM-USD",
+      "price": 0.167514,
+      "chg": 2.3592601418855663,
+      "spread": 0.04953759933631538,
+      "vol": 10768586.981940717,
+      "depth": 406656.40257719584,
+      "hi": "0.170845",
+      "lo": "0.156996",
+      "time": "2026-11-04T18:08:50.737293515Z"
     },
     {
-      "symbol": "LTC-USD",
-      "mark": {
-        "price": 52.525,
-        "bid": 52.458,
-        "ask": 52.485,
-        "spread_pct": 0.05146,
-        "volume_24h_base": 110692.77877748,
-        "volume_24h_usd_approx": 5814138.0,
-        "exchange_time_utc": "2026-11-04T03:04:40.734983529Z",
-        "fetched_at": "2026-11-03T22:04:42-05:00",
-        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
-      },
-      "chg24": -2.47,
-      "hi": 55.101,
-      "lo": 52.05,
-      "depth": 187930,
-      "flags": []
+      "sym": "PEPE-USD",
+      "price": 5.05e-06,
+      "chg": 4.123711340206171,
+      "spread": 0.19782393669633838,
+      "vol": 8541704.1432005,
+      "depth": 249749.76499879,
+      "hi": "0.00000531",
+      "lo": "0.00000472",
+      "time": "2026-11-04T18:08:43.601959112Z"
     },
     {
-      "symbol": "PEPE-USD",
-      "mark": {
-        "price": 4.77e-06,
-        "bid": 4.76e-06,
-        "ask": 4.77e-06,
-        "spread_pct": 0.20986,
-        "volume_24h_base": 944730905868.0,
-        "volume_24h_usd_approx": 4506366.0,
-        "exchange_time_utc": "2026-11-04T03:04:44.579925317Z",
-        "fetched_at": "2026-11-03T22:04:48-05:00",
-        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
-      },
-      "chg24": 1.92,
-      "hi": 5.01e-06,
-      "lo": 4.65e-06,
-      "depth": 206105,
-      "flags": [
-        "24h vol $4.51M < $5M"
-      ]
+      "sym": "DOGE-USD",
+      "price": 0.07696,
+      "chg": 2.408516300731889,
+      "spread": 0.02599428125813117,
+      "vol": 7762505.076352,
+      "depth": 432615.38686599996,
+      "hi": "0.07828",
+      "lo": "0.0722",
+      "time": "2026-11-04T18:08:51.522243346Z"
     },
     {
-      "symbol": "HBAR-USD",
-      "mark": {
-        "price": 0.06807,
-        "bid": 0.06805,
-        "ask": 0.06807,
-        "spread_pct": 0.02939,
-        "volume_24h_base": 52818866.5,
-        "volume_24h_usd_approx": 3595380.0,
-        "exchange_time_utc": "2026-11-04T03:04:45.903817479Z",
-        "fetched_at": "2026-11-03T22:04:46-05:00",
-        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
-      },
-      "chg24": -2.14,
-      "hi": 0.07059,
-      "lo": 0.06752,
-      "depth": 297602,
-      "flags": [
-        "24h vol $3.60M < $5M"
-      ]
+      "sym": "LTC-USD",
+      "price": 56.238,
+      "chg": 3.7754650132860945,
+      "spread": 0.0693327170425178,
+      "vol": 6707066.408315861,
+      "depth": 163805.26999322465,
+      "hi": "56.99",
+      "lo": "52.05",
+      "time": "2026-11-04T18:08:56.323844553Z"
     },
     {
-      "symbol": "DOGE-USD",
-      "mark": {
-        "price": 0.07279,
-        "bid": 0.07271,
-        "ask": 0.07273,
-        "spread_pct": 0.0275,
-        "volume_24h_base": 48917574.4,
-        "volume_24h_usd_approx": 3560710.0,
-        "exchange_time_utc": "2026-11-04T03:04:37.304291959Z",
-        "fetched_at": "2026-11-03T22:04:42-05:00",
-        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
-      },
-      "chg24": -1.64,
-      "hi": 0.07565,
-      "lo": 0.0722,
-      "depth": 379249,
-      "flags": [
-        "24h vol $3.56M < $5M"
-      ]
+      "sym": "HBAR-USD",
+      "price": 0.07245,
+      "chg": 4.349704738585625,
+      "spread": 0.04140501000621385,
+      "vol": 6470334.656415001,
+      "depth": 344041.509847,
+      "hi": "0.07405",
+      "lo": "0.06752",
+      "time": "2026-11-04T18:08:52.159699120Z"
     },
     {
-      "symbol": "AVAX-USD",
-      "mark": {
-        "price": 8.348,
-        "bid": 8.348,
-        "ask": 8.349,
-        "spread_pct": 0.01198,
-        "volume_24h_base": 396756.58900948,
-        "volume_24h_usd_approx": 3312124.0,
-        "exchange_time_utc": "2026-11-04T03:04:42.458015325Z",
-        "fetched_at": "2026-11-03T22:04:43-05:00",
-        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
-      },
-      "chg24": 0.19,
-      "hi": 8.682,
-      "lo": 8.269,
-      "depth": 344883,
-      "flags": [
-        "24h vol $3.31M < $5M"
-      ]
+      "sym": "AVAX-USD",
+      "price": 8.844,
+      "chg": 3.7176029084085904,
+      "spread": 0.022616759018420127,
+      "vol": 6403301.162357308,
+      "depth": 410640.5056286094,
+      "hi": "9.155",
+      "lo": "8.269",
+      "time": "2026-11-04T18:08:45.539910593Z"
     },
     {
-      "symbol": "INJ-USD",
-      "mark": {
-        "price": 7.044,
-        "bid": 7.044,
-        "ask": 7.052,
-        "spread_pct": 0.11351,
-        "volume_24h_base": 309879.31,
-        "volume_24h_usd_approx": 2182790.0,
-        "exchange_time_utc": "2026-11-04T03:04:44.577239559Z",
-        "fetched_at": "2026-11-03T22:04:47-05:00",
-        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
-      },
-      "chg24": 1.11,
-      "hi": 7.434,
-      "lo": 6.948,
-      "depth": 55958,
-      "flags": [
-        "24h vol $2.18M < $5M"
-      ]
+      "sym": "BCH-USD",
+      "price": 283.05,
+      "chg": 2.680838714358269,
+      "spread": 0.05652112477039175,
+      "vol": 4247046.695735937,
+      "depth": 179549.1753435263,
+      "hi": "285.58",
+      "lo": "265",
+      "time": "2026-11-04T18:08:55.431756126Z"
     },
     {
-      "symbol": "AAVE-USD",
-      "mark": {
-        "price": 124.22,
-        "bid": 124.17,
-        "ask": 124.24,
-        "spread_pct": 0.05636,
-        "volume_24h_base": 17388.393,
-        "volume_24h_usd_approx": 2159986.0,
-        "exchange_time_utc": "2026-11-04T03:04:37.105421623Z",
-        "fetched_at": "2026-11-03T22:04:46-05:00",
-        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
-      },
-      "chg24": -0.27,
-      "hi": 129.95,
-      "lo": 123.07,
-      "depth": 288007,
-      "flags": [
-        "24h vol $2.16M < $5M"
-      ]
+      "sym": "AAVE-USD",
+      "price": 132.99,
+      "chg": 4.774285038997883,
+      "spread": 0.06015942246955369,
+      "vol": 3515244.3440400003,
+      "depth": 236417.55752,
+      "hi": "136.8",
+      "lo": "123.07",
+      "time": "2026-11-04T18:08:47.096197393Z"
     },
     {
-      "symbol": "BCH-USD",
-      "mark": {
-        "price": 266.76,
-        "bid": 266.87,
-        "ask": 267.02,
-        "spread_pct": 0.05619,
-        "volume_24h_base": 7652.46584643,
-        "volume_24h_usd_approx": 2041372.0,
-        "exchange_time_utc": "2026-11-04T03:04:30.001286033Z",
-        "fetched_at": "2026-11-03T22:04:42-05:00",
-        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
-      },
-      "chg24": -2.63,
-      "hi": 278.23,
-      "lo": 265.0,
-      "depth": 146168,
-      "flags": [
-        "24h vol $2.04M < $5M"
-      ]
+      "sym": "INJ-USD",
+      "price": 7.865,
+      "chg": 8.57261181667588,
+      "spread": 0.08906418983396604,
+      "vol": 2893473.8833,
+      "depth": 64631.38775,
+      "hi": "7.89",
+      "lo": "7",
+      "time": "2026-11-04T18:08:22.174876926Z"
     },
     {
-      "symbol": "ICP-USD",
-      "mark": {
-        "price": 2.4283,
-        "bid": 2.4281,
-        "ask": 2.4302,
-        "spread_pct": 0.08645,
-        "volume_24h_base": 446189.5716,
-        "volume_24h_usd_approx": 1083482.0,
-        "exchange_time_utc": "2026-11-04T03:04:46.673794137Z",
-        "fetched_at": "2026-11-03T22:04:49-05:00",
-        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
-      },
-      "chg24": 0.02,
-      "hi": 2.5129,
-      "lo": 2.4032,
-      "depth": 154363,
-      "flags": [
-        "24h vol $1.08M < $5M"
-      ]
+      "sym": "ICP-USD",
+      "price": 2.5953,
+      "chg": 4.725203776934861,
+      "spread": 0.057806809642178034,
+      "vol": 1712615.83794588,
+      "depth": 197782.71930003,
+      "hi": "2.6233",
+      "lo": "2.4032",
+      "time": "2026-11-04T18:08:18.999321935Z"
     },
     {
-      "symbol": "POL-USD",
-      "mark": {
-        "price": 0.08991,
-        "bid": 0.08988,
-        "ask": 0.08995,
-        "spread_pct": 0.07785,
-        "volume_24h_base": 10425596.05,
-        "volume_24h_usd_approx": 937365.0,
-        "exchange_time_utc": "2026-11-04T03:04:42.058413446Z",
-        "fetched_at": "2026-11-03T22:04:49-05:00",
-        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
-      },
-      "chg24": 2.71,
-      "hi": 0.09383,
-      "lo": 0.08658,
-      "depth": 67994,
-      "flags": [
-        "24h vol $0.94M < $5M"
-      ]
+      "sym": "DOT-USD",
+      "price": 0.9675,
+      "chg": 2.7288171586324017,
+      "spread": 0.06209251785160353,
+      "vol": 1743756.3962481425,
+      "depth": 103275.11617709746,
+      "hi": "0.9943",
+      "lo": "0.9061",
+      "time": "2026-11-04T18:08:10.016728463Z"
     },
     {
-      "symbol": "APT-USD",
-      "mark": {
-        "price": 0.5977,
-        "bid": 0.5988,
-        "ask": 0.5997,
-        "spread_pct": 0.15019,
-        "volume_24h_base": 1523363.407,
-        "volume_24h_usd_approx": 910514.0,
-        "exchange_time_utc": "2026-11-04T03:04:09.369491823Z",
-        "fetched_at": "2026-11-03T22:04:44-05:00",
-        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
-      },
-      "chg24": -2.73,
-      "hi": 0.6284,
-      "lo": 0.5907,
-      "depth": 49951,
-      "flags": [
-        "24h vol $0.91M < $5M"
-      ]
+      "sym": "ARB-USD",
+      "price": 0.1654,
+      "chg": 4.902644764381292,
+      "spread": 0.10276560374792414,
+      "vol": 1518789.9823399999,
+      "depth": 86825.5853226,
+      "hi": "0.17233",
+      "lo": "0.15247",
+      "time": "2026-11-04T18:07:01.055277897Z"
     },
     {
-      "symbol": "ATOM-USD",
-      "mark": {
-        "price": 1.3889,
-        "bid": 1.3883,
-        "ask": 1.3896,
-        "spread_pct": 0.0936,
-        "volume_24h_base": 650152.96,
-        "volume_24h_usd_approx": 902997.0,
-        "exchange_time_utc": "2026-11-04T03:04:29.722782535Z",
-        "fetched_at": "2026-11-03T22:04:43-05:00",
-        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
-      },
-      "chg24": -2.54,
-      "hi": 1.4493,
-      "lo": 1.3746,
-      "depth": 48985,
-      "flags": [
-        "24h vol $0.90M < $5M"
-      ]
+      "sym": "POL-USD",
+      "price": 0.0969,
+      "chg": 4.824751189961063,
+      "spread": 0.0619386807061056,
+      "vol": 1207374.742254,
+      "depth": 64844.1225205,
+      "hi": "0.0975",
+      "lo": "0.08928",
+      "time": "2026-11-04T18:08:53.461914331Z"
     },
     {
-      "symbol": "DOT-USD",
-      "mark": {
-        "price": 0.9173,
-        "bid": 0.9165,
-        "ask": 0.9174,
-        "spread_pct": 0.09815,
-        "volume_24h_base": 906282.03369216,
-        "volume_24h_usd_approx": 831333.0,
-        "exchange_time_utc": "2026-11-04T03:04:35.687672014Z",
-        "fetched_at": "2026-11-03T22:04:45-05:00",
-        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
-      },
-      "chg24": -2.0,
-      "hi": 0.9486,
-      "lo": 0.9061,
-      "depth": 75783,
-      "flags": [
-        "24h vol $0.83M < $5M"
-      ]
+      "sym": "TIA-USD",
+      "price": 0.4611,
+      "chg": 7.008586679043871,
+      "spread": 0.02170845544339281,
+      "vol": 1165009.168869,
+      "depth": 47791.137405,
+      "hi": "0.475",
+      "lo": "0.4208",
+      "time": "2026-11-04T18:07:32.163251200Z"
     },
     {
-      "symbol": "ARB-USD",
-      "mark": {
-        "price": 0.15405,
-        "bid": 0.15399,
-        "ask": 0.15417,
-        "spread_pct": 0.11682,
-        "volume_24h_base": 5181302.8,
-        "volume_24h_usd_approx": 798180.0,
-        "exchange_time_utc": "2026-11-04T03:04:26.931503216Z",
-        "fetched_at": "2026-11-03T22:04:45-05:00",
-        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
-      },
-      "chg24": 0.95,
-      "hi": 0.16255,
-      "lo": 0.15182,
-      "depth": 65068,
-      "flags": [
-        "24h vol $0.80M < $5M"
-      ]
+      "sym": "FIL-USD",
+      "price": 0.8722,
+      "chg": -0.2630074328187626,
+      "spread": 0.06879156156845276,
+      "vol": 1532136.1416564,
+      "depth": 96553.32794609999,
+      "hi": "0.9016",
+      "lo": "0.8279",
+      "time": "2026-11-04T18:08:25.947577813Z"
     },
     {
-      "symbol": "FIL-USD",
-      "mark": {
-        "price": 0.8352,
-        "bid": 0.8353,
-        "ask": 0.8358,
-        "spread_pct": 0.05984,
-        "volume_24h_base": 784964.296,
-        "volume_24h_usd_approx": 655602.0,
-        "exchange_time_utc": "2026-11-04T03:04:26.228120244Z",
-        "fetched_at": "2026-11-03T22:04:47-05:00",
-        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
-      },
-      "chg24": -3.55,
-      "hi": 0.887,
-      "lo": 0.8279,
-      "depth": 58972,
-      "flags": [
-        "24h vol $0.66M < $5M"
-      ]
+      "sym": "APT-USD",
+      "price": 0.6462,
+      "chg": 4.698639014906036,
+      "spread": 0.13984927356071972,
+      "vol": 1086267.9809052,
+      "depth": 46905.380075,
+      "hi": "0.6596",
+      "lo": "0.5907",
+      "time": "2026-11-04T18:07:26.371892176Z"
     },
     {
-      "symbol": "TIA-USD",
-      "mark": {
-        "price": 0.4269,
-        "bid": 0.4265,
-        "ask": 0.4266,
-        "spread_pct": 0.02344,
-        "volume_24h_base": 1192104.52,
-        "volume_24h_usd_approx": 508909.0,
-        "exchange_time_utc": "2026-11-04T03:04:45.413504646Z",
-        "fetched_at": "2026-11-03T22:04:48-05:00",
-        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
-      },
-      "chg24": -2.36,
-      "hi": 0.4487,
-      "lo": 0.4208,
-      "depth": 66819,
-      "flags": [
-        "24h vol $0.51M < $5M"
-      ]
+      "sym": "ATOM-USD",
+      "price": 1.4611,
+      "chg": 3.2287692525081235,
+      "spread": 0.14362411517286125,
+      "vol": 840906.663835,
+      "depth": 12453.793508,
+      "hi": "1.4894",
+      "lo": "1.3746",
+      "time": "2026-11-04T18:08:58.180227490Z"
     },
     {
-      "symbol": "SEI-USD",
-      "mark": {
-        "price": 0.04653,
-        "bid": 0.04648,
-        "ask": 0.04655,
-        "spread_pct": 0.15049,
-        "volume_24h_base": 9878808.1,
-        "volume_24h_usd_approx": 459661.0,
-        "exchange_time_utc": "2026-11-04T03:04:46.184768438Z",
-        "fetched_at": "2026-11-03T22:04:48-05:00",
-        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
-      },
-      "chg24": 0.26,
-      "hi": 0.04837,
-      "lo": 0.046,
-      "depth": 56964,
-      "flags": [
-        "24h vol $0.46M < $5M"
-      ]
+      "sym": "SEI-USD",
+      "price": 0.04948,
+      "chg": 3.601340033500855,
+      "spread": 0.08085708510207879,
+      "vol": 742965.6089880001,
+      "depth": 70291.718576,
+      "hi": "0.05119",
+      "lo": "0.046",
+      "time": "2026-11-04T18:08:36.034457347Z"
     },
     {
-      "symbol": "OP-USD",
-      "mark": {
-        "price": 0.10617,
-        "bid": 0.10636,
-        "ask": 0.10647,
-        "spread_pct": 0.10337,
-        "volume_24h_base": 3836742.41,
-        "volume_24h_usd_approx": 407347.0,
-        "exchange_time_utc": "2026-11-04T03:04:14.274865068Z",
-        "fetched_at": "2026-11-03T22:04:45-05:00",
-        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
-      },
-      "chg24": -1.65,
-      "hi": 0.11408,
-      "lo": 0.1053,
-      "depth": 63147,
-      "flags": [
-        "24h vol $0.41M < $5M"
-      ]
+      "sym": "OP-USD",
+      "price": 0.1123,
+      "chg": 1.7578832910474684,
+      "spread": 0.08907892392658916,
+      "vol": 700894.592925,
+      "depth": 67024.4009898,
+      "hi": "0.11668",
+      "lo": "0.1053",
+      "time": "2026-11-04T18:08:43.779142832Z"
     },
     {
-      "symbol": "ETC-USD",
-      "mark": {
-        "price": 6.878,
-        "bid": 6.877,
-        "ask": 6.888,
-        "spread_pct": 0.15983,
-        "volume_24h_base": 46057.19385906,
-        "volume_24h_usd_approx": 316781.0,
-        "exchange_time_utc": "2026-11-04T03:04:25.562305666Z",
-        "fetched_at": "2026-11-03T22:04:49-05:00",
-        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
-      },
-      "chg24": -0.58,
-      "hi": 7.25,
-      "lo": 6.83,
-      "depth": 45622,
-      "flags": [
-        "24h vol $0.32M < $5M"
-      ]
+      "sym": "SHIB-USD",
+      "price": 4.76e-06,
+      "chg": 3.2537960954446943,
+      "spread": 0.2107481559536334,
+      "vol": 444666.47326892003,
+      "depth": 45944.30630745,
+      "hi": "0.00000484",
+      "lo": "0.00000448",
+      "time": "2026-11-04T18:08:09.495503728Z"
     },
     {
-      "symbol": "SHIB-USD",
-      "mark": {
-        "price": 4.49e-06,
-        "bid": 4.5e-06,
-        "ask": 4.51e-06,
-        "spread_pct": 0.22198,
-        "volume_24h_base": 64081024419.0,
-        "volume_24h_usd_approx": 287724.0,
-        "exchange_time_utc": "2026-11-04T03:03:10.237450103Z",
-        "fetched_at": "2026-11-03T22:04:47-05:00",
-        "source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)"
-      },
-      "chg24": -1.32,
-      "hi": 4.66e-06,
-      "lo": 4.48e-06,
-      "depth": 40195,
-      "flags": [
-        "24h vol $0.29M < $5M"
-      ]
+      "sym": "ETC-USD",
+      "price": 7.352,
+      "chg": 4.461494742824668,
+      "spread": 0.06801333061279867,
+      "vol": 284930.669835874,
+      "depth": 39009.60508432291,
+      "hi": "7.356",
+      "lo": "6.83",
+      "time": "2026-11-04T18:08:56.077910356Z"
     }
   ],
   "quotes": {
@@ -5713,7 +5435,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-04T13:08:40-05:00",
+  "updated_at": "2026-11-04T13:09:20-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
