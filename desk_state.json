@@ -1620,8 +1620,8 @@
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-04T10:09:36-05:00",
-      "note": "CHAOS: 10:07 ET race cycle \u00b7 ETH T1 banked, ETH re-entry long \u00b7 eq $79,494 \u00b7 exposure $750,314 (9.44x)"
+      "last_run": "2026-11-04T14:06:14-05:00",
+      "note": "CHAOS: 14:05 ET race cycle \u00b7 ETH rotated out, flat \u00b7 eq $75,866 \u00b7 exposure $0 (0.0x)"
     },
     "Equity": {
       "status": "ready",
@@ -3283,13 +3283,6 @@
   ],
   "activity": [
     {
-      "t": "2026-10-31T14:56:34-03:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "HOLD 6: book near 20x cap with ~$3k stop-funding cushion and no buying power; NEAR breakout still noted but nothing invalidated to fund a rotation",
-      "reason": "race mode: stay fully deployed, cut only on invalidation"
-    },
-    {
       "t": "2026-10-31T14:56:38-03:00",
       "agent": "Logger",
       "kind": "batch",
@@ -4754,6 +4747,13 @@
       "kind": "plan",
       "text": "14:05 ET: rotated out of ETH long on momentum reversal; flat, no new open",
       "reason": "no high-conviction trigger: a short fights the intact +3-6% daily uptrend mid-pullback, a long fights the fresh breakdown. Next-cycle triggers: ETH reclaim 2,435 (long) or 5m close < 2,395 with BTC < 79,900 (short)"
+    },
+    {
+      "t": "2026-11-04T14:06:14-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 14:05 ET race cycle \u00b7 ETH rotated out, flat \u00b7 eq $75,866 \u00b7 exposure $0 (0.0x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
