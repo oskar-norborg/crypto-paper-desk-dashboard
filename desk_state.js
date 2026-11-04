@@ -1610,8 +1610,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-04T08:08:11-05:00",
-      "note": "No new opens 08:07 ET"
+      "last_run": "2026-11-04T09:04:02-05:00",
+      "note": "No new opens 09:03 ET"
     },
     "Logger": {
       "status": "ready",
@@ -3228,13 +3228,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-10-31T10:58:46-03:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: 10:58 race hold \u00b7 eq $43,788 \u00b7 exposure $889,852 (20.32x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
-    {
       "t": "2026-10-31T11:53:01-03:00",
       "agent": "Scanner",
       "kind": "scan",
@@ -4695,6 +4688,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "ETH-USD long 250 @ 2,315.12 HOLD: stop 2,297 not touched (low since 08:05 ET 2,309.51 on in-progress 09:00 candle), no completed 5m close < 2,299 (lowest 2,314.90 @08:05), BTC lowest 5m close 78,246.97 (>77,900; live 09:00 candle 78,133); T1 2,345 not reached (high 2,319.11 @08:25)",
       "reason": "Coinbase public 5m candles 08:05-09:00 ET; invalidation intact; momentum stalled (5h range-bound, lower highs) \u2014 watching 2,306.9 07:50 low"
+    },
+    {
+      "t": "2026-11-04T09:04:02-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "No new opens 09:03 ET",
+      "reason": "range-bound chop across majors 08:05-09:00 ET with a fresh 09:00 dip; no breakout/breakdown with follow-through, so no genuine high-conviction edge; another ETH/BTC long stacks the same thesis, a short would fight the open long into a range low; free margin kept"
     }
   ],
   "scanner_feed": [
