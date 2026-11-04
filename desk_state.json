@@ -3280,13 +3280,6 @@
   "activity": [
     {
       "t": "2026-10-31T13:53:16-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "Low-vol names SOFT-WARN on 24h vol < $5M (non-blocking); no new opens this cycle",
-      "reason": "prefer liquid Coinbase majors"
-    },
-    {
-      "t": "2026-10-31T13:53:16-03:00",
       "agent": "Risk",
       "kind": "check",
       "text": "Exit check vs public 5m candles (last 4h): no stop or target touched on any of 6 positions; last 15m closes above 4h lows on all longs \u2014 thesis intact, no rotation",
@@ -4749,6 +4742,13 @@
       "kind": "scan",
       "text": "CHAOS race cycle 11:59 ET: 30/30 public marks; ETH 2,433 grinding under 2,444 high, BTC 80.5k ranging",
       "reason": "scheduled race cycle; scan scans/2026-11-04_1159_scan.md"
+    },
+    {
+      "t": "2026-11-04T12:00:11-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD long HOLD: low 2,416.85 > stop 2,395; lowest 5m close 2,423.88 > 2,400; BTC lowest 5m close 80,214 > 79,400",
+      "reason": "Coinbase public 5m candles 10:55-11:55 ET"
     }
   ],
   "scanner_feed": [
