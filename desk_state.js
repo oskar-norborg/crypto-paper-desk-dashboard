@@ -1612,8 +1612,8 @@ window.__DESK_STATE__ = {
   "agents": {
     "Scanner": {
       "status": "idle",
-      "last_run": "2026-11-04T11:00:20-05:00",
-      "note": "CHAOS race cycle 11:00 ET: 30 public marks; ETH 2,426 holding breakout, BTC 80.2k off 81.1k high"
+      "last_run": "2026-11-04T12:00:11-05:00",
+      "note": "CHAOS race cycle 11:59 ET: 30/30 public marks; ETH 2,433 grinding under 2,444 high, BTC 80.5k ranging"
     },
     "Rug Check": {
       "status": "idle",
@@ -3281,13 +3281,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-10-31T13:53:16-03:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 13:53 BRT: 30 public marks; quiet weekend tape (BTC +0.3%, ETH +0.9%, SOL +1.1% 24h); NEAR +5.5% pressing 24h high on $23.7M vol is the only standout",
-      "reason": "scheduled race cycle; scan scans/2026-10-31_1353_scan.md"
-    },
-    {
-      "t": "2026-10-31T13:53:16-03:00",
       "agent": "Rug Check",
       "kind": "check",
       "text": "Low-vol names SOFT-WARN on 24h vol < $5M (non-blocking); no new opens this cycle",
@@ -4750,6 +4743,13 @@ window.__DESK_STATE__ = {
       "kind": "plan",
       "text": "11:00 ET: hold ETH long, no new opens",
       "reason": "momentum cooling off 10:15 highs; no fresh high-conviction edge; adding BTC/SOL would stack the same thesis"
+    },
+    {
+      "t": "2026-11-04T12:00:11-05:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "CHAOS race cycle 11:59 ET: 30/30 public marks; ETH 2,433 grinding under 2,444 high, BTC 80.5k ranging",
+      "reason": "scheduled race cycle; scan scans/2026-11-04_1159_scan.md"
     }
   ],
   "scanner_feed": [
@@ -5703,7 +5703,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-04T11:59:59-05:00",
+  "updated_at": "2026-11-04T12:00:11-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
