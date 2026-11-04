@@ -1621,8 +1621,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-04T16:01:10-05:00",
-      "note": "CHAOS: 16:00 ET race cycle \u00b7 flat, no trigger \u00b7 eq $75,866 \u00b7 exposure $0 (0.0x)"
+      "last_run": "2026-11-04T17:54:34-05:00",
+      "note": "EOD review 2026-11-04 \u00b7 eq $75,866 \u00b7 day +$9,388 (+14.1%) \u00b7 flat \u00b7 gap $924,134"
     },
     "Equity": {
       "status": "ready",
@@ -3285,13 +3285,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-10-31T17:00:40-03:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "Exit check vs public 5m candles since open: no stop or target touched on 6 positions. SUI tested its 4h low (in-progress 15m at 0.898 vs 0.8984); waited for the 20:00Z close: 0.8975 vs 4h low 0.8969, not invalidated \u2014 hold, watch next cycle",
-      "reason": "SOL lo 95.01 vs 93.295; LINK lo 11.297 vs 11.005; UNI lo 6.8675 vs 6.8508; XLM lo 0.168131 vs 0.1643; SUI lo 0.8913 vs 0.87418; BTC short hi 77645.12 vs 80250"
-    },
-    {
-      "t": "2026-10-31T17:00:40-03:00",
       "agent": "Executor",
       "kind": "plan",
       "text": "HOLD 6: book ~18x with ~$3k stop-funding cushion; no free margin for a new open, nothing invalidated to fund a rotation, no new high-conviction setup in a flat weekend tape",
@@ -4755,6 +4748,13 @@ window.__DESK_STATE__ = {
       "kind": "plan",
       "text": "17:06 ET: flat, no new open \u2014 neither trigger fired",
       "reason": "ETH max 5m close 2,422.84 (<2,427), min 2,415.04 (>2,400); BTC 80,003\u201380,240"
+    },
+    {
+      "t": "2026-11-04T17:54:34-05:00",
+      "agent": "Logger",
+      "kind": "review",
+      "text": "EOD review 2026-11-04 \u00b7 eq $75,866 \u00b7 day +$9,388 (+14.1%) \u00b7 flat \u00b7 gap $924,134",
+      "reason": "end-of-day paper review: final public marks fetched 5:53 PM ET, state recomputed, reviews/2026-11-04.md written with next-session plan"
     }
   ],
   "scanner_feed": [
@@ -5430,7 +5430,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-04T17:53:50-05:00",
+  "updated_at": "2026-11-04T17:54:34-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
