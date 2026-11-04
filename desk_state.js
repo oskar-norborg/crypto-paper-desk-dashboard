@@ -1616,8 +1616,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-04T16:01:07-05:00",
-      "note": "16:00 ET: flat, no new open \u2014 neither pre-set trigger fired"
+      "last_run": "2026-11-04T17:06:57-05:00",
+      "note": "17:06 ET: flat, no new open \u2014 neither trigger fired"
     },
     "Logger": {
       "status": "ready",
@@ -3285,13 +3285,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-10-31T17:00:40-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "XLM (held) SOFT-WARN 24h vol $4.0M < $5M; no new opens this cycle",
-      "reason": "prefer liquid Coinbase majors"
-    },
-    {
-      "t": "2026-10-31T17:00:40-03:00",
       "agent": "Risk",
       "kind": "check",
       "text": "Exit check vs public 5m candles since open: no stop or target touched on 6 positions. SUI tested its 4h low (in-progress 15m at 0.898 vs 0.8984); waited for the 20:00Z close: 0.8975 vs 4h low 0.8969, not invalidated \u2014 hold, watch next cycle",
@@ -4755,6 +4748,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 17:06 ET: 30 public marks; range \u2014 BTC 80,232, ETH 2,418.7, SOL 94.96",
       "reason": "scheduled race cycle; scan scans/2026-11-04_1706_scan.md"
+    },
+    {
+      "t": "2026-11-04T17:06:57-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "17:06 ET: flat, no new open \u2014 neither trigger fired",
+      "reason": "ETH max 5m close 2,422.84 (<2,427), min 2,415.04 (>2,400); BTC 80,003\u201380,240"
     }
   ],
   "scanner_feed": [
