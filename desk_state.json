@@ -1614,8 +1614,8 @@
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-04T04:07:28-05:00",
-      "note": "CHAOS: 04:06 ET race cycle \u00b7 ETH long T1 2,304 closed; re-entered ETH long continuation \u00b7 eq $71,472 \u00b7 exposure $578,852"
+      "last_run": "2026-11-04T08:08:13-05:00",
+      "note": "CHAOS: 08:07 ET race cycle \u00b7 ETH long held, no new fills \u00b7 eq $71,662 \u00b7 exposure $579,042 (8.08x)"
     },
     "Equity": {
       "status": "ready",
@@ -3228,13 +3228,6 @@
   "activity": [
     {
       "t": "2026-10-31T10:58:43-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "16 names SOFT-WARN on 24h vol < $5M (non-blocking); no new opens this cycle",
-      "reason": "prefer liquid Coinbase majors"
-    },
-    {
-      "t": "2026-10-31T10:58:43-03:00",
       "agent": "Risk",
       "kind": "check",
       "text": "Exit check vs public 5m candles since entry: no stop or target touched on any of 6 positions; no 15m close below 4h low on longs; longs drifting -0.2/-0.3% 1h but above 4h lows \u2014 thesis intact, no rotation",
@@ -4694,6 +4687,13 @@
       "kind": "plan",
       "text": "No new opens 08:07 ET",
       "reason": "post-flush chop: ETH/BTC lower highs since 06:45 ET, no clean high-conviction setup; adding correlated longs would stack risk on the same thesis; free margin kept for a confirmed break"
+    },
+    {
+      "t": "2026-11-04T08:08:13-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 08:07 ET race cycle \u00b7 ETH long held, no new fills \u00b7 eq $71,662 \u00b7 exposure $579,042 (8.08x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
