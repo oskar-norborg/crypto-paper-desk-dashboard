@@ -6,16 +6,44 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 51120.89,
-  "cash": 51120.89,
+  "equity": 46161.39,
+  "cash": 11350.92,
   "realized_pnl": 1120.89,
-  "unrealized_pnl": 0.0,
-  "day_pnl": 305.36,
-  "day_pnl_pct": 0.00601,
+  "unrealized_pnl": -4959.5,
+  "day_pnl": -4654.14,
+  "day_pnl_pct": -0.09159,
   "day_baseline_date": "2026-11-03",
   "day_baseline_equity": 50815.53,
-  "open_positions": [],
-  "open_count": 0,
+  "open_positions": [
+    {
+      "id": "2026-11-03_ETH-USD_185",
+      "symbol": "ETH-USD",
+      "side": "short",
+      "size": 350.0,
+      "entry": 2272.57,
+      "notional": 795399.5,
+      "stop": 2293.0,
+      "target": 2240.0,
+      "target2": 2225.0,
+      "invalidation": "5m close > 2,288 (back inside 18:00-18:35 range)",
+      "risk_usd": 7150.5,
+      "risk_pct_equity": 0.13987,
+      "opened_at": "2026-11-03T19:00:13-05:00",
+      "card": null,
+      "reason": "Armed ETH short trigger fired: 18:55 ET 5m close 2,279.61 < 2,280 after 18:00-18:35 range 2,284.9-2,291.7 broke; BTC confirming (18:55 candle 77,569 -> 77,343, stop-run below session lows). Concentrated race swing ~$39.8k margin at 20x.",
+      "price_source": "coinbase_exchange_public_ticker bid 2,272.57 @ 2026-11-03 19:00:03 ET",
+      "override": null,
+      "paper_only": true,
+      "leverage": 20.0,
+      "margin": 39769.97,
+      "mark": 2286.74,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-03T18:04:46-05:00",
+      "unrealized_pnl": -4959.5,
+      "exposure": 800359.0
+    }
+  ],
+  "open_count": 1,
   "closed_positions": [
     {
       "type": "close",
@@ -1476,7 +1504,7 @@ window.__DESK_STATE__ = {
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 51120.89,
+  "max_risk_usd": 46161.39,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -508155.3,
   "paused": false,
@@ -1531,13 +1559,13 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-03T19:00:04-05:00",
-      "note": "last: closed BTC-USD"
+      "last_run": "2026-11-03T19:00:13-05:00",
+      "note": "last: paper fill ETH-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-03T16:03:40-05:00",
-      "note": "logged 2026-11-03_BTC-USD_183"
+      "last_run": "2026-11-03T19:00:13-05:00",
+      "note": "logged 2026-11-03_ETH-USD_185"
     },
     "Equity": {
       "status": "ready",
@@ -3075,16 +3103,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-03T19:00:04-05:00",
       "equity": 51120.89,
       "kind": "close"
+    },
+    {
+      "t": "2026-11-03T19:00:13-05:00",
+      "equity": 46161.39,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-30T23:53:48-03:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 23:53 BRT: 30/30 public marks; chop (BTC +0.1%, ETH +1.7% 24h; 1h moves within \u00b10.3% on all held names)",
-      "reason": "scheduled race cycle; scan scans/2026-10-30_2353_scan.md"
-    },
     {
       "t": "2026-10-30T23:53:48-03:00",
       "agent": "Rug Check",
@@ -4536,6 +4562,15 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE BTC-USD @ 77600 \u00b7 P&L $-1955.05",
       "reason": "stop hit: 5m 18:45 ET close 77,612.03 < 77,650 invalidation, then 18:50 candle low 77,564.06 through 77,600 stop (no gap, open 77,612); filled at stop level",
       "fill_id": "2026-11-03_BTC-USD_183"
+    },
+    {
+      "t": "2026-11-03T19:00:13-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 350 ETH-USD @ 2272.57 \u00b7 notional $795,400 (20x, margin $39,770) \u00b7 stop 2293 \u00b7 tgt 2240 \u00b7 risk $7,150.50",
+      "reason": "Armed ETH short trigger fired: 18:55 ET 5m close 2,279.61 < 2,280 after 18:00-18:35 range 2,284.9-2,291.7 broke; BTC confirming (18:55 candle 77,569 -> 77,343, stop-run below session lows). Concentrated race swing ~$39.8k margin at 20x.",
+      "fill_id": "2026-11-03_ETH-USD_185",
+      "card": null
     }
   ],
   "scanner_feed": [
@@ -5491,7 +5526,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-03T19:00:04-05:00",
+  "updated_at": "2026-11-03T19:00:13-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -5506,10 +5541,10 @@ window.__DESK_STATE__ = {
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 0,
-  "exposure": 0.0,
-  "buying_power": 1022417.8,
-  "effective_leverage": 0.0,
+  "margin_used": 39769.97,
+  "exposure": 800359.0,
+  "buying_power": 122868.8,
+  "effective_leverage": 17.34,
   "operating_timezone": "America/New_York",
   "events": [
     {
