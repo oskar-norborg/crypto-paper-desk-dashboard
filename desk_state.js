@@ -1628,7 +1628,7 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-04T10:09:33-05:00",
-      "note": "last: paper fill ETH-USD"
+      "note": "10:07 ET: banked ETH T1; re-entered ETH long on breakout continuation"
     },
     "Logger": {
       "status": "ready",
@@ -3266,13 +3266,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-10-31T12:56:43-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "Low-vol names SOFT-WARN on 24h vol < $5M (non-blocking); no new opens this cycle",
-      "reason": "prefer liquid Coinbase majors"
-    },
-    {
-      "t": "2026-10-31T12:56:43-03:00",
       "agent": "Risk",
       "kind": "check",
       "text": "Exit check vs public 5m candles (last 4h): no stop or target touched on any of 6 positions; latest 15m closes above 4h lows on all longs \u2014 thesis intact, no rotation",
@@ -4735,6 +4728,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE breakout continuation: ETH broke the 5h 2,306-2,325 range at 09:40 ET on heavy volume and ran to 2,443.69 by 10:05 ET; BTC confirming through 80k (new 24h high 80.4k), SOL/NEAR/alts all +4-10% (broad risk-on). Re-entry on first pullback off the high, stop under the 10:02-10:03 ET 1m base / 2,400 round. Notional $749,690 @20x paper (margin $37,484), risk $9,635 (12.2% eq). T1 2,480, T2 2,520.",
       "fill_id": "2026-11-04_ETH-USD_192",
       "card": "RACE_ETH_LONG2"
+    },
+    {
+      "t": "2026-11-04T10:09:33-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "10:07 ET: banked ETH T1; re-entered ETH long on breakout continuation",
+      "reason": "single concentrated swing in the strongest liquid major; BTC/SOL longs would stack the same risk-on thesis"
     }
   ],
   "scanner_feed": [
