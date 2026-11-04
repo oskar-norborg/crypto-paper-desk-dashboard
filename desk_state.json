@@ -5,44 +5,16 @@
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 65269.64,
-  "cash": 38269.16,
-  "realized_pnl": 8154.14,
-  "unrealized_pnl": 7115.5,
-  "day_pnl": 14454.11,
-  "day_pnl_pct": 0.28444,
-  "day_baseline_date": "2026-11-03",
-  "day_baseline_equity": 50815.53,
-  "open_positions": [
-    {
-      "id": "2026-11-03_ETH-USD_185",
-      "symbol": "ETH-USD",
-      "side": "short",
-      "size": 175.0,
-      "entry": 2272.57,
-      "notional": 397699.75,
-      "stop": 2262.0,
-      "target": 2225.0,
-      "target2": null,
-      "invalidation": "5m close > 2,256 (back above 21:25-21:50 base) or stop 2,262",
-      "risk_usd": -1849.75,
-      "risk_pct_equity": 0.13987,
-      "opened_at": "2026-11-03T19:00:13-05:00",
-      "card": null,
-      "reason": "Armed ETH short trigger fired: 18:55 ET 5m close 2,279.61 < 2,280 after 18:00-18:35 range 2,284.9-2,291.7 broke; BTC confirming (18:55 candle 77,569 -> 77,343, stop-run below session lows). Concentrated race swing ~$39.8k margin at 20x.",
-      "price_source": "coinbase_exchange_public_ticker bid 2,272.57 @ 2026-11-03 19:00:03 ET",
-      "override": null,
-      "paper_only": true,
-      "leverage": 20.0,
-      "margin": 19884.98,
-      "mark": 2231.91,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-03T22:05:17-05:00",
-      "unrealized_pnl": 7115.5,
-      "exposure": 390584.25
-    }
-  ],
-  "open_count": 1,
+  "equity": 66478.89,
+  "cash": 66478.89,
+  "realized_pnl": 16478.89,
+  "unrealized_pnl": 0.0,
+  "day_pnl": 0.0,
+  "day_pnl_pct": 0.0,
+  "day_baseline_date": "2026-11-04",
+  "day_baseline_equity": 66478.89,
+  "open_positions": [],
+  "open_count": 0,
   "closed_positions": [
     {
       "type": "close",
@@ -1516,13 +1488,30 @@
       "reason": "T1 2,240 hit (22:00 5m low 2,238.68; BTC flushed session lows to 75,680). Partial cover 50%; runner kept for T2 2,225 with stop trailed to 2,262.",
       "price_source": "coinbase_exchange_public_ticker ask 2232.38 @ 2026-11-03T22:05:16-05:00 ET (unauthenticated)",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-03_ETH-USD_185",
+      "symbol": "ETH-USD",
+      "side": "short",
+      "size": 175.0,
+      "entry": 2272.57,
+      "exit": 2225.0,
+      "pnl": 8324.75,
+      "notional": 397699.75,
+      "leverage": 20.0,
+      "margin": 19884.98,
+      "closed_at": "2026-11-04T00:04:08-05:00",
+      "reason": "target 2,225 hit: Coinbase public 1m candle 22:08 ET low 2,223.00 (after runner set 22:05:16 ET); runner covered at target (later 23:05 inval / 23:10 stop touches came after)",
+      "price_source": "coinbase_exchange_public_candles 1m 2026-11-03 22:08 ET low 2223.00 (api.exchange.coinbase.com, unauthenticated); filled at target level 2225",
+      "paper_only": true
     }
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 65269.64,
+  "max_risk_usd": 66478.89,
   "daily_loss_pause_pct": -10.0,
-  "daily_loss_pause_usd": -508155.3,
+  "daily_loss_pause_usd": -664788.9,
   "paused": false,
   "pause_reason": null,
   "watchlist": [
@@ -1575,8 +1564,8 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-03T19:00:13-05:00",
-      "note": "last: paper fill ETH-USD"
+      "last_run": "2026-11-04T00:04:08-05:00",
+      "note": "last: closed ETH-USD"
     },
     "Logger": {
       "status": "ready",
@@ -3154,16 +3143,14 @@
       "t": "2026-11-03T22:05:19-05:00",
       "equity": 65269.64,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-04T00:04:08-05:00",
+      "equity": 66478.89,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-31T03:56:23-03:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "Exit check vs public 5m candles since entry: no stop or target touched on any of 6 positions; no 15m close below 4h low on longs",
-      "reason": "UNI lo 6.8675 vs stop 6.8508 (close call, now +1.25% 1h); SOL lo 95.43, LINK lo 11.342, XLM lo 0.168468, SUI lo 0.8913, BTC hi 77957.75 vs stop 80250"
-    },
     {
       "t": "2026-10-31T03:56:23-03:00",
       "agent": "Executor",
@@ -4619,6 +4606,14 @@
       "kind": "scan",
       "text": "22:04 cycle: ETH T1 partial, no new opens",
       "reason": "30/30 marks; BTC flush to 75,680"
+    },
+    {
+      "t": "2026-11-04T00:04:08-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE ETH-USD @ 2225 \u00b7 P&L $+8324.75",
+      "reason": "target 2,225 hit: Coinbase public 1m candle 22:08 ET low 2,223.00 (after runner set 22:05:16 ET); runner covered at target (later 23:05 inval / 23:10 stop touches came after)",
+      "fill_id": "2026-11-03_ETH-USD_185"
     }
   ],
   "scanner_feed": [
@@ -5572,7 +5567,7 @@
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-03T22:05:35-05:00",
+  "updated_at": "2026-11-04T00:04:08-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -5587,10 +5582,10 @@
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 19884.98,
-  "exposure": 390584.25,
-  "buying_power": 914808.55,
-  "effective_leverage": 5.98,
+  "margin_used": 0,
+  "exposure": 0.0,
+  "buying_power": 1329577.8,
+  "effective_leverage": 0.0,
   "operating_timezone": "America/New_York",
   "events": [
     {
