@@ -5,12 +5,12 @@
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 64172.39,
-  "cash": 11350.92,
-  "realized_pnl": 1120.89,
-  "unrealized_pnl": 13051.5,
-  "day_pnl": 13356.86,
-  "day_pnl_pct": 0.26285,
+  "equity": 64679.89,
+  "cash": 38269.16,
+  "realized_pnl": 8154.14,
+  "unrealized_pnl": 6525.75,
+  "day_pnl": 13864.36,
+  "day_pnl_pct": 0.27284,
   "day_baseline_date": "2026-11-03",
   "day_baseline_equity": 50815.53,
   "open_positions": [
@@ -18,14 +18,14 @@
       "id": "2026-11-03_ETH-USD_185",
       "symbol": "ETH-USD",
       "side": "short",
-      "size": 350.0,
+      "size": 175.0,
       "entry": 2272.57,
-      "notional": 795399.5,
-      "stop": 2293.0,
-      "target": 2240.0,
-      "target2": 2225.0,
-      "invalidation": "5m close > 2,288 (back inside 18:00-18:35 range)",
-      "risk_usd": 7150.5,
+      "notional": 397699.75,
+      "stop": 2262.0,
+      "target": 2225.0,
+      "target2": null,
+      "invalidation": "5m close > 2,256 (back above 21:25-21:50 base) or stop 2,262",
+      "risk_usd": -1849.75,
       "risk_pct_equity": 0.13987,
       "opened_at": "2026-11-03T19:00:13-05:00",
       "card": null,
@@ -34,12 +34,12 @@
       "override": null,
       "paper_only": true,
       "leverage": 20.0,
-      "margin": 39769.97,
+      "margin": 19884.98,
       "mark": 2235.28,
       "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
       "mark_at": "2026-11-03T22:04:30-05:00",
-      "unrealized_pnl": 13051.5,
-      "exposure": 782348.0
+      "unrealized_pnl": 6525.75,
+      "exposure": 391174.0
     }
   ],
   "open_count": 1,
@@ -1499,11 +1499,28 @@
       "reason": "stop hit: 5m 18:45 ET close 77,612.03 < 77,650 invalidation, then 18:50 candle low 77,564.06 through 77,600 stop (no gap, open 77,612); filled at stop level",
       "price_source": "coinbase_exchange_public 5m candles 18:45-18:55 ET (stop level 77,600)",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-03_ETH-USD_185_T1",
+      "symbol": "ETH-USD",
+      "side": "short",
+      "size": 175.0,
+      "entry": 2272.57,
+      "exit": 2232.38,
+      "pnl": 7033.25,
+      "notional": 397699.75,
+      "leverage": 20.0,
+      "margin": 19884.99,
+      "closed_at": "2026-11-03T22:05:16-05:00",
+      "reason": "T1 2,240 hit (22:00 5m low 2,238.68; BTC flushed session lows to 75,680). Partial cover 50%; runner kept for T2 2,225 with stop trailed to 2,262.",
+      "price_source": "coinbase_exchange_public_ticker ask 2232.38 @ 2026-11-03T22:05:16-05:00 ET (unauthenticated)",
+      "paper_only": true
     }
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 64172.39,
+  "max_risk_usd": 64679.89,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -508155.3,
   "paused": false,
@@ -3127,23 +3144,14 @@
       "t": "2026-11-03T22:04:31-05:00",
       "equity": 64172.39,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-03T22:05:16-05:00",
+      "equity": 64679.89,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-30T23:54:00-03:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: race cycle 23:53 hold \u00b7 eq $49,338 \u00b7 exposure $895,152 (18.14x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
-    {
-      "t": "2026-10-31T03:56:22-03:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 03:56 BRT: 30/30 public marks; overnight chop (BTC -1.6%, ETH -0.4%, SOL -2.3% 24h; held alts 1h -0.1% to +1.3%)",
-      "reason": "scheduled race cycle; scan scans/2026-10-31_0356_scan.md"
-    },
     {
       "t": "2026-10-31T03:56:23-03:00",
       "agent": "Rug Check",
@@ -4590,6 +4598,22 @@
       "kind": "scan",
       "text": "21:07 scan: hold ETH short, no new opens (scans/2026-11-03_2107_scan.md)",
       "reason": "ETH 2255-2268 base under broken 2280, stop/inval/T1 untouched; BTC chop, no trigger"
+    },
+    {
+      "t": "2026-11-03T22:05:16-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER PARTIAL CLOSE ETH-USD 175 @ 2232.38 \u00b7 P&L $+7033.25",
+      "reason": "T1 2,240 hit (22:00 5m low 2,238.68; BTC flushed session lows to 75,680). Partial cover 50%; runner kept for T2 2,225 with stop trailed to 2,262.",
+      "fill_id": "2026-11-03_ETH-USD_185_T1"
+    },
+    {
+      "t": "2026-11-03T22:05:16-05:00",
+      "agent": "Executor",
+      "kind": "update",
+      "text": "ETH-USD runner 175: stop 2,293\u21922,262, target 2,225",
+      "reason": "lock profit after T1",
+      "fill_id": "2026-11-03_ETH-USD_185"
     }
   ],
   "scanner_feed": [
@@ -5543,7 +5567,7 @@
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-03T22:04:31-05:00",
+  "updated_at": "2026-11-03T22:05:16-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -5558,10 +5582,10 @@
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 39769.97,
-  "exposure": 782348.0,
-  "buying_power": 501099.8,
-  "effective_leverage": 12.19,
+  "margin_used": 19884.98,
+  "exposure": 391174.0,
+  "buying_power": 902423.8,
+  "effective_leverage": 6.05,
   "operating_timezone": "America/New_York",
   "events": [
     {
