@@ -6,16 +6,44 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 78869.89,
-  "cash": 78869.89,
+  "equity": 78940.96,
+  "cash": 41385.41,
   "realized_pnl": 28869.89,
-  "unrealized_pnl": 0.0,
-  "day_pnl": 12391.0,
-  "day_pnl_pct": 0.18639,
+  "unrealized_pnl": 71.07,
+  "day_pnl": 12462.07,
+  "day_pnl_pct": 0.18746,
   "day_baseline_date": "2026-11-04",
   "day_baseline_equity": 66478.89,
-  "open_positions": [],
-  "open_count": 0,
+  "open_positions": [
+    {
+      "id": "2026-11-04_ETH-USD_192",
+      "symbol": "ETH-USD",
+      "side": "long",
+      "size": 309.0,
+      "entry": 2426.18,
+      "notional": 749689.62,
+      "stop": 2395.0,
+      "target": 2480.0,
+      "target2": 2520.0,
+      "invalidation": "5m close < 2,400 (lose breakout base) or stop 2,395; also exit if BTC 5m closes < 79,400 (back inside pre-break range)",
+      "risk_usd": 9634.62,
+      "risk_pct_equity": 0.12216,
+      "opened_at": "2026-11-04T10:09:33-05:00",
+      "card": "RACE_ETH_LONG2",
+      "reason": "RACE breakout continuation: ETH broke the 5h 2,306-2,325 range at 09:40 ET on heavy volume and ran to 2,443.69 by 10:05 ET; BTC confirming through 80k (new 24h high 80.4k), SOL/NEAR/alts all +4-10% (broad risk-on). Re-entry on first pullback off the high, stop under the 10:02-10:03 ET 1m base / 2,400 round. Notional $749,690 @20x paper (margin $37,484), risk $9,635 (12.2% eq). T1 2,480, T2 2,520.",
+      "price_source": "coinbase_exchange_public_ticker 2026-11-04T10:09:33-05:00 ET (exch 2026-11-04T15:09:32.347163043Z) api.exchange.coinbase.com, unauthenticated",
+      "override": null,
+      "paper_only": true,
+      "leverage": 20.0,
+      "margin": 37484.48,
+      "mark": 2426.41,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-04T10:09:31-05:00",
+      "unrealized_pnl": 71.07,
+      "exposure": 749760.69
+    }
+  ],
+  "open_count": 1,
   "closed_positions": [
     {
       "type": "close",
@@ -1544,7 +1572,7 @@ window.__DESK_STATE__ = {
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 78869.89,
+  "max_risk_usd": 78940.96,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -664788.9,
   "paused": false,
@@ -1599,13 +1627,13 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-04T10:09:30-05:00",
-      "note": "last: closed ETH-USD"
+      "last_run": "2026-11-04T10:09:33-05:00",
+      "note": "last: paper fill ETH-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-04T09:04:05-05:00",
-      "note": "CHAOS: 09:03 ET race cycle \u00b7 ETH long held, no new fills \u00b7 eq $70,387 \u00b7 exposure $577,768 (8.21x)"
+      "last_run": "2026-11-04T10:09:33-05:00",
+      "note": "logged 2026-11-04_ETH-USD_192"
     },
     "Equity": {
       "status": "ready",
@@ -3228,16 +3256,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-04T10:09:30-05:00",
       "equity": 78869.89,
       "kind": "close"
+    },
+    {
+      "t": "2026-11-04T10:09:33-05:00",
+      "equity": 78940.96,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-31T12:56:43-03:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 12:56 BRT: 30/30 public marks; quiet weekend tape (BTC 0.0%, ETH +1.1%, SOL +1.1% 24h); all 5 held longs green over last 1h (XLM +1.3%, LINK +0.8%)",
-      "reason": "scheduled race cycle; scan scans/2026-10-31_1256_scan.md"
-    },
     {
       "t": "2026-10-31T12:56:43-03:00",
       "agent": "Rug Check",
@@ -4700,6 +4726,15 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "ETH-USD PASS",
       "reason": "vol $316M, spread 0.001%, \u00b11% depth ~$5.4M; Coinbase CEX major"
+    },
+    {
+      "t": "2026-11-04T10:09:33-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 309 ETH-USD @ 2426.18 \u00b7 notional $749,690 (20x, margin $37,484) \u00b7 stop 2395 \u00b7 tgt 2480 \u00b7 risk $9,634.62",
+      "reason": "RACE breakout continuation: ETH broke the 5h 2,306-2,325 range at 09:40 ET on heavy volume and ran to 2,443.69 by 10:05 ET; BTC confirming through 80k (new 24h high 80.4k), SOL/NEAR/alts all +4-10% (broad risk-on). Re-entry on first pullback off the high, stop under the 10:02-10:03 ET 1m base / 2,400 round. Notional $749,690 @20x paper (margin $37,484), risk $9,635 (12.2% eq). T1 2,480, T2 2,520.",
+      "fill_id": "2026-11-04_ETH-USD_192",
+      "card": "RACE_ETH_LONG2"
     }
   ],
   "scanner_feed": [
@@ -5668,10 +5703,10 @@ window.__DESK_STATE__ = {
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 0,
-  "exposure": 0.0,
-  "buying_power": 1577397.8,
-  "effective_leverage": 0.0,
+  "margin_used": 37484.48,
+  "exposure": 749760.69,
+  "buying_power": 829058.51,
+  "effective_leverage": 9.5,
   "operating_timezone": "America/New_York",
   "events": [
     {
