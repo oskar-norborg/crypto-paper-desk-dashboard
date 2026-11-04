@@ -1621,8 +1621,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-04T14:06:14-05:00",
-      "note": "CHAOS: 14:05 ET race cycle \u00b7 ETH rotated out, flat \u00b7 eq $75,866 \u00b7 exposure $0 (0.0x)"
+      "last_run": "2026-11-04T14:58:54-05:00",
+      "note": "CHAOS: 14:58 ET race cycle \u00b7 flat, no trigger \u00b7 eq $75,866 \u00b7 exposure $0 (0.0x)"
     },
     "Equity": {
       "status": "ready",
@@ -3285,13 +3285,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-10-31T15:56:56-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "Low-vol names SOFT-WARN on 24h vol < $5M (XLM $4.2M, held position); no new opens this cycle",
-      "reason": "prefer liquid Coinbase majors"
-    },
-    {
-      "t": "2026-10-31T15:56:56-03:00",
       "agent": "Risk",
       "kind": "check",
       "text": "Exit check vs public 5m candles since open: no stop or target touched on any of 6 positions; last 15m closes above 4h lows on all longs \u2014 thesis intact, no rotation",
@@ -4755,6 +4748,13 @@ window.__DESK_STATE__ = {
       "kind": "plan",
       "text": "14:58 ET: flat, no new open \u2014 neither pre-set trigger fired",
       "reason": "ETH lowest 5m close 2,406.03 (short trigger <2,395 w/ BTC <79,900 not met); ETH high 2,426.7 (long trigger 2,435 not met). Next: short on ETH 5m close <2,398 + BTC <79,850; long on ETH >2,427 + BTC >80,320"
+    },
+    {
+      "t": "2026-11-04T14:58:54-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 14:58 ET race cycle \u00b7 flat, no trigger \u00b7 eq $75,866 \u00b7 exposure $0 (0.0x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
