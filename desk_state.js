@@ -1627,8 +1627,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-04T11:00:21-05:00",
-      "note": "11:00 ET: hold ETH long, no new opens"
+      "last_run": "2026-11-04T12:00:11-05:00",
+      "note": "11:59 ET: hold ETH long, no new opens"
     },
     "Logger": {
       "status": "ready",
@@ -3281,13 +3281,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-10-31T13:53:16-03:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "Exit check vs public 5m candles (last 4h): no stop or target touched on any of 6 positions; last 15m closes above 4h lows on all longs \u2014 thesis intact, no rotation",
-      "reason": "UNI 4h lo 6.9405 vs stop 6.8508; SOL 4h lo 95.38 vs 93.295; LINK 4h lo 11.455 vs 11.005; XLM 4h lo 0.168725 vs 0.1643; SUI 4h lo 0.8924 vs 0.87418; BTC short 4h hi 77543.79 vs 80250"
-    },
-    {
-      "t": "2026-10-31T13:53:16-03:00",
       "agent": "Executor",
       "kind": "plan",
       "text": "HOLD 6: book at ~20x cap with ~$3k stop-funding cushion and no buying power; NEAR breakout noted but no position has invalidated, so no rotation to fund it",
@@ -4750,6 +4743,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "ETH-USD long HOLD: low 2,416.85 > stop 2,395; lowest 5m close 2,423.88 > 2,400; BTC lowest 5m close 80,214 > 79,400",
       "reason": "Coinbase public 5m candles 10:55-11:55 ET"
+    },
+    {
+      "t": "2026-11-04T12:00:11-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "11:59 ET: hold ETH long, no new opens",
+      "reason": "tight range under highs; no fresh high-conviction edge; BTC/SOL longs would stack the same thesis"
     }
   ],
   "scanner_feed": [
