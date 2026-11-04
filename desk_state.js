@@ -1617,7 +1617,7 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-04T14:06:11-05:00",
-      "note": "last: closed ETH-USD"
+      "note": "14:05 ET: rotated out of ETH long on momentum reversal; flat, no new open"
     },
     "Logger": {
       "status": "ready",
@@ -3285,13 +3285,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-10-31T14:56:34-03:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "Exit check vs public 5m candles (last 4h): no stop or target touched on any of 6 positions; longs grinding up, last closes above 4h lows \u2014 thesis intact, no rotation",
-      "reason": "UNI 4h lo 6.9405 vs stop 6.8508; SOL 4h lo 95.38 vs 93.295; LINK 4h lo 11.455 vs 11.005; XLM 4h lo 0.168725 vs 0.1643; SUI 4h lo 0.8924 vs 0.87418; BTC short 4h hi 77609.99 vs 80250"
-    },
-    {
-      "t": "2026-10-31T14:56:34-03:00",
       "agent": "Executor",
       "kind": "plan",
       "text": "HOLD 6: book near 20x cap with ~$3k stop-funding cushion and no buying power; NEAR breakout still noted but nothing invalidated to fund a rotation",
@@ -4755,6 +4748,13 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE ETH-USD @ 2416.46 \u00b7 P&L $-3003.48",
       "reason": "momentum-reverse rotate: 14:00 ET 5m lost the 2,417.8 midday range floor (low 2,411.51, close 2,412.37) after lower highs 2,434.9/2,431/2,422; BTC/SOL/alts fading. Exit before the 2,395 stop (~0.8% away at 20x)",
       "fill_id": "2026-11-04_ETH-USD_192"
+    },
+    {
+      "t": "2026-11-04T14:06:11-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "14:05 ET: rotated out of ETH long on momentum reversal; flat, no new open",
+      "reason": "no high-conviction trigger: a short fights the intact +3-6% daily uptrend mid-pullback, a long fights the fresh breakdown. Next-cycle triggers: ETH reclaim 2,435 (long) or 5m close < 2,395 with BTC < 79,900 (short)"
     }
   ],
   "scanner_feed": [
