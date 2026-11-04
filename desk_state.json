@@ -5,44 +5,16 @@
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 80152.24,
-  "cash": 41385.41,
-  "realized_pnl": 28869.89,
-  "unrealized_pnl": 1282.35,
-  "day_pnl": 13673.35,
-  "day_pnl_pct": 0.20568,
+  "equity": 75866.41,
+  "cash": 75866.41,
+  "realized_pnl": 25866.41,
+  "unrealized_pnl": 0.0,
+  "day_pnl": 9387.52,
+  "day_pnl_pct": 0.14121,
   "day_baseline_date": "2026-11-04",
   "day_baseline_equity": 66478.89,
-  "open_positions": [
-    {
-      "id": "2026-11-04_ETH-USD_192",
-      "symbol": "ETH-USD",
-      "side": "long",
-      "size": 309.0,
-      "entry": 2426.18,
-      "notional": 749689.62,
-      "stop": 2395.0,
-      "target": 2480.0,
-      "target2": 2520.0,
-      "invalidation": "5m close < 2,400 (lose breakout base) or stop 2,395; also exit if BTC 5m closes < 79,400 (back inside pre-break range)",
-      "risk_usd": 9634.62,
-      "risk_pct_equity": 0.12216,
-      "opened_at": "2026-11-04T10:09:33-05:00",
-      "card": "RACE_ETH_LONG2",
-      "reason": "RACE breakout continuation: ETH broke the 5h 2,306-2,325 range at 09:40 ET on heavy volume and ran to 2,443.69 by 10:05 ET; BTC confirming through 80k (new 24h high 80.4k), SOL/NEAR/alts all +4-10% (broad risk-on). Re-entry on first pullback off the high, stop under the 10:02-10:03 ET 1m base / 2,400 round. Notional $749,690 @20x paper (margin $37,484), risk $9,635 (12.2% eq). T1 2,480, T2 2,520.",
-      "price_source": "coinbase_exchange_public_ticker 2026-11-04T10:09:33-05:00 ET (exch 2026-11-04T15:09:32.347163043Z) api.exchange.coinbase.com, unauthenticated",
-      "override": null,
-      "paper_only": true,
-      "leverage": 20.0,
-      "margin": 37484.48,
-      "mark": 2430.33,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-04T13:08:39-05:00",
-      "unrealized_pnl": 1282.35,
-      "exposure": 750971.97
-    }
-  ],
-  "open_count": 1,
+  "open_positions": [],
+  "open_count": 0,
   "closed_positions": [
     {
       "type": "close",
@@ -1567,11 +1539,28 @@
       "reason": "target 1 hit: Coinbase public 5m candle 09:40 ET high 2,354.87 >= T1 2,345 (between cycles, no stop/invalidation touch first); paper close at stated T1 (conservative; price ran to 2,443.69 after)",
       "price_source": "coinbase_exchange_public 5m candles 2026-11-04 09:40 ET (api.exchange.coinbase.com/products/ETH-USD/candles, unauthenticated); fill at stated target",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-04_ETH-USD_192",
+      "symbol": "ETH-USD",
+      "side": "long",
+      "size": 309.0,
+      "entry": 2426.18,
+      "exit": 2416.46,
+      "pnl": -3003.48,
+      "notional": 749689.62,
+      "leverage": 20.0,
+      "margin": 37484.48,
+      "closed_at": "2026-11-04T14:06:11-05:00",
+      "reason": "momentum-reverse rotate: 14:00 ET 5m lost the 2,417.8 midday range floor (low 2,411.51, close 2,412.37) after lower highs 2,434.9/2,431/2,422; BTC/SOL/alts fading. Exit before the 2,395 stop (~0.8% away at 20x)",
+      "price_source": "coinbase_exchange_public_ticker 2026-11-04T14:06:11-05:00 ET (exch 2026-11-04T19:06:11.175323131Z) api.exchange.coinbase.com, unauthenticated",
+      "paper_only": true
     }
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 80152.24,
+  "max_risk_usd": 75866.41,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -664788.9,
   "paused": false,
@@ -1626,8 +1615,8 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-04T12:00:11-05:00",
-      "note": "11:59 ET: hold ETH long, no new opens"
+      "last_run": "2026-11-04T14:06:11-05:00",
+      "note": "last: closed ETH-USD"
     },
     "Logger": {
       "status": "ready",
@@ -3285,16 +3274,14 @@
       "t": "2026-11-04T13:08:40-05:00",
       "equity": 80152.24,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-04T14:06:11-05:00",
+      "equity": 75866.41,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-31T14:56:34-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "Low-vol names SOFT-WARN on 24h vol < $5M (XLM now $4.7M, held position); no new opens this cycle",
-      "reason": "prefer liquid Coinbase majors"
-    },
     {
       "t": "2026-10-31T14:56:34-03:00",
       "agent": "Risk",
@@ -4759,6 +4746,14 @@
       "kind": "check",
       "text": "ETH-USD long 309 @ 2,426.18: no stop/invalidation touch (low since 13:05 ET 2,411.13 > stop 2,395; lowest 5m close 2,412.37 > 2,400; BTC lowest 5m close 80,155 > 79,400) but momentum reversed: 14:00 ET 5m broke the 2,417.8 midday range floor with lower highs",
       "reason": "Coinbase public 5m candles 13:05-14:05 ET; routine rule: rotate losers that invalidate momentum before they kiss stops"
+    },
+    {
+      "t": "2026-11-04T14:06:11-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE ETH-USD @ 2416.46 \u00b7 P&L $-3003.48",
+      "reason": "momentum-reverse rotate: 14:00 ET 5m lost the 2,417.8 midday range floor (low 2,411.51, close 2,412.37) after lower highs 2,434.9/2,431/2,422; BTC/SOL/alts fading. Exit before the 2,395 stop (~0.8% away at 20x)",
+      "fill_id": "2026-11-04_ETH-USD_192"
     }
   ],
   "scanner_feed": [
@@ -5449,10 +5444,10 @@
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 37484.48,
-  "exposure": 750971.97,
-  "buying_power": 852072.83,
-  "effective_leverage": 9.37,
+  "margin_used": 0,
+  "exposure": 0.0,
+  "buying_power": 1517328.2,
+  "effective_leverage": 0.0,
   "operating_timezone": "America/New_York",
   "events": [
     {
