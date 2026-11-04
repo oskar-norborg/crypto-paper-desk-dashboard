@@ -3190,13 +3190,6 @@
   ],
   "activity": [
     {
-      "t": "2026-10-31T08:01:30-03:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "08:01 race cycle: hold 6, no fills",
-      "reason": "No stops/targets/invalidations hit; at 20.8x cap, buying power 0; equity 42702.76, gap to 1M 957297.24 (scans/2026-10-31_0801_scan.md)"
-    },
-    {
       "t": "2026-10-31T08:52:54-03:00",
       "agent": "Scanner",
       "kind": "scan",
@@ -4654,6 +4647,13 @@
       "kind": "scan",
       "text": "00:03 cycle: ETH short runner hit T2 2,225 (+$8,324.75); flipped long ETH 175 @ 2,275.88",
       "reason": "30-mark scan scans/2026-11-04_0003_scan.md; bounce on, BTC 77.2k"
+    },
+    {
+      "t": "2026-11-04T04:07:26-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD long 175 @ 2,275.88: target 2,304 touched on 00:50 ET 5m candle (high 2,304.50); stop 2,257 never touched (low since entry 2,273.41)",
+      "reason": "Coinbase public 5m candles 00:05-04:05 ET; target hit before any stop/invalidation"
     }
   ],
   "scanner_feed": [
@@ -5607,7 +5607,7 @@
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-04T00:04:21-05:00",
+  "updated_at": "2026-11-04T04:07:26-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
