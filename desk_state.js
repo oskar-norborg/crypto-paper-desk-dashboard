@@ -1595,8 +1595,8 @@ window.__DESK_STATE__ = {
   "agents": {
     "Scanner": {
       "status": "idle",
-      "last_run": "2026-11-04T08:08:11-05:00",
-      "note": "CHAOS race cycle 08:07 ET: 30 public marks; BTC 78,304 (+1.4%), ETH 2,316.85 (+1.5%), NEAR +3.5%; 06:55-07:15 ET flush B"
+      "last_run": "2026-11-04T09:04:02-05:00",
+      "note": "CHAOS race cycle 09:03 ET: 30/30 public marks; BTC 78,135 (+1.2%), ETH 2,311.10 (+1.2%), SOL 92.56, NEAR 3.97 (+3.0%); 0"
     },
     "Rug Check": {
       "status": "idle",
@@ -3229,13 +3229,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-10-31T10:58:43-03:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "Exit check vs public 5m candles since entry: no stop or target touched on any of 6 positions; no 15m close below 4h low on longs; longs drifting -0.2/-0.3% 1h but above 4h lows \u2014 thesis intact, no rotation",
-      "reason": "UNI lo 6.8675 vs stop 6.8508 (closest); SOL 95.58 vs 4h low 95.27; BTC short hi 77588 vs stop 80250"
-    },
-    {
-      "t": "2026-10-31T10:58:43-03:00",
       "agent": "Executor",
       "kind": "plan",
       "text": "HOLD 6: book at ~19x of 20x cap and cash at ~$3k thin stop-funding cushion \u2014 no free margin for a new high-conviction fill; no liquid setup better than current book; no thesis broken to rotate",
@@ -4695,6 +4688,13 @@ window.__DESK_STATE__ = {
       "kind": "batch",
       "text": "CHAOS: 08:07 ET race cycle \u00b7 ETH long held, no new fills \u00b7 eq $71,662 \u00b7 exposure $579,042 (8.08x)",
       "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
+    },
+    {
+      "t": "2026-11-04T09:04:02-05:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "CHAOS race cycle 09:03 ET: 30/30 public marks; BTC 78,135 (+1.2%), ETH 2,311.10 (+1.2%), SOL 92.56, NEAR 3.97 (+3.0%); 08:05-09:00 tight range ETH 2,311.9-2,319.1, BTC 78.19k-78.40k, then 09:00 ET dip (ETH 2,309.51, BTC 78,087)",
+      "reason": "scheduled race cycle; scan scans/2026-11-04_0903_scan.md"
     }
   ],
   "scanner_feed": [
@@ -5648,7 +5648,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-04T08:08:13-05:00",
+  "updated_at": "2026-11-04T09:04:02-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
