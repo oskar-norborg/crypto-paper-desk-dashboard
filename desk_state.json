@@ -3222,13 +3222,6 @@
   ],
   "activity": [
     {
-      "t": "2026-10-31T09:54:24-03:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: 09:54 race hold \u00b7 eq $46,134 \u00b7 exposure $892,414 (19.34x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
-    {
       "t": "2026-10-31T10:58:43-03:00",
       "agent": "Scanner",
       "kind": "scan",
@@ -4689,6 +4682,13 @@
       "kind": "scan",
       "text": "CHAOS race cycle 08:07 ET: 30 public marks; BTC 78,304 (+1.4%), ETH 2,316.85 (+1.5%), NEAR +3.5%; 06:55-07:15 ET flush BTC 78.6k->77.9k, ETH 2,336->2,308, now recovering",
       "reason": "scheduled race cycle; scan scans/2026-11-04_0807_scan.md"
+    },
+    {
+      "t": "2026-11-04T08:08:11-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD long 250 @ 2,315.12 HOLD: stop 2,297 not touched (low 2,306.93 at 07:50 ET), no 5m close < 2,299, BTC lowest 5m close 77,967 > 77,900; T1 2,345 not reached (high 2,336.79 at 06:45 ET)",
+      "reason": "Coinbase public 5m candles 04:05-08:05 ET; invalidation intact, thesis dented by 07:00 ET flush but base held"
     }
   ],
   "scanner_feed": [
