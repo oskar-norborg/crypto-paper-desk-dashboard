@@ -3274,13 +3274,6 @@
   ],
   "activity": [
     {
-      "t": "2026-10-31T12:56:46-03:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: 12:56 race hold \u00b7 eq $48,017 \u00b7 exposure $894,486 (18.63x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
-    {
       "t": "2026-10-31T12:56:55-03:00",
       "agent": "Executor",
       "kind": "plan",
@@ -4744,6 +4737,13 @@
       "kind": "scan",
       "text": "CHAOS race cycle 11:00 ET: 30 public marks; ETH 2,426 holding breakout, BTC 80.2k off 81.1k high",
       "reason": "scheduled race cycle; scan scans/2026-11-04_1100_scan.md"
+    },
+    {
+      "t": "2026-11-04T11:00:20-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD long HOLD: no stop/invalidation hit (low 2,415.50 > 2,395; lowest 5m close 2,417.27 > 2,400; BTC lowest 5m close 80,087 > 79,400)",
+      "reason": "Coinbase public 5m candles 10:10-10:55 ET"
     }
   ],
   "scanner_feed": [
