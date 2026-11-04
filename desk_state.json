@@ -5,44 +5,16 @@
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 66547.14,
-  "cash": 46564.94,
-  "realized_pnl": 16478.89,
-  "unrealized_pnl": 68.25,
-  "day_pnl": 68.25,
-  "day_pnl_pct": 0.00103,
+  "equity": 71399.89,
+  "cash": 71399.89,
+  "realized_pnl": 21399.89,
+  "unrealized_pnl": 0.0,
+  "day_pnl": 4921.0,
+  "day_pnl_pct": 0.07402,
   "day_baseline_date": "2026-11-04",
   "day_baseline_equity": 66478.89,
-  "open_positions": [
-    {
-      "id": "2026-11-04_ETH-USD_188",
-      "symbol": "ETH-USD",
-      "side": "long",
-      "size": 175.0,
-      "entry": 2275.88,
-      "notional": 398279.0,
-      "stop": 2257.0,
-      "target": 2304.0,
-      "target2": 2330.0,
-      "invalidation": "5m close < 2,258 (lose 23:35-23:40 breakout base) or stop 2,257; also exit if BTC 5m closes < 76,850",
-      "risk_usd": 3304.0,
-      "risk_pct_equity": 0.0497,
-      "opened_at": "2026-11-04T00:04:18-05:00",
-      "card": "RACE_ETH_LONG",
-      "reason": "RACE long, bounce is on: ETH V-reversed from 24h low 2,223 (22:08 ET) with higher lows, reclaimed the 2,256 base at 23:05 and broke 2,270 at 23:45-23:50 (high 2,282.87); now holding 2,273-2,277 on first pullback. BTC confirming (75,600 low to 77,469, holding 77.1k+). Concentrated 20x swing, ~$19.9k margin, risk ~$3.3k (5% eq). Target 24h high 2,304, T2 2,330.",
-      "price_source": "coinbase_exchange_public_ticker ask 2,275.88 @ 2026-11-04 00:04:08 ET (api.exchange.coinbase.com, unauthenticated)",
-      "override": null,
-      "paper_only": true,
-      "leverage": 20.0,
-      "margin": 19913.95,
-      "mark": 2276.27,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-04T00:04:19-05:00",
-      "unrealized_pnl": 68.25,
-      "exposure": 398347.25
-    }
-  ],
-  "open_count": 1,
+  "open_positions": [],
+  "open_count": 0,
   "closed_positions": [
     {
       "type": "close",
@@ -1533,11 +1505,28 @@
       "reason": "target 2,225 hit: Coinbase public 1m candle 22:08 ET low 2,223.00 (after runner set 22:05:16 ET); runner covered at target (later 23:05 inval / 23:10 stop touches came after)",
       "price_source": "coinbase_exchange_public_candles 1m 2026-11-03 22:08 ET low 2223.00 (api.exchange.coinbase.com, unauthenticated); filled at target level 2225",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-04_ETH-USD_188",
+      "symbol": "ETH-USD",
+      "side": "long",
+      "size": 175.0,
+      "entry": 2275.88,
+      "exit": 2304.0,
+      "pnl": 4921.0,
+      "notional": 398279.0,
+      "leverage": 20.0,
+      "margin": 19913.95,
+      "closed_at": "2026-11-04T04:07:26-05:00",
+      "reason": "target 2,304 hit: Coinbase public 5m candle 00:50 ET high 2,304.50 (between cycles); paper close at stated target, no stop/invalidation touch first",
+      "price_source": "coinbase_exchange_public 5m candle 2026-11-04 00:50 ET high 2,304.50 (api.exchange.coinbase.com, unauthenticated); fill at target level",
+      "paper_only": true
     }
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 66547.14,
+  "max_risk_usd": 71399.89,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -664788.9,
   "paused": false,
@@ -1592,8 +1581,8 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-04T00:04:18-05:00",
-      "note": "last: paper fill ETH-USD"
+      "last_run": "2026-11-04T04:07:26-05:00",
+      "note": "last: closed ETH-USD"
     },
     "Logger": {
       "status": "ready",
@@ -3186,16 +3175,14 @@
       "t": "2026-11-04T00:04:20-05:00",
       "equity": 66547.14,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-04T04:07:26-05:00",
+      "equity": 71399.89,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-31T08:52:54-03:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "08:52 race cycle: hold 6, no fills",
-      "reason": "No stops/targets/invalidations hit; at 20.8x cap, buying power 0; equity 42767.57, gap to 1M 957232.43 (scans/2026-10-31_0852_scan.md)"
-    },
     {
       "t": "2026-10-31T09:54:22-03:00",
       "agent": "Scanner",
@@ -4654,6 +4641,14 @@
       "kind": "check",
       "text": "ETH-USD long 175 @ 2,275.88: target 2,304 touched on 00:50 ET 5m candle (high 2,304.50); stop 2,257 never touched (low since entry 2,273.41)",
       "reason": "Coinbase public 5m candles 00:05-04:05 ET; target hit before any stop/invalidation"
+    },
+    {
+      "t": "2026-11-04T04:07:26-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE ETH-USD @ 2304 \u00b7 P&L $+4921.00",
+      "reason": "target 2,304 hit: Coinbase public 5m candle 00:50 ET high 2,304.50 (between cycles); paper close at stated target, no stop/invalidation touch first",
+      "fill_id": "2026-11-04_ETH-USD_188"
     }
   ],
   "scanner_feed": [
@@ -5622,10 +5617,10 @@
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 19913.95,
-  "exposure": 398347.25,
-  "buying_power": 932595.55,
-  "effective_leverage": 5.99,
+  "margin_used": 0,
+  "exposure": 0.0,
+  "buying_power": 1427997.8,
+  "effective_leverage": 0.0,
   "operating_timezone": "America/New_York",
   "events": [
     {
