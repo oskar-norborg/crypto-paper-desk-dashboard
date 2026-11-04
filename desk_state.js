@@ -6,44 +6,16 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.0-chaos",
   "starting_equity": 50000,
-  "equity": 98402.39,
-  "cash": 42460.89,
-  "realized_pnl": 21399.89,
-  "unrealized_pnl": 27002.5,
-  "day_pnl": 31923.5,
-  "day_pnl_pct": 0.48021,
+  "equity": 78869.89,
+  "cash": 78869.89,
+  "realized_pnl": 28869.89,
+  "unrealized_pnl": 0.0,
+  "day_pnl": 12391.0,
+  "day_pnl_pct": 0.18639,
   "day_baseline_date": "2026-11-04",
   "day_baseline_equity": 66478.89,
-  "open_positions": [
-    {
-      "id": "2026-11-04_ETH-USD_190",
-      "symbol": "ETH-USD",
-      "side": "long",
-      "size": 250.0,
-      "entry": 2315.12,
-      "notional": 578780.0,
-      "stop": 2297.0,
-      "target": 2345.0,
-      "target2": 2370.0,
-      "invalidation": "5m close < 2,299 (lose 02:45-03:00 base) or stop 2,297; also exit if BTC 5m closes < 77,900",
-      "risk_usd": 4530.0,
-      "risk_pct_equity": 0.06345,
-      "opened_at": "2026-11-04T04:07:26-05:00",
-      "card": "RACE_ETH_LONG",
-      "reason": "RACE long continuation: ETH trend up all night (2,273 to 2,325.72 at 03:35 ET) with higher lows 2,285/2,298/2,314; first pullback holding 2,315-2,318 above the 03:00-03:15 breakout base; BTC confirming 78.3k near 78.4k high. Notional $578,780 at 20x (margin $28,939), risk $4,530 (6.3% eq). T1 2,345, T2 2,370.",
-      "price_source": "coinbase_exchange_public_ticker 2026-11-04T04:07:26-05:00 ET (exch 2026-11-04T09:07:22.304972024Z) api.exchange.coinbase.com, unauthenticated",
-      "override": null,
-      "paper_only": true,
-      "leverage": 20.0,
-      "margin": 28939.0,
-      "mark": 2423.13,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-04T10:08:02-05:00",
-      "unrealized_pnl": 27002.5,
-      "exposure": 605782.5
-    }
-  ],
-  "open_count": 1,
+  "open_positions": [],
+  "open_count": 0,
   "closed_positions": [
     {
       "type": "close",
@@ -1551,11 +1523,28 @@ window.__DESK_STATE__ = {
       "reason": "target 2,304 hit: Coinbase public 5m candle 00:50 ET high 2,304.50 (between cycles); paper close at stated target, no stop/invalidation touch first",
       "price_source": "coinbase_exchange_public 5m candle 2026-11-04 00:50 ET high 2,304.50 (api.exchange.coinbase.com, unauthenticated); fill at target level",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-04_ETH-USD_190",
+      "symbol": "ETH-USD",
+      "side": "long",
+      "size": 250.0,
+      "entry": 2315.12,
+      "exit": 2345.0,
+      "pnl": 7470.0,
+      "notional": 578780.0,
+      "leverage": 20.0,
+      "margin": 28939.0,
+      "closed_at": "2026-11-04T10:09:30-05:00",
+      "reason": "target 1 hit: Coinbase public 5m candle 09:40 ET high 2,354.87 >= T1 2,345 (between cycles, no stop/invalidation touch first); paper close at stated T1 (conservative; price ran to 2,443.69 after)",
+      "price_source": "coinbase_exchange_public 5m candles 2026-11-04 09:40 ET (api.exchange.coinbase.com/products/ETH-USD/candles, unauthenticated); fill at stated target",
+      "paper_only": true
     }
   ],
   "max_open": 50,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 98402.39,
+  "max_risk_usd": 78869.89,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -664788.9,
   "paused": false,
@@ -1610,8 +1599,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-04T09:04:02-05:00",
-      "note": "No new opens 09:03 ET"
+      "last_run": "2026-11-04T10:09:30-05:00",
+      "note": "last: closed ETH-USD"
     },
     "Logger": {
       "status": "ready",
@@ -3234,23 +3223,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-04T10:08:05-05:00",
       "equity": 98402.39,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-04T10:09:30-05:00",
+      "equity": 78869.89,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-31T11:53:01-03:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "Exit check vs public 5m candles (last 4h): no stop or target touched on any of 6 positions; latest 15m closes above 4h lows on all longs \u2014 thesis intact, no rotation",
-      "reason": "UNI 4h lo 6.9156 vs stop 6.8508; SOL 4h lo 95.38 vs stop 93.295; LINK 4h lo 11.473 vs stop 11.005; BTC short 4h hi 77588.57 vs stop 80250"
-    },
-    {
-      "t": "2026-10-31T11:53:02-03:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "HOLD 6: book at ~20x cap with ~$3k thin stop-funding cushion and zero buying power \u2014 no free margin for a new fill; no liquid setup clearly better than the current book; nothing invalidated to rotate",
-      "reason": "race mode: stay fully deployed, cut only on invalidation"
-    },
     {
       "t": "2026-10-31T11:53:04-03:00",
       "agent": "Logger",
@@ -4705,6 +4685,21 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 10:07 ET: 30/30 public marks; broad risk-on breakout 09:30-10:05 ET \u2014 BTC 80,428 (+3.7%, new 24h high), ETH 2,425 (+5.6%, hi 2,443.69), SOL 97.32 (+3.9%), NEAR 4.22 (+9.5%)",
       "reason": "scheduled race cycle; scan scans/2026-11-04_1009_scan.md"
+    },
+    {
+      "t": "2026-11-04T10:09:30-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD long 250 @ 2,315.12: T1 2,345 HIT on 09:40 ET 5m candle (high 2,354.87); no stop/invalidation first (lowest 5m close since 09:00 = 2,313.19 > 2,299; low 2,309.51 > stop 2,297; BTC lowest 5m close 78,190 > 77,900)",
+      "reason": "Coinbase public 5m candles 09:00-10:05 ET; exit plan = exit at target"
+    },
+    {
+      "t": "2026-11-04T10:09:30-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE ETH-USD @ 2345 \u00b7 P&L $+7470.00",
+      "reason": "target 1 hit: Coinbase public 5m candle 09:40 ET high 2,354.87 >= T1 2,345 (between cycles, no stop/invalidation touch first); paper close at stated T1 (conservative; price ran to 2,443.69 after)",
+      "fill_id": "2026-11-04_ETH-USD_190"
     }
   ],
   "scanner_feed": [
@@ -5658,7 +5653,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-04T10:09:29-05:00",
+  "updated_at": "2026-11-04T10:09:30-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -5673,10 +5668,10 @@ window.__DESK_STATE__ = {
     "goal": "make $1M paper or blow up",
     "after": "owner should restore RISK_RULES v1.1 (backup in reviews/pre_chaos_backup_2026-10-29/)"
   },
-  "margin_used": 28939.0,
-  "exposure": 605782.5,
-  "buying_power": 1362265.3,
-  "effective_leverage": 6.16,
+  "margin_used": 0,
+  "exposure": 0.0,
+  "buying_power": 1577397.8,
+  "effective_leverage": 0.0,
   "operating_timezone": "America/New_York",
   "events": [
     {
