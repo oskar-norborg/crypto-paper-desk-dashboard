@@ -1589,8 +1589,8 @@ window.__DESK_STATE__ = {
     },
     "Rug Check": {
       "status": "idle",
-      "last_run": "2026-11-03T08:09:11-05:00",
-      "note": "ETH-USD PASS (chaos: non-blocking)"
+      "last_run": "2026-11-04T10:09:33-05:00",
+      "note": "ETH-USD PASS"
     },
     "Sizer": {
       "status": "ready",
@@ -3232,13 +3232,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-10-31T11:53:04-03:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: 11:52 race hold \u00b7 eq $43,941 \u00b7 exposure $889,963 (20.25x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
-    {
       "t": "2026-10-31T12:56:43-03:00",
       "agent": "Scanner",
       "kind": "scan",
@@ -4700,6 +4693,13 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE ETH-USD @ 2345 \u00b7 P&L $+7470.00",
       "reason": "target 1 hit: Coinbase public 5m candle 09:40 ET high 2,354.87 >= T1 2,345 (between cycles, no stop/invalidation touch first); paper close at stated T1 (conservative; price ran to 2,443.69 after)",
       "fill_id": "2026-11-04_ETH-USD_190"
+    },
+    {
+      "t": "2026-11-04T10:09:33-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "ETH-USD PASS",
+      "reason": "vol $316M, spread 0.001%, \u00b11% depth ~$5.4M; Coinbase CEX major"
     }
   ],
   "scanner_feed": [
