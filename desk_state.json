@@ -6,15 +6,42 @@
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
   "equity": 65627.73,
-  "cash": 65627.73,
+  "cash": 25684.64,
   "realized_pnl": 15627.73,
   "unrealized_pnl": 0.0,
   "day_pnl": 8923.34,
   "day_pnl_pct": 0.15737,
   "day_baseline_date": "2026-11-05",
   "day_baseline_equity": 56704.39,
-  "open_positions": [],
-  "open_count": 0,
+  "open_positions": [
+    {
+      "id": "2026-11-05_BTC-USD_202",
+      "symbol": "BTC-USD",
+      "side": "short",
+      "size": 25.1,
+      "entry": 79567.91,
+      "notional": 1997154.54,
+      "stop": 79880.0,
+      "target": 78500.0,
+      "target2": 78000.0,
+      "invalidation": "15m close > 79750 (reclaim of 07:40-07:45 shelf) or stop 79880",
+      "risk_usd": 7833.46,
+      "risk_pct_equity": 0.11936,
+      "opened_at": "2026-11-05T08:12:18-05:00",
+      "card": "RACE_BTC_SHORT_0810",
+      "reason": "RACE continuation short after banking T2 winner: BTC failed reclaim of 80k, 15m cascade 80303\u219279478 with lower highs; still under post-T2 bounce. Notional $1,997,155 @ 50x (margin $39,943), risk $7,833 (11.9% eq, warn-only). T1 78500 toward 24h open ~78.3k, T2 78000.",
+      "price_source": "coinbase_exchange_public_ticker bid 79567.91 @ exch 2026-11-05T13:12:17.153528359Z api.exchange.coinbase.com unauthenticated",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 39943.09,
+      "mark": null,
+      "mark_source": "no public mark \u2014 carried at entry",
+      "unrealized_pnl": 0.0,
+      "exposure": 1997154.54
+    }
+  ],
+  "open_count": 1,
   "closed_positions": [
     {
       "type": "close",
@@ -1683,13 +1710,13 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-05T08:11:02-05:00",
-      "note": "last: closed BTC-USD"
+      "last_run": "2026-11-05T08:12:18-05:00",
+      "note": "last: paper fill BTC-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-05T04:06:16-05:00",
-      "note": "logged 2026-11-05_BTC-USD_200"
+      "last_run": "2026-11-05T08:12:18-05:00",
+      "note": "logged 2026-11-05_BTC-USD_202"
     },
     "Equity": {
       "status": "ready",
@@ -3422,16 +3449,14 @@
       "t": "2026-11-05T08:11:02-05:00",
       "equity": 65627.73,
       "kind": "close"
+    },
+    {
+      "t": "2026-11-05T08:12:18-05:00",
+      "equity": 65627.73,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-31T21:03:07-04:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "Exit check vs public 5m/15m candles (last 60m): no stop/target touched. BTC 60m hi 77560 << stop 80250; SOL 60m hi 95.60 < stop 96.912; UNI last 15m close 7.0697 > 4h low 7.038; XLM last 15m close 0.169111 > 4h low 0.169064 (thin margin)",
-      "reason": "hold all 4; theses intact"
-    },
     {
       "t": "2026-10-31T21:03:07-04:00",
       "agent": "Executor",
@@ -4899,6 +4924,15 @@
       "kind": "size",
       "text": "BTC-USD short 25.1 @ 79567.9 margin $39,943",
       "reason": "62% of free margin after $1200 cushion; stop 79880"
+    },
+    {
+      "t": "2026-11-05T08:12:18-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 25.1 BTC-USD @ 79567.9 \u00b7 notional $1,997,155 (50x, margin $39,943) \u00b7 stop 79880 \u00b7 tgt 78500 \u00b7 risk $7,833.46",
+      "reason": "RACE continuation short after banking T2 winner: BTC failed reclaim of 80k, 15m cascade 80303\u219279478 with lower highs; still under post-T2 bounce. Notional $1,997,155 @ 50x (margin $39,943), risk $7,833 (11.9% eq, warn-only). T1 78500 toward 24h open ~78.3k, T2 78000.",
+      "fill_id": "2026-11-05_BTC-USD_202",
+      "card": "RACE_BTC_SHORT_0810"
     }
   ],
   "scanner_feed": {
@@ -5234,10 +5268,10 @@
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 0,
-  "exposure": 0.0,
-  "buying_power": 3281386.5,
-  "effective_leverage": 0.0,
+  "margin_used": 39943.09,
+  "exposure": 1997154.54,
+  "buying_power": 1284231.96,
+  "effective_leverage": 30.43,
   "operating_timezone": "America/New_York",
   "events": [
     {
