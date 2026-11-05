@@ -3867,13 +3867,6 @@ window.__DESK_STATE__ = {
       "t": "2026-11-02T13:02:37-05:00",
       "agent": "Risk",
       "kind": "adjust",
-      "text": "BTC-USD short stop trailed 77960 \u2192 77,400 (locks +$926 at stop)",
-      "reason": "above 12:05\u201312:15 ET 5m highs 77,398.99; Coinbase public 5m candles"
-    },
-    {
-      "t": "2026-11-02T13:02:37-05:00",
-      "agent": "Risk",
-      "kind": "adjust",
       "text": "NEAR-USD short stop trailed 4.07 \u2192 3.99 (locks +$1,106 at stop)",
       "reason": "above 12:10 ET 5m high 3.9869; Coinbase public 5m candles"
     },
@@ -5348,6 +5341,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "BTC-USD short 59.1107 @ 76128.29: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 12:02 ET: maxH=76291.99 (stop 76650.0); minL=75553.65 (T1 75500.0/T2 75000.0); 15m max close=76073 (inv 76500.0). No close trigger."
+    },
+    {
+      "t": "2026-11-05T13:18:05-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD short 1461.9559 @ 2257.25: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 12:02 ET: maxH=2264.14 (stop 2272.0); minL=2239.15 (T1 2237.0/T2 2220.0); 15m max close=2255.14 (inv 2268.0). No close trigger."
     }
   ],
   "scanner_feed": {
@@ -5706,7 +5706,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-05T13:18:04-05:00",
+  "updated_at": "2026-11-05T13:18:05-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
