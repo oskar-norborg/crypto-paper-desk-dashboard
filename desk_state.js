@@ -3864,13 +3864,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-02T12:11:25-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "0 new; hold BTC+NEAR shorts",
-      "reason": "no stops/targets hit; ETH/SOL triggers not met; scan scans/2026-11-02_1210_scan.md"
-    },
-    {
       "t": "2026-11-02T13:02:37-05:00",
       "agent": "Risk",
       "kind": "adjust",
@@ -5348,6 +5341,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 1318 ET: check BTC+ETH shorts vs public 5m/15m; scan+deploy free margin into SOL if structure intact",
       "reason": "scheduled race cycle; scan scans/2026-11-05_1318_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-05T13:18:04-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "BTC-USD short 59.1107 @ 76128.29: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 12:02 ET: maxH=76291.99 (stop 76650.0); minL=75553.65 (T1 75500.0/T2 75000.0); 15m max close=76073 (inv 76500.0). No close trigger."
     }
   ],
   "scanner_feed": {
