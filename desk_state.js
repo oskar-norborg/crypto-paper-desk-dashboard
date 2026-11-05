@@ -1726,7 +1726,7 @@ window.__DESK_STATE__ = {
     "Rug Check": {
       "status": "idle",
       "last_run": "2026-11-05T10:07:21-05:00",
-      "note": "BTC/ETH/SOL PASS liquid CEX majors (chaos: non-blocking)"
+      "note": "BTC-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -3538,13 +3538,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-01T08:01:35-05:00",
-      "agent": "Sizer",
-      "kind": "skip",
-      "text": "No new open this cycle",
-      "reason": "Sunday chop: no liquid name shows a clean breakout or breakdown on 5m/15m; majors drifting inside 24h ranges. Idle only because no high-conviction edge clears checks"
-    },
-    {
       "t": "2026-11-01T08:01:38-05:00",
       "agent": "Logger",
       "kind": "batch",
@@ -5012,6 +5005,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "BTC/ETH/SOL PASS liquid CEX majors (chaos: non-blocking)",
       "reason": "all three >>$5M 24h vol, tight spreads; FULL CHAOS rug checks soft; prefer liquid majors for new opens"
+    },
+    {
+      "t": "2026-11-05T10:07:21-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "BTC-USD PASS (chaos: non-blocking)",
+      "reason": "vol $622.4M, spread 0.0094%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
     }
   ],
   "scanner_feed": {
