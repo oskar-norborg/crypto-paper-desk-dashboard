@@ -2005,7 +2005,7 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-05T16:11:29-05:00",
-      "note": "last: paper fill XRP-USD"
+      "note": "1611 ET: closed 2; BTC HOLD; opened {'ETH': True, 'XRP': True}"
     },
     "Logger": {
       "status": "ready",
@@ -4033,13 +4033,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-03T08:09:11-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "BTC-USD PASS (chaos: non-blocking)",
-      "reason": "vol $542.8M, spread 0.000%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
-    },
-    {
-      "t": "2026-11-03T08:09:11-05:00",
       "agent": "Executor",
       "kind": "fill",
       "text": "PAPER FILL long 7.772 BTC-USD @ 77196.8 \u00b7 notional $599,973 (20x, margin $29,999) \u00b7 stop 76734 \u00b7 tgt 77892 \u00b7 risk $3,596.80",
@@ -5516,6 +5509,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE rotate after ETH/XRP T1 bank: BTC short intact, continuation roll. 24h -6.09%. XRP continuation short after T1 bank: 15:55 ET 5m low 1.2277 hit prior T1; 16:05 low 1.2202; 15m closes rolling 1.2422\u21921.2415\u21921.2406\u21921.2353\u21921.2305\u21921.2214 under intact BTC short; deploy remaining freed margin into liquid alt continuation. Notional $1,491,347 @ 50x (margin $29,827), risk $14,510 (7.0% eq, warn-only). T1 1.21, T2 1.2.",
       "fill_id": "2026-11-05_XRP-USD_232",
       "card": "RACE_XRP_SHORT_1611"
+    },
+    {
+      "t": "2026-11-05T16:11:29-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "1611 ET: closed 2; BTC HOLD; opened {'ETH': True, 'XRP': True}",
+      "reason": "race mode: ETH+XRP closed on T1; BTC structure intact; redeployed freed margin into ETH/XRP continuation shorts; opens ok={'ETH': True, 'XRP': True}; plateau not acceptable"
     }
   ],
   "scanner_feed": {
