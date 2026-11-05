@@ -1679,8 +1679,8 @@ window.__DESK_STATE__ = {
     },
     "Sizer": {
       "status": "ready",
-      "last_run": "2026-11-01T10:05:38-05:00",
-      "note": "No new open this cycle"
+      "last_run": "2026-11-05T08:12:18-05:00",
+      "note": "BTC-USD short 25.1 @ 79567.9 margin $39,943"
     },
     "Executor": {
       "status": "ready",
@@ -3428,13 +3428,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-10-31T21:03:07-04:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 21:02 ET: 30 public marks, 0 failed; flat weekend tape (BTC +0.4%, ETH +0.8% 24h; liquid majors within \u00b10.4% over 1h/4h); ETH 2259 just under 24h high 2265, no breakout",
-      "reason": "scheduled race cycle; scan scans/2026-10-31_2102_scan.md"
-    },
-    {
-      "t": "2026-10-31T21:03:07-04:00",
       "agent": "Risk",
       "kind": "check",
       "text": "Exit check vs public 5m/15m candles (last 60m): no stop/target touched. BTC 60m hi 77560 << stop 80250; SOL 60m hi 95.60 < stop 96.912; UNI last 15m close 7.0697 > 4h low 7.038; XLM last 15m close 0.169111 > 4h low 0.169064 (thin margin)",
@@ -4900,6 +4893,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "BTC-USD PASS (chaos soft)",
       "reason": "vol ~$800M, spread ~0%; Coinbase CEX major"
+    },
+    {
+      "t": "2026-11-05T08:12:18-05:00",
+      "agent": "Sizer",
+      "kind": "size",
+      "text": "BTC-USD short 25.1 @ 79567.9 margin $39,943",
+      "reason": "62% of free margin after $1200 cushion; stop 79880"
     }
   ],
   "scanner_feed": {
