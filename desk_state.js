@@ -1616,8 +1616,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-04T17:06:57-05:00",
-      "note": "17:06 ET: flat, no new open \u2014 neither trigger fired"
+      "last_run": "2026-11-04T19:06:22-05:00",
+      "note": "19:06 ET: flat, no new open \u2014 no trigger fired"
     },
     "Logger": {
       "status": "ready",
@@ -3285,13 +3285,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-10-31T17:58:44-03:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "Exit check vs public 5m/15m candles: no stop or target touched. SOL 20:30Z 15m closed 95.46 below prior 4h low 95.56 = bounce-failed invalidation. SUI 15m closes 0.8975/0.8968 below prior 4h lows (0.8984/0.8966) and making new lows = momentum reversed",
-      "reason": "rotate losers that invalidate before stops; LINK/UNI/XLM/BTC theses intact"
-    },
-    {
-      "t": "2026-10-31T17:58:44-03:00",
       "agent": "Executor",
       "kind": "close",
       "text": "PAPER CLOSE SOL-USD @ 95.48 \u00b7 P&L $-1600.90",
@@ -4755,6 +4748,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 19:06 ET: 30 public marks; BTC 80,523, ETH 2,420.8, SOL 95.37",
       "reason": "scheduled race cycle; scan scans/2026-11-04_1906_scan.md"
+    },
+    {
+      "t": "2026-11-04T19:06:22-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "19:06 ET: flat, no new open \u2014 no trigger fired",
+      "reason": "ETH 5m range 2,419.95\u20132,430.92 (needs >2,443 / >2,435 retest / <2,412); BTC 80,296\u201380,664"
     }
   ],
   "scanner_feed": [
