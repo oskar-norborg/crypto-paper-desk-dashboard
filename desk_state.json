@@ -5,44 +5,16 @@
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 58397.5,
-  "cash": 802.88,
-  "realized_pnl": 7890.53,
-  "unrealized_pnl": 506.97,
-  "day_pnl": 1693.11,
-  "day_pnl_pct": 0.02986,
+  "equity": 44945.11,
+  "cash": 44945.11,
+  "realized_pnl": -5054.89,
+  "unrealized_pnl": 0.0,
+  "day_pnl": -11759.28,
+  "day_pnl_pct": -0.20738,
   "day_baseline_date": "2026-11-05",
   "day_baseline_equity": 56704.39,
-  "open_positions": [
-    {
-      "id": "2026-11-05_ETH-USD_198",
-      "symbol": "ETH-USD",
-      "side": "short",
-      "size": 1179.0,
-      "entry": 2421.02,
-      "notional": 2854382.58,
-      "stop": 2432.0,
-      "target": 2405.0,
-      "target2": 2390.0,
-      "invalidation": "5m close > 2428.5 (reclaim 23:30-23:35 bounce structure) or stop 2432",
-      "risk_usd": 12945.42,
-      "risk_pct_equity": 0.22362,
-      "opened_at": "2026-11-05T00:08:46-05:00",
-      "card": "chaos-0008-eth-short",
-      "reason": "FULL CHAOS race: thesis flip \u2014 ETH long invalidated (5m closes <2418 @23:00/23:15/23:20); bounce to 2429.88 @23:35 failed, lower-high vs 22:15 peak 2434.50, live back ~2421. Concentrated single-name short into overnight fade with BTC also sub-80440. Notional ~$2.85M @50x paper.",
-      "price_source": "coinbase_exchange_public_ticker bid 2421.02 @ 2026-11-05T00:08:43-05:00 ET (exch 2026-11-05T05:08:37.921894662Z) api.exchange.coinbase.com unauthenticated",
-      "override": null,
-      "paper_only": true,
-      "leverage": 50.0,
-      "margin": 57087.65,
-      "mark": 2420.59,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-05T00:08:50-05:00",
-      "unrealized_pnl": 506.97,
-      "exposure": 2853875.61
-    }
-  ],
-  "open_count": 1,
+  "open_positions": [],
+  "open_count": 0,
   "closed_positions": [
     {
       "type": "close",
@@ -1618,11 +1590,28 @@
       "reason": "INVALIDATION HIT: 5m closes <2418 \u2014 23:00 C=2417.72, 23:15 C=2416.56, 23:20 C=2417.27 (stop 2414 untouched, low since entry 2415.63). Thesis broken; rotate before stop kiss. Exit at live public bid. T1 2455 never reached (high 2434.50 @22:15).",
       "price_source": "coinbase_exchange_public_ticker bid 2420.66 @ 2026-11-05T00:08:00-05:00 ET (exch 2026-11-05T05:07:57.030185356Z) api.exchange.coinbase.com unauthenticated",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-05_ETH-USD_198",
+      "symbol": "ETH-USD",
+      "side": "short",
+      "size": 1179.0,
+      "entry": 2421.02,
+      "exit": 2432.0,
+      "pnl": -12945.42,
+      "notional": 2854382.58,
+      "leverage": 50.0,
+      "margin": 57087.65,
+      "closed_at": "2026-11-05T04:06:09-05:00",
+      "reason": "STOP HIT between cycles: 02:05 ET 5m high 2432.52 >= stop 2432 (invalidation 5m close >2428.5 also hit 01:45 C=2429.90). Stop-level paper fill.",
+      "price_source": "coinbase_exchange_public candles granularity=300, 02:05 ET bar H=2432.52 (api.exchange.coinbase.com unauthenticated); fill at stop level 2432",
+      "paper_only": true
     }
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 58397.5,
+  "max_risk_usd": 44945.11,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -567043.9,
   "paused": false,
@@ -1677,8 +1666,8 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-05T00:08:46-05:00",
-      "note": "last: paper fill ETH-USD"
+      "last_run": "2026-11-05T04:06:09-05:00",
+      "note": "last: closed ETH-USD"
     },
     "Logger": {
       "status": "ready",
@@ -3396,16 +3385,14 @@
       "t": "2026-11-05T00:08:52-05:00",
       "equity": 58397.5,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-05T04:06:09-05:00",
+      "equity": 44945.11,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-31T19:02:06-04:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: 19:01 ET race hold \u00b7 eq $49,635 \u00b7 exposure $835,516 (16.83x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
     {
       "t": "2026-10-31T20:03:45-04:00",
       "agent": "Executor",
@@ -4870,6 +4857,14 @@
       "reason": "FULL CHAOS race: thesis flip \u2014 ETH long invalidated (5m closes <2418 @23:00/23:15/23:20); bounce to 2429.88 @23:35 failed, lower-high vs 22:15 peak 2434.50, live back ~2421. Concentrated single-name short into overnight fade with BTC also sub-80440. Notional ~$2.85M @50x paper.",
       "fill_id": "2026-11-05_ETH-USD_198",
       "card": "chaos-0008-eth-short"
+    },
+    {
+      "t": "2026-11-05T04:06:09-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE ETH-USD @ 2432 \u00b7 P&L $-12945.42",
+      "reason": "STOP HIT between cycles: 02:05 ET 5m high 2432.52 >= stop 2432 (invalidation 5m close >2428.5 also hit 01:45 C=2429.90). Stop-level paper fill.",
+      "fill_id": "2026-11-05_ETH-USD_198"
     }
   ],
   "scanner_feed": [
@@ -5545,7 +5540,7 @@
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-05T00:08:52-05:00",
+  "updated_at": "2026-11-05T04:06:09-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -5561,10 +5556,10 @@
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 57087.65,
-  "exposure": 2853875.61,
-  "buying_power": 65999.39,
-  "effective_leverage": 48.87,
+  "margin_used": 0,
+  "exposure": 0.0,
+  "buying_power": 2247255.5,
+  "effective_leverage": 0.0,
   "operating_timezone": "America/New_York",
   "events": [
     {
