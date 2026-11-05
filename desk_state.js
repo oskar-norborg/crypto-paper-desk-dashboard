@@ -6,16 +6,44 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 75866.41,
-  "cash": 75866.41,
+  "equity": 59738.41,
+  "cash": 7778.81,
   "realized_pnl": 25866.41,
-  "unrealized_pnl": 0.0,
-  "day_pnl": 9387.52,
-  "day_pnl_pct": 0.14121,
+  "unrealized_pnl": -16128.0,
+  "day_pnl": -6740.48,
+  "day_pnl_pct": -0.10139,
   "day_baseline_date": "2026-11-04",
   "day_baseline_equity": 66478.89,
-  "open_positions": [],
-  "open_count": 0,
+  "open_positions": [
+    {
+      "id": "2026-11-04_ETH-USD_194",
+      "symbol": "ETH-USD",
+      "side": "long",
+      "size": 1400.0,
+      "entry": 2431.7,
+      "notional": 3404380.0,
+      "stop": 2414.0,
+      "target": 2455.0,
+      "target2": 2485.0,
+      "invalidation": "5m close < 2418",
+      "risk_usd": 24780.0,
+      "risk_pct_equity": 0.32663,
+      "opened_at": "2026-11-04T21:06:49-05:00",
+      "card": null,
+      "reason": "FULL CHAOS race: armed ETH long fired on 20:50 5m close 2431.95 with BTC 80790 (>80650); 20:55/21:00 pullback held 2425+ above invalidation, live re-push to 2431 with BTC 80755 (>80750 alt trigger). Concentrated single-name swing.",
+      "price_source": "coinbase_exchange_public_ticker ask 2431.70 @ 2026-11-04T21:06:44-05:00 ET (exch 2026-11-05T02:06:41Z) api.exchange.coinbase.com",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 68087.6,
+      "mark": 2420.18,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-04T20:10:24-05:00",
+      "unrealized_pnl": -16128.0,
+      "exposure": 3388252.0
+    }
+  ],
+  "open_count": 1,
   "closed_positions": [
     {
       "type": "close",
@@ -1561,7 +1589,7 @@ window.__DESK_STATE__ = {
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 75866.41,
+  "max_risk_usd": 59738.41,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -664788.9,
   "paused": false,
@@ -1616,13 +1644,13 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-04T20:10:23-05:00",
-      "note": "20:08 ET cycle: stay FLAT. Re-armed tighter triggers (ETH long >2430+BTC>80650 / ETH short <2415+BTC<80350 / BTC long >8"
+      "last_run": "2026-11-04T21:06:49-05:00",
+      "note": "last: paper fill ETH-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-04T17:54:34-05:00",
-      "note": "EOD review 2026-11-04 \u00b7 eq $75,866 \u00b7 day +$9,388 (+14.1%) \u00b7 flat \u00b7 gap $924,134"
+      "last_run": "2026-11-04T21:06:49-05:00",
+      "note": "logged 2026-11-04_ETH-USD_194"
     },
     "Equity": {
       "status": "ready",
@@ -3280,16 +3308,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-04T14:06:11-05:00",
       "equity": 75866.41,
       "kind": "close"
+    },
+    {
+      "t": "2026-11-04T21:06:49-05:00",
+      "equity": 59738.41,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-31T17:58:47-03:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "SOL-USD PASS (chaos: non-blocking)",
-      "reason": "vol $55.8M, spread 0.010%; Coinbase-listed CEX major; chaos v2.0 rug checks are soft"
-    },
     {
       "t": "2026-10-31T17:58:47-03:00",
       "agent": "Executor",
@@ -4756,6 +4782,15 @@ window.__DESK_STATE__ = {
       "kind": "plan",
       "text": "20:08 ET cycle: stay FLAT. Re-armed tighter triggers (ETH long >2430+BTC>80650 / ETH short <2415+BTC<80350 / BTC long >80750). Next fill only on confirmed 5m close break.",
       "reason": "FULL CHAOS v2.1 race \u2014 plateau not ok, but public-price discipline still hard; no edge without breakout/breakdown close"
+    },
+    {
+      "t": "2026-11-04T21:06:49-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 1400 ETH-USD @ 2431.7 \u00b7 notional $3,404,380 (50x, margin $68,088) \u00b7 stop 2414 \u00b7 tgt 2455 \u00b7 risk $24,780.00",
+      "reason": "FULL CHAOS race: armed ETH long fired on 20:50 5m close 2431.95 with BTC 80790 (>80650); 20:55/21:00 pullback held 2425+ above invalidation, live re-push to 2431 with BTC 80755 (>80750 alt trigger). Concentrated single-name swing.",
+      "fill_id": "2026-11-04_ETH-USD_194",
+      "card": null
     }
   ],
   "scanner_feed": [
@@ -5431,7 +5466,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-04T20:10:26-05:00",
+  "updated_at": "2026-11-04T21:06:49-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -5447,10 +5482,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 0,
-  "exposure": 0.0,
-  "buying_power": 3793320.5,
-  "effective_leverage": 0.0,
+  "margin_used": 68087.6,
+  "exposure": 3388252.0,
+  "buying_power": 0.0,
+  "effective_leverage": 56.72,
   "operating_timezone": "America/New_York",
   "events": [
     {
