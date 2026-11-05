@@ -3549,15 +3549,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-01T04:01:36-05:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 3.843 BTC-USD @ 78057.4 \u00b7 notional $299,974 (20x, margin $14,999) \u00b7 stop 77550 \u00b7 tgt 79072 \u00b7 risk $1,949.82",
-      "reason": "RACE BTC flip: 24h-high breakout 77748 -> 78126, two 15m closes holding above (78110, 78097) on $150M vol; stop under 4h low 77631 \u2014 long (24h +0.95% from public stats open), notional $299,974 @ 20x paper (margin $14,999), stop 0.7% / tgt 1.3%/2.2%, risk $1,950 (4.3% eq; chaos cap 100%)",
-      "fill_id": "2026-11-01_BTC-USD_157",
-      "card": "CHAOS_BTC"
-    },
-    {
       "t": "2026-11-01T04:01:38-05:00",
       "agent": "Logger",
       "kind": "batch",
@@ -5024,6 +5015,13 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE BTC-USD @ 78000 \u00b7 P&L $+39354.54",
       "reason": "T2 78000 hit: Coinbase public 5m 09:55 ET low 77967.02 (<=78000) after T1 at 09:50; stop 79880 never touched (maxH 79787.88); inv 15m close>79750 clear. Paper close at stated T2.",
       "fill_id": "2026-11-05_BTC-USD_202"
+    },
+    {
+      "t": "2026-11-05T10:07:10-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD short 512 @ 2387.95: T1 2340 HIT \u2014 CLOSE at stated T1 (T2 2310 not hit)",
+      "reason": "Coinbase public 5m since 08:12 ET: maxH=2392.93 < stop 2410; minL=2304.29; T1 2340 hit 09:55 ET (L=2331.32); T2 2310 NOT hit; 15m max close=2389.21 (inv 2400 CLEAR). Close at stated T1 2340."
     }
   ],
   "scanner_feed": {
