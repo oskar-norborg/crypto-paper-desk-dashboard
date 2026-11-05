@@ -2009,8 +2009,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-05T16:11:29-05:00",
-      "note": "logged 2026-11-05_XRP-USD_232"
+      "last_run": "2026-11-05T16:11:32-05:00",
+      "note": "CHAOS: 1611 ET race cycle \u00b7 ETH/XRP T1 \u2192 continuation \u00b7 eq $204,485 \u00b7 exposure $9,456,142 (46.24x)"
     },
     "Equity": {
       "status": "ready",
@@ -4038,15 +4038,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-03T08:09:11-05:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 7.772 BTC-USD @ 77196.8 \u00b7 notional $599,973 (20x, margin $29,999) \u00b7 stop 76734 \u00b7 tgt 77892 \u00b7 risk $3,596.80",
-      "reason": "RACE long: BTC reclaimed 76850 overnight-high on 5m closes, higher lows 76453->77054->77199, holding ~77.2k on pullback from 77383; deepest liquidity ($543M vol). Invalidation: 5m close < 76850 \u2014 long (24h -0.77% from public stats open), notional $599,973 @ 20x paper (margin $29,999), stop 0.6% / tgt 0.9%/1.6%, risk $3,597 (7.1% eq; chaos cap 100%)",
-      "fill_id": "2026-11-03_BTC-USD_179",
-      "card": "CHAOS_BTC"
-    },
-    {
-      "t": "2026-11-03T08:09:11-05:00",
       "agent": "Rug Check",
       "kind": "check",
       "text": "ETH-USD PASS (chaos: non-blocking)",
@@ -5521,6 +5512,13 @@ window.__DESK_STATE__ = {
       "kind": "plan",
       "text": "1611 ET: closed 2; BTC HOLD; opened {'ETH': True, 'XRP': True}",
       "reason": "race mode: ETH+XRP closed on T1; BTC structure intact; redeployed freed margin into ETH/XRP continuation shorts; opens ok={'ETH': True, 'XRP': True}; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-05T16:11:32-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 1611 ET race cycle \u00b7 ETH/XRP T1 \u2192 continuation \u00b7 eq $204,485 \u00b7 exposure $9,456,142 (46.24x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": {
