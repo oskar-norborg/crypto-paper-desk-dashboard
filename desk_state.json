@@ -1953,7 +1953,7 @@
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-05T13:18:16-05:00",
-      "note": "last: paper fill SOL-USD"
+      "note": "1318 ET: closed 0; BTC/ETH HOLD near T1; opened continuation shorts where free cash allowed"
     },
     "Logger": {
       "status": "ready",
@@ -3900,13 +3900,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-02T13:59:50-05:00",
-      "agent": "Risk",
-      "kind": "adjust",
-      "text": "Trailed stops: BTC 77,400\u219277,280, NEAR 3.99\u21923.95, SOL 93.40\u219292.60",
-      "reason": "above 13:05\u201313:10 ET 5m highs; Coinbase public 5m candles"
-    },
-    {
       "t": "2026-11-02T14:00:02-05:00",
       "agent": "Scanner",
       "kind": "scan",
@@ -5384,6 +5377,13 @@
       "reason": "RACE deploy free cash: 15m still LL/bearish tilt (not flipped), 24h -6.43%. SOL continuation short under BTC/ETH dump; 15m LL cascade intact (closes descending through 12:00-13:00); BTC/ETH shorts HOLD near T1 (BTC minL 75553 vs T1 75500; ETH minL 2239 vs T1 2237) \u2014 free cash only deploy. Notional $184,853 @ 50x (margin $3,697), risk $3,093 (1.6% eq, warn-only). T1 87.4, T2 85.8.",
       "fill_id": "2026-11-05_SOL-USD_226",
       "card": "RACE_SOL_SHORT_1318"
+    },
+    {
+      "t": "2026-11-05T13:18:16-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "1318 ET: closed 0; BTC/ETH HOLD near T1; opened continuation shorts where free cash allowed",
+      "reason": "race mode: no hard close trigger on BTC/ETH (T1 nearly but not hit); redeployed free margin into liquid major shorts; opens ok={'SOL': True}; plateau not acceptable"
     }
   ],
   "scanner_feed": {
