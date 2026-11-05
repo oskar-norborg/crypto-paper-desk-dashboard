@@ -1848,8 +1848,8 @@
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-05T10:07:48-05:00",
-      "note": "logged 2026-11-05_NEAR-USD_211"
+      "last_run": "2026-11-05T10:07:51-05:00",
+      "note": "CHAOS: 1007 ET NEAR top-up \u00b7 eq $131,316 \u00b7 exposure $6,534,118 (49.76x)"
     },
     "Equity": {
       "status": "ready",
@@ -3677,13 +3677,6 @@
   "activity": [
     {
       "t": "2026-11-01T11:01:30-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "Exit check vs public 5m candles 10:00-11:00 ET: no stop/target touched. ETH lo 2263.25 > stop 2229.7, hi 2269.84 < tgt 2331.6; UNI lo 7.229 > stop 6.8508, hi 7.3372 < tgt 7.7071",
-      "reason": "Hold both: UNI 15m close 7.229 still above prior 4h low 7.1596 (invalidation not hit) though fading; ETH ~flat vs entry, thesis intact"
-    },
-    {
-      "t": "2026-11-01T11:01:30-05:00",
       "agent": "Logger",
       "kind": "batch",
       "text": "CHAOS: 11:00 ET race cycle \u00b7 hold ETH + UNI longs \u00b7 NEW NEAR short 41,000 @ 4.3292 (4h-low breakdown)",
@@ -5156,6 +5149,13 @@
       "kind": "plan",
       "text": "10:07 ET top-up: deployed leftover cash into NEAR short (keep ~$50 cushion)",
       "reason": "race mode: free margin was ~$3.1k after BTC/ETH/SOL opens \u2014 deploy into liquid alt continuation short"
+    },
+    {
+      "t": "2026-11-05T10:07:51-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 1007 ET NEAR top-up \u00b7 eq $131,316 \u00b7 exposure $6,534,118 (49.76x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": {
