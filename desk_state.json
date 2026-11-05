@@ -5,12 +5,12 @@
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 159784.88,
-  "cash": 69747.12,
+  "equity": 159448.63,
+  "cash": 3747.12,
   "realized_pnl": 109747.05,
-  "unrealized_pnl": 37.83,
-  "day_pnl": 103080.49,
-  "day_pnl_pct": 1.81786,
+  "unrealized_pnl": -298.42,
+  "day_pnl": 102744.24,
+  "day_pnl_pct": 1.81193,
   "day_baseline_date": "2026-11-05",
   "day_baseline_equity": 56704.39,
   "open_positions": [
@@ -40,9 +40,36 @@
       "mark_at": "2026-11-05T12:01:17-05:00",
       "unrealized_pnl": 37.83,
       "exposure": 4499958.68
+    },
+    {
+      "id": "2026-11-05_ETH-USD_225",
+      "symbol": "ETH-USD",
+      "side": "short",
+      "size": 1461.9559,
+      "entry": 2257.25,
+      "notional": 3299999.96,
+      "stop": 2272.0,
+      "target": 2237.0,
+      "target2": 2220.0,
+      "invalidation": "15m close > 2268 (reclaim of 11:30-11:45 shelf) or stop 2272",
+      "risk_usd": 21563.85,
+      "risk_pct_equity": 0.13496,
+      "opened_at": "2026-11-05T12:02:02-05:00",
+      "card": "RACE_ETH_SHORT_1201",
+      "reason": "Re-short after stop-out: bounce capped 2284 (11:25 ET), 15m closes descending 2275.7/2263.9/2262.7, rolling under 2265 shelf with BTC lower highs; 24h ~-7%. Stop above 11:40-11:55 highs ~2271.9. Notional ~$3,300,000 @50x, T1 2237.0, T2 2220.0.",
+      "price_source": "coinbase_exchange_public_ticker bid 2257.25 (last 2257.17) @ 2026-11-05T12:02:02-05:00 ET api.exchange.coinbase.com unauthenticated",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 66000.0,
+      "mark": 2257.48,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-05T12:01:17-05:00",
+      "unrealized_pnl": -336.25,
+      "exposure": 3300336.21
     }
   ],
-  "open_count": 1,
+  "open_count": 2,
   "closed_positions": [
     {
       "type": "close",
@@ -1843,7 +1870,7 @@
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 159784.88,
+  "max_risk_usd": 159448.63,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -567043.9,
   "paused": false,
@@ -1899,12 +1926,12 @@
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-05T12:02:02-05:00",
-      "note": "last: paper fill BTC-USD"
+      "note": "last: paper fill ETH-USD"
     },
     "Logger": {
       "status": "ready",
       "last_run": "2026-11-05T12:02:02-05:00",
-      "note": "logged 2026-11-05_BTC-USD_224"
+      "note": "logged 2026-11-05_ETH-USD_225"
     },
     "Equity": {
       "status": "ready",
@@ -3812,18 +3839,14 @@
       "t": "2026-11-05T12:02:02-05:00",
       "equity": 159784.88,
       "kind": "fill"
+    },
+    {
+      "t": "2026-11-05T12:02:02-05:00",
+      "equity": 159448.63,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-02T11:04:39-05:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 6 BTC-USD @ 77554.3 \u00b7 notional $465,326 (20x, margin $23,266) \u00b7 stop 77960 \u00b7 tgt 76500 \u00b7 risk $2,433.96",
-      "reason": "10:55 ET 5m close 77,384.93 broke 77,450 range-low trigger after US-open fade; lower highs since 10:10 ET",
-      "fill_id": "2026-11-02_BTC-USD_169",
-      "card": null
-    },
     {
       "t": "2026-11-02T11:04:39-05:00",
       "agent": "Executor",
@@ -5302,6 +5325,15 @@
       "reason": "Re-short after stop-out: post-T2 bounce topped 76917 (11:20 ET) and is printing lower highs (76917>76886>76632>76610>76558>76496) with descending 15m closes 76754/76337/76270; 24h still red. Stop above 11:40-11:45 lower-high cluster. Notional ~$4,500,000 @50x, T1 75500.0, T2 75000.0.",
       "fill_id": "2026-11-05_BTC-USD_224",
       "card": "RACE_BTC_SHORT_1201"
+    },
+    {
+      "t": "2026-11-05T12:02:02-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 1461.96 ETH-USD @ 2257.25 \u00b7 notional $3,300,000 (50x, margin $66,000) \u00b7 stop 2272 \u00b7 tgt 2237 \u00b7 risk $21,563.85",
+      "reason": "Re-short after stop-out: bounce capped 2284 (11:25 ET), 15m closes descending 2275.7/2263.9/2262.7, rolling under 2265 shelf with BTC lower highs; 24h ~-7%. Stop above 11:40-11:55 highs ~2271.9. Notional ~$3,300,000 @50x, T1 2237.0, T2 2220.0.",
+      "fill_id": "2026-11-05_ETH-USD_225",
+      "card": "RACE_ETH_SHORT_1201"
     }
   ],
   "scanner_feed": {
@@ -5676,10 +5708,10 @@
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 89999.93,
-  "exposure": 4499958.68,
-  "buying_power": 3489285.32,
-  "effective_leverage": 28.16,
+  "margin_used": 155999.93,
+  "exposure": 7800294.89,
+  "buying_power": 172136.61,
+  "effective_leverage": 48.92,
   "operating_timezone": "America/New_York",
   "events": [
     {
