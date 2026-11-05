@@ -6,12 +6,12 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 56704.39,
-  "cash": 401.67,
-  "realized_pnl": 25866.41,
-  "unrealized_pnl": -19162.02,
-  "day_pnl": 0.0,
-  "day_pnl_pct": 0.0,
+  "equity": 57582.53,
+  "cash": 5258.93,
+  "realized_pnl": 23346.53,
+  "unrealized_pnl": -15764.0,
+  "day_pnl": 878.14,
+  "day_pnl_pct": 0.01549,
   "day_baseline_date": "2026-11-05",
   "day_baseline_equity": 56704.39,
   "open_positions": [
@@ -41,36 +41,9 @@ window.__DESK_STATE__ = {
       "mark_at": "2026-11-05T00:07:18-05:00",
       "unrealized_pnl": -15764.0,
       "exposure": 3388616.0
-    },
-    {
-      "id": "2026-11-04_SOL-USD_195",
-      "symbol": "SOL-USD",
-      "side": "long",
-      "size": 3818.0,
-      "entry": 96.61,
-      "notional": 368856.98,
-      "stop": 95.95,
-      "target": 97.8,
-      "target2": 98.5,
-      "invalidation": "5m close < 96.08 (lose 22:05 higher-low) or stop 95.95; also exit if BTC 5m closes < 80440 (22:10 swing low)",
-      "risk_usd": 2519.88,
-      "risk_pct_equity": 0.03277,
-      "opened_at": "2026-11-04T22:26:13-05:00",
-      "card": "RACE_SOL",
-      "reason": "FULL CHAOS race: SOL 5m HH/HL thrust \u2014 21:30 low 95.90 \u2192 22:05 HL 96.08 \u2192 22:15 close 96.83 (H=96.87) on heavy volume; shallow pullback to ~96.61. Concentrated leftover-margin swing (ETH held). Notional $368,857 @ 50x paper (margin $7,377), stop 95.95 / T1 97.8 / T2 98.5, risk $2,520 (3.3% eq; warn-only)",
-      "price_source": "coinbase_exchange_public_ticker ask 96.61 @ 2026-11-04T22:26:13-05:00 ET (exch 2026-11-05T03:26:10.165391268Z) api.exchange.coinbase.com",
-      "override": null,
-      "paper_only": true,
-      "leverage": 50.0,
-      "margin": 7377.14,
-      "mark": 95.72,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-05T00:07:19-05:00",
-      "unrealized_pnl": -3398.02,
-      "exposure": 365458.96
     }
   ],
-  "open_count": 2,
+  "open_count": 1,
   "closed_positions": [
     {
       "type": "close",
@@ -1612,11 +1585,28 @@ window.__DESK_STATE__ = {
       "reason": "momentum-reverse rotate: 14:00 ET 5m lost the 2,417.8 midday range floor (low 2,411.51, close 2,412.37) after lower highs 2,434.9/2,431/2,422; BTC/SOL/alts fading. Exit before the 2,395 stop (~0.8% away at 20x)",
       "price_source": "coinbase_exchange_public_ticker 2026-11-04T14:06:11-05:00 ET (exch 2026-11-04T19:06:11.175323131Z) api.exchange.coinbase.com, unauthenticated",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-04_SOL-USD_195",
+      "symbol": "SOL-USD",
+      "side": "long",
+      "size": 3818.0,
+      "entry": 96.61,
+      "exit": 95.95,
+      "pnl": -2519.88,
+      "notional": 368856.98,
+      "leverage": 50.0,
+      "margin": 7377.14,
+      "closed_at": "2026-11-05T00:08:05-05:00",
+      "reason": "STOP HIT + invalidation: 23:00 ET 5m low 95.87 traded through stop 95.95 (also C=95.90 < 96.08 HL invalidation); BTC 23:00 5m close 80360.57 < 80440 BTC-linked invalidation. Between-cycle fill at stated stop. T1 97.80 never reached (high 97.04 @22:40).",
+      "price_source": "coinbase_exchange_public stop-level paper fill (5m candle 2026-11-04T23:00-05:00 L=95.87 through stop 95.95; live ticker bid 95.74 @ 2026-11-05T00:08:00-05:00 ET exch 2026-11-05T05:07:57Z) api.exchange.coinbase.com unauthenticated",
+      "paper_only": true
     }
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 56704.39,
+  "max_risk_usd": 57582.53,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -567043.9,
   "paused": false,
@@ -1671,8 +1661,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-04T22:26:13-05:00",
-      "note": "last: paper fill SOL-USD"
+      "last_run": "2026-11-05T00:08:05-05:00",
+      "note": "last: closed SOL-USD"
     },
     "Logger": {
       "status": "ready",
@@ -3370,16 +3360,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-05T00:07:20-05:00",
       "equity": 56704.39,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-05T00:08:05-05:00",
+      "equity": 57582.53,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-31T19:02:04-04:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 19:01 ET: 30 public marks, 0 failed; quiet weekend tape (BTC +0.29%, ETH +0.44%, SOL -0.87%, LINK +2.6%); no fresh breakout/breakdown clearing $5M vol",
-      "reason": "scheduled race cycle; scan scans/2026-10-31_1901_scan.md"
-    },
     {
       "t": "2026-10-31T19:02:04-04:00",
       "agent": "Risk",
@@ -4840,6 +4828,14 @@ window.__DESK_STATE__ = {
       "kind": "batch",
       "text": "CHAOS race 22:22 ET: ETH HOLD + SOL open \u00b7 eq $72,923.87 \u00b7 cash $401.67 \u00b7 exposure $3,770,294 (51.7x) \u00b7 gap-to-$1M $927,076.13",
       "reason": "public marks refreshed; equity recomputed; dashboard sync via desk_lib.save"
+    },
+    {
+      "t": "2026-11-05T00:08:05-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE SOL-USD @ 95.95 \u00b7 P&L $-2519.88",
+      "reason": "STOP HIT + invalidation: 23:00 ET 5m low 95.87 traded through stop 95.95 (also C=95.90 < 96.08 HL invalidation); BTC 23:00 5m close 80360.57 < 80440 BTC-linked invalidation. Between-cycle fill at stated stop. T1 97.80 never reached (high 97.04 @22:40).",
+      "fill_id": "2026-11-04_SOL-USD_195"
     }
   ],
   "scanner_feed": [
@@ -5515,7 +5511,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-05T00:07:20-05:00",
+  "updated_at": "2026-11-05T00:08:05-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -5531,10 +5527,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 75464.74,
-  "exposure": 3754074.96,
+  "margin_used": 68087.6,
+  "exposure": 3388616.0,
   "buying_power": 0.0,
-  "effective_leverage": 66.2,
+  "effective_leverage": 58.85,
   "operating_timezone": "America/New_York",
   "events": [
     {
