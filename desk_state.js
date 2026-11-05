@@ -3640,13 +3640,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-01T10:05:38-05:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: 10:05 ET race cycle \u00b7 hold ETH + UNI longs \u00b7 no stops/targets hit \u00b7 no new opens",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
-    {
       "t": "2026-11-01T11:01:19-05:00",
       "agent": "Executor",
       "kind": "fill",
@@ -5120,6 +5113,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "NEAR-USD PASS (chaos: non-blocking)",
       "reason": "vol $27.5M, spread 0.0314%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
+    },
+    {
+      "t": "2026-11-05T10:07:48-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "SOFT-WARN over-exposure: new gross $6,537,280 > equity\u00d750 $6,407,726 (chaos: non-blocking)",
+      "reason": "FULL CHAOS soft warn only; margin fits cash; race deploy remaining free margin"
     }
   ],
   "scanner_feed": {
