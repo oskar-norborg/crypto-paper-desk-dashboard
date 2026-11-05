@@ -1643,8 +1643,8 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-04T21:06:49-05:00",
-      "note": "last: paper fill ETH-USD"
+      "last_run": "2026-11-04T21:07:07-05:00",
+      "note": "PAPER ETH-USD long 1400 @ 2431.70 (50x, margin $68.1k)"
     },
     "Logger": {
       "status": "ready",
@@ -3321,13 +3321,6 @@
   ],
   "activity": [
     {
-      "t": "2026-10-31T17:58:50-03:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: 17:58 race SOL flip \u00b7 eq $49,584 \u00b7 exposure $836,557 (16.87x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
-    {
       "t": "2026-10-31T19:01:04-03:00",
       "agent": "Scanner",
       "kind": "scan",
@@ -4793,6 +4786,13 @@
       "kind": "scan",
       "text": "CHAOS race cycle 21:06 ET: 30/30 marks; BTC 80,755, ETH 2,431.5",
       "reason": "scan scans/2026-11-04_2106_scan.md; public Coinbase ticker/stats/book/5m candles"
+    },
+    {
+      "t": "2026-11-04T21:07:07-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER ETH-USD long 1400 @ 2431.70 (50x, margin $68.1k)",
+      "reason": "armed ETH long fired 20:50 5m close 2431.95 + BTC 80790; pullback held above inv 2418; stop 2414 T1 2455 T2 2485"
     }
   ],
   "scanner_feed": [
