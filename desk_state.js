@@ -6,16 +6,44 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 57890.53,
-  "cash": 57890.53,
+  "equity": 58574.35,
+  "cash": 802.88,
   "realized_pnl": 7890.53,
-  "unrealized_pnl": 0.0,
-  "day_pnl": 1186.14,
-  "day_pnl_pct": 0.02092,
+  "unrealized_pnl": 683.82,
+  "day_pnl": 1869.96,
+  "day_pnl_pct": 0.03298,
   "day_baseline_date": "2026-11-05",
   "day_baseline_equity": 56704.39,
-  "open_positions": [],
-  "open_count": 0,
+  "open_positions": [
+    {
+      "id": "2026-11-05_ETH-USD_198",
+      "symbol": "ETH-USD",
+      "side": "short",
+      "size": 1179.0,
+      "entry": 2421.02,
+      "notional": 2854382.58,
+      "stop": 2432.0,
+      "target": 2405.0,
+      "target2": 2390.0,
+      "invalidation": "5m close > 2428.5 (reclaim 23:30-23:35 bounce structure) or stop 2432",
+      "risk_usd": 12945.42,
+      "risk_pct_equity": 0.22362,
+      "opened_at": "2026-11-05T00:08:46-05:00",
+      "card": "chaos-0008-eth-short",
+      "reason": "FULL CHAOS race: thesis flip \u2014 ETH long invalidated (5m closes <2418 @23:00/23:15/23:20); bounce to 2429.88 @23:35 failed, lower-high vs 22:15 peak 2434.50, live back ~2421. Concentrated single-name short into overnight fade with BTC also sub-80440. Notional ~$2.85M @50x paper.",
+      "price_source": "coinbase_exchange_public_ticker bid 2421.02 @ 2026-11-05T00:08:43-05:00 ET (exch 2026-11-05T05:08:37.921894662Z) api.exchange.coinbase.com unauthenticated",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 57087.65,
+      "mark": 2420.44,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-05T00:07:18-05:00",
+      "unrealized_pnl": 683.82,
+      "exposure": 2853698.76
+    }
+  ],
+  "open_count": 1,
   "closed_positions": [
     {
       "type": "close",
@@ -1595,7 +1623,7 @@ window.__DESK_STATE__ = {
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 57890.53,
+  "max_risk_usd": 58574.35,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -567043.9,
   "paused": false,
@@ -1650,13 +1678,13 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-05T00:08:05-05:00",
-      "note": "last: closed ETH-USD"
+      "last_run": "2026-11-05T00:08:46-05:00",
+      "note": "last: paper fill ETH-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-04T22:26:15-05:00",
-      "note": "CHAOS race 22:22 ET: ETH HOLD + SOL open \u00b7 eq $72,923.87 \u00b7 cash $401.67 \u00b7 exposure $3,770,294 (51.7x) \u00b7 gap-to-$1M $927,"
+      "last_run": "2026-11-05T00:08:46-05:00",
+      "note": "logged 2026-11-05_ETH-USD_198"
     },
     "Equity": {
       "status": "ready",
@@ -3359,16 +3387,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-05T00:08:05-05:00",
       "equity": 57890.53,
       "kind": "close"
+    },
+    {
+      "t": "2026-11-05T00:08:46-05:00",
+      "equity": 58574.35,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-31T19:02:04-04:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "No new opens: free cash \u2248 $3.0k is the stop-funding cushion only; book already ~17x of 20x cap",
-      "reason": "race mode \u2014 fully deployed; no idle margin to put to work"
-    },
     {
       "t": "2026-10-31T19:02:06-04:00",
       "agent": "Logger",
@@ -4831,6 +4857,15 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE ETH-USD @ 2420.66 \u00b7 P&L $-15456.00",
       "reason": "INVALIDATION HIT: 5m closes <2418 \u2014 23:00 C=2417.72, 23:15 C=2416.56, 23:20 C=2417.27 (stop 2414 untouched, low since entry 2415.63). Thesis broken; rotate before stop kiss. Exit at live public bid. T1 2455 never reached (high 2434.50 @22:15).",
       "fill_id": "2026-11-04_ETH-USD_194"
+    },
+    {
+      "t": "2026-11-05T00:08:46-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 1179 ETH-USD @ 2421.02 \u00b7 notional $2,854,383 (50x, margin $57,088) \u00b7 stop 2432 \u00b7 tgt 2405 \u00b7 risk $12,945.42",
+      "reason": "FULL CHAOS race: thesis flip \u2014 ETH long invalidated (5m closes <2418 @23:00/23:15/23:20); bounce to 2429.88 @23:35 failed, lower-high vs 22:15 peak 2434.50, live back ~2421. Concentrated single-name short into overnight fade with BTC also sub-80440. Notional ~$2.85M @50x paper.",
+      "fill_id": "2026-11-05_ETH-USD_198",
+      "card": "chaos-0008-eth-short"
     }
   ],
   "scanner_feed": [
@@ -5506,7 +5541,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-05T00:08:05-05:00",
+  "updated_at": "2026-11-05T00:08:46-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -5522,10 +5557,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 0,
-  "exposure": 0.0,
-  "buying_power": 2894526.5,
-  "effective_leverage": 0.0,
+  "margin_used": 57087.65,
+  "exposure": 2853698.76,
+  "buying_power": 75018.74,
+  "effective_leverage": 48.72,
   "operating_timezone": "America/New_York",
   "events": [
     {
