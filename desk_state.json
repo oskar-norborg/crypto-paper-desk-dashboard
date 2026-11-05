@@ -5,12 +5,12 @@
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 193455.21,
-  "cash": 2709.32,
+  "equity": 193412.28,
+  "cash": 50.0,
   "realized_pnl": 108709.25,
-  "unrealized_pnl": 34745.96,
-  "day_pnl": 136750.82,
-  "day_pnl_pct": 2.41164,
+  "unrealized_pnl": 34703.03,
+  "day_pnl": 136707.89,
+  "day_pnl_pct": 2.41089,
   "day_baseline_date": "2026-11-05",
   "day_baseline_equity": 56704.39,
   "open_positions": [
@@ -67,9 +67,36 @@
       "mark_at": "2026-11-05T15:11:34-05:00",
       "unrealized_pnl": 20540.48,
       "exposure": 3279459.47
+    },
+    {
+      "id": "2026-11-05_XRP-USD_228",
+      "symbol": "XRP-USD",
+      "side": "short",
+      "size": 107334.5,
+      "entry": 1.2388,
+      "notional": 132965.98,
+      "stop": 1.252,
+      "target": 1.228,
+      "target2": 1.22,
+      "invalidation": "15m close > 1.2450 (reclaim of 14:45 bounce high) or stop 1.2520",
+      "risk_usd": 1416.82,
+      "risk_pct_equity": 0.00732,
+      "opened_at": "2026-11-05T15:11:44-05:00",
+      "card": "RACE_XRP_SHORT_1511",
+      "reason": "RACE rotate after SOL inv: BTC/ETH shorts intact, bounce-fail roll. 24h -4.93%. XRP continuation short under intact BTC/ETH shorts; 14:40-14:50 bounce high 1.2438 failed as BTC rejected under inv 76500 (max 15m close 76307); SOL rotated on inv; deploy freed margin into most-liquid alt short. Notional $132,966 @ 50x (margin $2,659), risk $1,417 (0.7% eq, warn-only). T1 1.228, T2 1.22.",
+      "price_source": "coinbase_exchange_public_ticker bid/ask/price 1.2388 @ 2026-11-05T15:11:44-05:00 ET (exch 2026-11-05T20:11:42.599942025Z) api.exchange.coinbase.com unauthenticated",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 2659.32,
+      "mark": 1.2392,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-05T15:11:36-05:00",
+      "unrealized_pnl": -42.93,
+      "exposure": 133008.91
     }
   ],
-  "open_count": 2,
+  "open_count": 3,
   "closed_positions": [
     {
       "type": "close",
@@ -1887,7 +1914,7 @@
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 193455.21,
+  "max_risk_usd": 193412.28,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -567043.9,
   "paused": false,
@@ -1942,13 +1969,13 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-05T15:11:33-05:00",
-      "note": "last: closed SOL-USD"
+      "last_run": "2026-11-05T15:11:44-05:00",
+      "note": "last: paper fill XRP-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-05T13:18:19-05:00",
-      "note": "CHAOS: 1318 ET race cycle \u00b7 BTC/ETH hold \u00b7 SOL deploy \u00b7 eq $195,870 \u00b7 exposure $7,948,726 (40.58x)"
+      "last_run": "2026-11-05T15:11:44-05:00",
+      "note": "logged 2026-11-05_XRP-USD_228"
     },
     "Equity": {
       "status": "ready",
@@ -3916,16 +3943,14 @@
       "t": "2026-11-05T15:11:36-05:00",
       "equity": 193455.21,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-05T15:11:44-05:00",
+      "equity": 193412.28,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-02T22:03:40-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 22:03 ET: 30 public marks; broad leg lower \u2014 BTC 76567 (-2.5%) new 24h low 76462.7, NEAR 3.80 (-11.5%) new low 3.79, SOL 91.68, ETH 2247",
-      "reason": "scheduled race cycle; scan scans/2026-11-02_2203_scan.md"
-    },
     {
       "t": "2026-11-02T22:03:40-05:00",
       "agent": "Risk",
@@ -5402,6 +5427,15 @@
       "kind": "check",
       "text": "XRP-USD PASS (chaos: non-blocking)",
       "reason": "vol $87.9M, spread 0.0081%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
+    },
+    {
+      "t": "2026-11-05T15:11:44-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 107334 XRP-USD @ 1.2388 \u00b7 notional $132,966 (50x, margin $2,659) \u00b7 stop 1.252 \u00b7 tgt 1.228 \u00b7 risk $1,416.82",
+      "reason": "RACE rotate after SOL inv: BTC/ETH shorts intact, bounce-fail roll. 24h -4.93%. XRP continuation short under intact BTC/ETH shorts; 14:40-14:50 bounce high 1.2438 failed as BTC rejected under inv 76500 (max 15m close 76307); SOL rotated on inv; deploy freed margin into most-liquid alt short. Notional $132,966 @ 50x (margin $2,659), risk $1,417 (0.7% eq, warn-only). T1 1.228, T2 1.22.",
+      "fill_id": "2026-11-05_XRP-USD_228",
+      "card": "RACE_XRP_SHORT_1511"
     }
   ],
   "scanner_feed": {
@@ -5776,10 +5810,10 @@
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 155999.93,
-  "exposure": 7765250.5,
-  "buying_power": 1907510.0,
-  "effective_leverage": 40.14,
+  "margin_used": 158659.25,
+  "exposure": 7898259.41,
+  "buying_power": 1772354.59,
+  "effective_leverage": 40.84,
   "operating_timezone": "America/New_York",
   "events": [
     {
