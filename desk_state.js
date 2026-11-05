@@ -1845,7 +1845,7 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-05T10:07:48-05:00",
-      "note": "last: paper fill NEAR-USD"
+      "note": "10:07 ET top-up: deployed leftover cash into NEAR short (keep ~$50 cushion)"
     },
     "Logger": {
       "status": "ready",
@@ -3673,13 +3673,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-01T11:01:30-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "11:00 ET race scan: 30/30 marks, 6 liquid PASS",
-      "reason": "BTC/ETH/SOL/XRP/NEAR/LINK >= $5M vol; UNI $4.1M soft-warn"
-    },
-    {
-      "t": "2026-11-01T11:01:30-05:00",
       "agent": "Risk",
       "kind": "check",
       "text": "Exit check vs public 5m candles 10:00-11:00 ET: no stop/target touched. ETH lo 2263.25 > stop 2229.7, hi 2269.84 < tgt 2331.6; UNI lo 7.229 > stop 6.8508, hi 7.3372 < tgt 7.7071",
@@ -5152,6 +5145,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE leftover-margin deploy: BTC/ETH/SOL continuation shorts just opened; NEAR 24h -7.67% leading dump among liquid alts, 15m LL intact. Notional $157,102 @ 50x (margin $3,142), risk $5,257 (4.1% eq, warn-only). T1 3.7, T2 3.55. Keep ~$50 cash cushion.",
       "fill_id": "2026-11-05_NEAR-USD_211",
       "card": "RACE_NEAR_SHORT_1005"
+    },
+    {
+      "t": "2026-11-05T10:07:48-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "10:07 ET top-up: deployed leftover cash into NEAR short (keep ~$50 cushion)",
+      "reason": "race mode: free margin was ~$3.1k after BTC/ETH/SOL opens \u2014 deploy into liquid alt continuation short"
     }
   ],
   "scanner_feed": {
