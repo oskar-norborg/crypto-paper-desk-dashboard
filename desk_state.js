@@ -6,44 +6,16 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 57582.53,
-  "cash": 5258.93,
-  "realized_pnl": 23346.53,
-  "unrealized_pnl": -15764.0,
-  "day_pnl": 878.14,
-  "day_pnl_pct": 0.01549,
+  "equity": 57890.53,
+  "cash": 57890.53,
+  "realized_pnl": 7890.53,
+  "unrealized_pnl": 0.0,
+  "day_pnl": 1186.14,
+  "day_pnl_pct": 0.02092,
   "day_baseline_date": "2026-11-05",
   "day_baseline_equity": 56704.39,
-  "open_positions": [
-    {
-      "id": "2026-11-04_ETH-USD_194",
-      "symbol": "ETH-USD",
-      "side": "long",
-      "size": 1400.0,
-      "entry": 2431.7,
-      "notional": 3404380.0,
-      "stop": 2414.0,
-      "target": 2455.0,
-      "target2": 2485.0,
-      "invalidation": "5m close < 2418",
-      "risk_usd": 24780.0,
-      "risk_pct_equity": 0.32663,
-      "opened_at": "2026-11-04T21:06:49-05:00",
-      "card": null,
-      "reason": "FULL CHAOS race: armed ETH long fired on 20:50 5m close 2431.95 with BTC 80790 (>80650); 20:55/21:00 pullback held 2425+ above invalidation, live re-push to 2431 with BTC 80755 (>80750 alt trigger). Concentrated single-name swing.",
-      "price_source": "coinbase_exchange_public_ticker ask 2431.70 @ 2026-11-04T21:06:44-05:00 ET (exch 2026-11-05T02:06:41Z) api.exchange.coinbase.com",
-      "override": null,
-      "paper_only": true,
-      "leverage": 50.0,
-      "margin": 68087.6,
-      "mark": 2420.44,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-05T00:07:18-05:00",
-      "unrealized_pnl": -15764.0,
-      "exposure": 3388616.0
-    }
-  ],
-  "open_count": 1,
+  "open_positions": [],
+  "open_count": 0,
   "closed_positions": [
     {
       "type": "close",
@@ -1602,11 +1574,28 @@ window.__DESK_STATE__ = {
       "reason": "STOP HIT + invalidation: 23:00 ET 5m low 95.87 traded through stop 95.95 (also C=95.90 < 96.08 HL invalidation); BTC 23:00 5m close 80360.57 < 80440 BTC-linked invalidation. Between-cycle fill at stated stop. T1 97.80 never reached (high 97.04 @22:40).",
       "price_source": "coinbase_exchange_public stop-level paper fill (5m candle 2026-11-04T23:00-05:00 L=95.87 through stop 95.95; live ticker bid 95.74 @ 2026-11-05T00:08:00-05:00 ET exch 2026-11-05T05:07:57Z) api.exchange.coinbase.com unauthenticated",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-04_ETH-USD_194",
+      "symbol": "ETH-USD",
+      "side": "long",
+      "size": 1400.0,
+      "entry": 2431.7,
+      "exit": 2420.66,
+      "pnl": -15456.0,
+      "notional": 3404380.0,
+      "leverage": 50.0,
+      "margin": 68087.6,
+      "closed_at": "2026-11-05T00:08:05-05:00",
+      "reason": "INVALIDATION HIT: 5m closes <2418 \u2014 23:00 C=2417.72, 23:15 C=2416.56, 23:20 C=2417.27 (stop 2414 untouched, low since entry 2415.63). Thesis broken; rotate before stop kiss. Exit at live public bid. T1 2455 never reached (high 2434.50 @22:15).",
+      "price_source": "coinbase_exchange_public_ticker bid 2420.66 @ 2026-11-05T00:08:00-05:00 ET (exch 2026-11-05T05:07:57.030185356Z) api.exchange.coinbase.com unauthenticated",
+      "paper_only": true
     }
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 57582.53,
+  "max_risk_usd": 57890.53,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -567043.9,
   "paused": false,
@@ -1662,7 +1651,7 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-05T00:08:05-05:00",
-      "note": "last: closed SOL-USD"
+      "note": "last: closed ETH-USD"
     },
     "Logger": {
       "status": "ready",
@@ -3365,16 +3354,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-05T00:08:05-05:00",
       "equity": 57582.53,
       "kind": "close"
+    },
+    {
+      "t": "2026-11-05T00:08:05-05:00",
+      "equity": 57890.53,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-31T19:02:04-04:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "Exit check vs public 5m/15m candles (last 60m): no stop or target touched. LINK fading toward 4h low 11.718 but last 15m close 11.736 holds; UNI/XLM above 4h lows; SOL 60m high 96.07 < stop 96.91; BTC under 4h high 77623",
-      "reason": "hold all 5; theses intact"
-    },
     {
       "t": "2026-10-31T19:02:04-04:00",
       "agent": "Executor",
@@ -4836,6 +4823,14 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE SOL-USD @ 95.95 \u00b7 P&L $-2519.88",
       "reason": "STOP HIT + invalidation: 23:00 ET 5m low 95.87 traded through stop 95.95 (also C=95.90 < 96.08 HL invalidation); BTC 23:00 5m close 80360.57 < 80440 BTC-linked invalidation. Between-cycle fill at stated stop. T1 97.80 never reached (high 97.04 @22:40).",
       "fill_id": "2026-11-04_SOL-USD_195"
+    },
+    {
+      "t": "2026-11-05T00:08:05-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE ETH-USD @ 2420.66 \u00b7 P&L $-15456.00",
+      "reason": "INVALIDATION HIT: 5m closes <2418 \u2014 23:00 C=2417.72, 23:15 C=2416.56, 23:20 C=2417.27 (stop 2414 untouched, low since entry 2415.63). Thesis broken; rotate before stop kiss. Exit at live public bid. T1 2455 never reached (high 2434.50 @22:15).",
+      "fill_id": "2026-11-04_ETH-USD_194"
     }
   ],
   "scanner_feed": [
@@ -5527,10 +5522,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 68087.6,
-  "exposure": 3388616.0,
-  "buying_power": 0.0,
-  "effective_leverage": 58.85,
+  "margin_used": 0,
+  "exposure": 0.0,
+  "buying_power": 2894526.5,
+  "effective_leverage": 0.0,
   "operating_timezone": "America/New_York",
   "events": [
     {
