@@ -1818,7 +1818,7 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-05T10:07:21-05:00",
-      "note": "last: paper fill SOL-USD"
+      "note": "10:05 ET: closed BTC T2 + ETH T1 + SOL T2; opened BTC/ETH/SOL continuation shorts (structure not flipped)"
     },
     "Logger": {
       "status": "ready",
@@ -3636,13 +3636,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-01T10:05:38-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "10:05 ET race scan: 30/30 marks, 6 liquid PASS",
-      "reason": "BTC/ETH/SOL/XRP/NEAR/LINK >= $5M vol; UNI $4.1M soft-warn"
-    },
-    {
-      "t": "2026-11-01T10:05:38-05:00",
       "agent": "Risk",
       "kind": "check",
       "text": "Exit check vs public 5m candles since 09:00 ET: no stop/target touched. ETH lo 2262.06 > stop 2229.7, hi 2270.09 < tgt 2331.6; UNI lo 7.272 > stop 6.8508, hi 7.3941 < tgt 7.7071",
@@ -5115,6 +5108,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE redeploy after banking prior short targets: 15m LL/LH intact (not flipped long), 24h -4.77%. SOL continuation short under banked T2 93.20; soft-follow BTC/ETH dump. Notional $1,150,133 @ 50x (margin $23,003), risk $19,504 (15.3% eq, warn-only). T1 90.5, T2 88.8.",
       "fill_id": "2026-11-05_SOL-USD_210",
       "card": "RACE_SOL_SHORT_1005"
+    },
+    {
+      "t": "2026-11-05T10:07:21-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "10:05 ET: closed BTC T2 + ETH T1 + SOL T2; opened BTC/ETH/SOL continuation shorts (structure not flipped)",
+      "reason": "race mode: banked targets (fills at stated levels), redeployed free margin into liquid major continuation shorts; opens ok BTC=True ETH=True SOL=True; plateau not acceptable"
     }
   ],
   "scanner_feed": {
