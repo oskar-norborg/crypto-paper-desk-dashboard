@@ -1938,8 +1938,8 @@ window.__DESK_STATE__ = {
   "agents": {
     "Scanner": {
       "status": "idle",
-      "last_run": "2026-11-05T13:18:01-05:00",
-      "note": "CHAOS race cycle 1318 ET: check BTC+ETH shorts vs public 5m/15m; scan+deploy free margin into SOL if structure intact"
+      "last_run": "2026-11-05T14:07:55-05:00",
+      "note": "1407 ET: 30/30 marks, BTC/ETH/SOL shorts HOLD (scan scans/2026-11-05_1407_scan.md)"
     },
     "Rug Check": {
       "status": "idle",
@@ -3914,14 +3914,6 @@ window.__DESK_STATE__ = {
       "t": "2026-11-02T15:05:17-05:00",
       "agent": "Executor",
       "kind": "close",
-      "text": "PAPER CLOSE NEAR-USD @ 3.9097 \u00b7 P&L $+5104.50",
-      "reason": "target 1 touched: 5m low 3.8375 (14:35-14:45 ET) < T1 3.85; exit plan = exit at target; closed at current public ask because price bounced back above target before this cycle (V-bounce into 15:00 ET)",
-      "fill_id": "2026-11-02_NEAR-USD_170"
-    },
-    {
-      "t": "2026-11-02T15:05:17-05:00",
-      "agent": "Executor",
-      "kind": "close",
       "text": "PAPER CLOSE SOL-USD @ 91.79 \u00b7 P&L $+669.20",
       "reason": "target 1 touched: 5m low 90.70 (14:35-14:45 ET) < T1 91.00; exit plan = exit at target; closed at current public ask because price bounced back above target before this cycle",
       "fill_id": "2026-11-02_SOL-USD_171"
@@ -5395,6 +5387,13 @@ window.__DESK_STATE__ = {
       "kind": "batch",
       "text": "CHAOS: 1318 ET race cycle \u00b7 BTC/ETH hold \u00b7 SOL deploy \u00b7 eq $195,870 \u00b7 exposure $7,948,726 (40.58x)",
       "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
+    },
+    {
+      "t": "2026-11-05T14:07:55-05:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "1407 ET: 30/30 marks, BTC/ETH/SOL shorts HOLD (scan scans/2026-11-05_1407_scan.md)",
+      "reason": "no stop/target/invalidation hit on 5m/15m; cash $50 so no new opens"
     }
   ],
   "scanner_feed": {
@@ -5753,7 +5752,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-05T14:07:19-05:00",
+  "updated_at": "2026-11-05T14:07:55-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
