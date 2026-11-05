@@ -1957,8 +1957,8 @@
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-05T13:18:16-05:00",
-      "note": "logged 2026-11-05_SOL-USD_226"
+      "last_run": "2026-11-05T13:18:19-05:00",
+      "note": "CHAOS: 1318 ET race cycle \u00b7 BTC/ETH hold \u00b7 SOL deploy \u00b7 eq $195,870 \u00b7 exposure $7,948,726 (40.58x)"
     },
     "Equity": {
       "status": "ready",
@@ -3905,13 +3905,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-02T14:00:02-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "No new triggers; trailed BTC/NEAR/SOL stops",
-      "reason": "no stops/targets hit; scan scans/2026-11-02_1400_scan.md"
-    },
-    {
       "t": "2026-11-02T15:05:17-05:00",
       "agent": "Executor",
       "kind": "close",
@@ -5389,6 +5382,13 @@
       "kind": "plan",
       "text": "1318 ET: closed 0; BTC/ETH HOLD near T1; opened continuation shorts where free cash allowed",
       "reason": "race mode: no hard close trigger on BTC/ETH (T1 nearly but not hit); redeployed free margin into liquid major shorts; opens ok={'SOL': True}; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-05T13:18:19-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 1318 ET race cycle \u00b7 BTC/ETH hold \u00b7 SOL deploy \u00b7 eq $195,870 \u00b7 exposure $7,948,726 (40.58x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": {
@@ -5747,7 +5747,7 @@
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-05T13:18:18-05:00",
+  "updated_at": "2026-11-05T13:18:19-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
