@@ -5,44 +5,16 @@
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 159489.32,
-  "cash": 153047.32,
-  "realized_pnl": 108393.96,
-  "unrealized_pnl": 1095.36,
-  "day_pnl": 102784.93,
-  "day_pnl_pct": 1.81265,
+  "equity": 159747.05,
+  "cash": 159747.05,
+  "realized_pnl": 109747.05,
+  "unrealized_pnl": 0.0,
+  "day_pnl": 103042.66,
+  "day_pnl_pct": 1.81719,
   "day_baseline_date": "2026-11-05",
   "day_baseline_equity": 56704.39,
-  "open_positions": [
-    {
-      "id": "2026-11-05_XRP-USD_219",
-      "symbol": "XRP-USD",
-      "side": "short",
-      "size": 214776.25,
-      "entry": 1.2447,
-      "notional": 267332.0,
-      "stop": 1.2629,
-      "target": 1.2069,
-      "target2": 1.182,
-      "invalidation": "15m close > 1.2566 or stop 1.2629; also rotate if BTC 15m closes > 76100",
-      "risk_usd": 3908.93,
-      "risk_pct_equity": 0.01422,
-      "opened_at": "2026-11-05T11:06:25-05:00",
-      "card": "RACE_XRP_SHORT_1106",
-      "reason": "RACE redeploy after banking prior short targets: 15m still LL/bearish tilt (not flipped long), 24h -5.27%. XRP-USD leftover-margin deploy: 24h -5.31% among liquid alts; follow BTC dump. Notional $267,332 @ 50x (margin $5,347), risk $3,909 (1.4% eq, warn-only). T1 1.2069, T2 1.182.",
-      "price_source": "coinbase_exchange_public_ticker bid/ask/price 1.2447 @ 2026-11-05T11:06:25-05:00 ET (exch 2026-11-05T16:06:24.027159630Z) api.exchange.coinbase.com unauthenticated",
-      "override": null,
-      "paper_only": true,
-      "leverage": 50.0,
-      "margin": 5346.64,
-      "mark": 1.2396,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-05T12:01:19-05:00",
-      "unrealized_pnl": 1095.36,
-      "exposure": 266236.64
-    }
-  ],
-  "open_count": 1,
+  "open_positions": [],
+  "open_count": 0,
   "closed_positions": [
     {
       "type": "close",
@@ -1822,11 +1794,28 @@
       "reason": "INVALIDATION: BTC 15m close 76754 (11:15-11:30 ET) > 76100 rotate clause; stop 91.8 not hit (max 91.49); cover at ask, ~flat",
       "price_source": "coinbase_exchange_public_ticker ask 89.97 @ 2026-11-05T12:01:39-05:00 ET unauthenticated",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-05_XRP-USD_219",
+      "symbol": "XRP-USD",
+      "side": "short",
+      "size": 214776.25,
+      "entry": 1.2447,
+      "exit": 1.2384,
+      "pnl": 1353.09,
+      "notional": 267332.0,
+      "leverage": 50.0,
+      "margin": 5346.64,
+      "closed_at": "2026-11-05T12:01:39-05:00",
+      "reason": "INVALIDATION: BTC 15m close 76754 > 76100 rotate clause; stop 1.2629 not hit (max 1.2583); cover at ask",
+      "price_source": "coinbase_exchange_public_ticker ask 1.2384 @ 2026-11-05T12:01:39-05:00 ET unauthenticated",
+      "paper_only": true
     }
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 159489.32,
+  "max_risk_usd": 159747.05,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -567043.9,
   "paused": false,
@@ -1882,7 +1871,7 @@
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-05T12:01:39-05:00",
-      "note": "last: closed SOL-USD"
+      "note": "last: closed XRP-USD"
     },
     "Logger": {
       "status": "ready",
@@ -3785,16 +3774,14 @@
       "t": "2026-11-05T12:01:39-05:00",
       "equity": 159489.32,
       "kind": "close"
+    },
+    {
+      "t": "2026-11-05T12:01:39-05:00",
+      "equity": 159747.05,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-02T08:11:50-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "0 new (scans/2026-11-02_0810_scan.md)",
-      "reason": "all short triggers tested and held; no long triggers; flat"
-    },
     {
       "t": "2026-11-02T09:15:05-05:00",
       "agent": "Scanner",
@@ -5272,6 +5259,14 @@
       "text": "PAPER CLOSE SOL-USD @ 89.97 \u00b7 P&L $-267.00",
       "reason": "INVALIDATION: BTC 15m close 76754 (11:15-11:30 ET) > 76100 rotate clause; stop 91.8 not hit (max 91.49); cover at ask, ~flat",
       "fill_id": "2026-11-05_SOL-USD_218"
+    },
+    {
+      "t": "2026-11-05T12:01:39-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE XRP-USD @ 1.2384 \u00b7 P&L $+1353.09",
+      "reason": "INVALIDATION: BTC 15m close 76754 > 76100 rotate clause; stop 1.2629 not hit (max 1.2583); cover at ask",
+      "fill_id": "2026-11-05_XRP-USD_219"
     }
   ],
   "scanner_feed": {
@@ -5646,10 +5641,10 @@
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 5346.64,
-  "exposure": 266236.64,
-  "buying_power": 7708229.36,
-  "effective_leverage": 1.67,
+  "margin_used": 0,
+  "exposure": 0.0,
+  "buying_power": 7987352.5,
+  "effective_leverage": 0.0,
   "operating_timezone": "America/New_York",
   "events": [
     {
