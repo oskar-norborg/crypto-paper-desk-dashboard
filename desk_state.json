@@ -3284,13 +3284,6 @@
   "activity": [
     {
       "t": "2026-10-31T17:58:47-03:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: 17:58 SOL/SUI cut \u00b7 eq $49,611 \u00b7 exposure $579,402 (11.68x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
-    {
-      "t": "2026-10-31T17:58:47-03:00",
       "agent": "Executor",
       "kind": "plan",
       "text": "Flip SOL short with freed margin (~$257,154 notional @20x): most liquid alt broke its 4h low with BTC also at 4h low; keep ~$3k stop cushion",
@@ -4755,6 +4748,13 @@
       "kind": "scan",
       "text": "CHAOS race cycle 20:10 ET: 30/30 public marks; BTC 80,483, ETH 2,418.96, SOL 95.74; FLAT; NO FILL (armed triggers unfired, mid-range chop)",
       "reason": "scan scans/2026-11-04_2010_scan.md; public Coinbase ticker/stats/book/5m candles; race to $1M gap $924,134"
+    },
+    {
+      "t": "2026-11-04T20:10:23-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "Armed 19:55 ETH long/short and BTC long triggers: none fired on closed 5m bars; wick-only probes below ETH 2416 / BTC 80390 rejected on close",
+      "reason": "routine: take armed trigger on 5m close confirmation only; no invent fill on mid-range chop"
     }
   ],
   "scanner_feed": [
