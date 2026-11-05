@@ -1753,7 +1753,7 @@
     "Rug Check": {
       "status": "idle",
       "last_run": "2026-11-05T10:07:21-05:00",
-      "note": "BTC-USD PASS (chaos: non-blocking)"
+      "note": "ETH-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -3571,13 +3571,6 @@
   "activity": [
     {
       "t": "2026-11-01T09:01:11-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 09:00 ET: 30 public marks; Sunday range chop continues \u2014 BTC 77867 (+0.65%) inside 77222-78126, ETH 2264 (+0.7%), SOL 94.78 (-0.8%), UNI 7.323 (+4.8%, near 24h high 7.343)",
-      "reason": "scheduled race cycle; scan scans/2026-11-01_0900_scan.md"
-    },
-    {
-      "t": "2026-11-01T09:01:11-05:00",
       "agent": "Risk",
       "kind": "check",
       "text": "Exit check vs public 5m candles since 08:00 ET: no stop/target touched. ETH lo 2258.58 > stop 2229.7, hi 2265.68 < tgt 2331.6; UNI lo 7.2333 > stop 6.8508, hi 7.3101 < tgt 7.7071",
@@ -5046,6 +5039,13 @@
       "reason": "RACE redeploy after banking prior short targets: 15m LL/LH intact (not flipped long), 24h -3.32%. BTC continuation short under 78200 dump-open; stop above 09:55 high shelf. Notional $2,744,280 @ 50x (margin $54,886), risk $33,127 (25.3% eq, warn-only). T1 76800.0, T2 75500.0.",
       "fill_id": "2026-11-05_BTC-USD_208",
       "card": "RACE_BTC_SHORT_1005"
+    },
+    {
+      "t": "2026-11-05T10:07:21-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "ETH-USD PASS (chaos: non-blocking)",
+      "reason": "vol $311.6M, spread 0.0203%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
     }
   ],
   "scanner_feed": {
