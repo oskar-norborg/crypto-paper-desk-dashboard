@@ -1676,8 +1676,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-04T22:26:13-05:00",
-      "note": "logged 2026-11-04_SOL-USD_195"
+      "last_run": "2026-11-04T22:26:15-05:00",
+      "note": "CHAOS race 22:22 ET: ETH HOLD + SOL open \u00b7 eq $72,923.87 \u00b7 cash $401.67 \u00b7 exposure $3,770,294 (51.7x) \u00b7 gap-to-$1M $927,"
     },
     "Equity": {
       "status": "ready",
@@ -3364,21 +3364,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-10-31T18:16:46-04:00",
-      "agent": "Ops",
-      "kind": "timezone",
-      "text": "Operating timezone switched America/Sao_Paulo \u2192 America/New_York",
-      "reason": "Owner (via Chief of Staff) required ET as default; BRT was a leftover from box /etc/localtime set 2026-10-24 and mirrored into desk_lib + CRON_TZ, not an intentional desk choice",
-      "from_tz": "America/Sao_Paulo",
-      "to_tz": "America/New_York",
-      "box_localtime": "America/New_York",
-      "routines": [
-        "crypto-scanner-run",
-        "crypto-eod-paper-review"
-      ],
-      "restore_routine": "already America/New_York"
-    },
-    {
       "t": "2026-10-31T19:02:04-04:00",
       "agent": "Scanner",
       "kind": "scan",
@@ -4838,6 +4823,13 @@ window.__DESK_STATE__ = {
       "reason": "FULL CHAOS race: SOL 5m HH/HL thrust \u2014 21:30 low 95.90 \u2192 22:05 HL 96.08 \u2192 22:15 close 96.83 (H=96.87) on heavy volume; shallow pullback to ~96.61. Concentrated leftover-margin swing (ETH held). Notional $368,857 @ 50x paper (margin $7,377), stop 95.95 / T1 97.8 / T2 98.5, risk $2,520 (3.3% eq; warn-only)",
       "fill_id": "2026-11-04_SOL-USD_195",
       "card": "RACE_SOL"
+    },
+    {
+      "t": "2026-11-04T22:26:15-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS race 22:22 ET: ETH HOLD + SOL open \u00b7 eq $72,923.87 \u00b7 cash $401.67 \u00b7 exposure $3,770,294 (51.7x) \u00b7 gap-to-$1M $927,076.13",
+      "reason": "public marks refreshed; equity recomputed; dashboard sync via desk_lib.save"
     }
   ],
   "scanner_feed": [
