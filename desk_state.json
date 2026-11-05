@@ -1933,7 +1933,7 @@
     "Rug Check": {
       "status": "idle",
       "last_run": "2026-11-05T15:11:44-05:00",
-      "note": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)"
+      "note": "XRP-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -3920,14 +3920,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-02T20:07:54-05:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE BTC-USD @ 77100 \u00b7 P&L $+2726.04",
-      "reason": "stop hit: 19:35 ET 5m high 77,129.31 > stop 77,100 after evening bounce; T1 76,500 missed by $16.60 (19:05 low 76,516.60)",
-      "fill_id": "2026-11-02_BTC-USD_169"
-    },
-    {
       "t": "2026-11-02T22:03:40-05:00",
       "agent": "Scanner",
       "kind": "scan",
@@ -5403,6 +5395,13 @@
       "kind": "check",
       "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
       "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
+    },
+    {
+      "t": "2026-11-05T15:11:44-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "XRP-USD PASS (chaos: non-blocking)",
+      "reason": "vol $87.9M, spread 0.0081%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
     }
   ],
   "scanner_feed": {
