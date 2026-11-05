@@ -5,12 +5,12 @@
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 205237.3,
-  "cash": 99473.14,
+  "equity": 207975.43,
+  "cash": 29876.95,
   "realized_pnl": 139473.07,
-  "unrealized_pnl": 15764.23,
-  "day_pnl": 148532.91,
-  "day_pnl_pct": 2.61943,
+  "unrealized_pnl": 18502.36,
+  "day_pnl": 151271.04,
+  "day_pnl_pct": 2.66771,
   "day_baseline_date": "2026-11-05",
   "day_baseline_equity": 56704.39,
   "open_positions": [
@@ -40,9 +40,36 @@
       "mark_at": "2026-11-05T16:11:19-05:00",
       "unrealized_pnl": 15764.23,
       "exposure": 4484232.28
+    },
+    {
+      "id": "2026-11-05_ETH-USD_231",
+      "symbol": "ETH-USD",
+      "side": "short",
+      "size": 1555.7576,
+      "entry": 2236.73,
+      "notional": 3479809.7,
+      "stop": 2256.0,
+      "target": 2210.0,
+      "target2": 2185.0,
+      "invalidation": "15m close > 2248 (reclaim of 15:30-15:45 shelf) or stop 2256",
+      "risk_usd": 29979.45,
+      "risk_pct_equity": 0.14607,
+      "opened_at": "2026-11-05T16:11:29-05:00",
+      "card": "RACE_ETH_SHORT_1611",
+      "reason": "RACE rotate after ETH/XRP T1 bank: BTC short intact, continuation roll. 24h -7.42%. ETH continuation short after T1 bank: 16:05 ET 5m low 2226.61 punched through prior T1 2237; 15m closes rolling 2257.98\u21922247.29\u21922244.38\u21922246.51\u21922246.01\u21922232.5; BTC short intact under inv 76500; stop above failed 15:50 bounce high 2251.55. Notional $3,479,810 @ 50x (margin $69,596), risk $29,979 (14.6% eq, warn-only). T1 2210.0, T2 2185.0.",
+      "price_source": "coinbase_exchange_public_ticker bid/ask/price 2236.73 @ 2026-11-05T16:11:29-05:00 ET (exch 2026-11-05T21:11:27.885916947Z) api.exchange.coinbase.com unauthenticated",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 69596.19,
+      "mark": 2234.97,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-05T16:11:19-05:00",
+      "unrealized_pnl": 2738.13,
+      "exposure": 3477071.56
     }
   ],
-  "open_count": 1,
+  "open_count": 2,
   "closed_positions": [
     {
       "type": "close",
@@ -1894,7 +1921,7 @@
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 205237.3,
+  "max_risk_usd": 207975.43,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -567043.9,
   "paused": false,
@@ -1949,13 +1976,13 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-05T16:11:18-05:00",
-      "note": "last: closed XRP-USD"
+      "last_run": "2026-11-05T16:11:29-05:00",
+      "note": "last: paper fill ETH-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-05T15:11:47-05:00",
-      "note": "CHAOS: 1511 ET race cycle \u00b7 SOL inv rotate \u2192 XRP \u00b7 eq $193,798 \u00b7 exposure $7,897,874 (40.75x)"
+      "last_run": "2026-11-05T16:11:29-05:00",
+      "note": "logged 2026-11-05_ETH-USD_231"
     },
     "Equity": {
       "status": "ready",
@@ -3963,16 +3990,14 @@
       "t": "2026-11-05T16:11:21-05:00",
       "equity": 205237.3,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-05T16:11:29-05:00",
+      "equity": 207975.43,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-03T04:02:04-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "0 opens, 0 fills; armed triggers failed/untouched",
-      "reason": "BTC/NEAR breakdowns reclaimed; ETH/SOL in range; see scans/2026-11-03_0401_scan.md"
-    },
     {
       "t": "2026-11-03T08:09:10-05:00",
       "agent": "Scanner",
@@ -5447,6 +5472,15 @@
       "kind": "check",
       "text": "ETH-USD PASS (chaos: non-blocking)",
       "reason": "vol $470.8M, spread 0.0004%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
+    },
+    {
+      "t": "2026-11-05T16:11:29-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 1555.76 ETH-USD @ 2236.73 \u00b7 notional $3,479,810 (50x, margin $69,596) \u00b7 stop 2256 \u00b7 tgt 2210 \u00b7 risk $29,979.45",
+      "reason": "RACE rotate after ETH/XRP T1 bank: BTC short intact, continuation roll. 24h -7.42%. ETH continuation short after T1 bank: 16:05 ET 5m low 2226.61 punched through prior T1 2237; 15m closes rolling 2257.98\u21922247.29\u21922244.38\u21922246.51\u21922246.01\u21922232.5; BTC short intact under inv 76500; stop above failed 15:50 bounce high 2251.55. Notional $3,479,810 @ 50x (margin $69,596), risk $29,979 (14.6% eq, warn-only). T1 2210.0, T2 2185.0.",
+      "fill_id": "2026-11-05_ETH-USD_231",
+      "card": "RACE_ETH_SHORT_1611"
     }
   ],
   "scanner_feed": {
@@ -5821,10 +5855,10 @@
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 89999.93,
-  "exposure": 4484232.28,
-  "buying_power": 5777632.72,
-  "effective_leverage": 21.85,
+  "margin_used": 159596.12,
+  "exposure": 7961303.84,
+  "buying_power": 2437467.66,
+  "effective_leverage": 38.28,
   "operating_timezone": "America/New_York",
   "events": [
     {
