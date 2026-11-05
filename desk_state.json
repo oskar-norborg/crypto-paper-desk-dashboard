@@ -1643,8 +1643,8 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-04T21:07:07-05:00",
-      "note": "PAPER ETH-USD long 1400 @ 2431.70 (50x, margin $68.1k)"
+      "last_run": "2026-11-04T22:26:13-05:00",
+      "note": "HOLD ETH; OPEN SOL-USD long ~3818 with leftover margin (cushion ~$400)"
     },
     "Logger": {
       "status": "ready",
@@ -3326,13 +3326,6 @@
   ],
   "activity": [
     {
-      "t": "2026-10-31T19:01:04-03:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "No new opens: free cash \u2248 $3k is the stop-funding cushion only; book already ~17x of 20x cap",
-      "reason": "race mode \u2014 fully deployed; no idle margin to put to work"
-    },
-    {
       "t": "2026-10-31T19:01:07-03:00",
       "agent": "Logger",
       "kind": "batch",
@@ -4798,6 +4791,13 @@
       "kind": "check",
       "text": "SOL-USD PASS (chaos: non-blocking)",
       "reason": "vol $118.2M, spread 0.0103%; Coinbase-listed CEX major; prefer liquid majors for NEW opens"
+    },
+    {
+      "t": "2026-11-04T22:26:13-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "HOLD ETH; OPEN SOL-USD long ~3818 with leftover margin (cushion ~$400)",
+      "reason": "race: deploy free cash into one concentrated liquid major swing; ETH thesis intact so no rotate"
     }
   ],
   "scanner_feed": [
