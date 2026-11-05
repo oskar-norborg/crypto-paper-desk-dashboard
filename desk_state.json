@@ -5,44 +5,16 @@
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 44945.11,
-  "cash": 947.72,
-  "realized_pnl": -5054.89,
+  "equity": 65627.73,
+  "cash": 65627.73,
+  "realized_pnl": 15627.73,
   "unrealized_pnl": 0.0,
-  "day_pnl": -11759.28,
-  "day_pnl_pct": -0.20738,
+  "day_pnl": 8923.34,
+  "day_pnl_pct": 0.15737,
   "day_baseline_date": "2026-11-05",
   "day_baseline_equity": 56704.39,
-  "open_positions": [
-    {
-      "id": "2026-11-05_BTC-USD_200",
-      "symbol": "BTC-USD",
-      "side": "short",
-      "size": 27.4,
-      "entry": 80287.2,
-      "notional": 2199869.28,
-      "stop": 80580.0,
-      "target": 80000.0,
-      "target2": 79700.0,
-      "invalidation": "15m close > 80500 (reclaim of 03:15-03:30 shelf) or stop 80580",
-      "risk_usd": 8022.72,
-      "risk_pct_equity": 0.1785,
-      "opened_at": "2026-11-05T04:06:16-05:00",
-      "card": "chaos-0405-btc-short",
-      "reason": "FULL CHAOS race: armed trigger fired \u2014 BTC back below 80300 after lower high 80568 (03:30) vs 80700 (02:00); 04:00-04:05 5m pressing range low 80217-80300 with ETH also making lower highs. Concentrated single-name short ~50x paper; thin ~$900 cash cushion.",
-      "price_source": "coinbase_exchange_public_ticker bid 80287.2 @ exch 2026-11-05T09:06:15.383414177Z api.exchange.coinbase.com unauthenticated",
-      "override": null,
-      "paper_only": true,
-      "leverage": 50.0,
-      "margin": 43997.39,
-      "mark": 80287.2,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-05T04:06:17-05:00",
-      "unrealized_pnl": -0.0,
-      "exposure": 2199869.28
-    }
-  ],
-  "open_count": 1,
+  "open_positions": [],
+  "open_count": 0,
   "closed_positions": [
     {
       "type": "close",
@@ -1635,11 +1607,28 @@
       "reason": "STOP HIT between cycles: 02:05 ET 5m high 2432.52 >= stop 2432 (invalidation 5m close >2428.5 also hit 01:45 C=2429.90). Stop-level paper fill.",
       "price_source": "coinbase_exchange_public candles granularity=300, 02:05 ET bar H=2432.52 (api.exchange.coinbase.com unauthenticated); fill at stop level 2432",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-05_BTC-USD_200",
+      "symbol": "BTC-USD",
+      "side": "short",
+      "size": 27.4,
+      "entry": 80287.2,
+      "exit": 79532.36,
+      "pnl": 20682.62,
+      "notional": 2199869.28,
+      "leverage": 50.0,
+      "margin": 43997.39,
+      "closed_at": "2026-11-05T08:11:02-05:00",
+      "reason": "T1 80000 hit 07:25 ET (5m L=79977.81) and T2 79700 hit 07:35 ET (5m L=79639.28); mark now 79532.4 still below T2 with 15m closes 79610/79587/79478 and no stop/invalidation (5m hi since entry 80455.8 < stop 80580; no 15m close > 80500). Bank winner per armed T2 trigger; free margin for race redeploy.",
+      "price_source": "coinbase_exchange_public_ticker last/bid 79532.36 @ exch 2026-11-05T13:11:01.896330745Z (api.exchange.coinbase.com, unauthenticated); bank beyond T2",
+      "paper_only": true
     }
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 44945.11,
+  "max_risk_usd": 65627.73,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -567043.9,
   "paused": false,
@@ -1694,8 +1683,8 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-05T04:06:16-05:00",
-      "note": "last: paper fill BTC-USD"
+      "last_run": "2026-11-05T08:11:02-05:00",
+      "note": "last: closed BTC-USD"
     },
     "Logger": {
       "status": "ready",
@@ -3428,16 +3417,14 @@
       "t": "2026-11-05T04:06:19-05:00",
       "equity": 44945.11,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-05T08:11:02-05:00",
+      "equity": 65627.73,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-31T20:04:01-04:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "No new opens: no liquid (>=$5M vol) setup with momentum \u2014 BTC/ETH/XRP/NEAR/LTC all within \u00b10.3% over 1h and 4h; freed LINK margin held as cash until an edge clears",
-      "reason": "race mode says deploy into high-conviction edges only; none present, not forcing a fill on a dead tape"
-    },
     {
       "t": "2026-10-31T20:04:06-04:00",
       "agent": "Logger",
@@ -4904,6 +4891,14 @@
       "kind": "check",
       "text": "BTC-USD short 27.4 @ 80287.2: T1+T2 HIT; stop/invalidation CLEAR; mark 79532.4",
       "reason": "Coinbase public 5m/15m candles 04:06-08:10 ET; first T1 07:25, first T2 07:35; hi 80455.8"
+    },
+    {
+      "t": "2026-11-05T08:11:02-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE BTC-USD @ 79532.4 \u00b7 P&L $+20682.62",
+      "reason": "T1 80000 hit 07:25 ET (5m L=79977.81) and T2 79700 hit 07:35 ET (5m L=79639.28); mark now 79532.4 still below T2 with 15m closes 79610/79587/79478 and no stop/invalidation (5m hi since entry 80455.8 < stop 80580; no 15m close > 80500). Bank winner per armed T2 trigger; free margin for race redeploy.",
+      "fill_id": "2026-11-05_BTC-USD_200"
     }
   ],
   "scanner_feed": [
@@ -5595,10 +5590,10 @@
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 43997.39,
-  "exposure": 2199869.28,
-  "buying_power": 47386.22,
-  "effective_leverage": 48.95,
+  "margin_used": 0,
+  "exposure": 0.0,
+  "buying_power": 3281386.5,
+  "effective_leverage": 0.0,
   "operating_timezone": "America/New_York",
   "events": [
     {
