@@ -1822,8 +1822,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-05T10:07:21-05:00",
-      "note": "logged 2026-11-05_SOL-USD_210"
+      "last_run": "2026-11-05T10:07:24-05:00",
+      "note": "CHAOS: 1007 ET race cycle \u00b7 banked 3 targets, redeployed continuation shorts \u00b7 eq $128,155 \u00b7 exposure $6,380,178 (49.79x"
     },
     "Equity": {
       "status": "ready",
@@ -3641,13 +3641,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-01T10:05:38-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "Exit check vs public 5m candles since 09:00 ET: no stop/target touched. ETH lo 2262.06 > stop 2229.7, hi 2270.09 < tgt 2331.6; UNI lo 7.272 > stop 6.8508, hi 7.3941 < tgt 7.7071",
-      "reason": "Hold both: UNI still +4.2% 24h, holding near highs; ETH above entry 2263.65, pressing 24h high 2275 \u2014 thesis intact"
-    },
-    {
-      "t": "2026-11-01T10:05:38-05:00",
       "agent": "Sizer",
       "kind": "skip",
       "text": "No new open this cycle",
@@ -5120,6 +5113,13 @@ window.__DESK_STATE__ = {
       "kind": "plan",
       "text": "10:05 ET: closed BTC T2 + ETH T1 + SOL T2; opened BTC/ETH/SOL continuation shorts (structure not flipped)",
       "reason": "race mode: banked targets (fills at stated levels), redeployed free margin into liquid major continuation shorts; opens ok BTC=True ETH=True SOL=True; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-05T10:07:24-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 1007 ET race cycle \u00b7 banked 3 targets, redeployed continuation shorts \u00b7 eq $128,155 \u00b7 exposure $6,380,178 (49.79x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": {
