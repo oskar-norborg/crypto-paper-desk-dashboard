@@ -1940,8 +1940,8 @@ window.__DESK_STATE__ = {
     },
     "Rug Check": {
       "status": "idle",
-      "last_run": "2026-11-05T15:11:44-05:00",
-      "note": "XRP-USD PASS (chaos: non-blocking)"
+      "last_run": "2026-11-05T16:11:29-05:00",
+      "note": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)"
     },
     "Sizer": {
       "status": "ready",
@@ -3968,13 +3968,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-03T00:05:13-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "Day baseline 2026-11-03 set to $50,815.53",
-      "reason": "Both stops traded at 23:25 ET Nov 2 (booked at 00:04); losses belong to Nov 2, which closed at $50,815.53 (+$2,440.39 vs Nov 2 baseline $48,375.14)"
-    },
-    {
       "t": "2026-11-03T00:05:27-05:00",
       "agent": "Scanner",
       "kind": "scan",
@@ -5448,6 +5441,13 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE XRP-USD @ 1.228 \u00b7 P&L $+1159.21",
       "reason": "T1 1.228 hit: Coinbase public 5m 15:55 ET low 1.2277 (<= 1.228); T2 1.22 NOT hit; stop 1.252 never touched (maxH 1.242); inv 15m clear (maxC15 1.2406). Paper close at stated T1.",
       "fill_id": "2026-11-05_XRP-USD_228"
+    },
+    {
+      "t": "2026-11-05T16:11:29-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
+      "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
     }
   ],
   "scanner_feed": {
@@ -5806,7 +5806,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-05T16:11:21-05:00",
+  "updated_at": "2026-11-05T16:11:29-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
