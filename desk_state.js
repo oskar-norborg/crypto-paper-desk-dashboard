@@ -7,7 +7,7 @@ window.__DESK_STATE__ = {
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
   "equity": 65627.73,
-  "cash": 25684.64,
+  "cash": 1232.03,
   "realized_pnl": 15627.73,
   "unrealized_pnl": 0.0,
   "day_pnl": 8923.34,
@@ -40,9 +40,35 @@ window.__DESK_STATE__ = {
       "mark_source": "no public mark \u2014 carried at entry",
       "unrealized_pnl": 0.0,
       "exposure": 1997154.54
+    },
+    {
+      "id": "2026-11-05_ETH-USD_203",
+      "symbol": "ETH-USD",
+      "side": "short",
+      "size": 512.0,
+      "entry": 2387.95,
+      "notional": 1222630.4,
+      "stop": 2410.0,
+      "target": 2340.0,
+      "target2": 2310.0,
+      "invalidation": "15m close > 2400 (reclaim break level) or stop 2410",
+      "risk_usd": 11289.6,
+      "risk_pct_equity": 0.17202,
+      "opened_at": "2026-11-05T08:12:18-05:00",
+      "card": "RACE_ETH_SHORT_0810",
+      "reason": "RACE correlated continuation short: ETH broke 2400 with 15m cascade 2418\u21922385 alongside BTC dump; holding under 2395. Notional $1,222,630 @ 50x (margin $24,453), risk $11,290 (17.2% eq, warn-only). T1 2340, T2 2310 near 24h open ~2316.",
+      "price_source": "coinbase_exchange_public_ticker bid 2387.73 @ exch 2026-11-05T13:12:16.118514805Z api.exchange.coinbase.com unauthenticated",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 24452.61,
+      "mark": null,
+      "mark_source": "no public mark \u2014 carried at entry",
+      "unrealized_pnl": 0.0,
+      "exposure": 1222630.4
     }
   ],
-  "open_count": 1,
+  "open_count": 2,
   "closed_positions": [
     {
       "type": "close",
@@ -1712,12 +1738,12 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-05T08:12:18-05:00",
-      "note": "last: paper fill BTC-USD"
+      "note": "last: paper fill ETH-USD"
     },
     "Logger": {
       "status": "ready",
       "last_run": "2026-11-05T08:12:18-05:00",
-      "note": "logged 2026-11-05_BTC-USD_202"
+      "note": "logged 2026-11-05_ETH-USD_203"
     },
     "Equity": {
       "status": "ready",
@@ -3455,16 +3481,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-05T08:12:18-05:00",
       "equity": 65627.73,
       "kind": "fill"
+    },
+    {
+      "t": "2026-11-05T08:12:18-05:00",
+      "equity": 65627.73,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-31T22:08:47-04:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 22:08 ET: 30 public marks, 0 failed; ETH broke 24h high 2265 (new hi 2273, last 15m close 2268.42); NEAR +3.1% 24h; BTC/SOL flat",
-      "reason": "scheduled race cycle; scan scans/2026-10-31_2208_scan.md"
-    },
     {
       "t": "2026-10-31T22:08:47-04:00",
       "agent": "Risk",
@@ -4934,6 +4958,15 @@ window.__DESK_STATE__ = {
       "kind": "size",
       "text": "ETH-USD short 512.0 @ 2387.95 margin $24,453",
       "reason": "remaining free margin after BTC + $1200 cushion; stop 2410"
+    },
+    {
+      "t": "2026-11-05T08:12:18-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 512 ETH-USD @ 2387.95 \u00b7 notional $1,222,630 (50x, margin $24,453) \u00b7 stop 2410 \u00b7 tgt 2340 \u00b7 risk $11,289.60",
+      "reason": "RACE correlated continuation short: ETH broke 2400 with 15m cascade 2418\u21922385 alongside BTC dump; holding under 2395. Notional $1,222,630 @ 50x (margin $24,453), risk $11,290 (17.2% eq, warn-only). T1 2340, T2 2310 near 24h open ~2316.",
+      "fill_id": "2026-11-05_ETH-USD_203",
+      "card": "RACE_ETH_SHORT_0810"
     }
   ],
   "scanner_feed": {
@@ -5269,10 +5302,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 39943.09,
-  "exposure": 1997154.54,
-  "buying_power": 1284231.96,
-  "effective_leverage": 30.43,
+  "margin_used": 64395.7,
+  "exposure": 3219784.94,
+  "buying_power": 61601.56,
+  "effective_leverage": 49.06,
   "operating_timezone": "America/New_York",
   "events": [
     {
