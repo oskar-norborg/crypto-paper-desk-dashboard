@@ -1911,8 +1911,8 @@ window.__DESK_STATE__ = {
   "agents": {
     "Scanner": {
       "status": "idle",
-      "last_run": "2026-11-05T12:02:22-05:00",
-      "note": "12:01 cycle: 2 stops, 2 rotates, 2 re-shorts"
+      "last_run": "2026-11-05T13:18:01-05:00",
+      "note": "CHAOS race cycle 1318 ET: check BTC+ETH shorts vs public 5m/15m; scan+deploy free margin into SOL if structure intact"
     },
     "Rug Check": {
       "status": "idle",
@@ -3859,13 +3859,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-02T11:04:57-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "2 opened (BTC, NEAR shorts)",
-      "reason": "10:55 ET 5m closes broke BTC 77,450 and NEAR 4.025 triggers; scans/2026-11-02_1104_scan.md"
-    },
-    {
       "t": "2026-11-02T12:11:25-05:00",
       "agent": "Scanner",
       "kind": "scan",
@@ -5343,6 +5336,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "12:01 cycle: 2 stops, 2 rotates, 2 re-shorts",
       "reason": "BTC/ETH stopped on 11:15-11:20 bounce; SOL/XRP rotated on BTC 15m>76100; re-shorted BTC/ETH lower-high fade"
+    },
+    {
+      "t": "2026-11-05T13:18:01-05:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "CHAOS race cycle 1318 ET: check BTC+ETH shorts vs public 5m/15m; scan+deploy free margin into SOL if structure intact",
+      "reason": "scheduled race cycle; scan scans/2026-11-05_1318_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
     }
   ],
   "scanner_feed": {
@@ -5701,7 +5701,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-05T13:08:31-05:00",
+  "updated_at": "2026-11-05T13:18:01-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
