@@ -1702,7 +1702,7 @@ window.__DESK_STATE__ = {
     "Rug Check": {
       "status": "idle",
       "last_run": "2026-11-05T08:12:18-05:00",
-      "note": "BTC-USD PASS (chaos soft)"
+      "note": "ETH-USD PASS (chaos soft)"
     },
     "Sizer": {
       "status": "ready",
@@ -3459,13 +3459,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-10-31T21:03:07-04:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "No new opens: no liquid (>=$5M vol) setup with momentum on a dead weekend tape; ~$13.6k free cash held. Watch ETH > 2265 (24h high break) as next long trigger",
-      "reason": "race mode deploys into high-conviction edges only; not forcing a fill"
-    },
-    {
       "t": "2026-10-31T21:03:10-04:00",
       "agent": "Logger",
       "kind": "batch",
@@ -4934,6 +4927,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE continuation short after banking T2 winner: BTC failed reclaim of 80k, 15m cascade 80303\u219279478 with lower highs; still under post-T2 bounce. Notional $1,997,155 @ 50x (margin $39,943), risk $7,833 (11.9% eq, warn-only). T1 78500 toward 24h open ~78.3k, T2 78000.",
       "fill_id": "2026-11-05_BTC-USD_202",
       "card": "RACE_BTC_SHORT_0810"
+    },
+    {
+      "t": "2026-11-05T08:12:18-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "ETH-USD PASS (chaos soft)",
+      "reason": "vol ~$400M, spread ~0%; Coinbase CEX major"
     }
   ],
   "scanner_feed": {
