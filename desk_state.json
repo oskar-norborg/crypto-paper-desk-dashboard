@@ -5,16 +5,44 @@
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 159747.05,
-  "cash": 159747.05,
+  "equity": 159784.88,
+  "cash": 69747.12,
   "realized_pnl": 109747.05,
-  "unrealized_pnl": 0.0,
-  "day_pnl": 103042.66,
-  "day_pnl_pct": 1.81719,
+  "unrealized_pnl": 37.83,
+  "day_pnl": 103080.49,
+  "day_pnl_pct": 1.81786,
   "day_baseline_date": "2026-11-05",
   "day_baseline_equity": 56704.39,
-  "open_positions": [],
-  "open_count": 0,
+  "open_positions": [
+    {
+      "id": "2026-11-05_BTC-USD_224",
+      "symbol": "BTC-USD",
+      "side": "short",
+      "size": 59.1107,
+      "entry": 76128.29,
+      "notional": 4499996.51,
+      "stop": 76650.0,
+      "target": 75500.0,
+      "target2": 75000.0,
+      "invalidation": "15m close > 76500 (reclaim of 11:30-11:45 lower-high shelf) or stop 76650",
+      "risk_usd": 30838.64,
+      "risk_pct_equity": 0.19305,
+      "opened_at": "2026-11-05T12:02:02-05:00",
+      "card": "RACE_BTC_SHORT_1201",
+      "reason": "Re-short after stop-out: post-T2 bounce topped 76917 (11:20 ET) and is printing lower highs (76917>76886>76632>76610>76558>76496) with descending 15m closes 76754/76337/76270; 24h still red. Stop above 11:40-11:45 lower-high cluster. Notional ~$4,500,000 @50x, T1 75500.0, T2 75000.0.",
+      "price_source": "coinbase_exchange_public_ticker bid 76128.29 (last 76128.29) @ 2026-11-05T12:02:02-05:00 ET api.exchange.coinbase.com unauthenticated",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 89999.93,
+      "mark": 76127.65,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-05T12:01:17-05:00",
+      "unrealized_pnl": 37.83,
+      "exposure": 4499958.68
+    }
+  ],
+  "open_count": 1,
   "closed_positions": [
     {
       "type": "close",
@@ -1815,7 +1843,7 @@
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 159747.05,
+  "max_risk_usd": 159784.88,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -567043.9,
   "paused": false,
@@ -1870,13 +1898,13 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-05T12:01:39-05:00",
-      "note": "last: closed XRP-USD"
+      "last_run": "2026-11-05T12:02:02-05:00",
+      "note": "last: paper fill BTC-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-05T11:06:28-05:00",
-      "note": "CHAOS: 1106 ET race cycle \u00b7 banked targets, redeployed shorts \u00b7 eq $266,486 \u00b7 exposure $13,344,379 (50.08x)"
+      "last_run": "2026-11-05T12:02:02-05:00",
+      "note": "logged 2026-11-05_BTC-USD_224"
     },
     "Equity": {
       "status": "ready",
@@ -3779,16 +3807,14 @@
       "t": "2026-11-05T12:01:39-05:00",
       "equity": 159747.05,
       "kind": "close"
+    },
+    {
+      "t": "2026-11-05T12:02:02-05:00",
+      "equity": 159784.88,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-02T09:15:05-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "0 candidates",
-      "reason": "09:14 ET: post-8:30 spike faded, all majors inside range; no trigger cleared. Flat. scans/2026-11-02_0914_scan.md"
-    },
     {
       "t": "2026-11-02T11:04:39-05:00",
       "agent": "Executor",
@@ -5267,6 +5293,15 @@
       "text": "PAPER CLOSE XRP-USD @ 1.2384 \u00b7 P&L $+1353.09",
       "reason": "INVALIDATION: BTC 15m close 76754 > 76100 rotate clause; stop 1.2629 not hit (max 1.2583); cover at ask",
       "fill_id": "2026-11-05_XRP-USD_219"
+    },
+    {
+      "t": "2026-11-05T12:02:02-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 59.1107 BTC-USD @ 76128.3 \u00b7 notional $4,499,997 (50x, margin $90,000) \u00b7 stop 76650 \u00b7 tgt 75500 \u00b7 risk $30,838.64",
+      "reason": "Re-short after stop-out: post-T2 bounce topped 76917 (11:20 ET) and is printing lower highs (76917>76886>76632>76610>76558>76496) with descending 15m closes 76754/76337/76270; 24h still red. Stop above 11:40-11:45 lower-high cluster. Notional ~$4,500,000 @50x, T1 75500.0, T2 75000.0.",
+      "fill_id": "2026-11-05_BTC-USD_224",
+      "card": "RACE_BTC_SHORT_1201"
     }
   ],
   "scanner_feed": {
@@ -5625,7 +5660,7 @@
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-05T12:01:39-05:00",
+  "updated_at": "2026-11-05T12:02:02-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -5641,10 +5676,10 @@
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 0,
-  "exposure": 0.0,
-  "buying_power": 7987352.5,
-  "effective_leverage": 0.0,
+  "margin_used": 89999.93,
+  "exposure": 4499958.68,
+  "buying_power": 3489285.32,
+  "effective_leverage": 28.16,
   "operating_timezone": "America/New_York",
   "events": [
     {
