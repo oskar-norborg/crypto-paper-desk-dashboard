@@ -1601,8 +1601,8 @@ window.__DESK_STATE__ = {
   "agents": {
     "Scanner": {
       "status": "idle",
-      "last_run": "2026-11-04T19:06:22-05:00",
-      "note": "CHAOS race cycle 19:06 ET: 30 public marks; BTC 80,523, ETH 2,420.8, SOL 95.37"
+      "last_run": "2026-11-04T20:10:23-05:00",
+      "note": "CHAOS race cycle 20:10 ET: 30/30 public marks; BTC 80,483, ETH 2,418.96, SOL 95.74; FLAT; NO FILL (armed triggers unfire"
     },
     "Rug Check": {
       "status": "idle",
@@ -3284,14 +3284,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-10-31T17:58:45-03:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE SUI-USD @ 0.8967 \u00b7 P&L $-1520.66",
-      "reason": "Momentum reversed: 15m closes below prior 4h low and fresh lows, loser vs entry 0.9106 \u2014 rotate before stop",
-      "fill_id": "2026-10-30_SUI-USD_148"
-    },
-    {
       "t": "2026-10-31T17:58:47-03:00",
       "agent": "Logger",
       "kind": "batch",
@@ -4757,6 +4749,13 @@ window.__DESK_STATE__ = {
       "rules_version": "2.1-full-chaos",
       "paper_leverage_max": 50,
       "max_open": 200
+    },
+    {
+      "t": "2026-11-04T20:10:23-05:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "CHAOS race cycle 20:10 ET: 30/30 public marks; BTC 80,483, ETH 2,418.96, SOL 95.74; FLAT; NO FILL (armed triggers unfired, mid-range chop)",
+      "reason": "scan scans/2026-11-04_2010_scan.md; public Coinbase ticker/stats/book/5m candles; race to $1M gap $924,134"
     }
   ],
   "scanner_feed": [
@@ -5432,7 +5431,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-04T20:08:49-05:00",
+  "updated_at": "2026-11-04T20:10:23-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
