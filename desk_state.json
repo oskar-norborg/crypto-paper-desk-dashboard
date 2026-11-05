@@ -3920,13 +3920,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-02T15:05:34-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "15:04 scan: 2 T1 closes, BTC trail, no new triggers",
-      "reason": "NEAR/SOL T1 hit then bounced; scan scans/2026-11-02_1504_scan.md"
-    },
-    {
       "t": "2026-11-02T16:01:31-05:00",
       "agent": "Crypto Paper Terminal",
       "kind": "scan",
@@ -5402,6 +5395,13 @@
       "kind": "check",
       "text": "BTC-USD short 59.1107 @ 76128.29: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-05T12:02:02-05:00: maxH=76437.85 (stop 76650.0); minL=75553.65 (T1 75500.0/T2 75000.0); 15m max close=76306.99 (inv 76500.0). No close trigger."
+    },
+    {
+      "t": "2026-11-05T15:11:32-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD short 1461.9559 @ 2257.25: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-05T12:02:02-05:00: maxH=2265.96 (stop 2272.0); minL=2239.15 (T1 2237.0/T2 2220.0); 15m max close=2261.52 (inv 2268.0). No close trigger."
     }
   ],
   "scanner_feed": {
