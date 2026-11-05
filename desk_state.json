@@ -5,42 +5,15 @@
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 203925.77,
-  "cash": 73888.27,
-  "realized_pnl": 178683.26,
-  "unrealized_pnl": -24757.49,
-  "day_pnl": 147221.38,
-  "day_pnl_pct": 2.5963,
+  "equity": 157620.34,
+  "cash": 105276.22,
+  "realized_pnl": 108660.96,
+  "unrealized_pnl": -1040.62,
+  "day_pnl": 100915.95,
+  "day_pnl_pct": 1.77968,
   "day_baseline_date": "2026-11-05",
   "day_baseline_equity": 56704.39,
   "open_positions": [
-    {
-      "id": "2026-11-05_ETH-USD_217",
-      "symbol": "ETH-USD",
-      "side": "short",
-      "size": 2256.6,
-      "entry": 2246.97,
-      "notional": 5070512.5,
-      "stop": 2278.0,
-      "target": 2190.0,
-      "target2": 2120.0,
-      "invalidation": "15m close > 2265 (reclaim of 10:45 shelf) or stop 2278",
-      "risk_usd": 70022.3,
-      "risk_pct_equity": 0.25922,
-      "opened_at": "2026-11-05T11:06:25-05:00",
-      "card": "RACE_ETH_SHORT_1106",
-      "reason": "RACE redeploy after banking prior short targets: 15m still LL/bearish tilt (not flipped long), 24h -7.64%. ETH continuation short under banked T1 2280; correlating with BTC LL; T2 2220 not yet traded. Notional $5,070,513 @ 50x (margin $101,410), risk $70,022 (25.9% eq, warn-only). T1 2190.0, T2 2120.0.",
-      "price_source": "coinbase_exchange_public_ticker bid/ask/price 2246.97 @ 2026-11-05T11:06:24-05:00 ET (exch 2026-11-05T16:06:23.764022567Z) api.exchange.coinbase.com unauthenticated",
-      "override": null,
-      "paper_only": true,
-      "leverage": 50.0,
-      "margin": 101410.25,
-      "mark": 2257.48,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-05T12:01:17-05:00",
-      "unrealized_pnl": -23716.87,
-      "exposure": 5094229.37
-    },
     {
       "id": "2026-11-05_SOL-USD_218",
       "symbol": "SOL-USD",
@@ -96,7 +69,7 @@
       "exposure": 266236.64
     }
   ],
-  "open_count": 3,
+  "open_count": 2,
   "closed_positions": [
     {
       "type": "close",
@@ -1842,11 +1815,28 @@
       "reason": "STOP hit: 5m 11:15 ET high 76534.91 > stop 76280 (bounce reclaimed post-T2 high)",
       "price_source": "coinbase_exchange_public 5m candles (unauthenticated, api.exchange.coinbase.com) 11:15 ET bar H 76534.91",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-05_ETH-USD_217",
+      "symbol": "ETH-USD",
+      "side": "short",
+      "size": 2256.6,
+      "entry": 2246.97,
+      "exit": 2278.0,
+      "pnl": -70022.3,
+      "notional": 5070512.5,
+      "leverage": 50.0,
+      "margin": 101410.25,
+      "closed_at": "2026-11-05T12:01:34-05:00",
+      "reason": "STOP hit: 5m 11:20 ET high 2283.61 > stop 2278",
+      "price_source": "coinbase_exchange_public 5m candles (unauthenticated, api.exchange.coinbase.com) 11:20 ET bar H 2283.61",
+      "paper_only": true
     }
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 203925.77,
+  "max_risk_usd": 157620.34,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -567043.9,
   "paused": false,
@@ -1902,7 +1892,7 @@
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-05T12:01:34-05:00",
-      "note": "last: closed BTC-USD"
+      "note": "last: closed ETH-USD"
     },
     "Logger": {
       "status": "ready",
@@ -3795,17 +3785,14 @@
       "t": "2026-11-05T12:01:34-05:00",
       "equity": 203925.77,
       "kind": "close"
+    },
+    {
+      "t": "2026-11-05T12:01:34-05:00",
+      "equity": 157620.34,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-02T04:00:07-05:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE ETH-USD @ 2287 \u00b7 P&L $+2475.10",
-      "reason": "trailed stop 2287 hit: 00:10 ET 5m candle traded to 2285.06 (stop-level paper fill)",
-      "fill_id": "2026-10-31_ETH-USD_154"
-    },
     {
       "t": "2026-11-02T04:00:21-05:00",
       "agent": "Scanner",
@@ -5281,6 +5268,14 @@
       "text": "PAPER CLOSE BTC-USD @ 76280 \u00b7 P&L $-38245.45",
       "reason": "STOP hit: 5m 11:15 ET high 76534.91 > stop 76280 (bounce reclaimed post-T2 high)",
       "fill_id": "2026-11-05_BTC-USD_216"
+    },
+    {
+      "t": "2026-11-05T12:01:34-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE ETH-USD @ 2278 \u00b7 P&L $-70022.30",
+      "reason": "STOP hit: 5m 11:20 ET high 2283.61 > stop 2278",
+      "fill_id": "2026-11-05_ETH-USD_217"
     }
   ],
   "scanner_feed": {
@@ -5655,10 +5650,10 @@
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 154794.99,
-  "exposure": 7764507.0,
-  "buying_power": 2431781.5,
-  "effective_leverage": 38.08,
+  "margin_used": 53384.74,
+  "exposure": 2670277.63,
+  "buying_power": 5210739.37,
+  "effective_leverage": 16.94,
   "operating_timezone": "America/New_York",
   "events": [
     {
