@@ -1706,7 +1706,7 @@
     "Sizer": {
       "status": "ready",
       "last_run": "2026-11-05T08:12:18-05:00",
-      "note": "BTC-USD short 25.1 @ 79567.9 margin $39,943"
+      "note": "ETH-USD short 512.0 @ 2387.95 margin $24,453"
     },
     "Executor": {
       "status": "ready",
@@ -3458,13 +3458,6 @@
   ],
   "activity": [
     {
-      "t": "2026-10-31T21:03:10-04:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: 21:02 ET race hold \u00b7 eq $46,469 \u00b7 exposure $672,071 (14.46x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
-    {
       "t": "2026-10-31T22:08:47-04:00",
       "agent": "Scanner",
       "kind": "scan",
@@ -4933,6 +4926,13 @@
       "kind": "check",
       "text": "ETH-USD PASS (chaos soft)",
       "reason": "vol ~$400M, spread ~0%; Coinbase CEX major"
+    },
+    {
+      "t": "2026-11-05T08:12:18-05:00",
+      "agent": "Sizer",
+      "kind": "size",
+      "text": "ETH-USD short 512.0 @ 2387.95 margin $24,453",
+      "reason": "remaining free margin after BTC + $1200 cushion; stop 2410"
     }
   ],
   "scanner_feed": {
