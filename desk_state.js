@@ -1678,8 +1678,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-05T00:08:46-05:00",
-      "note": "last: paper fill ETH-USD"
+      "last_run": "2026-11-05T00:08:50-05:00",
+      "note": "FULL CHAOS 00:08 ET cycle: closed SOL stop-hit + ETH invalidation; flipped to concentrated ETH short 1179 @ 2421.02"
     },
     "Logger": {
       "status": "ready",
@@ -3396,13 +3396,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-10-31T19:02:06-04:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: 19:01 ET race hold \u00b7 eq $49,635 \u00b7 exposure $835,516 (16.83x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
-    {
       "t": "2026-10-31T20:03:45-04:00",
       "agent": "Executor",
       "kind": "close",
@@ -4866,6 +4859,13 @@ window.__DESK_STATE__ = {
       "reason": "FULL CHAOS race: thesis flip \u2014 ETH long invalidated (5m closes <2418 @23:00/23:15/23:20); bounce to 2429.88 @23:35 failed, lower-high vs 22:15 peak 2434.50, live back ~2421. Concentrated single-name short into overnight fade with BTC also sub-80440. Notional ~$2.85M @50x paper.",
       "fill_id": "2026-11-05_ETH-USD_198",
       "card": "chaos-0008-eth-short"
+    },
+    {
+      "t": "2026-11-05T00:08:50-05:00",
+      "agent": "Executor",
+      "kind": "decision",
+      "text": "FULL CHAOS 00:08 ET cycle: closed SOL stop-hit + ETH invalidation; flipped to concentrated ETH short 1179 @ 2421.02",
+      "reason": "Race rotate: both overnight longs broke thesis on public 5m; redeploy freed margin into ETH short on failed bounce"
     }
   ],
   "scanner_feed": [
@@ -5541,7 +5541,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-05T00:08:46-05:00",
+  "updated_at": "2026-11-05T00:08:50-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
