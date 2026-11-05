@@ -6,16 +6,44 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 130743.82,
-  "cash": 130743.82,
+  "equity": 129500.22,
+  "cash": 75858.22,
   "realized_pnl": 80743.82,
-  "unrealized_pnl": 0.0,
-  "day_pnl": 74039.43,
-  "day_pnl_pct": 1.30571,
+  "unrealized_pnl": -1243.6,
+  "day_pnl": 72795.83,
+  "day_pnl_pct": 1.28378,
   "day_baseline_date": "2026-11-05",
   "day_baseline_equity": 56704.39,
-  "open_positions": [],
-  "open_count": 0,
+  "open_positions": [
+    {
+      "id": "2026-11-05_BTC-USD_208",
+      "symbol": "BTC-USD",
+      "side": "short",
+      "size": 35.39,
+      "entry": 77543.94,
+      "notional": 2744280.04,
+      "stop": 78480.0,
+      "target": 76800.0,
+      "target2": 75500.0,
+      "invalidation": "15m close > 78250 (reclaim of 10:00 dump open) or stop 78480",
+      "risk_usd": 33127.16,
+      "risk_pct_equity": 0.25337,
+      "opened_at": "2026-11-05T10:07:21-05:00",
+      "card": "RACE_BTC_SHORT_1005",
+      "reason": "RACE redeploy after banking prior short targets: 15m LL/LH intact (not flipped long), 24h -3.32%. BTC continuation short under 78200 dump-open; stop above 09:55 high shelf. Notional $2,744,280 @ 50x (margin $54,886), risk $33,127 (25.3% eq, warn-only). T1 76800.0, T2 75500.0.",
+      "price_source": "coinbase_exchange_public_ticker bid/ask/price 77543.94 @ 2026-11-05T10:07:21-05:00 ET (exch 2026-11-05T15:07:20.435983784Z) api.exchange.coinbase.com unauthenticated",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 54885.6,
+      "mark": 77579.08,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-05T10:07:11-05:00",
+      "unrealized_pnl": -1243.6,
+      "exposure": 2745523.64
+    }
+  ],
+  "open_count": 1,
   "closed_positions": [
     {
       "type": "close",
@@ -1680,7 +1708,7 @@ window.__DESK_STATE__ = {
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 130743.82,
+  "max_risk_usd": 129500.22,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -567043.9,
   "paused": false,
@@ -1735,13 +1763,13 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-05T10:07:11-05:00",
-      "note": "last: closed SOL-USD"
+      "last_run": "2026-11-05T10:07:21-05:00",
+      "note": "last: paper fill BTC-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-05T09:13:13-05:00",
-      "note": "CHAOS: 09:09 ET race cycle \u00b7 BTC/ETH held, SOL short opened \u00b7 eq $69,794 \u00b7 exposure $3,274,716 (46.92x)"
+      "last_run": "2026-11-05T10:07:21-05:00",
+      "note": "logged 2026-11-05_BTC-USD_208"
     },
     "Equity": {
       "status": "ready",
@@ -3534,16 +3562,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-05T10:07:11-05:00",
       "equity": 130743.82,
       "kind": "close"
+    },
+    {
+      "t": "2026-11-05T10:07:21-05:00",
+      "equity": 129500.22,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-01T08:01:38-05:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: 08:00 ET race cycle \u00b7 closed BTC long (failed breakout) \u00b7 hold ETH + UNI longs \u00b7 no new opens \u00b7 eq $47,366 \u00b7 exposure $381,636 (8.06x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
     {
       "t": "2026-11-01T09:01:11-05:00",
       "agent": "Scanner",
@@ -5012,6 +5038,15 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "BTC-USD PASS (chaos: non-blocking)",
       "reason": "vol $622.4M, spread 0.0094%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
+    },
+    {
+      "t": "2026-11-05T10:07:21-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 35.39 BTC-USD @ 77543.9 \u00b7 notional $2,744,280 (50x, margin $54,886) \u00b7 stop 78480 \u00b7 tgt 76800 \u00b7 risk $33,127.16",
+      "reason": "RACE redeploy after banking prior short targets: 15m LL/LH intact (not flipped long), 24h -3.32%. BTC continuation short under 78200 dump-open; stop above 09:55 high shelf. Notional $2,744,280 @ 50x (margin $54,886), risk $33,127 (25.3% eq, warn-only). T1 76800.0, T2 75500.0.",
+      "fill_id": "2026-11-05_BTC-USD_208",
+      "card": "RACE_BTC_SHORT_1005"
     }
   ],
   "scanner_feed": {
@@ -5386,10 +5421,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 0,
-  "exposure": 0.0,
-  "buying_power": 6537191.0,
-  "effective_leverage": 0.0,
+  "margin_used": 54885.6,
+  "exposure": 2745523.64,
+  "buying_power": 3729487.36,
+  "effective_leverage": 21.2,
   "operating_timezone": "America/New_York",
   "events": [
     {
