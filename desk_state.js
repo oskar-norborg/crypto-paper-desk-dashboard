@@ -3973,15 +3973,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-02T22:03:41-05:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 39450 NEAR-USD @ 3.8021 \u00b7 notional $149,993 (20x, margin $7,500) \u00b7 stop 3.8572 \u00b7 tgt 3.7032 \u00b7 risk $2,173.70",
-      "reason": "RACE short: NEAR -11.5% day trend, lost 3.83 on 5m closes, 21:30 lower high 3.8524 rejected, new low 3.79; $34M vol (depth thin ~$0.7M \u00b11%, sized down). Invalidation: 5m close > 3.83 \u2014 short (24h -11.41% from public stats open), notional $149,993 @ 20x paper (margin $7,500), stop 1.5% / tgt 2.6%/4.5%, risk $2,174 (4.1% eq; chaos cap 100%)",
-      "fill_id": "2026-11-02_NEAR-USD_176",
-      "card": "CHAOS_NEAR"
-    },
-    {
       "t": "2026-11-02T22:03:44-05:00",
       "agent": "Logger",
       "kind": "batch",
@@ -5455,6 +5446,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "BTC-USD short 59.1107 @ 76128.29: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-05T12:02:02-05:00: maxH=76437.85 (stop 76650.0); minL=75553.65 (T1 75500.0/T2 75000.0); 15m max close=76306.99 (inv 76500.0). No close trigger."
+    },
+    {
+      "t": "2026-11-05T16:11:17-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD short 1461.9559 @ 2257.25: T1 2237.0 HIT \u2014 CLOSE at stated T1",
+      "reason": "Coinbase public candles since 2026-11-05T12:02:02-05:00: maxH=2265.96; minL=2226.61; 15m max close=2261.52. T1 2237.0 hit: Coinbase public 5m 16:05 ET low 2226.61 (<= 2237.0); T2 2220.0 NOT hit; stop 2272.0 never touched (maxH 2265.96); inv 15m clear (maxC15 2261.52). Paper close at stated T1."
     }
   ],
   "scanner_feed": {
