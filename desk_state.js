@@ -1616,8 +1616,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-04T19:53:40-05:00",
-      "note": "FULL CHAOS 2.1 live"
+      "last_run": "2026-11-04T20:10:23-05:00",
+      "note": "20:08 ET cycle: stay FLAT. Re-armed tighter triggers (ETH long >2430+BTC>80650 / ETH short <2415+BTC<80350 / BTC long >8"
     },
     "Logger": {
       "status": "ready",
@@ -3285,13 +3285,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-10-31T17:58:47-03:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "Flip SOL short with freed margin (~$257,154 notional @20x): most liquid alt broke its 4h low with BTC also at 4h low; keep ~$3k stop cushion",
-      "reason": "race mode: use longs AND shorts; deploy freed cash into a concentrated swing"
-    },
-    {
-      "t": "2026-10-31T17:58:47-03:00",
       "agent": "Rug Check",
       "kind": "check",
       "text": "SOL-USD PASS (chaos: non-blocking)",
@@ -4756,6 +4749,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "Armed 19:55 ETH long/short and BTC long triggers: none fired on closed 5m bars; wick-only probes below ETH 2416 / BTC 80390 rejected on close",
       "reason": "routine: take armed trigger on 5m close confirmation only; no invent fill on mid-range chop"
+    },
+    {
+      "t": "2026-11-04T20:10:23-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "20:08 ET cycle: stay FLAT. Re-armed tighter triggers (ETH long >2430+BTC>80650 / ETH short <2415+BTC<80350 / BTC long >80750). Next fill only on confirmed 5m close break.",
+      "reason": "FULL CHAOS v2.1 race \u2014 plateau not ok, but public-price discipline still hard; no edge without breakout/breakdown close"
     }
   ],
   "scanner_feed": [
