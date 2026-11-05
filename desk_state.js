@@ -2049,7 +2049,7 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-05T18:00:02-05:00",
-      "note": "last: paper fill BTC-USD"
+      "note": "1759 ET: closed 1; opened {'SOL-USD': True, 'BTC-USD': True}; held ['BTC-USD', 'ETH-USD', 'SOL-USD', 'XRP-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -4127,13 +4127,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-03T14:08:32-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "BTC long STOP HIT: trailed stop 77500 traded through on public 5m candle 13:55 ET (low 77462.67, high 77510.75); T1 77892 never reached (13:00-14:05 high 77805.27 @13:30)",
-      "reason": "close on paper at stop level 77500, a price inside the 13:55 ET candle range"
-    },
-    {
-      "t": "2026-11-03T14:08:32-05:00",
       "agent": "Executor",
       "kind": "close",
       "text": "PAPER CLOSE BTC-USD @ 77500 \u00b7 P&L $+2356.55",
@@ -5610,6 +5603,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE redeploy 1759 ET: BTC/ETH tilt short. 24h -6.24%. BTC-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 75988.22; session 5m low 75464.44; 15m detail [('16:00', 75902.41, 76027, 75740.58), ('16:15', 75857.3, 75931.66, 75602.3), ('16:30', 75789.09, 76014.47, 75769.55), ('16:45', 75709.41, 75880.19, 75616.57), ('17:00', 75960.85, 75980.46, 75616.27), ('17:15', 75866.4, 75988.22, 75774.9), ('17:30', 75716.64, 75891.04, 75650), ('17:45', 75587.96, 75716.86, 75464.44)]. Notional $1,906,760 @ 50x (margin $38,135), risk $11,076 (4.4% eq, warn-only). T1 74985.98, T2 74585.98.",
       "fill_id": "2026-11-05_BTC-USD_235",
       "card": "RACE_BTC_SHORT_1759"
+    },
+    {
+      "t": "2026-11-05T18:00:02-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "1759 ET: closed 1; opened {'SOL-USD': True, 'BTC-USD': True}; held ['BTC-USD', 'ETH-USD', 'SOL-USD', 'XRP-USD']",
+      "reason": "race mode: direction=short; closes=1; opens_ok={'SOL-USD': True, 'BTC-USD': True}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": {
