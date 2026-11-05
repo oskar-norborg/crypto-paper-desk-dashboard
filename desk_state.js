@@ -6,42 +6,15 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 246592.04,
-  "cash": 50.0,
-  "realized_pnl": 139473.07,
-  "unrealized_pnl": 57118.97,
-  "day_pnl": 189887.65,
-  "day_pnl_pct": 3.34873,
+  "equity": 251791.42,
+  "cash": 127188.59,
+  "realized_pnl": 176611.73,
+  "unrealized_pnl": 25179.69,
+  "day_pnl": 195087.03,
+  "day_pnl_pct": 3.44042,
   "day_baseline_date": "2026-11-05",
   "day_baseline_equity": 56704.39,
   "open_positions": [
-    {
-      "id": "2026-11-05_BTC-USD_224",
-      "symbol": "BTC-USD",
-      "side": "short",
-      "size": 59.1107,
-      "entry": 76128.29,
-      "notional": 4499996.51,
-      "stop": 76650.0,
-      "target": 75500.0,
-      "target2": 75000.0,
-      "invalidation": "15m close > 76500 (reclaim of 11:30-11:45 lower-high shelf) or stop 76650",
-      "risk_usd": 30838.64,
-      "risk_pct_equity": 0.19305,
-      "opened_at": "2026-11-05T12:02:02-05:00",
-      "card": "RACE_BTC_SHORT_1201",
-      "reason": "Re-short after stop-out: post-T2 bounce topped 76917 (11:20 ET) and is printing lower highs (76917>76886>76632>76610>76558>76496) with descending 15m closes 76754/76337/76270; 24h still red. Stop above 11:40-11:45 lower-high cluster. Notional ~$4,500,000 @50x, T1 75500.0, T2 75000.0.",
-      "price_source": "coinbase_exchange_public_ticker bid 76128.29 (last 76128.29) @ 2026-11-05T12:02:02-05:00 ET api.exchange.coinbase.com unauthenticated",
-      "override": null,
-      "paper_only": true,
-      "leverage": 50.0,
-      "margin": 89999.93,
-      "mark": 75587.96,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-05T17:59:47-05:00",
-      "unrealized_pnl": 31939.28,
-      "exposure": 4468057.23
-    },
     {
       "id": "2026-11-05_ETH-USD_231",
       "symbol": "ETH-USD",
@@ -97,7 +70,7 @@ window.__DESK_STATE__ = {
       "exposure": 1481958.73
     }
   ],
-  "open_count": 3,
+  "open_count": 2,
   "closed_positions": [
     {
       "type": "close",
@@ -1945,11 +1918,28 @@ window.__DESK_STATE__ = {
       "reason": "T1 1.228 hit: Coinbase public 5m 15:55 ET low 1.2277 (<= 1.228); T2 1.22 NOT hit; stop 1.252 never touched (maxH 1.242); inv 15m clear (maxC15 1.2406). Paper close at stated T1.",
       "price_source": "coinbase_exchange_public 5m candle 2026-11-05 15:55 ET low 1.2277 (api.exchange.coinbase.com/products/XRP-USD/candles, unauthenticated); fill at stated T1 1.228",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-05_BTC-USD_224",
+      "symbol": "BTC-USD",
+      "side": "short",
+      "size": 59.1107,
+      "entry": 76128.29,
+      "exit": 75500.0,
+      "pnl": 37138.66,
+      "notional": 4499996.51,
+      "leverage": 50.0,
+      "margin": 89999.93,
+      "closed_at": "2026-11-05T17:59:50-05:00",
+      "reason": "T1 75500.0 hit: Coinbase public 5m 17:45 ET low 75500 (<= 75500.0); T2 75000.0 NOT hit; stop 76650.0 never touched (maxH 76437.85); inv 15m clear (maxC15 76306.99). Paper close at stated T1.",
+      "price_source": "coinbase_exchange_public 5m candle 2026-11-05 17:45 ET low 75500 (api.exchange.coinbase.com/products/BTC-USD/candles, unauthenticated); fill at stated T1 75500.0",
+      "paper_only": true
     }
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 246592.04,
+  "max_risk_usd": 251791.42,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -567043.9,
   "paused": false,
@@ -2004,8 +1994,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-05T17:09:42-05:00",
-      "note": "1709 ET: closed 0; opened {}; held ['BTC-USD', 'ETH-USD', 'XRP-USD']"
+      "last_run": "2026-11-05T17:59:50-05:00",
+      "note": "last: closed BTC-USD"
     },
     "Logger": {
       "status": "ready",
@@ -4058,16 +4048,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-05T17:59:49-05:00",
       "equity": 246592.04,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-05T17:59:50-05:00",
+      "equity": 251791.42,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-03T11:03:32-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "Armed triggers: ETH >2305 (max close 2296.22) not fired; SOL >93.60 (max close 93.60, not above) not fired; XRP >1.2900 (max close 1.2789) not fired; shorts not fired",
-      "reason": "no new open: no trigger fired, avoid stacking correlated 20x long below trigger"
-    },
     {
       "t": "2026-11-03T11:03:36-05:00",
       "agent": "Logger",
@@ -5541,6 +5529,14 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "BTC-USD short 59.1107 @ 76128.29: T1 75500.0 HIT \u2014 CLOSE at stated T1",
       "reason": "Coinbase public candles since 2026-11-05T12:02:02-05:00: maxH=76437.85; minL=75464.44; 15m max close=76306.99. T1 75500.0 hit: Coinbase public 5m 17:45 ET low 75500 (<= 75500.0); T2 75000.0 NOT hit; stop 76650.0 never touched (maxH 76437.85); inv 15m clear (maxC15 76306.99). Paper close at stated T1."
+    },
+    {
+      "t": "2026-11-05T17:59:50-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE BTC-USD @ 75500 \u00b7 P&L $+37138.66",
+      "reason": "T1 75500.0 hit: Coinbase public 5m 17:45 ET low 75500 (<= 75500.0); T2 75000.0 NOT hit; stop 76650.0 never touched (maxH 76437.85); inv 15m clear (maxC15 76306.99). Paper close at stated T1.",
+      "fill_id": "2026-11-05_BTC-USD_224"
     }
   ],
   "scanner_feed": {
@@ -5915,10 +5911,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 189423.07,
-  "exposure": 9414034.72,
-  "buying_power": 2915567.28,
-  "effective_leverage": 38.18,
+  "margin_used": 99423.14,
+  "exposure": 4945977.49,
+  "buying_power": 7643593.51,
+  "effective_leverage": 19.64,
   "operating_timezone": "America/New_York",
   "events": [
     {
