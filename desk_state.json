@@ -3327,13 +3327,6 @@
   "activity": [
     {
       "t": "2026-10-31T19:01:04-03:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 19:00 BRT: 30 public marks, 0 failed; quiet weekend tape (BTC +0.96%, ETH +0.96%, SOL +0.05%, LINK +5.6%); no fresh breakout/breakdown clearing $5M vol",
-      "reason": "scheduled race cycle; scan scans/2026-10-31_1900_scan.md"
-    },
-    {
-      "t": "2026-10-31T19:01:04-03:00",
       "agent": "Risk",
       "kind": "check",
       "text": "Exit check vs public 5m/15m candles (last 60m): no stop or target touched on BTC/LINK/UNI/XLM/SOL. No invalidation: LINK/UNI/XLM above prior 4h lows, SOL short below stop 96.91 with 15m closing back at entry, BTC short under 4h high",
@@ -4798,6 +4791,13 @@
       "kind": "fill",
       "text": "PAPER ETH-USD long 1400 @ 2431.70 (50x, margin $68.1k)",
       "reason": "armed ETH long fired 20:50 5m close 2431.95 + BTC 80790; pullback held above inv 2418; stop 2414 T1 2455 T2 2485"
+    },
+    {
+      "t": "2026-11-04T22:26:13-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD long 1400 @ 2431.70 HOLD: stop 2414 untouched (low since entry 2421.75 @21:30 ET), no completed 5m close < 2418 (lowest close 2423.79 @21:30), T1 2455 not reached (high 2434.50 @22:15); live mark 2429.6",
+      "reason": "Coinbase public 5m candles 21:05\u201322:20 ET; invalidation intact; thesis (bounce hold above 2418 base) intact"
     }
   ],
   "scanner_feed": [
@@ -5473,7 +5473,7 @@
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-04T22:22:10-05:00",
+  "updated_at": "2026-11-04T22:26:13-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
