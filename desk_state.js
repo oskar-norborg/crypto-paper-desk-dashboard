@@ -4057,13 +4057,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-03T11:03:36-05:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: 11:02 ET race cycle \u00b7 BTC held, stop trailed to ~breakeven \u00b7 eq $53,366 \u00b7 exposure $602,620 (11.29x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
-    {
       "t": "2026-11-03T12:03:50-05:00",
       "agent": "Scanner",
       "kind": "scan",
@@ -5537,6 +5530,13 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE BTC-USD @ 75500 \u00b7 P&L $+37138.66",
       "reason": "T1 75500.0 hit: Coinbase public 5m 17:45 ET low 75500 (<= 75500.0); T2 75000.0 NOT hit; stop 76650.0 never touched (maxH 76437.85); inv 15m clear (maxC15 76306.99). Paper close at stated T1.",
       "fill_id": "2026-11-05_BTC-USD_224"
+    },
+    {
+      "t": "2026-11-05T17:59:50-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD short 1555.7576 @ 2236.73: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-05T16:11:29-05:00: maxH=2239.53 (stop 2256.0); minL=2213.44 (T1 2210.0/T2 2185.0); 15m max close=2237.8 (inv 2248.0). No close trigger."
     }
   ],
   "scanner_feed": {
