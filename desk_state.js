@@ -1917,7 +1917,7 @@ window.__DESK_STATE__ = {
     "Rug Check": {
       "status": "idle",
       "last_run": "2026-11-05T13:18:15-05:00",
-      "note": "BTC/ETH/SOL PASS liquid CEX majors (chaos: non-blocking)"
+      "note": "SOL-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -3869,15 +3869,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-02T13:02:37-05:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 2390 SOL-USD @ 92.07 \u00b7 notional $220,047 (20x, margin $11,002) \u00b7 stop 93.4 \u00b7 tgt 91 \u00b7 risk $3,178.70",
-      "reason": "12:45 ET 5m close 91.72 broke 92.90 trigger (low 91.42); lower highs since 12:05; selling joined by BTC/ETH/NEAR; entering on 12:55 retest bounce",
-      "fill_id": "2026-11-02_SOL-USD_171",
-      "card": null
-    },
-    {
       "t": "2026-11-02T13:02:56-05:00",
       "agent": "Scanner",
       "kind": "scan",
@@ -5353,6 +5344,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "BTC/ETH/SOL PASS liquid CEX majors (chaos: non-blocking)",
       "reason": "all three >>$5M 24h vol, tight spreads; FULL CHAOS rug checks soft; prefer liquid majors for new opens"
+    },
+    {
+      "t": "2026-11-05T13:18:15-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "SOL-USD PASS (chaos: non-blocking)",
+      "reason": "vol $100.4M, spread 0.0225%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
     }
   ],
   "scanner_feed": {
