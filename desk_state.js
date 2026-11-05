@@ -1722,8 +1722,8 @@ window.__DESK_STATE__ = {
   "agents": {
     "Scanner": {
       "status": "idle",
-      "last_run": "2026-11-05T04:06:43-05:00",
-      "note": "04:06 ET cycle: ETH short stopped 2432, BTC short opened"
+      "last_run": "2026-11-05T08:12:43-05:00",
+      "note": "CHAOS race 08:11 ET: banked BTC short +$20,682; redeployed BTC+ETH shorts; eq $65,628; gap $934,372"
     },
     "Rug Check": {
       "status": "idle",
@@ -3491,13 +3491,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-10-31T22:08:47-04:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "Exit check vs public 5m/15m candles: no stop/target touched. BTC 65m hi 77687 << stop 80250; SOL 65m hi 95.80 < stop 96.912; UNI 15m close 7.1054 > 4h low 7.038; XLM 15m candle closed 0.168829 below prior 4h low 0.169064 (new low 0.168361) -> invalidation hit",
-      "reason": "XLM bounce thesis broken; hold BTC, SOL, UNI"
-    },
-    {
-      "t": "2026-10-31T22:08:47-04:00",
       "agent": "Executor",
       "kind": "close",
       "text": "PAPER CLOSE XLM-USD @ 0.168828 \u00b7 P&L $-1623.05",
@@ -4967,6 +4960,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE correlated continuation short: ETH broke 2400 with 15m cascade 2418\u21922385 alongside BTC dump; holding under 2395. Notional $1,222,630 @ 50x (margin $24,453), risk $11,290 (17.2% eq, warn-only). T1 2340, T2 2310 near 24h open ~2316.",
       "fill_id": "2026-11-05_ETH-USD_203",
       "card": "RACE_ETH_SHORT_0810"
+    },
+    {
+      "t": "2026-11-05T08:12:43-05:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "CHAOS race 08:11 ET: banked BTC short +$20,682; redeployed BTC+ETH shorts; eq $65,628; gap $934,372",
+      "reason": "scheduled race cycle; scan scans/2026-11-05_0811_scan.md"
     }
   ],
   "scanner_feed": {
@@ -5286,7 +5286,7 @@ window.__DESK_STATE__ = {
       "fetched_at": "2026-11-05T08:11:34-05:00"
     }
   },
-  "updated_at": "2026-11-05T08:12:18-05:00",
+  "updated_at": "2026-11-05T08:12:43-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
