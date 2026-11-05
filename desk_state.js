@@ -6,12 +6,12 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 129500.22,
-  "cash": 75858.22,
+  "equity": 127614.42,
+  "cash": 26194.69,
   "realized_pnl": 80743.82,
-  "unrealized_pnl": -1243.6,
-  "day_pnl": 72795.83,
-  "day_pnl_pct": 1.28378,
+  "unrealized_pnl": -3129.4,
+  "day_pnl": 70910.03,
+  "day_pnl_pct": 1.25052,
   "day_baseline_date": "2026-11-05",
   "day_baseline_equity": 56704.39,
   "open_positions": [
@@ -41,9 +41,36 @@ window.__DESK_STATE__ = {
       "mark_at": "2026-11-05T10:07:11-05:00",
       "unrealized_pnl": -1243.6,
       "exposure": 2745523.64
+    },
+    {
+      "id": "2026-11-05_ETH-USD_209",
+      "symbol": "ETH-USD",
+      "side": "short",
+      "size": 1071.48,
+      "entry": 2317.52,
+      "notional": 2483176.33,
+      "stop": 2358.0,
+      "target": 2280.0,
+      "target2": 2220.0,
+      "invalidation": "15m close > 2345 (reclaim of T1 bank zone) or stop 2358",
+      "risk_usd": 43373.51,
+      "risk_pct_equity": 0.33493,
+      "opened_at": "2026-11-05T10:07:21-05:00",
+      "card": "RACE_ETH_SHORT_1005",
+      "reason": "RACE redeploy after banking prior short targets: 15m LL/LH intact (not flipped long), 24h -4.39%. ETH continuation short under 2340 banked T1; correlating with BTC LL cascade. Notional $2,483,176 @ 50x (margin $49,664), risk $43,374 (33.5% eq, warn-only). T1 2280.0, T2 2220.0.",
+      "price_source": "coinbase_exchange_public_ticker bid/ask/price 2317.52 @ 2026-11-05T10:07:21-05:00 ET (exch 2026-11-05T15:07:20.329161198Z) api.exchange.coinbase.com unauthenticated",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 49663.53,
+      "mark": 2319.28,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-05T10:07:12-05:00",
+      "unrealized_pnl": -1885.8,
+      "exposure": 2485062.13
     }
   ],
-  "open_count": 1,
+  "open_count": 2,
   "closed_positions": [
     {
       "type": "close",
@@ -1708,7 +1735,7 @@ window.__DESK_STATE__ = {
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 129500.22,
+  "max_risk_usd": 127614.42,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -567043.9,
   "paused": false,
@@ -1764,12 +1791,12 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-05T10:07:21-05:00",
-      "note": "last: paper fill BTC-USD"
+      "note": "last: paper fill ETH-USD"
     },
     "Logger": {
       "status": "ready",
       "last_run": "2026-11-05T10:07:21-05:00",
-      "note": "logged 2026-11-05_BTC-USD_208"
+      "note": "logged 2026-11-05_ETH-USD_209"
     },
     "Equity": {
       "status": "ready",
@@ -3567,16 +3594,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-05T10:07:21-05:00",
       "equity": 129500.22,
       "kind": "fill"
+    },
+    {
+      "t": "2026-11-05T10:07:21-05:00",
+      "equity": 127614.42,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-01T09:01:11-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "Exit check vs public 5m candles since 08:00 ET: no stop/target touched. ETH lo 2258.58 > stop 2229.7, hi 2265.68 < tgt 2331.6; UNI lo 7.2333 > stop 6.8508, hi 7.3101 < tgt 7.7071",
-      "reason": "Hold both: UNI winner with higher 15m closes, still strongest liquid RS; ETH 15m closes rising off 2257, above entry 2263.65 \u2014 thesis intact"
-    },
     {
       "t": "2026-11-01T09:01:11-05:00",
       "agent": "Sizer",
@@ -5047,6 +5072,15 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "ETH-USD PASS (chaos: non-blocking)",
       "reason": "vol $311.6M, spread 0.0203%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
+    },
+    {
+      "t": "2026-11-05T10:07:21-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 1071.48 ETH-USD @ 2317.52 \u00b7 notional $2,483,176 (50x, margin $49,664) \u00b7 stop 2358 \u00b7 tgt 2280 \u00b7 risk $43,373.51",
+      "reason": "RACE redeploy after banking prior short targets: 15m LL/LH intact (not flipped long), 24h -4.39%. ETH continuation short under 2340 banked T1; correlating with BTC LL cascade. Notional $2,483,176 @ 50x (margin $49,664), risk $43,374 (33.5% eq, warn-only). T1 2280.0, T2 2220.0.",
+      "fill_id": "2026-11-05_ETH-USD_209",
+      "card": "RACE_ETH_SHORT_1005"
     }
   ],
   "scanner_feed": {
@@ -5421,10 +5455,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 54885.6,
-  "exposure": 2745523.64,
-  "buying_power": 3729487.36,
-  "effective_leverage": 21.2,
+  "margin_used": 104549.13,
+  "exposure": 5230585.77,
+  "buying_power": 1150135.23,
+  "effective_leverage": 40.99,
   "operating_timezone": "America/New_York",
   "events": [
     {
