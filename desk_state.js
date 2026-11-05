@@ -6,12 +6,12 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 128154.51,
-  "cash": 3192.04,
+  "equity": 128175.06,
+  "cash": 50.0,
   "realized_pnl": 80743.82,
-  "unrealized_pnl": -2589.31,
-  "day_pnl": 71450.12,
-  "day_pnl_pct": 1.26005,
+  "unrealized_pnl": -2568.76,
+  "day_pnl": 71470.67,
+  "day_pnl_pct": 1.26041,
   "day_baseline_date": "2026-11-05",
   "day_baseline_equity": 56704.39,
   "open_positions": [
@@ -95,9 +95,36 @@ window.__DESK_STATE__ = {
       "mark_at": "2026-11-05T10:07:24-05:00",
       "unrealized_pnl": -875.2,
       "exposure": 1151007.77
+    },
+    {
+      "id": "2026-11-05_NEAR-USD_211",
+      "symbol": "NEAR-USD",
+      "side": "short",
+      "size": 41103.58,
+      "entry": 3.8221,
+      "notional": 157101.99,
+      "stop": 3.95,
+      "target": 3.7,
+      "target2": 3.55,
+      "invalidation": "15m close > 3.90 (reclaim of 09:30 breakdown) or stop 3.95; also rotate if BTC 15m closes > 78250",
+      "risk_usd": 5257.15,
+      "risk_pct_equity": 0.04102,
+      "opened_at": "2026-11-05T10:07:48-05:00",
+      "card": "RACE_NEAR_SHORT_1005",
+      "reason": "RACE leftover-margin deploy: BTC/ETH/SOL continuation shorts just opened; NEAR 24h -7.67% leading dump among liquid alts, 15m LL intact. Notional $157,102 @ 50x (margin $3,142), risk $5,257 (4.1% eq, warn-only). T1 3.7, T2 3.55. Keep ~$50 cash cushion.",
+      "price_source": "coinbase_exchange_public_ticker bid/ask/price 3.8221 @ 2026-11-05T10:07:48-05:00 ET (exch 2026-11-05T15:07:46.362776391Z) api.exchange.coinbase.com unauthenticated",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 3142.04,
+      "mark": 3.8216,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-05T10:07:23-05:00",
+      "unrealized_pnl": 20.55,
+      "exposure": 157081.44
     }
   ],
-  "open_count": 3,
+  "open_count": 4,
   "closed_positions": [
     {
       "type": "close",
@@ -1762,7 +1789,7 @@ window.__DESK_STATE__ = {
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 128154.51,
+  "max_risk_usd": 128175.06,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -567043.9,
   "paused": false,
@@ -1817,13 +1844,13 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-05T10:07:21-05:00",
-      "note": "10:05 ET: closed BTC T2 + ETH T1 + SOL T2; opened BTC/ETH/SOL continuation shorts (structure not flipped)"
+      "last_run": "2026-11-05T10:07:48-05:00",
+      "note": "last: paper fill NEAR-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-05T10:07:24-05:00",
-      "note": "CHAOS: 1007 ET race cycle \u00b7 banked 3 targets, redeployed continuation shorts \u00b7 eq $128,155 \u00b7 exposure $6,380,178 (49.79x"
+      "last_run": "2026-11-05T10:07:48-05:00",
+      "note": "logged 2026-11-05_NEAR-USD_211"
     },
     "Equity": {
       "status": "ready",
@@ -3636,18 +3663,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-05T10:07:24-05:00",
       "equity": 128154.51,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-05T10:07:48-05:00",
+      "equity": 128175.06,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-01T11:01:19-05:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 41000 NEAR-USD @ 4.3292 \u00b7 notional $177,497 (20x, margin $8,875) \u00b7 stop 4.39 \u00b7 tgt 4.2 \u00b7 risk $2,492.80",
-      "reason": "RACE NEAR short: -4.2% 24h, weakest liquid name ($14.7M vol), 15m close 4.3251 broke prior 4h low 4.3266 after 8 straight lower 15m closes; new 24h low 4.3175. Short @ bid, 20x paper, stop above 15m lower-high structure 4.38, risk ~$2.5k (~5% eq)",
-      "fill_id": "2026-11-01_NEAR-USD_159",
-      "card": "CHAOS_NEAR"
-    },
     {
       "t": "2026-11-01T11:01:30-05:00",
       "agent": "Scanner",
@@ -5120,6 +5143,15 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "SOFT-WARN over-exposure: new gross $6,537,280 > equity\u00d750 $6,407,726 (chaos: non-blocking)",
       "reason": "FULL CHAOS soft warn only; margin fits cash; race deploy remaining free margin"
+    },
+    {
+      "t": "2026-11-05T10:07:48-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 41103.6 NEAR-USD @ 3.8221 \u00b7 notional $157,102 (50x, margin $3,142) \u00b7 stop 3.95 \u00b7 tgt 3.7 \u00b7 risk $5,257.15",
+      "reason": "RACE leftover-margin deploy: BTC/ETH/SOL continuation shorts just opened; NEAR 24h -7.67% leading dump among liquid alts, 15m LL intact. Notional $157,102 @ 50x (margin $3,142), risk $5,257 (4.1% eq, warn-only). T1 3.7, T2 3.55. Keep ~$50 cash cushion.",
+      "fill_id": "2026-11-05_NEAR-USD_211",
+      "card": "RACE_NEAR_SHORT_1005"
     }
   ],
   "scanner_feed": {
@@ -5494,10 +5526,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 127551.78,
-  "exposure": 6380178.24,
-  "buying_power": 27547.26,
-  "effective_leverage": 49.79,
+  "margin_used": 130693.82,
+  "exposure": 6537259.68,
+  "buying_power": 0.0,
+  "effective_leverage": 51.0,
   "operating_timezone": "America/New_York",
   "events": [
     {
