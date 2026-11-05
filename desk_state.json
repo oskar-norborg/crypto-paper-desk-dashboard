@@ -1633,8 +1633,8 @@
     },
     "Rug Check": {
       "status": "idle",
-      "last_run": "2026-11-04T10:09:33-05:00",
-      "note": "ETH-USD PASS"
+      "last_run": "2026-11-04T22:26:13-05:00",
+      "note": "SOL-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -3327,13 +3327,6 @@
   "activity": [
     {
       "t": "2026-10-31T19:01:04-03:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "Exit check vs public 5m/15m candles (last 60m): no stop or target touched on BTC/LINK/UNI/XLM/SOL. No invalidation: LINK/UNI/XLM above prior 4h lows, SOL short below stop 96.91 with 15m closing back at entry, BTC short under 4h high",
-      "reason": "hold all 5; theses intact"
-    },
-    {
-      "t": "2026-10-31T19:01:04-03:00",
       "agent": "Executor",
       "kind": "plan",
       "text": "No new opens: free cash \u2248 $3k is the stop-funding cushion only; book already ~17x of 20x cap",
@@ -4798,6 +4791,13 @@
       "kind": "check",
       "text": "ETH-USD long 1400 @ 2431.70 HOLD: stop 2414 untouched (low since entry 2421.75 @21:30 ET), no completed 5m close < 2418 (lowest close 2423.79 @21:30), T1 2455 not reached (high 2434.50 @22:15); live mark 2429.6",
       "reason": "Coinbase public 5m candles 21:05\u201322:20 ET; invalidation intact; thesis (bounce hold above 2418 base) intact"
+    },
+    {
+      "t": "2026-11-04T22:26:13-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "SOL-USD PASS (chaos: non-blocking)",
+      "reason": "vol $118.2M, spread 0.0103%; Coinbase-listed CEX major; prefer liquid majors for NEW opens"
     }
   ],
   "scanner_feed": [
