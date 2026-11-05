@@ -6,16 +6,44 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 44945.11,
-  "cash": 44945.11,
+  "equity": 42862.44,
+  "cash": 947.72,
   "realized_pnl": -5054.89,
-  "unrealized_pnl": 0.0,
-  "day_pnl": -11759.28,
-  "day_pnl_pct": -0.20738,
+  "unrealized_pnl": -2082.67,
+  "day_pnl": -13841.95,
+  "day_pnl_pct": -0.24411,
   "day_baseline_date": "2026-11-05",
   "day_baseline_equity": 56704.39,
-  "open_positions": [],
-  "open_count": 0,
+  "open_positions": [
+    {
+      "id": "2026-11-05_BTC-USD_200",
+      "symbol": "BTC-USD",
+      "side": "short",
+      "size": 27.4,
+      "entry": 80287.2,
+      "notional": 2199869.28,
+      "stop": 80580.0,
+      "target": 80000.0,
+      "target2": 79700.0,
+      "invalidation": "15m close > 80500 (reclaim of 03:15-03:30 shelf) or stop 80580",
+      "risk_usd": 8022.72,
+      "risk_pct_equity": 0.1785,
+      "opened_at": "2026-11-05T04:06:16-05:00",
+      "card": "chaos-0405-btc-short",
+      "reason": "FULL CHAOS race: armed trigger fired \u2014 BTC back below 80300 after lower high 80568 (03:30) vs 80700 (02:00); 04:00-04:05 5m pressing range low 80217-80300 with ETH also making lower highs. Concentrated single-name short ~50x paper; thin ~$900 cash cushion.",
+      "price_source": "coinbase_exchange_public_ticker bid 80287.2 @ exch 2026-11-05T09:06:15.383414177Z api.exchange.coinbase.com unauthenticated",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 43997.39,
+      "mark": 80363.21,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-05T00:08:50-05:00",
+      "unrealized_pnl": -2082.67,
+      "exposure": 2201951.95
+    }
+  ],
+  "open_count": 1,
   "closed_positions": [
     {
       "type": "close",
@@ -1612,7 +1640,7 @@ window.__DESK_STATE__ = {
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 44945.11,
+  "max_risk_usd": 42862.44,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -567043.9,
   "paused": false,
@@ -1667,13 +1695,13 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-05T04:06:09-05:00",
-      "note": "last: closed ETH-USD"
+      "last_run": "2026-11-05T04:06:16-05:00",
+      "note": "last: paper fill BTC-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-05T00:08:46-05:00",
-      "note": "logged 2026-11-05_ETH-USD_198"
+      "last_run": "2026-11-05T04:06:16-05:00",
+      "note": "logged 2026-11-05_BTC-USD_200"
     },
     "Equity": {
       "status": "ready",
@@ -3391,17 +3419,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-05T04:06:09-05:00",
       "equity": 44945.11,
       "kind": "close"
+    },
+    {
+      "t": "2026-11-05T04:06:16-05:00",
+      "equity": 42862.44,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-10-31T20:03:45-04:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE LINK-USD @ 11.651 \u00b7 P&L $+2608.65",
-      "reason": "Invalidation: 19:45 ET 15m candle closed 11.631 below prior 4h low 11.649 (bounce failed); bank +$2.6k before fade reaches stop",
-      "fill_id": "2026-10-30_LINK-USD_144"
-    },
     {
       "t": "2026-10-31T20:04:01-04:00",
       "agent": "Scanner",
@@ -4866,6 +4891,15 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE ETH-USD @ 2432 \u00b7 P&L $-12945.42",
       "reason": "STOP HIT between cycles: 02:05 ET 5m high 2432.52 >= stop 2432 (invalidation 5m close >2428.5 also hit 01:45 C=2429.90). Stop-level paper fill.",
       "fill_id": "2026-11-05_ETH-USD_198"
+    },
+    {
+      "t": "2026-11-05T04:06:16-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 27.4 BTC-USD @ 80287.2 \u00b7 notional $2,199,869 (50x, margin $43,997) \u00b7 stop 80580 \u00b7 tgt 80000 \u00b7 risk $8,022.72",
+      "reason": "FULL CHAOS race: armed trigger fired \u2014 BTC back below 80300 after lower high 80568 (03:30) vs 80700 (02:00); 04:00-04:05 5m pressing range low 80217-80300 with ETH also making lower highs. Concentrated single-name short ~50x paper; thin ~$900 cash cushion.",
+      "fill_id": "2026-11-05_BTC-USD_200",
+      "card": "chaos-0405-btc-short"
     }
   ],
   "scanner_feed": [
@@ -5541,7 +5575,7 @@ window.__DESK_STATE__ = {
     "ok": 30,
     "total": 30
   },
-  "updated_at": "2026-11-05T04:06:09-05:00",
+  "updated_at": "2026-11-05T04:06:16-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -5557,10 +5591,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 0,
-  "exposure": 0.0,
-  "buying_power": 2247255.5,
-  "effective_leverage": 0.0,
+  "margin_used": 43997.39,
+  "exposure": 2201951.95,
+  "buying_power": 0.0,
+  "effective_leverage": 51.37,
   "operating_timezone": "America/New_York",
   "events": [
     {
