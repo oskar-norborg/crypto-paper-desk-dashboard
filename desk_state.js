@@ -4588,13 +4588,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-05T10:07:10-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "ETH-USD short 512 @ 2387.95: T1 2340 HIT \u2014 CLOSE at stated T1 (T2 2310 not hit)",
-      "reason": "Coinbase public 5m since 08:12 ET: maxH=2392.93 < stop 2410; minL=2304.29; T1 2340 hit 09:55 ET (L=2331.32); T2 2310 NOT hit; 15m max close=2389.21 (inv 2400 CLEAR). Close at stated T1 2340."
-    },
-    {
-      "t": "2026-11-05T10:07:10-05:00",
       "agent": "Executor",
       "kind": "close",
       "text": "PAPER CLOSE ETH-USD @ 2340 \u00b7 P&L $+24550.40",
@@ -6073,6 +6066,13 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE ETH-USD @ 2229.32 \u00b7 P&L $-74826.28",
       "reason": "INV 15m close > 2229.4 (short): Coinbase public 15m 11:45 ET close 2232.46 (high 2235.26/low 2221.93). Thesis broken \u2014 close at public mark 2229.32.",
       "fill_id": "2026-11-06_ETH-USD_262"
+    },
+    {
+      "t": "2026-11-06T12:08:52-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "XRP-USD short 3902810.7 @ 1.182: STOP 1.1942 HIT \u2014 CLOSE at stated stop",
+      "reason": "Coinbase public candles since 2026-11-06T11:13:02-05:00: maxH=1.1981; minL=1.181; 15m max close=1.1955; 15m min close=None. STOP 1.1942 hit (short): Coinbase public 5m 11:25 ET high 1.1955 (>= 1.1942). Paper close at stated stop."
     }
   ],
   "scanner_feed": {
