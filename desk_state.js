@@ -2370,8 +2370,8 @@ window.__DESK_STATE__ = {
   "agents": {
     "Scanner": {
       "status": "idle",
-      "last_run": "2026-11-06T17:00:10-05:00",
-      "note": "CHAOS race cycle 1700 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin f"
+      "last_run": "2026-11-06T18:07:04-05:00",
+      "note": "CHAOS race cycle 1807 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin f"
     },
     "Rug Check": {
       "status": "idle",
@@ -4893,13 +4893,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-05T15:11:45-05:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "1511 ET: closed 1; BTC/ETH HOLD; opened {'XRP': True}",
-      "reason": "race mode: SOL closed on 15m inv reclaim; BTC/ETH structure intact; redeployed freed margin into liquid major; opens ok={'XRP': True}; plateau not acceptable"
-    },
-    {
       "t": "2026-11-05T15:11:47-05:00",
       "agent": "Logger",
       "kind": "batch",
@@ -6367,6 +6360,13 @@ window.__DESK_STATE__ = {
       "kind": "review",
       "text": "EOD paper review 2026-11-06 written \u00b7 eq $158,274 \u00b7 gap $841,726 \u00b7 day $-46,638 (\u221222.8%) \u00b7 open 2 \u00b7 blown_up false",
       "reason": "Scheduled Crypto EOD paper review: final public marks 30/30 at 5:51 PM ET, desk recomputed, reviews/2026-11-06.md saved with gap-shrink plan (BTC/ETH long hold\u2192reload, SOL add after bank, flip-short on inv), dashboard synced + public mirror best-effort."
+    },
+    {
+      "t": "2026-11-06T18:07:04-05:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "CHAOS race cycle 1807 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
+      "reason": "scheduled race cycle; scan scans/2026-11-06_1807_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
     }
   ],
   "scanner_feed": {
@@ -6725,7 +6725,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-06T17:52:30-05:00",
+  "updated_at": "2026-11-06T18:07:04-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
