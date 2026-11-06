@@ -4662,13 +4662,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-05T10:07:48-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "NEAR-USD PASS (chaos: non-blocking)",
-      "reason": "vol $27.5M, spread 0.0314%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
-    },
-    {
-      "t": "2026-11-05T10:07:48-05:00",
       "agent": "Risk",
       "kind": "check",
       "text": "SOFT-WARN over-exposure: new gross $6,537,280 > equity\u00d750 $6,407,726 (chaos: non-blocking)",
@@ -6144,6 +6137,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
       "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
+    },
+    {
+      "t": "2026-11-06T13:06:48-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "BTC-USD long 102.81 @ 75866.03: RACE ROTATE \u2014 thesis/momentum broken before stop",
+      "reason": "RACE rotate 1306 ET: cut BTC-USD long loser/broken-momentum BEFORE stop. uP&L $-20,701.82; stop_prog 30% of path to stop 75183.67 (mark 75662.75, entry 75866.03); symbol 15m bearish_tilt=True; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close."
     }
   ],
   "scanner_feed": {
@@ -6502,7 +6502,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-06T13:06:47-05:00",
+  "updated_at": "2026-11-06T13:06:48-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
