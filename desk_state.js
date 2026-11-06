@@ -2182,7 +2182,7 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-06T04:11:10-05:00",
-      "note": "last: paper fill ETH-USD"
+      "note": "0410 ET: closed 2; opened {'BTC-USD': True, 'ETH-USD': True}; held ['BTC-USD', 'ETH-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -4435,13 +4435,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-04T20:10:23-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 20:10 ET: 30/30 public marks; BTC 80,483, ETH 2,418.96, SOL 95.74; FLAT; NO FILL (armed triggers unfired, mid-range chop)",
-      "reason": "scan scans/2026-11-04_2010_scan.md; public Coinbase ticker/stats/book/5m candles; race to $1M gap $924,134"
-    },
-    {
-      "t": "2026-11-04T20:10:23-05:00",
       "agent": "Risk",
       "kind": "check",
       "text": "Armed 19:55 ETH long/short and BTC long triggers: none fired on closed 5m bars; wick-only probes below ETH 2416 / BTC 80390 rejected on close",
@@ -5926,6 +5919,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE redeploy 0410 ET: BTC/ETH tilt long. 24h -7.55%. ETH-USD concentrated long under BTC/ETH reclaim (not bearish 15m); stop below floor 2220.97; session 5m low 2210.41; 15m detail [('02:15', 2212.44, 2221.24, 2211.37), ('02:30', 2228.64, 2231.95, 2210.41), ('02:45', 2225.28, 2231.78, 2224.79), ('03:00', 2225.74, 2226.98, 2219.47), ('03:15', 2223.2, 2230.83, 2222.22), ('03:30', 2226.8, 2228.3, 2220.97), ('03:45', 2223.47, 2227.74, 2222.87), ('04:00', 2236.25, 2238.51, 2222.34)]. Notional $2,853,669 @ 50x (margin $57,073), risk $28,534 (12.3% eq, warn-only). T1 2268.73, T2 2298.73.",
       "fill_id": "2026-11-06_ETH-USD_255",
       "card": "RACE_ETH_LONG_0410"
+    },
+    {
+      "t": "2026-11-06T04:11:10-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "0410 ET: closed 2; opened {'BTC-USD': True, 'ETH-USD': True}; held ['BTC-USD', 'ETH-USD']",
+      "reason": "race mode: direction=long; closes=2; opens_ok={'BTC-USD': True, 'ETH-USD': True}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": {
