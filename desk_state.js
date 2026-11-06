@@ -4446,13 +4446,6 @@ window.__DESK_STATE__ = {
     {
       "t": "2026-11-04T22:26:13-05:00",
       "agent": "Executor",
-      "kind": "plan",
-      "text": "HOLD ETH; OPEN SOL-USD long ~3818 with leftover margin (cushion ~$400)",
-      "reason": "race: deploy free cash into one concentrated liquid major swing; ETH thesis intact so no rotate"
-    },
-    {
-      "t": "2026-11-04T22:26:13-05:00",
-      "agent": "Executor",
       "kind": "fill",
       "text": "PAPER FILL long 3818 SOL-USD @ 96.61 \u00b7 notional $368,857 (50x, margin $7,377) \u00b7 stop 95.95 \u00b7 tgt 97.8 \u00b7 risk $2,519.88",
       "reason": "FULL CHAOS race: SOL 5m HH/HL thrust \u2014 21:30 low 95.90 \u2192 22:05 HL 96.08 \u2192 22:15 close 96.83 (H=96.87) on heavy volume; shallow pullback to ~96.61. Concentrated leftover-margin swing (ETH held). Notional $368,857 @ 50x paper (margin $7,377), stop 95.95 / T1 97.8 / T2 98.5, risk $2,520 (3.3% eq; warn-only)",
@@ -5935,6 +5928,13 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE BTC-USD @ 75801.3 \u00b7 P&L $-8627.35",
       "reason": "RACE rotate 0810 ET: cut BTC-USD long loser/broken-momentum BEFORE stop. uP&L $-9,193.70; stop_prog 13% of path to stop 75270.78 (mark 75801.33, entry 75877.8); symbol 15m bearish_tilt=True; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close.",
       "fill_id": "2026-11-06_BTC-USD_254"
+    },
+    {
+      "t": "2026-11-06T08:11:10-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD long 1276.6953 @ 2235.2: RACE ROTATE \u2014 thesis/momentum broken before stop",
+      "reason": "RACE rotate 0810 ET: cut ETH-USD long loser/broken-momentum BEFORE stop. uP&L $0.00; stop_prog 0% of path to stop 2212.85 (mark 2235.73, entry 2235.2); symbol 15m bearish_tilt=True; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close."
     }
   ],
   "scanner_feed": {
