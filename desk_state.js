@@ -4444,15 +4444,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-04T21:06:49-05:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 1400 ETH-USD @ 2431.7 \u00b7 notional $3,404,380 (50x, margin $68,088) \u00b7 stop 2414 \u00b7 tgt 2455 \u00b7 risk $24,780.00",
-      "reason": "FULL CHAOS race: armed ETH long fired on 20:50 5m close 2431.95 with BTC 80790 (>80650); 20:55/21:00 pullback held 2425+ above invalidation, live re-push to 2431 with BTC 80755 (>80750 alt trigger). Concentrated single-name swing.",
-      "fill_id": "2026-11-04_ETH-USD_194",
-      "card": null
-    },
-    {
       "t": "2026-11-04T21:07:07-05:00",
       "agent": "Scanner",
       "kind": "scan",
@@ -5936,6 +5927,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 0810 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
       "reason": "scheduled race cycle; scan scans/2026-11-06_0810_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-06T08:10:59-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "BTC-USD long 112.82 @ 75877.8: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-06T04:11:10-05:00: maxH=76256.44 minL=75747.53 (stop 75270.78; T1 76788.33/T2 77188.33); 15m min close=75780.78 (inv 75449.11). No close trigger."
     }
   ],
   "scanner_feed": {
