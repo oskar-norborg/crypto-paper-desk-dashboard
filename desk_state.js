@@ -2220,8 +2220,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-06T08:11:16-05:00",
-      "note": "CHAOS: 0810 ET race cycle \u00b7 hold/rotate check \u00b7 eq $220,670 \u00b7 exposure $10,998,253 (49.84x)"
+      "last_run": "2026-11-06T09:16:37-05:00",
+      "note": "CHAOS: 0916 ET race cycle \u00b7 hold/rotate check \u00b7 eq $271,633 \u00b7 exposure $10,947,291 (40.3x)"
     },
     "Equity": {
       "status": "ready",
@@ -4524,15 +4524,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-05T08:12:18-05:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 25.1 BTC-USD @ 79567.9 \u00b7 notional $1,997,155 (50x, margin $39,943) \u00b7 stop 79880 \u00b7 tgt 78500 \u00b7 risk $7,833.46",
-      "reason": "RACE continuation short after banking T2 winner: BTC failed reclaim of 80k, 15m cascade 80303\u219279478 with lower highs; still under post-T2 bounce. Notional $1,997,155 @ 50x (margin $39,943), risk $7,833 (11.9% eq, warn-only). T1 78500 toward 24h open ~78.3k, T2 78000.",
-      "fill_id": "2026-11-05_BTC-USD_202",
-      "card": "RACE_BTC_SHORT_0810"
-    },
-    {
-      "t": "2026-11-05T08:12:18-05:00",
       "agent": "Rug Check",
       "kind": "check",
       "text": "ETH-USD PASS (chaos soft)",
@@ -6009,6 +6000,13 @@ window.__DESK_STATE__ = {
       "kind": "plan",
       "text": "0916 ET: closed 0; opened {}; held ['ETH-USD', 'XRP-USD']",
       "reason": "race mode: direction=short; closes=0; opens_ok={}; cash_pool after cushion; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-06T09:16:37-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 0916 ET race cycle \u00b7 hold/rotate check \u00b7 eq $271,633 \u00b7 exposure $10,947,291 (40.3x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": {
