@@ -2318,7 +2318,7 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-06T13:06:51-05:00",
-      "note": "last: paper fill XRP-USD"
+      "note": "1306 ET: closed 2; opened {'ETH-USD': True, 'XRP-USD': True}; held ['ETH-USD', 'XRP-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -4716,13 +4716,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-05T11:06:11-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "ETH-USD short 1071.48 @ 2317.52: T1 2280.0 HIT \u2014 CLOSE at stated T1",
-      "reason": "Coinbase public 5m since 10:07 ET: maxH=2311.09; minL=2233.6; 15m max close=2283.86. T1 2280.0 hit: Coinbase public 5m 10:10 ET low 2275.11 (<= 2280.0); T2 2220.0 NOT hit; stop 2358.0 never touched (maxH 2311.09); inv 15m clear (maxC15 2283.86). Paper close at stated T1."
-    },
-    {
-      "t": "2026-11-05T11:06:11-05:00",
       "agent": "Executor",
       "kind": "close",
       "text": "PAPER CLOSE ETH-USD @ 2280 \u00b7 P&L $+40201.93",
@@ -6201,6 +6194,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE redeploy 1306 ET: BTC/ETH tilt short. 24h -3.98%. XRP-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 1.1951; session 5m low 1.1791; 15m detail [('11:15', 1.1955, 1.1955, 1.181), ('11:30', 1.1902, 1.1981, 1.1902), ('11:45', 1.195, 1.1977, 1.1898), ('12:00', 1.1923, 1.1956, 1.1905), ('12:15', 1.1909, 1.1951, 1.1904), ('12:30', 1.1833, 1.1917, 1.1821), ('12:45', 1.1844, 1.1854, 1.1802), ('13:00', 1.1829, 1.1844, 1.1791)]. Notional $2,700,868 @ 50x (margin $54,017), risk $35,832 (19.7% eq, warn-only). T1 1.1716, T2 1.1616.",
       "fill_id": "2026-11-06_XRP-USD_271",
       "card": "RACE_XRP_SHORT_1306"
+    },
+    {
+      "t": "2026-11-06T13:06:51-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "1306 ET: closed 2; opened {'ETH-USD': True, 'XRP-USD': True}; held ['ETH-USD', 'XRP-USD']",
+      "reason": "race mode: direction=short; closes=2; opens_ok={'ETH-USD': True, 'XRP-USD': True}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": {
