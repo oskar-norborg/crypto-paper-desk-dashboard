@@ -4740,15 +4740,6 @@
   "activity": [
     {
       "t": "2026-11-05T11:06:25-05:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 2256.6 ETH-USD @ 2246.97 \u00b7 notional $5,070,513 (50x, margin $101,410) \u00b7 stop 2278 \u00b7 tgt 2190 \u00b7 risk $70,022.30",
-      "reason": "RACE redeploy after banking prior short targets: 15m still LL/bearish tilt (not flipped long), 24h -7.64%. ETH continuation short under banked T1 2280; correlating with BTC LL; T2 2220 not yet traded. Notional $5,070,513 @ 50x (margin $101,410), risk $70,022 (25.9% eq, warn-only). T1 2190.0, T2 2120.0.",
-      "fill_id": "2026-11-05_ETH-USD_217",
-      "card": "RACE_ETH_SHORT_1106"
-    },
-    {
-      "t": "2026-11-05T11:06:25-05:00",
       "agent": "Rug Check",
       "kind": "check",
       "text": "SOL-USD PASS (chaos: non-blocking)",
@@ -6220,6 +6211,13 @@
       "kind": "check",
       "text": "ETH-USD short 2833.8737 @ 2223.82: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-06T13:06:51-05:00: maxH=2232.43 minL=2220.04 (stop 2241.61; T1 2201.58/T2 2176.58); 15m max close=2231.82 (inv 2232.59). No close trigger."
+    },
+    {
+      "t": "2026-11-06T14:59:56-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "XRP-USD short 2282294.9 @ 1.1834: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-06T13:06:51-05:00: maxH=1.1891 minL=1.18 (stop 1.1991; T1 1.1716/T2 1.1616); 15m max close=1.1853 (inv 1.1931). No close trigger."
     }
   ],
   "scanner_feed": {
