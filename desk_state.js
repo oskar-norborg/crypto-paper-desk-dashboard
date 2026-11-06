@@ -4529,13 +4529,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-05T08:12:18-05:00",
-      "agent": "Sizer",
-      "kind": "size",
-      "text": "ETH-USD short 512.0 @ 2387.95 margin $24,453",
-      "reason": "remaining free margin after BTC + $1200 cushion; stop 2410"
-    },
-    {
-      "t": "2026-11-05T08:12:18-05:00",
       "agent": "Executor",
       "kind": "fill",
       "text": "PAPER FILL short 512 ETH-USD @ 2387.95 \u00b7 notional $1,222,630 (50x, margin $24,453) \u00b7 stop 2410 \u00b7 tgt 2340 \u00b7 risk $11,289.60",
@@ -6012,6 +6005,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 1112 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
       "reason": "scheduled race cycle; scan scans/2026-11-06_1112_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-06T11:12:51-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD short 3449.7104 @ 2235.55: T1 2213.19 HIT \u2014 CLOSE at stated T1",
+      "reason": "Coinbase public candles since 2026-11-06T08:11:13-05:00: maxH=2244.72; minL=2205.74; 15m max close=2240.93; 15m min close=None. T1 2213.19 hit (short): Coinbase public 5m 10:00 ET low 2212.97 (<= 2213.19); T2 2188.19 NOT hit; stop 2253.43 never touched (maxH 2244.72); inv 15m clear (maxC15 2240.93). Paper close at stated T1."
     }
   ],
   "scanner_feed": {
