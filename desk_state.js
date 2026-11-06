@@ -2373,8 +2373,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-06T16:02:02-05:00",
-      "note": "logged 2026-11-06_ETH-USD_277"
+      "last_run": "2026-11-06T16:02:05-05:00",
+      "note": "CHAOS: 1601 ET race cycle \u00b7 hold/rotate check \u00b7 eq $145,253 \u00b7 exposure $7,251,338 (49.92x)"
     },
     "Equity": {
       "status": "ready",
@@ -4846,13 +4846,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-05T13:18:16-05:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "1318 ET: closed 0; BTC/ETH HOLD near T1; opened continuation shorts where free cash allowed",
-      "reason": "race mode: no hard close trigger on BTC/ETH (T1 nearly but not hit); redeployed free margin into liquid major shorts; opens ok={'SOL': True}; plateau not acceptable"
-    },
-    {
       "t": "2026-11-05T13:18:19-05:00",
       "agent": "Logger",
       "kind": "batch",
@@ -6320,6 +6313,13 @@ window.__DESK_STATE__ = {
       "kind": "plan",
       "text": "1601 ET: closed 1; opened {'ETH-USD': True}; held ['BTC-USD', 'ETH-USD']",
       "reason": "race mode: direction=long; closes=1; opens_ok={'ETH-USD': True}; cash_pool after cushion; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-06T16:02:05-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 1601 ET race cycle \u00b7 hold/rotate check \u00b7 eq $145,253 \u00b7 exposure $7,251,338 (49.92x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": {
