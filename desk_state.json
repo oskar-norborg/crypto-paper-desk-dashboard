@@ -2083,8 +2083,8 @@
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-05T21:06:18-05:00",
-      "note": "logged 2026-11-05_XRP-USD_243"
+      "last_run": "2026-11-05T21:06:21-05:00",
+      "note": "CHAOS: 2106 ET race cycle \u00b7 hold/rotate check \u00b7 eq $311,736 \u00b7 exposure $15,375,113 (49.32x)"
     },
     "Equity": {
       "status": "ready",
@@ -4242,13 +4242,6 @@
   "activity": [
     {
       "t": "2026-11-04T09:04:02-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 09:03 ET: 30/30 public marks; BTC 78,135 (+1.2%), ETH 2,311.10 (+1.2%), SOL 92.56, NEAR 3.97 (+3.0%); 08:05-09:00 tight range ETH 2,311.9-2,319.1, BTC 78.19k-78.40k, then 09:00 ET dip (ETH 2,309.51, BTC 78,087)",
-      "reason": "scheduled race cycle; scan scans/2026-11-04_0903_scan.md"
-    },
-    {
-      "t": "2026-11-04T09:04:02-05:00",
       "agent": "Risk",
       "kind": "check",
       "text": "ETH-USD long 250 @ 2,315.12 HOLD: stop 2,297 not touched (low since 08:05 ET 2,309.51 on in-progress 09:00 candle), no completed 5m close < 2,299 (lowest 2,314.90 @08:05), BTC lowest 5m close 78,246.97 (>77,900; live 09:00 candle 78,133); T1 2,345 not reached (high 2,319.11 @08:25)",
@@ -5722,6 +5715,13 @@
       "kind": "plan",
       "text": "2106 ET: closed 1; opened {'ETH-USD': True, 'XRP-USD': True}; held ['ETH-USD', 'XRP-USD']",
       "reason": "race mode: direction=short; closes=1; opens_ok={'ETH-USD': True, 'XRP-USD': True}; cash_pool after cushion; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-05T21:06:21-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 2106 ET race cycle \u00b7 hold/rotate check \u00b7 eq $311,736 \u00b7 exposure $15,375,113 (49.32x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": {
