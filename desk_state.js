@@ -4524,13 +4524,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-05T08:12:43-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race 08:11 ET: banked BTC short +$20,682; redeployed BTC+ETH shorts; eq $65,628; gap $934,372",
-      "reason": "scheduled race cycle; scan scans/2026-11-05_0811_scan.md"
-    },
-    {
-      "t": "2026-11-05T08:12:43-05:00",
       "agent": "Logger",
       "kind": "batch",
       "text": "08:11 ET race \u00b7 closed BTC T2 winner \u00b7 opened BTC+ETH continuation shorts \u00b7 eq $65,628 \u00b7 lev 49.06x",
@@ -6006,6 +5999,13 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE ETH-USD @ 2213.19 \u00b7 P&L $+77135.52",
       "reason": "T1 2213.19 hit (short): Coinbase public 5m 10:00 ET low 2212.97 (<= 2213.19); T2 2188.19 NOT hit; stop 2253.43 never touched (maxH 2244.72); inv 15m clear (maxC15 2240.93). Paper close at stated T1.",
       "fill_id": "2026-11-06_ETH-USD_258"
+    },
+    {
+      "t": "2026-11-06T11:12:51-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "XRP-USD short 2771104.9 @ 1.186: T1 1.1741 HIT \u2014 CLOSE at stated T1",
+      "reason": "Coinbase public candles since 2026-11-06T08:11:13-05:00: maxH=1.1925; minL=1.1724; 15m max close=1.1893; 15m min close=None. T1 1.1741 hit (short): Coinbase public 5m 09:30 ET low 1.1733 (<= 1.1741); T2 1.1641 NOT hit; stop 1.2054 never touched (maxH 1.1925); inv 15m clear (maxC15 1.1893). Paper close at stated T1."
     }
   ],
   "scanner_feed": {
