@@ -2035,7 +2035,7 @@
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-05T19:08:57-05:00",
-      "note": "last: paper fill BTC-USD"
+      "note": "1908 ET: closed 4; opened {'BTC': True}; held ['BTC-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -4147,13 +4147,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-03T20:01:10-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS cycle 20:00 ET: hold ETH short (stop/inval untouched), no new opens",
-      "reason": "scheduled scanner run; scans/2026-11-03_2000_scan.md; no trigger fired, 30/30 marks"
-    },
-    {
       "t": "2026-11-03T21:08:15-05:00",
       "agent": "Scanner",
       "kind": "scan",
@@ -5631,6 +5624,13 @@
       "reason": "RACE redeploy 1908 ET: BTC/ETH tilt long. 24h -5.39%. BTC structure flip long after reclaim; bounce off session low 75035.1. Notional $16,921,495 @ 50x (margin $338,430), risk $261,225 (77.2% eq, warn-only). T1 77272.32, T2 78414.27.",
       "fill_id": "2026-11-05_BTC-USD_240",
       "card": "RACE_BTC_LONG_1908"
+    },
+    {
+      "t": "2026-11-05T19:08:57-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "1908 ET: closed 4; opened {'BTC': True}; held ['BTC-USD']",
+      "reason": "race mode: direction=long; closes=4; opens_ok={'BTC': True}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": {
