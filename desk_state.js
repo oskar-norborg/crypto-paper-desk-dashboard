@@ -4450,13 +4450,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-04T22:26:13-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "ETH-USD long 1400 @ 2431.70 HOLD: stop 2414 untouched (low since entry 2421.75 @21:30 ET), no completed 5m close < 2418 (lowest close 2423.79 @21:30), T1 2455 not reached (high 2434.50 @22:15); live mark 2429.6",
-      "reason": "Coinbase public 5m candles 21:05\u201322:20 ET; invalidation intact; thesis (bounce hold above 2418 base) intact"
-    },
-    {
-      "t": "2026-11-04T22:26:13-05:00",
       "agent": "Rug Check",
       "kind": "check",
       "text": "SOL-USD PASS (chaos: non-blocking)",
@@ -5939,6 +5932,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
       "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
+    },
+    {
+      "t": "2026-11-06T08:11:10-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "BTC-USD long 112.82 @ 75877.8: RACE ROTATE \u2014 thesis/momentum broken before stop",
+      "reason": "RACE rotate 0810 ET: cut BTC-USD long loser/broken-momentum BEFORE stop. uP&L $-9,193.70; stop_prog 13% of path to stop 75270.78 (mark 75801.33, entry 75877.8); symbol 15m bearish_tilt=True; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close."
     }
   ],
   "scanner_feed": {
