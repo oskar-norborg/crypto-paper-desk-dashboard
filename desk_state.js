@@ -4898,13 +4898,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-05T16:11:14-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 1611 ET: 30 public marks; check BTC/ETH/XRP shorts vs 5m/15m; ETH+XRP T1 likely \u2192 bank & rotate",
-      "reason": "scheduled race cycle; scan scans/2026-11-05_1611_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
-    },
-    {
       "t": "2026-11-05T16:11:17-05:00",
       "agent": "Risk",
       "kind": "check",
@@ -6372,6 +6365,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "BTC-USD long 75.56 @ 75788.76: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-06T15:00:11-05:00: maxH=76086.99 minL=75605.94 (stop 75182.45; T1 76698.23/T2 77098.23); 15m min close=75678.2 (inv 75591.03). No close trigger."
+    },
+    {
+      "t": "2026-11-06T18:07:07-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD long 898.187 @ 2239.99: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-06T17:00:23-05:00: maxH=2241.41 minL=2232.22 (stop 2216.12; T1 2273.59/T2 2303.59); 15m min close=2234.16 (inv 2224.12). No close trigger."
     }
   ],
   "scanner_feed": {
