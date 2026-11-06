@@ -2249,7 +2249,7 @@
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-06T11:13:02-05:00",
-      "note": "last: paper fill XRP-USD"
+      "note": "1112 ET: closed 2; opened {'ETH-USD': True, 'XRP-USD': True}; held ['ETH-USD', 'XRP-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -4581,13 +4581,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-05T09:13:10-05:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "09:09 ET: held BTC+ETH shorts (valid); opened SOL short with free cash",
-      "reason": "race mode: plateau not acceptable \u2014 deploy remaining margin into liquid major continuation short; no close (thesis intact)"
-    },
-    {
       "t": "2026-11-05T09:13:13-05:00",
       "agent": "Logger",
       "kind": "batch",
@@ -6067,6 +6060,13 @@
       "reason": "RACE redeploy 1112 ET: BTC/ETH tilt short. 24h -4.82%. XRP-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 1.1902; session 5m low 1.1724; 15m detail [('09:15', 1.1788, 1.1822, 1.1777), ('09:30', 1.1849, 1.1898, 1.1733), ('09:45', 1.1847, 1.1925, 1.1803), ('10:00', 1.1893, 1.1894, 1.1724), ('10:15', 1.1843, 1.1902, 1.183), ('10:30', 1.185, 1.1854, 1.1785), ('10:45', 1.1862, 1.1877, 1.1825), ('11:00', 1.1822, 1.1896, 1.182)]. Notional $4,613,122 @ 50x (margin $92,262), risk $47,614 (14.7% eq, warn-only). T1 1.1694, T2 1.1594.",
       "fill_id": "2026-11-06_XRP-USD_263",
       "card": "RACE_XRP_SHORT_1112"
+    },
+    {
+      "t": "2026-11-06T11:13:02-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "1112 ET: closed 2; opened {'ETH-USD': True, 'XRP-USD': True}; held ['ETH-USD', 'XRP-USD']",
+      "reason": "race mode: direction=short; closes=2; opens_ok={'ETH-USD': True, 'XRP-USD': True}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": {
