@@ -2322,8 +2322,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-06T13:06:51-05:00",
-      "note": "logged 2026-11-06_XRP-USD_271"
+      "last_run": "2026-11-06T13:06:55-05:00",
+      "note": "CHAOS: 1306 ET race cycle \u00b7 hold/rotate check \u00b7 eq $180,446 \u00b7 exposure $9,002,554 (49.89x)"
     },
     "Equity": {
       "status": "ready",
@@ -4721,14 +4721,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-05T11:06:11-05:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE ETH-USD @ 2280 \u00b7 P&L $+40201.93",
-      "reason": "T1 2280.0 hit: Coinbase public 5m 10:10 ET low 2275.11 (<= 2280.0); T2 2220.0 NOT hit; stop 2358.0 never touched (maxH 2311.09); inv 15m clear (maxC15 2283.86). Paper close at stated T1.",
-      "fill_id": "2026-11-05_ETH-USD_209"
-    },
-    {
-      "t": "2026-11-05T11:06:11-05:00",
       "agent": "Risk",
       "kind": "check",
       "text": "SOL-USD short 12502.8 @ 91.99: T1 90.5 HIT \u2014 CLOSE at stated T1",
@@ -6206,6 +6198,13 @@ window.__DESK_STATE__ = {
       "kind": "plan",
       "text": "1306 ET: closed 2; opened {'ETH-USD': True, 'XRP-USD': True}; held ['ETH-USD', 'XRP-USD']",
       "reason": "race mode: direction=short; closes=2; opens_ok={'ETH-USD': True, 'XRP-USD': True}; cash_pool after cushion; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-06T13:06:55-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 1306 ET race cycle \u00b7 hold/rotate check \u00b7 eq $180,446 \u00b7 exposure $9,002,554 (49.89x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": {
@@ -6564,7 +6563,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-06T13:06:54-05:00",
+  "updated_at": "2026-11-06T13:06:55-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
