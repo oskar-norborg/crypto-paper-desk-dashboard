@@ -2220,8 +2220,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-06T08:11:13-05:00",
-      "note": "logged 2026-11-06_XRP-USD_259"
+      "last_run": "2026-11-06T08:11:16-05:00",
+      "note": "CHAOS: 0810 ET race cycle \u00b7 hold/rotate check \u00b7 eq $220,670 \u00b7 exposure $10,998,253 (49.84x)"
     },
     "Equity": {
       "status": "ready",
@@ -4508,15 +4508,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-05T04:06:16-05:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 27.4 BTC-USD @ 80287.2 \u00b7 notional $2,199,869 (50x, margin $43,997) \u00b7 stop 80580 \u00b7 tgt 80000 \u00b7 risk $8,022.72",
-      "reason": "FULL CHAOS race: armed trigger fired \u2014 BTC back below 80300 after lower high 80568 (03:30) vs 80700 (02:00); 04:00-04:05 5m pressing range low 80217-80300 with ETH also making lower highs. Concentrated single-name short ~50x paper; thin ~$900 cash cushion.",
-      "fill_id": "2026-11-05_BTC-USD_200",
-      "card": "chaos-0405-btc-short"
-    },
-    {
       "t": "2026-11-05T04:06:43-05:00",
       "agent": "Scanner",
       "kind": "scan",
@@ -5997,6 +5988,13 @@ window.__DESK_STATE__ = {
       "kind": "plan",
       "text": "0810 ET: closed 2; opened {'ETH-USD': True, 'XRP-USD': True}; held ['ETH-USD', 'XRP-USD']",
       "reason": "race mode: direction=short; closes=2; opens_ok={'ETH-USD': True, 'XRP-USD': True}; cash_pool after cushion; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-06T08:11:16-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 0810 ET race cycle \u00b7 hold/rotate check \u00b7 eq $220,670 \u00b7 exposure $10,998,253 (49.84x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": {
