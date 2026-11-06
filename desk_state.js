@@ -2040,8 +2040,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-05T19:09:01-05:00",
-      "note": "CHAOS: 1908 ET race cycle \u00b7 hold/rotate check \u00b7 eq $338,483 \u00b7 exposure $16,921,497 (49.99x)"
+      "last_run": "2026-11-05T20:04:42-05:00",
+      "note": "CHAOS: 2004 ET race cycle \u00b7 hold/rotate check \u00b7 eq $321,612 \u00b7 exposure $16,904,627 (52.56x)"
     },
     "Equity": {
       "status": "ready",
@@ -4168,15 +4168,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-04T00:04:18-05:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 175 ETH-USD @ 2275.88 \u00b7 notional $398,279 (20x, margin $19,914) \u00b7 stop 2257 \u00b7 tgt 2304 \u00b7 risk $3,304.00",
-      "reason": "RACE long, bounce is on: ETH V-reversed from 24h low 2,223 (22:08 ET) with higher lows, reclaimed the 2,256 base at 23:05 and broke 2,270 at 23:45-23:50 (high 2,282.87); now holding 2,273-2,277 on first pullback. BTC confirming (75,600 low to 77,469, holding 77.1k+). Concentrated 20x swing, ~$19.9k margin, risk ~$3.3k (5% eq). Target 24h high 2,304, T2 2,330.",
-      "fill_id": "2026-11-04_ETH-USD_188",
-      "card": "RACE_ETH_LONG"
-    },
-    {
       "t": "2026-11-04T00:04:21-05:00",
       "agent": "Scanner",
       "kind": "scan",
@@ -5649,6 +5640,13 @@ window.__DESK_STATE__ = {
       "kind": "plan",
       "text": "2004 ET: closed 0; opened {}; held ['BTC-USD']",
       "reason": "race mode: direction=long; closes=0; opens_ok={}; cash_pool after cushion; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-05T20:04:42-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 2004 ET race cycle \u00b7 hold/rotate check \u00b7 eq $321,612 \u00b7 exposure $16,904,627 (52.56x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": {
