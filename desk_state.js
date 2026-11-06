@@ -2390,8 +2390,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-06T17:52:30-05:00",
-      "note": "EOD paper review 2026-11-06 written \u00b7 eq $158,274 \u00b7 gap $841,726 \u00b7 day $-46,638 (\u221222.8%) \u00b7 open 2 \u00b7 blown_up false"
+      "last_run": "2026-11-06T18:07:20-05:00",
+      "note": "CHAOS: 1807 ET race cycle \u00b7 hold/rotate check \u00b7 eq $151,674 \u00b7 exposure $7,735,383 (51.0x)"
     },
     "Equity": {
       "status": "ready",
@@ -4908,14 +4908,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-05T16:11:17-05:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE ETH-USD @ 2237 \u00b7 P&L $+29604.61",
-      "reason": "T1 2237.0 hit: Coinbase public 5m 16:05 ET low 2226.61 (<= 2237.0); T2 2220.0 NOT hit; stop 2272.0 never touched (maxH 2265.96); inv 15m clear (maxC15 2261.52). Paper close at stated T1.",
-      "fill_id": "2026-11-05_ETH-USD_225"
-    },
-    {
       "t": "2026-11-05T16:11:18-05:00",
       "agent": "Risk",
       "kind": "check",
@@ -6382,6 +6374,13 @@ window.__DESK_STATE__ = {
       "kind": "plan",
       "text": "1807 ET: closed 0; opened {}; held ['BTC-USD', 'ETH-USD']",
       "reason": "race mode: direction=long; closes=0; opens_ok={}; cash_pool after cushion; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-06T18:07:20-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 1807 ET race cycle \u00b7 hold/rotate check \u00b7 eq $151,674 \u00b7 exposure $7,735,383 (51.0x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": {
