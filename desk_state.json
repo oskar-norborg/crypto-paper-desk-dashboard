@@ -4512,14 +4512,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-05T08:11:02-05:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE BTC-USD @ 79532.4 \u00b7 P&L $+20682.62",
-      "reason": "T1 80000 hit 07:25 ET (5m L=79977.81) and T2 79700 hit 07:35 ET (5m L=79639.28); mark now 79532.4 still below T2 with 15m closes 79610/79587/79478 and no stop/invalidation (5m hi since entry 80455.8 < stop 80580; no 15m close > 80500). Bank winner per armed T2 trigger; free margin for race redeploy.",
-      "fill_id": "2026-11-05_BTC-USD_200"
-    },
-    {
       "t": "2026-11-05T08:12:18-05:00",
       "agent": "Rug Check",
       "kind": "check",
@@ -5999,6 +5991,13 @@
       "kind": "check",
       "text": "ETH-USD short 3449.7104 @ 2235.55: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-06T08:11:13-05:00: maxH=2244.72 minL=2221.72 (stop 2253.43; T1 2213.19/T2 2188.19); 15m max close=2240.93 (inv 2245.39). No close trigger."
+    },
+    {
+      "t": "2026-11-06T09:16:24-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "XRP-USD short 2771104.9 @ 1.186: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-06T08:11:13-05:00: maxH=1.1889 minL=1.1769 (stop 1.2054; T1 1.1741/T2 1.1641); 15m max close=1.1872 (inv 1.1994). No close trigger."
     }
   ],
   "scanner_feed": {
