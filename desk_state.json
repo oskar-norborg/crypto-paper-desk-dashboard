@@ -4173,13 +4173,6 @@
   "activity": [
     {
       "t": "2026-11-04T04:07:26-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "ETH-USD long 175 @ 2,275.88: target 2,304 touched on 00:50 ET 5m candle (high 2,304.50); stop 2,257 never touched (low since entry 2,273.41)",
-      "reason": "Coinbase public 5m candles 00:05-04:05 ET; target hit before any stop/invalidation"
-    },
-    {
-      "t": "2026-11-04T04:07:26-05:00",
       "agent": "Executor",
       "kind": "close",
       "text": "PAPER CLOSE ETH-USD @ 2304 \u00b7 P&L $+4921.00",
@@ -5651,6 +5644,13 @@
       "kind": "scan",
       "text": "CHAOS race cycle 2106 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
       "reason": "scheduled race cycle; scan scans/2026-11-05_2106_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-05T21:06:04-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "BTC-USD long 222.27 @ 76130.36: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-05T19:08:57-05:00: maxH=76306.26 minL=75767.11 (stop 74955.1; T1 77272.32/T2 78414.27); 15m min close=75950.77 (inv 75085.1). No close trigger."
     }
   ],
   "scanner_feed": {
