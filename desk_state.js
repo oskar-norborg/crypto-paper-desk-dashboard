@@ -2369,7 +2369,7 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-06T16:02:02-05:00",
-      "note": "last: paper fill ETH-USD"
+      "note": "1601 ET: closed 1; opened {'ETH-USD': True}; held ['BTC-USD', 'ETH-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -4843,15 +4843,6 @@ window.__DESK_STATE__ = {
     {
       "t": "2026-11-05T13:18:16-05:00",
       "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 2075.6 SOL-USD @ 89.06 \u00b7 notional $184,853 (50x, margin $3,697) \u00b7 stop 90.55 \u00b7 tgt 87.4 \u00b7 risk $3,092.64",
-      "reason": "RACE deploy free cash: 15m still LL/bearish tilt (not flipped), 24h -6.43%. SOL continuation short under BTC/ETH dump; 15m LL cascade intact (closes descending through 12:00-13:00); BTC/ETH shorts HOLD near T1 (BTC minL 75553 vs T1 75500; ETH minL 2239 vs T1 2237) \u2014 free cash only deploy. Notional $184,853 @ 50x (margin $3,697), risk $3,093 (1.6% eq, warn-only). T1 87.4, T2 85.8.",
-      "fill_id": "2026-11-05_SOL-USD_226",
-      "card": "RACE_SOL_SHORT_1318"
-    },
-    {
-      "t": "2026-11-05T13:18:16-05:00",
-      "agent": "Executor",
       "kind": "plan",
       "text": "1318 ET: closed 0; BTC/ETH HOLD near T1; opened continuation shorts where free cash allowed",
       "reason": "race mode: no hard close trigger on BTC/ETH (T1 nearly but not hit); redeployed free margin into liquid major shorts; opens ok={'SOL': True}; plateau not acceptable"
@@ -6317,6 +6308,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE redeploy 1601 ET: BTC/ETH tilt long. 24h +0.04%. ETH-USD concentrated long under BTC/ETH reclaim (not bearish 15m); stop below floor 2223.12; session 5m low 2222.88; 15m detail [('14:15', 2223.81, 2227.7, 2222.88), ('14:30', 2229.78, 2231.03, 2223.23), ('14:45', 2232.13, 2232.43, 2226.62), ('15:00', 2228.74, 2234.57, 2228.72), ('15:15', 2227.93, 2229.54, 2223.12), ('15:30', 2229.52, 2232.61, 2226.96), ('15:45', 2225.85, 2230.8, 2224.95), ('16:00', 2226.18, 2227.09, 2224.53)]. Notional $1,526,483 @ 50x (margin $30,530), risk $15,264 (10.5% eq, warn-only). T1 2259.5, T2 2289.5.",
       "fill_id": "2026-11-06_ETH-USD_277",
       "card": "RACE_ETH_LONG_1601"
+    },
+    {
+      "t": "2026-11-06T16:02:02-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "1601 ET: closed 1; opened {'ETH-USD': True}; held ['BTC-USD', 'ETH-USD']",
+      "reason": "race mode: direction=long; closes=1; opens_ok={'ETH-USD': True}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": {
