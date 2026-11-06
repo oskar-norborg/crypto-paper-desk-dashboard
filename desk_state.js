@@ -2186,8 +2186,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-06T04:11:10-05:00",
-      "note": "logged 2026-11-06_ETH-USD_255"
+      "last_run": "2026-11-06T04:11:13-05:00",
+      "note": "CHAOS: 0410 ET race cycle \u00b7 hold/rotate check \u00b7 eq $229,922 \u00b7 exposure $11,415,782 (49.65x)"
     },
     "Equity": {
       "status": "ready",
@@ -4440,13 +4440,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-04T20:10:23-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "Armed 19:55 ETH long/short and BTC long triggers: none fired on closed 5m bars; wick-only probes below ETH 2416 / BTC 80390 rejected on close",
-      "reason": "routine: take armed trigger on 5m close confirmation only; no invent fill on mid-range chop"
-    },
-    {
-      "t": "2026-11-04T20:10:23-05:00",
       "agent": "Executor",
       "kind": "plan",
       "text": "20:08 ET cycle: stay FLAT. Re-armed tighter triggers (ETH long >2430+BTC>80650 / ETH short <2415+BTC<80350 / BTC long >80750). Next fill only on confirmed 5m close break.",
@@ -5931,6 +5924,13 @@ window.__DESK_STATE__ = {
       "kind": "plan",
       "text": "0410 ET: closed 2; opened {'BTC-USD': True, 'ETH-USD': True}; held ['BTC-USD', 'ETH-USD']",
       "reason": "race mode: direction=long; closes=2; opens_ok={'BTC-USD': True, 'ETH-USD': True}; cash_pool after cushion; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-06T04:11:13-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 0410 ET race cycle \u00b7 hold/rotate check \u00b7 eq $229,922 \u00b7 exposure $11,415,782 (49.65x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": {
