@@ -4746,15 +4746,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-05T11:06:25-05:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 26699.7 SOL-USD @ 89.96 \u00b7 notional $2,401,905 (50x, margin $48,038) \u00b7 stop 91.8 \u00b7 tgt 87.8 \u00b7 risk $49,127.45",
-      "reason": "RACE redeploy after banking prior short targets: 15m still LL/bearish tilt (not flipped long), 24h -6.88%. SOL continuation short under banked T1 90.50; soft-follow BTC/ETH dump; T2 88.80 not yet traded. Notional $2,401,905 @ 50x (margin $48,038), risk $49,127 (18.0% eq, warn-only). T1 87.8, T2 85.5.",
-      "fill_id": "2026-11-05_SOL-USD_218",
-      "card": "RACE_SOL_SHORT_1106"
-    },
-    {
-      "t": "2026-11-05T11:06:25-05:00",
       "agent": "Rug Check",
       "kind": "check",
       "text": "XRP-USD PASS (chaos: non-blocking)",
@@ -6224,6 +6215,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
       "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
+    },
+    {
+      "t": "2026-11-06T15:00:07-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD short 2833.8737 @ 2223.82: RACE ROTATE \u2014 thesis/momentum broken before stop",
+      "reason": "RACE rotate 1459 ET: cut ETH-USD short loser/broken-momentum BEFORE stop. uP&L $-23,549.49; stop_prog 47% of path to stop 2241.61 (mark 2232.58, entry 2223.82); symbol 15m bearish_tilt=False; book direction=long. Free margin for concentrated highest-conviction swing. Public mark close."
     }
   ],
   "scanner_feed": {
