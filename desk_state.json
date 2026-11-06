@@ -4725,13 +4725,6 @@
   "activity": [
     {
       "t": "2026-11-05T11:06:12-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "NEAR-USD short 41103.58 @ 3.8221: T1 3.7 HIT \u2014 CLOSE at stated T1",
-      "reason": "Coinbase public 5m since 10:07 ET: maxH=3.8396; minL=3.6298; 15m max close=3.7531. T1 3.7 hit: Coinbase public 5m 10:50 ET low 3.6298 (<= 3.7); T2 3.55 NOT hit; stop 3.95 never touched (maxH 3.8396); inv 15m clear (maxC15 3.7531). Paper close at stated T1."
-    },
-    {
-      "t": "2026-11-05T11:06:12-05:00",
       "agent": "Executor",
       "kind": "close",
       "text": "PAPER CLOSE NEAR-USD @ 3.7 \u00b7 P&L $+5018.75",
@@ -6208,6 +6201,13 @@
       "kind": "check",
       "text": "ETH-USD short 2833.8737 @ 2223.82: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-06T13:06:51-05:00: maxH=2230.83 minL=2220.04 (stop 2241.61; T1 2201.58/T2 2176.58); 15m max close=2228.08 (inv 2232.59). No close trigger."
+    },
+    {
+      "t": "2026-11-06T14:05:52-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "XRP-USD short 2282294.9 @ 1.1834: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-06T13:06:51-05:00: maxH=1.1891 minL=1.1807 (stop 1.1991; T1 1.1716/T2 1.1616); 15m max close=1.1853 (inv 1.1931). No close trigger."
     }
   ],
   "scanner_feed": {
