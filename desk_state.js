@@ -6,42 +6,15 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 219149.86,
-  "cash": 59.5,
-  "realized_pnl": 178343.56,
-  "unrealized_pnl": -9193.7,
-  "day_pnl": 14237.73,
-  "day_pnl_pct": 0.06948,
+  "equity": 219716.21,
+  "cash": 162642.82,
+  "realized_pnl": 169716.21,
+  "unrealized_pnl": 0.0,
+  "day_pnl": 14804.08,
+  "day_pnl_pct": 0.07225,
   "day_baseline_date": "2026-11-06",
   "day_baseline_equity": 204912.13,
   "open_positions": [
-    {
-      "id": "2026-11-06_BTC-USD_254",
-      "symbol": "BTC-USD",
-      "side": "long",
-      "size": 112.82,
-      "entry": 75877.8,
-      "notional": 8560533.4,
-      "stop": 75270.78,
-      "target": 76788.33,
-      "target2": 77188.33,
-      "invalidation": "15m close < 75449.11 or stop 75270.78",
-      "risk_usd": 68484.0,
-      "risk_pct_equity": 0.29992,
-      "opened_at": "2026-11-06T04:11:10-05:00",
-      "card": "RACE_BTC_LONG_0410",
-      "reason": "RACE redeploy 0410 ET: BTC/ETH tilt long. 24h -5.59%. BTC-USD concentrated long under BTC/ETH reclaim (not bearish 15m); stop below floor 75399.11; session 5m low 75186; 15m detail [('02:15', 75242.62, 75374.6, 75213), ('02:30', 75598.36, 75675.49, 75186), ('02:45', 75478.42, 75718.16, 75442.8), ('03:00', 75548.37, 75559.71, 75357), ('03:15', 75522.59, 75706.99, 75501.32), ('03:30', 75582.98, 75605.09, 75399.11), ('03:45', 75555.66, 75632.42, 75536.37), ('04:00', 75907.35, 76000, 75531.35)]. Notional $8,560,533 @ 50x (margin $171,211), risk $68,484 (30.0% eq, warn-only). T1 76788.33, T2 77188.33.",
-      "price_source": "coinbase_exchange_public_ticker bid/ask/price 75877.8 @ 2026-11-06T04:11:10-05:00 ET (exch 2026-11-06T09:11:09.650166125Z) api.exchange.coinbase.com unauthenticated",
-      "override": null,
-      "paper_only": true,
-      "leverage": 50.0,
-      "margin": 171210.67,
-      "mark": 75796.31,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-06T08:11:00-05:00",
-      "unrealized_pnl": -9193.7,
-      "exposure": 8551339.69
-    },
     {
       "id": "2026-11-06_ETH-USD_255",
       "symbol": "ETH-USD",
@@ -70,7 +43,7 @@ window.__DESK_STATE__ = {
       "exposure": 2853669.33
     }
   ],
-  "open_count": 2,
+  "open_count": 1,
   "closed_positions": [
     {
       "type": "close",
@@ -2122,11 +2095,28 @@ window.__DESK_STATE__ = {
       "reason": "T2 1.1775 hit (short): Coinbase public 5m 02:30 ET low 1.176 (<= 1.1775); stop 1.2104 never touched (maxH 1.2002); inv 15m clear (maxC15 1.1974). Paper close at stated T2.",
       "price_source": "coinbase_exchange_public 5m candle 2026-11-06 02:30 ET low 1.176 (api.exchange.coinbase.com/products/XRP-USD/candles, unauthenticated); fill at stated T2 1.1775",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-06_BTC-USD_254",
+      "symbol": "BTC-USD",
+      "side": "long",
+      "size": 112.82,
+      "entry": 75877.8,
+      "exit": 75801.33,
+      "pnl": -8627.35,
+      "notional": 8560533.4,
+      "leverage": 50.0,
+      "margin": 171210.67,
+      "closed_at": "2026-11-06T08:11:10-05:00",
+      "reason": "RACE rotate 0810 ET: cut BTC-USD long loser/broken-momentum BEFORE stop. uP&L $-9,193.70; stop_prog 13% of path to stop 75270.78 (mark 75801.33, entry 75877.8); symbol 15m bearish_tilt=True; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close.",
+      "price_source": "coinbase_exchange_public_ticker bid/ask/price 75801.33 @ 2026-11-06T08:11:10-05:00 ET (exch 2026-11-06T13:11:09.409045575Z) api.exchange.coinbase.com unauthenticated",
+      "paper_only": true
     }
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 219149.86,
+  "max_risk_usd": 219716.21,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -2049121.3,
   "paused": false,
@@ -2181,8 +2171,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-06T04:11:10-05:00",
-      "note": "0410 ET: closed 2; opened {'BTC-USD': True, 'ETH-USD': True}; held ['BTC-USD', 'ETH-USD']"
+      "last_run": "2026-11-06T08:11:10-05:00",
+      "note": "last: closed BTC-USD"
     },
     "Logger": {
       "status": "ready",
@@ -4445,16 +4435,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-06T08:11:02-05:00",
       "equity": 219149.86,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-06T08:11:10-05:00",
+      "equity": 219716.21,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-04T22:26:13-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "SOL-USD PASS (chaos: non-blocking)",
-      "reason": "vol $118.2M, spread 0.0103%; Coinbase-listed CEX major; prefer liquid majors for NEW opens"
-    },
     {
       "t": "2026-11-04T22:26:13-05:00",
       "agent": "Executor",
@@ -5939,6 +5927,14 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "BTC-USD long 112.82 @ 75877.8: RACE ROTATE \u2014 thesis/momentum broken before stop",
       "reason": "RACE rotate 0810 ET: cut BTC-USD long loser/broken-momentum BEFORE stop. uP&L $-9,193.70; stop_prog 13% of path to stop 75270.78 (mark 75801.33, entry 75877.8); symbol 15m bearish_tilt=True; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close."
+    },
+    {
+      "t": "2026-11-06T08:11:10-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE BTC-USD @ 75801.3 \u00b7 P&L $-8627.35",
+      "reason": "RACE rotate 0810 ET: cut BTC-USD long loser/broken-momentum BEFORE stop. uP&L $-9,193.70; stop_prog 13% of path to stop 75270.78 (mark 75801.33, entry 75877.8); symbol 15m bearish_tilt=True; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close.",
+      "fill_id": "2026-11-06_BTC-USD_254"
     }
   ],
   "scanner_feed": {
@@ -6313,10 +6309,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 228284.06,
-  "exposure": 11405009.02,
-  "buying_power": 0.0,
-  "effective_leverage": 52.04,
+  "margin_used": 57073.39,
+  "exposure": 2853669.33,
+  "buying_power": 8132141.17,
+  "effective_leverage": 12.99,
   "operating_timezone": "America/New_York",
   "events": [
     {
