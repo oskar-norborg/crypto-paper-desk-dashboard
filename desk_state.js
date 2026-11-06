@@ -4158,14 +4158,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-03T22:05:16-05:00",
-      "agent": "Executor",
-      "kind": "update",
-      "text": "ETH-USD runner 175: stop 2,293\u21922,262, target 2,225",
-      "reason": "lock profit after T1",
-      "fill_id": "2026-11-03_ETH-USD_185"
-    },
-    {
       "t": "2026-11-03T22:05:35-05:00",
       "agent": "Scanner",
       "kind": "scan",
@@ -5641,6 +5633,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 2004 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
       "reason": "scheduled race cycle; scan scans/2026-11-05_2004_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-05T20:04:29-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "BTC-USD long 222.27 @ 76130.36: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-05T19:08:57-05:00: maxH=76306.26 minL=75941.46 (stop 74955.1; T1 77272.32/T2 78414.27); 15m min close=76064.76 (inv 75085.1). No close trigger."
     }
   ],
   "scanner_feed": {
@@ -5999,7 +5998,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-05T20:04:28-05:00",
+  "updated_at": "2026-11-05T20:04:29-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
