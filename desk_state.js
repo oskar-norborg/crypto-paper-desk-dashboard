@@ -6,44 +6,16 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 216650.14,
-  "cash": 163415.81,
-  "realized_pnl": 205678.25,
-  "unrealized_pnl": -39028.11,
-  "day_pnl": 11738.01,
-  "day_pnl_pct": 0.05728,
+  "equity": 208063.96,
+  "cash": 208063.96,
+  "realized_pnl": 158063.96,
+  "unrealized_pnl": 0.0,
+  "day_pnl": 3151.83,
+  "day_pnl_pct": 0.01538,
   "day_baseline_date": "2026-11-06",
   "day_baseline_equity": 204912.13,
-  "open_positions": [
-    {
-      "id": "2026-11-06_XRP-USD_263",
-      "symbol": "XRP-USD",
-      "side": "short",
-      "size": 3902810.7,
-      "entry": 1.182,
-      "notional": 4613122.25,
-      "stop": 1.1942,
-      "target": 1.1694,
-      "target2": 1.1594,
-      "invalidation": "15m close > 1.1882 (reclaim of recent bounce shelf) or stop 1.1942",
-      "risk_usd": 47614.29,
-      "risk_pct_equity": 0.14709,
-      "opened_at": "2026-11-06T11:13:02-05:00",
-      "card": "RACE_XRP_SHORT_1112",
-      "reason": "RACE redeploy 1112 ET: BTC/ETH tilt short. 24h -4.82%. XRP-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 1.1902; session 5m low 1.1724; 15m detail [('09:15', 1.1788, 1.1822, 1.1777), ('09:30', 1.1849, 1.1898, 1.1733), ('09:45', 1.1847, 1.1925, 1.1803), ('10:00', 1.1893, 1.1894, 1.1724), ('10:15', 1.1843, 1.1902, 1.183), ('10:30', 1.185, 1.1854, 1.1785), ('10:45', 1.1862, 1.1877, 1.1825), ('11:00', 1.1822, 1.1896, 1.182)]. Notional $4,613,122 @ 50x (margin $92,262), risk $47,614 (14.7% eq, warn-only). T1 1.1694, T2 1.1594.",
-      "price_source": "coinbase_exchange_public_ticker bid/ask/price 1.182 @ 2026-11-06T11:13:02-05:00 ET (exch 2026-11-06T16:13:01.319799700Z) api.exchange.coinbase.com unauthenticated",
-      "override": null,
-      "paper_only": true,
-      "leverage": 50.0,
-      "margin": 92262.44,
-      "mark": 1.192,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-06T12:08:51-05:00",
-      "unrealized_pnl": -39028.11,
-      "exposure": 4652150.35
-    }
-  ],
-  "open_count": 1,
+  "open_positions": [],
+  "open_count": 0,
   "closed_positions": [
     {
       "type": "close",
@@ -2180,11 +2152,28 @@ window.__DESK_STATE__ = {
       "reason": "INV 15m close > 2229.4 (short): Coinbase public 15m 11:45 ET close 2232.46 (high 2235.26/low 2221.93). Thesis broken \u2014 close at public mark 2229.32.",
       "price_source": "coinbase_exchange_public_ticker bid/ask/price 2229.32 @ 2026-11-06T12:08:52-05:00 ET (exch 2026-11-06T17:08:49.736221512Z) api.exchange.coinbase.com unauthenticated",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-06_XRP-USD_263",
+      "symbol": "XRP-USD",
+      "side": "short",
+      "size": 3902810.7,
+      "entry": 1.182,
+      "exit": 1.1942,
+      "pnl": -47614.29,
+      "notional": 4613122.25,
+      "leverage": 50.0,
+      "margin": 92262.44,
+      "closed_at": "2026-11-06T12:08:52-05:00",
+      "reason": "STOP 1.1942 hit (short): Coinbase public 5m 11:25 ET high 1.1955 (>= 1.1942). Paper close at stated stop.",
+      "price_source": "coinbase_exchange_public 5m candle 2026-11-06 11:25 ET high 1.1955 (api.exchange.coinbase.com/products/XRP-USD/candles, unauthenticated); fill at stated stop 1.1942",
+      "paper_only": true
     }
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 216650.14,
+  "max_risk_usd": 208063.96,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -2049121.3,
   "paused": false,
@@ -2240,7 +2229,7 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-06T12:08:52-05:00",
-      "note": "last: closed ETH-USD"
+      "note": "last: closed XRP-USD"
     },
     "Logger": {
       "status": "ready",
@@ -4583,17 +4572,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-06T12:08:52-05:00",
       "equity": 216650.14,
       "kind": "close"
+    },
+    {
+      "t": "2026-11-06T12:08:52-05:00",
+      "equity": 208063.96,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-05T10:07:10-05:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE ETH-USD @ 2340 \u00b7 P&L $+24550.40",
-      "reason": "T1 2340 hit: Coinbase public 5m 09:55 ET low 2331.32 (<=2340); T2 2310 not traded (session minL 2317.53); stop 2410 never touched (maxH 2392.93); inv 15m close>2400 clear. Paper close at stated T1.",
-      "fill_id": "2026-11-05_ETH-USD_203"
-    },
     {
       "t": "2026-11-05T10:07:11-05:00",
       "agent": "Risk",
@@ -6073,6 +6059,14 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "XRP-USD short 3902810.7 @ 1.182: STOP 1.1942 HIT \u2014 CLOSE at stated stop",
       "reason": "Coinbase public candles since 2026-11-06T11:13:02-05:00: maxH=1.1981; minL=1.181; 15m max close=1.1955; 15m min close=None. STOP 1.1942 hit (short): Coinbase public 5m 11:25 ET high 1.1955 (>= 1.1942). Paper close at stated stop."
+    },
+    {
+      "t": "2026-11-06T12:08:52-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE XRP-USD @ 1.1942 \u00b7 P&L $-47614.29",
+      "reason": "STOP 1.1942 hit (short): Coinbase public 5m 11:25 ET high 1.1955 (>= 1.1942). Paper close at stated stop.",
+      "fill_id": "2026-11-06_XRP-USD_263"
     }
   ],
   "scanner_feed": {
@@ -6447,10 +6441,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 92262.44,
-  "exposure": 4652150.35,
-  "buying_power": 6180356.65,
-  "effective_leverage": 21.47,
+  "margin_used": 0,
+  "exposure": 0.0,
+  "buying_power": 10403198.0,
+  "effective_leverage": 0.0,
   "operating_timezone": "America/New_York",
   "events": [
     {
