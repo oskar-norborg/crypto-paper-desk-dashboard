@@ -4131,13 +4131,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-03T15:00:36-05:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "No new opens: no armed trigger fired 14:05-14:55 ET (BTC 77421-77582 range); flat",
-      "reason": "no edge in tight chop; armed for 16:00 ET: BTC <77400 short / >77810 long, ETH >2305 long / <2280 short, SOL >93.85 long"
-    },
-    {
       "t": "2026-11-03T16:03:40-05:00",
       "agent": "Executor",
       "kind": "fill",
@@ -5615,6 +5608,13 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE ETH-USD @ 2210 \u00b7 P&L $+41585.40",
       "reason": "T1 2210.0 hit: Coinbase public 5m 18:05 ET low 2203.69 (<= 2210.0); T2 2185.0 NOT hit; stop 2256.0 never touched (maxH 2242.36); inv 15m clear (maxC15 2238.5). Paper close at stated T1.",
       "fill_id": "2026-11-05_ETH-USD_231"
+    },
+    {
+      "t": "2026-11-05T19:08:44-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "XRP-USD short 1219317.7 @ 1.2231: T2 1.2 HIT \u2014 CLOSE at stated T2",
+      "reason": "Coinbase public candles since 2026-11-05T16:11:29-05:00: maxH=1.2261; minL=1.1978; 15m max close=1.2244. T2 1.2 hit: Coinbase public 5m 18:10 ET low 1.1985 (<= 1.2); stop 1.235 never touched (maxH 1.2261); inv 15m clear (maxC15 1.2244). Paper close at stated T2."
     }
   ],
   "scanner_feed": {
