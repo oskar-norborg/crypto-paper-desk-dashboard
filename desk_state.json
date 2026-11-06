@@ -4655,13 +4655,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-05T10:07:21-05:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "10:05 ET: closed BTC T2 + ETH T1 + SOL T2; opened BTC/ETH/SOL continuation shorts (structure not flipped)",
-      "reason": "race mode: banked targets (fills at stated levels), redeployed free margin into liquid major continuation shorts; opens ok BTC=True ETH=True SOL=True; plateau not acceptable"
-    },
-    {
       "t": "2026-11-05T10:07:24-05:00",
       "agent": "Logger",
       "kind": "batch",
@@ -6138,6 +6131,13 @@
       "kind": "check",
       "text": "BTC-USD long 102.81 @ 75866.03: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-06T12:09:04-05:00: maxH=75937.98 minL=75376.02 (stop 75183.67; T1 76776.42/T2 77176.42); 15m min close=75544.15 (inv 75313.67). No close trigger."
+    },
+    {
+      "t": "2026-11-06T13:06:36-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD long 1166.4264 @ 2229.18: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-06T12:09:04-05:00: maxH=2234.59 minL=2215.23 (stop 2206.89; T1 2262.62/T2 2292.62); 15m min close=2218.82 (inv 2216.5). No close trigger."
     }
   ],
   "scanner_feed": {
