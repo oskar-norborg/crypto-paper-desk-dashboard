@@ -2301,8 +2301,8 @@
   "agents": {
     "Scanner": {
       "status": "idle",
-      "last_run": "2026-11-06T14:05:49-05:00",
-      "note": "CHAOS race cycle 1405 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin f"
+      "last_run": "2026-11-06T14:59:53-05:00",
+      "note": "CHAOS race cycle 1459 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin f"
     },
     "Rug Check": {
       "status": "idle",
@@ -4734,15 +4734,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-05T11:06:24-05:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 73.97 BTC-USD @ 75763 \u00b7 notional $5,604,186 (50x, margin $112,084) \u00b7 stop 76280 \u00b7 tgt 74500 \u00b7 risk $38,245.45",
-      "reason": "RACE redeploy after banking prior short targets: 15m still LL/bearish tilt (not flipped long), 24h -5.84%. BTC continuation short under post-T2 bounce; 15m LL cascade intact (banked T2 75500); stop above 10:55-11:00 micro-bounce highs. Notional $5,604,186 @ 50x (margin $112,084), risk $38,245 (14.3% eq, warn-only). T1 74500.0, T2 73000.0.",
-      "fill_id": "2026-11-05_BTC-USD_216",
-      "card": "RACE_BTC_SHORT_1106"
-    },
-    {
       "t": "2026-11-05T11:06:25-05:00",
       "agent": "Rug Check",
       "kind": "check",
@@ -6217,6 +6208,13 @@
       "kind": "batch",
       "text": "CHAOS: 1405 ET race cycle \u00b7 hold/rotate check \u00b7 eq $171,323 \u00b7 exposure $9,011,678 (52.6x)",
       "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
+    },
+    {
+      "t": "2026-11-06T14:59:53-05:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "CHAOS race cycle 1459 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
+      "reason": "scheduled race cycle; scan scans/2026-11-06_1459_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
     }
   ],
   "scanner_feed": {
@@ -6575,7 +6573,7 @@
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-06T14:06:05-05:00",
+  "updated_at": "2026-11-06T14:59:53-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
