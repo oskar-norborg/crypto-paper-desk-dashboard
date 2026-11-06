@@ -1998,7 +1998,7 @@ window.__DESK_STATE__ = {
     "Rug Check": {
       "status": "idle",
       "last_run": "2026-11-05T19:08:57-05:00",
-      "note": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)"
+      "note": "BTC-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -4115,15 +4115,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-03T19:00:13-05:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 350 ETH-USD @ 2272.57 \u00b7 notional $795,400 (20x, margin $39,770) \u00b7 stop 2293 \u00b7 tgt 2240 \u00b7 risk $7,150.50",
-      "reason": "Armed ETH short trigger fired: 18:55 ET 5m close 2,279.61 < 2,280 after 18:00-18:35 range 2,284.9-2,291.7 broke; BTC confirming (18:55 candle 77,569 -> 77,343, stop-run below session lows). Concentrated race swing ~$39.8k margin at 20x.",
-      "fill_id": "2026-11-03_ETH-USD_185",
-      "card": null
-    },
-    {
       "t": "2026-11-03T19:00:26-05:00",
       "agent": "Scanner",
       "kind": "scan",
@@ -5599,6 +5590,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
       "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
+    },
+    {
+      "t": "2026-11-05T19:08:57-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "BTC-USD PASS (chaos: non-blocking)",
+      "reason": "vol $1145.3M, spread 0.0000%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
     }
   ],
   "scanner_feed": {
