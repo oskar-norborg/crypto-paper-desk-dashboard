@@ -5,42 +5,15 @@
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 186967.83,
-  "cash": 50.01,
-  "realized_pnl": 154903.24,
-  "unrealized_pnl": -17935.41,
-  "day_pnl": -17944.3,
-  "day_pnl_pct": -0.08757,
+  "equity": 187612.01,
+  "cash": 110529.47,
+  "realized_pnl": 121985.44,
+  "unrealized_pnl": 15626.57,
+  "day_pnl": -17300.12,
+  "day_pnl_pct": -0.08443,
   "day_baseline_date": "2026-11-06",
   "day_baseline_equity": 204912.13,
   "open_positions": [
-    {
-      "id": "2026-11-06_ETH-USD_250",
-      "symbol": "ETH-USD",
-      "side": "short",
-      "size": 3220.9194,
-      "entry": 2226.03,
-      "notional": 7169863.21,
-      "stop": 2243.84,
-      "target": 2203.77,
-      "target2": 2178.77,
-      "invalidation": "15m close > 2230.49 (reclaim of recent bounce shelf) or stop 2243.84",
-      "risk_usd": 57364.57,
-      "risk_pct_equity": 0.27996,
-      "opened_at": "2026-11-06T00:02:31-05:00",
-      "card": "RACE_ETH_SHORT_0002",
-      "reason": "RACE redeploy 0002 ET: BTC/ETH tilt short. 24h -7.88%. ETH-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 2232.49; session 5m low 2223.83; 15m detail [('22:15', 2231.44, 2237.45, 2229.57), ('22:30', 2229.04, 2232.64, 2223.83), ('22:45', 2232.41, 2233.4, 2227.69), ('23:00', 2230.01, 2232.86, 2224.12), ('23:15', 2226.78, 2230.59, 2224.76), ('23:30', 2228.91, 2230.86, 2224.63), ('23:45', 2229.89, 2230.9, 2227.69), ('00:00', 2226.07, 2231.1, 2225.65)]. Notional $7,169,863 @ 50x (margin $143,397), risk $57,365 (28.0% eq, warn-only). T1 2203.77, T2 2178.77.",
-      "price_source": "coinbase_exchange_public_ticker bid/ask/price 2226.03 @ 2026-11-06T00:02:31-05:00 ET (exch 2026-11-06T05:02:29.893564999Z) api.exchange.coinbase.com unauthenticated",
-      "override": null,
-      "paper_only": true,
-      "leverage": 50.0,
-      "margin": 143397.26,
-      "mark": 2236.45,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-06T04:10:57-05:00",
-      "unrealized_pnl": -33561.98,
-      "exposure": 7203425.19
-    },
     {
       "id": "2026-11-06_XRP-USD_251",
       "symbol": "XRP-USD",
@@ -69,7 +42,7 @@
       "exposure": 3057171.92
     }
   ],
-  "open_count": 2,
+  "open_count": 1,
   "closed_positions": [
     {
       "type": "close",
@@ -2087,11 +2060,28 @@
       "reason": "INV 15m close < 2235.54 (long): Coinbase public 15m 22:15 ET close 2231.44 (high 2237.45/low 2229.57). Thesis broken \u2014 close at public mark 2225.65.",
       "price_source": "coinbase_exchange_public_ticker bid/ask/price 2225.65 @ 2026-11-06T00:02:18-05:00 ET (exch 2026-11-06T05:02:14.227423193Z) api.exchange.coinbase.com unauthenticated",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-06_ETH-USD_250",
+      "symbol": "ETH-USD",
+      "side": "short",
+      "size": 3220.9194,
+      "entry": 2226.03,
+      "exit": 2236.25,
+      "pnl": -32917.8,
+      "notional": 7169863.21,
+      "leverage": 50.0,
+      "margin": 143397.26,
+      "closed_at": "2026-11-06T04:10:59-05:00",
+      "reason": "INV 15m close > 2230.49 (short): Coinbase public 15m 04:00 ET close 2236.85 (high 2238.51/low 2222.34). Thesis broken \u2014 close at public mark 2236.25.",
+      "price_source": "coinbase_exchange_public_ticker bid/ask/price 2236.25 @ 2026-11-06T04:10:59-05:00 ET (exch 2026-11-06T09:10:58.534608851Z) api.exchange.coinbase.com unauthenticated",
+      "paper_only": true
     }
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 186967.83,
+  "max_risk_usd": 187612.01,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -2049121.3,
   "paused": false,
@@ -2146,8 +2136,8 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-06T00:02:31-05:00",
-      "note": "0002 ET: closed 2; opened {'ETH-USD': True, 'XRP-USD': True}; held ['ETH-USD', 'XRP-USD']"
+      "last_run": "2026-11-06T04:10:59-05:00",
+      "note": "last: closed ETH-USD"
     },
     "Logger": {
       "status": "ready",
@@ -4375,16 +4365,14 @@
       "t": "2026-11-06T04:10:59-05:00",
       "equity": 186967.83,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-06T04:10:59-05:00",
+      "equity": 187612.01,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-04T17:06:57-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 17:06 ET: 30 public marks; range \u2014 BTC 80,232, ETH 2,418.7, SOL 94.96",
-      "reason": "scheduled race cycle; scan scans/2026-11-04_1706_scan.md"
-    },
     {
       "t": "2026-11-04T17:06:57-05:00",
       "agent": "Executor",
@@ -5868,6 +5856,14 @@
       "kind": "check",
       "text": "ETH-USD short 3220.9194 @ 2226.03: INVALIDATION \u2014 CLOSE at public mark 2236.25",
       "reason": "Coinbase public candles since 2026-11-06T00:02:31-05:00: maxH=2238.51; minL=2210.41; 15m max close=2236.85; 15m min close=None. INV 15m close > 2230.49 (short): Coinbase public 15m 04:00 ET close 2236.85 (high 2238.51/low 2222.34). Thesis broken \u2014 close at public mark 2236.25."
+    },
+    {
+      "t": "2026-11-06T04:10:59-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE ETH-USD @ 2236.25 \u00b7 P&L $-32917.80",
+      "reason": "INV 15m close > 2230.49 (short): Coinbase public 15m 04:00 ET close 2236.85 (high 2238.51/low 2222.34). Thesis broken \u2014 close at public mark 2236.25.",
+      "fill_id": "2026-11-06_ETH-USD_250"
     }
   ],
   "scanner_feed": {
@@ -6242,10 +6238,10 @@
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 204853.23,
-  "exposure": 10260597.11,
-  "buying_power": 0.0,
-  "effective_leverage": 54.88,
+  "margin_used": 61455.97,
+  "exposure": 3057171.92,
+  "buying_power": 6323428.58,
+  "effective_leverage": 16.3,
   "operating_timezone": "America/New_York",
   "events": [
     {
