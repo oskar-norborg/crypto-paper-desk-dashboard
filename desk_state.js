@@ -4380,13 +4380,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-04T16:01:10-05:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: 16:00 ET race cycle \u00b7 flat, no trigger \u00b7 eq $75,866 \u00b7 exposure $0 (0.0x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
-    {
       "t": "2026-11-04T17:06:57-05:00",
       "agent": "Scanner",
       "kind": "scan",
@@ -5869,6 +5862,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 0410 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
       "reason": "scheduled race cycle; scan scans/2026-11-06_0410_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-06T04:10:59-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD short 3220.9194 @ 2226.03: INVALIDATION \u2014 CLOSE at public mark 2236.25",
+      "reason": "Coinbase public candles since 2026-11-06T00:02:31-05:00: maxH=2238.51; minL=2210.41; 15m max close=2236.85; 15m min close=None. INV 15m close > 2230.49 (short): Coinbase public 15m 04:00 ET close 2236.85 (high 2238.51/low 2222.34). Thesis broken \u2014 close at public mark 2236.25."
     }
   ],
   "scanner_feed": {
