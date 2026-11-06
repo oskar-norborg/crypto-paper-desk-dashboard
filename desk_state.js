@@ -2349,7 +2349,7 @@ window.__DESK_STATE__ = {
     "Rug Check": {
       "status": "idle",
       "last_run": "2026-11-06T17:00:23-05:00",
-      "note": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)"
+      "note": "ETH-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -4852,13 +4852,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-05T15:11:33-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "SOL-USD short 2075.6 @ 89.06: INVALIDATION \u2014 CLOSE at public mark 89.56",
-      "reason": "Coinbase public candles since 2026-11-05T13:18:16-05:00: maxH=90.13; minL=89.09; 15m max close=89.98. INV 15m close > 89.9: Coinbase public 15m 14:45 ET close 89.98 (high 90.13/low 89.84). Thesis broken \u2014 close at public mark 89.56."
-    },
-    {
-      "t": "2026-11-05T15:11:33-05:00",
       "agent": "Executor",
       "kind": "close",
       "text": "PAPER CLOSE SOL-USD @ 89.56 \u00b7 P&L $-1037.80",
@@ -6326,6 +6319,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
       "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
+    },
+    {
+      "t": "2026-11-06T17:00:23-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "ETH-USD PASS (chaos: non-blocking)",
+      "reason": "vol $311.4M, spread 0.0040%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
     }
   ],
   "scanner_feed": {
