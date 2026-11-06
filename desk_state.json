@@ -2321,8 +2321,8 @@
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-06T13:06:55-05:00",
-      "note": "CHAOS: 1306 ET race cycle \u00b7 hold/rotate check \u00b7 eq $180,446 \u00b7 exposure $9,002,554 (49.89x)"
+      "last_run": "2026-11-06T14:06:05-05:00",
+      "note": "CHAOS: 1405 ET race cycle \u00b7 hold/rotate check \u00b7 eq $171,323 \u00b7 exposure $9,011,678 (52.6x)"
     },
     "Equity": {
       "status": "ready",
@@ -4735,13 +4735,6 @@
   "activity": [
     {
       "t": "2026-11-05T11:06:24-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "BTC-USD PASS (chaos: non-blocking)",
-      "reason": "vol $762.6M, spread 0.0144%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
-    },
-    {
-      "t": "2026-11-05T11:06:24-05:00",
       "agent": "Executor",
       "kind": "fill",
       "text": "PAPER FILL short 73.97 BTC-USD @ 75763 \u00b7 notional $5,604,186 (50x, margin $112,084) \u00b7 stop 76280 \u00b7 tgt 74500 \u00b7 risk $38,245.45",
@@ -6217,6 +6210,13 @@
       "kind": "plan",
       "text": "1405 ET: closed 0; opened {}; held ['ETH-USD', 'XRP-USD']",
       "reason": "race mode: direction=short; closes=0; opens_ok={}; cash_pool after cushion; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-06T14:06:05-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 1405 ET race cycle \u00b7 hold/rotate check \u00b7 eq $171,323 \u00b7 exposure $9,011,678 (52.6x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": {
