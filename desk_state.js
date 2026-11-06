@@ -2150,8 +2150,8 @@ window.__DESK_STATE__ = {
     },
     "Rug Check": {
       "status": "idle",
-      "last_run": "2026-11-06T08:11:10-05:00",
-      "note": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)"
+      "last_run": "2026-11-06T08:11:13-05:00",
+      "note": "ETH-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -4438,13 +4438,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-04T22:26:15-05:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS race 22:22 ET: ETH HOLD + SOL open \u00b7 eq $72,923.87 \u00b7 cash $401.67 \u00b7 exposure $3,770,294 (51.7x) \u00b7 gap-to-$1M $927,076.13",
-      "reason": "public marks refreshed; equity recomputed; dashboard sync via desk_lib.save"
-    },
-    {
       "t": "2026-11-05T00:08:05-05:00",
       "agent": "Executor",
       "kind": "close",
@@ -5928,6 +5921,13 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE ETH-USD @ 2235.73 \u00b7 P&L $+676.65",
       "reason": "RACE rotate 0810 ET: cut ETH-USD long loser/broken-momentum BEFORE stop. uP&L $0.00; stop_prog 0% of path to stop 2212.85 (mark 2235.73, entry 2235.2); symbol 15m bearish_tilt=True; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close.",
       "fill_id": "2026-11-06_ETH-USD_255"
+    },
+    {
+      "t": "2026-11-06T08:11:13-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "ETH-USD PASS (chaos: non-blocking)",
+      "reason": "vol $503.2M, spread 0.0049%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
     }
   ],
   "scanner_feed": {
