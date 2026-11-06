@@ -7,41 +7,14 @@ window.__DESK_STATE__ = {
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
   "equity": 216650.14,
-  "cash": 6923.92,
-  "realized_pnl": 280504.53,
-  "unrealized_pnl": -113854.39,
+  "cash": 163415.81,
+  "realized_pnl": 205678.25,
+  "unrealized_pnl": -39028.11,
   "day_pnl": 11738.01,
   "day_pnl_pct": 0.05728,
   "day_baseline_date": "2026-11-06",
   "day_baseline_equity": 204912.13,
   "open_positions": [
-    {
-      "id": "2026-11-06_ETH-USD_262",
-      "symbol": "ETH-USD",
-      "side": "short",
-      "size": 5221.6527,
-      "entry": 2214.99,
-      "notional": 11565908.51,
-      "stop": 2235.4,
-      "target": 2192.84,
-      "target2": 2167.84,
-      "invalidation": "15m close > 2229.4 (reclaim of recent bounce shelf) or stop 2235.4",
-      "risk_usd": 106573.93,
-      "risk_pct_equity": 0.32246,
-      "opened_at": "2026-11-06T11:13:02-05:00",
-      "card": "RACE_ETH_SHORT_1112",
-      "reason": "RACE redeploy 1112 ET: BTC/ETH tilt short. 24h -2.11%. ETH-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 2231.4; session 5m low 2205.74; 15m detail [('09:15', 2230, 2234.08, 2224.6), ('09:30', 2233.04, 2241.94, 2214.89), ('09:45', 2225.18, 2242.48, 2218.7), ('10:00', 2230.68, 2231.1, 2205.74), ('10:15', 2218.24, 2231.4, 2216.28), ('10:30', 2223.15, 2224.7, 2209.57), ('10:45', 2227.72, 2230.55, 2220.3), ('11:00', 2216.39, 2229.56, 2214.41)]. Notional $11,565,909 @ 50x (margin $231,318), risk $106,574 (32.2% eq, warn-only). T1 2192.84, T2 2167.84.",
-      "price_source": "coinbase_exchange_public_ticker bid/ask/price 2214.99 @ 2026-11-06T11:13:02-05:00 ET (exch 2026-11-06T16:12:59.694721832Z) api.exchange.coinbase.com unauthenticated",
-      "override": null,
-      "paper_only": true,
-      "leverage": 50.0,
-      "margin": 231318.17,
-      "mark": 2229.32,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-06T12:08:50-05:00",
-      "unrealized_pnl": -74826.28,
-      "exposure": 11640734.8
-    },
     {
       "id": "2026-11-06_XRP-USD_263",
       "symbol": "XRP-USD",
@@ -70,7 +43,7 @@ window.__DESK_STATE__ = {
       "exposure": 4652150.35
     }
   ],
-  "open_count": 2,
+  "open_count": 1,
   "closed_positions": [
     {
       "type": "close",
@@ -2190,6 +2163,23 @@ window.__DESK_STATE__ = {
       "reason": "T1 1.1741 hit (short): Coinbase public 5m 09:30 ET low 1.1733 (<= 1.1741); T2 1.1641 NOT hit; stop 1.2054 never touched (maxH 1.1925); inv 15m clear (maxC15 1.1893). Paper close at stated T1.",
       "price_source": "coinbase_exchange_public 5m candle 2026-11-06 09:30 ET low 1.1733 (api.exchange.coinbase.com/products/XRP-USD/candles, unauthenticated); fill at stated T1 1.1741",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-06_ETH-USD_262",
+      "symbol": "ETH-USD",
+      "side": "short",
+      "size": 5221.6527,
+      "entry": 2214.99,
+      "exit": 2229.32,
+      "pnl": -74826.28,
+      "notional": 11565908.51,
+      "leverage": 50.0,
+      "margin": 231318.17,
+      "closed_at": "2026-11-06T12:08:52-05:00",
+      "reason": "INV 15m close > 2229.4 (short): Coinbase public 15m 11:45 ET close 2232.46 (high 2235.26/low 2221.93). Thesis broken \u2014 close at public mark 2229.32.",
+      "price_source": "coinbase_exchange_public_ticker bid/ask/price 2229.32 @ 2026-11-06T12:08:52-05:00 ET (exch 2026-11-06T17:08:49.736221512Z) api.exchange.coinbase.com unauthenticated",
+      "paper_only": true
     }
   ],
   "max_open": 200,
@@ -2249,8 +2239,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-06T11:13:02-05:00",
-      "note": "1112 ET: closed 2; opened {'ETH-USD': True, 'XRP-USD': True}; held ['ETH-USD', 'XRP-USD']"
+      "last_run": "2026-11-06T12:08:52-05:00",
+      "note": "last: closed ETH-USD"
     },
     "Logger": {
       "status": "ready",
@@ -4588,17 +4578,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-06T12:08:51-05:00",
       "equity": 216650.14,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-06T12:08:52-05:00",
+      "equity": 216650.14,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-05T10:07:10-05:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE BTC-USD @ 78000 \u00b7 P&L $+39354.54",
-      "reason": "T2 78000 hit: Coinbase public 5m 09:55 ET low 77967.02 (<=78000) after T1 at 09:50; stop 79880 never touched (maxH 79787.88); inv 15m close>79750 clear. Paper close at stated T2.",
-      "fill_id": "2026-11-05_BTC-USD_202"
-    },
     {
       "t": "2026-11-05T10:07:10-05:00",
       "agent": "Risk",
@@ -6078,6 +6065,14 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "ETH-USD short 5221.6527 @ 2214.99: INVALIDATION \u2014 CLOSE at public mark 2229.32",
       "reason": "Coinbase public candles since 2026-11-06T11:13:02-05:00: maxH=2235.26; minL=2214.3; 15m max close=2232.46; 15m min close=None. INV 15m close > 2229.4 (short): Coinbase public 15m 11:45 ET close 2232.46 (high 2235.26/low 2221.93). Thesis broken \u2014 close at public mark 2229.32."
+    },
+    {
+      "t": "2026-11-06T12:08:52-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE ETH-USD @ 2229.32 \u00b7 P&L $-74826.28",
+      "reason": "INV 15m close > 2229.4 (short): Coinbase public 15m 11:45 ET close 2232.46 (high 2235.26/low 2221.93). Thesis broken \u2014 close at public mark 2229.32.",
+      "fill_id": "2026-11-06_ETH-USD_262"
     }
   ],
   "scanner_feed": {
@@ -6452,10 +6447,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 323580.61,
-  "exposure": 16292885.15,
-  "buying_power": 0.0,
-  "effective_leverage": 75.2,
+  "margin_used": 92262.44,
+  "exposure": 4652150.35,
+  "buying_power": 6180356.65,
+  "effective_leverage": 21.47,
   "operating_timezone": "America/New_York",
   "events": [
     {
