@@ -2034,8 +2034,8 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-05T19:08:57-05:00",
-      "note": "1908 ET: closed 4; opened {'BTC': True}; held ['BTC-USD']"
+      "last_run": "2026-11-05T20:04:39-05:00",
+      "note": "2004 ET: closed 0; opened {}; held ['BTC-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -4162,14 +4162,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-04T00:04:08-05:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE ETH-USD @ 2225 \u00b7 P&L $+8324.75",
-      "reason": "target 2,225 hit: Coinbase public 1m candle 22:08 ET low 2,223.00 (after runner set 22:05:16 ET); runner covered at target (later 23:05 inval / 23:10 stop touches came after)",
-      "fill_id": "2026-11-03_ETH-USD_185"
-    },
-    {
       "t": "2026-11-04T00:04:18-05:00",
       "agent": "Executor",
       "kind": "fill",
@@ -5644,6 +5636,13 @@
       "kind": "check",
       "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
       "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
+    },
+    {
+      "t": "2026-11-05T20:04:39-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "2004 ET: closed 0; opened {}; held ['BTC-USD']",
+      "reason": "race mode: direction=long; closes=0; opens_ok={}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": {
