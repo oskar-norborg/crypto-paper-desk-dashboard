@@ -2352,7 +2352,7 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-06T15:00:11-05:00",
-      "note": "last: paper fill ETH-USD"
+      "note": "1459 ET: closed 2; opened {'BTC-USD': True, 'ETH-USD': True}; held ['BTC-USD', 'ETH-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -4799,14 +4799,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-05T12:01:39-05:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE XRP-USD @ 1.2384 \u00b7 P&L $+1353.09",
-      "reason": "INVALIDATION: BTC 15m close 76754 > 76100 rotate clause; stop 1.2629 not hit (max 1.2583); cover at ask",
-      "fill_id": "2026-11-05_XRP-USD_219"
-    },
-    {
       "t": "2026-11-05T12:02:02-05:00",
       "agent": "Executor",
       "kind": "fill",
@@ -6277,6 +6269,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE redeploy 1459 ET: BTC/ETH tilt long. 24h -1.13%. ETH-USD concentrated long under BTC/ETH reclaim (not bearish 15m); stop below floor 2222.88; session 5m low 2218.56; 15m detail [('13:00', 2224.73, 2225.5, 2218.56), ('13:15', 2224.6, 2225.24, 2220.04), ('13:30', 2228.08, 2230.83, 2222.66), ('13:45', 2227.66, 2230.42, 2225.72), ('14:00', 2227.47, 2229, 2225.01), ('14:15', 2223.81, 2227.7, 2222.88), ('14:30', 2229.78, 2231.03, 2223.23), ('14:45', 2232.13, 2232.43, 2226.62)]. Notional $1,907,404 @ 50x (margin $38,148), risk $18,952 (12.4% eq, warn-only). T1 2265.95, T2 2295.95.",
       "fill_id": "2026-11-06_ETH-USD_275",
       "card": "RACE_ETH_LONG_1459"
+    },
+    {
+      "t": "2026-11-06T15:00:11-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "1459 ET: closed 2; opened {'BTC-USD': True, 'ETH-USD': True}; held ['BTC-USD', 'ETH-USD']",
+      "reason": "race mode: direction=long; closes=2; opens_ok={'BTC-USD': True, 'ETH-USD': True}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": {
