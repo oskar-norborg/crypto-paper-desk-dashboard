@@ -4445,13 +4445,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-04T21:07:07-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 21:06 ET: 30/30 marks; BTC 80,755, ETH 2,431.5",
-      "reason": "scan scans/2026-11-04_2106_scan.md; public Coinbase ticker/stats/book/5m candles"
-    },
-    {
-      "t": "2026-11-04T21:07:07-05:00",
       "agent": "Executor",
       "kind": "fill",
       "text": "PAPER ETH-USD long 1400 @ 2431.70 (50x, margin $68.1k)",
@@ -5934,6 +5927,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "BTC-USD long 112.82 @ 75877.8: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-06T04:11:10-05:00: maxH=76256.44 minL=75747.53 (stop 75270.78; T1 76788.33/T2 77188.33); 15m min close=75780.78 (inv 75449.11). No close trigger."
+    },
+    {
+      "t": "2026-11-06T08:10:59-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD long 1276.6953 @ 2235.2: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-06T04:11:10-05:00: maxH=2247.39 minL=2230.01 (stop 2212.85; T1 2268.73/T2 2298.73); 15m min close=2231.64 (inv 2223.97). No close trigger."
     }
   ],
   "scanner_feed": {
