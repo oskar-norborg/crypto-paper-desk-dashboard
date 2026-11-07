@@ -6,16 +6,44 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 138687.04,
-  "cash": 138687.04,
+  "equity": 138946.64,
+  "cash": 41641.12,
   "realized_pnl": 88687.04,
-  "unrealized_pnl": 0.0,
-  "day_pnl": 38.94,
-  "day_pnl_pct": 0.00028,
+  "unrealized_pnl": 259.6,
+  "day_pnl": 298.54,
+  "day_pnl_pct": 0.00215,
   "day_baseline_date": "2026-11-07",
   "day_baseline_equity": 138648.1,
-  "open_positions": [],
-  "open_count": 0,
+  "open_positions": [
+    {
+      "id": "2026-11-07_ETH-USD_292",
+      "symbol": "ETH-USD",
+      "side": "short",
+      "size": 2163.3546,
+      "entry": 2242.95,
+      "notional": 4852296.2,
+      "stop": 2260.89,
+      "target": 2220.52,
+      "target2": 2195.52,
+      "invalidation": "15m close > 2241.11 (reclaim of recent bounce shelf) or stop 2260.89",
+      "risk_usd": 38810.58,
+      "risk_pct_equity": 0.27984,
+      "opened_at": "2026-11-07T00:05:27-05:00",
+      "card": "RACE_ETH_SHORT_0005",
+      "reason": "RACE redeploy 0005 ET: BTC/ETH tilt short. 24h +0.93%. ETH-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 2243.11; session 5m low 2236.71; 15m detail [('22:15', 2243.73, 2246.23, 2242.76), ('22:30', 2237.63, 2244.6, 2236.71), ('22:45', 2241.89, 2241.9, 2237.32), ('23:00', 2239.87, 2241.84, 2239.05), ('23:15', 2240.86, 2242.68, 2239.49), ('23:30', 2240.26, 2243.11, 2237.29), ('23:45', 2240.84, 2241.3, 2238.39), ('00:00', 2242.95, 2242.99, 2240.43)]. Notional $4,852,296 @ 50x (margin $97,046), risk $38,811 (28.0% eq, warn-only). T1 2220.52, T2 2195.52.",
+      "price_source": "coinbase_exchange_public_ticker bid/ask/price 2242.95 @ 2026-11-07T00:05:26-05:00 ET (exch 2026-11-07T05:05:25.383698971Z) api.exchange.coinbase.com unauthenticated",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 97045.92,
+      "mark": 2242.83,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-07T00:05:18-05:00",
+      "unrealized_pnl": 259.6,
+      "exposure": 4852036.6
+    }
+  ],
+  "open_count": 1,
   "closed_positions": [
     {
       "type": "close",
@@ -2394,7 +2422,7 @@ window.__DESK_STATE__ = {
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 138687.04,
+  "max_risk_usd": 138946.64,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -1386481.0,
   "paused": false,
@@ -2449,13 +2477,13 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-07T00:05:17-05:00",
-      "note": "last: closed BTC-USD"
+      "last_run": "2026-11-07T00:05:27-05:00",
+      "note": "last: paper fill ETH-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-06T22:06:10-05:00",
-      "note": "CHAOS: 2205 ET race cycle \u00b7 hold/rotate check \u00b7 eq $152,699 \u00b7 exposure $7,292,794 (47.76x)"
+      "last_run": "2026-11-07T00:05:27-05:00",
+      "note": "logged 2026-11-07_ETH-USD_292"
     },
     "Equity": {
       "status": "ready",
@@ -5088,16 +5116,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-07T00:05:17-05:00",
       "equity": 138687.04,
       "kind": "close"
+    },
+    {
+      "t": "2026-11-07T00:05:27-05:00",
+      "equity": 138946.64,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-05T21:06:01-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 2106 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
-      "reason": "scheduled race cycle; scan scans/2026-11-05_2106_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
-    },
     {
       "t": "2026-11-05T21:06:04-05:00",
       "agent": "Risk",
@@ -6566,6 +6592,15 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "ETH-USD PASS (chaos: non-blocking)",
       "reason": "vol $270.4M, spread 0.0031%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
+    },
+    {
+      "t": "2026-11-07T00:05:27-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 2163.35 ETH-USD @ 2242.95 \u00b7 notional $4,852,296 (50x, margin $97,046) \u00b7 stop 2260.89 \u00b7 tgt 2220.52 \u00b7 risk $38,810.58",
+      "reason": "RACE redeploy 0005 ET: BTC/ETH tilt short. 24h +0.93%. ETH-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 2243.11; session 5m low 2236.71; 15m detail [('22:15', 2243.73, 2246.23, 2242.76), ('22:30', 2237.63, 2244.6, 2236.71), ('22:45', 2241.89, 2241.9, 2237.32), ('23:00', 2239.87, 2241.84, 2239.05), ('23:15', 2240.86, 2242.68, 2239.49), ('23:30', 2240.26, 2243.11, 2237.29), ('23:45', 2240.84, 2241.3, 2238.39), ('00:00', 2242.95, 2242.99, 2240.43)]. Notional $4,852,296 @ 50x (margin $97,046), risk $38,811 (28.0% eq, warn-only). T1 2220.52, T2 2195.52.",
+      "fill_id": "2026-11-07_ETH-USD_292",
+      "card": "RACE_ETH_SHORT_0005"
     }
   ],
   "scanner_feed": {
@@ -6940,10 +6975,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 0,
-  "exposure": 0.0,
-  "buying_power": 6934352.0,
-  "effective_leverage": 0.0,
+  "margin_used": 97045.92,
+  "exposure": 4852036.6,
+  "buying_power": 2095295.4,
+  "effective_leverage": 34.92,
   "operating_timezone": "America/New_York",
   "events": [
     {
