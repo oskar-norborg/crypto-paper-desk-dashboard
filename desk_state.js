@@ -2733,8 +2733,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-07T16:07:11-05:00",
-      "note": "logged 2026-11-07_BTC-USD_315"
+      "last_run": "2026-11-07T16:07:14-05:00",
+      "note": "CHAOS: 1606 ET race cycle \u00b7 hold/rotate check \u00b7 eq $98,250 \u00b7 exposure $4,014,183 (40.86x)"
     },
     "Equity": {
       "status": "ready",
@@ -5601,14 +5601,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-06T12:08:52-05:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE XRP-USD @ 1.1942 \u00b7 P&L $-47614.29",
-      "reason": "STOP 1.1942 hit (short): Coinbase public 5m 11:25 ET high 1.1955 (>= 1.1942). Paper close at stated stop.",
-      "fill_id": "2026-11-06_XRP-USD_263"
-    },
-    {
       "t": "2026-11-06T12:09:03-05:00",
       "agent": "Rug Check",
       "kind": "check",
@@ -7077,6 +7069,13 @@ window.__DESK_STATE__ = {
       "kind": "plan",
       "text": "1606 ET: closed 0; opened {'SOL-USD': True, 'BTC-USD': True}; held ['BTC-USD', 'ETH-USD', 'SOL-USD', 'XRP-USD']",
       "reason": "race mode: direction=short; closes=0; opens_ok={'SOL-USD': True, 'BTC-USD': True}; cash_pool after cushion; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-07T16:07:14-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 1606 ET race cycle \u00b7 hold/rotate check \u00b7 eq $98,250 \u00b7 exposure $4,014,183 (40.86x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
