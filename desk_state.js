@@ -2655,8 +2655,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-07T10:01:24-05:00",
-      "note": "logged 2026-11-07_ETH-USD_308"
+      "last_run": "2026-11-07T10:01:26-05:00",
+      "note": "CHAOS: 1001 ET race cycle \u00b7 hold/rotate check \u00b7 eq $84,077 \u00b7 exposure $4,216,512 (50.15x)"
     },
     "Equity": {
       "status": "ready",
@@ -5429,13 +5429,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-06T08:11:10-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
-      "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
-    },
-    {
-      "t": "2026-11-06T08:11:10-05:00",
       "agent": "Risk",
       "kind": "check",
       "text": "BTC-USD long 112.82 @ 75877.8: RACE ROTATE \u2014 thesis/momentum broken before stop",
@@ -6906,6 +6899,13 @@ window.__DESK_STATE__ = {
       "kind": "plan",
       "text": "1001 ET: closed 2; opened {'BTC-USD': True, 'ETH-USD': True}; held ['BTC-USD', 'ETH-USD', 'XRP-USD']",
       "reason": "race mode: direction=long; closes=2; opens_ok={'BTC-USD': True, 'ETH-USD': True}; cash_pool after cushion; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-07T10:01:26-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 1001 ET race cycle \u00b7 hold/rotate check \u00b7 eq $84,077 \u00b7 exposure $4,216,512 (50.15x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": {
