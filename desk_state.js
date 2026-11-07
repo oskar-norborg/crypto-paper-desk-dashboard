@@ -5497,13 +5497,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-06T11:12:48-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 1112 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
-      "reason": "scheduled race cycle; scan scans/2026-11-06_1112_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
-    },
-    {
       "t": "2026-11-06T11:12:51-05:00",
       "agent": "Risk",
       "kind": "check",
@@ -6975,6 +6968,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "ETH-USD short 849.8417 @ 2233.38: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-07T11:01:21-05:00: maxH=2235.28 minL=2225.79 (stop 2251.25; T1 2211.05/T2 2186.05); 15m max close=2231.82 (inv 2239.68). No close trigger."
+    },
+    {
+      "t": "2026-11-07T11:58:55-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "SOL-USD short 9095.7 @ 89.43: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-07T11:01:22-05:00: maxH=89.57 minL=89.32 (stop 90.32; T1 88.36/T2 87.36); 15m max close=89.52 (inv 89.65). No close trigger."
     }
   ],
   "scanner_feed": {
