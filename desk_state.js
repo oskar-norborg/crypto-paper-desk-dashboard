@@ -2502,7 +2502,7 @@ window.__DESK_STATE__ = {
     "Rug Check": {
       "status": "idle",
       "last_run": "2026-11-07T04:07:08-05:00",
-      "note": "BTC-USD PASS (chaos: non-blocking)"
+      "note": "ETH-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -5189,13 +5189,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-05T22:10:38-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "XRP-USD short 3781195.6 @ 1.2156: HOLD \u2014 no trigger",
-      "reason": "Coinbase public 5m since 2026-11-05T21:06:18-05:00: maxH=1.221 minL=1.2128 (stop 1.2253; T1 1.2034/T2 1.1934); 15m max close=1.2181 (inv 1.2181). No close trigger."
-    },
-    {
       "t": "2026-11-05T22:10:48-05:00",
       "agent": "Rug Check",
       "kind": "check",
@@ -6666,6 +6659,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE redeploy 0406 ET: BTC/ETH tilt long. 24h -0.00%. BTC-USD concentrated long under BTC/ETH reclaim (not bearish 15m); stop below floor 76004.67; session 5m low 75884.82; 15m detail [('02:15', 75909.59, 75925.3, 75884.82), ('02:30', 75930.92, 75932.44, 75888.72), ('02:45', 75989.63, 76016.76, 75930.92), ('03:00', 76005.39, 76035.99, 75980.41), ('03:15', 76011.77, 76033.94, 76004.67), ('03:30', 76035.17, 76037.99, 76007.48), ('03:45', 76097.16, 76097.16, 76035.17), ('04:00', 76067.26, 76152.43, 76058.01)]. Notional $4,335,834 @ 50x (margin $86,717), risk $34,687 (30.0% eq, warn-only). T1 76980.07, T2 77380.07.",
       "fill_id": "2026-11-07_BTC-USD_296",
       "card": "RACE_BTC_LONG_0406"
+    },
+    {
+      "t": "2026-11-07T04:07:08-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "ETH-USD PASS (chaos: non-blocking)",
+      "reason": "vol $245.9M, spread 0.0004%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
     }
   ],
   "scanner_feed": {
