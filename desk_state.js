@@ -7,41 +7,14 @@ window.__DESK_STATE__ = {
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
   "equity": 96012.16,
-  "cash": 55.91,
-  "realized_pnl": 65680.12,
-  "unrealized_pnl": -19667.96,
+  "cash": 71673.86,
+  "realized_pnl": 50581.39,
+  "unrealized_pnl": -4569.23,
   "day_pnl": -42635.94,
   "day_pnl_pct": -0.30751,
   "day_baseline_date": "2026-11-07",
   "day_baseline_equity": 138648.1,
   "open_positions": [
-    {
-      "id": "2026-11-07_BTC-USD_296",
-      "symbol": "BTC-USD",
-      "side": "long",
-      "size": 57.0,
-      "entry": 76067.26,
-      "notional": 4335833.82,
-      "stop": 75458.72,
-      "target": 76980.07,
-      "target2": 77380.07,
-      "invalidation": "15m close < 76054.67 or stop 75458.72",
-      "risk_usd": 34686.78,
-      "risk_pct_equity": 0.29985,
-      "opened_at": "2026-11-07T04:07:08-05:00",
-      "card": "RACE_BTC_LONG_0406",
-      "reason": "RACE redeploy 0406 ET: BTC/ETH tilt long. 24h -0.00%. BTC-USD concentrated long under BTC/ETH reclaim (not bearish 15m); stop below floor 76004.67; session 5m low 75884.82; 15m detail [('02:15', 75909.59, 75925.3, 75884.82), ('02:30', 75930.92, 75932.44, 75888.72), ('02:45', 75989.63, 76016.76, 75930.92), ('03:00', 76005.39, 76035.99, 75980.41), ('03:15', 76011.77, 76033.94, 76004.67), ('03:30', 76035.17, 76037.99, 76007.48), ('03:45', 76097.16, 76097.16, 76035.17), ('04:00', 76067.26, 76152.43, 76058.01)]. Notional $4,335,834 @ 50x (margin $86,717), risk $34,687 (30.0% eq, warn-only). T1 76980.07, T2 77380.07.",
-      "price_source": "coinbase_exchange_public_ticker bid/ask/price 76067.26 @ 2026-11-07T04:07:08-05:00 ET (exch 2026-11-07T09:07:06.498354184Z) api.exchange.coinbase.com unauthenticated",
-      "override": null,
-      "paper_only": true,
-      "leverage": 50.0,
-      "margin": 86716.68,
-      "mark": 75802.37,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-07T08:00:53-05:00",
-      "unrealized_pnl": -15098.73,
-      "exposure": 4320735.09
-    },
     {
       "id": "2026-11-07_ETH-USD_297",
       "symbol": "ETH-USD",
@@ -70,7 +43,7 @@ window.__DESK_STATE__ = {
       "exposure": 1440807.11
     }
   ],
-  "open_count": 2,
+  "open_count": 1,
   "closed_positions": [
     {
       "type": "close",
@@ -2479,6 +2452,23 @@ window.__DESK_STATE__ = {
       "reason": "STOP 1.1645 hit (short): Coinbase public 5m 01:30 ET high 1.1661 (>= 1.1645). Paper close at stated stop.",
       "price_source": "coinbase_exchange_public 5m candle 2026-11-07 01:30 ET high 1.1661 (api.exchange.coinbase.com/products/XRP-USD/candles, unauthenticated); fill at stated stop 1.1645",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-07_BTC-USD_296",
+      "symbol": "BTC-USD",
+      "side": "long",
+      "size": 57.0,
+      "entry": 76067.26,
+      "exit": 75802.37,
+      "pnl": -15098.73,
+      "notional": 4335833.82,
+      "leverage": 50.0,
+      "margin": 86716.68,
+      "closed_at": "2026-11-07T08:00:55-05:00",
+      "reason": "INV 15m close < 76054.67 (long): Coinbase public 15m 04:15 ET close 75977.01 (high 76096.15/low 75956.31). Thesis broken \u2014 close at public mark 75802.37.",
+      "price_source": "coinbase_exchange_public_ticker bid/ask/price 75802.37 @ 2026-11-07T08:00:54-05:00 ET (exch 2026-11-07T13:00:52.804581433Z) api.exchange.coinbase.com unauthenticated",
+      "paper_only": true
     }
   ],
   "max_open": 200,
@@ -2538,8 +2528,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-07T04:07:08-05:00",
-      "note": "0406 ET: closed 2; opened {'BTC-USD': True, 'ETH-USD': True}; held ['BTC-USD', 'ETH-USD']"
+      "last_run": "2026-11-07T08:00:55-05:00",
+      "note": "last: closed BTC-USD"
     },
     "Logger": {
       "status": "ready",
@@ -5227,16 +5217,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-07T08:00:54-05:00",
       "equity": 96012.16,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-07T08:00:55-05:00",
+      "equity": 96012.16,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-05T22:10:51-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "BTC-USD PASS (chaos: non-blocking)",
-      "reason": "vol $1154.2M, spread 0.0000%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
-    },
     {
       "t": "2026-11-05T22:10:51-05:00",
       "agent": "Executor",
@@ -6708,6 +6696,14 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "BTC-USD long 57.0 @ 76067.26: INVALIDATION \u2014 CLOSE at public mark 75802.37",
       "reason": "Coinbase public candles since 2026-11-07T04:07:08-05:00: maxH=76100.66; minL=75711.39; 15m max close=75984.13; 15m min close=75742.32. INV 15m close < 76054.67 (long): Coinbase public 15m 04:15 ET close 75977.01 (high 76096.15/low 75956.31). Thesis broken \u2014 close at public mark 75802.37."
+    },
+    {
+      "t": "2026-11-07T08:00:55-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE BTC-USD @ 75802.4 \u00b7 P&L $-15098.73",
+      "reason": "INV 15m close < 76054.67 (long): Coinbase public 15m 04:15 ET close 75977.01 (high 76096.15/low 75956.31). Thesis broken \u2014 close at public mark 75802.37.",
+      "fill_id": "2026-11-07_BTC-USD_296"
     }
   ],
   "scanner_feed": {
@@ -7082,10 +7078,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 115624.21,
-  "exposure": 5761542.2,
-  "buying_power": 0.0,
-  "effective_leverage": 60.01,
+  "margin_used": 28907.53,
+  "exposure": 1440807.11,
+  "buying_power": 3359800.89,
+  "effective_leverage": 15.01,
   "operating_timezone": "America/New_York",
   "events": [
     {
