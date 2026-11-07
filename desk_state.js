@@ -5497,13 +5497,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-06T09:16:37-05:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: 0916 ET race cycle \u00b7 hold/rotate check \u00b7 eq $271,633 \u00b7 exposure $10,947,291 (40.3x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
-    {
       "t": "2026-11-06T11:12:48-05:00",
       "agent": "Scanner",
       "kind": "scan",
@@ -6975,6 +6968,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "XRP-USD short 1238966.1 @ 1.1611: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-07T08:01:06-05:00: maxH=1.1677 minL=1.1512 (stop 1.174; T1 1.1495/T2 1.1395); 15m max close=1.1675 (inv 1.168). No close trigger."
+    },
+    {
+      "t": "2026-11-07T11:58:55-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD short 849.8417 @ 2233.38: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-07T11:01:21-05:00: maxH=2235.28 minL=2225.79 (stop 2251.25; T1 2211.05/T2 2186.05); 15m max close=2231.82 (inv 2239.68). No close trigger."
     }
   ],
   "scanner_feed": {
