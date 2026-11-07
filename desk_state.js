@@ -5529,15 +5529,6 @@ window.__DESK_STATE__ = {
     {
       "t": "2026-11-06T11:13:02-05:00",
       "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 3.90281e+06 XRP-USD @ 1.182 \u00b7 notional $4,613,122 (50x, margin $92,262) \u00b7 stop 1.1942 \u00b7 tgt 1.1694 \u00b7 risk $47,614.29",
-      "reason": "RACE redeploy 1112 ET: BTC/ETH tilt short. 24h -4.82%. XRP-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 1.1902; session 5m low 1.1724; 15m detail [('09:15', 1.1788, 1.1822, 1.1777), ('09:30', 1.1849, 1.1898, 1.1733), ('09:45', 1.1847, 1.1925, 1.1803), ('10:00', 1.1893, 1.1894, 1.1724), ('10:15', 1.1843, 1.1902, 1.183), ('10:30', 1.185, 1.1854, 1.1785), ('10:45', 1.1862, 1.1877, 1.1825), ('11:00', 1.1822, 1.1896, 1.182)]. Notional $4,613,122 @ 50x (margin $92,262), risk $47,614 (14.7% eq, warn-only). T1 1.1694, T2 1.1594.",
-      "fill_id": "2026-11-06_XRP-USD_263",
-      "card": "RACE_XRP_SHORT_1112"
-    },
-    {
-      "t": "2026-11-06T11:13:02-05:00",
-      "agent": "Executor",
       "kind": "plan",
       "text": "1112 ET: closed 2; opened {'ETH-USD': True, 'XRP-USD': True}; held ['ETH-USD', 'XRP-USD']",
       "reason": "race mode: direction=short; closes=2; opens_ok={'ETH-USD': True, 'XRP-USD': True}; cash_pool after cushion; plateau not acceptable"
@@ -7002,6 +6993,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "XRP-USD short 1238966.1 @ 1.1611: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-07T08:01:06-05:00: maxH=1.1677 minL=1.1496 (stop 1.174; T1 1.1495/T2 1.1395); 15m max close=1.1675 (inv 1.168). No close trigger."
+    },
+    {
+      "t": "2026-11-07T16:07:00-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD short 849.8417 @ 2233.38: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-07T11:01:21-05:00: maxH=2236.57 minL=2221.6 (stop 2251.25; T1 2211.05/T2 2186.05); 15m max close=2235.67 (inv 2239.68). No close trigger."
     }
   ],
   "scanner_feed": [
