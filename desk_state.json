@@ -2620,7 +2620,7 @@
     "Rug Check": {
       "status": "idle",
       "last_run": "2026-11-07T11:01:21-05:00",
-      "note": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)"
+      "note": "ETH-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -5424,15 +5424,6 @@
     {
       "t": "2026-11-06T08:11:13-05:00",
       "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 2.7711e+06 XRP-USD @ 1.186 \u00b7 notional $3,286,530 (50x, margin $65,731) \u00b7 stop 1.2054 \u00b7 tgt 1.1741 \u00b7 risk $53,759.44",
-      "reason": "RACE redeploy 0810 ET: BTC/ETH tilt short. 24h -9.17%. XRP-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 1.2014; session 5m low 1.1835; 15m detail [('06:15', 1.1892, 1.1925, 1.1885), ('06:30', 1.1946, 1.1961, 1.1888), ('06:45', 1.1962, 1.1988, 1.1945), ('07:00', 1.1964, 1.1996, 1.1946), ('07:15', 1.199, 1.2014, 1.1959), ('07:30', 1.194, 1.1992, 1.1927), ('07:45', 1.1879, 1.1941, 1.1873), ('08:00', 1.1852, 1.1892, 1.1835)]. Notional $3,286,530 @ 50x (margin $65,731), risk $53,759 (24.4% eq, warn-only). T1 1.1741, T2 1.1641.",
-      "fill_id": "2026-11-06_XRP-USD_259",
-      "card": "RACE_XRP_SHORT_0810"
-    },
-    {
-      "t": "2026-11-06T08:11:13-05:00",
-      "agent": "Executor",
       "kind": "plan",
       "text": "0810 ET: closed 2; opened {'ETH-USD': True, 'XRP-USD': True}; held ['ETH-USD', 'XRP-USD']",
       "reason": "race mode: direction=short; closes=2; opens_ok={'ETH-USD': True, 'XRP-USD': True}; cash_pool after cushion; plateau not acceptable"
@@ -6898,6 +6889,13 @@
       "kind": "check",
       "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
       "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
+    },
+    {
+      "t": "2026-11-07T11:01:21-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "ETH-USD PASS (chaos: non-blocking)",
+      "reason": "vol $145.1M, spread 0.0004%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
     }
   ],
   "scanner_feed": {
