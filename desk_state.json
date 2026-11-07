@@ -5428,13 +5428,6 @@
   "activity": [
     {
       "t": "2026-11-06T08:11:13-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "ETH-USD PASS (chaos: non-blocking)",
-      "reason": "vol $503.2M, spread 0.0049%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
-    },
-    {
-      "t": "2026-11-06T08:11:13-05:00",
       "agent": "Executor",
       "kind": "fill",
       "text": "PAPER FILL short 3449.71 ETH-USD @ 2235.55 \u00b7 notional $7,712,000 (50x, margin $154,240) \u00b7 stop 2253.43 \u00b7 tgt 2213.19 \u00b7 risk $61,680.82",
@@ -6904,6 +6897,13 @@
       "text": "PAPER CLOSE BTC-USD @ 75641.7 \u00b7 P&L $-6192.43",
       "reason": "INV 15m close < 75872.26 (long): Coinbase public 15m 10:15 ET close 75765.28 (high 75799.2/low 75737.36). Thesis broken \u2014 close at public mark 75641.74.",
       "fill_id": "2026-11-07_BTC-USD_307"
+    },
+    {
+      "t": "2026-11-07T11:01:11-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD long 195.6831 @ 2242.58: INVALIDATION \u2014 CLOSE at public mark 2233.52",
+      "reason": "Coinbase public candles since 2026-11-07T10:01:24-05:00: maxH=2241.68; minL=2228.48; 15m max close=2239.57; 15m min close=2233.58. INV 15m close < 2243.67 (long): Coinbase public 15m 10:15 ET close 2239.57 (high 2241.58/low 2238.7). Thesis broken \u2014 close at public mark 2233.52."
     }
   ],
   "scanner_feed": {
