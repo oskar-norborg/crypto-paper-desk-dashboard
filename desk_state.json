@@ -4976,13 +4976,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-05T17:59:46-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 1759 ET: refresh public marks; check BTC/ETH/XRP shorts vs 5m/15m; scan watchlist; redeploy if margin free",
-      "reason": "scheduled race cycle; scan scans/2026-11-05_1759_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
-    },
-    {
       "t": "2026-11-05T17:59:50-05:00",
       "agent": "Risk",
       "kind": "check",
@@ -6451,6 +6444,13 @@
       "text": "PAPER CLOSE ETH-USD @ 2240.27 \u00b7 P&L $-9561.45",
       "reason": "INV 15m close > 2238.21 (short): Coinbase public 15m 20:00 ET close 2239.84 (high 2240.81/low 2236.56). Thesis broken \u2014 close at public mark 2240.27.",
       "fill_id": "2026-11-06_ETH-USD_282"
+    },
+    {
+      "t": "2026-11-06T20:02:51-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "XRP-USD short 1924489.5 @ 1.1786: INVALIDATION \u2014 CLOSE at public mark 1.1797",
+      "reason": "Coinbase public candles since 2026-11-06T19:02:19-05:00: maxH=1.1811; minL=1.177; 15m max close=1.1797; 15m min close=None. INV 15m close > 1.1784 (short): Coinbase public 15m 20:00 ET close 1.1797 (high 1.1797/low 1.1772). Thesis broken \u2014 close at public mark 1.1797."
     }
   ],
   "scanner_feed": {
