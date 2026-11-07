@@ -2538,7 +2538,7 @@
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-07T04:07:08-05:00",
-      "note": "last: paper fill ETH-USD"
+      "note": "0406 ET: closed 2; opened {'BTC-USD': True, 'ETH-USD': True}; held ['BTC-USD', 'ETH-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -5220,13 +5220,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-05T22:10:48-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "ETH-USD short 4825.1639 @ 2234.6: RACE ROTATE \u2014 thesis/momentum broken before stop",
-      "reason": "RACE rotate 2210 ET: cut ETH-USD short loser/broken-momentum BEFORE stop. uP&L $-19,300.66; stop_prog 22% of path to stop 2252.48 (mark 2238.39, entry 2234.6); symbol 15m bearish_tilt=False; book direction=long. Free margin for concentrated highest-conviction swing. Public mark close."
-    },
-    {
       "t": "2026-11-05T22:10:49-05:00",
       "agent": "Executor",
       "kind": "close",
@@ -6699,6 +6692,13 @@
       "reason": "RACE redeploy 0406 ET: BTC/ETH tilt long. 24h +0.46%. ETH-USD concentrated long under BTC/ETH reclaim (not bearish 15m); stop below floor 2243.73; session 5m low 2240.21; 15m detail [('02:15', 2241.23, 2243.98, 2241.14), ('02:30', 2241.78, 2242.76, 2240.21), ('02:45', 2242.56, 2244.18, 2241.74), ('03:00', 2244.2, 2244.99, 2242.28), ('03:15', 2244.8, 2245.33, 2244.15), ('03:30', 2245.71, 2245.77, 2244.21), ('03:45', 2247.21, 2247.8, 2245.37), ('04:00', 2245.93, 2248.41, 2245.35)]. Notional $1,445,376 @ 50x (margin $28,908), risk $14,454 (12.5% eq, warn-only). T1 2279.62, T2 2309.62.",
       "fill_id": "2026-11-07_ETH-USD_297",
       "card": "RACE_ETH_LONG_0406"
+    },
+    {
+      "t": "2026-11-07T04:07:08-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "0406 ET: closed 2; opened {'BTC-USD': True, 'ETH-USD': True}; held ['BTC-USD', 'ETH-USD']",
+      "reason": "race mode: direction=long; closes=2; opens_ok={'BTC-USD': True, 'ETH-USD': True}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": {
