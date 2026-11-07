@@ -2474,8 +2474,8 @@
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-06T21:04:03-05:00",
-      "note": "CHAOS: 2103 ET race cycle \u00b7 hold/rotate check \u00b7 eq $149,564 \u00b7 exposure $7,289,660 (48.74x)"
+      "last_run": "2026-11-06T22:06:10-05:00",
+      "note": "CHAOS: 2205 ET race cycle \u00b7 hold/rotate check \u00b7 eq $152,699 \u00b7 exposure $7,292,794 (47.76x)"
     },
     "Equity": {
       "status": "ready",
@@ -5099,15 +5099,6 @@
     {
       "t": "2026-11-05T19:08:57-05:00",
       "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 222.27 BTC-USD @ 76130.4 \u00b7 notional $16,921,495 (50x, margin $338,430) \u00b7 stop 74955.1 \u00b7 tgt 77272.3 \u00b7 risk $261,225.04",
-      "reason": "RACE redeploy 1908 ET: BTC/ETH tilt long. 24h -5.39%. BTC structure flip long after reclaim; bounce off session low 75035.1. Notional $16,921,495 @ 50x (margin $338,430), risk $261,225 (77.2% eq, warn-only). T1 77272.32, T2 78414.27.",
-      "fill_id": "2026-11-05_BTC-USD_240",
-      "card": "RACE_BTC_LONG_1908"
-    },
-    {
-      "t": "2026-11-05T19:08:57-05:00",
-      "agent": "Executor",
       "kind": "plan",
       "text": "1908 ET: closed 4; opened {'BTC': True}; held ['BTC-USD']",
       "reason": "race mode: direction=long; closes=4; opens_ok={'BTC': True}; cash_pool after cushion; plateau not acceptable"
@@ -6571,6 +6562,13 @@
       "kind": "plan",
       "text": "2205 ET: closed 0; opened {}; held ['BTC-USD', 'ETH-USD']",
       "reason": "race mode: direction=long; closes=0; opens_ok={}; cash_pool after cushion; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-06T22:06:10-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 2205 ET race cycle \u00b7 hold/rotate check \u00b7 eq $152,699 \u00b7 exposure $7,292,794 (47.76x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": {
