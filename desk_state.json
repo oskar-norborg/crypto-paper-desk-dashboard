@@ -5225,15 +5225,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-05T22:10:51-05:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 148.12 BTC-USD @ 76040 \u00b7 notional $11,263,045 (50x, margin $225,261) \u00b7 stop 75431.7 \u00b7 tgt 76952.5 \u00b7 risk $90,104.36",
-      "reason": "RACE redeploy 2210 ET: BTC/ETH tilt long. 24h -5.49%. BTC-USD concentrated long under BTC/ETH reclaim (not bearish 15m); stop below floor 75861.66; session 5m low 75767.11; 15m detail [('20:15', 75950.77, 76192.36, 75767.11), ('20:30', 75994.92, 76158.37, 75872.28), ('20:45', 76006.87, 76151.63, 75980), ('21:00', 76014.77, 76093.85, 75887.4), ('21:15', 76066.01, 76174.67, 75906.61), ('21:30', 75995.41, 76085.34, 75861.66), ('21:45', 76071.94, 76181.39, 75981.98), ('22:00', 76042.14, 76158.42, 76037.92)]. Notional $11,263,045 @ 50x (margin $225,261), risk $90,104 (30.0% eq, warn-only). T1 76952.48, T2 77352.48.",
-      "fill_id": "2026-11-05_BTC-USD_246",
-      "card": "RACE_BTC_LONG_2210"
-    },
-    {
       "t": "2026-11-05T22:10:52-05:00",
       "agent": "Rug Check",
       "kind": "check",
@@ -6703,6 +6694,13 @@
       "text": "PAPER CLOSE BTC-USD @ 75802.4 \u00b7 P&L $-15098.73",
       "reason": "INV 15m close < 76054.67 (long): Coinbase public 15m 04:15 ET close 75977.01 (high 76096.15/low 75956.31). Thesis broken \u2014 close at public mark 75802.37.",
       "fill_id": "2026-11-07_BTC-USD_296"
+    },
+    {
+      "t": "2026-11-07T08:00:55-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD long 643.5536 @ 2245.93: INVALIDATION \u2014 CLOSE at public mark 2238.74",
+      "reason": "Coinbase public candles since 2026-11-07T04:07:08-05:00: maxH=2246.38; minL=2234.74; 15m max close=2245.38; 15m min close=2237.41. INV 15m close < 2246.73 (long): Coinbase public 15m 04:15 ET close 2243.76 (high 2245.66/low 2243.41). Thesis broken \u2014 close at public mark 2238.74."
     }
   ],
   "scanner_feed": {
