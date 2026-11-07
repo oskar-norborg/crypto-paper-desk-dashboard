@@ -5102,13 +5102,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-05T19:09:01-05:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: 1908 ET race cycle \u00b7 hold/rotate check \u00b7 eq $338,483 \u00b7 exposure $16,921,497 (49.99x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
-    {
       "t": "2026-11-05T20:04:26-05:00",
       "agent": "Scanner",
       "kind": "scan",
@@ -6574,6 +6567,13 @@
       "kind": "scan",
       "text": "CHAOS race cycle 0005 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
       "reason": "scheduled race cycle; scan scans/2026-11-07_0005_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-07T00:05:16-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD long 778.8542 @ 2239.43: INVALIDATION \u2014 CLOSE at public mark 2242.78",
+      "reason": "Coinbase public candles since 2026-11-06T20:03:01-05:00: maxH=2247.5; minL=2236.71; 15m max close=2246.15; 15m min close=2237.63. INV 15m close < 2238.45 (long): Coinbase public 15m 22:30 ET close 2237.63 (high 2244.6/low 2236.71). Thesis broken \u2014 close at public mark 2242.78."
     }
   ],
   "scanner_feed": {
