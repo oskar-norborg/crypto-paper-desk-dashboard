@@ -2616,7 +2616,7 @@
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-07T09:03:03-05:00",
-      "note": "last: paper fill SOL-USD"
+      "note": "0902 ET: closed 1; opened {'ETH-USD': True, 'SOL-USD': True}; held ['ETH-USD', 'SOL-USD', 'XRP-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -5359,13 +5359,6 @@
   "activity": [
     {
       "t": "2026-11-06T04:10:59-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "ETH-USD short 3220.9194 @ 2226.03: INVALIDATION \u2014 CLOSE at public mark 2236.25",
-      "reason": "Coinbase public candles since 2026-11-06T00:02:31-05:00: maxH=2238.51; minL=2210.41; 15m max close=2236.85; 15m min close=None. INV 15m close > 2230.49 (short): Coinbase public 15m 04:00 ET close 2236.85 (high 2238.51/low 2222.34). Thesis broken \u2014 close at public mark 2236.25."
-    },
-    {
-      "t": "2026-11-06T04:10:59-05:00",
       "agent": "Executor",
       "kind": "close",
       "text": "PAPER CLOSE ETH-USD @ 2236.25 \u00b7 P&L $-32917.80",
@@ -6836,6 +6829,13 @@
       "reason": "RACE redeploy 0902 ET: BTC/ETH tilt short. 24h -1.10%. SOL-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 89.99; session 5m low 89.55; 15m detail [('07:15', 89.87, 89.92, 89.81), ('07:30', 89.66, 89.92, 89.65), ('07:45', 89.64, 89.71, 89.55), ('08:00', 89.56, 89.81, 89.55), ('08:15', 89.85, 89.85, 89.55), ('08:30', 89.97, 89.97, 89.81), ('08:45', 89.9, 89.99, 89.82), ('09:00', 89.88, 89.92, 89.85)]. Notional $651,567 @ 50x (margin $13,031), risk $6,524 (7.6% eq, warn-only). T1 88.8, T2 87.8.",
       "fill_id": "2026-11-07_SOL-USD_304",
       "card": "RACE_SOL_SHORT_0902"
+    },
+    {
+      "t": "2026-11-07T09:03:03-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "0902 ET: closed 1; opened {'ETH-USD': True, 'SOL-USD': True}; held ['ETH-USD', 'SOL-USD', 'XRP-USD']",
+      "reason": "race mode: direction=short; closes=1; opens_ok={'ETH-USD': True, 'SOL-USD': True}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": {
