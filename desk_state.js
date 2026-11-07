@@ -5608,15 +5608,6 @@ window.__DESK_STATE__ = {
     {
       "t": "2026-11-06T12:09:04-05:00",
       "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 1166.43 ETH-USD @ 2229.18 \u00b7 notional $2,600,174 (50x, margin $52,003) \u00b7 stop 2206.89 \u00b7 tgt 2262.62 \u00b7 risk $25,999.64",
-      "reason": "RACE redeploy 1208 ET: BTC/ETH tilt long. 24h -0.81%. ETH-USD concentrated long under BTC/ETH reclaim (not bearish 15m); stop below floor 2213.5; session 5m low 2209.57; 15m detail [('10:15', 2218.24, 2231.4, 2216.28), ('10:30', 2223.15, 2224.7, 2209.57), ('10:45', 2227.72, 2230.55, 2220.3), ('11:00', 2219.24, 2229.56, 2213.5), ('11:15', 2227.06, 2229.6, 2214.3), ('11:30', 2222.43, 2233.43, 2221.45), ('11:45', 2232.46, 2235.26, 2221.93), ('12:00', 2229.75, 2234.8, 2226.48)]. Notional $2,600,174 @ 50x (margin $52,003), risk $26,000 (12.4% eq, warn-only). T1 2262.62, T2 2292.62.",
-      "fill_id": "2026-11-06_ETH-USD_267",
-      "card": "RACE_ETH_LONG_1208"
-    },
-    {
-      "t": "2026-11-06T12:09:04-05:00",
-      "agent": "Executor",
       "kind": "plan",
       "text": "1208 ET: closed 2; opened {'BTC-USD': True, 'ETH-USD': True}; held ['BTC-USD', 'ETH-USD']",
       "reason": "race mode: direction=long; closes=2; opens_ok={'BTC-USD': True, 'ETH-USD': True}; cash_pool after cushion; plateau not acceptable"
@@ -7079,6 +7070,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "SOL-USD short 5475.8 @ 88.87: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-07T16:07:11-05:00: maxH=89.18 minL=88.59 (stop 89.76; T1 87.8/T2 86.8); 15m max close=89.14 (inv 89.53). No close trigger."
+    },
+    {
+      "t": "2026-11-07T17:02:04-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "BTC-USD short 2.76 @ 75554.12: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-07T16:07:11-05:00: maxH=75675.28 minL=75452.88 (stop 76007.44; T1 74949.69/T2 74549.69); 15m max close=75662.6 (inv 75723.54). No close trigger."
     }
   ],
   "scanner_feed": [
