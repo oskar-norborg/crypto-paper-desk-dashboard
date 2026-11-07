@@ -2685,7 +2685,7 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-07T11:01:22-05:00",
-      "note": "last: paper fill SOL-USD"
+      "note": "1101 ET: closed 2; opened {'ETH-USD': True, 'SOL-USD': True}; held ['ETH-USD', 'SOL-USD', 'XRP-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -5490,13 +5490,6 @@ window.__DESK_STATE__ = {
       "t": "2026-11-06T09:16:24-05:00",
       "agent": "Risk",
       "kind": "check",
-      "text": "ETH-USD short 3449.7104 @ 2235.55: HOLD \u2014 no trigger",
-      "reason": "Coinbase public 5m since 2026-11-06T08:11:13-05:00: maxH=2244.72 minL=2221.72 (stop 2253.43; T1 2213.19/T2 2188.19); 15m max close=2240.93 (inv 2245.39). No close trigger."
-    },
-    {
-      "t": "2026-11-06T09:16:24-05:00",
-      "agent": "Risk",
-      "kind": "check",
       "text": "XRP-USD short 2771104.9 @ 1.186: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-06T08:11:13-05:00: maxH=1.1889 minL=1.1769 (stop 1.2054; T1 1.1741/T2 1.1641); 15m max close=1.1872 (inv 1.1994). No close trigger."
     },
@@ -6965,6 +6958,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE redeploy 1101 ET: BTC/ETH tilt short. 24h -1.23%. SOL-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 89.7; session 5m low 89.08; 15m detail [('09:15', 89.83, 89.93, 89.81), ('09:30', 89.99, 90.04, 89.82), ('09:45', 89.84, 90.03, 89.8), ('10:00', 89.63, 89.84, 89.54), ('10:15', 89.64, 89.7, 89.55), ('10:30', 89.29, 89.65, 89.27), ('10:45', 89.46, 89.46, 89.08), ('11:00', 89.41, 89.46, 89.39)]. Notional $813,428 @ 50x (margin $16,269), risk $8,095 (9.1% eq, warn-only). T1 88.36, T2 87.36.",
       "fill_id": "2026-11-07_SOL-USD_312",
       "card": "RACE_SOL_SHORT_1101"
+    },
+    {
+      "t": "2026-11-07T11:01:22-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "1101 ET: closed 2; opened {'ETH-USD': True, 'SOL-USD': True}; held ['ETH-USD', 'SOL-USD', 'XRP-USD']",
+      "reason": "race mode: direction=short; closes=2; opens_ok={'ETH-USD': True, 'SOL-USD': True}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": {
