@@ -5087,14 +5087,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-05T19:08:45-05:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE BTC-USD @ 76044.2 \u00b7 P&L $-11076.37",
-      "reason": "STOP 76044.25 hit: Coinbase public 5m 19:00 ET high 76207.63 (>= 76044.25). Paper close at stated stop.",
-      "fill_id": "2026-11-05_BTC-USD_235"
-    },
-    {
       "t": "2026-11-05T19:08:57-05:00",
       "agent": "Rug Check",
       "kind": "check",
@@ -6562,6 +6554,13 @@
       "kind": "check",
       "text": "ETH-USD long 778.8542 @ 2239.43: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-06T20:03:01-05:00: maxH=2247.5 minL=2237.51 (stop 2217.04; T1 2273.02/T2 2303.02); 15m min close=2239.83 (inv 2238.45). No close trigger."
+    },
+    {
+      "t": "2026-11-06T22:05:58-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "BTC-USD long 72.96 @ 75955.12: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-06T21:04:00-05:00: maxH=75999.11 minL=75900 (stop 75347.48; T1 76866.58/T2 77266.58); 15m min close=75937.52 (inv 75795.81). No close trigger."
     }
   ],
   "scanner_feed": {
