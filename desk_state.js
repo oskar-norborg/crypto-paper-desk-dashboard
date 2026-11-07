@@ -5607,13 +5607,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-06T12:09:04-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "ETH-USD PASS (chaos: non-blocking)",
-      "reason": "vol $378.7M, spread 0.0004%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
-    },
-    {
-      "t": "2026-11-06T12:09:04-05:00",
       "agent": "Executor",
       "kind": "fill",
       "text": "PAPER FILL long 1166.43 ETH-USD @ 2229.18 \u00b7 notional $2,600,174 (50x, margin $52,003) \u00b7 stop 2206.89 \u00b7 tgt 2262.62 \u00b7 risk $25,999.64",
@@ -7079,6 +7072,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "ETH-USD short 849.8417 @ 2233.38: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-07T11:01:21-05:00: maxH=2236.57 minL=2218.76 (stop 2251.25; T1 2211.05/T2 2186.05); 15m max close=2235.67 (inv 2239.68). No close trigger."
+    },
+    {
+      "t": "2026-11-07T17:02:04-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "SOL-USD short 5475.8 @ 88.87: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-07T16:07:11-05:00: maxH=89.18 minL=88.59 (stop 89.76; T1 87.8/T2 86.8); 15m max close=89.14 (inv 89.53). No close trigger."
     }
   ],
   "scanner_feed": [
@@ -7754,7 +7754,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-07T17:02:03-05:00",
+  "updated_at": "2026-11-07T17:02:04-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
