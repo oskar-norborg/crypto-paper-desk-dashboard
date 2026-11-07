@@ -2454,7 +2454,7 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-06T20:03:01-05:00",
-      "note": "last: paper fill ETH-USD"
+      "note": "2002 ET: closed 2; opened {'BTC-USD': True, 'ETH-USD': True}; held ['BTC-USD', 'ETH-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -5037,15 +5037,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-05T18:00:02-05:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 49713.4 SOL-USD @ 89.51 \u00b7 notional $4,449,846 (50x, margin $88,997) \u00b7 stop 90.41 \u00b7 tgt 88.44 \u00b7 risk $44,742.06",
-      "reason": "RACE redeploy 1759 ET: BTC/ETH tilt short. 24h -6.67%. SOL-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 90.08; session 5m low 89.12; 15m detail [('16:00', 89.56, 89.67, 89.12), ('16:15', 89.8, 89.83, 89.27), ('16:30', 89.94, 90.14, 89.77), ('16:45', 89.79, 90.09, 89.72), ('17:00', 90.04, 90.04, 89.6), ('17:15', 89.82, 90.08, 89.64), ('17:30', 89.62, 89.89, 89.5), ('17:45', 89.46, 89.62, 89.31)]. Notional $4,449,846 @ 50x (margin $88,997), risk $44,742 (17.8% eq, warn-only). T1 88.44, T2 87.44.",
-      "fill_id": "2026-11-05_SOL-USD_234",
-      "card": "RACE_SOL_SHORT_1759"
-    },
-    {
-      "t": "2026-11-05T18:00:02-05:00",
       "agent": "Rug Check",
       "kind": "check",
       "text": "BTC-USD PASS (chaos: non-blocking)",
@@ -6515,6 +6506,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE redeploy 2002 ET: BTC/ETH tilt long. 24h +0.08%. ETH-USD concentrated long under BTC/ETH reclaim (not bearish 15m); stop below floor 2235.45; session 5m low 2231.56; 15m detail [('18:15', 2235.32, 2235.5, 2231.56), ('18:30', 2237.53, 2240.21, 2234.75), ('18:45', 2235.37, 2238.38, 2232.54), ('19:00', 2239.66, 2239.69, 2235.17), ('19:15', 2238.01, 2241, 2237.9), ('19:30', 2237.42, 2239.18, 2237.02), ('19:45', 2236.56, 2238.18, 2235.45), ('20:00', 2239.84, 2240.81, 2236.56)]. Notional $1,744,189 @ 50x (margin $34,884), risk $17,439 (12.4% eq, warn-only). T1 2273.02, T2 2303.02.",
       "fill_id": "2026-11-06_ETH-USD_287",
       "card": "RACE_ETH_LONG_2002"
+    },
+    {
+      "t": "2026-11-06T20:03:01-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "2002 ET: closed 2; opened {'BTC-USD': True, 'ETH-USD': True}; held ['BTC-USD', 'ETH-USD']",
+      "reason": "race mode: direction=long; closes=2; opens_ok={'BTC-USD': True, 'ETH-USD': True}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": {
