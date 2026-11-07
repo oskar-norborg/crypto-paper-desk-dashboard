@@ -5164,15 +5164,6 @@ window.__DESK_STATE__ = {
     {
       "t": "2026-11-05T21:06:18-05:00",
       "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 3.7812e+06 XRP-USD @ 1.2156 \u00b7 notional $4,596,421 (50x, margin $91,928) \u00b7 stop 1.2253 \u00b7 tgt 1.2034 \u00b7 risk $36,677.60",
-      "reason": "RACE redeploy 2106 ET: BTC/ETH tilt short. 24h -6.87%. XRP-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 1.2201; session 5m low 1.2086; 15m detail [('19:15', 1.2133, 1.215, 1.2086), ('19:30', 1.2217, 1.2222, 1.2128), ('19:45', 1.2179, 1.2217, 1.215), ('20:00', 1.2197, 1.2208, 1.2143), ('20:15', 1.2127, 1.2197, 1.2106), ('20:30', 1.2155, 1.2171, 1.2108), ('20:45', 1.215, 1.2168, 1.2137), ('21:00', 1.2157, 1.2168, 1.214)]. Notional $4,596,421 @ 50x (margin $91,928), risk $36,678 (11.9% eq, warn-only). T1 1.2034, T2 1.1934.",
-      "fill_id": "2026-11-05_XRP-USD_243",
-      "card": "RACE_XRP_SHORT_2106"
-    },
-    {
-      "t": "2026-11-05T21:06:18-05:00",
-      "agent": "Executor",
       "kind": "plan",
       "text": "2106 ET: closed 1; opened {'ETH-USD': True, 'XRP-USD': True}; held ['ETH-USD', 'XRP-USD']",
       "reason": "race mode: direction=short; closes=1; opens_ok={'ETH-USD': True, 'XRP-USD': True}; cash_pool after cushion; plateau not acceptable"
@@ -6638,6 +6629,13 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE ETH-USD @ 2245.93 \u00b7 P&L $-6446.80",
       "reason": "INV 15m close > 2241.11 (short): Coinbase public 15m 00:15 ET close 2245.74 (high 2246.62/low 2241.87). Thesis broken \u2014 close at public mark 2245.93.",
       "fill_id": "2026-11-07_ETH-USD_292"
+    },
+    {
+      "t": "2026-11-07T04:06:58-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "XRP-USD short 1800013.5 @ 1.1553: STOP 1.1645 HIT \u2014 CLOSE at stated stop",
+      "reason": "Coinbase public candles since 2026-11-07T00:05:27-05:00: maxH=1.1807; minL=1.1529; 15m max close=1.1791; 15m min close=None. STOP 1.1645 hit (short): Coinbase public 5m 01:30 ET high 1.1661 (>= 1.1645). Paper close at stated stop."
     }
   ],
   "scanner_feed": {
