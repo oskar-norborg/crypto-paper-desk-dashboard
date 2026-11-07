@@ -2728,7 +2728,7 @@
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-07T16:07:11-05:00",
-      "note": "last: paper fill BTC-USD"
+      "note": "1606 ET: closed 0; opened {'SOL-USD': True, 'BTC-USD': True}; held ['BTC-USD', 'ETH-USD', 'SOL-USD', 'XRP-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -5596,13 +5596,6 @@
   "activity": [
     {
       "t": "2026-11-06T12:08:52-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "XRP-USD short 3902810.7 @ 1.182: STOP 1.1942 HIT \u2014 CLOSE at stated stop",
-      "reason": "Coinbase public candles since 2026-11-06T11:13:02-05:00: maxH=1.1981; minL=1.181; 15m max close=1.1955; 15m min close=None. STOP 1.1942 hit (short): Coinbase public 5m 11:25 ET high 1.1955 (>= 1.1942). Paper close at stated stop."
-    },
-    {
-      "t": "2026-11-06T12:08:52-05:00",
       "agent": "Executor",
       "kind": "close",
       "text": "PAPER CLOSE XRP-USD @ 1.1942 \u00b7 P&L $-47614.29",
@@ -7071,6 +7064,13 @@
       "reason": "RACE redeploy 1606 ET: BTC/ETH tilt short. 24h -0.34%. BTC-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 75743.54; session 5m low 75489.17; 15m detail [('14:15', 75682.98, 75700.19, 75646), ('14:30', 75642.84, 75691.22, 75637.8), ('14:45', 75692.23, 75705.09, 75639.29), ('15:00', 75688.27, 75699.98, 75659.33), ('15:15', 75646.9, 75743.54, 75638.25), ('15:30', 75611.49, 75651.62, 75607.01), ('15:45', 75584.59, 75617.91, 75489.17), ('16:00', 75557.56, 75611.2, 75556.84)]. Notional $208,529 @ 50x (margin $4,171), risk $1,251 (1.3% eq, warn-only). T1 74949.69, T2 74549.69.",
       "fill_id": "2026-11-07_BTC-USD_315",
       "card": "RACE_BTC_SHORT_1606"
+    },
+    {
+      "t": "2026-11-07T16:07:11-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "1606 ET: closed 0; opened {'SOL-USD': True, 'BTC-USD': True}; held ['BTC-USD', 'ETH-USD', 'SOL-USD', 'XRP-USD']",
+      "reason": "race mode: direction=short; closes=0; opens_ok={'SOL-USD': True, 'BTC-USD': True}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": [
