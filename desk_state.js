@@ -2698,8 +2698,8 @@ window.__DESK_STATE__ = {
     },
     "Rug Check": {
       "status": "idle",
-      "last_run": "2026-11-07T17:02:12-05:00",
-      "note": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)"
+      "last_run": "2026-11-07T17:02:15-05:00",
+      "note": "BTC-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -5606,13 +5606,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-06T13:06:47-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
-      "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
-    },
-    {
       "t": "2026-11-06T13:06:48-05:00",
       "agent": "Risk",
       "kind": "check",
@@ -7079,6 +7072,13 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE BTC-USD @ 75661.2 \u00b7 P&L $-295.60",
       "reason": "RACE rotate 1701 ET: cut BTC-USD short loser/broken-momentum BEFORE stop. uP&L $-291.59; stop_prog 23% of path to stop 76007.44 (mark 75661.22, entry 75554.12); symbol 15m bearish_tilt=False; book direction=long. Free margin for concentrated highest-conviction swing. Public mark close.",
       "fill_id": "2026-11-07_BTC-USD_315"
+    },
+    {
+      "t": "2026-11-07T17:02:15-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "BTC-USD PASS (chaos: non-blocking)",
+      "reason": "vol $179.6M, spread 0.0021%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
     }
   ],
   "scanner_feed": [
