@@ -5434,13 +5434,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-06T08:11:10-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "ETH-USD long 1276.6953 @ 2235.2: RACE ROTATE \u2014 thesis/momentum broken before stop",
-      "reason": "RACE rotate 0810 ET: cut ETH-USD long loser/broken-momentum BEFORE stop. uP&L $0.00; stop_prog 0% of path to stop 2212.85 (mark 2235.73, entry 2235.2); symbol 15m bearish_tilt=True; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close."
-    },
-    {
-      "t": "2026-11-06T08:11:10-05:00",
       "agent": "Executor",
       "kind": "close",
       "text": "PAPER CLOSE ETH-USD @ 2235.73 \u00b7 P&L $+676.65",
@@ -6910,6 +6903,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "XRP-USD short 1238966.1 @ 1.1611: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-07T08:01:06-05:00: maxH=1.1677 minL=1.1512 (stop 1.174; T1 1.1495/T2 1.1395); 15m max close=1.1675 (inv 1.168). No close trigger."
+    },
+    {
+      "t": "2026-11-07T11:01:11-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "BTC-USD long 30.75 @ 75843.12: INVALIDATION \u2014 CLOSE at public mark 75641.74",
+      "reason": "Coinbase public candles since 2026-11-07T10:01:24-05:00: maxH=75821.06; minL=75507.9; 15m max close=75765.28; 15m min close=75641.75. INV 15m close < 75872.26 (long): Coinbase public 15m 10:15 ET close 75765.28 (high 75799.2/low 75737.36). Thesis broken \u2014 close at public mark 75641.74."
     }
   ],
   "scanner_feed": {
@@ -7268,7 +7268,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-07T11:01:10-05:00",
+  "updated_at": "2026-11-07T11:01:11-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
