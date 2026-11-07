@@ -5168,15 +5168,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-05T21:06:18-05:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 4825.16 ETH-USD @ 2234.6 \u00b7 notional $10,782,311 (50x, margin $215,646) \u00b7 stop 2252.48 \u00b7 tgt 2212.25 \u00b7 risk $86,273.93",
-      "reason": "RACE redeploy 2106 ET: BTC/ETH tilt short. 24h -7.93%. ETH-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 2242.82; session 5m low 2225.26; 15m detail [('19:15', 2238.1, 2240.86, 2232.48), ('19:30', 2246.38, 2246.38, 2236.65), ('19:45', 2243.88, 2246.38, 2237.18), ('20:00', 2241.91, 2244.54, 2234.45), ('20:15', 2230.14, 2241.45, 2225.26), ('20:30', 2235.27, 2241.58, 2228.02), ('20:45', 2237.63, 2239.89, 2234.41), ('21:00', 2235.08, 2239.72, 2234.34)]. Notional $10,782,311 @ 50x (margin $215,646), risk $86,274 (28.0% eq, warn-only). T1 2212.25, T2 2187.25.",
-      "fill_id": "2026-11-05_ETH-USD_242",
-      "card": "RACE_ETH_SHORT_2106"
-    },
-    {
-      "t": "2026-11-05T21:06:18-05:00",
       "agent": "Rug Check",
       "kind": "check",
       "text": "XRP-USD PASS (chaos: non-blocking)",
@@ -6644,6 +6635,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 0406 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
       "reason": "scheduled race cycle; scan scans/2026-11-07_0406_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-07T04:06:58-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD short 2163.3546 @ 2242.95: INVALIDATION \u2014 CLOSE at public mark 2245.93",
+      "reason": "Coinbase public candles since 2026-11-07T00:05:27-05:00: maxH=2248.41; minL=2240.21; 15m max close=2247.21; 15m min close=None. INV 15m close > 2241.11 (short): Coinbase public 15m 00:15 ET close 2245.74 (high 2246.62/low 2241.87). Thesis broken \u2014 close at public mark 2245.93."
     }
   ],
   "scanner_feed": {
@@ -7002,7 +7000,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-07T04:06:57-05:00",
+  "updated_at": "2026-11-07T04:06:58-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
