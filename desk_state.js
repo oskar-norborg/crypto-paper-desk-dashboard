@@ -5046,13 +5046,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-05T18:00:02-05:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "1759 ET: closed 1; opened {'SOL-USD': True, 'BTC-USD': True}; held ['BTC-USD', 'ETH-USD', 'SOL-USD', 'XRP-USD']",
-      "reason": "race mode: direction=short; closes=1; opens_ok={'SOL-USD': True, 'BTC-USD': True}; cash_pool after cushion; plateau not acceptable"
-    },
-    {
       "t": "2026-11-05T18:00:05-05:00",
       "agent": "Logger",
       "kind": "batch",
@@ -6521,6 +6514,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 2103 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
       "reason": "scheduled race cycle; scan scans/2026-11-06_2103_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-06T21:03:50-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "BTC-USD long 68.97 @ 75861.33: INVALIDATION \u2014 CLOSE at public mark 75951.14",
+      "reason": "Coinbase public candles since 2026-11-06T20:03:01-05:00: maxH=75975.52; minL=75745.81; 15m max close=75968.82; 15m min close=75795.02. INV 15m close < 75811.39 (long): Coinbase public 15m 20:15 ET close 75795.02 (high 75815.34/low 75745.81). Thesis broken \u2014 close at public mark 75951.14."
     }
   ],
   "scanner_feed": {
