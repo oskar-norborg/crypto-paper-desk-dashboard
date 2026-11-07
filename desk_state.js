@@ -6,12 +6,12 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 97831.64,
-  "cash": 13953.86,
+  "equity": 97886.4,
+  "cash": 4221.17,
   "realized_pnl": 30685.52,
-  "unrealized_pnl": 17146.12,
-  "day_pnl": -40816.46,
-  "day_pnl_pct": -0.29439,
+  "unrealized_pnl": 17200.88,
+  "day_pnl": -40761.7,
+  "day_pnl_pct": -0.29399,
   "day_baseline_date": "2026-11-07",
   "day_baseline_equity": 138648.1,
   "open_positions": [
@@ -68,9 +68,36 @@ window.__DESK_STATE__ = {
       "mark_at": "2026-11-07T16:07:01-05:00",
       "unrealized_pnl": 7606.08,
       "exposure": 1890413.37
+    },
+    {
+      "id": "2026-11-07_SOL-USD_314",
+      "symbol": "SOL-USD",
+      "side": "short",
+      "size": 5475.8,
+      "entry": 88.87,
+      "notional": 486634.35,
+      "stop": 89.76,
+      "target": 87.8,
+      "target2": 86.8,
+      "invalidation": "15m close > 89.53 (reclaim of recent bounce shelf) or stop 89.76",
+      "risk_usd": 4873.46,
+      "risk_pct_equity": 0.04981,
+      "opened_at": "2026-11-07T16:07:11-05:00",
+      "card": "RACE_SOL_SHORT_1606",
+      "reason": "RACE redeploy 1606 ET: BTC/ETH tilt short. 24h -1.51%. SOL-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 89.58; session 5m low 88.71; 15m detail [('14:15', 89.58, 89.6, 89.5), ('14:30', 89.47, 89.59, 89.42), ('14:45', 89.53, 89.57, 89.45), ('15:00', 89.53, 89.58, 89.44), ('15:15', 89.43, 89.53, 89.32), ('15:30', 89.26, 89.45, 89.23), ('15:45', 88.95, 89.26, 88.71), ('16:00', 88.86, 89.02, 88.83)]. Notional $486,634 @ 50x (margin $9,733), risk $4,873 (5.0% eq, warn-only). T1 87.8, T2 86.8.",
+      "price_source": "coinbase_exchange_public_ticker bid/ask/price 88.87 @ 2026-11-07T16:07:11-05:00 ET (exch 2026-11-07T21:07:10.129913970Z) api.exchange.coinbase.com unauthenticated",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 9732.69,
+      "mark": 88.86,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-07T16:07:02-05:00",
+      "unrealized_pnl": 54.76,
+      "exposure": 486579.59
     }
   ],
-  "open_count": 2,
+  "open_count": 3,
   "closed_positions": [
     {
       "type": "close",
@@ -2619,7 +2646,7 @@ window.__DESK_STATE__ = {
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 97831.64,
+  "max_risk_usd": 97886.4,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -1386481.0,
   "paused": false,
@@ -2674,13 +2701,13 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-07T13:07:20-05:00",
-      "note": "last: closed SOL-USD"
+      "last_run": "2026-11-07T16:07:11-05:00",
+      "note": "last: paper fill SOL-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-07T11:59:06-05:00",
-      "note": "CHAOS: 1158 ET race cycle \u00b7 hold/rotate check \u00b7 eq $88,631 \u00b7 exposure $4,144,430 (46.76x)"
+      "last_run": "2026-11-07T16:07:11-05:00",
+      "note": "logged 2026-11-07_SOL-USD_314"
     },
     "Equity": {
       "status": "ready",
@@ -5528,16 +5555,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-07T16:07:03-05:00",
       "equity": 97831.64,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-07T16:07:11-05:00",
+      "equity": 97886.4,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-06T12:08:49-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 1208 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
-      "reason": "scheduled race cycle; scan scans/2026-11-06_1208_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
-    },
     {
       "t": "2026-11-06T12:08:52-05:00",
       "agent": "Risk",
@@ -7005,6 +7030,15 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "SOL-USD PASS (chaos: non-blocking)",
       "reason": "vol $22.6M, spread 0.0112%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
+    },
+    {
+      "t": "2026-11-07T16:07:11-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 5475.8 SOL-USD @ 88.87 \u00b7 notional $486,634 (50x, margin $9,733) \u00b7 stop 89.76 \u00b7 tgt 87.8 \u00b7 risk $4,873.46",
+      "reason": "RACE redeploy 1606 ET: BTC/ETH tilt short. 24h -1.51%. SOL-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 89.58; session 5m low 88.71; 15m detail [('14:15', 89.58, 89.6, 89.5), ('14:30', 89.47, 89.59, 89.42), ('14:45', 89.53, 89.57, 89.45), ('15:00', 89.53, 89.58, 89.44), ('15:15', 89.43, 89.53, 89.32), ('15:30', 89.26, 89.45, 89.23), ('15:45', 88.95, 89.26, 88.71), ('16:00', 88.86, 89.02, 88.83)]. Notional $486,634 @ 50x (margin $9,733), risk $4,873 (5.0% eq, warn-only). T1 87.8, T2 86.8.",
+      "fill_id": "2026-11-07_SOL-USD_314",
+      "card": "RACE_SOL_SHORT_1606"
     }
   ],
   "scanner_feed": [
@@ -7696,10 +7730,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 66731.66,
-  "exposure": 3319436.87,
-  "buying_power": 1572145.13,
-  "effective_leverage": 33.93,
+  "margin_used": 76464.35,
+  "exposure": 3806016.46,
+  "buying_power": 1088303.54,
+  "effective_leverage": 38.88,
   "operating_timezone": "America/New_York",
   "events": [
     {
