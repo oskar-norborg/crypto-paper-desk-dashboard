@@ -5363,14 +5363,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-06T04:11:00-05:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE XRP-USD @ 1.1775 \u00b7 P&L $+56358.12",
-      "reason": "T2 1.1775 hit (short): Coinbase public 5m 02:30 ET low 1.176 (<= 1.1775); stop 1.2104 never touched (maxH 1.2002); inv 15m clear (maxC15 1.1974). Paper close at stated T2.",
-      "fill_id": "2026-11-06_XRP-USD_251"
-    },
-    {
       "t": "2026-11-06T04:11:10-05:00",
       "agent": "Rug Check",
       "kind": "check",
@@ -6840,6 +6832,13 @@
       "kind": "scan",
       "text": "CHAOS race cycle 1001 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
       "reason": "scheduled race cycle; scan scans/2026-11-07_1001_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-07T10:01:12-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "XRP-USD short 1238966.1 @ 1.1611: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-07T08:01:06-05:00: maxH=1.1677 minL=1.1586 (stop 1.174; T1 1.1495/T2 1.1395); 15m max close=1.1675 (inv 1.168). No close trigger."
     }
   ],
   "scanner_feed": {
