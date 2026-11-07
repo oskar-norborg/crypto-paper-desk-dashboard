@@ -2474,8 +2474,8 @@
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-06T21:04:00-05:00",
-      "note": "logged 2026-11-06_BTC-USD_289"
+      "last_run": "2026-11-06T21:04:03-05:00",
+      "note": "CHAOS: 2103 ET race cycle \u00b7 hold/rotate check \u00b7 eq $149,564 \u00b7 exposure $7,289,660 (48.74x)"
     },
     "Equity": {
       "status": "ready",
@@ -5083,13 +5083,6 @@
   "activity": [
     {
       "t": "2026-11-05T19:08:45-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "SOL-USD short 49713.4 @ 89.51: T1 88.44 HIT \u2014 CLOSE at stated T1",
-      "reason": "Coinbase public candles since 2026-11-05T18:00:02-05:00: maxH=89.75; minL=88.15; 15m max close=89.58. T1 88.44 hit: Coinbase public 5m 18:10 ET low 88.28 (<= 88.44); T2 87.44 NOT hit; stop 90.41 never touched (maxH 89.75); inv 15m clear (maxC15 89.58). Paper close at stated T1."
-    },
-    {
-      "t": "2026-11-05T19:08:45-05:00",
       "agent": "Executor",
       "kind": "close",
       "text": "PAPER CLOSE SOL-USD @ 88.44 \u00b7 P&L $+53193.34",
@@ -6558,6 +6551,13 @@
       "kind": "plan",
       "text": "2103 ET: closed 1; opened {'BTC-USD': True}; held ['BTC-USD', 'ETH-USD']",
       "reason": "race mode: direction=long; closes=1; opens_ok={'BTC-USD': True}; cash_pool after cushion; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-06T21:04:03-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 2103 ET race cycle \u00b7 hold/rotate check \u00b7 eq $149,564 \u00b7 exposure $7,289,660 (48.74x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": {
