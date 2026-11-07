@@ -2692,7 +2692,7 @@ window.__DESK_STATE__ = {
     "Rug Check": {
       "status": "idle",
       "last_run": "2026-11-07T16:07:11-05:00",
-      "note": "SOL-USD PASS (chaos: non-blocking)"
+      "note": "BTC-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -5565,13 +5565,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-06T12:08:52-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "ETH-USD short 5221.6527 @ 2214.99: INVALIDATION \u2014 CLOSE at public mark 2229.32",
-      "reason": "Coinbase public candles since 2026-11-06T11:13:02-05:00: maxH=2235.26; minL=2214.3; 15m max close=2232.46; 15m min close=None. INV 15m close > 2229.4 (short): Coinbase public 15m 11:45 ET close 2232.46 (high 2235.26/low 2221.93). Thesis broken \u2014 close at public mark 2229.32."
-    },
-    {
-      "t": "2026-11-06T12:08:52-05:00",
       "agent": "Executor",
       "kind": "close",
       "text": "PAPER CLOSE ETH-USD @ 2229.32 \u00b7 P&L $-74826.28",
@@ -7039,6 +7032,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE redeploy 1606 ET: BTC/ETH tilt short. 24h -1.51%. SOL-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 89.58; session 5m low 88.71; 15m detail [('14:15', 89.58, 89.6, 89.5), ('14:30', 89.47, 89.59, 89.42), ('14:45', 89.53, 89.57, 89.45), ('15:00', 89.53, 89.58, 89.44), ('15:15', 89.43, 89.53, 89.32), ('15:30', 89.26, 89.45, 89.23), ('15:45', 88.95, 89.26, 88.71), ('16:00', 88.86, 89.02, 88.83)]. Notional $486,634 @ 50x (margin $9,733), risk $4,873 (5.0% eq, warn-only). T1 87.8, T2 86.8.",
       "fill_id": "2026-11-07_SOL-USD_314",
       "card": "RACE_SOL_SHORT_1606"
+    },
+    {
+      "t": "2026-11-07T16:07:11-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "BTC-USD PASS (chaos: non-blocking)",
+      "reason": "vol $184.7M, spread 0.0000%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
     }
   ],
   "scanner_feed": [
