@@ -2438,8 +2438,8 @@ window.__DESK_STATE__ = {
   "agents": {
     "Scanner": {
       "status": "idle",
-      "last_run": "2026-11-06T20:02:48-05:00",
-      "note": "CHAOS race cycle 2002 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin f"
+      "last_run": "2026-11-06T21:03:47-05:00",
+      "note": "CHAOS race cycle 2103 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin f"
     },
     "Rug Check": {
       "status": "idle",
@@ -5043,15 +5043,6 @@ window.__DESK_STATE__ = {
     {
       "t": "2026-11-05T18:00:02-05:00",
       "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 25.22 BTC-USD @ 75605.1 \u00b7 notional $1,906,760 (50x, margin $38,135) \u00b7 stop 76044.2 \u00b7 tgt 74986 \u00b7 risk $11,076.37",
-      "reason": "RACE redeploy 1759 ET: BTC/ETH tilt short. 24h -6.24%. BTC-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 75988.22; session 5m low 75464.44; 15m detail [('16:00', 75902.41, 76027, 75740.58), ('16:15', 75857.3, 75931.66, 75602.3), ('16:30', 75789.09, 76014.47, 75769.55), ('16:45', 75709.41, 75880.19, 75616.57), ('17:00', 75960.85, 75980.46, 75616.27), ('17:15', 75866.4, 75988.22, 75774.9), ('17:30', 75716.64, 75891.04, 75650), ('17:45', 75587.96, 75716.86, 75464.44)]. Notional $1,906,760 @ 50x (margin $38,135), risk $11,076 (4.4% eq, warn-only). T1 74985.98, T2 74585.98.",
-      "fill_id": "2026-11-05_BTC-USD_235",
-      "card": "RACE_BTC_SHORT_1759"
-    },
-    {
-      "t": "2026-11-05T18:00:02-05:00",
-      "agent": "Executor",
       "kind": "plan",
       "text": "1759 ET: closed 1; opened {'SOL-USD': True, 'BTC-USD': True}; held ['BTC-USD', 'ETH-USD', 'SOL-USD', 'XRP-USD']",
       "reason": "race mode: direction=short; closes=1; opens_ok={'SOL-USD': True, 'BTC-USD': True}; cash_pool after cushion; plateau not acceptable"
@@ -6518,6 +6509,13 @@ window.__DESK_STATE__ = {
       "kind": "batch",
       "text": "CHAOS: 2002 ET race cycle \u00b7 hold/rotate check \u00b7 eq $139,577 \u00b7 exposure $6,976,338 (49.98x)",
       "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
+    },
+    {
+      "t": "2026-11-06T21:03:47-05:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "CHAOS race cycle 2103 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
+      "reason": "scheduled race cycle; scan scans/2026-11-06_2103_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
     }
   ],
   "scanner_feed": {
@@ -6876,7 +6874,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-06T20:03:03-05:00",
+  "updated_at": "2026-11-06T21:03:47-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
