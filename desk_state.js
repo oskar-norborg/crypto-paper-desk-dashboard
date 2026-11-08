@@ -2742,8 +2742,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-07T19:00:53-05:00",
-      "note": "1900 ET: closed 0; opened {}; held ['BTC-USD', 'ETH-USD']"
+      "last_run": "2026-11-07T20:06:45-05:00",
+      "note": "2006 ET: closed 0; opened {}; held ['BTC-USD', 'ETH-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -5706,13 +5706,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-06T15:00:11-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "ETH-USD PASS (chaos: non-blocking)",
-      "reason": "vol $380.1M, spread 0.0004%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
-    },
-    {
-      "t": "2026-11-06T15:00:11-05:00",
       "agent": "Executor",
       "kind": "fill",
       "text": "PAPER FILL long 854.449 ETH-USD @ 2232.32 \u00b7 notional $1,907,404 (50x, margin $38,148) \u00b7 stop 2210.14 \u00b7 tgt 2265.95 \u00b7 risk $18,951.68",
@@ -7174,6 +7167,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
       "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
+    },
+    {
+      "t": "2026-11-07T20:06:45-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "2006 ET: closed 0; opened {}; held ['BTC-USD', 'ETH-USD']",
+      "reason": "race mode: direction=long; closes=0; opens_ok={}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": [
