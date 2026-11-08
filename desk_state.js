@@ -3053,8 +3053,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-08T17:06:05-05:00",
-      "note": "logged 2026-11-08_XRP-USD_357"
+      "last_run": "2026-11-08T17:06:08-05:00",
+      "note": "CHAOS: 1705 ET race cycle \u00b7 hold/rotate check \u00b7 eq $108,954 \u00b7 exposure $4,930,058 (45.25x)"
     },
     "Equity": {
       "status": "ready",
@@ -6346,13 +6346,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-07T10:01:24-05:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "1001 ET: closed 2; opened {'BTC-USD': True, 'ETH-USD': True}; held ['BTC-USD', 'ETH-USD', 'XRP-USD']",
-      "reason": "race mode: direction=long; closes=2; opens_ok={'BTC-USD': True, 'ETH-USD': True}; cash_pool after cushion; plateau not acceptable"
-    },
-    {
       "t": "2026-11-07T10:01:26-05:00",
       "agent": "Logger",
       "kind": "batch",
@@ -7817,6 +7810,13 @@ window.__DESK_STATE__ = {
       "kind": "plan",
       "text": "1705 ET: closed 3; opened {'ETH-USD': True, 'XRP-USD': True}; held ['ETH-USD', 'XRP-USD']",
       "reason": "race mode: direction=short; closes=3; opens_ok={'ETH-USD': True, 'XRP-USD': True}; cash_pool after cushion; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-08T17:06:08-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 1705 ET race cycle \u00b7 hold/rotate check \u00b7 eq $108,954 \u00b7 exposure $4,930,058 (45.25x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
