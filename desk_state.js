@@ -2973,8 +2973,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-08T11:59:18-05:00",
-      "note": "1159 ET: closed 2; opened {'ETH-USD': True, 'SOL-USD': True}; held ['ETH-USD', 'SOL-USD', 'XRP-USD']"
+      "last_run": "2026-11-08T12:59:55-05:00",
+      "note": "1259 ET: closed 0; opened {}; held ['ETH-USD', 'SOL-USD', 'XRP-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -6168,15 +6168,6 @@ window.__DESK_STATE__ = {
     {
       "t": "2026-11-07T04:07:08-05:00",
       "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 643.554 ETH-USD @ 2245.93 \u00b7 notional $1,445,376 (50x, margin $28,908) \u00b7 stop 2223.47 \u00b7 tgt 2279.62 \u00b7 risk $14,454.21",
-      "reason": "RACE redeploy 0406 ET: BTC/ETH tilt long. 24h +0.46%. ETH-USD concentrated long under BTC/ETH reclaim (not bearish 15m); stop below floor 2243.73; session 5m low 2240.21; 15m detail [('02:15', 2241.23, 2243.98, 2241.14), ('02:30', 2241.78, 2242.76, 2240.21), ('02:45', 2242.56, 2244.18, 2241.74), ('03:00', 2244.2, 2244.99, 2242.28), ('03:15', 2244.8, 2245.33, 2244.15), ('03:30', 2245.71, 2245.77, 2244.21), ('03:45', 2247.21, 2247.8, 2245.37), ('04:00', 2245.93, 2248.41, 2245.35)]. Notional $1,445,376 @ 50x (margin $28,908), risk $14,454 (12.5% eq, warn-only). T1 2279.62, T2 2309.62.",
-      "fill_id": "2026-11-07_ETH-USD_297",
-      "card": "RACE_ETH_LONG_0406"
-    },
-    {
-      "t": "2026-11-07T04:07:08-05:00",
-      "agent": "Executor",
       "kind": "plan",
       "text": "0406 ET: closed 2; opened {'BTC-USD': True, 'ETH-USD': True}; held ['BTC-USD', 'ETH-USD']",
       "reason": "race mode: direction=long; closes=2; opens_ok={'BTC-USD': True, 'ETH-USD': True}; cash_pool after cushion; plateau not acceptable"
@@ -7640,6 +7631,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
       "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
+    },
+    {
+      "t": "2026-11-08T12:59:55-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "1259 ET: closed 0; opened {}; held ['ETH-USD', 'SOL-USD', 'XRP-USD']",
+      "reason": "race mode: direction=short; closes=0; opens_ok={}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": [
