@@ -6049,13 +6049,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-06T22:06:07-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
-      "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
-    },
-    {
       "t": "2026-11-06T22:06:08-05:00",
       "agent": "Executor",
       "kind": "plan",
@@ -7525,6 +7518,13 @@
       "text": "PAPER CLOSE ETH-USD @ 2239.67 \u00b7 P&L $-122.15",
       "reason": "INV 15m close > 2237.18 (short): Coinbase public 15m 10:15 ET close 2237.75 (high 2238/low 2234.71). Thesis broken \u2014 close at public mark 2239.67.",
       "fill_id": "2026-11-08_ETH-USD_339"
+    },
+    {
+      "t": "2026-11-08T11:03:17-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "XRP-USD short 45765.7 @ 1.1581: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-08T10:09:02-05:00: maxH=1.1583 minL=1.1521 (stop 1.1678; T1 1.1469/T2 1.1369); 15m max close=1.1568 (inv 1.1616). No close trigger."
     }
   ],
   "scanner_feed": [
