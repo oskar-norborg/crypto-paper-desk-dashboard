@@ -6057,13 +6057,6 @@
       "t": "2026-11-06T22:05:58-05:00",
       "agent": "Risk",
       "kind": "check",
-      "text": "ETH-USD long 778.8542 @ 2239.43: HOLD \u2014 no trigger",
-      "reason": "Coinbase public 5m since 2026-11-06T20:03:01-05:00: maxH=2247.5 minL=2237.51 (stop 2217.04; T1 2273.02/T2 2303.02); 15m min close=2239.83 (inv 2238.45). No close trigger."
-    },
-    {
-      "t": "2026-11-06T22:05:58-05:00",
-      "agent": "Risk",
-      "kind": "check",
       "text": "BTC-USD long 72.96 @ 75955.12: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-06T21:04:00-05:00: maxH=75999.11 minL=75900 (stop 75347.48; T1 76866.58/T2 77266.58); 15m min close=75937.52 (inv 75795.81). No close trigger."
     },
@@ -7529,6 +7522,13 @@
       "kind": "check",
       "text": "BTC-USD long 44.8729 @ 75863.81: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-08T07:59:40-05:00: maxH=76094.99 minL=75778.04 (stop 75440.0; T1 76700.0/T2 77100.0); 15m min close=75821.83 (inv 75680.0). No close trigger."
+    },
+    {
+      "t": "2026-11-08T11:03:17-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD short 55.2723 @ 2237.46: INVALIDATION \u2014 CLOSE at public mark 2239.67",
+      "reason": "Coinbase public candles since 2026-11-08T10:09:02-05:00: maxH=2240.43; minL=2234.71; 15m max close=2239.68; 15m min close=None. INV 15m close > 2237.18 (short): Coinbase public 15m 10:15 ET close 2237.75 (high 2238/low 2234.71). Thesis broken \u2014 close at public mark 2239.67."
     }
   ],
   "scanner_feed": [
@@ -8494,7 +8494,7 @@
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-08T11:03:16-05:00",
+  "updated_at": "2026-11-08T11:03:17-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
