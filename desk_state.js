@@ -5826,13 +5826,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-06T18:07:20-05:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: 1807 ET race cycle \u00b7 hold/rotate check \u00b7 eq $151,674 \u00b7 exposure $7,735,383 (51.0x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
-    {
       "t": "2026-11-06T19:02:01-05:00",
       "agent": "Scanner",
       "kind": "scan",
@@ -7296,6 +7289,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
       "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
+    },
+    {
+      "t": "2026-11-08T00:04:28-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD long 1449.9266 @ 2235.98: RACE ROTATE \u2014 thesis/momentum broken before stop",
+      "reason": "RACE rotate 0004 ET: cut ETH-USD long loser/broken-momentum BEFORE stop. uP&L $-4,248.28; stop_prog 13% of path to stop 2213.62 (mark 2232.45, entry 2235.98); symbol 15m bearish_tilt=True; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close."
     }
   ],
   "scanner_feed": [
