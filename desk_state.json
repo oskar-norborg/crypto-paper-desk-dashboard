@@ -2746,8 +2746,8 @@
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-07T18:02:08-05:00",
-      "note": "CHAOS: 1801 ET race cycle \u00b7 hold/rotate check \u00b7 eq $85,350 \u00b7 exposure $4,266,790 (49.99x)"
+      "last_run": "2026-11-07T19:00:55-05:00",
+      "note": "CHAOS: 1900 ET race cycle \u00b7 hold/rotate check \u00b7 eq $94,844 \u00b7 exposure $4,276,284 (45.09x)"
     },
     "Equity": {
       "status": "ready",
@@ -5700,14 +5700,6 @@
   "activity": [
     {
       "t": "2026-11-06T15:00:07-05:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE ETH-USD @ 2232.58 \u00b7 P&L $-24824.73",
-      "reason": "RACE rotate 1459 ET: cut ETH-USD short loser/broken-momentum BEFORE stop. uP&L $-23,549.49; stop_prog 47% of path to stop 2241.61 (mark 2232.58, entry 2223.82); symbol 15m bearish_tilt=False; book direction=long. Free margin for concentrated highest-conviction swing. Public mark close.",
-      "fill_id": "2026-11-06_ETH-USD_270"
-    },
-    {
-      "t": "2026-11-06T15:00:07-05:00",
       "agent": "Risk",
       "kind": "check",
       "text": "XRP-USD short 2282294.9 @ 1.1834: RACE ROTATE \u2014 thesis/momentum broken before stop",
@@ -7172,6 +7164,13 @@
       "kind": "plan",
       "text": "1900 ET: closed 0; opened {}; held ['BTC-USD', 'ETH-USD']",
       "reason": "race mode: direction=long; closes=0; opens_ok={}; cash_pool after cushion; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-07T19:00:55-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 1900 ET race cycle \u00b7 hold/rotate check \u00b7 eq $94,844 \u00b7 exposure $4,276,284 (45.09x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
