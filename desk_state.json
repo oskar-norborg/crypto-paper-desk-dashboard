@@ -6217,13 +6217,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-07T09:02:49-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 0902 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
-      "reason": "scheduled race cycle; scan scans/2026-11-07_0902_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
-    },
-    {
       "t": "2026-11-07T09:02:52-05:00",
       "agent": "Risk",
       "kind": "check",
@@ -7686,6 +7679,13 @@
       "kind": "check",
       "text": "ETH-USD short 966.355 @ 2226.82: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-08T11:59:18-05:00: maxH=2234.49 minL=2221.69 (stop 2244.63; T1 2204.55/T2 2179.55); 15m max close=2233.5 (inv 2238.43). No close trigger."
+    },
+    {
+      "t": "2026-11-08T15:00:28-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "BTC-USD long 3.28 @ 75776.17: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-08T14:07:52-05:00: maxH=75842.5 minL=75731.71 (stop 75169.96; T1 76685.48/T2 77085.48); 15m min close=75789.58 (inv 75755.1). No close trigger."
     }
   ],
   "scanner_feed": [
