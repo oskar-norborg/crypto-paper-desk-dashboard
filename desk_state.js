@@ -2974,7 +2974,7 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-08T11:59:18-05:00",
-      "note": "last: paper fill SOL-USD"
+      "note": "1159 ET: closed 2; opened {'ETH-USD': True, 'SOL-USD': True}; held ['ETH-USD', 'SOL-USD', 'XRP-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -6152,14 +6152,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-07T04:06:58-05:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE ETH-USD @ 2245.93 \u00b7 P&L $-6446.80",
-      "reason": "INV 15m close > 2241.11 (short): Coinbase public 15m 00:15 ET close 2245.74 (high 2246.62/low 2241.87). Thesis broken \u2014 close at public mark 2245.93.",
-      "fill_id": "2026-11-07_ETH-USD_292"
-    },
-    {
-      "t": "2026-11-07T04:06:58-05:00",
       "agent": "Risk",
       "kind": "check",
       "text": "XRP-USD short 1800013.5 @ 1.1553: STOP 1.1645 HIT \u2014 CLOSE at stated stop",
@@ -7629,6 +7621,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE redeploy 1159 ET: BTC/ETH tilt short. 24h -0.59%. SOL-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 89.73; session 5m low 88.76; 15m detail [('10:00', 89.48, 89.53, 89.4), ('10:15', 89.64, 89.65, 89.45), ('10:30', 89.55, 89.71, 89.5), ('10:45', 89.6, 89.64, 89.5), ('11:00', 89.53, 89.73, 89.5), ('11:15', 89.43, 89.56, 89.43), ('11:30', 89.31, 89.43, 89.16), ('11:45', 88.93, 89.33, 88.76)]. Notional $898,589 @ 50x (margin $17,972), risk $10,008 (16.1% eq, warn-only). T1 87.82, T2 86.82.",
       "fill_id": "2026-11-08_SOL-USD_346",
       "card": "RACE_SOL_SHORT_1159"
+    },
+    {
+      "t": "2026-11-08T11:59:18-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "1159 ET: closed 2; opened {'ETH-USD': True, 'SOL-USD': True}; held ['ETH-USD', 'SOL-USD', 'XRP-USD']",
+      "reason": "race mode: direction=short; closes=2; opens_ok={'ETH-USD': True, 'SOL-USD': True}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": [
