@@ -6176,13 +6176,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-07T08:00:52-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 0800 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
-      "reason": "scheduled race cycle; scan scans/2026-11-07_0800_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
-    },
-    {
       "t": "2026-11-07T08:00:55-05:00",
       "agent": "Risk",
       "kind": "check",
@@ -7648,6 +7641,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 1407 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
       "reason": "scheduled race cycle; scan scans/2026-11-08_1407_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-08T14:07:40-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "XRP-USD short 45765.7 @ 1.1581: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-08T10:09:02-05:00: maxH=1.1608 minL=1.1501 (stop 1.1678; T1 1.1469/T2 1.1369); 15m max close=1.1574 (inv 1.1616). No close trigger."
     }
   ],
   "scanner_feed": [
