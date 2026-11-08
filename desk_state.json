@@ -2858,7 +2858,7 @@
     "Rug Check": {
       "status": "idle",
       "last_run": "2026-11-08T10:09:02-05:00",
-      "note": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)"
+      "note": "ETH-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -5981,14 +5981,6 @@
   "activity": [
     {
       "t": "2026-11-06T21:03:50-05:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE BTC-USD @ 75951.1 \u00b7 P&L $+6194.20",
-      "reason": "INV 15m close < 75811.39 (long): Coinbase public 15m 20:15 ET close 75795.02 (high 75815.34/low 75745.81). Thesis broken \u2014 close at public mark 75951.14.",
-      "fill_id": "2026-11-06_BTC-USD_286"
-    },
-    {
-      "t": "2026-11-06T21:03:50-05:00",
       "agent": "Risk",
       "kind": "check",
       "text": "ETH-USD long 778.8542 @ 2239.43: HOLD \u2014 no trigger",
@@ -7454,6 +7446,13 @@
       "kind": "check",
       "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
       "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
+    },
+    {
+      "t": "2026-11-08T10:09:02-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "ETH-USD PASS (chaos: non-blocking)",
+      "reason": "vol $74.3M, spread 0.0004%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
     }
   ],
   "scanner_feed": [
