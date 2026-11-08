@@ -6,16 +6,44 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 71668.0,
-  "cash": 71668.0,
+  "equity": 69500.19,
+  "cash": 3583.42,
   "realized_pnl": 21668.0,
-  "unrealized_pnl": 0.0,
-  "day_pnl": -2214.17,
-  "day_pnl_pct": -0.02997,
+  "unrealized_pnl": -2167.81,
+  "day_pnl": -4381.98,
+  "day_pnl_pct": -0.05931,
   "day_baseline_date": "2026-11-08",
   "day_baseline_equity": 73882.17,
-  "open_positions": [],
-  "open_count": 0,
+  "open_positions": [
+    {
+      "id": "2026-11-08_BTC-USD_338",
+      "symbol": "BTC-USD",
+      "side": "long",
+      "size": 44.8729,
+      "entry": 75863.81,
+      "notional": 3404229.16,
+      "stop": 75440.0,
+      "target": 76700.0,
+      "target2": 77100.0,
+      "invalidation": "15m close < 75680 (below 05:30 ET swing low) or stop 75440",
+      "risk_usd": 19017.58,
+      "risk_pct_equity": 0.26536,
+      "opened_at": "2026-11-08T07:59:40-05:00",
+      "card": "RACE_BTC_LONG_0800",
+      "reason": "RACE redeploy 0800 ET: BTC higher-low structure since 05:30 ET swing low 75690, 06:15 breakout to 75920.56, 24h +0.1%, deepest book on watchlist (\u00b11% depth ~$13.9M). Prior BTC/ETH longs closed green on tight invalidation; re-entering with structure-based invalidation. ~95% of cash as margin @50x, risk to stop warn-only.",
+      "price_source": "coinbase_exchange_public_ticker bid/ask/price 75863.81/75863.82/75863.81 @ 2026-11-08T07:59:40-05:00 ET api.exchange.coinbase.com unauthenticated",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 68084.58,
+      "mark": 75815.5,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-08T04:03:59-05:00",
+      "unrealized_pnl": -2167.81,
+      "exposure": 3402061.35
+    }
+  ],
+  "open_count": 1,
   "closed_positions": [
     {
       "type": "close",
@@ -2785,7 +2813,7 @@ window.__DESK_STATE__ = {
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 71668.0,
+  "max_risk_usd": 69500.19,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -738821.7,
   "paused": false,
@@ -2840,13 +2868,13 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-08T07:59:21-05:00",
-      "note": "last: closed ETH-USD"
+      "last_run": "2026-11-08T07:59:40-05:00",
+      "note": "last: paper fill BTC-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-08T04:04:01-05:00",
-      "note": "CHAOS: 0403 ET race cycle \u00b7 hold/rotate check \u00b7 eq $69,127 \u00b7 exposure $3,453,315 (49.96x)"
+      "last_run": "2026-11-08T07:59:40-05:00",
+      "note": "logged 2026-11-08_BTC-USD_338"
     },
     "Equity": {
       "status": "ready",
@@ -5924,18 +5952,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-08T07:59:21-05:00",
       "equity": 71668.0,
       "kind": "close"
+    },
+    {
+      "t": "2026-11-08T07:59:40-05:00",
+      "equity": 69500.19,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-06T20:03:01-05:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 778.854 ETH-USD @ 2239.43 \u00b7 notional $1,744,189 (50x, margin $34,884) \u00b7 stop 2217.04 \u00b7 tgt 2273.02 \u00b7 risk $17,438.55",
-      "reason": "RACE redeploy 2002 ET: BTC/ETH tilt long. 24h +0.08%. ETH-USD concentrated long under BTC/ETH reclaim (not bearish 15m); stop below floor 2235.45; session 5m low 2231.56; 15m detail [('18:15', 2235.32, 2235.5, 2231.56), ('18:30', 2237.53, 2240.21, 2234.75), ('18:45', 2235.37, 2238.38, 2232.54), ('19:00', 2239.66, 2239.69, 2235.17), ('19:15', 2238.01, 2241, 2237.9), ('19:30', 2237.42, 2239.18, 2237.02), ('19:45', 2236.56, 2238.18, 2235.45), ('20:00', 2239.84, 2240.81, 2236.56)]. Notional $1,744,189 @ 50x (margin $34,884), risk $17,439 (12.4% eq, warn-only). T1 2273.02, T2 2303.02.",
-      "fill_id": "2026-11-06_ETH-USD_287",
-      "card": "RACE_ETH_LONG_2002"
-    },
     {
       "t": "2026-11-06T20:03:01-05:00",
       "agent": "Executor",
@@ -7402,6 +7426,15 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE ETH-USD @ 2236.49 \u00b7 P&L $+471.27",
       "reason": "INVALIDATION: 15m close 2233.00 (04:00 ET bar) < 2236.79; stop 2212.92 never touched (min 5m low 2230.22). Close at current public mark.",
       "fill_id": "2026-11-08_ETH-USD_335"
+    },
+    {
+      "t": "2026-11-08T07:59:40-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 44.8729 BTC-USD @ 75863.8 \u00b7 notional $3,404,229 (50x, margin $68,085) \u00b7 stop 75440 \u00b7 tgt 76700 \u00b7 risk $19,017.58",
+      "reason": "RACE redeploy 0800 ET: BTC higher-low structure since 05:30 ET swing low 75690, 06:15 breakout to 75920.56, 24h +0.1%, deepest book on watchlist (\u00b11% depth ~$13.9M). Prior BTC/ETH longs closed green on tight invalidation; re-entering with structure-based invalidation. ~95% of cash as margin @50x, risk to stop warn-only.",
+      "fill_id": "2026-11-08_BTC-USD_338",
+      "card": "RACE_BTC_LONG_0800"
     }
   ],
   "scanner_feed": [
@@ -8077,7 +8110,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-08T07:59:21-05:00",
+  "updated_at": "2026-11-08T07:59:40-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -8093,10 +8126,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 0,
-  "exposure": 0.0,
-  "buying_power": 3583400.0,
-  "effective_leverage": 0.0,
+  "margin_used": 68084.58,
+  "exposure": 3402061.35,
+  "buying_power": 72948.15,
+  "effective_leverage": 48.95,
   "operating_timezone": "America/New_York",
   "events": [
     {
