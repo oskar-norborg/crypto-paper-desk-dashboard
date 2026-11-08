@@ -2944,8 +2944,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-08T11:03:27-05:00",
-      "note": "logged 2026-11-08_ETH-USD_342"
+      "last_run": "2026-11-08T11:03:30-05:00",
+      "note": "CHAOS: 1103 ET race cycle \u00b7 hold/rotate check \u00b7 eq $77,506 \u00b7 exposure $3,580,496 (46.2x)"
     },
     "Equity": {
       "status": "ready",
@@ -6092,14 +6092,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-07T00:05:16-05:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE ETH-USD @ 2242.78 \u00b7 P&L $+2609.16",
-      "reason": "INV 15m close < 2238.45 (long): Coinbase public 15m 22:30 ET close 2237.63 (high 2244.6/low 2236.71). Thesis broken \u2014 close at public mark 2242.78.",
-      "fill_id": "2026-11-06_ETH-USD_287"
-    },
-    {
       "t": "2026-11-07T00:05:17-05:00",
       "agent": "Risk",
       "kind": "check",
@@ -7570,6 +7562,13 @@ window.__DESK_STATE__ = {
       "kind": "plan",
       "text": "1103 ET: closed 1; opened {'ETH-USD': True}; held ['BTC-USD', 'ETH-USD', 'XRP-USD']",
       "reason": "race mode: direction=long; closes=1; opens_ok={'ETH-USD': True}; cash_pool after cushion; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-08T11:03:30-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 1103 ET race cycle \u00b7 hold/rotate check \u00b7 eq $77,506 \u00b7 exposure $3,580,496 (46.2x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
