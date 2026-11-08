@@ -6,7 +6,7 @@
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
   "equity": 85502.22,
-  "cash": 22068.29,
+  "cash": 329.56,
   "realized_pnl": 35838.5,
   "unrealized_pnl": -336.28,
   "day_pnl": -53145.88,
@@ -67,9 +67,36 @@
       "mark_at": "2026-11-07T21:05:18-05:00",
       "unrealized_pnl": -0.0,
       "exposure": 2568800.46
+    },
+    {
+      "id": "2026-11-07_XRP-USD_324",
+      "symbol": "XRP-USD",
+      "side": "short",
+      "size": 939606.4,
+      "entry": 1.1568,
+      "notional": 1086936.68,
+      "stop": 1.1661,
+      "target": 1.1452,
+      "target2": 1.1352,
+      "invalidation": "15m close > 1.1587 (reclaim of recent bounce shelf) or stop 1.1661",
+      "risk_usd": 8738.34,
+      "risk_pct_equity": 0.1022,
+      "opened_at": "2026-11-07T21:05:27-05:00",
+      "card": "RACE_XRP_SHORT_2105",
+      "reason": "RACE redeploy 2105 ET: BTC/ETH tilt short. 24h -0.86%. XRP-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 1.1607; session 5m low 1.156; 15m detail [('19:15', 1.1599, 1.1622, 1.1594), ('19:30', 1.1607, 1.161, 1.1585), ('19:45', 1.1602, 1.1615, 1.1592), ('20:00', 1.1595, 1.1606, 1.1587), ('20:15', 1.1592, 1.1596, 1.1576), ('20:30', 1.1579, 1.1607, 1.1577), ('20:45', 1.1577, 1.1588, 1.1572), ('21:00', 1.1569, 1.158, 1.156)]. Notional $1,086,937 @ 50x (margin $21,739), risk $8,738 (10.2% eq, warn-only). T1 1.1452, T2 1.1352.",
+      "price_source": "coinbase_exchange_public_ticker bid/ask/price 1.1568 @ 2026-11-07T21:05:27-05:00 ET (exch 2026-11-08T02:05:23.484898221Z) api.exchange.coinbase.com unauthenticated",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 21738.73,
+      "mark": 1.1568,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-07T21:05:20-05:00",
+      "unrealized_pnl": -0.0,
+      "exposure": 1086936.68
     }
   ],
-  "open_count": 2,
+  "open_count": 3,
   "closed_positions": [
     {
       "type": "close",
@@ -2759,12 +2786,12 @@
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-07T21:05:27-05:00",
-      "note": "last: paper fill ETH-USD"
+      "note": "last: paper fill XRP-USD"
     },
     "Logger": {
       "status": "ready",
       "last_run": "2026-11-07T21:05:27-05:00",
-      "note": "logged 2026-11-07_ETH-USD_323"
+      "note": "logged 2026-11-07_XRP-USD_324"
     },
     "Equity": {
       "status": "ready",
@@ -5742,18 +5769,14 @@
       "t": "2026-11-07T21:05:27-05:00",
       "equity": 85502.22,
       "kind": "fill"
+    },
+    {
+      "t": "2026-11-07T21:05:27-05:00",
+      "equity": 85502.22,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-06T16:02:02-05:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 685.718 ETH-USD @ 2226.11 \u00b7 notional $1,526,483 (50x, margin $30,530) \u00b7 stop 2203.85 \u00b7 tgt 2259.5 \u00b7 risk $15,264.08",
-      "reason": "RACE redeploy 1601 ET: BTC/ETH tilt long. 24h +0.04%. ETH-USD concentrated long under BTC/ETH reclaim (not bearish 15m); stop below floor 2223.12; session 5m low 2222.88; 15m detail [('14:15', 2223.81, 2227.7, 2222.88), ('14:30', 2229.78, 2231.03, 2223.23), ('14:45', 2232.13, 2232.43, 2226.62), ('15:00', 2228.74, 2234.57, 2228.72), ('15:15', 2227.93, 2229.54, 2223.12), ('15:30', 2229.52, 2232.61, 2226.96), ('15:45', 2225.85, 2230.8, 2224.95), ('16:00', 2226.18, 2227.09, 2224.53)]. Notional $1,526,483 @ 50x (margin $30,530), risk $15,264 (10.5% eq, warn-only). T1 2259.5, T2 2289.5.",
-      "fill_id": "2026-11-06_ETH-USD_277",
-      "card": "RACE_ETH_LONG_1601"
-    },
     {
       "t": "2026-11-06T16:02:02-05:00",
       "agent": "Executor",
@@ -7215,6 +7238,15 @@
       "kind": "check",
       "text": "XRP-USD PASS (chaos: non-blocking)",
       "reason": "vol $50.2M, spread 0.0086%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
+    },
+    {
+      "t": "2026-11-07T21:05:27-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 939606 XRP-USD @ 1.1568 \u00b7 notional $1,086,937 (50x, margin $21,739) \u00b7 stop 1.1661 \u00b7 tgt 1.1452 \u00b7 risk $8,738.34",
+      "reason": "RACE redeploy 2105 ET: BTC/ETH tilt short. 24h -0.86%. XRP-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 1.1607; session 5m low 1.156; 15m detail [('19:15', 1.1599, 1.1622, 1.1594), ('19:30', 1.1607, 1.161, 1.1585), ('19:45', 1.1602, 1.1615, 1.1592), ('20:00', 1.1595, 1.1606, 1.1587), ('20:15', 1.1592, 1.1596, 1.1576), ('20:30', 1.1579, 1.1607, 1.1577), ('20:45', 1.1577, 1.1588, 1.1572), ('21:00', 1.1569, 1.158, 1.156)]. Notional $1,086,937 @ 50x (margin $21,739), risk $8,738 (10.2% eq, warn-only). T1 1.1452, T2 1.1352.",
+      "fill_id": "2026-11-07_XRP-USD_324",
+      "card": "RACE_XRP_SHORT_2105"
     }
   ],
   "scanner_feed": [
@@ -7906,10 +7938,10 @@
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 63770.21,
-  "exposure": 3188174.21,
-  "buying_power": 1086936.79,
-  "effective_leverage": 37.29,
+  "margin_used": 85508.94,
+  "exposure": 4275110.89,
+  "buying_power": 0.11,
+  "effective_leverage": 50.0,
   "operating_timezone": "America/New_York",
   "events": [
     {
