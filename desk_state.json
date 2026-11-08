@@ -5,12 +5,12 @@
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 85518.49,
-  "cash": 268.56,
-  "realized_pnl": 35609.55,
-  "unrealized_pnl": -91.06,
-  "day_pnl": -53129.61,
-  "day_pnl_pct": -0.3832,
+  "equity": 85502.14,
+  "cash": 73444.3,
+  "realized_pnl": 35838.5,
+  "unrealized_pnl": -336.36,
+  "day_pnl": -53145.96,
+  "day_pnl_pct": -0.38332,
   "day_baseline_date": "2026-11-07",
   "day_baseline_equity": 138648.1,
   "open_positions": [
@@ -40,36 +40,9 @@
       "mark_at": "2026-11-07T21:05:15-05:00",
       "unrealized_pnl": -336.36,
       "exposure": 619373.66
-    },
-    {
-      "id": "2026-11-07_ETH-USD_321",
-      "symbol": "ETH-USD",
-      "side": "long",
-      "size": 1635.3289,
-      "entry": 2230.34,
-      "notional": 3647339.46,
-      "stop": 2208.04,
-      "target": 2263.8,
-      "target2": 2293.8,
-      "invalidation": "15m close < 2230.61 or stop 2208.04",
-      "risk_usd": 36467.83,
-      "risk_pct_equity": 0.42735,
-      "opened_at": "2026-11-07T18:02:05-05:00",
-      "card": "RACE_ETH_LONG_1801",
-      "reason": "RACE redeploy 1801 ET: BTC/ETH tilt long. 24h -0.22%. ETH-USD concentrated long under BTC/ETH reclaim (not bearish 15m); stop below floor 2227.61; session 5m low 2218.76; 15m detail [('16:15', 2223.11, 2224.32, 2221.04), ('16:30', 2226.52, 2226.74, 2218.76), ('16:45', 2229.44, 2229.88, 2225.62), ('17:00', 2228.41, 2229.98, 2227.61), ('17:15', 2230, 2231.52, 2228.4), ('17:30', 2231.98, 2231.99, 2229.53), ('17:45', 2231.42, 2232.45, 2229.86), ('18:00', 2230.29, 2231.43, 2229.29)]. Notional $3,647,339 @ 50x (margin $72,947), risk $36,468 (42.7% eq, warn-only). T1 2263.8, T2 2293.8.",
-      "price_source": "coinbase_exchange_public_ticker bid/ask/price 2230.34 @ 2026-11-07T18:02:05-05:00 ET (exch 2026-11-07T23:01:58.811430774Z) api.exchange.coinbase.com unauthenticated",
-      "override": null,
-      "paper_only": true,
-      "leverage": 50.0,
-      "margin": 72946.79,
-      "mark": 2230.49,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-07T21:05:15-05:00",
-      "unrealized_pnl": 245.3,
-      "exposure": 3647584.76
     }
   ],
-  "open_count": 2,
+  "open_count": 1,
   "closed_positions": [
     {
       "type": "close",
@@ -2682,11 +2655,28 @@
       "reason": "RACE rotate 1801 ET: cut XRP-USD short loser/broken-momentum BEFORE stop. uP&L $3,593.00; stop_prog -22% of path to stop 1.174 (mark 1.158, entry 1.1611); symbol 15m bearish_tilt=False; book direction=long. Free margin for concentrated highest-conviction swing. Public mark close.",
       "price_source": "coinbase_exchange_public_ticker bid/ask/price 1.158 @ 2026-11-07T18:02:02-05:00 ET (exch 2026-11-07T23:02:00.438418520Z) api.exchange.coinbase.com unauthenticated",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-07_ETH-USD_321",
+      "symbol": "ETH-USD",
+      "side": "long",
+      "size": 1635.3289,
+      "entry": 2230.34,
+      "exit": 2230.48,
+      "pnl": 228.95,
+      "notional": 3647339.46,
+      "leverage": 50.0,
+      "margin": 72946.79,
+      "closed_at": "2026-11-07T21:05:17-05:00",
+      "reason": "INV 15m close < 2230.61 (long): Coinbase public 15m 21:00 ET close 2230.56 (high 2231.54/low 2229.05). Thesis broken \u2014 close at public mark 2230.48.",
+      "price_source": "coinbase_exchange_public_ticker bid/ask/price 2230.48 @ 2026-11-07T21:05:17-05:00 ET (exch 2026-11-08T02:05:16.927821281Z) api.exchange.coinbase.com unauthenticated",
+      "paper_only": true
     }
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 85518.49,
+  "max_risk_usd": 85502.14,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -1386481.0,
   "paused": false,
@@ -2741,8 +2731,8 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-07T20:06:45-05:00",
-      "note": "2006 ET: closed 0; opened {}; held ['BTC-USD', 'ETH-USD']"
+      "last_run": "2026-11-07T21:05:17-05:00",
+      "note": "last: closed ETH-USD"
     },
     "Logger": {
       "status": "ready",
@@ -5710,16 +5700,14 @@
       "t": "2026-11-07T21:05:17-05:00",
       "equity": 85518.49,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-07T21:05:17-05:00",
+      "equity": 85502.14,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-06T16:01:51-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "BTC-USD long 75.56 @ 75788.76: HOLD \u2014 no trigger",
-      "reason": "Coinbase public 5m since 2026-11-06T15:00:11-05:00: maxH=75887.56 minL=75611.88 (stop 75182.45; T1 76698.23/T2 77098.23); 15m min close=75685.36 (inv 75591.03). No close trigger."
-    },
     {
       "t": "2026-11-06T16:01:51-05:00",
       "agent": "Risk",
@@ -7181,6 +7169,14 @@
       "kind": "check",
       "text": "ETH-USD long 1635.3289 @ 2230.34: INVALIDATION \u2014 CLOSE at public mark 2230.48",
       "reason": "Coinbase public candles since 2026-11-07T18:02:05-05:00: maxH=2238.29; minL=2229.05; 15m max close=2236.55; 15m min close=2230.56. INV 15m close < 2230.61 (long): Coinbase public 15m 21:00 ET close 2230.56 (high 2231.54/low 2229.05). Thesis broken \u2014 close at public mark 2230.48."
+    },
+    {
+      "t": "2026-11-07T21:05:17-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE ETH-USD @ 2230.48 \u00b7 P&L $+228.95",
+      "reason": "INV 15m close < 2230.61 (long): Coinbase public 15m 21:00 ET close 2230.56 (high 2231.54/low 2229.05). Thesis broken \u2014 close at public mark 2230.48.",
+      "fill_id": "2026-11-07_ETH-USD_321"
     }
   ],
   "scanner_feed": [
@@ -7872,10 +7868,10 @@
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 85340.99,
-  "exposure": 4266958.42,
-  "buying_power": 8966.08,
-  "effective_leverage": 49.9,
+  "margin_used": 12394.2,
+  "exposure": 619373.66,
+  "buying_power": 3655733.34,
+  "effective_leverage": 7.24,
   "operating_timezone": "America/New_York",
   "events": [
     {
