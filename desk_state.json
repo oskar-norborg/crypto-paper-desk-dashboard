@@ -2974,8 +2974,8 @@
   "agents": {
     "Scanner": {
       "status": "ready",
-      "last_run": "2026-11-08T14:07:37-05:00",
-      "note": "CHAOS race cycle 1407 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin f"
+      "last_run": "2026-11-08T15:00:24-05:00",
+      "note": "CHAOS race cycle 1500 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin f"
     },
     "Rug Check": {
       "status": "idle",
@@ -6214,15 +6214,6 @@
     {
       "t": "2026-11-07T08:01:06-05:00",
       "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 1.23897e+06 XRP-USD @ 1.1611 \u00b7 notional $1,438,564 (50x, margin $28,771) \u00b7 stop 1.174 \u00b7 tgt 1.1495 \u00b7 risk $15,982.66",
-      "reason": "RACE redeploy 0800 ET: BTC/ETH tilt short. 24h -2.07%. XRP-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 1.17; session 5m low 1.1577; 15m detail [('06:15', 1.1715, 1.1716, 1.1684), ('06:30', 1.1708, 1.1723, 1.17), ('06:45', 1.1716, 1.1718, 1.1701), ('07:00', 1.1673, 1.1715, 1.1665), ('07:15', 1.1644, 1.1672, 1.164), ('07:30', 1.1588, 1.1644, 1.1577), ('07:45', 1.1606, 1.1618, 1.158), ('08:00', 1.1609, 1.1609, 1.1604)]. Notional $1,438,564 @ 50x (margin $28,771), risk $15,983 (16.6% eq, warn-only). T1 1.1495, T2 1.1395.",
-      "fill_id": "2026-11-07_XRP-USD_301",
-      "card": "RACE_XRP_SHORT_0800"
-    },
-    {
-      "t": "2026-11-07T08:01:06-05:00",
-      "agent": "Executor",
       "kind": "plan",
       "text": "0800 ET: closed 2; opened {'ETH-USD': True, 'XRP-USD': True}; held ['ETH-USD', 'XRP-USD']",
       "reason": "race mode: direction=short; closes=2; opens_ok={'ETH-USD': True, 'XRP-USD': True}; cash_pool after cushion; plateau not acceptable"
@@ -7683,6 +7674,13 @@
       "kind": "batch",
       "text": "CHAOS: 1407 ET race cycle \u00b7 hold/rotate check \u00b7 eq $49,004 \u00b7 exposure $2,457,026 (50.14x)",
       "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
+    },
+    {
+      "t": "2026-11-08T15:00:24-05:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "CHAOS race cycle 1500 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
+      "reason": "scheduled race cycle; scan scans/2026-11-08_1500_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
     }
   ],
   "scanner_feed": [
@@ -8648,7 +8646,7 @@
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-08T14:07:54-05:00",
+  "updated_at": "2026-11-08T15:00:24-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
