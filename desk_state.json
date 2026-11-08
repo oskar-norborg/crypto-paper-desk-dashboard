@@ -6,7 +6,7 @@
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
   "equity": 49138.56,
-  "cash": 8486.94,
+  "cash": 3516.02,
   "realized_pnl": 2584.94,
   "unrealized_pnl": -3446.38,
   "day_pnl": -24743.61,
@@ -67,9 +67,36 @@
       "mark_at": "2026-11-08T14:07:42-05:00",
       "unrealized_pnl": -3730.13,
       "exposure": 2155628.77
+    },
+    {
+      "id": "2026-11-08_BTC-USD_348",
+      "symbol": "BTC-USD",
+      "side": "long",
+      "size": 3.28,
+      "entry": 75776.17,
+      "notional": 248545.84,
+      "stop": 75169.96,
+      "target": 76685.48,
+      "target2": 77085.48,
+      "invalidation": "15m close < 75755.1 or stop 75169.96",
+      "risk_usd": 1988.37,
+      "risk_pct_equity": 0.04046,
+      "opened_at": "2026-11-08T14:07:52-05:00",
+      "card": "RACE_BTC_LONG_1407",
+      "reason": "RACE redeploy 1407 ET: BTC/ETH tilt long. 24h +0.11%. BTC-USD concentrated long under BTC/ETH reclaim (not bearish 15m); stop below floor 75705.1; session 5m low 75560; 15m detail [('12:15', 75593.95, 75664.9, 75563.36), ('12:30', 75668.73, 75673.99, 75560), ('12:45', 75653.87, 75714.62, 75652.25), ('13:00', 75793.63, 75797.18, 75631.66), ('13:15', 75812.91, 75856.26, 75789.22), ('13:30', 75833.65, 75873.07, 75812.91), ('13:45', 75845.03, 75868.79, 75813.57), ('14:00', 75776.18, 75847.64, 75758.92)]. Notional $248,546 @ 50x (margin $4,971), risk $1,988 (4.0% eq, warn-only). T1 76685.48, T2 77085.48.",
+      "price_source": "coinbase_exchange_public_ticker bid/ask/price 75776.17 @ 2026-11-08T14:07:51-05:00 ET (exch 2026-11-08T19:07:50.561374882Z) api.exchange.coinbase.com unauthenticated",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 4970.92,
+      "mark": 75776.17,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-08T14:07:42-05:00",
+      "unrealized_pnl": 0.0,
+      "exposure": 248545.84
     }
   ],
-  "open_count": 2,
+  "open_count": 3,
   "closed_positions": [
     {
       "type": "close",
@@ -2962,13 +2989,13 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-08T14:07:41-05:00",
-      "note": "last: closed SOL-USD"
+      "last_run": "2026-11-08T14:07:52-05:00",
+      "note": "last: paper fill BTC-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-08T12:59:57-05:00",
-      "note": "CHAOS: 1259 ET race cycle \u00b7 hold/rotate check \u00b7 eq $60,244 \u00b7 exposure $3,105,838 (51.55x)"
+      "last_run": "2026-11-08T14:07:52-05:00",
+      "note": "logged 2026-11-08_BTC-USD_348"
     },
     "Equity": {
       "status": "ready",
@@ -6171,16 +6198,14 @@
       "t": "2026-11-08T14:07:44-05:00",
       "equity": 49138.56,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-08T14:07:52-05:00",
+      "equity": 49138.56,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-07T08:01:06-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "ETH-USD PASS (chaos: non-blocking)",
-      "reason": "vol $216.5M, spread 0.0022%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
-    },
     {
       "t": "2026-11-07T08:01:06-05:00",
       "agent": "Executor",
@@ -7646,6 +7671,15 @@
       "kind": "check",
       "text": "BTC-USD PASS (chaos: non-blocking)",
       "reason": "vol $132.6M, spread 0.0000%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
+    },
+    {
+      "t": "2026-11-08T14:07:52-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 3.28 BTC-USD @ 75776.2 \u00b7 notional $248,546 (50x, margin $4,971) \u00b7 stop 75170 \u00b7 tgt 76685.5 \u00b7 risk $1,988.37",
+      "reason": "RACE redeploy 1407 ET: BTC/ETH tilt long. 24h +0.11%. BTC-USD concentrated long under BTC/ETH reclaim (not bearish 15m); stop below floor 75705.1; session 5m low 75560; 15m detail [('12:15', 75593.95, 75664.9, 75563.36), ('12:30', 75668.73, 75673.99, 75560), ('12:45', 75653.87, 75714.62, 75652.25), ('13:00', 75793.63, 75797.18, 75631.66), ('13:15', 75812.91, 75856.26, 75789.22), ('13:30', 75833.65, 75873.07, 75812.91), ('13:45', 75845.03, 75868.79, 75813.57), ('14:00', 75776.18, 75847.64, 75758.92)]. Notional $248,546 @ 50x (margin $4,971), risk $1,988 (4.0% eq, warn-only). T1 76685.48, T2 77085.48.",
+      "fill_id": "2026-11-08_BTC-USD_348",
+      "card": "RACE_BTC_LONG_1407"
     }
   ],
   "scanner_feed": [
@@ -8627,10 +8661,10 @@
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 44098.0,
-  "exposure": 2208346.28,
-  "buying_power": 248581.72,
-  "effective_leverage": 44.94,
+  "margin_used": 49068.92,
+  "exposure": 2456892.12,
+  "buying_power": 35.88,
+  "effective_leverage": 50.0,
   "operating_timezone": "America/New_York",
   "events": [
     {
