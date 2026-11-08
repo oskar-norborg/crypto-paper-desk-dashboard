@@ -6286,13 +6286,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-07T10:01:12-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "XRP-USD short 1238966.1 @ 1.1611: HOLD \u2014 no trigger",
-      "reason": "Coinbase public 5m since 2026-11-07T08:01:06-05:00: maxH=1.1677 minL=1.1586 (stop 1.174; T1 1.1495/T2 1.1395); 15m max close=1.1675 (inv 1.168). No close trigger."
-    },
-    {
       "t": "2026-11-07T10:01:13-05:00",
       "agent": "Risk",
       "kind": "check",
@@ -7757,6 +7750,13 @@
       "text": "PAPER CLOSE ETH-USD @ 2179.55 \u00b7 P&L $+45679.60",
       "reason": "T2 2179.55 hit (short): Coinbase public 5m 16:50 ET low 2157 (<= 2179.55); stop 2244.63 never touched (maxH 2234.49); inv 15m clear (maxC15 2233.5). Paper close at stated T2.",
       "fill_id": "2026-11-08_ETH-USD_345"
+    },
+    {
+      "t": "2026-11-08T17:05:54-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "SOL-USD short 1406.3 @ 89.41: T2 87.34 HIT \u2014 CLOSE at stated T2",
+      "reason": "Coinbase public candles since 2026-11-08T15:00:38-05:00: maxH=89.49; minL=84.95; 15m max close=89.42; 15m min close=None. T2 87.34 hit (short): Coinbase public 5m 16:50 ET low 86.45 (<= 87.34); stop 90.3 never touched (maxH 89.49); inv 15m clear (maxC15 89.42). Paper close at stated T2."
     }
   ],
   "scanner_feed": [
