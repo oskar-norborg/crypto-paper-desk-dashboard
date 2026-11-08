@@ -2857,8 +2857,8 @@
     },
     "Rug Check": {
       "status": "idle",
-      "last_run": "2026-11-08T04:03:58-05:00",
-      "note": "ETH-USD PASS (chaos: non-blocking)"
+      "last_run": "2026-11-08T10:09:02-05:00",
+      "note": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)"
     },
     "Sizer": {
       "status": "ready",
@@ -5981,13 +5981,6 @@
   "activity": [
     {
       "t": "2026-11-06T21:03:50-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "BTC-USD long 68.97 @ 75861.33: INVALIDATION \u2014 CLOSE at public mark 75951.14",
-      "reason": "Coinbase public candles since 2026-11-06T20:03:01-05:00: maxH=75975.52; minL=75745.81; 15m max close=75968.82; 15m min close=75795.02. INV 15m close < 75811.39 (long): Coinbase public 15m 20:15 ET close 75795.02 (high 75815.34/low 75745.81). Thesis broken \u2014 close at public mark 75951.14."
-    },
-    {
-      "t": "2026-11-06T21:03:50-05:00",
       "agent": "Executor",
       "kind": "close",
       "text": "PAPER CLOSE BTC-USD @ 75951.1 \u00b7 P&L $+6194.20",
@@ -7454,6 +7447,13 @@
       "kind": "check",
       "text": "BTC-USD long 44.8729 @ 75863.81: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-08T07:59:40-05:00: maxH=76094.99 minL=75778.04 (stop 75440.0; T1 76700.0/T2 77100.0); 15m min close=75821.83 (inv 75680.0). No close trigger."
+    },
+    {
+      "t": "2026-11-08T10:09:02-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
+      "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
     }
   ],
   "scanner_feed": [
@@ -8419,7 +8419,7 @@
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-08T10:08:54-05:00",
+  "updated_at": "2026-11-08T10:09:02-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
