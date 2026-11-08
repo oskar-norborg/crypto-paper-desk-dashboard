@@ -6161,13 +6161,6 @@
   "activity": [
     {
       "t": "2026-11-07T04:07:08-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "BTC-USD PASS (chaos: non-blocking)",
-      "reason": "vol $532.1M, spread 0.0000%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
-    },
-    {
-      "t": "2026-11-07T04:07:08-05:00",
       "agent": "Executor",
       "kind": "fill",
       "text": "PAPER FILL long 57 BTC-USD @ 76067.3 \u00b7 notional $4,335,834 (50x, margin $86,717) \u00b7 stop 75458.7 \u00b7 tgt 76980.1 \u00b7 risk $34,686.78",
@@ -7636,6 +7629,13 @@
       "kind": "check",
       "text": "XRP-USD short 45765.7 @ 1.1581: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-08T10:09:02-05:00: maxH=1.1583 minL=1.1501 (stop 1.1678; T1 1.1469/T2 1.1369); 15m max close=1.157 (inv 1.1616). No close trigger."
+    },
+    {
+      "t": "2026-11-08T12:59:45-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD short 966.355 @ 2226.82: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-08T11:59:18-05:00: maxH=2229.99 minL=2221.69 (stop 2244.63; T1 2204.55/T2 2179.55); 15m max close=2227.9 (inv 2238.43). No close trigger."
     }
   ],
   "scanner_feed": [
