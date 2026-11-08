@@ -5786,13 +5786,6 @@
       "t": "2026-11-06T17:00:23-05:00",
       "agent": "Rug Check",
       "kind": "check",
-      "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
-      "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
-    },
-    {
-      "t": "2026-11-06T17:00:23-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
       "text": "ETH-USD PASS (chaos: non-blocking)",
       "reason": "vol $311.4M, spread 0.0040%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
     },
@@ -7252,6 +7245,13 @@
       "text": "PAPER CLOSE ETH-USD @ 2235.47 \u00b7 P&L $-5735.34",
       "reason": "INV 15m close > 2231.58 (short): Coinbase public 15m 21:45 ET close 2232.95 (high 2233/low 2225.74). Thesis broken \u2014 close at public mark 2235.47.",
       "fill_id": "2026-11-07_ETH-USD_323"
+    },
+    {
+      "t": "2026-11-07T22:05:31-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "XRP-USD short 939606.4 @ 1.1568: INVALIDATION \u2014 CLOSE at public mark 1.1598",
+      "reason": "Coinbase public candles since 2026-11-07T21:05:27-05:00: maxH=1.1604; minL=1.1535; 15m max close=1.1596; 15m min close=None. INV 15m close > 1.1587 (short): Coinbase public 15m 22:00 ET close 1.1596 (high 1.1604/low 1.1571). Thesis broken \u2014 close at public mark 1.1598."
     }
   ],
   "scanner_feed": [
