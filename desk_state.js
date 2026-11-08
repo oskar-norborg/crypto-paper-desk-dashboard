@@ -2791,7 +2791,7 @@ window.__DESK_STATE__ = {
     "Rug Check": {
       "status": "idle",
       "last_run": "2026-11-08T00:04:31-05:00",
-      "note": "ETH-USD PASS (chaos: non-blocking)"
+      "note": "XRP-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -5849,14 +5849,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-06T19:02:15-05:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE ETH-USD @ 2236.23 \u00b7 P&L $-3377.18",
-      "reason": "RACE rotate 1902 ET: cut ETH-USD long loser/broken-momentum BEFORE stop. uP&L $-2,640.67; stop_prog 12% of path to stop 2216.12 (mark 2236.23, entry 2239.99); symbol 15m bearish_tilt=True; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close.",
-      "fill_id": "2026-11-06_ETH-USD_279"
-    },
-    {
-      "t": "2026-11-06T19:02:15-05:00",
       "agent": "Risk",
       "kind": "check",
       "text": "BTC-USD long 75.56 @ 75788.76: RACE ROTATE \u2014 thesis/momentum broken before stop",
@@ -7322,6 +7314,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE redeploy 0004 ET: BTC/ETH tilt short. 24h -0.59%. ETH-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 2235.75; session 5m low 2231.08; 15m detail [('22:15', 2233.39, 2236, 2232.97), ('22:30', 2235.07, 2235.14, 2233.17), ('22:45', 2234.86, 2237.15, 2233.53), ('23:00', 2234.66, 2235.75, 2233.77), ('23:15', 2234.96, 2235.69, 2233.49), ('23:30', 2232.85, 2235.54, 2232.72), ('23:45', 2232.06, 2232.96, 2231.08), ('00:00', 2232.8, 2233.33, 2231.58)]. Notional $2,553,677 @ 50x (margin $51,074), risk $20,430 (28.0% eq, warn-only). T1 2210.13, T2 2185.13.",
       "fill_id": "2026-11-08_ETH-USD_330",
       "card": "RACE_ETH_SHORT_0004"
+    },
+    {
+      "t": "2026-11-08T00:04:31-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "XRP-USD PASS (chaos: non-blocking)",
+      "reason": "vol $41.4M, spread 0.0172%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
     }
   ],
   "scanner_feed": [
