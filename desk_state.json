@@ -6163,13 +6163,6 @@
       "t": "2026-11-07T04:07:08-05:00",
       "agent": "Rug Check",
       "kind": "check",
-      "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
-      "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
-    },
-    {
-      "t": "2026-11-07T04:07:08-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
       "text": "BTC-USD PASS (chaos: non-blocking)",
       "reason": "vol $532.1M, spread 0.0000%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
     },
@@ -7636,6 +7629,13 @@
       "kind": "scan",
       "text": "CHAOS race cycle 1259 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
       "reason": "scheduled race cycle; scan scans/2026-11-08_1259_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-08T12:59:45-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "XRP-USD short 45765.7 @ 1.1581: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-08T10:09:02-05:00: maxH=1.1583 minL=1.1501 (stop 1.1678; T1 1.1469/T2 1.1369); 15m max close=1.157 (inv 1.1616). No close trigger."
     }
   ],
   "scanner_feed": [
