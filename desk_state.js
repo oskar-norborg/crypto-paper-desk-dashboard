@@ -6,12 +6,12 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 73882.17,
-  "cash": 50.0,
-  "realized_pnl": 27284.34,
-  "unrealized_pnl": -3402.17,
-  "day_pnl": 0.0,
-  "day_pnl_pct": 0.0,
+  "equity": 73012.21,
+  "cash": 59771.9,
+  "realized_pnl": 22166.1,
+  "unrealized_pnl": 846.11,
+  "day_pnl": -869.96,
+  "day_pnl_pct": -0.01177,
   "day_baseline_date": "2026-11-08",
   "day_baseline_equity": 73882.17,
   "open_positions": [
@@ -41,36 +41,9 @@ window.__DESK_STATE__ = {
       "mark_at": "2026-11-08T00:04:15-05:00",
       "unrealized_pnl": 846.11,
       "exposure": 620556.14
-    },
-    {
-      "id": "2026-11-07_ETH-USD_327",
-      "symbol": "ETH-USD",
-      "side": "long",
-      "size": 1449.9266,
-      "entry": 2235.98,
-      "notional": 3242006.88,
-      "stop": 2213.62,
-      "target": 2269.52,
-      "target2": 2299.52,
-      "invalidation": "15m close < 2228.74 or stop 2213.62",
-      "risk_usd": 32420.36,
-      "risk_pct_equity": 0.41662,
-      "opened_at": "2026-11-07T22:05:42-05:00",
-      "card": "RACE_ETH_LONG_2205",
-      "reason": "RACE redeploy 2205 ET: BTC/ETH tilt long. 24h -0.26%. ETH-USD concentrated long under BTC/ETH reclaim (not bearish 15m); stop below floor 2225.74; session 5m low 2225.74; 15m detail [('20:15', 2231.14, 2233.49, 2230.35), ('20:30', 2232.03, 2233.34, 2230.79), ('20:45', 2230.86, 2232.66, 2230.13), ('21:00', 2229.36, 2231.54, 2229.05), ('21:15', 2229.85, 2231.18, 2226.52), ('21:30', 2226.52, 2230.44, 2226.41), ('21:45', 2232.95, 2233, 2225.74), ('22:00', 2235.47, 2236.29, 2232.95)]. Notional $3,242,007 @ 50x (margin $64,840), risk $32,420 (41.7% eq, warn-only). T1 2269.52, T2 2299.52.",
-      "price_source": "coinbase_exchange_public_ticker bid/ask/price 2235.98 @ 2026-11-07T22:05:42-05:00 ET (exch 2026-11-08T03:05:41.494616695Z) api.exchange.coinbase.com unauthenticated",
-      "override": null,
-      "paper_only": true,
-      "leverage": 50.0,
-      "margin": 64840.14,
-      "mark": 2233.05,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-08T00:04:15-05:00",
-      "unrealized_pnl": -4248.28,
-      "exposure": 3237758.59
     }
   ],
-  "open_count": 2,
+  "open_count": 1,
   "closed_positions": [
     {
       "type": "close",
@@ -2734,11 +2707,28 @@ window.__DESK_STATE__ = {
       "reason": "INV 15m close > 1.1587 (short): Coinbase public 15m 22:00 ET close 1.1596 (high 1.1604/low 1.1571). Thesis broken \u2014 close at public mark 1.1598.",
       "price_source": "coinbase_exchange_public_ticker bid/ask/price 1.1598 @ 2026-11-07T22:05:31-05:00 ET (exch 2026-11-08T03:05:29.156616141Z) api.exchange.coinbase.com unauthenticated",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-07_ETH-USD_327",
+      "symbol": "ETH-USD",
+      "side": "long",
+      "size": 1449.9266,
+      "entry": 2235.98,
+      "exit": 2232.45,
+      "pnl": -5118.24,
+      "notional": 3242006.88,
+      "leverage": 50.0,
+      "margin": 64840.14,
+      "closed_at": "2026-11-08T00:04:28-05:00",
+      "reason": "RACE rotate 0004 ET: cut ETH-USD long loser/broken-momentum BEFORE stop. uP&L $-4,248.28; stop_prog 13% of path to stop 2213.62 (mark 2232.45, entry 2235.98); symbol 15m bearish_tilt=True; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close.",
+      "price_source": "coinbase_exchange_public_ticker bid/ask/price 2232.45 @ 2026-11-08T00:04:28-05:00 ET (exch 2026-11-08T05:04:27.001017611Z) api.exchange.coinbase.com unauthenticated",
+      "paper_only": true
     }
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 73882.17,
+  "max_risk_usd": 73012.21,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -738821.7,
   "paused": false,
@@ -2793,8 +2783,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-07T22:05:42-05:00",
-      "note": "2205 ET: closed 2; opened {'ETH-USD': True}; held ['BTC-USD', 'ETH-USD']"
+      "last_run": "2026-11-08T00:04:28-05:00",
+      "note": "last: closed ETH-USD"
     },
     "Logger": {
       "status": "ready",
@@ -5822,16 +5812,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-08T00:04:14-05:00",
       "equity": 73882.17,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-08T00:04:28-05:00",
+      "equity": 73012.21,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-06T19:02:01-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 1902 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
-      "reason": "scheduled race cycle; scan scans/2026-11-06_1902_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
-    },
     {
       "t": "2026-11-06T19:02:04-05:00",
       "agent": "Risk",
@@ -7296,6 +7284,14 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "ETH-USD long 1449.9266 @ 2235.98: RACE ROTATE \u2014 thesis/momentum broken before stop",
       "reason": "RACE rotate 0004 ET: cut ETH-USD long loser/broken-momentum BEFORE stop. uP&L $-4,248.28; stop_prog 13% of path to stop 2213.62 (mark 2232.45, entry 2235.98); symbol 15m bearish_tilt=True; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close."
+    },
+    {
+      "t": "2026-11-08T00:04:28-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE ETH-USD @ 2232.45 \u00b7 P&L $-5118.24",
+      "reason": "RACE rotate 0004 ET: cut ETH-USD long loser/broken-momentum BEFORE stop. uP&L $-4,248.28; stop_prog 13% of path to stop 2213.62 (mark 2232.45, entry 2235.98); symbol 15m bearish_tilt=True; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close.",
+      "fill_id": "2026-11-07_ETH-USD_327"
     }
   ],
   "scanner_feed": [
@@ -7987,10 +7983,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 77234.34,
-  "exposure": 3858314.73,
-  "buying_power": 0.0,
-  "effective_leverage": 52.22,
+  "margin_used": 12394.2,
+  "exposure": 620556.14,
+  "buying_power": 3030054.36,
+  "effective_leverage": 8.5,
   "operating_timezone": "America/New_York",
   "events": [
     {
