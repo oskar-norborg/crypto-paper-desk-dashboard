@@ -3022,8 +3022,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-08T15:00:38-05:00",
-      "note": "logged 2026-11-08_SOL-USD_349"
+      "last_run": "2026-11-08T15:00:41-05:00",
+      "note": "CHAOS: 1500 ET race cycle \u00b7 hold/rotate check \u00b7 eq $51,435 \u00b7 exposure $2,580,718 (50.17x)"
     },
     "Equity": {
       "status": "ready",
@@ -6260,13 +6260,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-07T09:03:02-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "ETH-USD PASS (chaos: non-blocking)",
-      "reason": "vol $185.9M, spread 0.0004%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
-    },
-    {
       "t": "2026-11-07T09:03:03-05:00",
       "agent": "Executor",
       "kind": "fill",
@@ -7730,6 +7723,13 @@ window.__DESK_STATE__ = {
       "kind": "plan",
       "text": "1500 ET: closed 0; opened {'SOL-USD': True}; held ['BTC-USD', 'ETH-USD', 'SOL-USD', 'XRP-USD']",
       "reason": "race mode: direction=short; closes=0; opens_ok={'SOL-USD': True}; cash_pool after cushion; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-08T15:00:41-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 1500 ET race cycle \u00b7 hold/rotate check \u00b7 eq $51,435 \u00b7 exposure $2,580,718 (50.17x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
