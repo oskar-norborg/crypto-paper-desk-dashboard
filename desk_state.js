@@ -6177,14 +6177,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-07T08:00:55-05:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE BTC-USD @ 75802.4 \u00b7 P&L $-15098.73",
-      "reason": "INV 15m close < 76054.67 (long): Coinbase public 15m 04:15 ET close 75977.01 (high 76096.15/low 75956.31). Thesis broken \u2014 close at public mark 75802.37.",
-      "fill_id": "2026-11-07_BTC-USD_296"
-    },
-    {
-      "t": "2026-11-07T08:00:55-05:00",
       "agent": "Risk",
       "kind": "check",
       "text": "ETH-USD long 643.5536 @ 2245.93: INVALIDATION \u2014 CLOSE at public mark 2238.74",
@@ -7648,6 +7640,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "ETH-USD short 966.355 @ 2226.82: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-08T11:59:18-05:00: maxH=2234.49 minL=2221.69 (stop 2244.63; T1 2204.55/T2 2179.55); 15m max close=2233.5 (inv 2238.43). No close trigger."
+    },
+    {
+      "t": "2026-11-08T14:07:41-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "SOL-USD short 10109.0 @ 88.89: STOP 89.88 HIT \u2014 CLOSE at stated stop",
+      "reason": "Coinbase public candles since 2026-11-08T11:59:18-05:00: maxH=89.88; minL=88.83; 15m max close=89.51; 15m min close=None. STOP 89.88 hit (short): Coinbase public 5m 13:20 ET high 89.88 (>= 89.88). Paper close at stated stop."
     }
   ],
   "scanner_feed": [
