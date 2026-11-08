@@ -2991,7 +2991,7 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-08T14:07:52-05:00",
-      "note": "last: paper fill BTC-USD"
+      "note": "1407 ET: closed 1; opened {'BTC-USD': True}; held ['BTC-USD', 'ETH-USD', 'XRP-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -6209,15 +6209,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-07T08:01:06-05:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 1499.25 ETH-USD @ 2238.89 \u00b7 notional $3,356,648 (50x, margin $67,133) \u00b7 stop 2256.8 \u00b7 tgt 2216.5 \u00b7 risk $26,851.51",
-      "reason": "RACE redeploy 0800 ET: BTC/ETH tilt short. 24h +0.23%. ETH-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 2242.99; session 5m low 2234.74; 15m detail [('06:15', 2241.98, 2243.3, 2241.14), ('06:30', 2243.37, 2243.39, 2241.03), ('06:45', 2242.18, 2243.78, 2241.76), ('07:00', 2240.79, 2242.99, 2240.47), ('07:15', 2241.78, 2241.94, 2240.17), ('07:30', 2237.41, 2242.04, 2237.22), ('07:45', 2238.83, 2239.43, 2234.74), ('08:00', 2238.82, 2238.9, 2238.63)]. Notional $3,356,648 @ 50x (margin $67,133), risk $26,852 (28.0% eq, warn-only). T1 2216.5, T2 2191.5.",
-      "fill_id": "2026-11-07_ETH-USD_300",
-      "card": "RACE_ETH_SHORT_0800"
-    },
-    {
-      "t": "2026-11-07T08:01:06-05:00",
       "agent": "Rug Check",
       "kind": "check",
       "text": "XRP-USD PASS (chaos: non-blocking)",
@@ -7681,6 +7672,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE redeploy 1407 ET: BTC/ETH tilt long. 24h +0.11%. BTC-USD concentrated long under BTC/ETH reclaim (not bearish 15m); stop below floor 75705.1; session 5m low 75560; 15m detail [('12:15', 75593.95, 75664.9, 75563.36), ('12:30', 75668.73, 75673.99, 75560), ('12:45', 75653.87, 75714.62, 75652.25), ('13:00', 75793.63, 75797.18, 75631.66), ('13:15', 75812.91, 75856.26, 75789.22), ('13:30', 75833.65, 75873.07, 75812.91), ('13:45', 75845.03, 75868.79, 75813.57), ('14:00', 75776.18, 75847.64, 75758.92)]. Notional $248,546 @ 50x (margin $4,971), risk $1,988 (4.0% eq, warn-only). T1 76685.48, T2 77085.48.",
       "fill_id": "2026-11-08_BTC-USD_348",
       "card": "RACE_BTC_LONG_1407"
+    },
+    {
+      "t": "2026-11-08T14:07:52-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "1407 ET: closed 1; opened {'BTC-USD': True}; held ['BTC-USD', 'ETH-USD', 'XRP-USD']",
+      "reason": "race mode: direction=long; closes=1; opens_ok={'BTC-USD': True}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": [
