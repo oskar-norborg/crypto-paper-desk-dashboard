@@ -5789,13 +5789,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-06T17:00:12-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "BTC-USD long 75.56 @ 75788.76: HOLD \u2014 no trigger",
-      "reason": "Coinbase public 5m since 2026-11-06T15:00:11-05:00: maxH=75887.56 minL=75605.94 (stop 75182.45; T1 76698.23/T2 77098.23); 15m min close=75678.2 (inv 75591.03). No close trigger."
-    },
-    {
       "t": "2026-11-06T17:00:13-05:00",
       "agent": "Risk",
       "kind": "check",
@@ -7258,6 +7251,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 2205 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
       "reason": "scheduled race cycle; scan scans/2026-11-07_2205_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-07T22:05:30-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "BTC-USD long 8.19 @ 75666.67: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-07T17:02:15-05:00: maxH=75811.88 minL=75545.34 (stop 75061.34; T1 76574.67/T2 76974.67); 15m min close=75578.2 (inv 75502.88). No close trigger."
     }
   ],
   "scanner_feed": [
