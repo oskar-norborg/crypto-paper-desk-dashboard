@@ -5,12 +5,12 @@
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 50884.86,
-  "cash": 7090.91,
+  "equity": 50118.88,
+  "cash": 1100.11,
   "realized_pnl": 2643.63,
-  "unrealized_pnl": -1758.77,
-  "day_pnl": -22997.31,
-  "day_pnl_pct": -0.31127,
+  "unrealized_pnl": -2524.75,
+  "day_pnl": -23763.29,
+  "day_pnl_pct": -0.32164,
   "day_baseline_date": "2026-11-08",
   "day_baseline_equity": 73882.17,
   "open_positions": [
@@ -67,9 +67,36 @@
       "mark_at": "2026-11-08T15:00:40-05:00",
       "unrealized_pnl": -0.0,
       "exposure": 125737.28
+    },
+    {
+      "id": "2026-11-08_BTC-USD_352",
+      "symbol": "BTC-USD",
+      "side": "short",
+      "size": 3.96,
+      "entry": 75641.42,
+      "notional": 299540.02,
+      "stop": 75850.0,
+      "target": 75150.0,
+      "target2": 74800.0,
+      "invalidation": "15m close > 75780 (reclaim of 15:35 bounce high) or stop 75850",
+      "risk_usd": 825.98,
+      "risk_pct_equity": 0.01623,
+      "opened_at": "2026-11-08T16:07:17-05:00",
+      "card": "RACE_BTC_SHORT_1607",
+      "reason": "RACE rotate 1607 ET: BTC lost the 15m shelf (closes 75748.56 @15:30, 75643.57 @15:45) and printed a session 5m low 75600.71 @16:00 under BTC/ETH/SOL bearish 15m tilt; 24h low 75545.3 is the magnet. Short with stop above the 15:35 5m bounce high 75778.97 + buffer. Notional ~$300k @ 50x (margin ~$6.0k), keeps ~$1k cash cushion. T1 75150, T2 74800.",
+      "price_source": "coinbase_exchange_public_ticker bid 75641.42 @ 2026-11-08T16:07:17-05:00 ET (exch 2026-11-08T21:07:16.925826621Z) api.exchange.coinbase.com unauthenticated",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 5990.8,
+      "mark": 75834.85,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-08T15:00:39-05:00",
+      "unrealized_pnl": -765.98,
+      "exposure": 300306.01
     }
   ],
-  "open_count": 2,
+  "open_count": 3,
   "closed_positions": [
     {
       "type": "close",
@@ -2941,7 +2968,7 @@
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 50884.86,
+  "max_risk_usd": 50118.88,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -738821.7,
   "paused": false,
@@ -2996,13 +3023,13 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-08T16:07:11-05:00",
-      "note": "last: closed BTC-USD"
+      "last_run": "2026-11-08T16:07:17-05:00",
+      "note": "last: paper fill BTC-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-08T15:00:41-05:00",
-      "note": "CHAOS: 1500 ET race cycle \u00b7 hold/rotate check \u00b7 eq $51,435 \u00b7 exposure $2,580,718 (50.17x)"
+      "last_run": "2026-11-08T16:07:17-05:00",
+      "note": "logged 2026-11-08_BTC-USD_352"
     },
     "Equity": {
       "status": "ready",
@@ -6245,18 +6272,14 @@
       "t": "2026-11-08T16:07:11-05:00",
       "equity": 50884.86,
       "kind": "close"
+    },
+    {
+      "t": "2026-11-08T16:07:17-05:00",
+      "equity": 50118.88,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-07T09:03:03-05:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 7249.3 SOL-USD @ 89.88 \u00b7 notional $651,567 (50x, margin $13,031) \u00b7 stop 90.78 \u00b7 tgt 88.8 \u00b7 risk $6,524.37",
-      "reason": "RACE redeploy 0902 ET: BTC/ETH tilt short. 24h -1.10%. SOL-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 89.99; session 5m low 89.55; 15m detail [('07:15', 89.87, 89.92, 89.81), ('07:30', 89.66, 89.92, 89.65), ('07:45', 89.64, 89.71, 89.55), ('08:00', 89.56, 89.81, 89.55), ('08:15', 89.85, 89.85, 89.55), ('08:30', 89.97, 89.97, 89.81), ('08:45', 89.9, 89.99, 89.82), ('09:00', 89.88, 89.92, 89.85)]. Notional $651,567 @ 50x (margin $13,031), risk $6,524 (7.6% eq, warn-only). T1 88.8, T2 87.8.",
-      "fill_id": "2026-11-07_SOL-USD_304",
-      "card": "RACE_SOL_SHORT_0902"
-    },
     {
       "t": "2026-11-07T09:03:03-05:00",
       "agent": "Executor",
@@ -7719,6 +7742,15 @@
       "text": "PAPER CLOSE BTC-USD @ 75637.8 \u00b7 P&L $-453.89",
       "reason": "INV 15m close < 75755.1 (long): Coinbase public 15m 15:30 ET close 75748.56 and 15:45 ET close 75643.57. Thesis broken \u2014 close at public mark 75637.79.",
       "fill_id": "2026-11-08_BTC-USD_348"
+    },
+    {
+      "t": "2026-11-08T16:07:17-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 3.96 BTC-USD @ 75641.4 \u00b7 notional $299,540 (50x, margin $5,991) \u00b7 stop 75850 \u00b7 tgt 75150 \u00b7 risk $825.98",
+      "reason": "RACE rotate 1607 ET: BTC lost the 15m shelf (closes 75748.56 @15:30, 75643.57 @15:45) and printed a session 5m low 75600.71 @16:00 under BTC/ETH/SOL bearish 15m tilt; 24h low 75545.3 is the magnet. Short with stop above the 15:35 5m bounce high 75778.97 + buffer. Notional ~$300k @ 50x (margin ~$6.0k), keeps ~$1k cash cushion. T1 75150, T2 74800.",
+      "fill_id": "2026-11-08_BTC-USD_352",
+      "card": "RACE_BTC_SHORT_1607"
     }
   ],
   "scanner_feed": [
@@ -8684,7 +8716,7 @@
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-08T16:07:11-05:00",
+  "updated_at": "2026-11-08T16:07:17-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -8700,10 +8732,10 @@
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 45552.72,
-  "exposure": 2279394.69,
-  "buying_power": 264848.31,
-  "effective_leverage": 44.8,
+  "margin_used": 51543.52,
+  "exposure": 2579700.7,
+  "buying_power": 0.0,
+  "effective_leverage": 51.47,
   "operating_timezone": "America/New_York",
   "events": [
     {
