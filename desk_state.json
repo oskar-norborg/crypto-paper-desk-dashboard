@@ -2827,7 +2827,7 @@
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-08T00:04:31-05:00",
-      "note": "last: paper fill XRP-USD"
+      "note": "0004 ET: closed 2; opened {'ETH-USD': True, 'XRP-USD': True}; held ['ETH-USD', 'XRP-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -5879,14 +5879,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-06T19:02:15-05:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE BTC-USD @ 75786.4 \u00b7 P&L $-179.83",
-      "reason": "RACE rotate 1902 ET: cut BTC-USD long loser/broken-momentum BEFORE stop. uP&L $692.89; stop_prog -2% of path to stop 75182.45 (mark 75786.38, entry 75788.76); symbol 15m bearish_tilt=True; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close.",
-      "fill_id": "2026-11-06_BTC-USD_274"
-    },
-    {
       "t": "2026-11-06T19:02:18-05:00",
       "agent": "Rug Check",
       "kind": "check",
@@ -7354,6 +7346,13 @@
       "reason": "RACE redeploy 0004 ET: BTC/ETH tilt short. 24h +0.09%. XRP-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 1.1619; session 5m low 1.1545; 15m detail [('22:15', 1.1549, 1.1601, 1.1545), ('22:30', 1.1598, 1.1598, 1.1548), ('22:45', 1.1606, 1.1606, 1.1585), ('23:00', 1.1606, 1.162, 1.1595), ('23:15', 1.1611, 1.1616, 1.1597), ('23:30', 1.1592, 1.1618, 1.1591), ('23:45', 1.1594, 1.1596, 1.1583), ('00:00', 1.1613, 1.1614, 1.1592)]. Notional $1,094,433 @ 50x (margin $21,889), risk $8,766 (12.0% eq, warn-only). T1 1.1495, T2 1.1395.",
       "fill_id": "2026-11-08_XRP-USD_331",
       "card": "RACE_XRP_SHORT_0004"
+    },
+    {
+      "t": "2026-11-08T00:04:31-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "0004 ET: closed 2; opened {'ETH-USD': True, 'XRP-USD': True}; held ['ETH-USD', 'XRP-USD']",
+      "reason": "race mode: direction=short; closes=2; opens_ok={'ETH-USD': True, 'XRP-USD': True}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": [
