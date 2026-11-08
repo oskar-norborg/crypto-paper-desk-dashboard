@@ -2793,7 +2793,7 @@
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-07T22:05:42-05:00",
-      "note": "last: paper fill ETH-USD"
+      "note": "2205 ET: closed 2; opened {'ETH-USD': True}; held ['BTC-USD', 'ETH-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -5815,13 +5815,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-06T17:52:30-05:00",
-      "agent": "Logger",
-      "kind": "review",
-      "text": "EOD paper review 2026-11-06 written \u00b7 eq $158,274 \u00b7 gap $841,726 \u00b7 day $-46,638 (\u221222.8%) \u00b7 open 2 \u00b7 blown_up false",
-      "reason": "Scheduled Crypto EOD paper review: final public marks 30/30 at 5:51 PM ET, desk recomputed, reviews/2026-11-06.md saved with gap-shrink plan (BTC/ETH long hold\u2192reload, SOL add after bank, flip-short on inv), dashboard synced + public mirror best-effort."
-    },
-    {
       "t": "2026-11-06T18:07:04-05:00",
       "agent": "Scanner",
       "kind": "scan",
@@ -7285,6 +7278,13 @@
       "reason": "RACE redeploy 2205 ET: BTC/ETH tilt long. 24h -0.26%. ETH-USD concentrated long under BTC/ETH reclaim (not bearish 15m); stop below floor 2225.74; session 5m low 2225.74; 15m detail [('20:15', 2231.14, 2233.49, 2230.35), ('20:30', 2232.03, 2233.34, 2230.79), ('20:45', 2230.86, 2232.66, 2230.13), ('21:00', 2229.36, 2231.54, 2229.05), ('21:15', 2229.85, 2231.18, 2226.52), ('21:30', 2226.52, 2230.44, 2226.41), ('21:45', 2232.95, 2233, 2225.74), ('22:00', 2235.47, 2236.29, 2232.95)]. Notional $3,242,007 @ 50x (margin $64,840), risk $32,420 (41.7% eq, warn-only). T1 2269.52, T2 2299.52.",
       "fill_id": "2026-11-07_ETH-USD_327",
       "card": "RACE_ETH_LONG_2205"
+    },
+    {
+      "t": "2026-11-07T22:05:42-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "2205 ET: closed 2; opened {'ETH-USD': True}; held ['BTC-USD', 'ETH-USD']",
+      "reason": "race mode: direction=long; closes=2; opens_ok={'ETH-USD': True}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": [
