@@ -5693,13 +5693,6 @@ window.__DESK_STATE__ = {
       "t": "2026-11-06T14:59:56-05:00",
       "agent": "Risk",
       "kind": "check",
-      "text": "ETH-USD short 2833.8737 @ 2223.82: HOLD \u2014 no trigger",
-      "reason": "Coinbase public 5m since 2026-11-06T13:06:51-05:00: maxH=2232.43 minL=2220.04 (stop 2241.61; T1 2201.58/T2 2176.58); 15m max close=2231.82 (inv 2232.59). No close trigger."
-    },
-    {
-      "t": "2026-11-06T14:59:56-05:00",
-      "agent": "Risk",
-      "kind": "check",
       "text": "XRP-USD short 2282294.9 @ 1.1834: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-06T13:06:51-05:00: maxH=1.1891 minL=1.18 (stop 1.1991; T1 1.1716/T2 1.1616); 15m max close=1.1853 (inv 1.1931). No close trigger."
     },
@@ -7163,6 +7156,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 1900 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
       "reason": "scheduled race cycle; scan scans/2026-11-07_1900_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-07T19:00:43-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "BTC-USD long 8.19 @ 75666.67: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-07T17:02:15-05:00: maxH=75811.88 minL=75588.45 (stop 75061.34; T1 76574.67/T2 76974.67); 15m min close=75618.04 (inv 75502.88). No close trigger."
     }
   ],
   "scanner_feed": [
