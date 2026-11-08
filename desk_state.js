@@ -2742,8 +2742,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-07T18:02:05-05:00",
-      "note": "1801 ET: closed 2; opened {'ETH-USD': True}; held ['BTC-USD', 'ETH-USD']"
+      "last_run": "2026-11-07T19:00:53-05:00",
+      "note": "1900 ET: closed 0; opened {}; held ['BTC-USD', 'ETH-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -5696,13 +5696,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-06T15:00:07-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "ETH-USD short 2833.8737 @ 2223.82: RACE ROTATE \u2014 thesis/momentum broken before stop",
-      "reason": "RACE rotate 1459 ET: cut ETH-USD short loser/broken-momentum BEFORE stop. uP&L $-23,549.49; stop_prog 47% of path to stop 2241.61 (mark 2232.58, entry 2223.82); symbol 15m bearish_tilt=False; book direction=long. Free margin for concentrated highest-conviction swing. Public mark close."
-    },
-    {
-      "t": "2026-11-06T15:00:07-05:00",
       "agent": "Executor",
       "kind": "close",
       "text": "PAPER CLOSE ETH-USD @ 2232.58 \u00b7 P&L $-24824.73",
@@ -7168,6 +7161,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
       "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
+    },
+    {
+      "t": "2026-11-07T19:00:53-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "1900 ET: closed 0; opened {}; held ['BTC-USD', 'ETH-USD']",
+      "reason": "race mode: direction=long; closes=0; opens_ok={}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": [
