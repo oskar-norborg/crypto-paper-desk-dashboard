@@ -2939,7 +2939,7 @@
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-08T11:03:27-05:00",
-      "note": "last: paper fill ETH-USD"
+      "note": "1103 ET: closed 1; opened {'ETH-USD': True}; held ['BTC-USD', 'ETH-USD', 'XRP-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -6087,13 +6087,6 @@
   "activity": [
     {
       "t": "2026-11-07T00:05:16-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "ETH-USD long 778.8542 @ 2239.43: INVALIDATION \u2014 CLOSE at public mark 2242.78",
-      "reason": "Coinbase public candles since 2026-11-06T20:03:01-05:00: maxH=2247.5; minL=2236.71; 15m max close=2246.15; 15m min close=2237.63. INV 15m close < 2238.45 (long): Coinbase public 15m 22:30 ET close 2237.63 (high 2244.6/low 2236.71). Thesis broken \u2014 close at public mark 2242.78."
-    },
-    {
-      "t": "2026-11-07T00:05:16-05:00",
       "agent": "Executor",
       "kind": "close",
       "text": "PAPER CLOSE ETH-USD @ 2242.78 \u00b7 P&L $+2609.16",
@@ -7564,6 +7557,13 @@
       "reason": "RACE redeploy 1103 ET: BTC/ETH tilt long. 24h +0.41%. ETH-USD concentrated long under BTC/ETH reclaim (not bearish 15m); stop below floor 2234.71; session 5m low 2233.29; 15m detail [('09:15', 2234.62, 2237.22, 2233.29), ('09:30', 2237.79, 2237.95, 2234.54), ('09:45', 2237.5, 2239.18, 2236.95), ('10:00', 2236.69, 2238.55, 2236.24), ('10:15', 2237.75, 2238, 2234.71), ('10:30', 2238.35, 2239.13, 2236.9), ('10:45', 2239.02, 2239.02, 2237.3), ('11:00', 2239.68, 2240.43, 2238.75)]. Notional $117,562 @ 50x (margin $2,351), risk $1,176 (1.5% eq, warn-only). T1 2273.27, T2 2303.27.",
       "fill_id": "2026-11-08_ETH-USD_342",
       "card": "RACE_ETH_LONG_1103"
+    },
+    {
+      "t": "2026-11-08T11:03:27-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "1103 ET: closed 1; opened {'ETH-USD': True}; held ['BTC-USD', 'ETH-USD', 'XRP-USD']",
+      "reason": "race mode: direction=long; closes=1; opens_ok={'ETH-USD': True}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": [
