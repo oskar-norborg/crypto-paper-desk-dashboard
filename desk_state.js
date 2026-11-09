@@ -3072,7 +3072,7 @@ window.__DESK_STATE__ = {
     },
     "Rug Check": {
       "status": "idle",
-      "last_run": "2026-11-08T20:00:09-05:00",
+      "last_run": "2026-11-08T21:00:41-05:00",
       "note": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)"
     },
     "Sizer": {
@@ -6462,15 +6462,6 @@ window.__DESK_STATE__ = {
     {
       "t": "2026-11-07T16:07:11-05:00",
       "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 2.76 BTC-USD @ 75554.1 \u00b7 notional $208,529 (50x, margin $4,171) \u00b7 stop 76007.4 \u00b7 tgt 74949.7 \u00b7 risk $1,251.16",
-      "reason": "RACE redeploy 1606 ET: BTC/ETH tilt short. 24h -0.34%. BTC-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 75743.54; session 5m low 75489.17; 15m detail [('14:15', 75682.98, 75700.19, 75646), ('14:30', 75642.84, 75691.22, 75637.8), ('14:45', 75692.23, 75705.09, 75639.29), ('15:00', 75688.27, 75699.98, 75659.33), ('15:15', 75646.9, 75743.54, 75638.25), ('15:30', 75611.49, 75651.62, 75607.01), ('15:45', 75584.59, 75617.91, 75489.17), ('16:00', 75557.56, 75611.2, 75556.84)]. Notional $208,529 @ 50x (margin $4,171), risk $1,251 (1.3% eq, warn-only). T1 74949.69, T2 74549.69.",
-      "fill_id": "2026-11-07_BTC-USD_315",
-      "card": "RACE_BTC_SHORT_1606"
-    },
-    {
-      "t": "2026-11-07T16:07:11-05:00",
-      "agent": "Executor",
       "kind": "plan",
       "text": "1606 ET: closed 0; opened {'SOL-USD': True, 'BTC-USD': True}; held ['BTC-USD', 'ETH-USD', 'SOL-USD', 'XRP-USD']",
       "reason": "race mode: direction=short; closes=0; opens_ok={'SOL-USD': True, 'BTC-USD': True}; cash_pool after cushion; plateau not acceptable"
@@ -7928,6 +7919,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "XRP-USD short 1145656.3 @ 1.1141: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-08T17:06:05-05:00: maxH=1.1313 minL=1.1046 (stop 1.155; T1 1.097/T2 1.087); 15m max close=1.124 (inv 1.149). No close trigger."
+    },
+    {
+      "t": "2026-11-08T21:00:41-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
+      "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
     }
   ],
   "scanner_feed": [
@@ -8893,7 +8891,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-08T21:00:33-05:00",
+  "updated_at": "2026-11-08T21:00:41-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
