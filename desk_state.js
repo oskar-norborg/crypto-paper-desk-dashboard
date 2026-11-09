@@ -3151,7 +3151,7 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-09T09:13:34-05:00",
-      "note": "last: paper fill XRP-USD"
+      "note": "0913 ET: closed 2; opened {'ETH-USD': True, 'XRP-USD': True}; held ['ETH-USD', 'XRP-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -6638,14 +6638,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-07T21:05:17-05:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE ETH-USD @ 2230.48 \u00b7 P&L $+228.95",
-      "reason": "INV 15m close < 2230.61 (long): Coinbase public 15m 21:00 ET close 2230.56 (high 2231.54/low 2229.05). Thesis broken \u2014 close at public mark 2230.48.",
-      "fill_id": "2026-11-07_ETH-USD_321"
-    },
-    {
       "t": "2026-11-07T21:05:27-05:00",
       "agent": "Rug Check",
       "kind": "check",
@@ -8108,6 +8100,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE redeploy 0913 ET: BTC/ETH tilt short. 24h -5.74%. XRP-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 1.0973; session 5m low 1.0851; 15m detail [('07:15', 1.0934, 1.0943, 1.0851), ('07:30', 1.1018, 1.1044, 1.0925), ('07:45', 1.1043, 1.1096, 1.1014), ('08:00', 1.0969, 1.1061, 1.0953), ('08:15', 1.096, 1.0972, 1.0922), ('08:30', 1.0909, 1.0967, 1.0902), ('08:45', 1.0967, 1.0971, 1.0907), ('09:00', 1.0923, 1.0973, 1.09)]. Notional $2,753,015 @ 50x (margin $55,060), risk $22,429 (12.1% eq, warn-only). T1 1.0815, T2 1.0715.",
       "fill_id": "2026-11-09_XRP-USD_369",
       "card": "RACE_XRP_SHORT_0913"
+    },
+    {
+      "t": "2026-11-09T09:13:34-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "0913 ET: closed 2; opened {'ETH-USD': True, 'XRP-USD': True}; held ['ETH-USD', 'XRP-USD']",
+      "reason": "race mode: direction=short; closes=2; opens_ok={'ETH-USD': True, 'XRP-USD': True}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": [
