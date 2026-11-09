@@ -3311,7 +3311,7 @@ window.__DESK_STATE__ = {
     "Rug Check": {
       "status": "idle",
       "last_run": "2026-11-09T18:04:51-05:00",
-      "note": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)"
+      "note": "XRP-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -7058,14 +7058,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-08T14:07:41-05:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE SOL-USD @ 89.88 \u00b7 P&L $-10007.91",
-      "reason": "STOP 89.88 hit (short): Coinbase public 5m 13:20 ET high 89.88 (>= 89.88). Paper close at stated stop.",
-      "fill_id": "2026-11-08_SOL-USD_346"
-    },
-    {
       "t": "2026-11-08T14:07:51-05:00",
       "agent": "Rug Check",
       "kind": "check",
@@ -8520,6 +8512,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
       "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
+    },
+    {
+      "t": "2026-11-09T18:04:51-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "XRP-USD PASS (chaos: non-blocking)",
+      "reason": "vol $120.9M, spread 0.0273%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
     }
   ],
   "scanner_feed": [
