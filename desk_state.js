@@ -6645,15 +6645,6 @@ window.__DESK_STATE__ = {
     {
       "t": "2026-11-07T21:05:27-05:00",
       "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 939606 XRP-USD @ 1.1568 \u00b7 notional $1,086,937 (50x, margin $21,739) \u00b7 stop 1.1661 \u00b7 tgt 1.1452 \u00b7 risk $8,738.34",
-      "reason": "RACE redeploy 2105 ET: BTC/ETH tilt short. 24h -0.86%. XRP-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 1.1607; session 5m low 1.156; 15m detail [('19:15', 1.1599, 1.1622, 1.1594), ('19:30', 1.1607, 1.161, 1.1585), ('19:45', 1.1602, 1.1615, 1.1592), ('20:00', 1.1595, 1.1606, 1.1587), ('20:15', 1.1592, 1.1596, 1.1576), ('20:30', 1.1579, 1.1607, 1.1577), ('20:45', 1.1577, 1.1588, 1.1572), ('21:00', 1.1569, 1.158, 1.156)]. Notional $1,086,937 @ 50x (margin $21,739), risk $8,738 (10.2% eq, warn-only). T1 1.1452, T2 1.1352.",
-      "fill_id": "2026-11-07_XRP-USD_324",
-      "card": "RACE_XRP_SHORT_2105"
-    },
-    {
-      "t": "2026-11-07T21:05:27-05:00",
-      "agent": "Executor",
       "kind": "plan",
       "text": "2105 ET: closed 1; opened {'ETH-USD': True, 'XRP-USD': True}; held ['BTC-USD', 'ETH-USD', 'XRP-USD']",
       "reason": "race mode: direction=short; closes=1; opens_ok={'ETH-USD': True, 'XRP-USD': True}; cash_pool after cushion; plateau not acceptable"
@@ -8111,6 +8102,13 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE ETH-USD @ 2133.07 \u00b7 P&L $-51392.29",
       "reason": "STOP 2133.07 hit (short): Coinbase public 5m 09:45 ET high 2134.94 (>= 2133.07). Paper close at stated stop.",
       "fill_id": "2026-11-09_ETH-USD_368"
+    },
+    {
+      "t": "2026-11-09T09:59:11-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "XRP-USD short 2520153.2 @ 1.0924: STOP 1.1013 HIT \u2014 CLOSE at stated stop",
+      "reason": "Coinbase public candles since 2026-11-09T09:13:34-05:00: maxH=1.1056; minL=1.0892; 15m max close=1.0994; 15m min close=None. STOP 1.1013 hit (short): Coinbase public 5m 09:45 ET high 1.105 (>= 1.1013). Paper close at stated stop."
     }
   ],
   "scanner_feed": [
@@ -9076,7 +9074,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-09T09:59:10-05:00",
+  "updated_at": "2026-11-09T09:59:11-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
