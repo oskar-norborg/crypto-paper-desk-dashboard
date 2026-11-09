@@ -6486,14 +6486,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-07T17:02:13-05:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE SOL-USD @ 89.09 \u00b7 P&L $-1204.68",
-      "reason": "RACE rotate 1701 ET: cut SOL-USD short loser/broken-momentum BEFORE stop. uP&L $-1,368.95; stop_prog 28% of path to stop 89.76 (mark 89.09, entry 88.87); symbol 15m bearish_tilt=True; book direction=long. Free margin for concentrated highest-conviction swing. Public mark close.",
-      "fill_id": "2026-11-07_SOL-USD_314"
-    },
-    {
-      "t": "2026-11-07T17:02:13-05:00",
       "agent": "Risk",
       "kind": "check",
       "text": "BTC-USD short 2.76 @ 75554.12: RACE ROTATE \u2014 thesis/momentum broken before stop",
@@ -7951,6 +7943,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 0003 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
       "reason": "scheduled race cycle; scan scans/2026-11-09_0003_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-09T00:03:37-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD short 1725.1874 @ 2120.39: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-08T17:06:05-05:00: maxH=2165.28 minL=2112.88 (stop 2228.8; T1 2086.01/T2 2061.01); 15m max close=2152.97 (inv 2222.8). No close trigger."
     }
   ],
   "scanner_feed": [
