@@ -6975,13 +6975,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-08T11:59:18-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "SOL-USD PASS (chaos: non-blocking)",
-      "reason": "vol $17.4M, spread 0.0112%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
-    },
-    {
-      "t": "2026-11-08T11:59:18-05:00",
       "agent": "Executor",
       "kind": "fill",
       "text": "PAPER FILL short 10109 SOL-USD @ 88.89 \u00b7 notional $898,589 (50x, margin $17,972) \u00b7 stop 89.88 \u00b7 tgt 87.82 \u00b7 risk $10,007.91",
@@ -8432,6 +8425,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "BTC-USD long 21.86 @ 74807.81: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-09T15:06:18-05:00: maxH=74973.08 minL=74569.86 (stop 74209.35; T1 75705.5/T2 76105.5); 15m min close=74675.6 (inv 74525.45). No close trigger."
+    },
+    {
+      "t": "2026-11-09T17:04:36-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD long 256.601 @ 2125.26: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-09T15:06:18-05:00: maxH=2133.26 minL=2117.28 (stop 2104.01; T1 2157.14/T2 2187.14); 15m min close=2121.17 (inv 2120.1). No close trigger."
     }
   ],
   "scanner_feed": [
