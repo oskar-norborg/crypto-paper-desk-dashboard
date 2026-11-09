@@ -3181,8 +3181,8 @@ window.__DESK_STATE__ = {
     },
     "Rug Check": {
       "status": "idle",
-      "last_run": "2026-11-09T12:59:00-05:00",
-      "note": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)"
+      "last_run": "2026-11-09T12:59:04-05:00",
+      "note": "ETH-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -6774,14 +6774,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-08T04:03:49-05:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE XRP-USD @ 1.1618 \u00b7 P&L $-659.81",
-      "reason": "INV 15m close > 1.1599 (short): Coinbase public 15m 00:15 ET close 1.1623 (high 1.1627/low 1.1607). Thesis broken \u2014 close at public mark 1.1618.",
-      "fill_id": "2026-11-08_XRP-USD_331"
-    },
-    {
       "t": "2026-11-08T04:03:58-05:00",
       "agent": "Rug Check",
       "kind": "check",
@@ -8238,6 +8230,13 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE ETH-USD @ 2123.32 \u00b7 P&L $-2013.59",
       "reason": "RACE rotate 1258 ET: cut ETH-USD long loser/broken-momentum BEFORE stop. uP&L $-2,013.59; stop_prog 15% of path to stop 2105.31 (mark 2123.32, entry 2126.58); symbol 15m bearish_tilt=True; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close.",
       "fill_id": "2026-11-09_ETH-USD_373"
+    },
+    {
+      "t": "2026-11-09T12:59:04-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "ETH-USD PASS (chaos: non-blocking)",
+      "reason": "vol $372.7M, spread 0.0005%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
     }
   ],
   "scanner_feed": [
