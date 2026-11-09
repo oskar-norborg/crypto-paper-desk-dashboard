@@ -6564,13 +6564,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-07T18:02:08-05:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: 1801 ET race cycle \u00b7 hold/rotate check \u00b7 eq $85,350 \u00b7 exposure $4,266,790 (49.99x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
-    {
       "t": "2026-11-07T19:00:40-05:00",
       "agent": "Scanner",
       "kind": "scan",
@@ -8028,6 +8021,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "BTC-USD long 96.31 @ 74451.87: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-09T03:59:56-05:00: maxH=75012.21 minL=73953.6 (stop 73556.0; T1 75345.29/T2 75745.29); 15m min close=74030.85 (inv 73686.0). No close trigger."
+    },
+    {
+      "t": "2026-11-09T07:59:56-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD long 1127.4973 @ 2120.08: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-09T03:59:56-05:00: maxH=2131.44 minL=2095.82 (stop 2081.16; T1 2151.88/T2 2181.88); 15m min close=2098.59 (inv 2089.16). No close trigger."
     }
   ],
   "scanner_feed": [
@@ -8993,7 +8993,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-09T07:59:55-05:00",
+  "updated_at": "2026-11-09T07:59:56-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
