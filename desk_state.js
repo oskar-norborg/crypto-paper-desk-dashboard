@@ -6779,13 +6779,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-08T04:03:45-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 0403 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
-      "reason": "scheduled race cycle; scan scans/2026-11-08_0403_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
-    },
-    {
       "t": "2026-11-08T04:03:48-05:00",
       "agent": "Risk",
       "kind": "check",
@@ -8242,6 +8235,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
       "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
+    },
+    {
+      "t": "2026-11-09T12:59:00-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "BTC-USD long 55.01 @ 74781.99: RACE ROTATE \u2014 thesis/momentum broken before stop",
+      "reason": "RACE rotate 1258 ET: cut BTC-USD long loser/broken-momentum BEFORE stop. uP&L $-4,921.19; stop_prog 14% of path to stop 74149.77 (mark 74689.3, entry 74781.99); symbol 15m bearish_tilt=True; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close."
     }
   ],
   "scanner_feed": [
