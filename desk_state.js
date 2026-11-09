@@ -3209,7 +3209,7 @@ window.__DESK_STATE__ = {
     "Rug Check": {
       "status": "idle",
       "last_run": "2026-11-09T12:59:04-05:00",
-      "note": "ETH-USD PASS (chaos: non-blocking)"
+      "note": "SOL-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -6807,13 +6807,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-08T04:03:58-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "BTC-USD PASS (chaos: non-blocking)",
-      "reason": "vol $146.6M, spread 0.0000%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
-    },
-    {
-      "t": "2026-11-08T04:03:58-05:00",
       "agent": "Executor",
       "kind": "fill",
       "text": "PAPER FILL long 34.16 BTC-USD @ 75815.5 \u00b7 notional $2,589,857 (50x, margin $51,797) \u00b7 stop 75209 \u00b7 tgt 76725.3 \u00b7 risk $20,718.72",
@@ -8271,6 +8264,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE redeploy 1258 ET: BTC/ETH tilt short. 24h -4.69%. ETH-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 2130.95; session 5m low 2114.44; 15m detail [('11:00', 2132.62, 2145.55, 2131.33), ('11:15', 2123.98, 2136.13, 2121.22), ('11:30', 2128.1, 2133.39, 2123.72), ('11:45', 2130.8, 2132.95, 2125.85), ('12:00', 2124.46, 2130.95, 2122.77), ('12:15', 2123.92, 2129.4, 2121.03), ('12:30', 2117.37, 2125.63, 2114.44), ('12:45', 2123.5, 2126.23, 2117.04)]. Notional $3,562,410 @ 50x (margin $71,248), risk $28,505 (27.7% eq, warn-only). T1 2102.09, T2 2077.09.",
       "fill_id": "2026-11-09_ETH-USD_377",
       "card": "RACE_ETH_SHORT_1258"
+    },
+    {
+      "t": "2026-11-09T12:59:04-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "SOL-USD PASS (chaos: non-blocking)",
+      "reason": "vol $100.5M, spread 0.0115%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
     }
   ],
   "scanner_feed": [
