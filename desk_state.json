@@ -3147,7 +3147,7 @@
     "Rug Check": {
       "status": "idle",
       "last_run": "2026-11-09T09:59:22-05:00",
-      "note": "BTC-USD PASS (chaos: non-blocking)"
+      "note": "ETH-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -6670,13 +6670,6 @@
   "activity": [
     {
       "t": "2026-11-07T22:05:31-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "ETH-USD short 1151.6754 @ 2230.49: INVALIDATION \u2014 CLOSE at public mark 2235.47",
-      "reason": "Coinbase public candles since 2026-11-07T21:05:27-05:00: maxH=2236.29; minL=2225.74; 15m max close=2235.47; 15m min close=None. INV 15m close > 2231.58 (short): Coinbase public 15m 21:45 ET close 2232.95 (high 2233/low 2225.74). Thesis broken \u2014 close at public mark 2235.47."
-    },
-    {
-      "t": "2026-11-07T22:05:31-05:00",
       "agent": "Executor",
       "kind": "close",
       "text": "PAPER CLOSE ETH-USD @ 2235.47 \u00b7 P&L $-5735.34",
@@ -8138,6 +8131,13 @@
       "reason": "RACE redeploy 0959 ET: BTC/ETH tilt long. 24h -1.52%. BTC-USD concentrated long under BTC/ETH reclaim (not bearish 15m); stop below floor 74229.77; session 5m low 74229.77; 15m detail [('08:00', 74653.89, 74918.25, 74633.36), ('08:15', 74670.41, 74697.08, 74482.8), ('08:30', 74517.16, 74739, 74482.81), ('08:45', 74612.59, 74762.96, 74511.18), ('09:00', 74472, 74624.56, 74392.59), ('09:15', 74520.18, 74599.94, 74447.72), ('09:30', 74632.28, 74668.95, 74229.77), ('09:45', 74781.36, 74971.22, 74382.25)]. Notional $4,113,757 @ 50x (margin $82,275), risk $34,778 (31.7% eq, warn-only). T1 75679.37, T2 76079.37.",
       "fill_id": "2026-11-09_BTC-USD_372",
       "card": "RACE_BTC_LONG_0959"
+    },
+    {
+      "t": "2026-11-09T09:59:22-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "ETH-USD PASS (chaos: non-blocking)",
+      "reason": "vol $318.8M, spread 0.0005%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
     }
   ],
   "scanner_feed": [
