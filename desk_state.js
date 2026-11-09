@@ -3114,7 +3114,7 @@ window.__DESK_STATE__ = {
     "Rug Check": {
       "status": "idle",
       "last_run": "2026-11-09T09:13:34-05:00",
-      "note": "ETH-USD PASS (chaos: non-blocking)"
+      "note": "XRP-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -6609,13 +6609,6 @@ window.__DESK_STATE__ = {
       "t": "2026-11-07T21:05:17-05:00",
       "agent": "Risk",
       "kind": "check",
-      "text": "BTC-USD long 8.19 @ 75666.67: HOLD \u2014 no trigger",
-      "reason": "Coinbase public 5m since 2026-11-07T17:02:15-05:00: maxH=75811.88 minL=75588.45 (stop 75061.34; T1 76574.67/T2 76974.67); 15m min close=75618.04 (inv 75502.88). No close trigger."
-    },
-    {
-      "t": "2026-11-07T21:05:17-05:00",
-      "agent": "Risk",
-      "kind": "check",
       "text": "ETH-USD long 1635.3289 @ 2230.34: INVALIDATION \u2014 CLOSE at public mark 2230.48",
       "reason": "Coinbase public candles since 2026-11-07T18:02:05-05:00: maxH=2238.29; minL=2229.05; 15m max close=2236.55; 15m min close=2230.56. INV 15m close < 2230.61 (long): Coinbase public 15m 21:00 ET close 2230.56 (high 2231.54/low 2229.05). Thesis broken \u2014 close at public mark 2230.48."
     },
@@ -8074,6 +8067,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE redeploy 0913 ET: BTC/ETH tilt short. 24h -5.43%. ETH-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 2125; session 5m low 2113.26; 15m detail [('07:15', 2121.18, 2122.42, 2113.94), ('07:30', 2121.26, 2125.98, 2119.14), ('07:45', 2119.84, 2130.07, 2117.23), ('08:00', 2118.42, 2123.59, 2116.03), ('08:15', 2119.07, 2119.94, 2115.47), ('08:30', 2114.52, 2120.7, 2113.26), ('08:45', 2122.72, 2125, 2113.71), ('09:00', 2116.06, 2123.43, 2114.81)]. Notional $6,423,703 @ 50x (margin $128,474), risk $51,392 (28.0% eq, warn-only). T1 2094.98, T2 2069.98.",
       "fill_id": "2026-11-09_ETH-USD_368",
       "card": "RACE_ETH_SHORT_0913"
+    },
+    {
+      "t": "2026-11-09T09:13:34-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "XRP-USD PASS (chaos: non-blocking)",
+      "reason": "vol $122.3M, spread 0.0092%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
     }
   ],
   "scanner_feed": [
