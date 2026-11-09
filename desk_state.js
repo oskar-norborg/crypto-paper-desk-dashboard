@@ -3338,7 +3338,7 @@ window.__DESK_STATE__ = {
     "Rug Check": {
       "status": "idle",
       "last_run": "2026-11-09T18:04:51-05:00",
-      "note": "XRP-USD PASS (chaos: non-blocking)"
+      "note": "SOL-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -7091,13 +7091,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-08T14:07:52-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "BTC-USD PASS (chaos: non-blocking)",
-      "reason": "vol $132.6M, spread 0.0000%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
-    },
-    {
-      "t": "2026-11-08T14:07:52-05:00",
       "agent": "Executor",
       "kind": "fill",
       "text": "PAPER FILL long 3.28 BTC-USD @ 75776.2 \u00b7 notional $248,546 (50x, margin $4,971) \u00b7 stop 75170 \u00b7 tgt 76685.5 \u00b7 risk $1,988.37",
@@ -8553,6 +8546,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE redeploy 1804 ET: BTC/ETH tilt short. 24h -1.03%. XRP-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 1.1061; session 5m low 1.0854; 15m detail [('16:15', 1.0951, 1.0963, 1.0897), ('16:30', 1.0901, 1.0959, 1.0854), ('16:45', 1.0949, 1.0953, 1.0897), ('17:00', 1.0953, 1.0958, 1.0897), ('17:15', 1.0938, 1.0969, 1.0918), ('17:30', 1.0995, 1.0999, 1.0935), ('17:45', 1.1055, 1.1061, 1.0984), ('18:00', 1.1004, 1.1054, 1.0999)]. Notional $572,306 @ 50x (margin $11,446), risk $5,097 (7.7% eq, warn-only). T1 1.0824, T2 1.0724.",
       "fill_id": "2026-11-09_XRP-USD_390",
       "card": "RACE_XRP_SHORT_1804"
+    },
+    {
+      "t": "2026-11-09T18:04:51-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "SOL-USD PASS (chaos: non-blocking)",
+      "reason": "vol $77.0M, spread 0.0116%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
     }
   ],
   "scanner_feed": [
