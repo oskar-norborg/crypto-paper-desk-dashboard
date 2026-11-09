@@ -3085,8 +3085,8 @@ window.__DESK_STATE__ = {
     },
     "Rug Check": {
       "status": "idle",
-      "last_run": "2026-11-09T09:13:30-05:00",
-      "note": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)"
+      "last_run": "2026-11-09T09:13:34-05:00",
+      "note": "ETH-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -6573,13 +6573,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-07T20:06:48-05:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: 2006 ET race cycle \u00b7 hold/rotate check \u00b7 eq $90,026 \u00b7 exposure $4,271,466 (47.45x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
-    {
       "t": "2026-11-07T21:05:14-05:00",
       "agent": "Scanner",
       "kind": "scan",
@@ -8039,6 +8032,13 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE BTC-USD @ 74422.2 \u00b7 P&L $-2859.44",
       "reason": "RACE rotate 0913 ET: cut BTC-USD long loser/broken-momentum BEFORE stop. uP&L $-1,020.89; stop_prog 1% of path to stop 73556.0 (mark 74422.18, entry 74451.87); symbol 15m bearish_tilt=True; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close.",
       "fill_id": "2026-11-09_BTC-USD_364"
+    },
+    {
+      "t": "2026-11-09T09:13:34-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "ETH-USD PASS (chaos: non-blocking)",
+      "reason": "vol $294.9M, spread 0.0005%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
     }
   ],
   "scanner_feed": [
@@ -9004,7 +9004,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-09T09:13:33-05:00",
+  "updated_at": "2026-11-09T09:13:34-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
