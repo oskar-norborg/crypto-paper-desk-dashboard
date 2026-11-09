@@ -3086,8 +3086,8 @@
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-08T20:00:15-05:00",
-      "note": "CHAOS: 1959 ET race cycle \u00b7 hold/rotate check \u00b7 eq $58,499 \u00b7 exposure $4,976,868 (85.08x)"
+      "last_run": "2026-11-08T21:00:44-05:00",
+      "note": "CHAOS: 2100 ET race cycle \u00b7 hold/rotate check \u00b7 eq $73,166 \u00b7 exposure $4,962,202 (67.82x)"
     },
     "Equity": {
       "status": "ready",
@@ -6464,13 +6464,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-07T16:07:14-05:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: 1606 ET race cycle \u00b7 hold/rotate check \u00b7 eq $98,250 \u00b7 exposure $4,014,183 (40.86x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
-    {
       "t": "2026-11-07T17:01:59-05:00",
       "agent": "Scanner",
       "kind": "scan",
@@ -7930,6 +7923,13 @@
       "kind": "plan",
       "text": "2100 ET: closed 0; opened {'SOL-USD': False, 'BTC-USD': False}; held ['ETH-USD', 'XRP-USD']",
       "reason": "race mode: direction=short; closes=0; opens_ok={'SOL-USD': False, 'BTC-USD': False}; cash_pool after cushion; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-08T21:00:44-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 2100 ET race cycle \u00b7 hold/rotate check \u00b7 eq $73,166 \u00b7 exposure $4,962,202 (67.82x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
