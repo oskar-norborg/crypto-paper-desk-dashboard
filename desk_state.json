@@ -6773,13 +6773,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-08T00:04:31-05:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "0004 ET: closed 2; opened {'ETH-USD': True, 'XRP-USD': True}; held ['ETH-USD', 'XRP-USD']",
-      "reason": "race mode: direction=short; closes=2; opens_ok={'ETH-USD': True, 'XRP-USD': True}; cash_pool after cushion; plateau not acceptable"
-    },
-    {
       "t": "2026-11-08T00:04:33-05:00",
       "agent": "Logger",
       "kind": "batch",
@@ -8236,6 +8229,13 @@
       "kind": "check",
       "text": "ETH-USD long 617.6649 @ 2126.58: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-09T09:59:22-05:00: maxH=2149.19 minL=2114.44 (stop 2105.31; T1 2158.48/T2 2188.48); 15m min close=2117.37 (inv 2114.61). No close trigger."
+    },
+    {
+      "t": "2026-11-09T12:58:51-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "XRP-USD short 37225.3 @ 1.0975: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-09T12:07:20-05:00: maxH=1.0981 minL=1.09 (stop 1.1143; T1 1.0865/T2 1.0765); 15m max close=1.0934 (inv 1.1083). No close trigger."
     }
   ],
   "scanner_feed": [
@@ -9201,7 +9201,7 @@
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-09T12:58:50-05:00",
+  "updated_at": "2026-11-09T12:58:51-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
