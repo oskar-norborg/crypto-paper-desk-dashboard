@@ -3212,7 +3212,7 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-09T12:07:20-05:00",
-      "note": "last: paper fill XRP-USD"
+      "note": "1207 ET: closed 0; opened {'XRP-USD': True}; held ['BTC-USD', 'ETH-USD', 'XRP-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -6764,14 +6764,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-08T00:04:28-05:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE BTC-USD @ 75770 \u00b7 P&L $+846.11",
-      "reason": "RACE rotate 0004 ET: cut BTC-USD long loser/broken-momentum BEFORE stop. uP&L $846.11; stop_prog -17% of path to stop 75061.34 (mark 75769.98, entry 75666.67); symbol 15m bearish_tilt=False; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close.",
-      "fill_id": "2026-11-07_BTC-USD_318"
-    },
-    {
       "t": "2026-11-08T00:04:31-05:00",
       "agent": "Rug Check",
       "kind": "check",
@@ -8232,6 +8224,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE redeploy 1207 ET: BTC/ETH tilt short. 24h -4.87%. XRP-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 1.1103; session 5m low 1.0945; 15m detail [('10:15', 1.1011, 1.1067, 1.0956), ('10:30', 1.1108, 1.1112, 1.0983), ('10:45', 1.1133, 1.1159, 1.11), ('11:00', 1.1084, 1.1136, 1.1058), ('11:15', 1.0999, 1.1103, 1.0984), ('11:30', 1.1006, 1.1069, 1.0991), ('11:45', 1.0995, 1.1007, 1.0964), ('12:00', 1.0976, 1.1002, 1.0966)]. Notional $40,855 @ 50x (margin $817), risk $625 (0.6% eq, warn-only). T1 1.0865, T2 1.0765.",
       "fill_id": "2026-11-09_XRP-USD_374",
       "card": "RACE_XRP_SHORT_1207"
+    },
+    {
+      "t": "2026-11-09T12:07:20-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "1207 ET: closed 0; opened {'XRP-USD': True}; held ['BTC-USD', 'ETH-USD', 'XRP-USD']",
+      "reason": "race mode: direction=short; closes=0; opens_ok={'XRP-USD': True}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": [
