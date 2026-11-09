@@ -6842,15 +6842,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-08T07:59:40-05:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 44.8729 BTC-USD @ 75863.8 \u00b7 notional $3,404,229 (50x, margin $68,085) \u00b7 stop 75440 \u00b7 tgt 76700 \u00b7 risk $19,017.58",
-      "reason": "RACE redeploy 0800 ET: BTC higher-low structure since 05:30 ET swing low 75690, 06:15 breakout to 75920.56, 24h +0.1%, deepest book on watchlist (\u00b11% depth ~$13.9M). Prior BTC/ETH longs closed green on tight invalidation; re-entering with structure-based invalidation. ~95% of cash as margin @50x, risk to stop warn-only.",
-      "fill_id": "2026-11-08_BTC-USD_338",
-      "card": "RACE_BTC_LONG_0800"
-    },
-    {
       "t": "2026-11-08T09:02:12-05:00",
       "agent": "Scanner",
       "kind": "scan",
@@ -8304,6 +8295,13 @@
       "kind": "check",
       "text": "ETH-USD short 1677.7546 @ 2123.32: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-09T12:59:04-05:00: maxH=2127.15 minL=2113.5 (stop 2140.31; T1 2102.09/T2 2077.09); 15m max close=2123.49 (inv 2128.95). No close trigger."
+    },
+    {
+      "t": "2026-11-09T14:08:52-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "SOL-USD short 17638.0 @ 86.56: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-09T12:59:04-05:00: maxH=86.82 minL=86.02 (stop 87.43; T1 85.52/T2 84.52); 15m max close=86.52 (inv 86.92). No close trigger."
     }
   ],
   "scanner_feed": [
