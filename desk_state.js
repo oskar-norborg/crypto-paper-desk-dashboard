@@ -3250,8 +3250,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-09T12:59:04-05:00",
-      "note": "logged 2026-11-09_SOL-USD_378"
+      "last_run": "2026-11-09T12:59:07-05:00",
+      "note": "CHAOS: 1258 ET race cycle \u00b7 hold/rotate check \u00b7 eq $102,835 \u00b7 exposure $5,129,826 (49.88x)"
     },
     "Equity": {
       "status": "ready",
@@ -6845,15 +6845,6 @@ window.__DESK_STATE__ = {
     {
       "t": "2026-11-08T04:03:58-05:00",
       "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 386.288 ETH-USD @ 2235.27 \u00b7 notional $863,458 (50x, margin $17,269) \u00b7 stop 2212.92 \u00b7 tgt 2268.8 \u00b7 risk $8,633.53",
-      "reason": "RACE redeploy 0403 ET: BTC/ETH tilt long. 24h -0.33%. ETH-USD concentrated long under BTC/ETH reclaim (not bearish 15m); stop below floor 2233.79; session 5m low 2231.18; 15m detail [('02:15', 2232.53, 2233.26, 2231.69), ('02:30', 2235.03, 2235.04, 2232.03), ('02:45', 2237.95, 2239.29, 2235.04), ('03:00', 2235.93, 2237.82, 2235.38), ('03:15', 2234.12, 2236.48, 2233.93), ('03:30', 2235.38, 2235.63, 2233.79), ('03:45', 2235.59, 2236.52, 2234.91), ('04:00', 2235.27, 2235.93, 2234.6)]. Notional $863,458 @ 50x (margin $17,269), risk $8,634 (12.5% eq, warn-only). T1 2268.8, T2 2298.8.",
-      "fill_id": "2026-11-08_ETH-USD_335",
-      "card": "RACE_ETH_LONG_0403"
-    },
-    {
-      "t": "2026-11-08T04:03:58-05:00",
-      "agent": "Executor",
       "kind": "plan",
       "text": "0403 ET: closed 2; opened {'BTC-USD': True, 'ETH-USD': True}; held ['BTC-USD', 'ETH-USD']",
       "reason": "race mode: direction=long; closes=2; opens_ok={'BTC-USD': True, 'ETH-USD': True}; cash_pool after cushion; plateau not acceptable"
@@ -8308,6 +8299,13 @@ window.__DESK_STATE__ = {
       "kind": "plan",
       "text": "1258 ET: closed 2; opened {'ETH-USD': True, 'SOL-USD': True}; held ['ETH-USD', 'SOL-USD', 'XRP-USD']",
       "reason": "race mode: direction=short; closes=2; opens_ok={'ETH-USD': True, 'SOL-USD': True}; cash_pool after cushion; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-09T12:59:07-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 1258 ET race cycle \u00b7 hold/rotate check \u00b7 eq $102,835 \u00b7 exposure $5,129,826 (49.88x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
