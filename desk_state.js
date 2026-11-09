@@ -6848,13 +6848,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-08T04:04:01-05:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: 0403 ET race cycle \u00b7 hold/rotate check \u00b7 eq $69,127 \u00b7 exposure $3,453,315 (49.96x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
-    {
       "t": "2026-11-08T07:59:21-05:00",
       "agent": "Executor",
       "kind": "close",
@@ -8311,6 +8304,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 1408 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
       "reason": "scheduled race cycle; scan scans/2026-11-09_1408_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-09T14:08:51-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "XRP-USD short 37225.3 @ 1.0975: T1 1.0865 HIT \u2014 CLOSE at stated T1",
+      "reason": "Coinbase public candles since 2026-11-09T12:07:20-05:00: maxH=1.0981; minL=1.0825; 15m max close=1.0934; 15m min close=None. T1 1.0865 hit (short): Coinbase public 5m 13:20 ET low 1.0835 (<= 1.0865); T2 1.0765 NOT hit; stop 1.1143 never touched (maxH 1.0981); inv 15m clear (maxC15 1.0934). Paper close at stated T1."
     }
   ],
   "scanner_feed": [
