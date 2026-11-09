@@ -3082,8 +3082,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-08T20:00:09-05:00",
-      "note": "last: closed BTC-USD"
+      "last_run": "2026-11-08T20:00:12-05:00",
+      "note": "1959 ET: closed 2; opened {'SOL-USD': False, 'BTC-USD': False}; held ['ETH-USD', 'XRP-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -6445,13 +6445,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-07T16:07:00-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "ETH-USD short 849.8417 @ 2233.38: HOLD \u2014 no trigger",
-      "reason": "Coinbase public 5m since 2026-11-07T11:01:21-05:00: maxH=2236.57 minL=2221.6 (stop 2251.25; T1 2211.05/T2 2186.05); 15m max close=2235.67 (inv 2239.68). No close trigger."
-    },
-    {
       "t": "2026-11-07T16:07:10-05:00",
       "agent": "Rug Check",
       "kind": "check",
@@ -7915,6 +7908,13 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE BTC-USD @ 75181.8 \u00b7 P&L $-738.52",
       "reason": "RACE rotate 1959 ET: cut BTC-USD short loser/broken-momentum BEFORE stop. uP&L $-692.62; stop_prog 52% of path to stop 75690.44 (mark 75181.76, entry 74550.55); symbol 15m bearish_tilt=False; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close.",
       "fill_id": "2026-11-08_BTC-USD_359"
+    },
+    {
+      "t": "2026-11-08T20:00:12-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "1959 ET: closed 2; opened {'SOL-USD': False, 'BTC-USD': False}; held ['ETH-USD', 'XRP-USD']",
+      "reason": "race mode: direction=short; closes=2; opens_ok={'SOL-USD': False, 'BTC-USD': False}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": [
