@@ -6775,15 +6775,6 @@
     {
       "t": "2026-11-08T00:04:31-05:00",
       "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 942583 XRP-USD @ 1.1611 \u00b7 notional $1,094,433 (50x, margin $21,889) \u00b7 stop 1.1704 \u00b7 tgt 1.1495 \u00b7 risk $8,766.02",
-      "reason": "RACE redeploy 0004 ET: BTC/ETH tilt short. 24h +0.09%. XRP-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 1.1619; session 5m low 1.1545; 15m detail [('22:15', 1.1549, 1.1601, 1.1545), ('22:30', 1.1598, 1.1598, 1.1548), ('22:45', 1.1606, 1.1606, 1.1585), ('23:00', 1.1606, 1.162, 1.1595), ('23:15', 1.1611, 1.1616, 1.1597), ('23:30', 1.1592, 1.1618, 1.1591), ('23:45', 1.1594, 1.1596, 1.1583), ('00:00', 1.1613, 1.1614, 1.1592)]. Notional $1,094,433 @ 50x (margin $21,889), risk $8,766 (12.0% eq, warn-only). T1 1.1495, T2 1.1395.",
-      "fill_id": "2026-11-08_XRP-USD_331",
-      "card": "RACE_XRP_SHORT_0004"
-    },
-    {
-      "t": "2026-11-08T00:04:31-05:00",
-      "agent": "Executor",
       "kind": "plan",
       "text": "0004 ET: closed 2; opened {'ETH-USD': True, 'XRP-USD': True}; held ['ETH-USD', 'XRP-USD']",
       "reason": "race mode: direction=short; closes=2; opens_ok={'ETH-USD': True, 'XRP-USD': True}; cash_pool after cushion; plateau not acceptable"
@@ -8238,6 +8229,13 @@
       "kind": "check",
       "text": "BTC-USD long 55.01 @ 74781.99: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-09T09:59:22-05:00: maxH=75476.98 minL=74438.13 (stop 74149.77; T1 75679.37/T2 76079.37); 15m min close=74549.99 (inv 74279.77). No close trigger."
+    },
+    {
+      "t": "2026-11-09T12:58:50-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD long 617.6649 @ 2126.58: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-09T09:59:22-05:00: maxH=2149.19 minL=2114.44 (stop 2105.31; T1 2158.48/T2 2188.48); 15m min close=2117.37 (inv 2114.61). No close trigger."
     }
   ],
   "scanner_feed": [
