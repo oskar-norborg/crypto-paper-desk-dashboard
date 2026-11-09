@@ -5,42 +5,15 @@
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 120603.37,
-  "cash": 2232.62,
-  "realized_pnl": 50921.53,
-  "unrealized_pnl": 19681.84,
-  "day_pnl": 33012.2,
-  "day_pnl_pct": 0.37689,
+  "equity": 180053.32,
+  "cash": 134705.96,
+  "realized_pnl": 110233.47,
+  "unrealized_pnl": 19819.85,
+  "day_pnl": 92462.15,
+  "day_pnl_pct": 1.05561,
   "day_baseline_date": "2026-11-09",
   "day_baseline_equity": 87591.17,
   "open_positions": [
-    {
-      "id": "2026-11-08_ETH-USD_356",
-      "symbol": "ETH-USD",
-      "side": "short",
-      "size": 1725.1874,
-      "entry": 2120.39,
-      "notional": 3658070.11,
-      "stop": 2228.8,
-      "target": 2086.01,
-      "target2": 2061.01,
-      "invalidation": "15m close > 2222.8 (reclaim of recent bounce shelf) or stop 2228.8",
-      "risk_usd": 187027.57,
-      "risk_pct_equity": 1.7886,
-      "opened_at": "2026-11-08T17:06:05-05:00",
-      "card": "RACE_ETH_SHORT_1705",
-      "reason": "RACE redeploy 1705 ET: BTC/ETH tilt short. 24h -4.98%. ETH-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 2224.8; session 5m low 2089.01; 15m detail [('15:15', 2227.76, 2227.78, 2224.42), ('15:30', 2225.75, 2228.01, 2222.02), ('15:45', 2223.92, 2226.39, 2223.26), ('16:00', 2223.15, 2225.45, 2219.74), ('16:15', 2221.68, 2224.8, 2220), ('16:30', 2219.24, 2223.9, 2218.49), ('16:45', 2126.38, 2219.23, 2089.01), ('17:00', 2121.37, 2142.44, 2120.41)]. Notional $3,658,070 @ 50x (margin $73,161), risk $187,028 (178.9% eq, warn-only). T1 2086.01, T2 2061.01.",
-      "price_source": "coinbase_exchange_public_ticker bid/ask/price 2120.39 @ 2026-11-08T17:06:05-05:00 ET (exch 2026-11-08T22:06:04.486591203Z) api.exchange.coinbase.com unauthenticated",
-      "override": null,
-      "paper_only": true,
-      "leverage": 50.0,
-      "margin": 73161.4,
-      "mark": 2120.47,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-09T03:59:44-05:00",
-      "unrealized_pnl": -138.01,
-      "exposure": 3658208.13
-    },
     {
       "id": "2026-11-08_XRP-USD_357",
       "symbol": "XRP-USD",
@@ -69,7 +42,7 @@
       "exposure": 1256555.83
     }
   ],
-  "open_count": 2,
+  "open_count": 1,
   "closed_positions": [
     {
       "type": "close",
@@ -3022,11 +2995,28 @@
       "reason": "RACE rotate 1959 ET: cut BTC-USD short loser/broken-momentum BEFORE stop. uP&L $-692.62; stop_prog 52% of path to stop 75690.44 (mark 75181.76, entry 74550.55); symbol 15m bearish_tilt=False; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close.",
       "price_source": "coinbase_exchange_public_ticker bid/ask/price 75181.76 @ 2026-11-08T20:00:09-05:00 ET (exch 2026-11-09T01:00:08.351255708Z) api.exchange.coinbase.com unauthenticated",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-08_ETH-USD_356",
+      "symbol": "ETH-USD",
+      "side": "short",
+      "size": 1725.1874,
+      "entry": 2120.39,
+      "exit": 2086.01,
+      "pnl": 59311.94,
+      "notional": 3658070.11,
+      "leverage": 50.0,
+      "margin": 73161.4,
+      "closed_at": "2026-11-09T03:59:46-05:00",
+      "reason": "T1 2086.01 hit (short): Coinbase public 5m 02:10 ET low 2080.35 (<= 2086.01); T2 2061.01 NOT hit; stop 2228.8 never touched (maxH 2165.28); inv 15m clear (maxC15 2152.97). Paper close at stated T1.",
+      "price_source": "coinbase_exchange_public 5m candle 2026-11-09 02:10 ET low 2080.35 (api.exchange.coinbase.com/products/ETH-USD/candles, unauthenticated); fill at stated T1 2086.01",
+      "paper_only": true
     }
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 120603.37,
+  "max_risk_usd": 180053.32,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -875911.7,
   "paused": false,
@@ -3081,8 +3071,8 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-09T00:03:48-05:00",
-      "note": "0003 ET: closed 0; opened {'SOL-USD': False, 'BTC-USD': False}; held ['ETH-USD', 'XRP-USD']"
+      "last_run": "2026-11-09T03:59:46-05:00",
+      "note": "last: closed ETH-USD"
     },
     "Logger": {
       "status": "ready",
@@ -6495,16 +6485,14 @@
       "t": "2026-11-09T03:59:46-05:00",
       "equity": 120603.37,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-09T03:59:46-05:00",
+      "equity": 180053.32,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-07T18:01:48-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 1801 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
-      "reason": "scheduled race cycle; scan scans/2026-11-07_1801_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
-    },
     {
       "t": "2026-11-07T18:01:51-05:00",
       "agent": "Risk",
@@ -7961,6 +7949,14 @@
       "kind": "check",
       "text": "ETH-USD short 1725.1874 @ 2120.39: T1 2086.01 HIT \u2014 CLOSE at stated T1",
       "reason": "Coinbase public candles since 2026-11-08T17:06:05-05:00: maxH=2165.28; minL=2080.35; 15m max close=2152.97; 15m min close=None. T1 2086.01 hit (short): Coinbase public 5m 02:10 ET low 2080.35 (<= 2086.01); T2 2061.01 NOT hit; stop 2228.8 never touched (maxH 2165.28); inv 15m clear (maxC15 2152.97). Paper close at stated T1."
+    },
+    {
+      "t": "2026-11-09T03:59:46-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE ETH-USD @ 2086.01 \u00b7 P&L $+59311.94",
+      "reason": "T1 2086.01 hit (short): Coinbase public 5m 02:10 ET low 2080.35 (<= 2086.01); T2 2061.01 NOT hit; stop 2228.8 never touched (maxH 2165.28); inv 15m clear (maxC15 2152.97). Paper close at stated T1.",
+      "fill_id": "2026-11-08_ETH-USD_356"
     }
   ],
   "scanner_feed": [
@@ -8942,10 +8938,10 @@
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 98688.91,
-  "exposure": 4914763.96,
-  "buying_power": 1115404.54,
-  "effective_leverage": 40.75,
+  "margin_used": 25527.51,
+  "exposure": 1256555.83,
+  "buying_power": 7746110.17,
+  "effective_leverage": 6.98,
   "operating_timezone": "America/New_York",
   "events": [
     {
