@@ -3102,7 +3102,7 @@
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-08T19:03:14-05:00",
-      "note": "last: paper fill BTC-USD"
+      "note": "1903 ET: closed 0; opened {'SOL-USD': True, 'BTC-USD': True}; held ['BTC-USD', 'ETH-USD', 'SOL-USD', 'XRP-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -6434,13 +6434,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-07T11:58:52-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 1158 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
-      "reason": "scheduled race cycle; scan scans/2026-11-07_1158_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
-    },
-    {
       "t": "2026-11-07T11:58:55-05:00",
       "agent": "Risk",
       "kind": "check",
@@ -7903,6 +7896,13 @@
       "reason": "RACE redeploy 1903 ET: BTC/ETH tilt short. 24h -1.52%. BTC-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 75640.44; session 5m low 73967.71; 15m detail [('17:15', 74367.48, 74559, 74337.36), ('17:30', 74335.26, 74426.21, 74091), ('17:45', 74382.72, 74452.32, 74158.1), ('18:00', 75100, 75200, 74354.76), ('18:15', 75300.14, 75640.44, 75098.62), ('18:30', 74942.03, 75385.86, 74925.25), ('18:45', 74754.08, 74959.05, 74500.31), ('19:00', 74551.91, 74794.24, 74545.37)]. Notional $87,224 @ 50x (margin $1,744), risk $1,334 (1.2% eq, warn-only). T1 73917.71, T2 73517.71.",
       "fill_id": "2026-11-08_BTC-USD_359",
       "card": "RACE_BTC_SHORT_1903"
+    },
+    {
+      "t": "2026-11-08T19:03:14-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "1903 ET: closed 0; opened {'SOL-USD': True, 'BTC-USD': True}; held ['BTC-USD', 'ETH-USD', 'SOL-USD', 'XRP-USD']",
+      "reason": "race mode: direction=short; closes=0; opens_ok={'SOL-USD': True, 'BTC-USD': True}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": [
