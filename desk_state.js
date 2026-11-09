@@ -6473,13 +6473,6 @@ window.__DESK_STATE__ = {
       "t": "2026-11-07T17:02:03-05:00",
       "agent": "Risk",
       "kind": "check",
-      "text": "XRP-USD short 1238966.1 @ 1.1611: HOLD \u2014 no trigger",
-      "reason": "Coinbase public 5m since 2026-11-07T08:01:06-05:00: maxH=1.1677 minL=1.1496 (stop 1.174; T1 1.1495/T2 1.1395); 15m max close=1.1675 (inv 1.168). No close trigger."
-    },
-    {
-      "t": "2026-11-07T17:02:03-05:00",
-      "agent": "Risk",
-      "kind": "check",
       "text": "ETH-USD short 849.8417 @ 2233.38: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-07T11:01:21-05:00: maxH=2236.57 minL=2218.76 (stop 2251.25; T1 2211.05/T2 2186.05); 15m max close=2235.67 (inv 2239.68). No close trigger."
     },
@@ -7936,6 +7929,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 2208 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
       "reason": "scheduled race cycle; scan scans/2026-11-08_2208_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-08T22:08:18-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD short 1725.1874 @ 2120.39: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-08T17:06:05-05:00: maxH=2165.28 minL=2112.88 (stop 2228.8; T1 2086.01/T2 2061.01); 15m max close=2152.97 (inv 2222.8). No close trigger."
     }
   ],
   "scanner_feed": [
@@ -8901,7 +8901,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-08T22:08:17-05:00",
+  "updated_at": "2026-11-08T22:08:18-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
