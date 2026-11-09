@@ -7055,13 +7055,6 @@
       "t": "2026-11-08T14:07:41-05:00",
       "agent": "Risk",
       "kind": "check",
-      "text": "ETH-USD short 966.355 @ 2226.82: HOLD \u2014 no trigger",
-      "reason": "Coinbase public 5m since 2026-11-08T11:59:18-05:00: maxH=2234.49 minL=2221.69 (stop 2244.63; T1 2204.55/T2 2179.55); 15m max close=2233.5 (inv 2238.43). No close trigger."
-    },
-    {
-      "t": "2026-11-08T14:07:41-05:00",
-      "agent": "Risk",
-      "kind": "check",
       "text": "SOL-USD short 10109.0 @ 88.89: STOP 89.88 HIT \u2014 CLOSE at stated stop",
       "reason": "Coinbase public candles since 2026-11-08T11:59:18-05:00: maxH=89.88; minL=88.83; 15m max close=89.51; 15m min close=None. STOP 89.88 hit (short): Coinbase public 5m 13:20 ET high 89.88 (>= 89.88). Paper close at stated stop."
     },
@@ -8514,6 +8507,13 @@
       "kind": "check",
       "text": "BTC-USD long 21.86 @ 74807.81: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-09T15:06:18-05:00: maxH=75245.12 minL=74569.86 (stop 74209.35; T1 75705.5/T2 76105.5); 15m min close=74675.6 (inv 74525.45). No close trigger."
+    },
+    {
+      "t": "2026-11-09T18:04:41-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD long 256.601 @ 2125.26: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-09T15:06:18-05:00: maxH=2134.78 minL=2117.28 (stop 2104.01; T1 2157.14/T2 2187.14); 15m min close=2122.81 (inv 2120.1). No close trigger."
     }
   ],
   "scanner_feed": [
