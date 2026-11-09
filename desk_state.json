@@ -6974,15 +6974,6 @@
   "activity": [
     {
       "t": "2026-11-08T11:59:18-05:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 966.355 ETH-USD @ 2226.82 \u00b7 notional $2,151,899 (50x, margin $43,038) \u00b7 stop 2244.63 \u00b7 tgt 2204.55 \u00b7 risk $17,210.78",
-      "reason": "RACE redeploy 1159 ET: BTC/ETH tilt short. 24h -0.16%. ETH-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 2240.43; session 5m low 2224; 15m detail [('10:00', 2236.69, 2238.55, 2236.24), ('10:15', 2237.75, 2238, 2234.71), ('10:30', 2238.35, 2239.13, 2236.9), ('10:45', 2239.02, 2239.02, 2237.3), ('11:00', 2236.91, 2240.43, 2236.49), ('11:15', 2237.16, 2238.83, 2236.65), ('11:30', 2235.18, 2237.06, 2232.76), ('11:45', 2227.5, 2235.65, 2224)]. Notional $2,151,899 @ 50x (margin $43,038), risk $17,211 (27.4% eq, warn-only). T1 2204.55, T2 2179.55.",
-      "fill_id": "2026-11-08_ETH-USD_345",
-      "card": "RACE_ETH_SHORT_1159"
-    },
-    {
-      "t": "2026-11-08T11:59:18-05:00",
       "agent": "Rug Check",
       "kind": "check",
       "text": "SOL-USD PASS (chaos: non-blocking)",
@@ -8433,6 +8424,13 @@
       "kind": "scan",
       "text": "CHAOS race cycle 1704 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
       "reason": "scheduled race cycle; scan scans/2026-11-09_1704_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-09T17:04:36-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "BTC-USD long 21.86 @ 74807.81: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-09T15:06:18-05:00: maxH=74973.08 minL=74569.86 (stop 74209.35; T1 75705.5/T2 76105.5); 15m min close=74675.6 (inv 74525.45). No close trigger."
     }
   ],
   "scanner_feed": [
