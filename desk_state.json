@@ -3245,7 +3245,7 @@
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-09T12:59:04-05:00",
-      "note": "last: paper fill SOL-USD"
+      "note": "1258 ET: closed 2; opened {'ETH-USD': True, 'SOL-USD': True}; held ['ETH-USD', 'SOL-USD', 'XRP-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -6838,13 +6838,6 @@
   "activity": [
     {
       "t": "2026-11-08T04:03:58-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "ETH-USD PASS (chaos: non-blocking)",
-      "reason": "vol $79.6M, spread 0.0004%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
-    },
-    {
-      "t": "2026-11-08T04:03:58-05:00",
       "agent": "Executor",
       "kind": "fill",
       "text": "PAPER FILL long 386.288 ETH-USD @ 2235.27 \u00b7 notional $863,458 (50x, margin $17,269) \u00b7 stop 2212.92 \u00b7 tgt 2268.8 \u00b7 risk $8,633.53",
@@ -8302,6 +8295,13 @@
       "reason": "RACE redeploy 1258 ET: BTC/ETH tilt short. 24h -2.81%. SOL-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 86.97; session 5m low 86.14; 15m detail [('11:00', 87.13, 87.86, 87.1), ('11:15', 86.55, 87.23, 86.47), ('11:30', 86.79, 87.03, 86.55), ('11:45', 86.93, 87.01, 86.68), ('12:00', 86.77, 86.97, 86.68), ('12:15', 86.38, 86.91, 86.28), ('12:30', 86.29, 86.46, 86.14), ('12:45', 86.56, 86.63, 86.28)]. Notional $1,526,745 @ 50x (margin $30,535), risk $15,345 (14.9% eq, warn-only). T1 85.52, T2 84.52.",
       "fill_id": "2026-11-09_SOL-USD_378",
       "card": "RACE_SOL_SHORT_1258"
+    },
+    {
+      "t": "2026-11-09T12:59:04-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "1258 ET: closed 2; opened {'ETH-USD': True, 'SOL-USD': True}; held ['ETH-USD', 'SOL-USD', 'XRP-USD']",
+      "reason": "race mode: direction=short; closes=2; opens_ok={'ETH-USD': True, 'SOL-USD': True}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": [
