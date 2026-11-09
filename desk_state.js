@@ -3087,8 +3087,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-08T22:08:31-05:00",
-      "note": "CHAOS: 2208 ET race cycle \u00b7 hold/rotate check \u00b7 eq $71,640 \u00b7 exposure $4,963,727 (69.29x)"
+      "last_run": "2026-11-09T00:03:51-05:00",
+      "note": "CHAOS: 0003 ET race cycle \u00b7 hold/rotate check \u00b7 eq $87,103 \u00b7 exposure $4,948,264 (56.81x)"
     },
     "Equity": {
       "status": "ready",
@@ -6495,15 +6495,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-07T17:02:15-05:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 8.19 BTC-USD @ 75666.7 \u00b7 notional $619,710 (50x, margin $12,394) \u00b7 stop 75061.3 \u00b7 tgt 76574.7 \u00b7 risk $4,957.65",
-      "reason": "RACE redeploy 1701 ET: BTC/ETH tilt long. 24h -0.17%. BTC-USD concentrated long under BTC/ETH reclaim (not bearish 15m); stop below floor 75452.88; session 5m low 75452.88; 15m detail [('15:15', 75646.9, 75743.54, 75638.25), ('15:30', 75611.49, 75651.62, 75607.01), ('15:45', 75584.59, 75617.91, 75489.17), ('16:00', 75509, 75611.2, 75492.86), ('16:15', 75526.72, 75547.18, 75502.82), ('16:30', 75591.38, 75596.08, 75452.88), ('16:45', 75638.53, 75644, 75559.86), ('17:00', 75661.22, 75675.28, 75638.52)]. Notional $619,710 @ 50x (margin $12,394), risk $4,958 (5.8% eq, warn-only). T1 76574.67, T2 76974.67.",
-      "fill_id": "2026-11-07_BTC-USD_318",
-      "card": "RACE_BTC_LONG_1701"
-    },
-    {
       "t": "2026-11-07T17:02:16-05:00",
       "agent": "Executor",
       "kind": "plan",
@@ -7959,6 +7950,13 @@ window.__DESK_STATE__ = {
       "kind": "plan",
       "text": "0003 ET: closed 0; opened {'SOL-USD': False, 'BTC-USD': False}; held ['ETH-USD', 'XRP-USD']",
       "reason": "race mode: direction=short; closes=0; opens_ok={'SOL-USD': False, 'BTC-USD': False}; cash_pool after cushion; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-09T00:03:51-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 0003 ET race cycle \u00b7 hold/rotate check \u00b7 eq $87,103 \u00b7 exposure $4,948,264 (56.81x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
