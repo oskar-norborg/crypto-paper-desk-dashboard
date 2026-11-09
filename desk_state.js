@@ -6450,13 +6450,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-07T13:07:41-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "Scan 13:07 ET \u00b7 closed SOL short on invalidation \u00b7 hold XRP/ETH shorts \u00b7 no opens",
-      "reason": "scans/2026-11-07_1307_scan.md"
-    },
-    {
       "t": "2026-11-07T14:08:37-05:00",
       "agent": "Scanner",
       "kind": "scan",
@@ -7918,6 +7911,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
       "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
+    },
+    {
+      "t": "2026-11-08T20:00:09-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "SOL-USD short 2362.8 @ 86.32: RACE ROTATE \u2014 thesis/momentum broken before stop",
+      "reason": "RACE rotate 1959 ET: cut SOL-USD short loser/broken-momentum BEFORE stop. uP&L $-2,764.48; stop_prog 60% of path to stop 88.28 (mark 87.55, entry 86.32); symbol 15m bearish_tilt=False; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close."
     }
   ],
   "scanner_feed": [
