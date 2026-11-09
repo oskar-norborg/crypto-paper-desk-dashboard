@@ -3080,7 +3080,7 @@ window.__DESK_STATE__ = {
     "Rug Check": {
       "status": "idle",
       "last_run": "2026-11-09T03:59:56-05:00",
-      "note": "BTC-USD PASS (chaos: non-blocking)"
+      "note": "ETH-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -6523,14 +6523,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-07T18:02:02-05:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE ETH-USD @ 2230.34 \u00b7 P&L $+2583.52",
-      "reason": "RACE rotate 1801 ET: cut ETH-USD short loser/broken-momentum BEFORE stop. uP&L $2,583.52; stop_prog -17% of path to stop 2251.25 (mark 2230.34, entry 2233.38); symbol 15m bearish_tilt=False; book direction=long. Free margin for concentrated highest-conviction swing. Public mark close.",
-      "fill_id": "2026-11-07_ETH-USD_311"
-    },
-    {
-      "t": "2026-11-07T18:02:02-05:00",
       "agent": "Risk",
       "kind": "check",
       "text": "XRP-USD short 1238966.1 @ 1.1611: RACE ROTATE \u2014 thesis/momentum broken before stop",
@@ -7988,6 +7980,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE redeploy 0359 ET: BTC/ETH tilt long. 24h -1.80%. BTC-USD concentrated long under BTC/ETH reclaim (not bearish 15m); stop below floor 73636; session 5m low 73636; 15m detail [('02:00', 73860.23, 74287.58, 73755), ('02:15', 73866.99, 74049.99, 73694.13), ('02:30', 73908.11, 74121.05, 73777.06), ('02:45', 73770.07, 73953, 73660), ('03:00', 73783.95, 73867.97, 73636), ('03:15', 74085.96, 74168.19, 73769.11), ('03:30', 74235.47, 74273.66, 74060.07), ('03:45', 74465.26, 74475.71, 74154.8)]. Notional $7,170,460 @ 50x (margin $143,409), risk $86,281 (45.1% eq, warn-only). T1 75345.29, T2 75745.29.",
       "fill_id": "2026-11-09_BTC-USD_364",
       "card": "RACE_BTC_LONG_0359"
+    },
+    {
+      "t": "2026-11-09T03:59:56-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "ETH-USD PASS (chaos: non-blocking)",
+      "reason": "vol $253.4M, spread 0.0005%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
     }
   ],
   "scanner_feed": [
