@@ -3183,8 +3183,8 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-09T09:59:23-05:00",
-      "note": "0959 ET: closed 2; opened {'BTC-USD': True, 'ETH-USD': True}; held ['BTC-USD', 'ETH-USD']"
+      "last_run": "2026-11-09T11:09:04-05:00",
+      "note": "1108 ET: closed 0; opened {}; held ['BTC-USD', 'ETH-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -6716,13 +6716,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-07T22:05:46-05:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: 2205 ET race cycle \u00b7 hold/rotate check \u00b7 eq $77,907 \u00b7 exposure $3,862,340 (49.58x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
-    {
       "t": "2026-11-08T00:04:11-05:00",
       "agent": "Scanner",
       "kind": "scan",
@@ -8183,6 +8176,13 @@
       "kind": "check",
       "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
       "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
+    },
+    {
+      "t": "2026-11-09T11:09:04-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "1108 ET: closed 0; opened {}; held ['BTC-USD', 'ETH-USD']",
+      "reason": "race mode: direction=long; closes=0; opens_ok={}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": [
