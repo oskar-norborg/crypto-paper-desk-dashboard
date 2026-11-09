@@ -6445,13 +6445,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-07T11:59:04-05:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "1158 ET: closed 0; opened {}; held ['ETH-USD', 'SOL-USD', 'XRP-USD']",
-      "reason": "race mode: direction=short; closes=0; opens_ok={}; cash_pool after cushion; plateau not acceptable"
-    },
-    {
       "t": "2026-11-07T11:59:06-05:00",
       "agent": "Logger",
       "kind": "batch",
@@ -7914,6 +7907,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "XRP-USD short 1145656.3 @ 1.1141: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-08T17:06:05-05:00: maxH=1.1313 minL=1.1046 (stop 1.155; T1 1.097/T2 1.087); 15m max close=1.124 (inv 1.149). No close trigger."
+    },
+    {
+      "t": "2026-11-08T19:59:59-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "SOL-USD short 2362.8 @ 86.32: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-08T19:03:14-05:00: maxH=87.5 minL=86.12 (stop 88.28; T1 85.27/T2 84.27); 15m max close=87.5 (inv 88.08). No close trigger."
     }
   ],
   "scanner_feed": [
