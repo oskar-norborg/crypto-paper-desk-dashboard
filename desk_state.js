@@ -6564,13 +6564,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-07T18:02:05-05:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "1801 ET: closed 2; opened {'ETH-USD': True}; held ['BTC-USD', 'ETH-USD']",
-      "reason": "race mode: direction=long; closes=2; opens_ok={'ETH-USD': True}; cash_pool after cushion; plateau not acceptable"
-    },
-    {
       "t": "2026-11-07T18:02:08-05:00",
       "agent": "Logger",
       "kind": "batch",
@@ -8028,6 +8021,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 0759 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
       "reason": "scheduled race cycle; scan scans/2026-11-09_0759_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-09T07:59:55-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "BTC-USD long 96.31 @ 74451.87: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-09T03:59:56-05:00: maxH=75012.21 minL=73953.6 (stop 73556.0; T1 75345.29/T2 75745.29); 15m min close=74030.85 (inv 73686.0). No close trigger."
     }
   ],
   "scanner_feed": [
