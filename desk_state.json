@@ -5,42 +5,15 @@
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 47677.17,
-  "cash": 50.0,
-  "realized_pnl": 21267.58,
-  "unrealized_pnl": -23590.41,
-  "day_pnl": -9607.84,
-  "day_pnl_pct": -0.16772,
+  "equity": 47641.04,
+  "cash": 27778.11,
+  "realized_pnl": -856.62,
+  "unrealized_pnl": -1502.34,
+  "day_pnl": -9643.97,
+  "day_pnl_pct": -0.16835,
   "day_baseline_date": "2026-11-10",
   "day_baseline_equity": 57285.01,
   "open_positions": [
-    {
-      "id": "2026-11-10_ETH-USD_414",
-      "symbol": "ETH-USD",
-      "side": "short",
-      "size": 1204.3656,
-      "entry": 2069.65,
-      "notional": 2492615.26,
-      "stop": 2108.41,
-      "target": 2028.46,
-      "target2": 2003.46,
-      "invalidation": "15m close > 2102.41 (reclaim of recent bounce shelf) or stop 2108.41",
-      "risk_usd": 46681.21,
-      "risk_pct_equity": 0.65501,
-      "opened_at": "2026-11-10T09:06:00-05:00",
-      "card": "RACE_ETH_SHORT_0905",
-      "reason": "RACE redeploy 0905 ET: BTC/ETH tilt short. 24h -2.67%. ETH-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 2104.41; session 5m low 2031.46; 15m detail [('07:15', 2088.9, 2092.66, 2086.78), ('07:30', 2085.61, 2088.96, 2083.74), ('07:45', 2097.05, 2097.45, 2085.31), ('08:00', 2094.95, 2097.45, 2092.67), ('08:15', 2095.52, 2096.88, 2089.2), ('08:30', 2066.87, 2104.41, 2031.46), ('08:45', 2063.18, 2076.46, 2060.98), ('09:00', 2069.93, 2069.97, 2062.64)]. Notional $2,492,615 @ 50x (margin $49,852), risk $46,681 (65.5% eq, warn-only). T1 2028.46, T2 2003.46.",
-      "price_source": "coinbase_exchange_public_ticker bid/ask/price 2069.65 @ 2026-11-10T09:06:00-05:00 ET (exch 2026-11-10T14:05:59.545542637Z) api.exchange.coinbase.com unauthenticated",
-      "override": null,
-      "paper_only": true,
-      "leverage": 50.0,
-      "margin": 49852.31,
-      "mark": 2087.99,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-10T10:01:03-05:00",
-      "unrealized_pnl": -22088.07,
-      "exposure": 2514703.33
-    },
     {
       "id": "2026-11-10_XRP-USD_415",
       "symbol": "XRP-USD",
@@ -69,7 +42,7 @@
       "exposure": 1069765.81
     }
   ],
-  "open_count": 2,
+  "open_count": 1,
   "closed_positions": [
     {
       "type": "close",
@@ -3481,11 +3454,28 @@
       "reason": "STOP 2075.05 hit (long): Coinbase public 5m 08:30 ET low 2031.46 (<= 2075.05). Paper close at stated stop.",
       "price_source": "coinbase_exchange_public 5m candle 2026-11-10 08:30 ET low 2031.46 (api.exchange.coinbase.com/products/ETH-USD/candles, unauthenticated); fill at stated stop 2075.05",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-10_ETH-USD_414",
+      "symbol": "ETH-USD",
+      "side": "short",
+      "size": 1204.3656,
+      "entry": 2069.65,
+      "exit": 2088.02,
+      "pnl": -22124.2,
+      "notional": 2492615.26,
+      "leverage": 50.0,
+      "margin": 49852.31,
+      "closed_at": "2026-11-10T10:01:12-05:00",
+      "reason": "RACE rotate 1000 ET: cut ETH-USD short loser/broken-momentum BEFORE stop. uP&L $-22,088.07; stop_prog 47% of path to stop 2108.41 (mark 2088.02, entry 2069.65); symbol 15m bearish_tilt=True; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close.",
+      "price_source": "coinbase_exchange_public_ticker bid/ask/price 2088.02 @ 2026-11-10T10:01:12-05:00 ET (exch 2026-11-10T15:01:12.296856977Z) api.exchange.coinbase.com unauthenticated",
+      "paper_only": true
     }
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 47677.17,
+  "max_risk_usd": 47641.04,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -572850.1,
   "paused": false,
@@ -3540,8 +3530,8 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-10T09:06:01-05:00",
-      "note": "0905 ET: closed 3; opened {'ETH-USD': True, 'XRP-USD': True}; held ['ETH-USD', 'XRP-USD']"
+      "last_run": "2026-11-10T10:01:12-05:00",
+      "note": "last: closed ETH-USD"
     },
     "Logger": {
       "status": "ready",
@@ -7544,18 +7534,14 @@
       "t": "2026-11-10T10:01:05-05:00",
       "equity": 47677.17,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-10T10:01:12-05:00",
+      "equity": 47641.04,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-09T09:13:34-05:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 2.52015e+06 XRP-USD @ 1.0924 \u00b7 notional $2,753,015 (50x, margin $55,060) \u00b7 stop 1.1013 \u00b7 tgt 1.0815 \u00b7 risk $22,429.36",
-      "reason": "RACE redeploy 0913 ET: BTC/ETH tilt short. 24h -5.74%. XRP-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 1.0973; session 5m low 1.0851; 15m detail [('07:15', 1.0934, 1.0943, 1.0851), ('07:30', 1.1018, 1.1044, 1.0925), ('07:45', 1.1043, 1.1096, 1.1014), ('08:00', 1.0969, 1.1061, 1.0953), ('08:15', 1.096, 1.0972, 1.0922), ('08:30', 1.0909, 1.0967, 1.0902), ('08:45', 1.0967, 1.0971, 1.0907), ('09:00', 1.0923, 1.0973, 1.09)]. Notional $2,753,015 @ 50x (margin $55,060), risk $22,429 (12.1% eq, warn-only). T1 1.0815, T2 1.0715.",
-      "fill_id": "2026-11-09_XRP-USD_369",
-      "card": "RACE_XRP_SHORT_0913"
-    },
     {
       "t": "2026-11-09T09:13:34-05:00",
       "agent": "Executor",
@@ -9017,6 +9003,14 @@
       "kind": "check",
       "text": "ETH-USD short 1204.3656 @ 2069.65: RACE ROTATE \u2014 thesis/momentum broken before stop",
       "reason": "RACE rotate 1000 ET: cut ETH-USD short loser/broken-momentum BEFORE stop. uP&L $-22,088.07; stop_prog 47% of path to stop 2108.41 (mark 2088.02, entry 2069.65); symbol 15m bearish_tilt=True; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close."
+    },
+    {
+      "t": "2026-11-10T10:01:12-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE ETH-USD @ 2088.02 \u00b7 P&L $-22124.20",
+      "reason": "RACE rotate 1000 ET: cut ETH-USD short loser/broken-momentum BEFORE stop. uP&L $-22,088.07; stop_prog 47% of path to stop 2108.41 (mark 2088.02, entry 2069.65); symbol 15m bearish_tilt=True; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close.",
+      "fill_id": "2026-11-10_ETH-USD_414"
     }
   ],
   "scanner_feed": [
@@ -9998,10 +9992,10 @@
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 71217.58,
-  "exposure": 3584469.14,
-  "buying_power": 0.0,
-  "effective_leverage": 75.18,
+  "margin_used": 21365.27,
+  "exposure": 1069765.81,
+  "buying_power": 1312286.19,
+  "effective_leverage": 22.45,
   "operating_timezone": "America/New_York",
   "events": [
     {
