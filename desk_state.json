@@ -3388,7 +3388,7 @@
     "Rug Check": {
       "status": "idle",
       "last_run": "2026-11-09T21:02:42-05:00",
-      "note": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)"
+      "note": "XRP-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -7226,13 +7226,6 @@
   "activity": [
     {
       "t": "2026-11-08T18:01:08-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
-      "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
-    },
-    {
-      "t": "2026-11-08T18:01:08-05:00",
       "agent": "Executor",
       "kind": "plan",
       "text": "1800 ET: closed 0; opened {'SOL-USD': False, 'BTC-USD': False}; held ['ETH-USD', 'XRP-USD']",
@@ -8682,6 +8675,13 @@
       "kind": "check",
       "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
       "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
+    },
+    {
+      "t": "2026-11-09T21:02:42-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "XRP-USD PASS (chaos: non-blocking)",
+      "reason": "vol $115.5M, spread 0.0182%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
     }
   ],
   "scanner_feed": [
