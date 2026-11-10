@@ -6,7 +6,7 @@
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
   "equity": 128829.64,
-  "cash": 7950.16,
+  "cash": 50.13,
   "realized_pnl": 67429.32,
   "unrealized_pnl": 11400.32,
   "day_pnl": 71544.63,
@@ -67,9 +67,36 @@
       "mark_at": "2026-11-10T12:58:51-05:00",
       "unrealized_pnl": -87.57,
       "exposure": 921772.66
+    },
+    {
+      "id": "2026-11-10_SOL-USD_426",
+      "symbol": "SOL-USD",
+      "side": "short",
+      "size": 4797.2,
+      "entry": 82.34,
+      "notional": 395001.45,
+      "stop": 83.16,
+      "target": 81.25,
+      "target2": 80.25,
+      "invalidation": "15m close > 82.47 (reclaim of recent bounce shelf) or stop 83.16",
+      "risk_usd": 3933.7,
+      "risk_pct_equity": 0.03053,
+      "opened_at": "2026-11-10T12:58:52-05:00",
+      "card": "RACE_SOL_SHORT_1258",
+      "reason": "RACE redeploy 1258 ET: BTC/ETH tilt short. 24h -4.84%. SOL-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 82.52; session 5m low 81.45; 15m detail [('11:00', 82.14, 82.64, 81.92), ('11:15', 82.17, 82.53, 81.96), ('11:30', 82.23, 82.25, 81.45), ('11:45', 81.87, 82.24, 81.65), ('12:00', 82.18, 82.32, 81.7), ('12:15', 82.34, 82.39, 82.06), ('12:30', 82.07, 82.52, 81.8), ('12:45', 82.34, 82.43, 81.85)]. Notional $395,001 @ 50x (margin $7,900), risk $3,934 (3.1% eq, warn-only). T1 81.25, T2 80.25.",
+      "price_source": "coinbase_exchange_public_ticker bid/ask/price 82.34 @ 2026-11-10T12:58:51-05:00 ET (exch 2026-11-10T17:58:47.406023233Z) api.exchange.coinbase.com unauthenticated",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 7900.03,
+      "mark": 82.34,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-10T12:58:50-05:00",
+      "unrealized_pnl": -0.0,
+      "exposure": 395001.45
     }
   ],
-  "open_count": 2,
+  "open_count": 3,
   "closed_positions": [
     {
       "type": "close",
@@ -3625,13 +3652,13 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-10T12:58:51-05:00",
-      "note": "last: paper fill XRP-USD"
+      "last_run": "2026-11-10T12:58:52-05:00",
+      "note": "last: paper fill SOL-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-10T12:58:51-05:00",
-      "note": "logged 2026-11-10_XRP-USD_425"
+      "last_run": "2026-11-10T12:58:52-05:00",
+      "note": "logged 2026-11-10_SOL-USD_426"
     },
     "Equity": {
       "status": "ready",
@@ -7729,16 +7756,14 @@
       "t": "2026-11-10T12:58:51-05:00",
       "equity": 128829.64,
       "kind": "fill"
+    },
+    {
+      "t": "2026-11-10T12:58:52-05:00",
+      "equity": 128829.64,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-09T12:59:01-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "ETH-USD long 617.6649 @ 2126.58: RACE ROTATE \u2014 thesis/momentum broken before stop",
-      "reason": "RACE rotate 1258 ET: cut ETH-USD long loser/broken-momentum BEFORE stop. uP&L $-2,013.59; stop_prog 15% of path to stop 2105.31 (mark 2123.32, entry 2126.58); symbol 15m bearish_tilt=True; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close."
-    },
     {
       "t": "2026-11-09T12:59:01-05:00",
       "agent": "Executor",
@@ -9206,6 +9231,15 @@
       "kind": "check",
       "text": "SOL-USD PASS (chaos: non-blocking)",
       "reason": "vol $95.8M, spread 0.0243%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
+    },
+    {
+      "t": "2026-11-10T12:58:52-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 4797.2 SOL-USD @ 82.34 \u00b7 notional $395,001 (50x, margin $7,900) \u00b7 stop 83.16 \u00b7 tgt 81.25 \u00b7 risk $3,933.70",
+      "reason": "RACE redeploy 1258 ET: BTC/ETH tilt short. 24h -4.84%. SOL-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 82.52; session 5m low 81.45; 15m detail [('11:00', 82.14, 82.64, 81.92), ('11:15', 82.17, 82.53, 81.96), ('11:30', 82.23, 82.25, 81.45), ('11:45', 81.87, 82.24, 81.65), ('12:00', 82.18, 82.32, 81.7), ('12:15', 82.34, 82.39, 82.06), ('12:30', 82.07, 82.52, 81.8), ('12:45', 82.34, 82.43, 81.85)]. Notional $395,001 @ 50x (margin $7,900), risk $3,934 (3.1% eq, warn-only). T1 81.25, T2 80.25.",
+      "fill_id": "2026-11-10_SOL-USD_426",
+      "card": "RACE_SOL_SHORT_1258"
     }
   ],
   "scanner_feed": [
@@ -10171,7 +10205,7 @@
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-10T12:58:51-05:00",
+  "updated_at": "2026-11-10T12:58:52-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -10187,10 +10221,10 @@
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 109479.16,
-  "exposure": 5462557.58,
-  "buying_power": 978924.42,
-  "effective_leverage": 42.4,
+  "margin_used": 117379.19,
+  "exposure": 5857559.03,
+  "buying_power": 583922.97,
+  "effective_leverage": 45.47,
   "operating_timezone": "America/New_York",
   "events": [
     {
