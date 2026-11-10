@@ -5,12 +5,12 @@
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 60511.03,
-  "cash": 17970.53,
+  "equity": 60676.7,
+  "cash": 50.01,
   "realized_pnl": 9785.08,
-  "unrealized_pnl": 725.95,
-  "day_pnl": 3226.02,
-  "day_pnl_pct": 0.05632,
+  "unrealized_pnl": 891.62,
+  "day_pnl": 3391.69,
+  "day_pnl_pct": 0.05921,
   "day_baseline_date": "2026-11-10",
   "day_baseline_equity": 57285.01,
   "open_positions": [
@@ -40,9 +40,36 @@
       "mark_at": "2026-11-10T04:04:30-05:00",
       "unrealized_pnl": 725.95,
       "exposure": 2090001.74
+    },
+    {
+      "id": "2026-11-10_XRP-USD_407",
+      "symbol": "XRP-USD",
+      "side": "short",
+      "size": 828350.0,
+      "entry": 1.0817,
+      "notional": 896026.2,
+      "stop": 1.0972,
+      "target": 1.0709,
+      "target2": 1.0609,
+      "invalidation": "15m close > 1.0912 (reclaim of recent bounce shelf) or stop 1.0972",
+      "risk_usd": 12839.42,
+      "risk_pct_equity": 0.21218,
+      "opened_at": "2026-11-10T04:04:40-05:00",
+      "card": "RACE_XRP_SHORT_0404",
+      "reason": "RACE redeploy 0404 ET: BTC/ETH tilt short. 24h -0.62%. XRP-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 1.0932; session 5m low 1.0794; 15m detail [('02:15', 1.1005, 1.1016, 1.0977), ('02:30', 1.1015, 1.1041, 1.0996), ('02:45', 1.0945, 1.1016, 1.0942), ('03:00', 1.0891, 1.0958, 1.0888), ('03:15', 1.0891, 1.09, 1.0847), ('03:30', 1.0852, 1.0903, 1.0843), ('03:45', 1.0863, 1.0863, 1.0835), ('04:00', 1.0817, 1.0861, 1.0794)]. Notional $896,026 @ 50x (margin $17,921), risk $12,839 (21.2% eq, warn-only). T1 1.0709, T2 1.0609.",
+      "price_source": "coinbase_exchange_public_ticker bid/ask/price 1.0817 @ 2026-11-10T04:04:40-05:00 ET (exch 2026-11-10T09:04:31.321207730Z) api.exchange.coinbase.com unauthenticated",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 17920.52,
+      "mark": 1.0815,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-10T04:04:32-05:00",
+      "unrealized_pnl": 165.67,
+      "exposure": 895860.52
     }
   ],
-  "open_count": 1,
+  "open_count": 2,
   "closed_positions": [
     {
       "type": "close",
@@ -3390,7 +3417,7 @@
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 60511.03,
+  "max_risk_usd": 60676.7,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -572850.1,
   "paused": false,
@@ -3446,12 +3473,12 @@
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-10T04:04:40-05:00",
-      "note": "last: paper fill ETH-USD"
+      "note": "last: paper fill XRP-USD"
     },
     "Logger": {
       "status": "ready",
       "last_run": "2026-11-10T04:04:40-05:00",
-      "note": "logged 2026-11-10_ETH-USD_406"
+      "note": "logged 2026-11-10_XRP-USD_407"
     },
     "Equity": {
       "status": "ready",
@@ -7364,16 +7391,14 @@
       "t": "2026-11-10T04:04:40-05:00",
       "equity": 60511.03,
       "kind": "fill"
+    },
+    {
+      "t": "2026-11-10T04:04:40-05:00",
+      "equity": 60676.7,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-09T00:03:38-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "XRP-USD short 1145656.3 @ 1.1141: HOLD \u2014 no trigger",
-      "reason": "Coinbase public 5m since 2026-11-08T17:06:05-05:00: maxH=1.1313 minL=1.1018 (stop 1.155; T1 1.097/T2 1.087); 15m max close=1.124 (inv 1.149). No close trigger."
-    },
     {
       "t": "2026-11-09T00:03:48-05:00",
       "agent": "Rug Check",
@@ -8833,6 +8858,15 @@
       "kind": "check",
       "text": "XRP-USD PASS (chaos: non-blocking)",
       "reason": "vol $99.8M, spread 0.0277%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
+    },
+    {
+      "t": "2026-11-10T04:04:40-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 828350 XRP-USD @ 1.0817 \u00b7 notional $896,026 (50x, margin $17,921) \u00b7 stop 1.0972 \u00b7 tgt 1.0709 \u00b7 risk $12,839.42",
+      "reason": "RACE redeploy 0404 ET: BTC/ETH tilt short. 24h -0.62%. XRP-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 1.0932; session 5m low 1.0794; 15m detail [('02:15', 1.1005, 1.1016, 1.0977), ('02:30', 1.1015, 1.1041, 1.0996), ('02:45', 1.0945, 1.1016, 1.0942), ('03:00', 1.0891, 1.0958, 1.0888), ('03:15', 1.0891, 1.09, 1.0847), ('03:30', 1.0852, 1.0903, 1.0843), ('03:45', 1.0863, 1.0863, 1.0835), ('04:00', 1.0817, 1.0861, 1.0794)]. Notional $896,026 @ 50x (margin $17,921), risk $12,839 (21.2% eq, warn-only). T1 1.0709, T2 1.0609.",
+      "fill_id": "2026-11-10_XRP-USD_407",
+      "card": "RACE_XRP_SHORT_0404"
     }
   ],
   "scanner_feed": [
@@ -9814,10 +9848,10 @@
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 41814.55,
-  "exposure": 2090001.74,
-  "buying_power": 935549.76,
-  "effective_leverage": 34.54,
+  "margin_used": 59735.07,
+  "exposure": 2985862.26,
+  "buying_power": 47972.74,
+  "effective_leverage": 49.21,
   "operating_timezone": "America/New_York",
   "events": [
     {
