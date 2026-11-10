@@ -7549,13 +7549,6 @@
   "activity": [
     {
       "t": "2026-11-09T09:13:34-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "XRP-USD PASS (chaos: non-blocking)",
-      "reason": "vol $122.3M, spread 0.0092%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
-    },
-    {
-      "t": "2026-11-09T09:13:34-05:00",
       "agent": "Executor",
       "kind": "fill",
       "text": "PAPER FILL short 2.52015e+06 XRP-USD @ 1.0924 \u00b7 notional $2,753,015 (50x, margin $55,060) \u00b7 stop 1.1013 \u00b7 tgt 1.0815 \u00b7 risk $22,429.36",
@@ -9017,6 +9010,13 @@
       "kind": "check",
       "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
       "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
+    },
+    {
+      "t": "2026-11-10T10:01:12-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD short 1204.3656 @ 2069.65: RACE ROTATE \u2014 thesis/momentum broken before stop",
+      "reason": "RACE rotate 1000 ET: cut ETH-USD short loser/broken-momentum BEFORE stop. uP&L $-22,088.07; stop_prog 47% of path to stop 2108.41 (mark 2088.02, entry 2069.65); symbol 15m bearish_tilt=True; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close."
     }
   ],
   "scanner_feed": [
