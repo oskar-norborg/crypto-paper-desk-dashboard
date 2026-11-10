@@ -7226,13 +7226,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-08T17:06:08-05:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: 1705 ET race cycle \u00b7 hold/rotate check \u00b7 eq $108,954 \u00b7 exposure $4,930,058 (45.25x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
-    {
       "t": "2026-11-08T18:00:54-05:00",
       "agent": "Scanner",
       "kind": "scan",
@@ -8682,6 +8675,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "ETH-USD long 256.601 @ 2125.26: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-09T15:06:18-05:00: maxH=2134.78 minL=2117.28 (stop 2104.01; T1 2157.14/T2 2187.14); 15m min close=2120.73 (inv 2120.1). No close trigger."
+    },
+    {
+      "t": "2026-11-09T21:02:31-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "XRP-USD short 487683.0 @ 1.0982: INVALIDATION \u2014 CLOSE at public mark 1.0983",
+      "reason": "Coinbase public candles since 2026-11-09T19:58:48-05:00: maxH=1.1043; minL=1.0966; 15m max close=1.104; 15m min close=None. INV 15m close > 1.1002 (short): Coinbase public 15m 20:00 ET close 1.1014 (high 1.1039/low 1.0986). Thesis broken \u2014 close at public mark 1.0983."
     }
   ],
   "scanner_feed": [
@@ -9647,7 +9647,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-09T21:02:30-05:00",
+  "updated_at": "2026-11-09T21:02:31-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
