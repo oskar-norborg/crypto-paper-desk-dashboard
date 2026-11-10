@@ -3589,8 +3589,8 @@
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-10T10:01:22-05:00",
-      "note": "logged 2026-11-10_SOL-USD_418"
+      "last_run": "2026-11-10T10:01:25-05:00",
+      "note": "CHAOS: 1000 ET race cycle \u00b7 hold/rotate check \u00b7 eq $47,816 \u00b7 exposure $2,359,908 (49.35x)"
     },
     "Equity": {
       "status": "ready",
@@ -7618,13 +7618,6 @@
   "activity": [
     {
       "t": "2026-11-09T09:59:11-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "XRP-USD short 2520153.2 @ 1.0924: STOP 1.1013 HIT \u2014 CLOSE at stated stop",
-      "reason": "Coinbase public candles since 2026-11-09T09:13:34-05:00: maxH=1.1056; minL=1.0892; 15m max close=1.0994; 15m min close=None. STOP 1.1013 hit (short): Coinbase public 5m 09:45 ET high 1.105 (>= 1.1013). Paper close at stated stop."
-    },
-    {
-      "t": "2026-11-09T09:59:11-05:00",
       "agent": "Executor",
       "kind": "close",
       "text": "PAPER CLOSE XRP-USD @ 1.1013 \u00b7 P&L $-22429.36",
@@ -9088,6 +9081,13 @@
       "kind": "plan",
       "text": "1000 ET: closed 1; opened {'ETH-USD': True, 'SOL-USD': True}; held ['ETH-USD', 'SOL-USD', 'XRP-USD']",
       "reason": "race mode: direction=short; closes=1; opens_ok={'ETH-USD': True, 'SOL-USD': True}; cash_pool after cushion; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-10T10:01:25-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 1000 ET race cycle \u00b7 hold/rotate check \u00b7 eq $47,816 \u00b7 exposure $2,359,908 (49.35x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
