@@ -3654,7 +3654,7 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-10T12:58:52-05:00",
-      "note": "last: paper fill SOL-USD"
+      "note": "1258 ET: closed 1; opened {'XRP-USD': True, 'SOL-USD': True}; held ['ETH-USD', 'SOL-USD', 'XRP-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -7766,14 +7766,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-09T12:59:01-05:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE ETH-USD @ 2123.32 \u00b7 P&L $-2013.59",
-      "reason": "RACE rotate 1258 ET: cut ETH-USD long loser/broken-momentum BEFORE stop. uP&L $-2,013.59; stop_prog 15% of path to stop 2105.31 (mark 2123.32, entry 2126.58); symbol 15m bearish_tilt=True; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close.",
-      "fill_id": "2026-11-09_ETH-USD_373"
-    },
-    {
       "t": "2026-11-09T12:59:04-05:00",
       "agent": "Rug Check",
       "kind": "check",
@@ -9241,6 +9233,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE redeploy 1258 ET: BTC/ETH tilt short. 24h -4.84%. SOL-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 82.52; session 5m low 81.45; 15m detail [('11:00', 82.14, 82.64, 81.92), ('11:15', 82.17, 82.53, 81.96), ('11:30', 82.23, 82.25, 81.45), ('11:45', 81.87, 82.24, 81.65), ('12:00', 82.18, 82.32, 81.7), ('12:15', 82.34, 82.39, 82.06), ('12:30', 82.07, 82.52, 81.8), ('12:45', 82.34, 82.43, 81.85)]. Notional $395,001 @ 50x (margin $7,900), risk $3,934 (3.1% eq, warn-only). T1 81.25, T2 80.25.",
       "fill_id": "2026-11-10_SOL-USD_426",
       "card": "RACE_SOL_SHORT_1258"
+    },
+    {
+      "t": "2026-11-10T12:58:52-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "1258 ET: closed 1; opened {'XRP-USD': True, 'SOL-USD': True}; held ['ETH-USD', 'SOL-USD', 'XRP-USD']",
+      "reason": "race mode: direction=short; closes=1; opens_ok={'XRP-USD': True, 'SOL-USD': True}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": [
