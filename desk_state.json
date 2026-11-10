@@ -7479,13 +7479,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-09T07:59:55-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "BTC-USD long 96.31 @ 74451.87: HOLD \u2014 no trigger",
-      "reason": "Coinbase public 5m since 2026-11-09T03:59:56-05:00: maxH=75012.21 minL=73953.6 (stop 73556.0; T1 75345.29/T2 75745.29); 15m min close=74030.85 (inv 73686.0). No close trigger."
-    },
-    {
       "t": "2026-11-09T07:59:56-05:00",
       "agent": "Risk",
       "kind": "check",
@@ -8946,6 +8939,13 @@
       "text": "PAPER CLOSE XRP-USD @ 1.0609 \u00b7 P&L $+17229.68",
       "reason": "T2 1.0609 hit (short): Coinbase public 5m 08:30 ET low 1.05 (<= 1.0609); stop 1.0972 never touched (maxH 1.0896); inv 15m clear (maxC15 1.0883). Paper close at stated T2.",
       "fill_id": "2026-11-10_XRP-USD_407"
+    },
+    {
+      "t": "2026-11-10T09:05:49-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "BTC-USD long 31.66 @ 74268.86: STOP 73674.71 HIT \u2014 CLOSE at stated stop",
+      "reason": "Coinbase public candles since 2026-11-10T08:00:13-05:00: maxH=74599.4; minL=73400; 15m max close=74309.07; 15m min close=73646.54. STOP 73674.71 hit (long): Coinbase public 5m 08:30 ET low 73400 (<= 73674.71). Paper close at stated stop."
     }
   ],
   "scanner_feed": [
