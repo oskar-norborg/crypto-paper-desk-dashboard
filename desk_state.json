@@ -21,10 +21,10 @@
       "size": 2239.355,
       "entry": 2032.85,
       "notional": 4552272.81,
-      "stop": 2089.85,
+      "stop": 2063.5,
       "target": 2000.24,
       "target2": 1975.24,
-      "invalidation": "15m close > 2083.85 (reclaim of recent bounce shelf) or stop 2089.85",
+      "invalidation": "15m close > 2060.00 (above 16:00-17:00 ET 15m highs 2062.99/2058.68) or stop 2063.50",
       "risk_usd": 127643.24,
       "risk_pct_equity": 0.981,
       "opened_at": "2026-11-10T11:00:40-05:00",
@@ -48,10 +48,10 @@
       "size": 1.55,
       "entry": 73243.7,
       "notional": 113527.74,
-      "stop": 72657.75,
+      "stop": 73500.0,
       "target": 74122.62,
       "target2": 74522.62,
-      "invalidation": "15m close < 73286.28 or stop 72657.75",
+      "invalidation": "15m close < 73520.00 (below 17:30 ET 15m low 73525.94) or stop 73500",
       "risk_usd": 908.22,
       "risk_pct_equity": 0.00971,
       "opened_at": "2026-11-10T15:05:25-05:00",
@@ -7847,27 +7847,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-09T16:03:01-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 1603 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
-      "reason": "scheduled race cycle; scan scans/2026-11-09_1603_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
-    },
-    {
-      "t": "2026-11-09T16:03:04-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "SOL-USD short 17638.0 @ 86.56: HOLD \u2014 no trigger",
-      "reason": "Coinbase public 5m since 2026-11-09T12:59:04-05:00: maxH=87.01 minL=86.02 (stop 87.43; T1 85.52/T2 84.52); 15m max close=86.88 (inv 86.92). No close trigger."
-    },
-    {
-      "t": "2026-11-09T16:03:04-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "BTC-USD long 21.86 @ 74807.81: HOLD \u2014 no trigger",
-      "reason": "Coinbase public 5m since 2026-11-09T15:06:18-05:00: maxH=74941.07 minL=74569.86 (stop 74209.35; T1 75705.5/T2 76105.5); 15m min close=74675.6 (inv 74525.45). No close trigger."
-    },
-    {
       "t": "2026-11-09T16:03:04-05:00",
       "agent": "Risk",
       "kind": "check",
@@ -9312,6 +9291,27 @@
       "kind": "batch",
       "text": "CHAOS: 1708 ET race cycle \u00b7 hold/rotate check \u00b7 eq $53,281 \u00b7 exposure $4,720,384 (88.59x)",
       "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
+    },
+    {
+      "t": "2026-11-10T17:48:26-05:00",
+      "agent": "eod_review",
+      "kind": "exit_plan_update",
+      "text": "ETH-USD short stop 2089.85 -> 2063.50; inv 15m close > 2060",
+      "reason": "EOD: old stop 2089.85 sat beyond the blow-up point (equity hits 0 near ETH ~2080 on 2,239 ETH short); new stop above 16:00 ET 15m high 2062.99 keeps the book alive. Public Coinbase 15m candles."
+    },
+    {
+      "t": "2026-11-10T17:48:26-05:00",
+      "agent": "eod_review",
+      "kind": "exit_plan_update",
+      "text": "BTC-USD long stop 72657.75 -> 73500; inv 15m close < 73520",
+      "reason": "EOD trail: 15m closes held 73.58k-73.89k since 15:45 ET; trail below 17:30 low 73525.94 to lock entry-plus."
+    },
+    {
+      "t": "2026-11-10T17:48:58-05:00",
+      "agent": "eod_review",
+      "kind": "eod_review",
+      "text": "EOD review 2026-11-10: equity $72,220.35, gap $927,779.65 (7.22%), day +$14,935.34, 2 open, 65.1x, blown_up false -> reviews/2026-11-10.md",
+      "reason": "Scheduled weekday EOD paper review; final public marks 30/30; exit plans tightened, next-session plan written."
     }
   ],
   "scanner_feed": [
@@ -10277,7 +10277,7 @@
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-10T17:47:38-05:00",
+  "updated_at": "2026-11-10T17:48:58-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
