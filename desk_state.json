@@ -5,42 +5,15 @@
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 62425.88,
-  "cash": 57.36,
-  "realized_pnl": 4596.33,
-  "unrealized_pnl": 7829.55,
-  "day_pnl": 5140.87,
-  "day_pnl_pct": 0.08974,
+  "equity": 62452.46,
+  "cash": 7412.02,
+  "realized_pnl": 7360.44,
+  "unrealized_pnl": 5092.02,
+  "day_pnl": 5167.45,
+  "day_pnl_pct": 0.09021,
   "day_baseline_date": "2026-11-10",
   "day_baseline_equity": 57285.01,
   "open_positions": [
-    {
-      "id": "2026-11-09_SOL-USD_395",
-      "symbol": "SOL-USD",
-      "side": "short",
-      "size": 2657.8,
-      "entry": 86.36,
-      "notional": 229527.61,
-      "stop": 87.22,
-      "target": 85.32,
-      "target2": 84.32,
-      "invalidation": "15m close > 86.67 (reclaim of recent bounce shelf) or stop 87.22",
-      "risk_usd": 2285.71,
-      "risk_pct_equity": 0.03815,
-      "opened_at": "2026-11-09T19:58:48-05:00",
-      "card": "RACE_SOL_SHORT_1958",
-      "reason": "RACE redeploy 1958 ET: BTC/ETH tilt short. 24h -1.29%. SOL-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 86.72; session 5m low 86.23; 15m detail [('18:00', 86.48, 86.79, 86.43), ('18:15', 86.59, 86.66, 86.44), ('18:30', 86.43, 86.64, 86.43), ('18:45', 86.62, 86.63, 86.4), ('19:00', 86.54, 86.72, 86.52), ('19:15', 86.41, 86.56, 86.27), ('19:30', 86.33, 86.42, 86.28), ('19:45', 86.35, 86.42, 86.23)]. Notional $229,528 @ 50x (margin $4,591), risk $2,286 (3.8% eq, warn-only). T1 85.32, T2 84.32.",
-      "price_source": "coinbase_exchange_public_ticker bid/ask/price 86.36 @ 2026-11-09T19:58:48-05:00 ET (exch 2026-11-10T00:58:45.903748246Z) api.exchange.coinbase.com unauthenticated",
-      "override": null,
-      "paper_only": true,
-      "leverage": 50.0,
-      "margin": 4590.55,
-      "mark": 85.33,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-10T04:04:27-05:00",
-      "unrealized_pnl": 2737.53,
-      "exposure": 226790.07
-    },
     {
       "id": "2026-11-09_XRP-USD_397",
       "symbol": "XRP-USD",
@@ -123,7 +96,7 @@
       "exposure": 1481675.4
     }
   ],
-  "open_count": 4,
+  "open_count": 3,
   "closed_positions": [
     {
       "type": "close",
@@ -3399,11 +3372,28 @@
       "reason": "INV 15m close < 74525.45 (long): Coinbase public 15m 22:30 ET close 74313.87 (high 74600.01/low 74253.01). Thesis broken \u2014 close at public mark 74674.17.",
       "price_source": "coinbase_exchange_public_ticker bid/ask/price 74674.17 @ 2026-11-10T00:07:17-05:00 ET (exch 2026-11-10T05:07:16.376985031Z) api.exchange.coinbase.com unauthenticated",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-09_SOL-USD_395",
+      "symbol": "SOL-USD",
+      "side": "short",
+      "size": 2657.8,
+      "entry": 86.36,
+      "exit": 85.32,
+      "pnl": 2764.11,
+      "notional": 229527.61,
+      "leverage": 50.0,
+      "margin": 4590.55,
+      "closed_at": "2026-11-10T04:04:28-05:00",
+      "reason": "T1 85.32 hit (short): Coinbase public 5m 04:00 ET low 85.06 (<= 85.32); T2 84.32 NOT hit; stop 87.22 never touched (maxH 86.68); inv 15m clear (maxC15 86.6). Paper close at stated T1.",
+      "price_source": "coinbase_exchange_public 5m candle 2026-11-10 04:00 ET low 85.06 (api.exchange.coinbase.com/products/SOL-USD/candles, unauthenticated); fill at stated T1 85.32",
+      "paper_only": true
     }
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 62425.88,
+  "max_risk_usd": 62452.46,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -572850.1,
   "paused": false,
@@ -3458,8 +3448,8 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-10T00:07:29-05:00",
-      "note": "0007 ET: closed 1; opened {'BTC-USD': True}; held ['BTC-USD', 'ETH-USD', 'SOL-USD', 'XRP-USD']"
+      "last_run": "2026-11-10T04:04:28-05:00",
+      "note": "last: closed SOL-USD"
     },
     "Logger": {
       "status": "ready",
@@ -7352,16 +7342,14 @@
       "t": "2026-11-10T04:04:27-05:00",
       "equity": 62425.88,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-10T04:04:28-05:00",
+      "equity": 62452.46,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-08T21:00:41-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
-      "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
-    },
     {
       "t": "2026-11-08T21:00:41-05:00",
       "agent": "Executor",
@@ -8815,6 +8803,14 @@
       "kind": "check",
       "text": "SOL-USD short 2657.8 @ 86.36: T1 85.32 HIT \u2014 CLOSE at stated T1",
       "reason": "Coinbase public candles since 2026-11-09T19:58:48-05:00: maxH=86.68; minL=85.06; 15m max close=86.6; 15m min close=None. T1 85.32 hit (short): Coinbase public 5m 04:00 ET low 85.06 (<= 85.32); T2 84.32 NOT hit; stop 87.22 never touched (maxH 86.68); inv 15m clear (maxC15 86.6). Paper close at stated T1."
+    },
+    {
+      "t": "2026-11-10T04:04:28-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE SOL-USD @ 85.32 \u00b7 P&L $+2764.11",
+      "reason": "T1 85.32 hit (short): Coinbase public 5m 04:00 ET low 85.06 (<= 85.32); T2 84.32 NOT hit; stop 87.22 never touched (maxH 86.68); inv 15m clear (maxC15 86.6). Paper close at stated T1.",
+      "fill_id": "2026-11-09_SOL-USD_395"
     }
   ],
   "scanner_feed": [
@@ -9796,10 +9792,10 @@
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 54538.97,
-  "exposure": 2704745.81,
-  "buying_power": 416548.19,
-  "effective_leverage": 43.33,
+  "margin_used": 49948.42,
+  "exposure": 2477955.74,
+  "buying_power": 644667.26,
+  "effective_leverage": 39.68,
   "operating_timezone": "America/New_York",
   "events": [
     {
