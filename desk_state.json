@@ -3429,8 +3429,8 @@
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-09T21:02:42-05:00",
-      "note": "logged 2026-11-09_XRP-USD_397"
+      "last_run": "2026-11-09T21:02:45-05:00",
+      "note": "CHAOS: 2102 ET race cycle \u00b7 hold/rotate check \u00b7 eq $60,929 \u00b7 exposure $2,944,116 (48.32x)"
     },
     "Equity": {
       "status": "ready",
@@ -7262,13 +7262,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-08T19:03:00-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 1903 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
-      "reason": "scheduled race cycle; scan scans/2026-11-08_1903_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
-    },
-    {
       "t": "2026-11-08T19:03:03-05:00",
       "agent": "Risk",
       "kind": "check",
@@ -8721,6 +8714,13 @@
       "kind": "plan",
       "text": "2102 ET: closed 1; opened {'XRP-USD': True}; held ['BTC-USD', 'ETH-USD', 'SOL-USD', 'XRP-USD']",
       "reason": "race mode: direction=short; closes=1; opens_ok={'XRP-USD': True}; cash_pool after cushion; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-09T21:02:45-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 2102 ET race cycle \u00b7 hold/rotate check \u00b7 eq $60,929 \u00b7 exposure $2,944,116 (48.32x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
