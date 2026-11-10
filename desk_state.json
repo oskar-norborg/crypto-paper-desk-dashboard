@@ -3371,7 +3371,7 @@
     "Rug Check": {
       "status": "idle",
       "last_run": "2026-11-09T19:58:48-05:00",
-      "note": "XRP-USD PASS (chaos: non-blocking)"
+      "note": "SOL-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -7183,14 +7183,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-08T17:05:55-05:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE BTC-USD @ 74800 \u00b7 P&L $+3332.02",
-      "reason": "T2 74800.0 hit (short): Coinbase public 5m 16:50 ET low 74785.41 (<= 74800.0); stop 75850.0 never touched (maxH 75690.73); inv 15m clear (maxC15 75612.1). Paper close at stated T2.",
-      "fill_id": "2026-11-08_BTC-USD_352"
-    },
-    {
       "t": "2026-11-08T17:06:05-05:00",
       "agent": "Rug Check",
       "kind": "check",
@@ -8642,6 +8634,13 @@
       "reason": "RACE redeploy 1958 ET: BTC/ETH tilt short. 24h -1.59%. XRP-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 1.1022; session 5m low 1.0935; 15m detail [('18:00', 1.0983, 1.1054, 1.0982), ('18:15', 1.0991, 1.1001, 1.0935), ('18:30', 1.0987, 1.1002, 1.0966), ('18:45', 1.0975, 1.0998, 1.0953), ('19:00', 1.1009, 1.1019, 1.0967), ('19:15', 1.1004, 1.1022, 1.0973), ('19:30', 1.0972, 1.1005, 1.0949), ('19:45', 1.0979, 1.0997, 1.096)]. Notional $535,573 @ 50x (margin $10,711), risk $4,292 (7.2% eq, warn-only). T1 1.0872, T2 1.0772.",
       "fill_id": "2026-11-09_XRP-USD_394",
       "card": "RACE_XRP_SHORT_1958"
+    },
+    {
+      "t": "2026-11-09T19:58:48-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "SOL-USD PASS (chaos: non-blocking)",
+      "reason": "vol $74.8M, spread 0.0116%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
     }
   ],
   "scanner_feed": [
