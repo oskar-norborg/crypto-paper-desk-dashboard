@@ -3664,8 +3664,8 @@
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-10T15:05:25-05:00",
-      "note": "logged 2026-11-10_BTC-USD_429"
+      "last_run": "2026-11-10T15:05:28-05:00",
+      "note": "CHAOS: 1505 ET race cycle \u00b7 hold/rotate check \u00b7 eq $93,512 \u00b7 exposure $4,678,341 (50.03x)"
     },
     "Equity": {
       "status": "ready",
@@ -7812,13 +7812,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-09T15:06:04-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 1506 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
-      "reason": "scheduled race cycle; scan scans/2026-11-09_1506_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
-    },
-    {
       "t": "2026-11-09T15:06:07-05:00",
       "agent": "Risk",
       "kind": "check",
@@ -9283,6 +9276,13 @@
       "kind": "plan",
       "text": "1505 ET: closed 0; opened {'BTC-USD': True}; held ['BTC-USD', 'ETH-USD']",
       "reason": "race mode: direction=long; closes=0; opens_ok={'BTC-USD': True}; cash_pool after cushion; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-10T15:05:28-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 1505 ET race cycle \u00b7 hold/rotate check \u00b7 eq $93,512 \u00b7 exposure $4,678,341 (50.03x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
