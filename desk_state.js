@@ -3542,7 +3542,7 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-10T09:06:01-05:00",
-      "note": "last: paper fill XRP-USD"
+      "note": "0905 ET: closed 3; opened {'ETH-USD': True, 'XRP-USD': True}; held ['ETH-USD', 'XRP-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -7535,13 +7535,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-09T09:13:31-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "ETH-USD long 1127.4973 @ 2120.08: RACE ROTATE \u2014 thesis/momentum broken before stop",
-      "reason": "RACE rotate 0913 ET: cut ETH-USD long loser/broken-momentum BEFORE stop. uP&L $-4,532.54; stop_prog 10% of path to stop 2081.16 (mark 2115.79, entry 2120.08); symbol 15m bearish_tilt=True; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close."
-    },
-    {
-      "t": "2026-11-09T09:13:31-05:00",
       "agent": "Executor",
       "kind": "close",
       "text": "PAPER CLOSE ETH-USD @ 2115.79 \u00b7 P&L $-4836.96",
@@ -9007,6 +9000,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE redeploy 0905 ET: BTC/ETH tilt short. 24h -3.04%. XRP-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 1.0839; session 5m low 1.05; 15m detail [('07:15', 1.0787, 1.0805, 1.0771), ('07:30', 1.0763, 1.0792, 1.0757), ('07:45', 1.0782, 1.0793, 1.0751), ('08:00', 1.0793, 1.0815, 1.077), ('08:15', 1.0779, 1.0803, 1.0751), ('08:30', 1.0671, 1.0839, 1.05), ('08:45', 1.0636, 1.0729, 1.0621), ('09:00', 1.0666, 1.0667, 1.0634)]. Notional $1,068,263 @ 50x (margin $21,365), risk $21,333 (29.9% eq, warn-only). T1 1.047, T2 1.037.",
       "fill_id": "2026-11-10_XRP-USD_415",
       "card": "RACE_XRP_SHORT_0905"
+    },
+    {
+      "t": "2026-11-10T09:06:01-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "0905 ET: closed 3; opened {'ETH-USD': True, 'XRP-USD': True}; held ['ETH-USD', 'XRP-USD']",
+      "reason": "race mode: direction=short; closes=3; opens_ok={'ETH-USD': True, 'XRP-USD': True}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": [
