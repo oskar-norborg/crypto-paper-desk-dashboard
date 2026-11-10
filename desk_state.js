@@ -7818,14 +7818,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-09T15:06:07-05:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE ETH-USD @ 2140.31 \u00b7 P&L $-28505.05",
-      "reason": "STOP 2140.31 hit (short): Coinbase public 5m 14:40 ET high 2140.95 (>= 2140.31). Paper close at stated stop.",
-      "fill_id": "2026-11-09_ETH-USD_377"
-    },
-    {
       "t": "2026-11-09T15:06:08-05:00",
       "agent": "Risk",
       "kind": "check",
@@ -9289,6 +9281,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 1606 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
       "reason": "scheduled race cycle; scan scans/2026-11-10_1606_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-10T16:06:14-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD short 2239.355 @ 2032.85: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-10T11:00:40-05:00: maxH=2061.98 minL=2007.62 (stop 2089.85; T1 2000.24/T2 1975.24); 15m max close=2060.7 (inv 2083.85). No close trigger."
     }
   ],
   "scanner_feed": [
@@ -10254,7 +10253,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-10T16:06:13-05:00",
+  "updated_at": "2026-11-10T16:06:14-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
