@@ -7225,13 +7225,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-08T17:06:05-05:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "1705 ET: closed 3; opened {'ETH-USD': True, 'XRP-USD': True}; held ['ETH-USD', 'XRP-USD']",
-      "reason": "race mode: direction=short; closes=3; opens_ok={'ETH-USD': True, 'XRP-USD': True}; cash_pool after cushion; plateau not acceptable"
-    },
-    {
       "t": "2026-11-08T17:06:08-05:00",
       "agent": "Logger",
       "kind": "batch",
@@ -8681,6 +8674,13 @@
       "kind": "check",
       "text": "BTC-USD long 21.86 @ 74807.81: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-09T15:06:18-05:00: maxH=75349.96 minL=74569.86 (stop 74209.35; T1 75705.5/T2 76105.5); 15m min close=74675.6 (inv 74525.45). No close trigger."
+    },
+    {
+      "t": "2026-11-09T21:02:30-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD long 256.601 @ 2125.26: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-09T15:06:18-05:00: maxH=2134.78 minL=2117.28 (stop 2104.01; T1 2157.14/T2 2187.14); 15m min close=2120.73 (inv 2120.1). No close trigger."
     }
   ],
   "scanner_feed": [
