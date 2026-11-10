@@ -3521,8 +3521,8 @@ window.__DESK_STATE__ = {
     },
     "Rug Check": {
       "status": "idle",
-      "last_run": "2026-11-10T10:01:12-05:00",
-      "note": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)"
+      "last_run": "2026-11-10T10:01:22-05:00",
+      "note": "ETH-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -7549,13 +7549,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-09T09:13:34-05:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "0913 ET: closed 2; opened {'ETH-USD': True, 'XRP-USD': True}; held ['ETH-USD', 'XRP-USD']",
-      "reason": "race mode: direction=short; closes=2; opens_ok={'ETH-USD': True, 'XRP-USD': True}; cash_pool after cushion; plateau not acceptable"
-    },
-    {
       "t": "2026-11-09T09:13:37-05:00",
       "agent": "Logger",
       "kind": "batch",
@@ -9017,6 +9010,13 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE ETH-USD @ 2088.02 \u00b7 P&L $-22124.20",
       "reason": "RACE rotate 1000 ET: cut ETH-USD short loser/broken-momentum BEFORE stop. uP&L $-22,088.07; stop_prog 47% of path to stop 2108.41 (mark 2088.02, entry 2069.65); symbol 15m bearish_tilt=True; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close.",
       "fill_id": "2026-11-10_ETH-USD_414"
+    },
+    {
+      "t": "2026-11-10T10:01:22-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "ETH-USD PASS (chaos: non-blocking)",
+      "reason": "vol $309.4M, spread 0.0072%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
     }
   ],
   "scanner_feed": [
