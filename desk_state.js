@@ -3413,8 +3413,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-09T19:58:48-05:00",
-      "note": "logged 2026-11-09_SOL-USD_395"
+      "last_run": "2026-11-09T19:58:51-05:00",
+      "note": "CHAOS: 1958 ET race cycle \u00b7 hold/rotate check \u00b7 eq $60,744 \u00b7 exposure $2,948,214 (48.53x)"
     },
     "Equity": {
       "status": "ready",
@@ -7222,15 +7222,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-08T17:06:05-05:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 1725.19 ETH-USD @ 2120.39 \u00b7 notional $3,658,070 (50x, margin $73,161) \u00b7 stop 2228.8 \u00b7 tgt 2086.01 \u00b7 risk $187,027.57",
-      "reason": "RACE redeploy 1705 ET: BTC/ETH tilt short. 24h -4.98%. ETH-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 2224.8; session 5m low 2089.01; 15m detail [('15:15', 2227.76, 2227.78, 2224.42), ('15:30', 2225.75, 2228.01, 2222.02), ('15:45', 2223.92, 2226.39, 2223.26), ('16:00', 2223.15, 2225.45, 2219.74), ('16:15', 2221.68, 2224.8, 2220), ('16:30', 2219.24, 2223.9, 2218.49), ('16:45', 2126.38, 2219.23, 2089.01), ('17:00', 2121.37, 2142.44, 2120.41)]. Notional $3,658,070 @ 50x (margin $73,161), risk $187,028 (178.9% eq, warn-only). T1 2086.01, T2 2061.01.",
-      "fill_id": "2026-11-08_ETH-USD_356",
-      "card": "RACE_ETH_SHORT_1705"
-    },
-    {
-      "t": "2026-11-08T17:06:05-05:00",
       "agent": "Rug Check",
       "kind": "check",
       "text": "XRP-USD PASS (chaos: non-blocking)",
@@ -8681,6 +8672,13 @@ window.__DESK_STATE__ = {
       "kind": "plan",
       "text": "1958 ET: closed 0; opened {'XRP-USD': True, 'SOL-USD': True}; held ['BTC-USD', 'ETH-USD', 'SOL-USD', 'XRP-USD']",
       "reason": "race mode: direction=short; closes=0; opens_ok={'XRP-USD': True, 'SOL-USD': True}; cash_pool after cushion; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-09T19:58:51-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 1958 ET race cycle \u00b7 hold/rotate check \u00b7 eq $60,744 \u00b7 exposure $2,948,214 (48.53x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
