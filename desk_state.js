@@ -7228,15 +7228,6 @@ window.__DESK_STATE__ = {
     {
       "t": "2026-11-08T17:06:05-05:00",
       "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 1.14566e+06 XRP-USD @ 1.1141 \u00b7 notional $1,276,376 (50x, margin $25,528) \u00b7 stop 1.155 \u00b7 tgt 1.097 \u00b7 risk $46,857.34",
-      "reason": "RACE redeploy 1705 ET: BTC/ETH tilt short. 24h -3.87%. XRP-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 1.151; session 5m low 1.1; 15m detail [('15:15', 1.1519, 1.1523, 1.1494), ('15:30', 1.1499, 1.1526, 1.1455), ('15:45', 1.1517, 1.1529, 1.149), ('16:00', 1.149, 1.1528, 1.1489), ('16:15', 1.1454, 1.1497, 1.14), ('16:30', 1.1429, 1.1469, 1.1419), ('16:45', 1.1079, 1.1429, 1.1), ('17:00', 1.1145, 1.1202, 1.1065)]. Notional $1,276,376 @ 50x (margin $25,528), risk $46,857 (47.4% eq, warn-only). T1 1.097, T2 1.087.",
-      "fill_id": "2026-11-08_XRP-USD_357",
-      "card": "RACE_XRP_SHORT_1705"
-    },
-    {
-      "t": "2026-11-08T17:06:05-05:00",
-      "agent": "Executor",
       "kind": "plan",
       "text": "1705 ET: closed 3; opened {'ETH-USD': True, 'XRP-USD': True}; held ['ETH-USD', 'XRP-USD']",
       "reason": "race mode: direction=short; closes=3; opens_ok={'ETH-USD': True, 'XRP-USD': True}; cash_pool after cushion; plateau not acceptable"
@@ -8684,6 +8675,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 2102 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
       "reason": "scheduled race cycle; scan scans/2026-11-09_2102_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-09T21:02:30-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "BTC-USD long 21.86 @ 74807.81: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-09T15:06:18-05:00: maxH=75349.96 minL=74569.86 (stop 74209.35; T1 75705.5/T2 76105.5); 15m min close=74675.6 (inv 74525.45). No close trigger."
     }
   ],
   "scanner_feed": [
