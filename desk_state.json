@@ -7147,14 +7147,6 @@
   "activity": [
     {
       "t": "2026-11-08T17:05:54-05:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE ETH-USD @ 2179.55 \u00b7 P&L $+45679.60",
-      "reason": "T2 2179.55 hit (short): Coinbase public 5m 16:50 ET low 2157 (<= 2179.55); stop 2244.63 never touched (maxH 2234.49); inv 15m clear (maxC15 2233.5). Paper close at stated T2.",
-      "fill_id": "2026-11-08_ETH-USD_345"
-    },
-    {
-      "t": "2026-11-08T17:05:54-05:00",
       "agent": "Risk",
       "kind": "check",
       "text": "SOL-USD short 1406.3 @ 89.41: T2 87.34 HIT \u2014 CLOSE at stated T2",
@@ -8605,6 +8597,13 @@
       "kind": "check",
       "text": "BTC-USD long 21.86 @ 74807.81: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-09T15:06:18-05:00: maxH=75349.96 minL=74569.86 (stop 74209.35; T1 75705.5/T2 76105.5); 15m min close=74675.6 (inv 74525.45). No close trigger."
+    },
+    {
+      "t": "2026-11-09T19:58:37-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD long 256.601 @ 2125.26: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-09T15:06:18-05:00: maxH=2134.78 minL=2117.28 (stop 2104.01; T1 2157.14/T2 2187.14); 15m min close=2121.19 (inv 2120.1). No close trigger."
     }
   ],
   "scanner_feed": [
