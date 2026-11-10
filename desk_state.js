@@ -3617,7 +3617,7 @@ window.__DESK_STATE__ = {
     "Rug Check": {
       "status": "idle",
       "last_run": "2026-11-10T12:58:51-05:00",
-      "note": "XRP-USD PASS (chaos: non-blocking)"
+      "note": "SOL-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -7735,14 +7735,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-09T12:59:01-05:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE BTC-USD @ 74689.3 \u00b7 P&L $-5098.88",
-      "reason": "RACE rotate 1258 ET: cut BTC-USD long loser/broken-momentum BEFORE stop. uP&L $-4,921.19; stop_prog 14% of path to stop 74149.77 (mark 74689.3, entry 74781.99); symbol 15m bearish_tilt=True; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close.",
-      "fill_id": "2026-11-09_BTC-USD_372"
-    },
-    {
-      "t": "2026-11-09T12:59:01-05:00",
       "agent": "Risk",
       "kind": "check",
       "text": "ETH-USD long 617.6649 @ 2126.58: RACE ROTATE \u2014 thesis/momentum broken before stop",
@@ -9208,6 +9200,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE redeploy 1258 ET: BTC/ETH tilt short. 24h -3.66%. XRP-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 1.0547; session 5m low 1.0379; 15m detail [('11:00', 1.045, 1.0465, 1.0393), ('11:15', 1.044, 1.0499, 1.0414), ('11:30', 1.0472, 1.0474, 1.0379), ('11:45', 1.0435, 1.0473, 1.0385), ('12:00', 1.0458, 1.0479, 1.0424), ('12:15', 1.0471, 1.0496, 1.0444), ('12:30', 1.0492, 1.0529, 1.0465), ('12:45', 1.0527, 1.0547, 1.0473)]. Notional $921,685 @ 50x (margin $18,434), risk $7,444 (5.8% eq, warn-only). T1 1.0349, T2 1.0249.",
       "fill_id": "2026-11-10_XRP-USD_425",
       "card": "RACE_XRP_SHORT_1258"
+    },
+    {
+      "t": "2026-11-10T12:58:51-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "SOL-USD PASS (chaos: non-blocking)",
+      "reason": "vol $95.8M, spread 0.0243%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
     }
   ],
   "scanner_feed": [
