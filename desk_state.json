@@ -3517,7 +3517,7 @@
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-10T08:00:13-05:00",
-      "note": "last: paper fill ETH-USD"
+      "note": "0759 ET: closed 1; opened {'BTC-USD': True, 'ETH-USD': True}; held ['BTC-USD', 'ETH-USD', 'XRP-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -7475,13 +7475,6 @@
   "activity": [
     {
       "t": "2026-11-09T03:59:56-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "ETH-USD PASS (chaos: non-blocking)",
-      "reason": "vol $253.4M, spread 0.0005%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
-    },
-    {
-      "t": "2026-11-09T03:59:56-05:00",
       "agent": "Executor",
       "kind": "fill",
       "text": "PAPER FILL long 1127.5 ETH-USD @ 2120.08 \u00b7 notional $2,390,384 (50x, margin $47,808) \u00b7 stop 2081.16 \u00b7 tgt 2151.88 \u00b7 risk $43,882.19",
@@ -8942,6 +8935,13 @@
       "reason": "RACE redeploy 0759 ET: BTC/ETH tilt long. 24h -1.12%. ETH-USD concentrated long under BTC/ETH reclaim (not bearish 15m); stop below floor 2083.74; session 5m low 2083.46; 15m detail [('06:00', 2096.37, 2096.83, 2083.46), ('06:15', 2093.77, 2100, 2088.9), ('06:30', 2090.53, 2093.92, 2086.33), ('06:45', 2092.05, 2094.63, 2090.3), ('07:00', 2089.94, 2092.83, 2087.86), ('07:15', 2088.9, 2092.66, 2086.78), ('07:30', 2085.61, 2088.96, 2083.74), ('07:45', 2097.05, 2097.45, 2085.31)]. Notional $783,973 @ 50x (margin $15,679), risk $7,840 (9.3% eq, warn-only). T1 2127.45, T2 2157.45.",
       "fill_id": "2026-11-10_ETH-USD_410",
       "card": "RACE_ETH_LONG_0759"
+    },
+    {
+      "t": "2026-11-10T08:00:13-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "0759 ET: closed 1; opened {'BTC-USD': True, 'ETH-USD': True}; held ['BTC-USD', 'ETH-USD', 'XRP-USD']",
+      "reason": "race mode: direction=long; closes=1; opens_ok={'BTC-USD': True, 'ETH-USD': True}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": [
