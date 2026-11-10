@@ -3614,8 +3614,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-10T11:00:43-05:00",
-      "note": "CHAOS: 1100 ET race cycle \u00b7 hold/rotate check \u00b7 eq $128,562 \u00b7 exposure $6,504,799 (50.6x)"
+      "last_run": "2026-11-10T11:58:45-05:00",
+      "note": "CHAOS: 1158 ET race cycle \u00b7 hold/rotate check \u00b7 eq $173,348 \u00b7 exposure $6,460,014 (37.27x)"
     },
     "Equity": {
       "status": "ready",
@@ -7694,15 +7694,6 @@ window.__DESK_STATE__ = {
     {
       "t": "2026-11-09T12:07:20-05:00",
       "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 37225.3 XRP-USD @ 1.0975 \u00b7 notional $40,855 (50x, margin $817) \u00b7 stop 1.1143 \u00b7 tgt 1.0865 \u00b7 risk $625.39",
-      "reason": "RACE redeploy 1207 ET: BTC/ETH tilt short. 24h -4.87%. XRP-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 1.1103; session 5m low 1.0945; 15m detail [('10:15', 1.1011, 1.1067, 1.0956), ('10:30', 1.1108, 1.1112, 1.0983), ('10:45', 1.1133, 1.1159, 1.11), ('11:00', 1.1084, 1.1136, 1.1058), ('11:15', 1.0999, 1.1103, 1.0984), ('11:30', 1.1006, 1.1069, 1.0991), ('11:45', 1.0995, 1.1007, 1.0964), ('12:00', 1.0976, 1.1002, 1.0966)]. Notional $40,855 @ 50x (margin $817), risk $625 (0.6% eq, warn-only). T1 1.0865, T2 1.0765.",
-      "fill_id": "2026-11-09_XRP-USD_374",
-      "card": "RACE_XRP_SHORT_1207"
-    },
-    {
-      "t": "2026-11-09T12:07:20-05:00",
-      "agent": "Executor",
       "kind": "plan",
       "text": "1207 ET: closed 0; opened {'XRP-USD': True}; held ['BTC-USD', 'ETH-USD', 'XRP-USD']",
       "reason": "race mode: direction=short; closes=0; opens_ok={'XRP-USD': True}; cash_pool after cushion; plateau not acceptable"
@@ -9165,6 +9156,13 @@ window.__DESK_STATE__ = {
       "kind": "plan",
       "text": "1158 ET: closed 0; opened {}; held ['ETH-USD', 'XRP-USD']",
       "reason": "race mode: direction=short; closes=0; opens_ok={}; cash_pool after cushion; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-10T11:58:45-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 1158 ET race cycle \u00b7 hold/rotate check \u00b7 eq $173,348 \u00b7 exposure $6,460,014 (37.27x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
