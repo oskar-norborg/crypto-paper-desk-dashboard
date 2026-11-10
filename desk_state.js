@@ -7779,13 +7779,6 @@ window.__DESK_STATE__ = {
       "t": "2026-11-09T14:09:03-05:00",
       "agent": "Rug Check",
       "kind": "check",
-      "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
-      "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
-    },
-    {
-      "t": "2026-11-09T14:09:03-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
       "text": "XRP-USD PASS (chaos: non-blocking)",
       "reason": "vol $143.3M, spread 0.0092%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
     },
@@ -9247,6 +9240,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 1505 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
       "reason": "scheduled race cycle; scan scans/2026-11-10_1505_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-10T15:05:15-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD short 2239.355 @ 2032.85: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-10T11:00:40-05:00: maxH=2047.28 minL=2007.62 (stop 2089.85; T1 2000.24/T2 1975.24); 15m max close=2042.53 (inv 2083.85). No close trigger."
     }
   ],
   "scanner_feed": [
