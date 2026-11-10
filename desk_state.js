@@ -3409,7 +3409,7 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-09T19:58:48-05:00",
-      "note": "last: paper fill SOL-USD"
+      "note": "1958 ET: closed 0; opened {'XRP-USD': True, 'SOL-USD': True}; held ['BTC-USD', 'ETH-USD', 'SOL-USD', 'XRP-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -7217,13 +7217,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-08T17:06:05-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "ETH-USD PASS (chaos: non-blocking)",
-      "reason": "vol $93.7M, spread 0.0005%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
-    },
-    {
-      "t": "2026-11-08T17:06:05-05:00",
       "agent": "Executor",
       "kind": "fill",
       "text": "PAPER FILL short 1725.19 ETH-USD @ 2120.39 \u00b7 notional $3,658,070 (50x, margin $73,161) \u00b7 stop 2228.8 \u00b7 tgt 2086.01 \u00b7 risk $187,027.57",
@@ -8676,6 +8669,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE redeploy 1958 ET: BTC/ETH tilt short. 24h -1.29%. SOL-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 86.72; session 5m low 86.23; 15m detail [('18:00', 86.48, 86.79, 86.43), ('18:15', 86.59, 86.66, 86.44), ('18:30', 86.43, 86.64, 86.43), ('18:45', 86.62, 86.63, 86.4), ('19:00', 86.54, 86.72, 86.52), ('19:15', 86.41, 86.56, 86.27), ('19:30', 86.33, 86.42, 86.28), ('19:45', 86.35, 86.42, 86.23)]. Notional $229,528 @ 50x (margin $4,591), risk $2,286 (3.8% eq, warn-only). T1 85.32, T2 84.32.",
       "fill_id": "2026-11-09_SOL-USD_395",
       "card": "RACE_SOL_SHORT_1958"
+    },
+    {
+      "t": "2026-11-09T19:58:48-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "1958 ET: closed 0; opened {'XRP-USD': True, 'SOL-USD': True}; held ['BTC-USD', 'ETH-USD', 'SOL-USD', 'XRP-USD']",
+      "reason": "race mode: direction=short; closes=0; opens_ok={'XRP-USD': True, 'SOL-USD': True}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": [
