@@ -7341,13 +7341,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-08T22:08:18-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "XRP-USD short 1145656.3 @ 1.1141: HOLD \u2014 no trigger",
-      "reason": "Coinbase public 5m since 2026-11-08T17:06:05-05:00: maxH=1.1313 minL=1.1046 (stop 1.155; T1 1.097/T2 1.087); 15m max close=1.124 (inv 1.149). No close trigger."
-    },
-    {
       "t": "2026-11-08T22:08:28-05:00",
       "agent": "Rug Check",
       "kind": "check",
@@ -8803,6 +8796,13 @@
       "text": "PAPER CLOSE ETH-USD @ 2101.78 \u00b7 P&L $+4059.24",
       "reason": "INV 15m close > 2121.72 (short): Coinbase public 15m 00:00 ET close 2122.62 (high 2124.29/low 2117.71). Thesis broken \u2014 close at public mark 2101.78.",
       "fill_id": "2026-11-09_ETH-USD_399"
+    },
+    {
+      "t": "2026-11-10T04:04:29-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "BTC-USD long 19.94 @ 74667.1: INVALIDATION \u2014 CLOSE at public mark 74317.29",
+      "reason": "Coinbase public candles since 2026-11-10T00:07:29-05:00: maxH=74902.89; minL=74124.93; 15m max close=74806.75; 15m min close=74291.04. INV 15m close < 74479.76 (long): Coinbase public 15m 03:30 ET close 74462.73 (high 74570.66/low 74350). Thesis broken \u2014 close at public mark 74317.29."
     }
   ],
   "scanner_feed": [
