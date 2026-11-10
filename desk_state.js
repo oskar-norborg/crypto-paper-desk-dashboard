@@ -3589,8 +3589,8 @@ window.__DESK_STATE__ = {
     },
     "Rug Check": {
       "status": "idle",
-      "last_run": "2026-11-10T12:58:48-05:00",
-      "note": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)"
+      "last_run": "2026-11-10T12:58:51-05:00",
+      "note": "XRP-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -7703,13 +7703,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-09T12:59:00-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
-      "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
-    },
-    {
-      "t": "2026-11-09T12:59:00-05:00",
       "agent": "Risk",
       "kind": "check",
       "text": "BTC-USD long 55.01 @ 74781.99: RACE ROTATE \u2014 thesis/momentum broken before stop",
@@ -9174,6 +9167,13 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE XRP-USD @ 1.0526 \u00b7 P&L $-12685.62",
       "reason": "RACE rotate 1258 ET: cut XRP-USD short loser/broken-momentum BEFORE stop. uP&L $-12,872.17; stop_prog 28% of path to stop 1.0704 (mark 1.0526, entry 1.0458); symbol 15m bearish_tilt=False; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close.",
       "fill_id": "2026-11-10_XRP-USD_423"
+    },
+    {
+      "t": "2026-11-10T12:58:51-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "XRP-USD PASS (chaos: non-blocking)",
+      "reason": "vol $118.7M, spread 0.0190%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
     }
   ],
   "scanner_feed": [
