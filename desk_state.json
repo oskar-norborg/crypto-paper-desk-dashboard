@@ -3637,8 +3637,8 @@
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-10T12:58:54-05:00",
-      "note": "CHAOS: 1258 ET race cycle \u00b7 hold/rotate check \u00b7 eq $129,005 \u00b7 exposure $5,857,384 (45.4x)"
+      "last_run": "2026-11-10T14:06:03-05:00",
+      "note": "CHAOS: 1405 ET race cycle \u00b7 hold/rotate check \u00b7 eq $88,406 \u00b7 exposure $4,569,919 (51.69x)"
     },
     "Equity": {
       "status": "ready",
@@ -7773,13 +7773,6 @@
       "t": "2026-11-09T14:08:52-05:00",
       "agent": "Risk",
       "kind": "check",
-      "text": "ETH-USD short 1677.7546 @ 2123.32: HOLD \u2014 no trigger",
-      "reason": "Coinbase public 5m since 2026-11-09T12:59:04-05:00: maxH=2127.15 minL=2113.5 (stop 2140.31; T1 2102.09/T2 2077.09); 15m max close=2123.49 (inv 2128.95). No close trigger."
-    },
-    {
-      "t": "2026-11-09T14:08:52-05:00",
-      "agent": "Risk",
-      "kind": "check",
       "text": "SOL-USD short 17638.0 @ 86.56: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-09T12:59:04-05:00: maxH=86.82 minL=86.02 (stop 87.43; T1 85.52/T2 84.52); 15m max close=86.52 (inv 86.92). No close trigger."
     },
@@ -9241,6 +9234,13 @@
       "kind": "plan",
       "text": "1405 ET: closed 2; opened {'BTC-USD': False}; held ['ETH-USD']",
       "reason": "race mode: direction=long; closes=2; opens_ok={'BTC-USD': False}; cash_pool after cushion; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-10T14:06:03-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 1405 ET race cycle \u00b7 hold/rotate check \u00b7 eq $88,406 \u00b7 exposure $4,569,919 (51.69x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
