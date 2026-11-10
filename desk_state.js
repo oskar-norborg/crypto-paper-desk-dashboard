@@ -7411,13 +7411,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-09T03:59:43-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 0359 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
-      "reason": "scheduled race cycle; scan scans/2026-11-09_0359_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
-    },
-    {
       "t": "2026-11-09T03:59:46-05:00",
       "agent": "Risk",
       "kind": "check",
@@ -8878,6 +8871,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 0759 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
       "reason": "scheduled race cycle; scan scans/2026-11-10_0759_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-10T07:59:51-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD short 994.4481 @ 2102.4: T1 2081.38 HIT \u2014 CLOSE at stated T1",
+      "reason": "Coinbase public candles since 2026-11-10T04:04:40-05:00: maxH=2105.56; minL=2080.56; 15m max close=2102.29; 15m min close=None. T1 2081.38 hit (short): Coinbase public 5m 05:40 ET low 2080.56 (<= 2081.38); T2 2056.38 NOT hit; stop 2119.78 never touched (maxH 2105.56); inv 15m clear (maxC15 2102.29). Paper close at stated T1."
     }
   ],
   "scanner_feed": [
