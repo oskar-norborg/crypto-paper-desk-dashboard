@@ -6,12 +6,12 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 84642.45,
-  "cash": 12736.07,
-  "realized_pnl": 56052.08,
-  "unrealized_pnl": -21409.63,
-  "day_pnl": 27357.44,
-  "day_pnl_pct": 0.47757,
+  "equity": 84615.64,
+  "cash": 15403.89,
+  "realized_pnl": 56449.35,
+  "unrealized_pnl": -21833.71,
+  "day_pnl": 27330.63,
+  "day_pnl_pct": 0.4771,
   "day_baseline_date": "2026-11-10",
   "day_baseline_equity": 57285.01,
   "open_positions": [
@@ -41,36 +41,9 @@ window.__DESK_STATE__ = {
       "mark_at": "2026-11-10T18:03:51-05:00",
       "unrealized_pnl": -21833.71,
       "exposure": 4574106.52
-    },
-    {
-      "id": "2026-11-10_BTC-USD_429",
-      "symbol": "BTC-USD",
-      "side": "long",
-      "size": 1.55,
-      "entry": 73243.7,
-      "notional": 113527.74,
-      "stop": 73500.0,
-      "target": 74122.62,
-      "target2": 74522.62,
-      "invalidation": "15m close < 73520.00 (below 17:30 ET 15m low 73525.94) or stop 73500",
-      "risk_usd": 908.22,
-      "risk_pct_equity": 0.00971,
-      "opened_at": "2026-11-10T15:05:25-05:00",
-      "card": "RACE_BTC_LONG_1505",
-      "reason": "RACE redeploy 1505 ET: BTC/ETH tilt long. 24h -2.03%. BTC-USD concentrated long under BTC/ETH reclaim (not bearish 15m); stop below floor 73236.28; session 5m low 73023.77; 15m detail [('13:15', 73250.07, 73271.76, 73023.77), ('13:30', 73457.63, 73599.63, 73232.69), ('13:45', 73398.64, 73505.27, 73328.13), ('14:00', 73275.6, 73417.51, 73238.69), ('14:15', 73340.69, 73381.02, 73246.21), ('14:30', 73291.87, 73445.27, 73236.28), ('14:45', 73381.97, 73521.99, 73280.15), ('15:00', 73252.44, 73397.42, 73239.96)]. Notional $113,528 @ 50x (margin $2,271), risk $908 (1.0% eq, warn-only). T1 74122.62, T2 74522.62.",
-      "price_source": "coinbase_exchange_public_ticker bid/ask/price 73243.7 @ 2026-11-10T15:05:25-05:00 ET (exch 2026-11-10T20:05:23.923078802Z) api.exchange.coinbase.com unauthenticated",
-      "override": null,
-      "paper_only": true,
-      "leverage": 50.0,
-      "margin": 2270.55,
-      "mark": 73517.3,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-10T18:03:51-05:00",
-      "unrealized_pnl": 424.08,
-      "exposure": 113951.82
     }
   ],
-  "open_count": 2,
+  "open_count": 1,
   "closed_positions": [
     {
       "type": "close",
@@ -3601,11 +3574,28 @@ window.__DESK_STATE__ = {
       "reason": "STOP 83.16 hit (short): Coinbase public 5m 13:35 ET high 83.22 (>= 83.16). Paper close at stated stop.",
       "price_source": "coinbase_exchange_public 5m candle 2026-11-10 13:35 ET high 83.22 (api.exchange.coinbase.com/products/SOL-USD/candles, unauthenticated); fill at stated stop 83.16",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-10_BTC-USD_429",
+      "symbol": "BTC-USD",
+      "side": "long",
+      "size": 1.55,
+      "entry": 73243.7,
+      "exit": 73500.0,
+      "pnl": 397.27,
+      "notional": 113527.74,
+      "leverage": 50.0,
+      "margin": 2270.55,
+      "closed_at": "2026-11-10T18:03:53-05:00",
+      "reason": "STOP 73500.0 hit (long): Coinbase public 5m 15:10 ET low 73298.18 (<= 73500.0). Paper close at stated stop.",
+      "price_source": "coinbase_exchange_public 5m candle 2026-11-10 15:10 ET low 73298.18 (api.exchange.coinbase.com/products/BTC-USD/candles, unauthenticated); fill at stated stop 73500.0",
+      "paper_only": true
     }
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 84642.45,
+  "max_risk_usd": 84615.64,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -572850.1,
   "paused": false,
@@ -3660,8 +3650,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-10T17:08:27-05:00",
-      "note": "1708 ET: closed 0; opened {}; held ['BTC-USD', 'ETH-USD']"
+      "last_run": "2026-11-10T18:03:53-05:00",
+      "note": "last: closed BTC-USD"
     },
     "Logger": {
       "status": "ready",
@@ -7849,17 +7839,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-10T18:03:52-05:00",
       "equity": 84642.45,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-10T18:03:53-05:00",
+      "equity": 84615.64,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-09T16:03:16-05:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE SOL-USD @ 86.58 \u00b7 P&L $-352.76",
-      "reason": "RACE rotate 1603 ET: cut SOL-USD short loser/broken-momentum BEFORE stop. uP&L $-176.38; stop_prog 1% of path to stop 87.43 (mark 86.58, entry 86.56); symbol 15m bearish_tilt=False; book direction=long. Free margin for concentrated highest-conviction swing. Public mark close.",
-      "fill_id": "2026-11-09_SOL-USD_378"
-    },
     {
       "t": "2026-11-09T16:03:19-05:00",
       "agent": "Executor",
@@ -9318,6 +9305,14 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "BTC-USD long 1.55 @ 73243.7: STOP 73500.0 HIT \u2014 CLOSE at stated stop",
       "reason": "Coinbase public candles since 2026-11-10T15:05:25-05:00: maxH=73970.2; minL=73298.18; 15m max close=73887.07; 15m min close=73516.86. STOP 73500.0 hit (long): Coinbase public 5m 15:10 ET low 73298.18 (<= 73500.0). Paper close at stated stop."
+    },
+    {
+      "t": "2026-11-10T18:03:53-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE BTC-USD @ 73500 \u00b7 P&L $+397.27",
+      "reason": "STOP 73500.0 hit (long): Coinbase public 5m 15:10 ET low 73298.18 (<= 73500.0). Paper close at stated stop.",
+      "fill_id": "2026-11-10_BTC-USD_429"
     }
   ],
   "scanner_feed": [
@@ -10299,10 +10294,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 93316.01,
-  "exposure": 4688058.34,
+  "margin_used": 91045.46,
+  "exposure": 4574106.52,
   "buying_power": 0.0,
-  "effective_leverage": 55.39,
+  "effective_leverage": 54.06,
   "operating_timezone": "America/New_York",
   "events": [
     {
