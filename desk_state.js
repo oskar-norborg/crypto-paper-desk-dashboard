@@ -3443,7 +3443,7 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-09T22:02:04-05:00",
-      "note": "last: paper fill ETH-USD"
+      "note": "2201 ET: closed 1; opened {'ETH-USD': True}; held ['BTC-USD', 'ETH-USD', 'SOL-USD', 'XRP-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -7300,13 +7300,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-08T19:59:56-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 1959 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
-      "reason": "scheduled race cycle; scan scans/2026-11-08_1959_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
-    },
-    {
       "t": "2026-11-08T19:59:58-05:00",
       "agent": "Risk",
       "kind": "check",
@@ -8758,6 +8751,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE redeploy 2201 ET: BTC/ETH tilt short. 24h -0.84%. ETH-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 2123.72; session 5m low 2114.26; 15m detail [('20:15', 2125.78, 2128.28, 2123.04), ('20:30', 2122.58, 2125.81, 2118.18), ('20:45', 2123.55, 2127.18, 2121.05), ('21:00', 2121.62, 2124.25, 2118.45), ('21:15', 2118.86, 2122.02, 2116.97), ('21:30', 2116.5, 2118.88, 2114.26), ('21:45', 2120.15, 2123.72, 2116.5), ('22:00', 2120.13, 2121.35, 2119.81)]. Notional $475,420 @ 50x (margin $9,508), risk $3,804 (6.5% eq, warn-only). T1 2098.68, T2 2073.68.",
       "fill_id": "2026-11-09_ETH-USD_399",
       "card": "RACE_ETH_SHORT_2201"
+    },
+    {
+      "t": "2026-11-09T22:02:04-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "2201 ET: closed 1; opened {'ETH-USD': True}; held ['BTC-USD', 'ETH-USD', 'SOL-USD', 'XRP-USD']",
+      "reason": "race mode: direction=short; closes=1; opens_ok={'ETH-USD': True}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": [
