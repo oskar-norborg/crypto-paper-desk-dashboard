@@ -3660,8 +3660,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-10T15:05:25-05:00",
-      "note": "1505 ET: closed 0; opened {'BTC-USD': True}; held ['BTC-USD', 'ETH-USD']"
+      "last_run": "2026-11-10T16:06:22-05:00",
+      "note": "1606 ET: closed 0; opened {}; held ['BTC-USD', 'ETH-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -7823,14 +7823,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-09T15:06:08-05:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE XRP-USD @ 1.1 \u00b7 P&L $-342.25",
-      "reason": "STOP 1.1 hit (short): Coinbase public 5m 14:35 ET high 1.1017 (>= 1.1). Paper close at stated stop.",
-      "fill_id": "2026-11-09_XRP-USD_380"
-    },
-    {
       "t": "2026-11-09T15:06:18-05:00",
       "agent": "Rug Check",
       "kind": "check",
@@ -9293,6 +9285,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
       "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
+    },
+    {
+      "t": "2026-11-10T16:06:22-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "1606 ET: closed 0; opened {}; held ['BTC-USD', 'ETH-USD']",
+      "reason": "race mode: direction=long; closes=0; opens_ok={}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": [
