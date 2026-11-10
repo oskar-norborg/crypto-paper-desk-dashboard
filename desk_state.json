@@ -7777,15 +7777,6 @@
     {
       "t": "2026-11-09T12:59:04-05:00",
       "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 17638 SOL-USD @ 86.56 \u00b7 notional $1,526,745 (50x, margin $30,535) \u00b7 stop 87.43 \u00b7 tgt 85.52 \u00b7 risk $15,345.06",
-      "reason": "RACE redeploy 1258 ET: BTC/ETH tilt short. 24h -2.81%. SOL-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 86.97; session 5m low 86.14; 15m detail [('11:00', 87.13, 87.86, 87.1), ('11:15', 86.55, 87.23, 86.47), ('11:30', 86.79, 87.03, 86.55), ('11:45', 86.93, 87.01, 86.68), ('12:00', 86.77, 86.97, 86.68), ('12:15', 86.38, 86.91, 86.28), ('12:30', 86.29, 86.46, 86.14), ('12:45', 86.56, 86.63, 86.28)]. Notional $1,526,745 @ 50x (margin $30,535), risk $15,345 (14.9% eq, warn-only). T1 85.52, T2 84.52.",
-      "fill_id": "2026-11-09_SOL-USD_378",
-      "card": "RACE_SOL_SHORT_1258"
-    },
-    {
-      "t": "2026-11-09T12:59:04-05:00",
-      "agent": "Executor",
       "kind": "plan",
       "text": "1258 ET: closed 2; opened {'ETH-USD': True, 'SOL-USD': True}; held ['ETH-USD', 'SOL-USD', 'XRP-USD']",
       "reason": "race mode: direction=short; closes=2; opens_ok={'ETH-USD': True, 'SOL-USD': True}; cash_pool after cushion; plateau not acceptable"
@@ -9247,6 +9238,13 @@
       "kind": "check",
       "text": "ETH-USD short 2239.355 @ 2032.85: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-10T11:00:40-05:00: maxH=2047.28 minL=2007.62 (stop 2089.85; T1 2000.24/T2 1975.24); 15m max close=2042.12 (inv 2083.85). No close trigger."
+    },
+    {
+      "t": "2026-11-10T14:05:53-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "XRP-USD short 875710.3 @ 1.0525: STOP 1.061 HIT \u2014 CLOSE at stated stop",
+      "reason": "Coinbase public candles since 2026-11-10T12:58:51-05:00: maxH=1.0731; minL=1.049; 15m max close=1.071; 15m min close=None. STOP 1.061 hit (short): Coinbase public 5m 13:25 ET high 1.0664 (>= 1.061). Paper close at stated stop."
     }
   ],
   "scanner_feed": [
