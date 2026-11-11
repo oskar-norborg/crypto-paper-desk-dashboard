@@ -6,12 +6,12 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 17692.83,
-  "cash": 4520.32,
+  "equity": 17563.61,
+  "cash": 230.94,
   "realized_pnl": -32071.52,
-  "unrealized_pnl": -235.65,
-  "day_pnl": -20703.71,
-  "day_pnl_pct": -0.53921,
+  "unrealized_pnl": -364.87,
+  "day_pnl": -20832.93,
+  "day_pnl_pct": -0.54257,
   "day_baseline_date": "2026-11-11",
   "day_baseline_equity": 38396.54,
   "open_positions": [
@@ -41,9 +41,36 @@ window.__DESK_STATE__ = {
       "mark_at": "2026-11-11T11:01:40-05:00",
       "unrealized_pnl": -235.65,
       "exposure": 670172.46
+    },
+    {
+      "id": "2026-11-11_ETH-USD_457",
+      "symbol": "ETH-USD",
+      "side": "long",
+      "size": 103.3799,
+      "entry": 2074.57,
+      "notional": 214468.84,
+      "stop": 2042.56,
+      "target": 2105.72,
+      "target2": 2135.72,
+      "invalidation": "15m close < 2050.56 or stop 2042.56",
+      "risk_usd": 3309.19,
+      "risk_pct_equity": 0.18704,
+      "opened_at": "2026-11-11T11:01:47-05:00",
+      "card": "RACE_ETH_LONG_1101",
+      "reason": "RACE redeploy 1101 ET: BTC/ETH tilt long. 24h +2.88%. ETH-USD concentrated long under BTC/ETH reclaim (not bearish 15m); stop below floor 2047.56; session 5m low 2041.5; 15m detail [('09:15', 2047.02, 2050.26, 2045), ('09:30', 2052.96, 2058.15, 2041.5), ('09:45', 2052.45, 2058.39, 2049.93), ('10:00', 2058.69, 2065.06, 2049.7), ('10:15', 2057.71, 2058.99, 2047.56), ('10:30', 2070.78, 2088.84, 2056.41), ('10:45', 2073.09, 2077.31, 2067.99), ('11:00', 2073.32, 2074.51, 2072.07)]. Notional $214,469 @ 50x (margin $4,289), risk $3,309 (18.7% eq, warn-only). T1 2105.72, T2 2135.72.",
+      "price_source": "coinbase_exchange_public_ticker bid/ask/price 2074.57 @ 2026-11-11T11:01:47-05:00 ET (exch 2026-11-11T16:01:47.469767411Z) api.exchange.coinbase.com unauthenticated",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 4289.38,
+      "mark": 2073.32,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-11T11:01:40-05:00",
+      "unrealized_pnl": -129.22,
+      "exposure": 214339.61
     }
   ],
-  "open_count": 1,
+  "open_count": 2,
   "closed_positions": [
     {
       "type": "close",
@@ -3816,7 +3843,7 @@ window.__DESK_STATE__ = {
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 17692.83,
+  "max_risk_usd": 17563.61,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -383965.4,
   "paused": false,
@@ -3872,12 +3899,12 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-11T11:01:47-05:00",
-      "note": "last: paper fill BTC-USD"
+      "note": "last: paper fill ETH-USD"
     },
     "Logger": {
       "status": "ready",
       "last_run": "2026-11-11T11:01:47-05:00",
-      "note": "logged 2026-11-11_BTC-USD_456"
+      "note": "logged 2026-11-11_ETH-USD_457"
     },
     "Equity": {
       "status": "ready",
@@ -8325,16 +8352,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-11T11:01:47-05:00",
       "equity": 17692.83,
       "kind": "fill"
+    },
+    {
+      "t": "2026-11-11T11:01:47-05:00",
+      "equity": 17563.61,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-10T08:00:13-05:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "0759 ET: closed 1; opened {'BTC-USD': True, 'ETH-USD': True}; held ['BTC-USD', 'ETH-USD', 'XRP-USD']",
-      "reason": "race mode: direction=long; closes=1; opens_ok={'BTC-USD': True, 'ETH-USD': True}; cash_pool after cushion; plateau not acceptable"
-    },
     {
       "t": "2026-11-10T08:00:16-05:00",
       "agent": "Logger",
@@ -9795,6 +9820,15 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "ETH-USD PASS (chaos: non-blocking)",
       "reason": "vol $234.7M, spread 0.0010%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
+    },
+    {
+      "t": "2026-11-11T11:01:47-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 103.38 ETH-USD @ 2074.57 \u00b7 notional $214,469 (50x, margin $4,289) \u00b7 stop 2042.56 \u00b7 tgt 2105.72 \u00b7 risk $3,309.19",
+      "reason": "RACE redeploy 1101 ET: BTC/ETH tilt long. 24h +2.88%. ETH-USD concentrated long under BTC/ETH reclaim (not bearish 15m); stop below floor 2047.56; session 5m low 2041.5; 15m detail [('09:15', 2047.02, 2050.26, 2045), ('09:30', 2052.96, 2058.15, 2041.5), ('09:45', 2052.45, 2058.39, 2049.93), ('10:00', 2058.69, 2065.06, 2049.7), ('10:15', 2057.71, 2058.99, 2047.56), ('10:30', 2070.78, 2088.84, 2056.41), ('10:45', 2073.09, 2077.31, 2067.99), ('11:00', 2073.32, 2074.51, 2072.07)]. Notional $214,469 @ 50x (margin $4,289), risk $3,309 (18.7% eq, warn-only). T1 2105.72, T2 2135.72.",
+      "fill_id": "2026-11-11_ETH-USD_457",
+      "card": "RACE_ETH_LONG_1101"
     }
   ],
   "scanner_feed": [
@@ -10776,10 +10810,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 13408.16,
-  "exposure": 670172.46,
-  "buying_power": 214469.04,
-  "effective_leverage": 37.88,
+  "margin_used": 17697.54,
+  "exposure": 884512.07,
+  "buying_power": 0.0,
+  "effective_leverage": 50.36,
   "operating_timezone": "America/New_York",
   "events": [
     {
