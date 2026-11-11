@@ -8387,13 +8387,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-10T09:06:00-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "ETH-USD PASS (chaos: non-blocking)",
-      "reason": "vol $302.7M, spread 0.0005%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
-    },
-    {
-      "t": "2026-11-10T09:06:00-05:00",
       "agent": "Executor",
       "kind": "fill",
       "text": "PAPER FILL short 1204.37 ETH-USD @ 2069.65 \u00b7 notional $2,492,615 (50x, margin $49,852) \u00b7 stop 2108.41 \u00b7 tgt 2028.46 \u00b7 risk $46,681.21",
@@ -9851,6 +9844,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 1304 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
       "reason": "scheduled race cycle; scan scans/2026-11-11_1304_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-11T13:04:22-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "BTC-USD long 9.06 @ 73996.48: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-11T11:01:47-05:00: maxH=74710 minL=73837.02 (stop 73225.0; T1 74884.44/T2 75284.44); 15m min close=74131.04 (inv 73355.0). No close trigger."
     }
   ],
   "scanner_feed": [
