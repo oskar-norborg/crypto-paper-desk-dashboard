@@ -8160,13 +8160,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-09T22:02:04-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "ETH-USD PASS (chaos: non-blocking)",
-      "reason": "vol $304.1M, spread 0.0005%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
-    },
-    {
-      "t": "2026-11-09T22:02:04-05:00",
       "agent": "Executor",
       "kind": "fill",
       "text": "PAPER FILL short 224.267 ETH-USD @ 2119.88 \u00b7 notional $475,420 (50x, margin $9,508) \u00b7 stop 2136.84 \u00b7 tgt 2098.68 \u00b7 risk $3,803.58",
@@ -9627,6 +9620,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "ETH-USD short 590.0288 @ 2057.4: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-11T04:02:13-05:00: maxH=2063.9 minL=2045.12 (stop 2073.86; T1 2036.83/T2 2011.83); 15m max close=2060.24 (inv 2066.04). No close trigger."
+    },
+    {
+      "t": "2026-11-11T07:59:48-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "XRP-USD short 492617.6 @ 1.0561: STOP 1.0645 HIT \u2014 CLOSE at stated stop",
+      "reason": "Coinbase public candles since 2026-11-11T04:02:13-05:00: maxH=1.0665; minL=1.0505; 15m max close=1.0636; 15m min close=None. STOP 1.0645 hit (short): Coinbase public 5m 05:30 ET high 1.0645 (>= 1.0645). Paper close at stated stop."
     }
   ],
   "scanner_feed": [
