@@ -3898,7 +3898,7 @@
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-11T11:01:47-05:00",
-      "note": "last: paper fill ETH-USD"
+      "note": "1101 ET: closed 3; opened {'BTC-USD': True, 'ETH-USD': True}; held ['BTC-USD', 'ETH-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -8360,13 +8360,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-10T08:00:16-05:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: 0759 ET race cycle \u00b7 hold/rotate check \u00b7 eq $83,705 \u00b7 exposure $4,028,569 (48.13x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
-    {
       "t": "2026-11-10T09:05:46-05:00",
       "agent": "Scanner",
       "kind": "scan",
@@ -9828,6 +9821,13 @@
       "reason": "RACE redeploy 1101 ET: BTC/ETH tilt long. 24h +2.88%. ETH-USD concentrated long under BTC/ETH reclaim (not bearish 15m); stop below floor 2047.56; session 5m low 2041.5; 15m detail [('09:15', 2047.02, 2050.26, 2045), ('09:30', 2052.96, 2058.15, 2041.5), ('09:45', 2052.45, 2058.39, 2049.93), ('10:00', 2058.69, 2065.06, 2049.7), ('10:15', 2057.71, 2058.99, 2047.56), ('10:30', 2070.78, 2088.84, 2056.41), ('10:45', 2073.09, 2077.31, 2067.99), ('11:00', 2073.32, 2074.51, 2072.07)]. Notional $214,469 @ 50x (margin $4,289), risk $3,309 (18.7% eq, warn-only). T1 2105.72, T2 2135.72.",
       "fill_id": "2026-11-11_ETH-USD_457",
       "card": "RACE_ETH_LONG_1101"
+    },
+    {
+      "t": "2026-11-11T11:01:47-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "1101 ET: closed 3; opened {'BTC-USD': True, 'ETH-USD': True}; held ['BTC-USD', 'ETH-USD']",
+      "reason": "race mode: direction=long; closes=3; opens_ok={'BTC-USD': True, 'ETH-USD': True}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": [
