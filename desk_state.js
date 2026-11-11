@@ -3950,8 +3950,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-11T17:08:28-05:00",
-      "note": "CHAOS: 1708 ET race cycle \u00b7 hold/rotate check \u00b7 eq $24,287 \u00b7 exposure $1,027,796 (42.32x)"
+      "last_run": "2026-11-11T17:52:54-05:00",
+      "note": "EOD review 2026-11-11: eq $31,574.50, gap $968,425.50 (3.16%), day -$6,822.04 (-17.77%), flat, blown_up=false"
     },
     "Equity": {
       "status": "ready",
@@ -8570,15 +8570,6 @@ window.__DESK_STATE__ = {
     {
       "t": "2026-11-10T12:58:52-05:00",
       "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 4797.2 SOL-USD @ 82.34 \u00b7 notional $395,001 (50x, margin $7,900) \u00b7 stop 83.16 \u00b7 tgt 81.25 \u00b7 risk $3,933.70",
-      "reason": "RACE redeploy 1258 ET: BTC/ETH tilt short. 24h -4.84%. SOL-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 82.52; session 5m low 81.45; 15m detail [('11:00', 82.14, 82.64, 81.92), ('11:15', 82.17, 82.53, 81.96), ('11:30', 82.23, 82.25, 81.45), ('11:45', 81.87, 82.24, 81.65), ('12:00', 82.18, 82.32, 81.7), ('12:15', 82.34, 82.39, 82.06), ('12:30', 82.07, 82.52, 81.8), ('12:45', 82.34, 82.43, 81.85)]. Notional $395,001 @ 50x (margin $7,900), risk $3,934 (3.1% eq, warn-only). T1 81.25, T2 80.25.",
-      "fill_id": "2026-11-10_SOL-USD_426",
-      "card": "RACE_SOL_SHORT_1258"
-    },
-    {
-      "t": "2026-11-10T12:58:52-05:00",
-      "agent": "Executor",
       "kind": "plan",
       "text": "1258 ET: closed 1; opened {'XRP-USD': True, 'SOL-USD': True}; held ['ETH-USD', 'SOL-USD', 'XRP-USD']",
       "reason": "race mode: direction=short; closes=1; opens_ok={'XRP-USD': True, 'SOL-USD': True}; cash_pool after cushion; plateau not acceptable"
@@ -10028,6 +10019,13 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE XRP-USD @ 1.0508 \u00b7 P&L $+2305.67",
       "reason": "EOD review: T1 1.0508 hit (short): Coinbase public 5m 17:45 ET low 1.0495 (<= 1.0508); stop 1.0723 never touched (maxH since 17:05 1.0637). Paper close at stated T1 per desk exit convention.",
       "fill_id": "2026-11-11_XRP-USD_463"
+    },
+    {
+      "t": "2026-11-11T17:52:54-05:00",
+      "agent": "Logger",
+      "kind": "review",
+      "text": "EOD review 2026-11-11: eq $31,574.50, gap $968,425.50 (3.16%), day -$6,822.04 (-17.77%), flat, blown_up=false",
+      "reason": "Scheduled EOD paper review; closed ETH/SOL/XRP shorts at stated T1 (+$10,896.38) on Coinbase public 5m evidence; review at reviews/2026-11-11.md"
     }
   ],
   "scanner_feed": [
@@ -10993,7 +10991,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-11T17:52:15-05:00",
+  "updated_at": "2026-11-11T17:52:54-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
