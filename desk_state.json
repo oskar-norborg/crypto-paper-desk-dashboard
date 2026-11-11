@@ -8026,13 +8026,6 @@
   "activity": [
     {
       "t": "2026-11-09T19:58:48-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "SOL-USD PASS (chaos: non-blocking)",
-      "reason": "vol $74.8M, spread 0.0116%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
-    },
-    {
-      "t": "2026-11-09T19:58:48-05:00",
       "agent": "Executor",
       "kind": "fill",
       "text": "PAPER FILL short 2657.8 SOL-USD @ 86.36 \u00b7 notional $229,528 (50x, margin $4,591) \u00b7 stop 87.22 \u00b7 tgt 85.32 \u00b7 risk $2,285.71",
@@ -9488,6 +9481,13 @@
       "text": "PAPER CLOSE ETH-USD @ 2061.39 \u00b7 P&L $+1224.88",
       "reason": "RACE rotate 2358 ET: cut ETH-USD long loser/broken-momentum BEFORE stop. uP&L $1,247.53; stop_prog -29% of path to stop 2034.89 (mark 2061.39, entry 2055.44); symbol 15m bearish_tilt=True; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close.",
       "fill_id": "2026-11-10_ETH-USD_437"
+    },
+    {
+      "t": "2026-11-10T23:59:04-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "BTC-USD long 17.26 @ 73520.67: RACE ROTATE \u2014 thesis/momentum broken before stop",
+      "reason": "RACE rotate 2358 ET: cut BTC-USD long loser/broken-momentum BEFORE stop. uP&L $1,766.04; stop_prog -17% of path to stop 72932.5 (mark 73622.99, entry 73520.67); symbol 15m bearish_tilt=True; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close."
     }
   ],
   "scanner_feed": [
