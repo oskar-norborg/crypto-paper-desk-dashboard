@@ -8026,13 +8026,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-09T19:58:37-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "ETH-USD long 256.601 @ 2125.26: HOLD \u2014 no trigger",
-      "reason": "Coinbase public 5m since 2026-11-09T15:06:18-05:00: maxH=2134.78 minL=2117.28 (stop 2104.01; T1 2157.14/T2 2187.14); 15m min close=2121.19 (inv 2120.1). No close trigger."
-    },
-    {
       "t": "2026-11-09T19:58:48-05:00",
       "agent": "Rug Check",
       "kind": "check",
@@ -9490,6 +9483,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "BTC-USD long 17.26 @ 73520.67: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-10T21:59:23-05:00: maxH=73792.93 minL=73374.11 (stop 72932.5; T1 74402.92/T2 74802.92); 15m min close=73575.79 (inv 73160.0). No close trigger."
+    },
+    {
+      "t": "2026-11-10T23:58:57-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD long 205.8629 @ 2055.44: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-10T21:59:24-05:00: maxH=2069.29 minL=2054.1 (stop 2034.89; T1 2086.27/T2 2116.27); 15m min close=2059.5 (inv 2046.55). No close trigger."
     }
   ],
   "scanner_feed": [
