@@ -3895,7 +3895,7 @@
     "Rug Check": {
       "status": "idle",
       "last_run": "2026-11-11T14:02:39-05:00",
-      "note": "ETH-USD PASS (chaos: non-blocking)"
+      "note": "XRP-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -8432,15 +8432,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-10T10:01:22-05:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 3773.4 SOL-USD @ 84.76 \u00b7 notional $319,833 (50x, margin $6,397) \u00b7 stop 85.61 \u00b7 tgt 82.53 \u00b7 risk $3,207.39",
-      "reason": "RACE redeploy 1000 ET: BTC/ETH tilt short. 24h -3.48%. SOL-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 84.8; session 5m low 82.73; 15m detail [('08:15', 84.65, 84.8, 84.38), ('08:30', 84.09, 85.05, 82.73), ('08:45', 84.04, 84.55, 83.91), ('09:00', 84.05, 84.27, 83.96), ('09:15', 83.58, 84.09, 83.54), ('09:30', 84.36, 84.64, 83.38), ('09:45', 84.26, 84.42, 83.58), ('10:00', 84.78, 84.8, 84.21)]. Notional $319,833 @ 50x (margin $6,397), risk $3,207 (6.8% eq, warn-only). T1 82.53, T2 81.53.",
-      "fill_id": "2026-11-10_SOL-USD_418",
-      "card": "RACE_SOL_SHORT_1000"
-    },
-    {
       "t": "2026-11-10T10:01:23-05:00",
       "agent": "Executor",
       "kind": "plan",
@@ -9894,6 +9885,13 @@
       "reason": "RACE redeploy 1402 ET: BTC/ETH tilt short. 24h +1.84%. ETH-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 2090.74; session 5m low 2075.89; 15m detail [('12:15', 2090.23, 2101.88, 2082.44), ('12:30', 2092.6, 2094.62, 2085.99), ('12:45', 2089.07, 2092.62, 2087.03), ('13:00', 2085.95, 2090.07, 2084.17), ('13:15', 2085.08, 2090.74, 2084.67), ('13:30', 2085.18, 2089.87, 2084.67), ('13:45', 2081.34, 2086.21, 2079.37), ('14:00', 2080.2, 2082.85, 2078.94)]. Notional $761,871 @ 50x (margin $15,237), risk $6,095 (27.9% eq, warn-only). T1 2059.27, T2 2034.27.",
       "fill_id": "2026-11-11_ETH-USD_460",
       "card": "RACE_ETH_SHORT_1402"
+    },
+    {
+      "t": "2026-11-11T14:02:39-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "XRP-USD PASS (chaos: non-blocking)",
+      "reason": "vol $69.6M, spread 0.0189%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
     }
   ],
   "scanner_feed": [
