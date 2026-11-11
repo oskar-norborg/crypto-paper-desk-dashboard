@@ -3654,8 +3654,8 @@
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-10T19:01:57-05:00",
-      "note": "CHAOS: 1901 ET race cycle \u00b7 hold/rotate check \u00b7 eq $69,321 \u00b7 exposure $4,589,401 (66.21x)"
+      "last_run": "2026-11-10T20:04:49-05:00",
+      "note": "CHAOS: 2004 ET race cycle \u00b7 hold/rotate check \u00b7 eq $86,295 \u00b7 exposure $4,572,427 (52.99x)"
     },
     "Equity": {
       "status": "ready",
@@ -7885,14 +7885,6 @@
       "t": "2026-11-09T17:50:23-05:00",
       "agent": "Executor",
       "kind": "close",
-      "text": "PAPER CLOSE XRP-USD @ 1.102 \u00b7 P&L $-10851.81",
-      "reason": "EOD stop/inv: 15m 17:30 close 1.0995 > inv 1.0943 and live ask 1.1020 above stop 1.1003; cover short at public ask",
-      "fill_id": "2026-11-09_XRP-USD_386"
-    },
-    {
-      "t": "2026-11-09T17:50:23-05:00",
-      "agent": "Executor",
-      "kind": "close",
       "text": "PAPER CLOSE SOL-USD @ 86.82 \u00b7 P&L $-2993.41",
       "reason": "EOD inv: 15m 17:30 close 86.82 > inv 86.59 (bounce shelf reclaimed); cover short at public ask before stop 87.10",
       "fill_id": "2026-11-09_SOL-USD_387"
@@ -9343,6 +9335,13 @@
       "kind": "plan",
       "text": "2004 ET: closed 0; opened {'XRP-USD': False, 'SOL-USD': False}; held ['ETH-USD']",
       "reason": "race mode: direction=short; closes=0; opens_ok={'XRP-USD': False, 'SOL-USD': False}; cash_pool after cushion; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-10T20:04:49-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 2004 ET race cycle \u00b7 hold/rotate check \u00b7 eq $86,295 \u00b7 exposure $4,572,427 (52.99x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
