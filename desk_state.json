@@ -6,9 +6,9 @@
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
   "equity": 21985.71,
-  "cash": 50.0,
-  "realized_pnl": -28182.26,
-  "unrealized_pnl": 167.97,
+  "cash": 5440.7,
+  "realized_pnl": -29321.88,
+  "unrealized_pnl": 1307.59,
   "day_pnl": -16410.83,
   "day_pnl_pct": -0.4274,
   "day_baseline_date": "2026-11-11",
@@ -40,36 +40,9 @@
       "mark_at": "2026-11-11T16:03:36-05:00",
       "unrealized_pnl": 1307.59,
       "exposure": 760563.19
-    },
-    {
-      "id": "2026-11-11_XRP-USD_461",
-      "symbol": "XRP-USD",
-      "side": "short",
-      "size": 308004.9,
-      "entry": 1.0601,
-      "notional": 326515.99,
-      "stop": 1.0726,
-      "target": 1.0495,
-      "target2": 1.0395,
-      "invalidation": "15m close > 1.0666 (reclaim of recent bounce shelf) or stop 1.0726",
-      "risk_usd": 3850.06,
-      "risk_pct_equity": 0.17644,
-      "opened_at": "2026-11-11T14:02:39-05:00",
-      "card": "RACE_XRP_SHORT_1402",
-      "reason": "RACE redeploy 1402 ET: BTC/ETH tilt short. 24h -0.45%. XRP-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 1.0686; session 5m low 1.0591; 15m detail [('12:15', 1.0711, 1.0797, 1.0708), ('12:30', 1.0714, 1.0725, 1.0673), ('12:45', 1.0681, 1.072, 1.0673), ('13:00', 1.0638, 1.0693, 1.0637), ('13:15', 1.0635, 1.0674, 1.0633), ('13:30', 1.0647, 1.0668, 1.0635), ('13:45', 1.0609, 1.0686, 1.0608), ('14:00', 1.0599, 1.0632, 1.0591)]. Notional $326,516 @ 50x (margin $6,530), risk $3,850 (17.6% eq, warn-only). T1 1.0495, T2 1.0395.",
-      "price_source": "coinbase_exchange_public_ticker bid/ask/price 1.0601 @ 2026-11-11T14:02:39-05:00 ET (exch 2026-11-11T19:02:37.804135975Z) api.exchange.coinbase.com unauthenticated",
-      "override": null,
-      "paper_only": true,
-      "leverage": 50.0,
-      "margin": 6530.32,
-      "mark": 1.0638,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-11T16:03:37-05:00",
-      "unrealized_pnl": -1139.62,
-      "exposure": 327655.61
     }
   ],
-  "open_count": 2,
+  "open_count": 1,
   "closed_positions": [
     {
       "type": "close",
@@ -3872,6 +3845,23 @@
       "reason": "RACE rotate 1402 ET: cut BTC-USD long loser/broken-momentum BEFORE stop. uP&L $3,320.67; stop_prog -48% of path to stop 73225.0 (mark 74363.0, entry 73996.48); symbol 15m bearish_tilt=True; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close.",
       "price_source": "coinbase_exchange_public_ticker bid/ask/price 74363.0 @ 2026-11-11T14:02:37-05:00 ET (exch 2026-11-11T19:02:36.016666771Z) api.exchange.coinbase.com unauthenticated",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-11_XRP-USD_461",
+      "symbol": "XRP-USD",
+      "side": "short",
+      "size": 308004.9,
+      "entry": 1.0601,
+      "exit": 1.0638,
+      "pnl": -1139.62,
+      "notional": 326515.99,
+      "leverage": 50.0,
+      "margin": 6530.32,
+      "closed_at": "2026-11-11T16:03:42-05:00",
+      "reason": "RACE rotate 1603 ET: cut XRP-USD short loser/broken-momentum BEFORE stop. uP&L $-1,139.62; stop_prog 30% of path to stop 1.0726 (mark 1.0638, entry 1.0601); symbol 15m bearish_tilt=False; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close.",
+      "price_source": "coinbase_exchange_public_ticker bid/ask/price 1.0638 @ 2026-11-11T16:03:41-05:00 ET (exch 2026-11-11T21:03:33.394136318Z) api.exchange.coinbase.com unauthenticated",
+      "paper_only": true
     }
   ],
   "max_open": 200,
@@ -3931,8 +3921,8 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-11T15:02:58-05:00",
-      "note": "1502 ET: closed 0; opened {}; held ['ETH-USD', 'XRP-USD']"
+      "last_run": "2026-11-11T16:03:42-05:00",
+      "note": "last: closed XRP-USD"
     },
     "Logger": {
       "status": "ready",
@@ -8490,16 +8480,14 @@
       "t": "2026-11-11T16:03:37-05:00",
       "equity": 21985.71,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-11T16:03:42-05:00",
+      "equity": 21985.71,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-10T11:00:41-05:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "1100 ET: closed 3; opened {'ETH-USD': True, 'XRP-USD': True}; held ['ETH-USD', 'XRP-USD']",
-      "reason": "race mode: direction=short; closes=3; opens_ok={'ETH-USD': True, 'XRP-USD': True}; cash_pool after cushion; plateau not acceptable"
-    },
     {
       "t": "2026-11-10T11:00:43-05:00",
       "agent": "Logger",
@@ -9949,6 +9937,14 @@
       "kind": "check",
       "text": "XRP-USD short 308004.9 @ 1.0601: RACE ROTATE \u2014 thesis/momentum broken before stop",
       "reason": "RACE rotate 1603 ET: cut XRP-USD short loser/broken-momentum BEFORE stop. uP&L $-1,139.62; stop_prog 30% of path to stop 1.0726 (mark 1.0638, entry 1.0601); symbol 15m bearish_tilt=False; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close."
+    },
+    {
+      "t": "2026-11-11T16:03:42-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE XRP-USD @ 1.0638 \u00b7 P&L $-1139.62",
+      "reason": "RACE rotate 1603 ET: cut XRP-USD short loser/broken-momentum BEFORE stop. uP&L $-1,139.62; stop_prog 30% of path to stop 1.0726 (mark 1.0638, entry 1.0601); symbol 15m bearish_tilt=False; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close.",
+      "fill_id": "2026-11-11_XRP-USD_461"
     }
   ],
   "scanner_feed": [
@@ -10930,10 +10926,10 @@
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 21767.74,
-  "exposure": 1088218.8,
-  "buying_power": 11066.7,
-  "effective_leverage": 49.5,
+  "margin_used": 15237.42,
+  "exposure": 760563.19,
+  "buying_power": 338722.31,
+  "effective_leverage": 34.59,
   "operating_timezone": "America/New_York",
   "events": [
     {
