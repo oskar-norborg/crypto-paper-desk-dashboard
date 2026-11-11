@@ -3729,7 +3729,7 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-10T21:59:24-05:00",
-      "note": "last: paper fill ETH-USD"
+      "note": "2159 ET: closed 2; opened {'BTC-USD': True, 'ETH-USD': True}; held ['BTC-USD', 'ETH-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -8016,13 +8016,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-09T19:08:30-05:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "1908 ET: closed 2; opened {}; held ['BTC-USD', 'ETH-USD']",
-      "reason": "race mode: direction=long; closes=2; opens_ok={}; cash_pool after cushion; plateau not acceptable"
-    },
-    {
       "t": "2026-11-09T19:08:33-05:00",
       "agent": "Logger",
       "kind": "batch",
@@ -9480,6 +9473,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE redeploy 2159 ET: BTC/ETH tilt long. 24h -3.05%. ETH-USD concentrated long under BTC/ETH reclaim (not bearish 15m); stop below floor 2043.55; session 5m low 2040.86; 15m detail [('20:00', 2043.4, 2048.16, 2040.86), ('20:15', 2053.94, 2055.64, 2041.56), ('20:30', 2059.86, 2067.3, 2052.01), ('20:45', 2050.98, 2060.64, 2050.71), ('21:00', 2047.7, 2054.17, 2047.52), ('21:15', 2050.49, 2053.67, 2043.55), ('21:30', 2059.38, 2059.42, 2047.61), ('21:45', 2055.49, 2060.37, 2054.8)]. Notional $423,139 @ 50x (margin $8,463), risk $4,230 (12.5% eq, warn-only). T1 2086.27, T2 2116.27.",
       "fill_id": "2026-11-10_ETH-USD_437",
       "card": "RACE_ETH_LONG_2159"
+    },
+    {
+      "t": "2026-11-10T21:59:24-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "2159 ET: closed 2; opened {'BTC-USD': True, 'ETH-USD': True}; held ['BTC-USD', 'ETH-USD']",
+      "reason": "race mode: direction=long; closes=2; opens_ok={'BTC-USD': True, 'ETH-USD': True}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": [
