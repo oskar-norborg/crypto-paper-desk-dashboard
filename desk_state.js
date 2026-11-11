@@ -3976,8 +3976,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-11T16:03:44-05:00",
-      "note": "1603 ET: closed 1; opened {'XRP-USD': True, 'SOL-USD': True}; held ['ETH-USD', 'SOL-USD', 'XRP-USD']"
+      "last_run": "2026-11-11T17:08:27-05:00",
+      "note": "1708 ET: closed 0; opened {}; held ['ETH-USD', 'SOL-USD', 'XRP-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -8575,13 +8575,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-10T12:58:48-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "XRP-USD short 1865532.6 @ 1.0458: RACE ROTATE \u2014 thesis/momentum broken before stop",
-      "reason": "RACE rotate 1258 ET: cut XRP-USD short loser/broken-momentum BEFORE stop. uP&L $-12,872.17; stop_prog 28% of path to stop 1.0704 (mark 1.0526, entry 1.0458); symbol 15m bearish_tilt=False; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close."
-    },
-    {
-      "t": "2026-11-10T12:58:48-05:00",
       "agent": "Executor",
       "kind": "close",
       "text": "PAPER CLOSE XRP-USD @ 1.0526 \u00b7 P&L $-12685.62",
@@ -10034,6 +10027,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
       "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
+    },
+    {
+      "t": "2026-11-11T17:08:27-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "1708 ET: closed 0; opened {}; held ['ETH-USD', 'SOL-USD', 'XRP-USD']",
+      "reason": "race mode: direction=short; closes=0; opens_ok={}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": [
