@@ -8296,13 +8296,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-10T04:04:39-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "ETH-USD PASS (chaos: non-blocking)",
-      "reason": "vol $289.5M, spread 0.0005%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
-    },
-    {
       "t": "2026-11-10T04:04:40-05:00",
       "agent": "Executor",
       "kind": "fill",
@@ -9766,6 +9759,13 @@
       "kind": "check",
       "text": "XRP-USD short 163366.1 @ 1.0597: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-11T09:00:20-05:00: maxH=1.0607 minL=1.0514 (stop 1.0682; T1 1.0475/T2 1.0375); 15m max close=1.0574 (inv 1.0597). No close trigger."
+    },
+    {
+      "t": "2026-11-11T10:03:13-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "SOL-USD short 877.9 @ 84.51: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-11T09:00:21-05:00: maxH=84.61 minL=83.69 (stop 85.36; T1 83.31/T2 82.31); 15m max close=84.17 (inv 84.62). No close trigger."
     }
   ],
   "scanner_feed": [
