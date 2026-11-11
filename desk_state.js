@@ -3932,8 +3932,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-11T14:02:39-05:00",
-      "note": "1402 ET: closed 2; opened {'ETH-USD': True, 'XRP-USD': True}; held ['ETH-USD', 'XRP-USD']"
+      "last_run": "2026-11-11T15:02:58-05:00",
+      "note": "1502 ET: closed 0; opened {}; held ['ETH-USD', 'XRP-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -8481,13 +8481,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-10T11:00:31-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "SOL-USD short 3773.4 @ 84.76: T2 81.53 HIT \u2014 CLOSE at stated T2",
-      "reason": "Coinbase public candles since 2026-11-10T10:01:22-05:00: maxH=84.81; minL=81.27; 15m max close=83.61; 15m min close=None. T2 81.53 hit (short): Coinbase public 5m 10:40 ET low 81.27 (<= 81.53); stop 85.61 never touched (maxH 84.81); inv 15m clear (maxC15 83.61). Paper close at stated T2."
-    },
-    {
-      "t": "2026-11-10T11:00:31-05:00",
       "agent": "Executor",
       "kind": "close",
       "text": "PAPER CLOSE SOL-USD @ 81.53 \u00b7 P&L $+12188.08",
@@ -9940,6 +9933,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
       "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
+    },
+    {
+      "t": "2026-11-11T15:02:58-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "1502 ET: closed 0; opened {}; held ['ETH-USD', 'XRP-USD']",
+      "reason": "race mode: direction=short; closes=0; opens_ok={}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": [
