@@ -3726,7 +3726,7 @@ window.__DESK_STATE__ = {
     "Rug Check": {
       "status": "idle",
       "last_run": "2026-11-10T23:59:06-05:00",
-      "note": "ETH-USD PASS (chaos: non-blocking)"
+      "note": "XRP-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -8053,13 +8053,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-09T21:02:27-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 2102 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
-      "reason": "scheduled race cycle; scan scans/2026-11-09_2102_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
-    },
-    {
       "t": "2026-11-09T21:02:30-05:00",
       "agent": "Risk",
       "kind": "check",
@@ -9517,6 +9510,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE redeploy 2358 ET: BTC/ETH tilt short. 24h -2.72%. ETH-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 2069.29; session 5m low 2054.1; 15m detail [('22:00', 2063.1, 2066.52, 2054.64), ('22:15', 2060.55, 2066.32, 2060), ('22:30', 2059.5, 2061.86, 2058.27), ('22:45', 2060, 2061.37, 2058.31), ('23:00', 2061.32, 2065, 2059.96), ('23:15', 2062.09, 2063.96, 2054.1), ('23:30', 2065.7, 2069.29, 2061.62), ('23:45', 2061.36, 2066.93, 2059.41)]. Notional $1,289,471 @ 50x (margin $25,789), risk $10,315 (28.0% eq, warn-only). T1 2040.88, T2 2015.88.",
       "fill_id": "2026-11-10_ETH-USD_440",
       "card": "RACE_ETH_SHORT_2358"
+    },
+    {
+      "t": "2026-11-10T23:59:06-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "XRP-USD PASS (chaos: non-blocking)",
+      "reason": "vol $113.4M, spread 0.0190%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
     }
   ],
   "scanner_feed": [
