@@ -8222,13 +8222,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-10T00:07:29-05:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "0007 ET: closed 1; opened {'BTC-USD': True}; held ['BTC-USD', 'ETH-USD', 'SOL-USD', 'XRP-USD']",
-      "reason": "race mode: direction=long; closes=1; opens_ok={'BTC-USD': True}; cash_pool after cushion; plateau not acceptable"
-    },
-    {
       "t": "2026-11-10T00:07:31-05:00",
       "agent": "Logger",
       "kind": "batch",
@@ -9691,6 +9684,13 @@
       "text": "PAPER CLOSE XRP-USD @ 1.0601 \u00b7 P&L $-580.89",
       "reason": "INV 15m close > 1.0585 (short): Coinbase public 15m 08:45 ET close 1.06 (high 1.0617/low 1.0557). Thesis broken \u2014 close at public mark 1.0601.",
       "fill_id": "2026-11-11_XRP-USD_447"
+    },
+    {
+      "t": "2026-11-11T09:00:14-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "SOL-USD short 1121.1 @ 83.85: INVALIDATION \u2014 CLOSE at public mark 84.51",
+      "reason": "Coinbase public candles since 2026-11-11T07:59:55-05:00: maxH=84.67; minL=83.59; 15m max close=84.51; 15m min close=None. INV 15m close > 84.04 (short): Coinbase public 15m 08:00 ET close 84.1 (high 84.1/low 83.59). Thesis broken \u2014 close at public mark 84.51."
     }
   ],
   "scanner_feed": [
@@ -10656,7 +10656,7 @@
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-11T09:00:13-05:00",
+  "updated_at": "2026-11-11T09:00:14-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
