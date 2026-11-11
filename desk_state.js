@@ -8475,14 +8475,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-10T11:00:30-05:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE XRP-USD @ 1.037 \u00b7 P&L $+29646.16",
-      "reason": "T2 1.037 hit (short): Coinbase public 5m 10:40 ET low 1.0302 (<= 1.037); stop 1.0879 never touched (maxH 1.0734); inv 15m clear (maxC15 1.0645). Paper close at stated T2.",
-      "fill_id": "2026-11-10_XRP-USD_415"
-    },
-    {
       "t": "2026-11-10T11:00:31-05:00",
       "agent": "Risk",
       "kind": "check",
@@ -9937,6 +9929,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 1502 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
       "reason": "scheduled race cycle; scan scans/2026-11-11_1502_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-11T15:02:51-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD short 366.2717 @ 2080.07: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-11T14:02:39-05:00: maxH=2082.09 minL=2070.79 (stop 2096.71; T1 2059.27/T2 2034.27); 15m max close=2079.96 (inv 2088.74). No close trigger."
     }
   ],
   "scanner_feed": [
