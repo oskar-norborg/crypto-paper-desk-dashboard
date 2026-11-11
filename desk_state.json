@@ -3866,8 +3866,8 @@
     },
     "Rug Check": {
       "status": "idle",
-      "last_run": "2026-11-11T14:02:37-05:00",
-      "note": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)"
+      "last_run": "2026-11-11T14:02:39-05:00",
+      "note": "ETH-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -8400,15 +8400,6 @@
   "activity": [
     {
       "t": "2026-11-10T10:01:22-05:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 464.869 ETH-USD @ 2087.65 \u00b7 notional $970,484 (50x, margin $19,410) \u00b7 stop 2104.35 \u00b7 tgt 2028.46 \u00b7 risk $7,763.31",
-      "reason": "RACE redeploy 1000 ET: BTC/ETH tilt short. 24h -2.66%. ETH-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 2088.59; session 5m low 2031.46; 15m detail [('08:15', 2095.52, 2096.88, 2089.2), ('08:30', 2066.87, 2104.41, 2031.46), ('08:45', 2063.18, 2076.46, 2060.98), ('09:00', 2066.24, 2071.24, 2062.64), ('09:15', 2061.59, 2068.37, 2059.04), ('09:30', 2078.76, 2084.81, 2055.83), ('09:45', 2080.5, 2082.55, 2066.48), ('10:00', 2088.56, 2088.59, 2079.78)]. Notional $970,484 @ 50x (margin $19,410), risk $7,763 (16.4% eq, warn-only). T1 2028.46, T2 2003.46.",
-      "fill_id": "2026-11-10_ETH-USD_417",
-      "card": "RACE_ETH_SHORT_1000"
-    },
-    {
-      "t": "2026-11-10T10:01:22-05:00",
       "agent": "Rug Check",
       "kind": "check",
       "text": "SOL-USD PASS (chaos: non-blocking)",
@@ -9861,6 +9852,13 @@
       "text": "PAPER CLOSE BTC-USD @ 74363 \u00b7 P&L $+3320.67",
       "reason": "RACE rotate 1402 ET: cut BTC-USD long loser/broken-momentum BEFORE stop. uP&L $3,320.67; stop_prog -48% of path to stop 73225.0 (mark 74363.0, entry 73996.48); symbol 15m bearish_tilt=True; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close.",
       "fill_id": "2026-11-11_BTC-USD_456"
+    },
+    {
+      "t": "2026-11-11T14:02:39-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "ETH-USD PASS (chaos: non-blocking)",
+      "reason": "vol $245.3M, spread 0.0005%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
     }
   ],
   "scanner_feed": [
@@ -10826,7 +10824,7 @@
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-11T14:02:38-05:00",
+  "updated_at": "2026-11-11T14:02:39-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
