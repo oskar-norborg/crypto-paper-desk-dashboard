@@ -8571,13 +8571,6 @@
       "t": "2026-11-10T12:58:40-05:00",
       "agent": "Risk",
       "kind": "check",
-      "text": "ETH-USD short 2239.355 @ 2032.85: HOLD \u2014 no trigger",
-      "reason": "Coinbase public 5m since 2026-11-10T11:00:40-05:00: maxH=2036.92 minL=2007.62 (stop 2089.85; T1 2000.24/T2 1975.24); 15m max close=2027.51 (inv 2083.85). No close trigger."
-    },
-    {
-      "t": "2026-11-10T12:58:40-05:00",
-      "agent": "Risk",
-      "kind": "check",
       "text": "XRP-USD short 1865532.6 @ 1.0458: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-10T11:00:40-05:00: maxH=1.0547 minL=1.0379 (stop 1.0704; T1 1.0272/T2 1.0172); 15m max close=1.052 (inv 1.0644). No close trigger."
     },
@@ -10028,6 +10021,13 @@
       "kind": "check",
       "text": "ETH-USD short 366.2717 @ 2080.07: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-11T14:02:39-05:00: maxH=2082.78 minL=2067.28 (stop 2096.71; T1 2059.27/T2 2034.27); 15m max close=2079.98 (inv 2088.74). No close trigger."
+    },
+    {
+      "t": "2026-11-11T17:08:20-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "XRP-USD short 177358.9 @ 1.0638: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-11T16:03:44-05:00: maxH=1.0673 minL=1.0596 (stop 1.0723; T1 1.0508/T2 1.0408); 15m max close=1.0644 (inv 1.0646). No close trigger."
     }
   ],
   "scanner_feed": [
