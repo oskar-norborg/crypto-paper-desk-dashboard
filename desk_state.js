@@ -8406,14 +8406,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-10T10:01:12-05:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE ETH-USD @ 2088.02 \u00b7 P&L $-22124.20",
-      "reason": "RACE rotate 1000 ET: cut ETH-USD short loser/broken-momentum BEFORE stop. uP&L $-22,088.07; stop_prog 47% of path to stop 2108.41 (mark 2088.02, entry 2069.65); symbol 15m bearish_tilt=True; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close.",
-      "fill_id": "2026-11-10_ETH-USD_414"
-    },
-    {
       "t": "2026-11-10T10:01:22-05:00",
       "agent": "Rug Check",
       "kind": "check",
@@ -9868,6 +9860,13 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE ETH-USD @ 2080.07 \u00b7 P&L $+568.59",
       "reason": "RACE rotate 1402 ET: cut ETH-USD long loser/broken-momentum BEFORE stop. uP&L $567.56; stop_prog -17% of path to stop 2042.56 (mark 2080.07, entry 2074.57); symbol 15m bearish_tilt=True; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close.",
       "fill_id": "2026-11-11_ETH-USD_457"
+    },
+    {
+      "t": "2026-11-11T14:02:37-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "BTC-USD long 9.06 @ 73996.48: RACE ROTATE \u2014 thesis/momentum broken before stop",
+      "reason": "RACE rotate 1402 ET: cut BTC-USD long loser/broken-momentum BEFORE stop. uP&L $3,320.67; stop_prog -48% of path to stop 73225.0 (mark 74363.0, entry 73996.48); symbol 15m bearish_tilt=True; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close."
     }
   ],
   "scanner_feed": [
