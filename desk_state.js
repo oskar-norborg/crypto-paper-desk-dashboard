@@ -8095,13 +8095,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-09T21:02:32-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "SOL-USD short 2657.8 @ 86.36: HOLD \u2014 no trigger",
-      "reason": "Coinbase public 5m since 2026-11-09T19:58:48-05:00: maxH=86.68 minL=86 (stop 87.22; T1 85.32/T2 84.32); 15m max close=86.6 (inv 86.67). No close trigger."
-    },
-    {
       "t": "2026-11-09T21:02:42-05:00",
       "agent": "Rug Check",
       "kind": "check",
@@ -9560,6 +9553,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 0402 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
       "reason": "scheduled race cycle; scan scans/2026-11-11_0402_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-11T04:02:06-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD short 625.5043 @ 2061.49: INVALIDATION \u2014 CLOSE at public mark 2057.14",
+      "reason": "Coinbase public candles since 2026-11-10T23:59:06-05:00: maxH=2070.8; minL=2049.11; 15m max close=2067.67; 15m min close=None. INV 15m close > 2067.29 (short): Coinbase public 15m 00:45 ET close 2067.67 (high 2070.8/low 2064.49). Thesis broken \u2014 close at public mark 2057.14."
     }
   ],
   "scanner_feed": [
