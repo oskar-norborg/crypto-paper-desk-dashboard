@@ -3862,7 +3862,7 @@ window.__DESK_STATE__ = {
     "Rug Check": {
       "status": "idle",
       "last_run": "2026-11-11T11:01:47-05:00",
-      "note": "BTC-USD PASS (chaos: non-blocking)"
+      "note": "ETH-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -8331,15 +8331,6 @@ window.__DESK_STATE__ = {
     {
       "t": "2026-11-10T08:00:13-05:00",
       "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 374.031 ETH-USD @ 2096.01 \u00b7 notional $783,973 (50x, margin $15,679) \u00b7 stop 2075.05 \u00b7 tgt 2127.45 \u00b7 risk $7,839.69",
-      "reason": "RACE redeploy 0759 ET: BTC/ETH tilt long. 24h -1.12%. ETH-USD concentrated long under BTC/ETH reclaim (not bearish 15m); stop below floor 2083.74; session 5m low 2083.46; 15m detail [('06:00', 2096.37, 2096.83, 2083.46), ('06:15', 2093.77, 2100, 2088.9), ('06:30', 2090.53, 2093.92, 2086.33), ('06:45', 2092.05, 2094.63, 2090.3), ('07:00', 2089.94, 2092.83, 2087.86), ('07:15', 2088.9, 2092.66, 2086.78), ('07:30', 2085.61, 2088.96, 2083.74), ('07:45', 2097.05, 2097.45, 2085.31)]. Notional $783,973 @ 50x (margin $15,679), risk $7,840 (9.3% eq, warn-only). T1 2127.45, T2 2157.45.",
-      "fill_id": "2026-11-10_ETH-USD_410",
-      "card": "RACE_ETH_LONG_0759"
-    },
-    {
-      "t": "2026-11-10T08:00:13-05:00",
-      "agent": "Executor",
       "kind": "plan",
       "text": "0759 ET: closed 1; opened {'BTC-USD': True, 'ETH-USD': True}; held ['BTC-USD', 'ETH-USD', 'XRP-USD']",
       "reason": "race mode: direction=long; closes=1; opens_ok={'BTC-USD': True, 'ETH-USD': True}; cash_pool after cushion; plateau not acceptable"
@@ -9797,6 +9788,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE redeploy 1101 ET: BTC/ETH tilt long. 24h +1.65%. BTC-USD concentrated long under BTC/ETH reclaim (not bearish 15m); stop below floor 73305; session 5m low 73294.22; 15m detail [('09:15', 73451.04, 73656.8, 73406.82), ('09:30', 73572.69, 73763.84, 73294.22), ('09:45', 73484.02, 73710, 73420), ('10:00', 73574.96, 73716.85, 73389.64), ('10:15', 73582.18, 73592.59, 73305), ('10:30', 73844.29, 74393.92, 73542.3), ('10:45', 73916.93, 74099.99, 73784.95), ('11:00', 73970.47, 73971.84, 73877.2)]. Notional $670,408 @ 50x (margin $13,408), risk $6,990 (39.0% eq, warn-only). T1 74884.44, T2 75284.44.",
       "fill_id": "2026-11-11_BTC-USD_456",
       "card": "RACE_BTC_LONG_1101"
+    },
+    {
+      "t": "2026-11-11T11:01:47-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "ETH-USD PASS (chaos: non-blocking)",
+      "reason": "vol $234.7M, spread 0.0010%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
     }
   ],
   "scanner_feed": [
