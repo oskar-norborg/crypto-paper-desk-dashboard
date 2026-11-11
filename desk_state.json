@@ -3962,8 +3962,8 @@
     },
     "Rug Check": {
       "status": "idle",
-      "last_run": "2026-11-11T18:02:40-05:00",
-      "note": "ETH-USD PASS (chaos: non-blocking)"
+      "last_run": "2026-11-11T18:02:41-05:00",
+      "note": "XRP-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -8601,13 +8601,6 @@
   "activity": [
     {
       "t": "2026-11-10T14:05:53-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "XRP-USD short 875710.3 @ 1.0525: STOP 1.061 HIT \u2014 CLOSE at stated stop",
-      "reason": "Coinbase public candles since 2026-11-10T12:58:51-05:00: maxH=1.0731; minL=1.049; 15m max close=1.071; 15m min close=None. STOP 1.061 hit (short): Coinbase public 5m 13:25 ET high 1.0664 (>= 1.061). Paper close at stated stop."
-    },
-    {
-      "t": "2026-11-10T14:05:53-05:00",
       "agent": "Executor",
       "kind": "close",
       "text": "PAPER CLOSE XRP-USD @ 1.061 \u00b7 P&L $-7443.54",
@@ -10060,6 +10053,13 @@
       "reason": "RACE redeploy 1802 ET: BTC/ETH tilt short. 24h +0.40%. ETH-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 2079.44; session 5m low 2050.27; 15m detail [('16:15', 2078.18, 2079.27, 2075.44), ('16:30', 2072.62, 2079.89, 2072.18), ('16:45', 2068.28, 2075.62, 2067.47), ('17:00', 2070.45, 2071.7, 2067.28), ('17:15', 2069.57, 2079.44, 2068.32), ('17:30', 2056.96, 2070.66, 2053.71), ('17:45', 2054.89, 2058, 2050.7), ('18:00', 2057.8, 2058.19, 2050.27)]. Notional $1,103,357 @ 50x (margin $22,067), risk $13,173 (41.7% eq, warn-only). T1 2038.28, T2 2013.28.",
       "fill_id": "2026-11-11_ETH-USD_468",
       "card": "RACE_ETH_SHORT_1802"
+    },
+    {
+      "t": "2026-11-11T18:02:41-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "XRP-USD PASS (chaos: non-blocking)",
+      "reason": "vol $67.7M, spread 0.0095%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
     }
   ],
   "scanner_feed": [
@@ -11025,7 +11025,7 @@
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-11T18:02:40-05:00",
+  "updated_at": "2026-11-11T18:02:41-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
