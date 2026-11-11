@@ -3834,7 +3834,7 @@ window.__DESK_STATE__ = {
     "Rug Check": {
       "status": "idle",
       "last_run": "2026-11-11T11:01:47-05:00",
-      "note": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)"
+      "note": "BTC-USD PASS (chaos: non-blocking)"
     },
     "Sizer": {
       "status": "ready",
@@ -8297,15 +8297,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-10T08:00:13-05:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 31.66 BTC-USD @ 74268.9 \u00b7 notional $2,351,352 (50x, margin $47,027) \u00b7 stop 73674.7 \u00b7 tgt 75160.1 \u00b7 risk $18,810.79",
-      "reason": "RACE redeploy 0759 ET: BTC/ETH tilt long. 24h -0.73%. BTC-USD concentrated long under BTC/ETH reclaim (not bearish 15m); stop below floor 74041.9; session 5m low 74027.7; 15m detail [('06:00', 74272.74, 74285.36, 74043.93), ('06:15', 74230.52, 74331.97, 74108.79), ('06:30', 74278.5, 74283.27, 74027.7), ('06:45', 74337.5, 74377.55, 74277.3), ('07:00', 74269.3, 74334, 74212.74), ('07:15', 74165.31, 74314.12, 74128.76), ('07:30', 74113.46, 74192.53, 74041.9), ('07:45', 74298.61, 74310.59, 74103.61)]. Notional $2,351,352 @ 50x (margin $47,027), risk $18,811 (22.5% eq, warn-only). T1 75160.09, T2 75560.09.",
-      "fill_id": "2026-11-10_BTC-USD_409",
-      "card": "RACE_BTC_LONG_0759"
-    },
-    {
-      "t": "2026-11-10T08:00:13-05:00",
       "agent": "Rug Check",
       "kind": "check",
       "text": "ETH-USD PASS (chaos: non-blocking)",
@@ -9764,6 +9755,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
       "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
+    },
+    {
+      "t": "2026-11-11T11:01:47-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "BTC-USD PASS (chaos: non-blocking)",
+      "reason": "vol $554.6M, spread 0.0000%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
     }
   ],
   "scanner_feed": [
