@@ -3695,7 +3695,7 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-10T21:03:21-05:00",
-      "note": "last: paper fill XRP-USD"
+      "note": "2103 ET: closed 1; opened {'ETH-USD': True, 'XRP-USD': True}; held ['ETH-USD', 'XRP-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -7948,13 +7948,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-09T18:04:51-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "SOL-USD PASS (chaos: non-blocking)",
-      "reason": "vol $77.0M, spread 0.0116%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
-    },
-    {
-      "t": "2026-11-09T18:04:51-05:00",
       "agent": "Executor",
       "kind": "fill",
       "text": "PAPER FILL short 2835.5 SOL-USD @ 86.5 \u00b7 notional $245,271 (50x, margin $4,905) \u00b7 stop 87.36 \u00b7 tgt 85.46 \u00b7 risk $2,438.53",
@@ -9409,6 +9402,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE redeploy 2103 ET: BTC/ETH tilt short. 24h -3.70%. XRP-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 1.0622; session 5m low 1.0476; 15m detail [('19:15', 1.0536, 1.0567, 1.0534), ('19:30', 1.0549, 1.0553, 1.0525), ('19:45', 1.0506, 1.0548, 1.0501), ('20:00', 1.049, 1.0516, 1.0477), ('20:15', 1.0544, 1.0555, 1.0476), ('20:30', 1.0567, 1.0622, 1.0532), ('20:45', 1.0515, 1.0583, 1.0515), ('21:00', 1.0522, 1.0539, 1.0515)]. Notional $566,447 @ 50x (margin $11,329), risk $7,428 (19.5% eq, warn-only). T1 1.0419, T2 1.0319.",
       "fill_id": "2026-11-10_XRP-USD_433",
       "card": "RACE_XRP_SHORT_2103"
+    },
+    {
+      "t": "2026-11-10T21:03:21-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "2103 ET: closed 1; opened {'ETH-USD': True, 'XRP-USD': True}; held ['ETH-USD', 'XRP-USD']",
+      "reason": "race mode: direction=short; closes=1; opens_ok={'ETH-USD': True, 'XRP-USD': True}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": [
