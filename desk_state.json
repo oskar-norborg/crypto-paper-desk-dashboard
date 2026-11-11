@@ -8296,14 +8296,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-10T04:04:29-05:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE BTC-USD @ 74317.3 \u00b7 P&L $-6975.21",
-      "reason": "INV 15m close < 74479.76 (long): Coinbase public 15m 03:30 ET close 74462.73 (high 74570.66/low 74350). Thesis broken \u2014 close at public mark 74317.29.",
-      "fill_id": "2026-11-10_BTC-USD_401"
-    },
-    {
       "t": "2026-11-10T04:04:39-05:00",
       "agent": "Rug Check",
       "kind": "check",
@@ -9767,6 +9759,13 @@
       "kind": "scan",
       "text": "CHAOS race cycle 1003 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
       "reason": "scheduled race cycle; scan scans/2026-11-11_1003_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-11T10:03:12-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD short 590.0288 @ 2057.4: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-11T04:02:13-05:00: maxH=2063.9 minL=2041.5 (stop 2073.86; T1 2036.83/T2 2011.83); 15m max close=2060.24 (inv 2066.04). No close trigger."
     }
   ],
   "scanner_feed": [
