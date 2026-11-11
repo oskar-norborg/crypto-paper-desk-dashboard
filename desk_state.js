@@ -3875,7 +3875,7 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-11T09:00:21-05:00",
-      "note": "last: paper fill SOL-USD"
+      "note": "0900 ET: closed 2; opened {'XRP-USD': True, 'SOL-USD': True}; held ['ETH-USD', 'SOL-USD', 'XRP-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -8288,13 +8288,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-10T04:04:29-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "ETH-USD short 224.2674 @ 2119.88: INVALIDATION \u2014 CLOSE at public mark 2101.78",
-      "reason": "Coinbase public candles since 2026-11-09T22:02:04-05:00: maxH=2129.07; minL=2092.89; 15m max close=2124.39; 15m min close=None. INV 15m close > 2121.72 (short): Coinbase public 15m 00:00 ET close 2122.62 (high 2124.29/low 2117.71). Thesis broken \u2014 close at public mark 2101.78."
-    },
-    {
-      "t": "2026-11-10T04:04:29-05:00",
       "agent": "Executor",
       "kind": "close",
       "text": "PAPER CLOSE ETH-USD @ 2101.78 \u00b7 P&L $+4059.24",
@@ -9759,6 +9752,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE redeploy 0900 ET: BTC/ETH tilt short. 24h +0.57%. SOL-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 84.67; session 5m low 83.51; 15m detail [('07:15', 83.68, 83.83, 83.51), ('07:30', 83.8, 83.9, 83.58), ('07:45', 83.83, 84.09, 83.79), ('08:00', 84.1, 84.1, 83.59), ('08:15', 84.17, 84.52, 84.01), ('08:30', 84.19, 84.23, 83.97), ('08:45', 84.49, 84.67, 84.16), ('09:00', 84.51, 84.55, 84.5)]. Notional $74,191 @ 50x (margin $1,484), risk $746 (2.5% eq, warn-only). T1 83.31, T2 82.31.",
       "fill_id": "2026-11-11_SOL-USD_452",
       "card": "RACE_SOL_SHORT_0900"
+    },
+    {
+      "t": "2026-11-11T09:00:21-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "0900 ET: closed 2; opened {'XRP-USD': True, 'SOL-USD': True}; held ['ETH-USD', 'SOL-USD', 'XRP-USD']",
+      "reason": "race mode: direction=short; closes=2; opens_ok={'XRP-USD': True, 'SOL-USD': True}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": [
