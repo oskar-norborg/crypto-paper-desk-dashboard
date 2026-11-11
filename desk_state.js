@@ -8412,13 +8412,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-10T10:01:12-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
-      "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
-    },
-    {
-      "t": "2026-11-10T10:01:12-05:00",
       "agent": "Risk",
       "kind": "check",
       "text": "ETH-USD short 1204.3656 @ 2069.65: RACE ROTATE \u2014 thesis/momentum broken before stop",
@@ -9872,6 +9865,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
       "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
+    },
+    {
+      "t": "2026-11-11T14:02:37-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD long 103.3799 @ 2074.57: RACE ROTATE \u2014 thesis/momentum broken before stop",
+      "reason": "RACE rotate 1402 ET: cut ETH-USD long loser/broken-momentum BEFORE stop. uP&L $567.56; stop_prog -17% of path to stop 2042.56 (mark 2080.07, entry 2074.57); symbol 15m bearish_tilt=True; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close."
     }
   ],
   "scanner_feed": [
