@@ -3937,8 +3937,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-11T14:02:40-05:00",
-      "note": "CHAOS: 1402 ET race cycle \u00b7 hold/rotate check \u00b7 eq $21,818 \u00b7 exposure $1,088,387 (49.89x)"
+      "last_run": "2026-11-11T15:03:00-05:00",
+      "note": "CHAOS: 1502 ET race cycle \u00b7 hold/rotate check \u00b7 eq $22,081 \u00b7 exposure $1,088,123 (49.28x)"
     },
     "Equity": {
       "status": "ready",
@@ -8485,14 +8485,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-10T11:00:31-05:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE SOL-USD @ 81.53 \u00b7 P&L $+12188.08",
-      "reason": "T2 81.53 hit (short): Coinbase public 5m 10:40 ET low 81.27 (<= 81.53); stop 85.61 never touched (maxH 84.81); inv 15m clear (maxC15 83.61). Paper close at stated T2.",
-      "fill_id": "2026-11-10_SOL-USD_418"
-    },
-    {
       "t": "2026-11-10T11:00:40-05:00",
       "agent": "Rug Check",
       "kind": "check",
@@ -9945,6 +9937,13 @@ window.__DESK_STATE__ = {
       "kind": "plan",
       "text": "1502 ET: closed 0; opened {}; held ['ETH-USD', 'XRP-USD']",
       "reason": "race mode: direction=short; closes=0; opens_ok={}; cash_pool after cushion; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-11T15:03:00-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 1502 ET race cycle \u00b7 hold/rotate check \u00b7 eq $22,081 \u00b7 exposure $1,088,123 (49.28x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
