@@ -5,44 +5,16 @@
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 31095.63,
-  "cash": 25495.34,
-  "realized_pnl": -20731.17,
-  "unrealized_pnl": 1826.8,
-  "day_pnl": -7300.91,
-  "day_pnl_pct": -0.19014,
+  "equity": 31574.5,
+  "cash": 31574.5,
+  "realized_pnl": -18425.5,
+  "unrealized_pnl": 0.0,
+  "day_pnl": -6822.04,
+  "day_pnl_pct": -0.17767,
   "day_baseline_date": "2026-11-11",
   "day_baseline_equity": 38396.54,
-  "open_positions": [
-    {
-      "id": "2026-11-11_XRP-USD_463",
-      "symbol": "XRP-USD",
-      "side": "short",
-      "size": 177358.9,
-      "entry": 1.0638,
-      "notional": 188674.4,
-      "stop": 1.0723,
-      "target": 1.0508,
-      "target2": 1.0408,
-      "invalidation": "15m close > 1.0646 (reclaim of recent bounce shelf) or stop 1.0723",
-      "risk_usd": 1507.55,
-      "risk_pct_equity": 0.06816,
-      "opened_at": "2026-11-11T16:03:44-05:00",
-      "card": "RACE_XRP_SHORT_1603",
-      "reason": "RACE redeploy 1603 ET: BTC/ETH tilt short. 24h +0.36%. XRP-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 1.0666; session 5m low 1.0538; 15m detail [('14:15', 1.0589, 1.0605, 1.0548), ('14:30', 1.0563, 1.0593, 1.0538), ('14:45', 1.0586, 1.0599, 1.0554), ('15:00', 1.0605, 1.0612, 1.0573), ('15:15', 1.06, 1.0625, 1.0592), ('15:30', 1.0609, 1.0614, 1.0586), ('15:45', 1.0648, 1.0666, 1.0609), ('16:00', 1.0632, 1.0655, 1.0629)]. Notional $188,674 @ 50x (margin $3,773), risk $1,508 (6.8% eq, warn-only). T1 1.0508, T2 1.0408.",
-      "price_source": "coinbase_exchange_public_ticker bid/ask/price 1.0638 @ 2026-11-11T16:03:43-05:00 ET (exch 2026-11-11T21:03:41.993998702Z) api.exchange.coinbase.com unauthenticated",
-      "override": null,
-      "paper_only": true,
-      "leverage": 50.0,
-      "margin": 3773.49,
-      "mark": 1.0535,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-11T17:51:11-05:00",
-      "unrealized_pnl": 1826.8,
-      "exposure": 186847.6
-    }
-  ],
-  "open_count": 1,
+  "open_positions": [],
+  "open_count": 0,
   "closed_positions": [
     {
       "type": "close",
@@ -3896,11 +3868,28 @@
       "reason": "EOD review: T1 83.81 hit (short): Coinbase public 5m 17:40 ET low 83.63 (<= 83.81); stop 85.68 never touched (maxH since 17:05 84.82). Paper close at stated T1 per desk exit convention.",
       "price_source": "coinbase_exchange_public_candles 5m (api.exchange.coinbase.com/products/SOL-USD/candles, unauthenticated); fill at stated T1 83.81",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-11_XRP-USD_463",
+      "symbol": "XRP-USD",
+      "side": "short",
+      "size": 177358.9,
+      "entry": 1.0638,
+      "exit": 1.0508,
+      "pnl": 2305.67,
+      "notional": 188674.4,
+      "leverage": 50.0,
+      "margin": 3773.49,
+      "closed_at": "2026-11-11T17:52:14-05:00",
+      "reason": "EOD review: T1 1.0508 hit (short): Coinbase public 5m 17:45 ET low 1.0495 (<= 1.0508); stop 1.0723 never touched (maxH since 17:05 1.0637). Paper close at stated T1 per desk exit convention.",
+      "price_source": "coinbase_exchange_public_candles 5m (api.exchange.coinbase.com/products/XRP-USD/candles, unauthenticated); fill at stated T1 1.0508",
+      "paper_only": true
     }
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 31095.63,
+  "max_risk_usd": 31574.5,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -383965.4,
   "paused": false,
@@ -3956,7 +3945,7 @@
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-11T17:52:14-05:00",
-      "note": "last: closed SOL-USD"
+      "note": "last: closed XRP-USD"
     },
     "Logger": {
       "status": "ready",
@@ -8569,16 +8558,14 @@
       "t": "2026-11-11T17:52:14-05:00",
       "equity": 31095.63,
       "kind": "close"
+    },
+    {
+      "t": "2026-11-11T17:52:14-05:00",
+      "equity": 31574.5,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-10T12:58:51-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "SOL-USD PASS (chaos: non-blocking)",
-      "reason": "vol $95.8M, spread 0.0243%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
-    },
     {
       "t": "2026-11-10T12:58:52-05:00",
       "agent": "Executor",
@@ -10032,6 +10019,14 @@
       "text": "PAPER CLOSE SOL-USD @ 83.81 \u00b7 P&L $+972.26",
       "reason": "EOD review: T1 83.81 hit (short): Coinbase public 5m 17:40 ET low 83.63 (<= 83.81); stop 85.68 never touched (maxH since 17:05 84.82). Paper close at stated T1 per desk exit convention.",
       "fill_id": "2026-11-11_SOL-USD_464"
+    },
+    {
+      "t": "2026-11-11T17:52:14-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE XRP-USD @ 1.0508 \u00b7 P&L $+2305.67",
+      "reason": "EOD review: T1 1.0508 hit (short): Coinbase public 5m 17:45 ET low 1.0495 (<= 1.0508); stop 1.0723 never touched (maxH since 17:05 1.0637). Paper close at stated T1 per desk exit convention.",
+      "fill_id": "2026-11-11_XRP-USD_463"
     }
   ],
   "scanner_feed": [
@@ -11013,10 +11008,10 @@
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 3773.49,
-  "exposure": 186847.6,
-  "buying_power": 1367933.9,
-  "effective_leverage": 6.01,
+  "margin_used": 0,
+  "exposure": 0.0,
+  "buying_power": 1578725.0,
+  "effective_leverage": 0.0,
   "operating_timezone": "America/New_York",
   "events": [
     {
