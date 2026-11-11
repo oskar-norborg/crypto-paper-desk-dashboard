@@ -3654,8 +3654,8 @@
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-10T18:04:01-05:00",
-      "note": "CHAOS: 1803 ET race cycle \u00b7 hold/rotate check \u00b7 eq $85,153 \u00b7 exposure $4,573,569 (53.71x)"
+      "last_run": "2026-11-10T19:01:57-05:00",
+      "note": "CHAOS: 1901 ET race cycle \u00b7 hold/rotate check \u00b7 eq $69,321 \u00b7 exposure $4,589,401 (66.21x)"
     },
     "Equity": {
       "status": "ready",
@@ -7872,15 +7872,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-09T17:04:47-05:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 968911 XRP-USD @ 1.0908 \u00b7 notional $1,056,888 (50x, margin $21,138) \u00b7 stop 1.1003 \u00b7 tgt 1.0799 \u00b7 risk $9,204.66",
-      "reason": "RACE redeploy 1704 ET: BTC/ETH tilt short. 24h -1.65%. XRP-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 1.0963; session 5m low 1.0854; 15m detail [('15:15', 1.0911, 1.097, 1.0904), ('15:30', 1.0926, 1.0947, 1.0869), ('15:45', 1.0934, 1.0995, 1.0915), ('16:00', 1.0902, 1.0953, 1.0876), ('16:15', 1.0951, 1.0963, 1.0897), ('16:30', 1.0901, 1.0959, 1.0854), ('16:45', 1.0949, 1.0953, 1.0897), ('17:00', 1.0908, 1.095, 1.0897)]. Notional $1,056,888 @ 50x (margin $21,138), risk $9,205 (12.3% eq, warn-only). T1 1.0799, T2 1.0699.",
-      "fill_id": "2026-11-09_XRP-USD_386",
-      "card": "RACE_XRP_SHORT_1704"
-    },
-    {
       "t": "2026-11-09T17:04:48-05:00",
       "agent": "Rug Check",
       "kind": "check",
@@ -9337,6 +9328,13 @@
       "kind": "plan",
       "text": "1901 ET: closed 0; opened {'BTC-USD': False}; held ['ETH-USD']",
       "reason": "race mode: direction=long; closes=0; opens_ok={'BTC-USD': False}; cash_pool after cushion; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-10T19:01:57-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 1901 ET race cycle \u00b7 hold/rotate check \u00b7 eq $69,321 \u00b7 exposure $4,589,401 (66.21x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
