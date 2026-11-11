@@ -7957,13 +7957,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-09T18:04:54-05:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: 1804 ET race cycle \u00b7 hold/rotate check \u00b7 eq $65,817 \u00b7 exposure $3,004,012 (45.64x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
-    {
       "t": "2026-11-09T19:08:11-05:00",
       "agent": "Scanner",
       "kind": "scan",
@@ -9417,6 +9410,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "CHAOS race cycle 2159 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
       "reason": "scheduled race cycle; scan scans/2026-11-10_2159_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-10T21:59:15-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH-USD short 644.2522 @ 2051.54: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-10T21:03:21-05:00: maxH=2060.37 minL=2043.55 (stop 2071.3; T1 2030.97/T2 2005.97); 15m max close=2059.38 (inv 2065.3). No close trigger."
     }
   ],
   "scanner_feed": [
