@@ -7957,13 +7957,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-09T19:08:16-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "SOL-USD short 2835.5 @ 86.5: HOLD \u2014 no trigger",
-      "reason": "Coinbase public 5m since 2026-11-09T18:04:51-05:00: maxH=86.68 minL=86.4 (stop 87.36; T1 85.46/T2 84.46); 15m max close=86.64 (inv 86.86). No close trigger."
-    },
-    {
       "t": "2026-11-09T19:08:26-05:00",
       "agent": "Rug Check",
       "kind": "check",
@@ -9418,6 +9411,13 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE ETH-USD @ 2055.44 \u00b7 P&L $-2512.58",
       "reason": "RACE rotate 2159 ET: cut ETH-USD short loser/broken-momentum BEFORE stop. uP&L $-2,506.14; stop_prog 20% of path to stop 2071.3 (mark 2055.44, entry 2051.54); symbol 15m bearish_tilt=False; book direction=long. Free margin for concentrated highest-conviction swing. Public mark close.",
       "fill_id": "2026-11-10_ETH-USD_432"
+    },
+    {
+      "t": "2026-11-10T21:59:21-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "XRP-USD short 538242.8 @ 1.0524: RACE ROTATE \u2014 thesis/momentum broken before stop",
+      "reason": "RACE rotate 2159 ET: cut XRP-USD short loser/broken-momentum BEFORE stop. uP&L $-1,345.61; stop_prog 18% of path to stop 1.0662 (mark 1.055, entry 1.0524); symbol 15m bearish_tilt=False; book direction=long. Free margin for concentrated highest-conviction swing. Public mark close."
     }
   ],
   "scanner_feed": [
