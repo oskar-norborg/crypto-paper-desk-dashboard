@@ -8301,13 +8301,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-10T07:59:52-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "XRP-USD short 828350.0 @ 1.0817: HOLD \u2014 no trigger",
-      "reason": "Coinbase public 5m since 2026-11-10T04:04:40-05:00: maxH=1.0896 minL=1.0737 (stop 1.0972; T1 1.0709/T2 1.0609); 15m max close=1.0883 (inv 1.0912). No close trigger."
-    },
-    {
       "t": "2026-11-10T08:00:12-05:00",
       "agent": "Rug Check",
       "kind": "check",
@@ -9768,6 +9761,13 @@
       "text": "PAPER CLOSE XRP-USD @ 1.0682 \u00b7 P&L $-1388.61",
       "reason": "STOP 1.0682 hit (short): Coinbase public 5m 10:35 ET high 1.0782 (>= 1.0682). Paper close at stated stop.",
       "fill_id": "2026-11-11_XRP-USD_451"
+    },
+    {
+      "t": "2026-11-11T11:01:39-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "SOL-USD short 877.9 @ 84.51: INVALIDATION \u2014 CLOSE at public mark 84.79",
+      "reason": "Coinbase public candles since 2026-11-11T09:00:21-05:00: maxH=85.29; minL=83.56; 15m max close=84.78; 15m min close=None. INV 15m close > 84.62 (short): Coinbase public 15m 10:30 ET close 84.66 (high 85.29/low 83.86). Thesis broken \u2014 close at public mark 84.79."
     }
   ],
   "scanner_feed": [
