@@ -4000,7 +4000,7 @@
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-11T18:02:41-05:00",
-      "note": "last: paper fill XRP-USD"
+      "note": "1802 ET: closed 0; opened {'ETH-USD': True, 'XRP-USD': True}; held ['ETH-USD', 'XRP-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -8633,13 +8633,6 @@
   "activity": [
     {
       "t": "2026-11-10T14:05:54-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "SOL-USD short 4797.2 @ 82.34: STOP 83.16 HIT \u2014 CLOSE at stated stop",
-      "reason": "Coinbase public candles since 2026-11-10T12:58:52-05:00: maxH=83.22; minL=82.09; 15m max close=83.03; 15m min close=None. STOP 83.16 hit (short): Coinbase public 5m 13:35 ET high 83.22 (>= 83.16). Paper close at stated stop."
-    },
-    {
-      "t": "2026-11-10T14:05:54-05:00",
       "agent": "Executor",
       "kind": "close",
       "text": "PAPER CLOSE SOL-USD @ 83.16 \u00b7 P&L $-3933.70",
@@ -10093,6 +10086,13 @@
       "reason": "RACE redeploy 1802 ET: BTC/ETH tilt short. 24h +0.10%. XRP-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 1.0637; session 5m low 1.0495; 15m detail [('16:15', 1.0644, 1.0673, 1.0636), ('16:30', 1.0616, 1.0664, 1.0612), ('16:45', 1.0602, 1.0626, 1.0596), ('17:00', 1.0613, 1.0636, 1.0597), ('17:15', 1.0586, 1.0637, 1.0581), ('17:30', 1.0536, 1.0594, 1.0526), ('17:45', 1.0524, 1.0552, 1.0495), ('18:00', 1.0563, 1.0563, 1.051)]. Notional $472,867 @ 50x (margin $9,457), risk $5,194 (16.3% eq, warn-only). T1 1.0455, T2 1.0355.",
       "fill_id": "2026-11-11_XRP-USD_469",
       "card": "RACE_XRP_SHORT_1802"
+    },
+    {
+      "t": "2026-11-11T18:02:41-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "1802 ET: closed 0; opened {'ETH-USD': True, 'XRP-USD': True}; held ['ETH-USD', 'XRP-USD']",
+      "reason": "race mode: direction=short; closes=0; opens_ok={'ETH-USD': True, 'XRP-USD': True}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": [
