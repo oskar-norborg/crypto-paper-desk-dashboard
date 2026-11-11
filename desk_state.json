@@ -3873,8 +3873,8 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-11T09:00:21-05:00",
-      "note": "0900 ET: closed 2; opened {'XRP-USD': True, 'SOL-USD': True}; held ['ETH-USD', 'SOL-USD', 'XRP-USD']"
+      "last_run": "2026-11-11T10:03:20-05:00",
+      "note": "1003 ET: closed 0; opened {}; held ['ETH-USD', 'SOL-USD', 'XRP-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -8302,13 +8302,6 @@
   "activity": [
     {
       "t": "2026-11-10T04:04:40-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "XRP-USD PASS (chaos: non-blocking)",
-      "reason": "vol $99.8M, spread 0.0277%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
-    },
-    {
-      "t": "2026-11-10T04:04:40-05:00",
       "agent": "Executor",
       "kind": "fill",
       "text": "PAPER FILL short 828350 XRP-USD @ 1.0817 \u00b7 notional $896,026 (50x, margin $17,921) \u00b7 stop 1.0972 \u00b7 tgt 1.0709 \u00b7 risk $12,839.42",
@@ -9769,6 +9762,13 @@
       "kind": "check",
       "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
       "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
+    },
+    {
+      "t": "2026-11-11T10:03:20-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "1003 ET: closed 0; opened {}; held ['ETH-USD', 'SOL-USD', 'XRP-USD']",
+      "reason": "race mode: direction=short; closes=0; opens_ok={}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": [
