@@ -8229,13 +8229,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-10T00:07:29-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "BTC-USD PASS (chaos: non-blocking)",
-      "reason": "vol $700.0M, spread 0.0000%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
-    },
-    {
-      "t": "2026-11-10T00:07:29-05:00",
       "agent": "Executor",
       "kind": "fill",
       "text": "PAPER FILL long 19.94 BTC-USD @ 74667.1 \u00b7 notional $1,488,862 (50x, margin $29,777) \u00b7 stop 74069.8 \u00b7 tgt 75563.1 \u00b7 risk $11,910.96",
@@ -9698,6 +9691,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "ETH-USD short 590.0288 @ 2057.4: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-11T04:02:13-05:00: maxH=2063.9 minL=2044.69 (stop 2073.86; T1 2036.83/T2 2011.83); 15m max close=2060.24 (inv 2066.04). No close trigger."
+    },
+    {
+      "t": "2026-11-11T09:00:13-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "XRP-USD short 207460.3 @ 1.0573: INVALIDATION \u2014 CLOSE at public mark 1.0601",
+      "reason": "Coinbase public candles since 2026-11-11T07:59:55-05:00: maxH=1.0617; minL=1.0533; 15m max close=1.06; 15m min close=None. INV 15m close > 1.0585 (short): Coinbase public 15m 08:45 ET close 1.06 (high 1.0617/low 1.0557). Thesis broken \u2014 close at public mark 1.0601."
     }
   ],
   "scanner_feed": [
