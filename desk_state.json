@@ -8299,13 +8299,6 @@
       "t": "2026-11-10T04:04:39-05:00",
       "agent": "Rug Check",
       "kind": "check",
-      "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
-      "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
-    },
-    {
-      "t": "2026-11-10T04:04:39-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
       "text": "ETH-USD PASS (chaos: non-blocking)",
       "reason": "vol $289.5M, spread 0.0005%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
     },
@@ -9766,6 +9759,13 @@
       "kind": "check",
       "text": "ETH-USD short 590.0288 @ 2057.4: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-11T04:02:13-05:00: maxH=2063.9 minL=2041.5 (stop 2073.86; T1 2036.83/T2 2011.83); 15m max close=2060.24 (inv 2066.04). No close trigger."
+    },
+    {
+      "t": "2026-11-11T10:03:13-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "XRP-USD short 163366.1 @ 1.0597: HOLD \u2014 no trigger",
+      "reason": "Coinbase public 5m since 2026-11-11T09:00:20-05:00: maxH=1.0607 minL=1.0514 (stop 1.0682; T1 1.0475/T2 1.0375); 15m max close=1.0574 (inv 1.0597). No close trigger."
     }
   ],
   "scanner_feed": [
@@ -10731,7 +10731,7 @@
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-11T10:03:12-05:00",
+  "updated_at": "2026-11-11T10:03:13-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
