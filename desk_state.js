@@ -3937,8 +3937,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-11T14:02:39-05:00",
-      "note": "logged 2026-11-11_XRP-USD_461"
+      "last_run": "2026-11-11T14:02:40-05:00",
+      "note": "CHAOS: 1402 ET race cycle \u00b7 hold/rotate check \u00b7 eq $21,818 \u00b7 exposure $1,088,387 (49.89x)"
     },
     "Equity": {
       "status": "ready",
@@ -8470,13 +8470,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-10T11:00:28-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 1100 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
-      "reason": "scheduled race cycle; scan scans/2026-11-10_1100_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
-    },
-    {
       "t": "2026-11-10T11:00:30-05:00",
       "agent": "Risk",
       "kind": "check",
@@ -9932,6 +9925,13 @@ window.__DESK_STATE__ = {
       "kind": "plan",
       "text": "1402 ET: closed 2; opened {'ETH-USD': True, 'XRP-USD': True}; held ['ETH-USD', 'XRP-USD']",
       "reason": "race mode: direction=short; closes=2; opens_ok={'ETH-USD': True, 'XRP-USD': True}; cash_pool after cushion; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-11T14:02:40-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 1402 ET race cycle \u00b7 hold/rotate check \u00b7 eq $21,818 \u00b7 exposure $1,088,387 (49.89x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
