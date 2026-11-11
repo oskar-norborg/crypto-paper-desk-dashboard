@@ -3629,7 +3629,7 @@ window.__DESK_STATE__ = {
     },
     "Rug Check": {
       "status": "idle",
-      "last_run": "2026-11-10T20:04:47-05:00",
+      "last_run": "2026-11-10T21:03:20-05:00",
       "note": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)"
     },
     "Sizer": {
@@ -7885,13 +7885,6 @@ window.__DESK_STATE__ = {
       "t": "2026-11-09T18:04:41-05:00",
       "agent": "Risk",
       "kind": "check",
-      "text": "BTC-USD long 21.86 @ 74807.81: HOLD \u2014 no trigger",
-      "reason": "Coinbase public 5m since 2026-11-09T15:06:18-05:00: maxH=75245.12 minL=74569.86 (stop 74209.35; T1 75705.5/T2 76105.5); 15m min close=74675.6 (inv 74525.45). No close trigger."
-    },
-    {
-      "t": "2026-11-09T18:04:41-05:00",
-      "agent": "Risk",
-      "kind": "check",
       "text": "ETH-USD long 256.601 @ 2125.26: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-09T15:06:18-05:00: maxH=2134.78 minL=2117.28 (stop 2104.01; T1 2157.14/T2 2187.14); 15m min close=2122.81 (inv 2120.1). No close trigger."
     },
@@ -9342,6 +9335,13 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE ETH-USD @ 2063.5 \u00b7 P&L $-68636.23",
       "reason": "STOP 2063.5 hit (short): Coinbase public 5m 20:40 ET high 2067.3 (>= 2063.5). Paper close at stated stop.",
       "fill_id": "2026-11-10_ETH-USD_422"
+    },
+    {
+      "t": "2026-11-10T21:03:20-05:00",
+      "agent": "Rug Check",
+      "kind": "check",
+      "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
+      "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
     }
   ],
   "scanner_feed": [
@@ -10307,7 +10307,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-10T21:03:16-05:00",
+  "updated_at": "2026-11-10T21:03:20-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
