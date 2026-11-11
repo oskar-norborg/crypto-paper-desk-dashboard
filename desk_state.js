@@ -3898,8 +3898,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-11T12:01:00-05:00",
-      "note": "1200 ET: closed 0; opened {}; held ['BTC-USD', 'ETH-USD']"
+      "last_run": "2026-11-11T13:04:29-05:00",
+      "note": "1304 ET: closed 0; opened {}; held ['BTC-USD', 'ETH-USD']"
     },
     "Logger": {
       "status": "ready",
@@ -8393,15 +8393,6 @@ window.__DESK_STATE__ = {
     {
       "t": "2026-11-10T09:06:01-05:00",
       "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 1.00156e+06 XRP-USD @ 1.0666 \u00b7 notional $1,068,263 (50x, margin $21,365) \u00b7 stop 1.0879 \u00b7 tgt 1.047 \u00b7 risk $21,333.22",
-      "reason": "RACE redeploy 0905 ET: BTC/ETH tilt short. 24h -3.04%. XRP-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 1.0839; session 5m low 1.05; 15m detail [('07:15', 1.0787, 1.0805, 1.0771), ('07:30', 1.0763, 1.0792, 1.0757), ('07:45', 1.0782, 1.0793, 1.0751), ('08:00', 1.0793, 1.0815, 1.077), ('08:15', 1.0779, 1.0803, 1.0751), ('08:30', 1.0671, 1.0839, 1.05), ('08:45', 1.0636, 1.0729, 1.0621), ('09:00', 1.0666, 1.0667, 1.0634)]. Notional $1,068,263 @ 50x (margin $21,365), risk $21,333 (29.9% eq, warn-only). T1 1.047, T2 1.037.",
-      "fill_id": "2026-11-10_XRP-USD_415",
-      "card": "RACE_XRP_SHORT_0905"
-    },
-    {
-      "t": "2026-11-10T09:06:01-05:00",
-      "agent": "Executor",
       "kind": "plan",
       "text": "0905 ET: closed 3; opened {'ETH-USD': True, 'XRP-USD': True}; held ['ETH-USD', 'XRP-USD']",
       "reason": "race mode: direction=short; closes=3; opens_ok={'ETH-USD': True, 'XRP-USD': True}; cash_pool after cushion; plateau not acceptable"
@@ -9854,6 +9845,13 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
       "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
+    },
+    {
+      "t": "2026-11-11T13:04:29-05:00",
+      "agent": "Executor",
+      "kind": "plan",
+      "text": "1304 ET: closed 0; opened {}; held ['BTC-USD', 'ETH-USD']",
+      "reason": "race mode: direction=long; closes=0; opens_ok={}; cash_pool after cushion; plateau not acceptable"
     }
   ],
   "scanner_feed": [
