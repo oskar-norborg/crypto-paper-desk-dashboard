@@ -4067,8 +4067,8 @@
   "agents": {
     "Scanner": {
       "status": "ready",
-      "last_run": "2026-11-11T21:59:50-05:00",
-      "note": "30/30 marks; ETH short stopped, re-short above squeeze high"
+      "last_run": "2026-11-12T00:01:57-05:00",
+      "note": "30/30 marks; ETH short working, stop trailed to 2054.7"
     },
     "Rug Check": {
       "status": "idle",
@@ -8800,13 +8800,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-10T17:08:29-05:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: 1708 ET race cycle \u00b7 hold/rotate check \u00b7 eq $53,281 \u00b7 exposure $4,720,384 (88.59x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
-    {
       "t": "2026-11-10T17:48:26-05:00",
       "agent": "eod_review",
       "kind": "exit_plan_update",
@@ -10274,6 +10267,13 @@
       "kind": "check",
       "text": "ETH short trail stop 2063.5 -> 2054.7 (breakeven+)",
       "reason": "5m since 21:59 ET open: max high 2057.33 (22:00) < stop 2063.5; low 2045.10 (00:00) \u2014 T1 2045 not touched; 15m lower highs 2054.58->2054.16->2052.87->2050.42, BTC rolled under 73600; hold toward T2 2034"
+    },
+    {
+      "t": "2026-11-12T00:01:57-05:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "30/30 marks; ETH short working, stop trailed to 2054.7",
+      "reason": "scheduled race cycle 00:00 slot; public Coinbase ticker/stats/book/candles; scans/2026-11-12_0001_scan.md"
     }
   ],
   "scanner_feed": [
@@ -11193,7 +11193,7 @@
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-12T00:01:49-05:00",
+  "updated_at": "2026-11-12T00:01:57-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
