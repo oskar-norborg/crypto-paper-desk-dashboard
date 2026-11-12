@@ -5,16 +5,44 @@
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 39255.24,
-  "cash": 39255.24,
+  "equity": 13690.44,
+  "cash": 517.51,
   "realized_pnl": -10744.76,
-  "unrealized_pnl": 0.0,
-  "day_pnl": -3764.73,
-  "day_pnl_pct": -0.08751,
+  "unrealized_pnl": -25564.8,
+  "day_pnl": -29329.53,
+  "day_pnl_pct": -0.68177,
   "day_baseline_date": "2026-11-12",
   "day_baseline_equity": 43019.97,
-  "open_positions": [],
-  "open_count": 0,
+  "open_positions": [
+    {
+      "id": "2026-11-12_ETH-USD_482",
+      "symbol": "ETH-USD",
+      "side": "short",
+      "size": 960.0,
+      "entry": 2017.59,
+      "notional": 1936886.4,
+      "stop": 2028.5,
+      "target": 2005.0,
+      "target2": 1995.0,
+      "invalidation": "15m close > 2028.5 or stop 2028.5",
+      "risk_usd": 10473.6,
+      "risk_pct_equity": 0.26681,
+      "opened_at": "2026-11-12T08:01:41-05:00",
+      "card": "RACE_ETH_SHORT_0801",
+      "reason": "RACE 0801 ET: ETH broke 04:00 range and 24h low 2033 -> session low 2011 @06:50 ET; 15m bounces capped 2027.89 -> 2026.82 -> 2022.6 -> 2023.7 (lower highs); BTC lower highs 73537 -> 73049 -> 72930, holding near 24h low 72643. Momentum short continuation toward 2005/1995.",
+      "price_source": "coinbase exchange public ticker 08:01:32 ET bid 2017.59",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 38737.73,
+      "mark": 2044.22,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-12T04:02:33-05:00",
+      "unrealized_pnl": -25564.8,
+      "exposure": 1962451.2
+    }
+  ],
+  "open_count": 1,
   "closed_positions": [
     {
       "type": "close",
@@ -4008,7 +4036,7 @@
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 39255.24,
+  "max_risk_usd": 13690.44,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -430199.7,
   "paused": false,
@@ -4063,13 +4091,13 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-12T08:01:26-05:00",
-      "note": "last: closed ETH-USD"
+      "last_run": "2026-11-12T08:01:41-05:00",
+      "note": "last: paper fill ETH-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-11T21:59:36-05:00",
-      "note": "logged 2026-11-11_ETH-USD_480"
+      "last_run": "2026-11-12T08:01:41-05:00",
+      "note": "logged 2026-11-12_ETH-USD_482"
     },
     "Equity": {
       "status": "ready",
@@ -8792,16 +8820,14 @@
       "t": "2026-11-12T08:01:26-05:00",
       "equity": 39255.24,
       "kind": "close"
+    },
+    {
+      "t": "2026-11-12T08:01:41-05:00",
+      "equity": 13690.44,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-10T17:48:58-05:00",
-      "agent": "eod_review",
-      "kind": "eod_review",
-      "text": "EOD review 2026-11-10: equity $72,220.35, gap $927,779.65 (7.22%), day +$14,935.34, 2 open, 65.1x, blown_up false -> reviews/2026-11-10.md",
-      "reason": "Scheduled weekday EOD paper review; final public marks 30/30; exit plans tightened, next-session plan written."
-    },
     {
       "t": "2026-11-10T18:03:51-05:00",
       "agent": "Scanner",
@@ -10271,6 +10297,15 @@
       "text": "PAPER CLOSE ETH-USD @ 2050.5 \u00b7 P&L $+3516.03",
       "reason": "Trailed stop 2050.5 hit: 05:25 ET 5m high 2051.4 (before T2 2034, first touched 06:30 ET). Locked gain on short.",
       "fill_id": "2026-11-11_ETH-USD_480"
+    },
+    {
+      "t": "2026-11-12T08:01:41-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 960 ETH-USD @ 2017.59 \u00b7 notional $1,936,886 (50x, margin $38,738) \u00b7 stop 2028.5 \u00b7 tgt 2005 \u00b7 risk $10,473.60",
+      "reason": "RACE 0801 ET: ETH broke 04:00 range and 24h low 2033 -> session low 2011 @06:50 ET; 15m bounces capped 2027.89 -> 2026.82 -> 2022.6 -> 2023.7 (lower highs); BTC lower highs 73537 -> 73049 -> 72930, holding near 24h low 72643. Momentum short continuation toward 2005/1995.",
+      "fill_id": "2026-11-12_ETH-USD_482",
+      "card": "RACE_ETH_SHORT_0801"
     }
   ],
   "scanner_feed": [
@@ -11190,7 +11225,7 @@
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-12T08:01:26-05:00",
+  "updated_at": "2026-11-12T08:01:41-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -11206,10 +11241,10 @@
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 0,
-  "exposure": 0.0,
-  "buying_power": 1962762.0,
-  "effective_leverage": 0.0,
+  "margin_used": 38737.73,
+  "exposure": 1962451.2,
+  "buying_power": 0.0,
+  "effective_leverage": 143.34,
   "operating_timezone": "America/New_York",
   "events": [
     {
