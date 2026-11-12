@@ -22,12 +22,12 @@ window.__DESK_STATE__ = {
       "size": 857.5694,
       "entry": 2054.6,
       "notional": 1761962.09,
-      "stop": 2063.5,
+      "stop": 2054.7,
       "target": 2045.0,
       "target2": 2034.0,
       "invalidation": "15m close > 2061 (reclaim of squeeze shelf) or stop 2063.5",
-      "risk_usd": 7632.37,
-      "risk_pct_equity": 0.21356,
+      "risk_usd": 85.76,
+      "risk_pct_equity": 0.0024,
       "opened_at": "2026-11-11T21:59:36-05:00",
       "card": "RACE_ETH_SHORT_2159",
       "reason": "RACE rotate 2159 ET: ETH short stopped 2053.6 on 21:10 squeeze; squeeze then faded \u2014 15m lower highs 2062.78 -> 2060.75 -> 2058.17, closes 2057.75 -> 2056.2 -> 2054.62; BTC lower high 74006 -> 73935 -> 73828, closing 73710. Short ETH-USD at bid, stop above 21:20 squeeze high 2062.78, T1 2045 (session lows 2044.59), T2 2034 (near 24h low 2033.16). ~50x full deploy, $500 cushion, risk ~21% eq warn-only.",
@@ -40,7 +40,15 @@ window.__DESK_STATE__ = {
       "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
       "mark_at": "2026-11-11T21:59:37-05:00",
       "unrealized_pnl": -25.73,
-      "exposure": 1761987.82
+      "exposure": 1761987.82,
+      "stop_history": [
+        {
+          "t": "2026-11-12T00:02:00-05:00",
+          "from": 2063.5,
+          "to": 2054.7,
+          "why": "trail to ~breakeven above 23:00 ET 15m high 2054.16 after ETH broke 2045.4 low; T1 2045 not touched (lows 2045.40 @23:35, 2045.10 @00:00)"
+        }
+      ]
     }
   ],
   "open_count": 1,
@@ -8788,13 +8796,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-10T17:08:27-05:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "1708 ET: closed 0; opened {}; held ['BTC-USD', 'ETH-USD']",
-      "reason": "race mode: direction=long; closes=0; opens_ok={}; cash_pool after cushion; plateau not acceptable"
-    },
-    {
       "t": "2026-11-10T17:08:29-05:00",
       "agent": "Logger",
       "kind": "batch",
@@ -10262,6 +10263,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "30/30 marks; ETH short stopped, re-short above squeeze high",
       "reason": "scheduled race cycle 22:00 slot; public Coinbase ticker/stats/book/candles; scans/2026-11-11_2159_scan.md"
+    },
+    {
+      "t": "2026-11-12T00:01:48-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "ETH short trail stop 2063.5 -> 2054.7 (breakeven+)",
+      "reason": "5m since 21:59 ET open: max high 2057.33 (22:00) < stop 2063.5; low 2045.10 (00:00) \u2014 T1 2045 not touched; 15m lower highs 2054.58->2054.16->2052.87->2050.42, BTC rolled under 73600; hold toward T2 2034"
     }
   ],
   "scanner_feed": [
@@ -11181,7 +11189,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-11T21:59:50-05:00",
+  "updated_at": "2026-11-12T00:01:48-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
