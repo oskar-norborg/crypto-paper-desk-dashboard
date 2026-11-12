@@ -6,44 +6,16 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 45207.04,
-  "cash": 500.0,
-  "realized_pnl": -3064.36,
-  "unrealized_pnl": -1728.6,
-  "day_pnl": 6810.5,
-  "day_pnl_pct": 0.17737,
+  "equity": 40009.94,
+  "cash": 40009.94,
+  "realized_pnl": -9990.06,
+  "unrealized_pnl": 0.0,
+  "day_pnl": 1613.4,
+  "day_pnl_pct": 0.04202,
   "day_baseline_date": "2026-11-11",
   "day_baseline_equity": 38396.54,
-  "open_positions": [
-    {
-      "id": "2026-11-11_ETH-USD_476",
-      "symbol": "ETH-USD",
-      "side": "long",
-      "size": 1129.8044,
-      "entry": 2055.03,
-      "notional": 2321781.94,
-      "stop": 2048.9,
-      "target": 2071.0,
-      "target2": 2090.0,
-      "invalidation": "15m close < 2049.3 (loss of higher-low sequence) or stop 2048.9",
-      "risk_usd": 6925.7,
-      "risk_pct_equity": 0.14756,
-      "opened_at": "2026-11-11T20:03:30-05:00",
-      "card": "RACE_ETH_LONG_2002",
-      "reason": "RACE rotate 2002 ET: shorts invalidated by 15m reclaim; BTC/ETH 15m now printing higher lows (ETH 2033.16 -> 2035.1 -> 2046 -> 2049.6 -> 2055.9 -> 2056.9; BTC 73411 -> 74000 range). Long ETH-USD on higher-low structure, stop below 19:15 ET low 2049.3, T1 above 2063.57 hourly high, T2 toward 24h high 2101.88. ~50x full deploy, risk ~$6.9k (~14.8% eq, warn-only).",
-      "price_source": "coinbase_exchange_public_ticker ask 2055.03 @ 2026-11-11T20:03:24-05:00 ET (exch 2026-11-12T01:03:23Z) api.exchange.coinbase.com unauthenticated",
-      "override": null,
-      "paper_only": true,
-      "leverage": 50.0,
-      "margin": 46435.64,
-      "mark": 2053.5,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-11T20:03:31-05:00",
-      "unrealized_pnl": -1728.6,
-      "exposure": 2320053.34
-    }
-  ],
-  "open_count": 1,
+  "open_positions": [],
+  "open_count": 0,
   "closed_positions": [
     {
       "type": "close",
@@ -3982,11 +3954,28 @@ window.__DESK_STATE__ = {
       "reason": "Invalidation hit: 15m close 1.0538 (19:15 ET) and 1.0588 (19:30 ET) > 1.052 shelf; thesis broken, stop 1.0603 not hit (maxH 1.0598)",
       "price_source": "coinbase_exchange_public_ticker ask 1.054 @ 2026-11-11T20:03:05-05:00 ET unauthenticated",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-11_ETH-USD_476",
+      "symbol": "ETH-USD",
+      "side": "long",
+      "size": 1129.8044,
+      "entry": 2055.03,
+      "exit": 2048.9,
+      "pnl": -6925.7,
+      "notional": 2321781.94,
+      "leverage": 50.0,
+      "margin": 46435.64,
+      "closed_at": "2026-11-11T20:59:27-05:00",
+      "reason": "STOP hit: 20:10 ET 5m low 2048.82 <= stop 2048.9 (later lows 2046.59/2045.21); higher-low thesis broken",
+      "price_source": "coinbase_exchange_public 5m candle 20:10 ET low 2048.82 (stop fill at 2048.9) api.exchange.coinbase.com unauthenticated; ticker 2048.44 @ 2026-11-12T01:59:19Z",
+      "paper_only": true
     }
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 45207.04,
+  "max_risk_usd": 40009.94,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -383965.4,
   "paused": false,
@@ -4041,8 +4030,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-11T20:03:30-05:00",
-      "note": "last: paper fill ETH-USD"
+      "last_run": "2026-11-11T20:59:27-05:00",
+      "note": "last: closed ETH-USD"
     },
     "Logger": {
       "status": "ready",
@@ -8725,16 +8714,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-11T20:03:32-05:00",
       "equity": 45207.04,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-11T20:59:27-05:00",
+      "equity": 40009.94,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-10T16:06:25-05:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: 1606 ET race cycle \u00b7 hold/rotate check \u00b7 eq $42,505 \u00b7 exposure $4,731,420 (111.31x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
     {
       "t": "2026-11-10T17:08:18-05:00",
       "agent": "Scanner",
@@ -10197,6 +10184,14 @@ window.__DESK_STATE__ = {
       "reason": "RACE rotate 2002 ET: shorts invalidated by 15m reclaim; BTC/ETH 15m now printing higher lows (ETH 2033.16 -> 2035.1 -> 2046 -> 2049.6 -> 2055.9 -> 2056.9; BTC 73411 -> 74000 range). Long ETH-USD on higher-low structure, stop below 19:15 ET low 2049.3, T1 above 2063.57 hourly high, T2 toward 24h high 2101.88. ~50x full deploy, risk ~$6.9k (~14.8% eq, warn-only).",
       "fill_id": "2026-11-11_ETH-USD_476",
       "card": "RACE_ETH_LONG_2002"
+    },
+    {
+      "t": "2026-11-11T20:59:27-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE ETH-USD @ 2048.9 \u00b7 P&L $-6925.70",
+      "reason": "STOP hit: 20:10 ET 5m low 2048.82 <= stop 2048.9 (later lows 2046.59/2045.21); higher-low thesis broken",
+      "fill_id": "2026-11-11_ETH-USD_476"
     }
   ],
   "scanner_feed": [
@@ -11162,7 +11157,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-11T20:03:32-05:00",
+  "updated_at": "2026-11-11T20:59:27-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -11178,10 +11173,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 46435.64,
-  "exposure": 2320053.34,
-  "buying_power": 0.0,
-  "effective_leverage": 51.32,
+  "margin_used": 0,
+  "exposure": 0.0,
+  "buying_power": 2000497.0,
+  "effective_leverage": 0.0,
   "operating_timezone": "America/New_York",
   "events": [
     {
