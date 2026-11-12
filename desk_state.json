@@ -5,16 +5,44 @@
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 46935.64,
-  "cash": 46935.64,
+  "equity": 49082.27,
+  "cash": 500.0,
   "realized_pnl": -3064.36,
-  "unrealized_pnl": 0.0,
-  "day_pnl": 8539.1,
-  "day_pnl_pct": 0.22239,
+  "unrealized_pnl": 2146.63,
+  "day_pnl": 10685.73,
+  "day_pnl_pct": 0.2783,
   "day_baseline_date": "2026-11-11",
   "day_baseline_equity": 38396.54,
-  "open_positions": [],
-  "open_count": 0,
+  "open_positions": [
+    {
+      "id": "2026-11-11_ETH-USD_476",
+      "symbol": "ETH-USD",
+      "side": "long",
+      "size": 1129.8044,
+      "entry": 2055.03,
+      "notional": 2321781.94,
+      "stop": 2048.9,
+      "target": 2071.0,
+      "target2": 2090.0,
+      "invalidation": "15m close < 2049.3 (loss of higher-low sequence) or stop 2048.9",
+      "risk_usd": 6925.7,
+      "risk_pct_equity": 0.14756,
+      "opened_at": "2026-11-11T20:03:30-05:00",
+      "card": "RACE_ETH_LONG_2002",
+      "reason": "RACE rotate 2002 ET: shorts invalidated by 15m reclaim; BTC/ETH 15m now printing higher lows (ETH 2033.16 -> 2035.1 -> 2046 -> 2049.6 -> 2055.9 -> 2056.9; BTC 73411 -> 74000 range). Long ETH-USD on higher-low structure, stop below 19:15 ET low 2049.3, T1 above 2063.57 hourly high, T2 toward 24h high 2101.88. ~50x full deploy, risk ~$6.9k (~14.8% eq, warn-only).",
+      "price_source": "coinbase_exchange_public_ticker ask 2055.03 @ 2026-11-11T20:03:24-05:00 ET (exch 2026-11-12T01:03:23Z) api.exchange.coinbase.com unauthenticated",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 46435.64,
+      "mark": 2056.93,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-11T19:06:55-05:00",
+      "unrealized_pnl": 2146.63,
+      "exposure": 2323928.56
+    }
+  ],
+  "open_count": 1,
   "closed_positions": [
     {
       "type": "close",
@@ -3957,7 +3985,7 @@
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 46935.64,
+  "max_risk_usd": 49082.27,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -383965.4,
   "paused": false,
@@ -4012,13 +4040,13 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-11T20:03:13-05:00",
-      "note": "last: closed XRP-USD"
+      "last_run": "2026-11-11T20:03:30-05:00",
+      "note": "last: paper fill ETH-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-11T19:06:57-05:00",
-      "note": "CHAOS: 1906 ET race cycle \u00b7 hold/rotate check \u00b7 eq $47,548 \u00b7 exposure $2,350,453 (49.43x)"
+      "last_run": "2026-11-11T20:03:30-05:00",
+      "note": "logged 2026-11-11_ETH-USD_476"
     },
     "Equity": {
       "status": "ready",
@@ -8686,16 +8714,14 @@
       "t": "2026-11-11T20:03:13-05:00",
       "equity": 46935.64,
       "kind": "close"
+    },
+    {
+      "t": "2026-11-11T20:03:30-05:00",
+      "equity": 49082.27,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-10T16:06:22-05:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "1606 ET: closed 0; opened {}; held ['BTC-USD', 'ETH-USD']",
-      "reason": "race mode: direction=long; closes=0; opens_ok={}; cash_pool after cushion; plateau not acceptable"
-    },
     {
       "t": "2026-11-10T16:06:25-05:00",
       "agent": "Logger",
@@ -10156,6 +10182,15 @@
       "text": "PAPER CLOSE XRP-USD @ 1.054 \u00b7 P&L $-1387.82",
       "reason": "Invalidation hit: 15m close 1.0538 (19:15 ET) and 1.0588 (19:30 ET) > 1.052 shelf; thesis broken, stop 1.0603 not hit (maxH 1.0598)",
       "fill_id": "2026-11-11_XRP-USD_473"
+    },
+    {
+      "t": "2026-11-11T20:03:30-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 1129.8 ETH-USD @ 2055.03 \u00b7 notional $2,321,782 (50x, margin $46,436) \u00b7 stop 2048.9 \u00b7 tgt 2071 \u00b7 risk $6,925.70",
+      "reason": "RACE rotate 2002 ET: shorts invalidated by 15m reclaim; BTC/ETH 15m now printing higher lows (ETH 2033.16 -> 2035.1 -> 2046 -> 2049.6 -> 2055.9 -> 2056.9; BTC 73411 -> 74000 range). Long ETH-USD on higher-low structure, stop below 19:15 ET low 2049.3, T1 above 2063.57 hourly high, T2 toward 24h high 2101.88. ~50x full deploy, risk ~$6.9k (~14.8% eq, warn-only).",
+      "fill_id": "2026-11-11_ETH-USD_476",
+      "card": "RACE_ETH_LONG_2002"
     }
   ],
   "scanner_feed": [
@@ -11121,7 +11156,7 @@
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-11T20:03:13-05:00",
+  "updated_at": "2026-11-11T20:03:30-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -11137,10 +11172,10 @@
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 0,
-  "exposure": 0.0,
-  "buying_power": 2346782.0,
-  "effective_leverage": 0.0,
+  "margin_used": 46435.64,
+  "exposure": 2323928.56,
+  "buying_power": 130184.94,
+  "effective_leverage": 47.35,
   "operating_timezone": "America/New_York",
   "events": [
     {
