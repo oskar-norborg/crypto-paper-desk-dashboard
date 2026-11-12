@@ -4100,7 +4100,7 @@ window.__DESK_STATE__ = {
   "agents": {
     "Scanner": {
       "status": "ready",
-      "last_run": "2026-11-12T16:59:28-05:00",
+      "last_run": "2026-11-12T18:06:22-05:00",
       "note": "30 marks, 0 failed; no trigger, flat"
     },
     "Rug Check": {
@@ -8893,13 +8893,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-10T20:04:47-05:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "2004 ET: closed 0; opened {'XRP-USD': False, 'SOL-USD': False}; held ['ETH-USD']",
-      "reason": "race mode: direction=short; closes=0; opens_ok={'XRP-USD': False, 'SOL-USD': False}; cash_pool after cushion; plateau not acceptable"
-    },
-    {
       "t": "2026-11-10T20:04:49-05:00",
       "agent": "Logger",
       "kind": "batch",
@@ -10376,6 +10369,13 @@ window.__DESK_STATE__ = {
       "kind": "review",
       "text": "EOD review 2026-11-12: equity $71,308.92 flat, day +$28,288.95 (+65.76%), gap to $1M $928,691.08",
       "reason": "Scheduled EOD paper review; final public marks ~17:50 ET; reviews/2026-11-12.md with Fri short-continuation plan (ETH/BTC/SOL)"
+    },
+    {
+      "t": "2026-11-12T18:06:22-05:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "30 marks, 0 failed; no trigger, flat",
+      "reason": "BTC inside 71150-72150 box (low 71207.79); no high-conviction edge; report scans/2026-11-12_1806_scan.md"
     }
   ],
   "scanner_feed": [
@@ -11271,7 +11271,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-12T17:51:09-05:00",
+  "updated_at": "2026-11-12T18:06:22-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
