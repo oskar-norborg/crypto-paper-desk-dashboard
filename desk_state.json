@@ -21,11 +21,11 @@
       "size": 857.5694,
       "entry": 2054.6,
       "notional": 1761962.09,
-      "stop": 2054.7,
+      "stop": 2050.5,
       "target": 2045.0,
       "target2": 2034.0,
-      "invalidation": "15m close > 2061 (reclaim of squeeze shelf) or stop 2063.5",
-      "risk_usd": 85.76,
+      "invalidation": "15m close > 2050.5 or stop 2050.5",
+      "risk_usd": 5136.84,
       "risk_pct_equity": 0.0024,
       "opened_at": "2026-11-11T21:59:36-05:00",
       "card": "RACE_ETH_SHORT_2159",
@@ -46,6 +46,12 @@
           "from": 2063.5,
           "to": 2054.7,
           "why": "trail to ~breakeven above 23:00 ET 15m high 2054.16 after ETH broke 2045.4 low; T1 2045 not touched (lows 2045.40 @23:35, 2045.10 @00:00)"
+        },
+        {
+          "t": "2026-11-12T04:02:28-05:00",
+          "from": 2054.7,
+          "to": 2050.5,
+          "why": "T1 2045 touched (5m low 2044.01 @00:00 ET; session low 2037.01 @01:55 ET); holding for T2 2034 and trailing above 03:00 ET 15m high 2050.39 \u2014 locks ~+$3.5k"
         }
       ]
     }
@@ -11198,7 +11204,7 @@
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-12T04:01:37-05:00",
+  "updated_at": "2026-11-12T04:02:28-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
