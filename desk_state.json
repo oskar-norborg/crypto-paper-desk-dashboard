@@ -8637,13 +8637,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-10T15:05:12-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 1505 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
-      "reason": "scheduled race cycle; scan scans/2026-11-10_1505_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
-    },
-    {
       "t": "2026-11-10T15:05:15-05:00",
       "agent": "Risk",
       "kind": "check",
@@ -10098,6 +10091,13 @@
       "text": "PAPER CLOSE ETH-USD @ 2038.28 \u00b7 P&L $+11028.97",
       "reason": "T1 2038.28 hit (short): Coinbase public 5m 18:10 ET low 2033.16 (<= 2038.28); T2 2013.28 NOT hit; stop 2083.44 never touched (maxH 2059.06); inv 15m clear (maxC15 2056.99). Paper close at stated T1.",
       "fill_id": "2026-11-11_ETH-USD_468"
+    },
+    {
+      "t": "2026-11-11T19:06:46-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "XRP-USD short 447748.7 @ 1.0561: T1 1.0455 HIT \u2014 CLOSE at stated T1",
+      "reason": "Coinbase public candles since 2026-11-11T18:02:41-05:00: maxH=1.0544; minL=1.0395; 15m max close=1.052; 15m min close=None. T1 1.0455 hit (short): Coinbase public 5m 18:10 ET low 1.0395 (<= 1.0455); T2 1.0355 NOT hit; stop 1.0677 never touched (maxH 1.0544); inv 15m clear (maxC15 1.052). Paper close at stated T1."
     }
   ],
   "scanner_feed": [
