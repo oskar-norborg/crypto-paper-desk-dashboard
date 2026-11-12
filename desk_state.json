@@ -4038,8 +4038,8 @@
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-11T19:06:54-05:00",
-      "note": "logged 2026-11-11_XRP-USD_473"
+      "last_run": "2026-11-11T19:06:57-05:00",
+      "note": "CHAOS: 1906 ET race cycle \u00b7 hold/rotate check \u00b7 eq $47,548 \u00b7 exposure $2,350,453 (49.43x)"
     },
     "Equity": {
       "status": "ready",
@@ -8704,13 +8704,6 @@
       "t": "2026-11-10T16:06:14-05:00",
       "agent": "Risk",
       "kind": "check",
-      "text": "ETH-USD short 2239.355 @ 2032.85: HOLD \u2014 no trigger",
-      "reason": "Coinbase public 5m since 2026-11-10T11:00:40-05:00: maxH=2061.98 minL=2007.62 (stop 2089.85; T1 2000.24/T2 1975.24); 15m max close=2060.7 (inv 2083.85). No close trigger."
-    },
-    {
-      "t": "2026-11-10T16:06:14-05:00",
-      "agent": "Risk",
-      "kind": "check",
       "text": "BTC-USD long 1.55 @ 73243.7: HOLD \u2014 no trigger",
       "reason": "Coinbase public 5m since 2026-11-10T15:05:25-05:00: maxH=73887 minL=73298.18 (stop 72657.75; T1 74122.62/T2 74522.62); 15m min close=73583.09 (inv 73286.28). No close trigger."
     },
@@ -10165,6 +10158,13 @@
       "kind": "plan",
       "text": "1906 ET: closed 2; opened {'ETH-USD': True, 'XRP-USD': True}; held ['ETH-USD', 'XRP-USD']",
       "reason": "race mode: direction=short; closes=2; opens_ok={'ETH-USD': True, 'XRP-USD': True}; cash_pool after cushion; plateau not acceptable"
+    },
+    {
+      "t": "2026-11-11T19:06:57-05:00",
+      "agent": "Logger",
+      "kind": "batch",
+      "text": "CHAOS: 1906 ET race cycle \u00b7 hold/rotate check \u00b7 eq $47,548 \u00b7 exposure $2,350,453 (49.43x)",
+      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
     }
   ],
   "scanner_feed": [
