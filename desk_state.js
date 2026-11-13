@@ -4240,8 +4240,8 @@ window.__DESK_STATE__ = {
   "agents": {
     "Scanner": {
       "status": "ready",
-      "last_run": "2026-11-13T09:06:31-05:00",
-      "note": "30/30 marks; ETH short stopped, re-short failed squeeze"
+      "last_run": "2026-11-13T10:02:30-05:00",
+      "note": "30/30 marks; ETH short working (stop trailed 1968), new BTC short 21.5@68787.63"
     },
     "Rug Check": {
       "status": "idle",
@@ -9133,15 +9133,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-10T21:59:23-05:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL long 17.26 BTC-USD @ 73520.7 \u00b7 notional $1,268,967 (50x, margin $25,379) \u00b7 stop 72932.5 \u00b7 tgt 74402.9 \u00b7 risk $10,151.81",
-      "reason": "RACE redeploy 2159 ET: BTC/ETH tilt long. 24h -1.66%. BTC-USD concentrated long under BTC/ETH reclaim (not bearish 15m); stop below floor 73110; session 5m low 73110; 15m detail [('20:00', 73308.57, 73462.93, 73255.26), ('20:15', 73682.77, 73709.52, 73252.81), ('20:30', 73756.29, 73929.39, 73606.41), ('20:45', 73496.53, 73785.72, 73496.52), ('21:00', 73343.7, 73570.57, 73296.53), ('21:15', 73258.46, 73408.79, 73150.9), ('21:30', 73639.15, 73639.15, 73110), ('21:45', 73520.67, 73687, 73453.38)]. Notional $1,268,967 @ 50x (margin $25,379), risk $10,152 (29.9% eq, warn-only). T1 74402.92, T2 74802.92.",
-      "fill_id": "2026-11-10_BTC-USD_436",
-      "card": "RACE_BTC_LONG_2159"
-    },
-    {
       "t": "2026-11-10T21:59:24-05:00",
       "agent": "Rug Check",
       "kind": "check",
@@ -10628,6 +10619,13 @@ window.__DESK_STATE__ = {
       "reason": "RACE 1000 ET: BTC 15m close 68,935 < 69,000 trigger (09:45 bar) after 08:30 70.1k spike rejection; 15m lower highs 70.1k->69.8k->69.4k, 24h -3.9%, ETH breaking down in tandem. Short continuation, stop above 09:30 15m high 69,410.8, targets 68,000 / 67,555 (24h low).",
       "fill_id": "2026-11-13_BTC-USD_499",
       "card": "RACE_BTC_SHORT_1000"
+    },
+    {
+      "t": "2026-11-13T10:02:30-05:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "30/30 marks; ETH short working (stop trailed 1968), new BTC short 21.5@68787.63",
+      "reason": "1000 ET cycle; scans/2026-11-13_1001_scan.md"
     }
   ],
   "scanner_feed": [
@@ -11542,7 +11540,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-13T10:02:21-05:00",
+  "updated_at": "2026-11-13T10:02:30-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
