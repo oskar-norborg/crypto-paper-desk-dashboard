@@ -4236,7 +4236,7 @@ window.__DESK_STATE__ = {
   "agents": {
     "Scanner": {
       "status": "ready",
-      "last_run": "2026-11-13T15:04:31-05:00",
+      "last_run": "2026-11-13T16:03:56-05:00",
       "note": "30 marks, flat, no trigger"
     },
     "Rug Check": {
@@ -9160,13 +9160,6 @@ window.__DESK_STATE__ = {
   "activity": [
     {
       "t": "2026-11-10T23:59:04-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "ETH-USD long 205.8629 @ 2055.44: RACE ROTATE \u2014 thesis/momentum broken before stop",
-      "reason": "RACE rotate 2358 ET: cut ETH-USD long loser/broken-momentum BEFORE stop. uP&L $1,247.53; stop_prog -29% of path to stop 2034.89 (mark 2061.39, entry 2055.44); symbol 15m bearish_tilt=True; book direction=short. Free margin for concentrated highest-conviction swing. Public mark close."
-    },
-    {
-      "t": "2026-11-10T23:59:04-05:00",
       "agent": "Executor",
       "kind": "close",
       "text": "PAPER CLOSE ETH-USD @ 2061.39 \u00b7 P&L $+1224.88",
@@ -10655,6 +10648,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "30 marks, flat, no trigger",
       "reason": "ETH>1945 but BTC<69070; conjunctive long not met; short not met; md: scans/2026-11-13_1504_scan.md"
+    },
+    {
+      "t": "2026-11-13T16:03:56-05:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "30 marks, flat, no trigger",
+      "reason": "16:00 ET: no closed 15m trigger; drifting toward short trigger; md: scans/2026-11-13_1603_scan.md"
     }
   ],
   "scanner_feed": [
@@ -11566,7 +11566,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-13T15:04:31-05:00",
+  "updated_at": "2026-11-13T16:03:56-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
