@@ -5,12 +5,12 @@
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 99535.24,
-  "cash": 39761.14,
+  "equity": 88065.63,
+  "cash": 10182.46,
   "realized_pnl": 48620.24,
-  "unrealized_pnl": 915.0,
-  "day_pnl": -10561.2,
-  "day_pnl_pct": -0.09593,
+  "unrealized_pnl": -10554.61,
+  "day_pnl": -22030.81,
+  "day_pnl_pct": -0.2001,
   "day_baseline_date": "2026-11-13",
   "day_baseline_equity": 110096.44,
   "open_positions": [
@@ -40,9 +40,36 @@
       "mark_at": "2026-11-13T09:06:19-05:00",
       "unrealized_pnl": 915.0,
       "exposure": 2942040.0
+    },
+    {
+      "id": "2026-11-13_BTC-USD_499",
+      "symbol": "BTC-USD",
+      "side": "short",
+      "size": 21.5,
+      "entry": 68787.63,
+      "notional": 1478934.05,
+      "stop": 69420.0,
+      "target": 68000.0,
+      "target2": 67555.0,
+      "invalidation": "15m close > 69,300 or stop 69,420",
+      "risk_usd": 13595.95,
+      "risk_pct_equity": 0.13659,
+      "opened_at": "2026-11-13T10:02:16-05:00",
+      "card": "RACE_BTC_SHORT_1000",
+      "reason": "RACE 1000 ET: BTC 15m close 68,935 < 69,000 trigger (09:45 bar) after 08:30 70.1k spike rejection; 15m lower highs 70.1k->69.8k->69.4k, 24h -3.9%, ETH breaking down in tandem. Short continuation, stop above 09:30 15m high 69,410.8, targets 68,000 / 67,555 (24h low).",
+      "price_source": "coinbase exchange public ticker 10:02:07 ET bid 68787.63",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 29578.68,
+      "mark": 69321.1,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-13T09:06:19-05:00",
+      "unrealized_pnl": -11469.61,
+      "exposure": 1490403.65
     }
   ],
-  "open_count": 1,
+  "open_count": 2,
   "closed_positions": [
     {
       "type": "close",
@@ -4172,7 +4199,7 @@
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 99535.24,
+  "max_risk_usd": 88065.63,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -1100964.4,
   "paused": false,
@@ -4227,13 +4254,13 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-13T09:06:19-05:00",
-      "note": "last: paper fill ETH-USD"
+      "last_run": "2026-11-13T10:02:16-05:00",
+      "note": "last: paper fill BTC-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-13T09:06:19-05:00",
-      "note": "logged 2026-11-13_ETH-USD_498"
+      "last_run": "2026-11-13T10:02:16-05:00",
+      "note": "logged 2026-11-13_BTC-USD_499"
     },
     "Equity": {
       "status": "ready",
@@ -9091,16 +9118,14 @@
       "t": "2026-11-13T09:06:20-05:00",
       "equity": 99535.24,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-13T10:02:16-05:00",
+      "equity": 88065.63,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-10T21:59:23-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "BTC-USD PASS (chaos: non-blocking)",
-      "reason": "vol $807.4M, spread 0.0000%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
-    },
     {
       "t": "2026-11-10T21:59:23-05:00",
       "agent": "Executor",
@@ -10588,6 +10613,15 @@
       "kind": "adjust",
       "text": "ETH-USD short stop trailed 1981 \u2192 1968 (caps loss at -$9,045)",
       "reason": "above 09:40 ET 5m high 1967.80; Coinbase public 5m candles"
+    },
+    {
+      "t": "2026-11-13T10:02:16-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 21.5 BTC-USD @ 68787.6 \u00b7 notional $1,478,934 (50x, margin $29,579) \u00b7 stop 69420 \u00b7 tgt 68000 \u00b7 risk $13,595.95",
+      "reason": "RACE 1000 ET: BTC 15m close 68,935 < 69,000 trigger (09:45 bar) after 08:30 70.1k spike rejection; 15m lower highs 70.1k->69.8k->69.4k, 24h -3.9%, ETH breaking down in tandem. Short continuation, stop above 09:30 15m high 69,410.8, targets 68,000 / 67,555 (24h low).",
+      "fill_id": "2026-11-13_BTC-USD_499",
+      "card": "RACE_BTC_SHORT_1000"
     }
   ],
   "scanner_feed": [
@@ -11518,10 +11552,10 @@
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 58859.1,
-  "exposure": 2942040.0,
-  "buying_power": 2034722.0,
-  "effective_leverage": 29.56,
+  "margin_used": 88437.78,
+  "exposure": 4432443.65,
+  "buying_power": 0.0,
+  "effective_leverage": 50.33,
   "operating_timezone": "America/New_York",
   "events": [
     {
