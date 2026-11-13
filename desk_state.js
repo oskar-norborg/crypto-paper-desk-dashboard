@@ -6,12 +6,12 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 74606.13,
-  "cash": 36583.37,
+  "equity": 66596.13,
+  "cash": 22156.37,
   "realized_pnl": 21308.92,
-  "unrealized_pnl": 3297.21,
-  "day_pnl": 31586.16,
-  "day_pnl_pct": 0.73422,
+  "unrealized_pnl": -4712.79,
+  "day_pnl": 23576.16,
+  "day_pnl_pct": 0.54803,
   "day_baseline_date": "2026-11-12",
   "day_baseline_equity": 43019.97,
   "open_positions": [
@@ -41,9 +41,36 @@ window.__DESK_STATE__ = {
       "mark_at": "2026-11-12T21:08:09-05:00",
       "unrealized_pnl": 3297.21,
       "exposure": 1732980.3
+    },
+    {
+      "id": "2026-11-12_SOL-USD_489",
+      "symbol": "SOL-USD",
+      "side": "short",
+      "size": 9000.0,
+      "entry": 80.15,
+      "notional": 721350.0,
+      "stop": 80.75,
+      "target": 79.0,
+      "target2": 78.5,
+      "invalidation": "15m close > 80.50 or stop 80.75 (above 21:30 15m high 80.71)",
+      "risk_usd": 5400.0,
+      "risk_pct_equity": 0.07238,
+      "opened_at": "2026-11-12T22:03:46-05:00",
+      "card": "RACE_SOL_SHORT_2203",
+      "reason": "RACE 2203 ET: prior trigger hit (15m close 80.73 <80.90 @21:00); new 24h low 79.52 @21:45; 15m lower highs 81.22->81.02->80.71->80.37; BTC/ETH making new lows. Continuation short.",
+      "price_source": "coinbase exchange public ticker 22:03:38 ET bid 80.15",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 14427.0,
+      "mark": 81.04,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-12T21:08:10-05:00",
+      "unrealized_pnl": -8010.0,
+      "exposure": 729360.0
     }
   ],
-  "open_count": 1,
+  "open_count": 2,
   "closed_positions": [
     {
       "type": "close",
@@ -4088,7 +4115,7 @@ window.__DESK_STATE__ = {
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 74606.13,
+  "max_risk_usd": 66596.13,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -430199.7,
   "paused": false,
@@ -4143,13 +4170,13 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-12T20:03:45-05:00",
-      "note": "last: paper fill BTC-USD"
+      "last_run": "2026-11-12T22:03:46-05:00",
+      "note": "last: paper fill SOL-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-12T20:03:45-05:00",
-      "note": "logged 2026-11-12_BTC-USD_488"
+      "last_run": "2026-11-12T22:03:46-05:00",
+      "note": "logged 2026-11-12_SOL-USD_489"
     },
     "Equity": {
       "status": "ready",
@@ -8932,16 +8959,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-12T21:08:10-05:00",
       "equity": 74606.13,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-12T22:03:46-05:00",
+      "equity": 66596.13,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-10T21:03:21-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "ETH-USD PASS (chaos: non-blocking)",
-      "reason": "vol $349.6M, spread 0.0063%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
-    },
     {
       "t": "2026-11-10T21:03:21-05:00",
       "agent": "Executor",
@@ -10420,6 +10445,15 @@ window.__DESK_STATE__ = {
       "kind": "check",
       "text": "BTC short trail stop 71450 -> 70650 (locks ~+$5.3k)",
       "reason": "5m since 20:03 ET: max high 71142.88 < 71450; low 69822 (21:50) missed T1 69800 by $22; 15m lower highs 70884->70647->70440->70285; hold for T1 69800/T2 69300"
+    },
+    {
+      "t": "2026-11-12T22:03:46-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 9000 SOL-USD @ 80.15 \u00b7 notional $721,350 (50x, margin $14,427) \u00b7 stop 80.75 \u00b7 tgt 79 \u00b7 risk $5,400.00",
+      "reason": "RACE 2203 ET: prior trigger hit (15m close 80.73 <80.90 @21:00); new 24h low 79.52 @21:45; 15m lower highs 81.22->81.02->80.71->80.37; BTC/ETH making new lows. Continuation short.",
+      "fill_id": "2026-11-12_SOL-USD_489",
+      "card": "RACE_SOL_SHORT_2203"
     }
   ],
   "scanner_feed": [
@@ -11338,7 +11372,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-12T22:03:45-05:00",
+  "updated_at": "2026-11-12T22:03:46-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -11354,10 +11388,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 34725.55,
-  "exposure": 1732980.3,
-  "buying_power": 1997326.2,
-  "effective_leverage": 23.23,
+  "margin_used": 49152.55,
+  "exposure": 2462340.3,
+  "buying_power": 867466.2,
+  "effective_leverage": 36.97,
   "operating_timezone": "America/New_York",
   "events": [
     {
