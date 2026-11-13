@@ -6,42 +6,15 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 89375.8,
-  "cash": 22156.37,
-  "realized_pnl": 21308.92,
-  "unrealized_pnl": 18066.88,
-  "day_pnl": 46355.83,
-  "day_pnl_pct": 1.07754,
-  "day_baseline_date": "2026-11-12",
-  "day_baseline_equity": 43019.97,
+  "equity": 110096.44,
+  "cash": 95309.44,
+  "realized_pnl": 59736.44,
+  "unrealized_pnl": 360.0,
+  "day_pnl": 0.0,
+  "day_pnl_pct": 0.0,
+  "day_baseline_date": "2026-11-13",
+  "day_baseline_equity": 110096.44,
   "open_positions": [
-    {
-      "id": "2026-11-12_BTC-USD_488",
-      "symbol": "BTC-USD",
-      "side": "short",
-      "size": 24.5,
-      "entry": 70868.47,
-      "notional": 1736277.52,
-      "stop": 70650.0,
-      "target": 69800.0,
-      "target2": 69300.0,
-      "invalidation": "15m close > 70500 (above 21:15/21:30 lower highs) or trailed stop 70650 (above 21:20 5m high 70647.67)",
-      "risk_usd": 14247.48,
-      "risk_pct_equity": 0.1998,
-      "opened_at": "2026-11-12T20:03:45-05:00",
-      "card": "RACE_BTC_SHORT_2003",
-      "reason": "RACE 2003 ET: prior-cycle trigger hit \u2014 BTC 15m closed 70873 (<71000) at 19:30 after sweeping new 24h low 70600; 15m lower highs 71429->71337->71184->71095->71083 with 19:45 bounce failing at 71095; day -3.8%, ETH/SOL/majors red. Continuation short in deepest-liquidity major.",
-      "price_source": "coinbase exchange public ticker 20:03:39 ET bid 70868.47",
-      "override": null,
-      "paper_only": true,
-      "leverage": 50.0,
-      "margin": 34725.55,
-      "mark": 70145.74,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-12T22:03:46-05:00",
-      "unrealized_pnl": 17706.88,
-      "exposure": 1718570.63
-    },
     {
       "id": "2026-11-12_SOL-USD_489",
       "symbol": "SOL-USD",
@@ -70,7 +43,7 @@ window.__DESK_STATE__ = {
       "exposure": 720990.0
     }
   ],
-  "open_count": 2,
+  "open_count": 1,
   "closed_positions": [
     {
       "type": "close",
@@ -4111,13 +4084,30 @@ window.__DESK_STATE__ = {
       "reason": "Momentum invalidated before stop: 15m higher high 71644.7 (10:55 ET) over prior 15m highs 71514/71432 plus higher lows 71151->71202->71248->71258; lower-high continuation thesis broken with price ~240 below 71800 stop. Rotate loser per race rule.",
       "price_source": "coinbase exchange public ticker 11:01:25 ET ask 71558.87",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-12_BTC-USD_488",
+      "symbol": "BTC-USD",
+      "side": "short",
+      "size": 24.5,
+      "entry": 70868.47,
+      "exit": 69300.0,
+      "pnl": 38427.52,
+      "notional": 1736277.52,
+      "leverage": 50.0,
+      "margin": 34725.55,
+      "closed_at": "2026-11-13T00:01:37-05:00",
+      "reason": "T2 69300 hit: 22:20 ET 5m low 68825.6 (T1 69800 hit 22:10 ET low 69636.5); trailed stop 70650 never touched (max 5m high since 22:03 = 70238.7 @22:05)",
+      "price_source": "coinbase exchange public 5m candles (22:20 ET low 68825.6), api.exchange.coinbase.com \u2014 fill at T2 limit 69300",
+      "paper_only": true
     }
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 89375.8,
+  "max_risk_usd": 110096.44,
   "daily_loss_pause_pct": -10.0,
-  "daily_loss_pause_usd": -430199.7,
+  "daily_loss_pause_usd": -1100964.4,
   "paused": false,
   "pause_reason": null,
   "watchlist": [
@@ -4170,8 +4160,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-12T22:03:46-05:00",
-      "note": "last: paper fill SOL-USD"
+      "last_run": "2026-11-13T00:01:37-05:00",
+      "note": "last: closed BTC-USD"
     },
     "Logger": {
       "status": "ready",
@@ -8969,16 +8959,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-12T22:03:47-05:00",
       "equity": 89375.8,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-13T00:01:37-05:00",
+      "equity": 110096.44,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-10T21:03:21-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "XRP-USD PASS (chaos: non-blocking)",
-      "reason": "vol $110.5M, spread 0.0190%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
-    },
     {
       "t": "2026-11-10T21:03:21-05:00",
       "agent": "Executor",
@@ -10457,6 +10445,14 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "22:03 ET scan: 30/30 marks; HOLD BTC short (stop trailed 70650), SOL short 9000 @80.15",
       "reason": "SOL 15m <80.90 trigger hit; report scans/2026-11-12_2203_scan.md"
+    },
+    {
+      "t": "2026-11-13T00:01:37-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE BTC-USD @ 69300 \u00b7 P&L $+38427.52",
+      "reason": "T2 69300 hit: 22:20 ET 5m low 68825.6 (T1 69800 hit 22:10 ET low 69636.5); trailed stop 70650 never touched (max 5m high since 22:03 = 70238.7 @22:05)",
+      "fill_id": "2026-11-12_BTC-USD_488"
     }
   ],
   "scanner_feed": [
@@ -11375,7 +11371,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-12T22:03:56-05:00",
+  "updated_at": "2026-11-13T00:01:37-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -11391,10 +11387,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 49152.55,
-  "exposure": 2439560.63,
-  "buying_power": 2029229.37,
-  "effective_leverage": 27.3,
+  "margin_used": 14427.0,
+  "exposure": 720990.0,
+  "buying_power": 4783832.0,
+  "effective_leverage": 6.55,
   "operating_timezone": "America/New_York",
   "events": [
     {
