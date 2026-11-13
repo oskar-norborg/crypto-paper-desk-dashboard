@@ -4154,8 +4154,8 @@
   "agents": {
     "Scanner": {
       "status": "ready",
-      "last_run": "2026-11-12T21:08:19-05:00",
-      "note": "21:07 ET scan: 30/30 marks; HOLD BTC short (+$3.3k unreal); no new opens"
+      "last_run": "2026-11-12T22:03:56-05:00",
+      "note": "22:03 ET scan: 30/30 marks; HOLD BTC short (stop trailed 70650), SOL short 9000 @80.15"
     },
     "Rug Check": {
       "status": "idle",
@@ -8973,15 +8973,6 @@
   "activity": [
     {
       "t": "2026-11-10T21:03:21-05:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 644.252 ETH-USD @ 2051.54 \u00b7 notional $1,321,709 (50x, margin $26,434) \u00b7 stop 2071.3 \u00b7 tgt 2030.97 \u00b7 risk $12,730.42",
-      "reason": "RACE redeploy 2103 ET: BTC/ETH tilt short. 24h -3.24%. ETH-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 2067.3; session 5m low 2040.86; 15m detail [('19:15', 2049.19, 2051.73, 2047.56), ('19:30', 2050.15, 2055, 2047.91), ('19:45', 2047.19, 2051.37, 2046.4), ('20:00', 2043.4, 2048.16, 2040.86), ('20:15', 2053.94, 2055.64, 2041.56), ('20:30', 2059.86, 2067.3, 2052.01), ('20:45', 2050.98, 2060.64, 2050.71), ('21:00', 2051.48, 2054.17, 2050.96)]. Notional $1,321,709 @ 50x (margin $26,434), risk $12,730 (33.7% eq, warn-only). T1 2030.97, T2 2005.97.",
-      "fill_id": "2026-11-10_ETH-USD_432",
-      "card": "RACE_ETH_SHORT_2103"
-    },
-    {
-      "t": "2026-11-10T21:03:21-05:00",
       "agent": "Rug Check",
       "kind": "check",
       "text": "XRP-USD PASS (chaos: non-blocking)",
@@ -10458,6 +10449,13 @@
       "reason": "RACE 2203 ET: prior trigger hit (15m close 80.73 <80.90 @21:00); new 24h low 79.52 @21:45; 15m lower highs 81.22->81.02->80.71->80.37; BTC/ETH making new lows. Continuation short.",
       "fill_id": "2026-11-12_SOL-USD_489",
       "card": "RACE_SOL_SHORT_2203"
+    },
+    {
+      "t": "2026-11-12T22:03:56-05:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "22:03 ET scan: 30/30 marks; HOLD BTC short (stop trailed 70650), SOL short 9000 @80.15",
+      "reason": "SOL 15m <80.90 trigger hit; report scans/2026-11-12_2203_scan.md"
     }
   ],
   "scanner_feed": [
@@ -11376,7 +11374,7 @@
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-12T22:03:47-05:00",
+  "updated_at": "2026-11-12T22:03:56-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
