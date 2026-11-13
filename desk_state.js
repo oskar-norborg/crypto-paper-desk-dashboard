@@ -6,44 +6,16 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 145345.24,
-  "cash": 50617.24,
-  "realized_pnl": 93545.24,
-  "unrealized_pnl": 1800.0,
-  "day_pnl": 35248.8,
-  "day_pnl_pct": 0.32016,
+  "equity": 117145.24,
+  "cash": 117145.24,
+  "realized_pnl": 67145.24,
+  "unrealized_pnl": 0.0,
+  "day_pnl": 7048.8,
+  "day_pnl_pct": 0.06402,
   "day_baseline_date": "2026-11-13",
   "day_baseline_equity": 110096.44,
-  "open_positions": [
-    {
-      "id": "2026-11-13_ETH-USD_494",
-      "symbol": "ETH-USD",
-      "side": "short",
-      "size": 2400.0,
-      "entry": 1936.0,
-      "notional": 4646400.0,
-      "stop": 1947.0,
-      "target": 1915.0,
-      "target2": 1895.0,
-      "invalidation": "15m close > 1942 or stop 1947 (above 02:10 5m high 1945.67)",
-      "risk_usd": 26400.0,
-      "risk_pct_equity": 0.18391,
-      "opened_at": "2026-11-13T04:05:11-05:00",
-      "card": "RACE_ETH_SHORT_0400",
-      "reason": "RACE 0400 ET: daily downtrend (24h -5.2%, low 1894 @00:55); 00:55-02:10 bounce to 1945.67 rejected; 15m lower highs 1945.67->1945.33->1941.77->1941.37->1937.5 and price pinned at range top ~1936; short the lower-high with stop above swing high, targets back to 1915/1895.",
-      "price_source": "coinbase exchange public ticker 04:05:03 ET bid 1936",
-      "override": null,
-      "paper_only": true,
-      "leverage": 50.0,
-      "margin": 92928.0,
-      "mark": 1935.25,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-13T04:05:11-05:00",
-      "unrealized_pnl": 1800.0,
-      "exposure": 4644600.0
-    }
-  ],
-  "open_count": 1,
+  "open_positions": [],
+  "open_count": 0,
   "closed_positions": [
     {
       "type": "close",
@@ -4135,11 +4107,28 @@ window.__DESK_STATE__ = {
       "reason": "T1 1905 hit: 00:55 ET 5m low 1894.32 (00:45 15m low 1894.32); T2 1890 NOT hit; stop 1941 not touched until 02:00 ET (5m high 1945.63) after T1. Paper close at stated T1 (precedent XRP 2026-11-11).",
       "price_source": "coinbase exchange public 5m candles (unauthenticated) 00:55 ET bar low 1894.32",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-13_ETH-USD_494",
+      "symbol": "ETH-USD",
+      "side": "short",
+      "size": 2400.0,
+      "entry": 1936.0,
+      "exit": 1947.0,
+      "pnl": -26400.0,
+      "notional": 4646400.0,
+      "leverage": 50.0,
+      "margin": 92928.0,
+      "closed_at": "2026-11-13T08:03:29-05:00",
+      "reason": "STOP hit: 5m candle 05:05 ET high 1948.13 >= stop 1947 (T1 1915 never touched; low since entry 1929.66). Thesis broken.",
+      "price_source": "coinbase exchange public 5m candles (unauthenticated) 2026-11-13 05:05 ET bar h 1948.13; filled at stated stop 1947",
+      "paper_only": true
     }
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 145345.24,
+  "max_risk_usd": 117145.24,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -1100964.4,
   "paused": false,
@@ -4194,8 +4183,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-13T04:05:11-05:00",
-      "note": "last: paper fill ETH-USD"
+      "last_run": "2026-11-13T08:03:29-05:00",
+      "note": "last: closed ETH-USD"
     },
     "Logger": {
       "status": "ready",
@@ -9028,16 +9017,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-13T04:05:12-05:00",
       "equity": 145345.24,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-13T08:03:29-05:00",
+      "equity": 117145.24,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-10T21:59:15-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "ETH-USD short 644.2522 @ 2051.54: HOLD \u2014 no trigger",
-      "reason": "Coinbase public 5m since 2026-11-10T21:03:21-05:00: maxH=2060.37 minL=2043.55 (stop 2071.3; T1 2030.97/T2 2005.97); 15m max close=2059.38 (inv 2065.3). No close trigger."
-    },
     {
       "t": "2026-11-10T21:59:15-05:00",
       "agent": "Risk",
@@ -10521,6 +10508,14 @@ window.__DESK_STATE__ = {
       "reason": "RACE 0400 ET: daily downtrend (24h -5.2%, low 1894 @00:55); 00:55-02:10 bounce to 1945.67 rejected; 15m lower highs 1945.67->1945.33->1941.77->1941.37->1937.5 and price pinned at range top ~1936; short the lower-high with stop above swing high, targets back to 1915/1895.",
       "fill_id": "2026-11-13_ETH-USD_494",
       "card": "RACE_ETH_SHORT_0400"
+    },
+    {
+      "t": "2026-11-13T08:03:29-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE ETH-USD @ 1947 \u00b7 P&L $-26400.00",
+      "reason": "STOP hit: 5m candle 05:05 ET high 1948.13 >= stop 1947 (T1 1915 never touched; low since entry 1929.66). Thesis broken.",
+      "fill_id": "2026-11-13_ETH-USD_494"
     }
   ],
   "scanner_feed": [
@@ -11439,7 +11434,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-13T04:05:12-05:00",
+  "updated_at": "2026-11-13T08:03:29-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -11455,10 +11450,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 92928.0,
-  "exposure": 4644600.0,
-  "buying_power": 2622662.0,
-  "effective_leverage": 31.96,
+  "margin_used": 0,
+  "exposure": 0.0,
+  "buying_power": 5857262.0,
+  "effective_leverage": 0.0,
   "operating_timezone": "America/New_York",
   "events": [
     {
