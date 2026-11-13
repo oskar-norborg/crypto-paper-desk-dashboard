@@ -6,16 +6,44 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 71308.92,
-  "cash": 71308.92,
+  "equity": 59755.46,
+  "cash": 36583.37,
   "realized_pnl": 21308.92,
-  "unrealized_pnl": 0.0,
-  "day_pnl": 28288.95,
-  "day_pnl_pct": 0.65758,
+  "unrealized_pnl": -11553.46,
+  "day_pnl": 16735.49,
+  "day_pnl_pct": 0.38902,
   "day_baseline_date": "2026-11-12",
   "day_baseline_equity": 43019.97,
-  "open_positions": [],
-  "open_count": 0,
+  "open_positions": [
+    {
+      "id": "2026-11-12_BTC-USD_488",
+      "symbol": "BTC-USD",
+      "side": "short",
+      "size": 24.5,
+      "entry": 70868.47,
+      "notional": 1736277.52,
+      "stop": 71450.0,
+      "target": 69800.0,
+      "target2": 69300.0,
+      "invalidation": "15m close > 71250 (above 19:45/20:00 lower highs) or stop 71450 (above 19:00 high 71429)",
+      "risk_usd": 14247.48,
+      "risk_pct_equity": 0.1998,
+      "opened_at": "2026-11-12T20:03:45-05:00",
+      "card": "RACE_BTC_SHORT_2003",
+      "reason": "RACE 2003 ET: prior-cycle trigger hit \u2014 BTC 15m closed 70873 (<71000) at 19:30 after sweeping new 24h low 70600; 15m lower highs 71429->71337->71184->71095->71083 with 19:45 bounce failing at 71095; day -3.8%, ETH/SOL/majors red. Continuation short in deepest-liquidity major.",
+      "price_source": "coinbase exchange public ticker 20:03:39 ET bid 70868.47",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 34725.55,
+      "mark": 71340.04,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-12T17:49:46-05:00",
+      "unrealized_pnl": -11553.46,
+      "exposure": 1747830.98
+    }
+  ],
+  "open_count": 1,
   "closed_positions": [
     {
       "type": "close",
@@ -4060,7 +4088,7 @@ window.__DESK_STATE__ = {
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 71308.92,
+  "max_risk_usd": 59755.46,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -430199.7,
   "paused": false,
@@ -4115,13 +4143,13 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-12T11:01:37-05:00",
-      "note": "last: closed BTC-USD"
+      "last_run": "2026-11-12T20:03:45-05:00",
+      "note": "last: paper fill BTC-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-12T17:51:09-05:00",
-      "note": "EOD review 2026-11-12: equity $71,308.92 flat, day +$28,288.95 (+65.76%), gap to $1M $928,691.08"
+      "last_run": "2026-11-12T20:03:45-05:00",
+      "note": "logged 2026-11-12_BTC-USD_488"
     },
     "Equity": {
       "status": "ready",
@@ -8889,16 +8917,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-12T11:01:37-05:00",
       "equity": 71308.92,
       "kind": "close"
+    },
+    {
+      "t": "2026-11-12T20:03:45-05:00",
+      "equity": 59755.46,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-10T21:03:12-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 2103 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
-      "reason": "scheduled race cycle; scan scans/2026-11-10_2103_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
-    },
     {
       "t": "2026-11-10T21:03:14-05:00",
       "agent": "Risk",
@@ -10376,6 +10402,15 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "30 marks, 0 failed; no trigger, flat",
       "reason": "BTC swept 71008 at 18:15 but reclaimed box; no high-conviction edge; report scans/2026-11-12_1906_scan.md"
+    },
+    {
+      "t": "2026-11-12T20:03:45-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 24.5 BTC-USD @ 70868.5 \u00b7 notional $1,736,278 (50x, margin $34,726) \u00b7 stop 71450 \u00b7 tgt 69800 \u00b7 risk $14,247.48",
+      "reason": "RACE 2003 ET: prior-cycle trigger hit \u2014 BTC 15m closed 70873 (<71000) at 19:30 after sweeping new 24h low 70600; 15m lower highs 71429->71337->71184->71095->71083 with 19:45 bounce failing at 71095; day -3.8%, ETH/SOL/majors red. Continuation short in deepest-liquidity major.",
+      "fill_id": "2026-11-12_BTC-USD_488",
+      "card": "RACE_BTC_SHORT_2003"
     }
   ],
   "scanner_feed": [
@@ -11271,7 +11306,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-12T19:06:15-05:00",
+  "updated_at": "2026-11-12T20:03:45-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -11287,10 +11322,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 0,
-  "exposure": 0.0,
-  "buying_power": 3565446.0,
-  "effective_leverage": 0.0,
+  "margin_used": 34725.55,
+  "exposure": 1747830.98,
+  "buying_power": 1239942.02,
+  "effective_leverage": 29.25,
   "operating_timezone": "America/New_York",
   "events": [
     {
