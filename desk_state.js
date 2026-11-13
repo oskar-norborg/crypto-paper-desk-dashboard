@@ -6,44 +6,16 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 110096.44,
-  "cash": 95309.44,
-  "realized_pnl": 59736.44,
-  "unrealized_pnl": 360.0,
-  "day_pnl": 0.0,
-  "day_pnl_pct": 0.0,
+  "equity": 124586.44,
+  "cash": 124586.44,
+  "realized_pnl": 74586.44,
+  "unrealized_pnl": 0.0,
+  "day_pnl": 14490.0,
+  "day_pnl_pct": 0.13161,
   "day_baseline_date": "2026-11-13",
   "day_baseline_equity": 110096.44,
-  "open_positions": [
-    {
-      "id": "2026-11-12_SOL-USD_489",
-      "symbol": "SOL-USD",
-      "side": "short",
-      "size": 9000.0,
-      "entry": 80.15,
-      "notional": 721350.0,
-      "stop": 80.75,
-      "target": 79.0,
-      "target2": 78.5,
-      "invalidation": "15m close > 80.50 or stop 80.75 (above 21:30 15m high 80.71)",
-      "risk_usd": 5400.0,
-      "risk_pct_equity": 0.07238,
-      "opened_at": "2026-11-12T22:03:46-05:00",
-      "card": "RACE_SOL_SHORT_2203",
-      "reason": "RACE 2203 ET: prior trigger hit (15m close 80.73 <80.90 @21:00); new 24h low 79.52 @21:45; 15m lower highs 81.22->81.02->80.71->80.37; BTC/ETH making new lows. Continuation short.",
-      "price_source": "coinbase exchange public ticker 22:03:38 ET bid 80.15",
-      "override": null,
-      "paper_only": true,
-      "leverage": 50.0,
-      "margin": 14427.0,
-      "mark": 80.11,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-12T22:03:47-05:00",
-      "unrealized_pnl": 360.0,
-      "exposure": 720990.0
-    }
-  ],
-  "open_count": 1,
+  "open_positions": [],
+  "open_count": 0,
   "closed_positions": [
     {
       "type": "close",
@@ -4101,11 +4073,28 @@ window.__DESK_STATE__ = {
       "reason": "T2 69300 hit: 22:20 ET 5m low 68825.6 (T1 69800 hit 22:10 ET low 69636.5); trailed stop 70650 never touched (max 5m high since 22:03 = 70238.7 @22:05)",
       "price_source": "coinbase exchange public 5m candles (22:20 ET low 68825.6), api.exchange.coinbase.com \u2014 fill at T2 limit 69300",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-12_SOL-USD_489",
+      "symbol": "SOL-USD",
+      "side": "short",
+      "size": 9000.0,
+      "entry": 80.15,
+      "exit": 78.5,
+      "pnl": 14850.0,
+      "notional": 721350.0,
+      "leverage": 50.0,
+      "margin": 14427.0,
+      "closed_at": "2026-11-13T00:01:37-05:00",
+      "reason": "T2 78.50 hit: 22:50 ET 5m low 77.86 (T1 79.00 hit 22:20 ET low 78.58); stop 80.75 never touched (max 5m high since entry 80.33 @22:05)",
+      "price_source": "coinbase exchange public 5m candles (22:50 ET low 77.86), api.exchange.coinbase.com \u2014 fill at T2 limit 78.50",
+      "paper_only": true
     }
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 110096.44,
+  "max_risk_usd": 124586.44,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -1100964.4,
   "paused": false,
@@ -4161,7 +4150,7 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-13T00:01:37-05:00",
-      "note": "last: closed BTC-USD"
+      "note": "last: closed SOL-USD"
     },
     "Logger": {
       "status": "ready",
@@ -8964,18 +8953,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-13T00:01:37-05:00",
       "equity": 110096.44,
       "kind": "close"
+    },
+    {
+      "t": "2026-11-13T00:01:37-05:00",
+      "equity": 124586.44,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-10T21:03:21-05:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 538243 XRP-USD @ 1.0524 \u00b7 notional $566,447 (50x, margin $11,329) \u00b7 stop 1.0662 \u00b7 tgt 1.0419 \u00b7 risk $7,427.75",
-      "reason": "RACE redeploy 2103 ET: BTC/ETH tilt short. 24h -3.70%. XRP-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 1.0622; session 5m low 1.0476; 15m detail [('19:15', 1.0536, 1.0567, 1.0534), ('19:30', 1.0549, 1.0553, 1.0525), ('19:45', 1.0506, 1.0548, 1.0501), ('20:00', 1.049, 1.0516, 1.0477), ('20:15', 1.0544, 1.0555, 1.0476), ('20:30', 1.0567, 1.0622, 1.0532), ('20:45', 1.0515, 1.0583, 1.0515), ('21:00', 1.0522, 1.0539, 1.0515)]. Notional $566,447 @ 50x (margin $11,329), risk $7,428 (19.5% eq, warn-only). T1 1.0419, T2 1.0319.",
-      "fill_id": "2026-11-10_XRP-USD_433",
-      "card": "RACE_XRP_SHORT_2103"
-    },
     {
       "t": "2026-11-10T21:03:21-05:00",
       "agent": "Executor",
@@ -10453,6 +10438,14 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE BTC-USD @ 69300 \u00b7 P&L $+38427.52",
       "reason": "T2 69300 hit: 22:20 ET 5m low 68825.6 (T1 69800 hit 22:10 ET low 69636.5); trailed stop 70650 never touched (max 5m high since 22:03 = 70238.7 @22:05)",
       "fill_id": "2026-11-12_BTC-USD_488"
+    },
+    {
+      "t": "2026-11-13T00:01:37-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE SOL-USD @ 78.5 \u00b7 P&L $+14850.00",
+      "reason": "T2 78.50 hit: 22:50 ET 5m low 77.86 (T1 79.00 hit 22:20 ET low 78.58); stop 80.75 never touched (max 5m high since entry 80.33 @22:05)",
+      "fill_id": "2026-11-12_SOL-USD_489"
     }
   ],
   "scanner_feed": [
@@ -11387,10 +11380,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 14427.0,
-  "exposure": 720990.0,
-  "buying_power": 4783832.0,
-  "effective_leverage": 6.55,
+  "margin_used": 0,
+  "exposure": 0.0,
+  "buying_power": 6229322.0,
+  "effective_leverage": 0.0,
   "operating_timezone": "America/New_York",
   "events": [
     {
