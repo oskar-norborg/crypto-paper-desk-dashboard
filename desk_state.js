@@ -22,10 +22,10 @@ window.__DESK_STATE__ = {
       "size": 24.5,
       "entry": 70868.47,
       "notional": 1736277.52,
-      "stop": 71450.0,
+      "stop": 70650.0,
       "target": 69800.0,
       "target2": 69300.0,
-      "invalidation": "15m close > 71250 (above 19:45/20:00 lower highs) or stop 71450 (above 19:00 high 71429)",
+      "invalidation": "15m close > 70500 (above 21:15/21:30 lower highs) or trailed stop 70650 (above 21:20 5m high 70647.67)",
       "risk_usd": 14247.48,
       "risk_pct_equity": 0.1998,
       "opened_at": "2026-11-12T20:03:45-05:00",
@@ -8936,13 +8936,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-10T21:03:20-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
-      "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
-    },
-    {
       "t": "2026-11-10T21:03:21-05:00",
       "agent": "Rug Check",
       "kind": "check",
@@ -10420,6 +10413,13 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "21:07 ET scan: 30/30 marks; HOLD BTC short (+$3.3k unreal); no new opens",
       "reason": "BTC under 71000, stop/target/invalidation untouched; SOL short trigger 15m < 80.90"
+    },
+    {
+      "t": "2026-11-12T22:03:45-05:00",
+      "agent": "Risk",
+      "kind": "check",
+      "text": "BTC short trail stop 71450 -> 70650 (locks ~+$5.3k)",
+      "reason": "5m since 20:03 ET: max high 71142.88 < 71450; low 69822 (21:50) missed T1 69800 by $22; 15m lower highs 70884->70647->70440->70285; hold for T1 69800/T2 69300"
     }
   ],
   "scanner_feed": [
@@ -11338,7 +11338,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-12T21:08:19-05:00",
+  "updated_at": "2026-11-12T22:03:45-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
