@@ -5,12 +5,12 @@
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 252290.04,
-  "cash": 213770.63,
+  "equity": 215490.04,
+  "cash": 154546.63,
   "realized_pnl": 242700.64,
-  "unrealized_pnl": -40410.6,
-  "day_pnl": -1627.25,
-  "day_pnl_pct": -0.00641,
+  "unrealized_pnl": -77210.6,
+  "day_pnl": -38427.25,
+  "day_pnl_pct": -0.15134,
   "day_baseline_date": "2026-11-14",
   "day_baseline_equity": 253917.29,
   "open_positions": [
@@ -40,9 +40,36 @@
       "mark_at": "2026-11-14T09:15:50-05:00",
       "unrealized_pnl": -40410.6,
       "exposure": 3986911.2
+    },
+    {
+      "id": "2026-11-14_SOL-USD_525",
+      "symbol": "SOL-USD",
+      "side": "short",
+      "size": 40000.0,
+      "entry": 74.03,
+      "notional": 2961200.0,
+      "stop": 74.5,
+      "target": 73.2,
+      "target2": 72.5,
+      "invalidation": "15m close > 74.50 (reclaim of broken level)",
+      "risk_usd": 18800.0,
+      "risk_pct_equity": 0.07452,
+      "opened_at": "2026-11-14T10:08:15-05:00",
+      "card": null,
+      "reason": "Breakdown short: 09:15 ET 15m closed 74.25 < 74.50 pre-set trigger; three 15m closes below, majors trending down. 50x paper, size capped near \u00b11% book depth (~$3M).",
+      "price_source": "Coinbase Exchange public ticker bid 2026-11-14T10:08:15-05:00 (exch 2026-11-14T15:08:14.321677611Z) (unauthenticated)",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 59224.0,
+      "mark": 74.95,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-14T09:15:51-05:00",
+      "unrealized_pnl": -36800.0,
+      "exposure": 2998000.0
     }
   ],
-  "open_count": 1,
+  "open_count": 2,
   "closed_positions": [
     {
       "type": "close",
@@ -4393,7 +4420,7 @@
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 252290.04,
+  "max_risk_usd": 215490.04,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -2539172.9,
   "paused": false,
@@ -4449,12 +4476,12 @@
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-14T10:08:15-05:00",
-      "note": "last: paper fill BTC-USD"
+      "note": "last: paper fill SOL-USD"
     },
     "Logger": {
       "status": "ready",
       "last_run": "2026-11-14T10:08:15-05:00",
-      "note": "logged 2026-11-14_BTC-USD_524"
+      "note": "logged 2026-11-14_SOL-USD_525"
     },
     "Equity": {
       "status": "ready",
@@ -9507,18 +9534,14 @@
       "t": "2026-11-14T10:08:15-05:00",
       "equity": 252290.04,
       "kind": "fill"
+    },
+    {
+      "t": "2026-11-14T10:08:15-05:00",
+      "equity": 215490.04,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-11T07:59:55-05:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 1121.1 SOL-USD @ 83.85 \u00b7 notional $94,004 (50x, margin $1,880) \u00b7 stop 84.69 \u00b7 tgt 82.84 \u00b7 risk $941.72",
-      "reason": "RACE redeploy 0759 ET: BTC/ETH tilt short. 24h -1.18%. SOL-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 84.09; session 5m low 83.51; 15m detail [('06:00', 83.82, 83.89, 83.65), ('06:15', 83.79, 83.9, 83.65), ('06:30', 83.86, 83.93, 83.76), ('06:45', 83.87, 84.08, 83.8), ('07:00', 83.66, 83.93, 83.57), ('07:15', 83.68, 83.83, 83.51), ('07:30', 83.8, 83.9, 83.58), ('07:45', 83.85, 84.09, 83.79)]. Notional $94,004 @ 50x (margin $1,880), risk $942 (2.8% eq, warn-only). T1 82.84, T2 81.84.",
-      "fill_id": "2026-11-11_SOL-USD_448",
-      "card": "RACE_SOL_SHORT_0759"
-    },
     {
       "t": "2026-11-11T07:59:55-05:00",
       "agent": "Executor",
@@ -11024,6 +11047,15 @@
       "reason": "Re-short trigger: 09:30 ET 15m closed 65,979.8 < 66,189 pre-set level; lower highs, ETH T1 flush confirms. 50x paper, ~9.5% equity risk.",
       "fill_id": "2026-11-14_BTC-USD_524",
       "card": null
+    },
+    {
+      "t": "2026-11-14T10:08:15-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 40000 SOL-USD @ 74.03 \u00b7 notional $2,961,200 (50x, margin $59,224) \u00b7 stop 74.5 \u00b7 tgt 73.2 \u00b7 risk $18,800.00",
+      "reason": "Breakdown short: 09:15 ET 15m closed 74.25 < 74.50 pre-set trigger; three 15m closes below, majors trending down. 50x paper, size capped near \u00b11% book depth (~$3M).",
+      "fill_id": "2026-11-14_SOL-USD_525",
+      "card": null
     }
   ],
   "scanner_feed": [
@@ -11953,10 +11985,10 @@
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 78930.01,
-  "exposure": 3986911.2,
-  "buying_power": 8627590.8,
-  "effective_leverage": 15.8,
+  "margin_used": 138154.01,
+  "exposure": 6984911.2,
+  "buying_power": 3789590.8,
+  "effective_leverage": 32.41,
   "operating_timezone": "America/New_York",
   "events": [
     {
