@@ -5,12 +5,12 @@
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 284201.24,
-  "cash": 232753.24,
+  "equity": 265370.24,
+  "cash": 167315.06,
   "realized_pnl": 304401.24,
-  "unrealized_pnl": -70200.0,
-  "day_pnl": 30283.95,
-  "day_pnl_pct": 0.11927,
+  "unrealized_pnl": -89031.0,
+  "day_pnl": 11452.95,
+  "day_pnl_pct": 0.04511,
   "day_baseline_date": "2026-11-14",
   "day_baseline_equity": 253917.29,
   "open_positions": [
@@ -67,9 +67,36 @@
       "mark_at": "2026-11-14T10:08:30-05:00",
       "unrealized_pnl": -29000.0,
       "exposure": 2449500.0
+    },
+    {
+      "id": "2026-11-14_BTC-USD_530",
+      "symbol": "BTC-USD",
+      "side": "short",
+      "size": 50.0,
+      "entry": 65438.18,
+      "notional": 3271909.0,
+      "stop": 65950.0,
+      "target": 65000.0,
+      "target2": 64700.0,
+      "invalidation": "15m close > 65,950 (above 10:45 failed-bounce high)",
+      "risk_usd": 25591.0,
+      "risk_pct_equity": 0.09005,
+      "opened_at": "2026-11-14T11:09:02-05:00",
+      "card": null,
+      "reason": "Failed-bounce re-short: 10:40-10:45 ET bounce capped at 65,915.9 below 66,000, 11:05 5m breaking down to 65,336; lower highs, majors in sync. 50x paper.",
+      "price_source": "Coinbase Exchange public ticker bid 2026-11-14T11:09:02-05:00 (exch 2026-11-14T16:09:01.410988770Z) (unauthenticated)",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 65438.18,
+      "mark": 65814.8,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-14T10:08:29-05:00",
+      "unrealized_pnl": -18831.0,
+      "exposure": 3290740.0
     }
   ],
-  "open_count": 2,
+  "open_count": 3,
   "closed_positions": [
     {
       "type": "close",
@@ -4454,7 +4481,7 @@
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 284201.24,
+  "max_risk_usd": 265370.24,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -2539172.9,
   "paused": false,
@@ -4510,12 +4537,12 @@
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-14T11:09:02-05:00",
-      "note": "last: paper fill XRP-USD"
+      "note": "last: paper fill BTC-USD"
     },
     "Logger": {
       "status": "ready",
       "last_run": "2026-11-14T11:09:02-05:00",
-      "note": "logged 2026-11-14_XRP-USD_529"
+      "note": "logged 2026-11-14_BTC-USD_530"
     },
     "Equity": {
       "status": "ready",
@@ -9598,16 +9625,14 @@
       "t": "2026-11-14T11:09:02-05:00",
       "equity": 284201.24,
       "kind": "fill"
+    },
+    {
+      "t": "2026-11-14T11:09:02-05:00",
+      "equity": 265370.24,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-11T09:00:13-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "XRP-USD short 207460.3 @ 1.0573: INVALIDATION \u2014 CLOSE at public mark 1.0601",
-      "reason": "Coinbase public candles since 2026-11-11T07:59:55-05:00: maxH=1.0617; minL=1.0533; 15m max close=1.06; 15m min close=None. INV 15m close > 1.0585 (short): Coinbase public 15m 08:45 ET close 1.06 (high 1.0617/low 1.0557). Thesis broken \u2014 close at public mark 1.0601."
-    },
     {
       "t": "2026-11-11T09:00:13-05:00",
       "agent": "Executor",
@@ -11121,6 +11146,15 @@
       "reason": "Breakdown short: 10:15 ET 15m closed 0.9733 < 0.9768 pre-set trigger; two failed bounces at ~0.9759, new low 0.9655 area. 50x paper, size ~\u00b11% book depth (~$2.7M).",
       "fill_id": "2026-11-14_XRP-USD_529",
       "card": null
+    },
+    {
+      "t": "2026-11-14T11:09:02-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 50 BTC-USD @ 65438.2 \u00b7 notional $3,271,909 (50x, margin $65,438) \u00b7 stop 65950 \u00b7 tgt 65000 \u00b7 risk $25,591.00",
+      "reason": "Failed-bounce re-short: 10:40-10:45 ET bounce capped at 65,915.9 below 66,000, 11:05 5m breaking down to 65,336; lower highs, majors in sync. 50x paper.",
+      "fill_id": "2026-11-14_BTC-USD_530",
+      "card": null
     }
   ],
   "scanner_feed": [
@@ -12050,10 +12084,10 @@
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 121648.0,
-  "exposure": 6152600.0,
-  "buying_power": 8057462.0,
-  "effective_leverage": 21.65,
+  "margin_used": 187086.18,
+  "exposure": 9443340.0,
+  "buying_power": 3825172.0,
+  "effective_leverage": 35.59,
   "operating_timezone": "America/New_York",
   "events": [
     {
