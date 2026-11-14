@@ -6,16 +6,44 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 292700.64,
-  "cash": 292700.64,
+  "equity": 252290.04,
+  "cash": 213770.63,
   "realized_pnl": 242700.64,
-  "unrealized_pnl": 0.0,
-  "day_pnl": 38783.35,
-  "day_pnl_pct": 0.15274,
+  "unrealized_pnl": -40410.6,
+  "day_pnl": -1627.25,
+  "day_pnl_pct": -0.00641,
   "day_baseline_date": "2026-11-14",
   "day_baseline_equity": 253917.29,
-  "open_positions": [],
-  "open_count": 0,
+  "open_positions": [
+    {
+      "id": "2026-11-14_BTC-USD_524",
+      "symbol": "BTC-USD",
+      "side": "short",
+      "size": 60.0,
+      "entry": 65775.01,
+      "notional": 3946500.6,
+      "stop": 66330.0,
+      "target": 65300.0,
+      "target2": 65000.0,
+      "invalidation": "15m close > 66,330 (above 09:30 swing high)",
+      "risk_usd": 33299.4,
+      "risk_pct_equity": 0.11377,
+      "opened_at": "2026-11-14T10:08:15-05:00",
+      "card": null,
+      "reason": "Re-short trigger: 09:30 ET 15m closed 65,979.8 < 66,189 pre-set level; lower highs, ETH T1 flush confirms. 50x paper, ~9.5% equity risk.",
+      "price_source": "Coinbase Exchange public ticker bid 2026-11-14T10:08:15-05:00 (exch 2026-11-14T15:08:14.765581284Z) (unauthenticated)",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 78930.01,
+      "mark": 66448.52,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-14T09:15:50-05:00",
+      "unrealized_pnl": -40410.6,
+      "exposure": 3986911.2
+    }
+  ],
+  "open_count": 1,
   "closed_positions": [
     {
       "type": "close",
@@ -4366,7 +4394,7 @@ window.__DESK_STATE__ = {
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 292700.64,
+  "max_risk_usd": 252290.04,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -2539172.9,
   "paused": false,
@@ -4422,12 +4450,12 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-14T10:08:15-05:00",
-      "note": "last: closed ETH-USD"
+      "note": "last: paper fill BTC-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-14T09:15:40-05:00",
-      "note": "logged 2026-11-14_ETH-USD_522"
+      "last_run": "2026-11-14T10:08:15-05:00",
+      "note": "logged 2026-11-14_BTC-USD_524"
     },
     "Equity": {
       "status": "ready",
@@ -9475,16 +9503,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-14T10:08:15-05:00",
       "equity": 292700.64,
       "kind": "close"
+    },
+    {
+      "t": "2026-11-14T10:08:15-05:00",
+      "equity": 252290.04,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-11T07:59:55-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "SOL-USD PASS (chaos: non-blocking)",
-      "reason": "vol $99.6M, spread 0.0119%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
-    },
     {
       "t": "2026-11-11T07:59:55-05:00",
       "agent": "Executor",
@@ -10990,6 +11016,15 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE ETH-USD @ 1850 \u00b7 P&L $+31515.00",
       "reason": "T1 hit: Coinbase public 5m 09:25 ET candle low 1,841.22 <= T1 1,850; stop 1,888 never touched (hi since open 1,877.56). Banked at T1 per plan.",
       "fill_id": "2026-11-14_ETH-USD_522"
+    },
+    {
+      "t": "2026-11-14T10:08:15-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 60 BTC-USD @ 65775 \u00b7 notional $3,946,501 (50x, margin $78,930) \u00b7 stop 66330 \u00b7 tgt 65300 \u00b7 risk $33,299.40",
+      "reason": "Re-short trigger: 09:30 ET 15m closed 65,979.8 < 66,189 pre-set level; lower highs, ETH T1 flush confirms. 50x paper, ~9.5% equity risk.",
+      "fill_id": "2026-11-14_BTC-USD_524",
+      "card": null
     }
   ],
   "scanner_feed": [
@@ -11919,10 +11954,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 0,
-  "exposure": 0.0,
-  "buying_power": 14635032.0,
-  "effective_leverage": 0.0,
+  "margin_used": 78930.01,
+  "exposure": 3986911.2,
+  "buying_power": 8627590.8,
+  "effective_leverage": 15.8,
   "operating_timezone": "America/New_York",
   "events": [
     {
