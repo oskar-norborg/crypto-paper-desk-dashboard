@@ -6,12 +6,12 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 343539.74,
-  "cash": 265527.74,
+  "equity": 365855.74,
+  "cash": 212940.74,
   "realized_pnl": 270574.74,
-  "unrealized_pnl": 22965.0,
-  "day_pnl": 89622.45,
-  "day_pnl_pct": 0.35296,
+  "unrealized_pnl": 45281.0,
+  "day_pnl": 111938.45,
+  "day_pnl_pct": 0.44085,
   "day_baseline_date": "2026-11-14",
   "day_baseline_equity": 253917.29,
   "open_positions": [
@@ -41,9 +41,36 @@ window.__DESK_STATE__ = {
       "mark_at": "2026-11-14T12:04:11-05:00",
       "unrealized_pnl": 22965.0,
       "exposure": 2729385.0
+    },
+    {
+      "id": "2026-11-14_BTC-USD_543",
+      "symbol": "BTC-USD",
+      "side": "short",
+      "size": 40.0,
+      "entry": 65733.75,
+      "notional": 2629350.0,
+      "stop": 66200.0,
+      "target": 65100.0,
+      "target2": 64980.0,
+      "invalidation": "15m close > 66,200 (above 12:35 squeeze high 66,150.6)",
+      "risk_usd": 18650.0,
+      "risk_pct_equity": 0.05429,
+      "opened_at": "2026-11-14T13:04:43-05:00",
+      "card": null,
+      "reason": "Failed-bounce short: 12:35 ET squeeze high 66,150.6 rejected, 13:00 lower high 66,037.8, 24h -4.5% downtrend intact. 50x paper.",
+      "price_source": "Coinbase Exchange public ticker bid 2026-11-14T13:04:43-05:00 (exch 2026-11-14T18:04:42.533087300Z) (unauthenticated)",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 52587.0,
+      "mark": 65175.85,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-14T12:04:11-05:00",
+      "unrealized_pnl": 22316.0,
+      "exposure": 2607034.0
     }
   ],
-  "open_count": 1,
+  "open_count": 2,
   "closed_positions": [
     {
       "type": "close",
@@ -4547,7 +4574,7 @@ window.__DESK_STATE__ = {
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 343539.74,
+  "max_risk_usd": 365855.74,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -2539172.9,
   "paused": false,
@@ -4603,12 +4630,12 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-14T13:04:43-05:00",
-      "note": "last: paper fill ETH-USD"
+      "note": "last: paper fill BTC-USD"
     },
     "Logger": {
       "status": "ready",
       "last_run": "2026-11-14T13:04:43-05:00",
-      "note": "logged 2026-11-14_ETH-USD_542"
+      "note": "logged 2026-11-14_BTC-USD_543"
     },
     "Equity": {
       "status": "ready",
@@ -9766,16 +9793,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-14T13:04:43-05:00",
       "equity": 343539.74,
       "kind": "fill"
+    },
+    {
+      "t": "2026-11-14T13:04:43-05:00",
+      "equity": 365855.74,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-11T10:03:13-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "SOL-USD short 877.9 @ 84.51: HOLD \u2014 no trigger",
-      "reason": "Coinbase public 5m since 2026-11-11T09:00:21-05:00: maxH=84.61 minL=83.69 (stop 85.36; T1 83.31/T2 82.31); 15m max close=84.17 (inv 84.62). No close trigger."
-    },
     {
       "t": "2026-11-11T10:03:20-05:00",
       "agent": "Rug Check",
@@ -11302,6 +11327,15 @@ window.__DESK_STATE__ = {
       "reason": "Failed-bounce short: 12:20-12:35 ET squeeze to 1,856.98 rejected, 13:00 lower high 1,846.97, 24h -5.4% downtrend intact. 50x paper.",
       "fill_id": "2026-11-14_ETH-USD_542",
       "card": null
+    },
+    {
+      "t": "2026-11-14T13:04:43-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 40 BTC-USD @ 65733.8 \u00b7 notional $2,629,350 (50x, margin $52,587) \u00b7 stop 66200 \u00b7 tgt 65100 \u00b7 risk $18,650.00",
+      "reason": "Failed-bounce short: 12:35 ET squeeze high 66,150.6 rejected, 13:00 lower high 66,037.8, 24h -4.5% downtrend intact. 50x paper.",
+      "fill_id": "2026-11-14_BTC-USD_543",
+      "card": null
     }
   ],
   "scanner_feed": [
@@ -12233,10 +12267,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 55047.0,
-  "exposure": 2729385.0,
-  "buying_power": 14447602.0,
-  "effective_leverage": 7.94,
+  "margin_used": 107634.0,
+  "exposure": 5336419.0,
+  "buying_power": 12956368.0,
+  "effective_leverage": 14.59,
   "operating_timezone": "America/New_York",
   "events": [
     {
