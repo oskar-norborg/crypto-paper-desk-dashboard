@@ -6,12 +6,12 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 365855.74,
-  "cash": 212940.74,
+  "equity": 371255.74,
+  "cash": 169428.74,
   "realized_pnl": 270574.74,
-  "unrealized_pnl": 45281.0,
-  "day_pnl": 111938.45,
-  "day_pnl_pct": 0.44085,
+  "unrealized_pnl": 50681.0,
+  "day_pnl": 117338.45,
+  "day_pnl_pct": 0.46211,
   "day_baseline_date": "2026-11-14",
   "day_baseline_equity": 253917.29,
   "open_positions": [
@@ -68,9 +68,36 @@ window.__DESK_STATE__ = {
       "mark_at": "2026-11-14T12:04:11-05:00",
       "unrealized_pnl": 22316.0,
       "exposure": 2607034.0
+    },
+    {
+      "id": "2026-11-14_SOL-USD_544",
+      "symbol": "SOL-USD",
+      "side": "short",
+      "size": 30000.0,
+      "entry": 72.52,
+      "notional": 2175600.0,
+      "stop": 73.65,
+      "target": 71.95,
+      "target2": 71.8,
+      "invalidation": "15m close > 73.65 (above 12:35 squeeze high 73.59)",
+      "risk_usd": 33900.0,
+      "risk_pct_equity": 0.09266,
+      "opened_at": "2026-11-14T13:04:43-05:00",
+      "card": null,
+      "reason": "Failed-bounce short: 12:35 ET squeeze high 73.59 rejected, 13:00 lower high 73.11, 24h -9.3% weakest major. 50x paper.",
+      "price_source": "Coinbase Exchange public ticker bid 2026-11-14T13:04:43-05:00 (exch 2026-11-14T18:04:41.768043354Z) (unauthenticated)",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 43512.0,
+      "mark": 72.34,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-14T12:04:12-05:00",
+      "unrealized_pnl": 5400.0,
+      "exposure": 2170200.0
     }
   ],
-  "open_count": 2,
+  "open_count": 3,
   "closed_positions": [
     {
       "type": "close",
@@ -4574,7 +4601,7 @@ window.__DESK_STATE__ = {
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 365855.74,
+  "max_risk_usd": 371255.74,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -2539172.9,
   "paused": false,
@@ -4630,12 +4657,12 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-14T13:04:43-05:00",
-      "note": "last: paper fill BTC-USD"
+      "note": "last: paper fill SOL-USD"
     },
     "Logger": {
       "status": "ready",
       "last_run": "2026-11-14T13:04:43-05:00",
-      "note": "logged 2026-11-14_BTC-USD_543"
+      "note": "logged 2026-11-14_SOL-USD_544"
     },
     "Equity": {
       "status": "ready",
@@ -9798,16 +9825,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-14T13:04:43-05:00",
       "equity": 365855.74,
       "kind": "fill"
+    },
+    {
+      "t": "2026-11-14T13:04:43-05:00",
+      "equity": 371255.74,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-11T10:03:20-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
-      "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
-    },
     {
       "t": "2026-11-11T10:03:20-05:00",
       "agent": "Executor",
@@ -11336,6 +11361,15 @@ window.__DESK_STATE__ = {
       "reason": "Failed-bounce short: 12:35 ET squeeze high 66,150.6 rejected, 13:00 lower high 66,037.8, 24h -4.5% downtrend intact. 50x paper.",
       "fill_id": "2026-11-14_BTC-USD_543",
       "card": null
+    },
+    {
+      "t": "2026-11-14T13:04:43-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 30000 SOL-USD @ 72.52 \u00b7 notional $2,175,600 (50x, margin $43,512) \u00b7 stop 73.65 \u00b7 tgt 71.95 \u00b7 risk $33,900.00",
+      "reason": "Failed-bounce short: 12:35 ET squeeze high 73.59 rejected, 13:00 lower high 73.11, 24h -9.3% weakest major. 50x paper.",
+      "fill_id": "2026-11-14_SOL-USD_544",
+      "card": null
     }
   ],
   "scanner_feed": [
@@ -12267,10 +12301,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 107634.0,
-  "exposure": 5336419.0,
-  "buying_power": 12956368.0,
-  "effective_leverage": 14.59,
+  "margin_used": 151146.0,
+  "exposure": 7506619.0,
+  "buying_power": 11056168.0,
+  "effective_leverage": 20.22,
   "operating_timezone": "America/New_York",
   "events": [
     {
