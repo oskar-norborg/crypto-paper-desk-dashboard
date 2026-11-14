@@ -5,44 +5,16 @@
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 166030.29,
-  "cash": 145167.89,
-  "realized_pnl": 115120.29,
-  "unrealized_pnl": 910.0,
-  "day_pnl": 55933.85,
-  "day_pnl_pct": 0.50804,
+  "equity": 179940.29,
+  "cash": 179940.29,
+  "realized_pnl": 129940.29,
+  "unrealized_pnl": 0.0,
+  "day_pnl": 69843.85,
+  "day_pnl_pct": 0.63439,
   "day_baseline_date": "2026-11-13",
   "day_baseline_equity": 110096.44,
-  "open_positions": [
-    {
-      "id": "2026-11-13_SOL-USD_508",
-      "symbol": "SOL-USD",
-      "side": "short",
-      "size": 13000.0,
-      "entry": 76.74,
-      "notional": 997620.0,
-      "stop": 77.65,
-      "target": 75.6,
-      "target2": 75.0,
-      "invalidation": "15m close > 77.65 (above 20:00 ET bar high) or BTC 15m close > 68,900",
-      "risk_usd": 11830.0,
-      "risk_pct_equity": 0.10432,
-      "opened_at": "2026-11-13T21:07:53-05:00",
-      "card": null,
-      "reason": "RACE 2100 ET: armed SOL re-arm short triggered \u2014 20:00 ET 15m close 77.30 < 77.50; follow-through 15m closes 77.23/77.33/76.93, lower highs 78.0->77.63->77.5->77.43->77.35->77.01, now at/under 24h low 76.70. Aligns with ETH/BTC weakness (ETH 15m lower highs, BTC capped < 68,340). Continuation toward 75.60/75.00.",
-      "price_source": "coinbase_exchange_public_ticker bid 2026-11-13T21:07:49-05:00 ET (exch 2026-11-14T02:07:48Z) api.exchange.coinbase.com",
-      "override": null,
-      "paper_only": true,
-      "leverage": 50.0,
-      "margin": 19952.4,
-      "mark": 76.67,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-13T21:07:59-05:00",
-      "unrealized_pnl": 910.0,
-      "exposure": 996710.0
-    }
-  ],
-  "open_count": 1,
+  "open_positions": [],
+  "open_count": 0,
   "closed_positions": [
     {
       "type": "close",
@@ -4270,11 +4242,28 @@
       "reason": "TARGET HIT: 5m 21:25 ET low 66,789 <= T1 67,555; stop 68,900 never touched",
       "price_source": "Coinbase Exchange public 5m candle 21:25 ET (target touched; filled at target level)",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-13_SOL-USD_508",
+      "symbol": "SOL-USD",
+      "side": "short",
+      "size": 13000.0,
+      "entry": 76.74,
+      "exit": 75.6,
+      "pnl": 14820.0,
+      "notional": 997620.0,
+      "leverage": 50.0,
+      "margin": 19952.4,
+      "closed_at": "2026-11-13T22:02:25-05:00",
+      "reason": "TARGET HIT: 5m 21:25 ET low 75.00 <= T1 75.60; stop 77.65 never touched (hi since open 76.94)",
+      "price_source": "Coinbase Exchange public 5m candle 21:25 ET (target touched; filled at target level)",
+      "paper_only": true
     }
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 166030.29,
+  "max_risk_usd": 179940.29,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -1100964.4,
   "paused": false,
@@ -4330,7 +4319,7 @@
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-13T22:02:25-05:00",
-      "note": "last: closed BTC-USD"
+      "note": "last: closed SOL-USD"
     },
     "Logger": {
       "status": "ready",
@@ -9298,17 +9287,14 @@
       "t": "2026-11-13T22:02:25-05:00",
       "equity": 166030.29,
       "kind": "close"
+    },
+    {
+      "t": "2026-11-13T22:02:25-05:00",
+      "equity": 179940.29,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-11T04:02:06-05:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE ETH-USD @ 2057.14 \u00b7 P&L $+2720.94",
-      "reason": "INV 15m close > 2067.29 (short): Coinbase public 15m 00:45 ET close 2067.67 (high 2070.8/low 2064.49). Thesis broken \u2014 close at public mark 2057.14.",
-      "fill_id": "2026-11-10_ETH-USD_440"
-    },
     {
       "t": "2026-11-11T04:02:06-05:00",
       "agent": "Risk",
@@ -10803,6 +10789,14 @@
       "text": "PAPER CLOSE BTC-USD @ 67555 \u00b7 P&L $+16160.00",
       "reason": "TARGET HIT: 5m 21:25 ET low 66,789 <= T1 67,555; stop 68,900 never touched",
       "fill_id": "2026-11-13_BTC-USD_505"
+    },
+    {
+      "t": "2026-11-13T22:02:25-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE SOL-USD @ 75.6 \u00b7 P&L $+14820.00",
+      "reason": "TARGET HIT: 5m 21:25 ET low 75.00 <= T1 75.60; stop 77.65 never touched (hi since open 76.94)",
+      "fill_id": "2026-11-13_SOL-USD_508"
     }
   ],
   "scanner_feed": [
@@ -11732,10 +11726,10 @@
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 19952.4,
-  "exposure": 996710.0,
-  "buying_power": 7304804.5,
-  "effective_leverage": 6.0,
+  "margin_used": 0,
+  "exposure": 0.0,
+  "buying_power": 8997014.5,
+  "effective_leverage": 0.0,
   "operating_timezone": "America/New_York",
   "events": [
     {
