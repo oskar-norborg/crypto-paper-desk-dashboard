@@ -6,44 +6,16 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 259760.64,
-  "cash": 205055.34,
-  "realized_pnl": 211185.64,
-  "unrealized_pnl": -1425.0,
-  "day_pnl": 5843.35,
-  "day_pnl_pct": 0.02301,
+  "equity": 292700.64,
+  "cash": 292700.64,
+  "realized_pnl": 242700.64,
+  "unrealized_pnl": 0.0,
+  "day_pnl": 38783.35,
+  "day_pnl_pct": 0.15274,
   "day_baseline_date": "2026-11-14",
   "day_baseline_equity": 253917.29,
-  "open_positions": [
-    {
-      "id": "2026-11-14_ETH-USD_522",
-      "symbol": "ETH-USD",
-      "side": "short",
-      "size": 1500.0,
-      "entry": 1871.01,
-      "notional": 2806515.0,
-      "stop": 1888.0,
-      "target": 1850.0,
-      "target2": 1835.0,
-      "invalidation": "15m close > 1,888 (back above broken 1,885-1,887 shelf)",
-      "risk_usd": 25485.0,
-      "risk_pct_equity": 0.09757,
-      "opened_at": "2026-11-14T09:15:40-05:00",
-      "card": null,
-      "reason": "Breakdown short: 09:00 ET 15m closed 1,872.02 < 1,887 pre-set trigger (session low flush to 1,858.81); BTC confirming (T1 66,370 hit, 15m close 66,401 below range). Desk lesson = short breaks. 50x paper, ~10% equity risk.",
-      "price_source": "Coinbase Exchange public ticker bid 2026-11-14T09:15:40-05:00 (exch 2026-11-14T14:15:39.164212174Z) (unauthenticated)",
-      "override": null,
-      "paper_only": true,
-      "leverage": 50.0,
-      "margin": 56130.3,
-      "mark": 1871.96,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-14T09:15:50-05:00",
-      "unrealized_pnl": -1425.0,
-      "exposure": 2807940.0
-    }
-  ],
-  "open_count": 1,
+  "open_positions": [],
+  "open_count": 0,
   "closed_positions": [
     {
       "type": "close",
@@ -4373,11 +4345,28 @@ window.__DESK_STATE__ = {
       "reason": "TARGET HIT: 5m 09:00 ET low 66,189 <= T1 66,370; stop 67,050 never touched (hi since open 66,916.95 at 08:45); filled at T1 level",
       "price_source": "Coinbase Exchange public 5m candles (unauthenticated), 09:00 ET bar",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-14_ETH-USD_522",
+      "symbol": "ETH-USD",
+      "side": "short",
+      "size": 1500.0,
+      "entry": 1871.01,
+      "exit": 1850.0,
+      "pnl": 31515.0,
+      "notional": 2806515.0,
+      "leverage": 50.0,
+      "margin": 56130.3,
+      "closed_at": "2026-11-14T10:08:15-05:00",
+      "reason": "T1 hit: Coinbase public 5m 09:25 ET candle low 1,841.22 <= T1 1,850; stop 1,888 never touched (hi since open 1,877.56). Banked at T1 per plan.",
+      "price_source": "Coinbase Exchange public 5m candles ETH-USD 09:25 ET 2026-11-14 (unauthenticated); fill at T1 level 1,850",
+      "paper_only": true
     }
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 259760.64,
+  "max_risk_usd": 292700.64,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -2539172.9,
   "paused": false,
@@ -4432,8 +4421,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-14T09:15:40-05:00",
-      "note": "last: paper fill ETH-USD"
+      "last_run": "2026-11-14T10:08:15-05:00",
+      "note": "last: closed ETH-USD"
     },
     "Logger": {
       "status": "ready",
@@ -9481,18 +9470,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-14T09:15:52-05:00",
       "equity": 259760.64,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-14T10:08:15-05:00",
+      "equity": 292700.64,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-11T07:59:55-05:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 207460 XRP-USD @ 1.0573 \u00b7 notional $219,348 (50x, margin $4,387) \u00b7 stop 1.0658 \u00b7 tgt 1.0467 \u00b7 risk $1,763.41",
-      "reason": "RACE redeploy 0759 ET: BTC/ETH tilt short. 24h -1.93%. XRP-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 1.0605; session 5m low 1.0505; 15m detail [('06:00', 1.0602, 1.0626, 1.0594), ('06:15', 1.0564, 1.0612, 1.056), ('06:30', 1.0581, 1.0584, 1.055), ('06:45', 1.0575, 1.0602, 1.0563), ('07:00', 1.0537, 1.0583, 1.0527), ('07:15', 1.0527, 1.0563, 1.0511), ('07:30', 1.0557, 1.0573, 1.0505), ('07:45', 1.0572, 1.0605, 1.0556)]. Notional $219,348 @ 50x (margin $4,387), risk $1,763 (5.2% eq, warn-only). T1 1.0467, T2 1.0367.",
-      "fill_id": "2026-11-11_XRP-USD_447",
-      "card": "RACE_XRP_SHORT_0759"
-    },
     {
       "t": "2026-11-11T07:59:55-05:00",
       "agent": "Rug Check",
@@ -10997,6 +10982,14 @@ window.__DESK_STATE__ = {
       "reason": "Breakdown short: 09:00 ET 15m closed 1,872.02 < 1,887 pre-set trigger (session low flush to 1,858.81); BTC confirming (T1 66,370 hit, 15m close 66,401 below range). Desk lesson = short breaks. 50x paper, ~10% equity risk.",
       "fill_id": "2026-11-14_ETH-USD_522",
       "card": null
+    },
+    {
+      "t": "2026-11-14T10:08:15-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE ETH-USD @ 1850 \u00b7 P&L $+31515.00",
+      "reason": "T1 hit: Coinbase public 5m 09:25 ET candle low 1,841.22 <= T1 1,850; stop 1,888 never touched (hi since open 1,877.56). Banked at T1 per plan.",
+      "fill_id": "2026-11-14_ETH-USD_522"
     }
   ],
   "scanner_feed": [
@@ -11910,7 +11903,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-14T09:15:52-05:00",
+  "updated_at": "2026-11-14T10:08:15-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -11926,10 +11919,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 56130.3,
-  "exposure": 2807940.0,
-  "buying_power": 10180092.0,
-  "effective_leverage": 10.81,
+  "margin_used": 0,
+  "exposure": 0.0,
+  "buying_power": 14635032.0,
+  "effective_leverage": 0.0,
   "operating_timezone": "America/New_York",
   "events": [
     {
