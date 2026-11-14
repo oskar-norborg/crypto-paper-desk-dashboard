@@ -6,42 +6,15 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 255517.54,
-  "cash": 125616.68,
-  "realized_pnl": 203917.29,
-  "unrealized_pnl": 1600.25,
-  "day_pnl": 1600.25,
-  "day_pnl_pct": 0.0063,
+  "equity": 234642.54,
+  "cash": 200697.18,
+  "realized_pnl": 184192.29,
+  "unrealized_pnl": 450.25,
+  "day_pnl": -19274.75,
+  "day_pnl_pct": -0.07591,
   "day_baseline_date": "2026-11-14",
   "day_baseline_equity": 253917.29,
   "open_positions": [
-    {
-      "id": "2026-11-14_ETH-USD_516",
-      "symbol": "ETH-USD",
-      "side": "short",
-      "size": 2500.0,
-      "entry": 1896.11,
-      "notional": 4740275.0,
-      "stop": 1904.0,
-      "target": 1878.0,
-      "target2": 1872.0,
-      "invalidation": "15m close > 1,904 (above bounce high) or BTC 15m close > 67,200",
-      "risk_usd": 19725.0,
-      "risk_pct_equity": 0.07768,
-      "opened_at": "2026-11-14T00:04:27-05:00",
-      "card": null,
-      "reason": "Failed-bounce short #2: post-22:30 flush to 1,876.19, bounce capped 1,902.34 (23:45 ET) = lower high under 1,914.76; 00:00 15m rolling over. Desk lesson = short failed bounces. 50x paper.",
-      "price_source": "Coinbase Exchange public ticker bid 2026-11-14T00:04:26-05:00 (exch 2026-11-14T05:04:26.483769298Z) (unauthenticated)",
-      "override": null,
-      "paper_only": true,
-      "leverage": 50.0,
-      "margin": 94805.5,
-      "mark": 1895.65,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-14T00:04:40-05:00",
-      "unrealized_pnl": 1150.0,
-      "exposure": 4739125.0
-    },
     {
       "id": "2026-11-14_BTC-USD_517",
       "symbol": "BTC-USD",
@@ -70,7 +43,7 @@ window.__DESK_STATE__ = {
       "exposure": 1674305.5
     }
   ],
-  "open_count": 2,
+  "open_count": 1,
   "closed_positions": [
     {
       "type": "close",
@@ -4349,11 +4322,28 @@ window.__DESK_STATE__ = {
       "reason": "TARGET HIT: 5m 22:30 ET low 66,550 <= T1 67,000; stop 67,800 never touched (hi since open 67,698.05); filled at T1 level",
       "price_source": "Coinbase Exchange public 5m candles (unauthenticated), 22:30 ET bar",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-14_ETH-USD_516",
+      "symbol": "ETH-USD",
+      "side": "short",
+      "size": 2500.0,
+      "entry": 1896.11,
+      "exit": 1904.0,
+      "pnl": -19725.0,
+      "notional": 4740275.0,
+      "leverage": 50.0,
+      "margin": 94805.5,
+      "closed_at": "2026-11-14T04:07:27-05:00",
+      "reason": "STOP hit: 5m candle 00:15-00:20 ET high 1904.47 >= stop 1904 (failed-bounce thesis invalidated; chop rally to 1909.31)",
+      "price_source": "Coinbase Exchange public 5m candles (unauthenticated), stop fill at stop price",
+      "paper_only": true
     }
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 255517.54,
+  "max_risk_usd": 234642.54,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -2539172.9,
   "paused": false,
@@ -4408,8 +4398,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-14T00:04:27-05:00",
-      "note": "last: paper fill BTC-USD"
+      "last_run": "2026-11-14T04:07:27-05:00",
+      "note": "last: closed ETH-USD"
     },
     "Logger": {
       "status": "ready",
@@ -9422,16 +9412,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-14T00:04:42-05:00",
       "equity": 255517.54,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-14T04:07:27-05:00",
+      "equity": 234642.54,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-11T04:02:15-05:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: 0402 ET race cycle \u00b7 hold/rotate check \u00b7 eq $34,769 \u00b7 exposure $1,734,143 (49.88x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
     {
       "t": "2026-11-11T07:59:46-05:00",
       "agent": "Scanner",
@@ -10932,6 +10920,14 @@ window.__DESK_STATE__ = {
       "reason": "Failed-bounce short: bounce off 66,369 capped 67,145 (23:30-23:45 ET), 00:00 15m slipping; pairs with ETH. 50x paper.",
       "fill_id": "2026-11-14_BTC-USD_517",
       "card": null
+    },
+    {
+      "t": "2026-11-14T04:07:27-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE ETH-USD @ 1904 \u00b7 P&L $-19725.00",
+      "reason": "STOP hit: 5m candle 00:15-00:20 ET high 1904.47 >= stop 1904 (failed-bounce thesis invalidated; chop rally to 1909.31)",
+      "fill_id": "2026-11-14_ETH-USD_516"
     }
   ],
   "scanner_feed": [
@@ -11845,7 +11841,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-14T00:04:42-05:00",
+  "updated_at": "2026-11-14T04:07:27-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -11861,10 +11857,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 128300.61,
-  "exposure": 6413430.5,
-  "buying_power": 6362446.5,
-  "effective_leverage": 25.1,
+  "margin_used": 33495.11,
+  "exposure": 1674305.5,
+  "buying_power": 10057821.5,
+  "effective_leverage": 7.14,
   "operating_timezone": "America/New_York",
   "events": [
     {
