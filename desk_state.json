@@ -5,44 +5,16 @@
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 318801.24,
-  "cash": 261977.24,
-  "realized_pnl": 271201.24,
-  "unrealized_pnl": -2400.0,
-  "day_pnl": 64883.95,
-  "day_pnl_pct": 0.25553,
+  "equity": 354401.24,
+  "cash": 354401.24,
+  "realized_pnl": 304401.24,
+  "unrealized_pnl": 0.0,
+  "day_pnl": 100483.95,
+  "day_pnl_pct": 0.39573,
   "day_baseline_date": "2026-11-14",
   "day_baseline_equity": 253917.29,
-  "open_positions": [
-    {
-      "id": "2026-11-14_SOL-USD_525",
-      "symbol": "SOL-USD",
-      "side": "short",
-      "size": 40000.0,
-      "entry": 74.03,
-      "notional": 2961200.0,
-      "stop": 74.5,
-      "target": 73.2,
-      "target2": 72.5,
-      "invalidation": "15m close > 74.50 (reclaim of broken level)",
-      "risk_usd": 18800.0,
-      "risk_pct_equity": 0.07452,
-      "opened_at": "2026-11-14T10:08:15-05:00",
-      "card": null,
-      "reason": "Breakdown short: 09:15 ET 15m closed 74.25 < 74.50 pre-set trigger; three 15m closes below, majors trending down. 50x paper, size capped near \u00b11% book depth (~$3M).",
-      "price_source": "Coinbase Exchange public ticker bid 2026-11-14T10:08:15-05:00 (exch 2026-11-14T15:08:14.321677611Z) (unauthenticated)",
-      "override": null,
-      "paper_only": true,
-      "leverage": 50.0,
-      "margin": 59224.0,
-      "mark": 74.09,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-14T10:08:30-05:00",
-      "unrealized_pnl": -2400.0,
-      "exposure": 2963600.0
-    }
-  ],
-  "open_count": 1,
+  "open_positions": [],
+  "open_count": 0,
   "closed_positions": [
     {
       "type": "close",
@@ -4406,11 +4378,28 @@
       "reason": "T1 hit: Coinbase public 5m 10:20 ET candle low 65,204.4 <= T1 65,300; stop 66,330 never touched (hi since open 65,915.85); T2 65,000 missed (low 65,011). Banked at T1 per plan.",
       "price_source": "Coinbase Exchange public 5m candles BTC-USD 10:20 ET 2026-11-14 (unauthenticated); fill at T1 level 65,300",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-14_SOL-USD_525",
+      "symbol": "SOL-USD",
+      "side": "short",
+      "size": 40000.0,
+      "entry": 74.03,
+      "exit": 73.2,
+      "pnl": 33200.0,
+      "notional": 2961200.0,
+      "leverage": 50.0,
+      "margin": 59224.0,
+      "closed_at": "2026-11-14T11:09:02-05:00",
+      "reason": "T1 hit: Coinbase public 5m 10:30 ET candle low 73.10 <= T1 73.20; stop 74.50 never touched (hi since open 74.26); T2 72.50 not reached. Banked at T1 per plan.",
+      "price_source": "Coinbase Exchange public 5m candles SOL-USD 10:30 ET 2026-11-14 (unauthenticated); fill at T1 level 73.20",
+      "paper_only": true
     }
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 318801.24,
+  "max_risk_usd": 354401.24,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -2539172.9,
   "paused": false,
@@ -4465,8 +4454,8 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-14T11:09:01-05:00",
-      "note": "last: closed BTC-USD"
+      "last_run": "2026-11-14T11:09:02-05:00",
+      "note": "last: closed SOL-USD"
     },
     "Logger": {
       "status": "ready",
@@ -9539,16 +9528,14 @@
       "t": "2026-11-14T11:09:01-05:00",
       "equity": 318801.24,
       "kind": "close"
+    },
+    {
+      "t": "2026-11-14T11:09:02-05:00",
+      "equity": 354401.24,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-11T07:59:57-05:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: 0759 ET race cycle \u00b7 hold/rotate check \u00b7 eq $34,167 \u00b7 exposure $1,523,706 (44.6x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
     {
       "t": "2026-11-11T09:00:11-05:00",
       "agent": "Scanner",
@@ -11057,6 +11044,14 @@
       "text": "PAPER CLOSE BTC-USD @ 65300 \u00b7 P&L $+28500.60",
       "reason": "T1 hit: Coinbase public 5m 10:20 ET candle low 65,204.4 <= T1 65,300; stop 66,330 never touched (hi since open 65,915.85); T2 65,000 missed (low 65,011). Banked at T1 per plan.",
       "fill_id": "2026-11-14_BTC-USD_524"
+    },
+    {
+      "t": "2026-11-14T11:09:02-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE SOL-USD @ 73.2 \u00b7 P&L $+33200.00",
+      "reason": "T1 hit: Coinbase public 5m 10:30 ET candle low 73.10 <= T1 73.20; stop 74.50 never touched (hi since open 74.26); T2 72.50 not reached. Banked at T1 per plan.",
+      "fill_id": "2026-11-14_SOL-USD_525"
     }
   ],
   "scanner_feed": [
@@ -11970,7 +11965,7 @@
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-14T11:09:01-05:00",
+  "updated_at": "2026-11-14T11:09:02-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -11986,10 +11981,10 @@
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 59224.0,
-  "exposure": 2963600.0,
-  "buying_power": 12976462.0,
-  "effective_leverage": 9.3,
+  "margin_used": 0,
+  "exposure": 0.0,
+  "buying_power": 17720062.0,
+  "effective_leverage": 0.0,
   "operating_timezone": "America/New_York",
   "events": [
     {
