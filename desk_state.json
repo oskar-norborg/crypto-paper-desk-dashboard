@@ -9,10 +9,10 @@
   "cash": 253917.29,
   "realized_pnl": 203917.29,
   "unrealized_pnl": 0.0,
-  "day_pnl": 15782.75,
-  "day_pnl_pct": 0.06628,
+  "day_pnl": 0.0,
+  "day_pnl_pct": 0.0,
   "day_baseline_date": "2026-11-14",
-  "day_baseline_equity": 238134.54,
+  "day_baseline_equity": 253917.29,
   "open_positions": [],
   "open_count": 0,
   "closed_positions": [
@@ -4299,7 +4299,7 @@
   "max_risk_pct": 1.0,
   "max_risk_usd": 253917.29,
   "daily_loss_pause_pct": -10.0,
-  "daily_loss_pause_usd": -2381345.4,
+  "daily_loss_pause_usd": -2539172.9,
   "paused": false,
   "pause_reason": null,
   "watchlist": [
@@ -9356,13 +9356,6 @@
   "activity": [
     {
       "t": "2026-11-11T04:02:13-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "XRP-USD PASS (chaos: non-blocking)",
-      "reason": "vol $111.6M, spread 0.0095%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
-    },
-    {
-      "t": "2026-11-11T04:02:13-05:00",
       "agent": "Executor",
       "kind": "fill",
       "text": "PAPER FILL short 492618 XRP-USD @ 1.0561 \u00b7 notional $520,253 (50x, margin $10,405) \u00b7 stop 1.0645 \u00b7 tgt 1.0455 \u00b7 risk $4,137.99",
@@ -10859,6 +10852,13 @@
       "text": "PAPER CLOSE BTC-USD @ 67000 \u00b7 P&L $+15617.00",
       "reason": "TARGET HIT: 5m 22:30 ET low 66,550 <= T1 67,000; stop 67,800 never touched (hi since open 67,698.05); filled at T1 level",
       "fill_id": "2026-11-13_BTC-USD_513"
+    },
+    {
+      "t": "2026-11-14T00:04:26-05:00",
+      "agent": "Equity",
+      "kind": "note",
+      "text": "Nov 14 day baseline set to $253,917.29",
+      "reason": "ETH/BTC T1 hits occurred 22:30 ET Nov 13 (closed on paper 00:03 Nov 14); gains belong to Nov 13"
     }
   ],
   "scanner_feed": [
@@ -11772,7 +11772,7 @@
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-14T00:03:52-05:00",
+  "updated_at": "2026-11-14T00:04:26-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
