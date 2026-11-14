@@ -6,16 +6,44 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 253917.29,
-  "cash": 253917.29,
+  "equity": 220217.29,
+  "cash": 159111.79,
   "realized_pnl": 203917.29,
-  "unrealized_pnl": 0.0,
-  "day_pnl": 0.0,
-  "day_pnl_pct": 0.0,
+  "unrealized_pnl": -33700.0,
+  "day_pnl": -33700.0,
+  "day_pnl_pct": -0.13272,
   "day_baseline_date": "2026-11-14",
   "day_baseline_equity": 253917.29,
-  "open_positions": [],
-  "open_count": 0,
+  "open_positions": [
+    {
+      "id": "2026-11-14_ETH-USD_516",
+      "symbol": "ETH-USD",
+      "side": "short",
+      "size": 2500.0,
+      "entry": 1896.11,
+      "notional": 4740275.0,
+      "stop": 1904.0,
+      "target": 1878.0,
+      "target2": 1872.0,
+      "invalidation": "15m close > 1,904 (above bounce high) or BTC 15m close > 67,200",
+      "risk_usd": 19725.0,
+      "risk_pct_equity": 0.07768,
+      "opened_at": "2026-11-14T00:04:27-05:00",
+      "card": null,
+      "reason": "Failed-bounce short #2: post-22:30 flush to 1,876.19, bounce capped 1,902.34 (23:45 ET) = lower high under 1,914.76; 00:00 15m rolling over. Desk lesson = short failed bounces. 50x paper.",
+      "price_source": "Coinbase Exchange public ticker bid 2026-11-14T00:04:26-05:00 (exch 2026-11-14T05:04:26.483769298Z) (unauthenticated)",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 94805.5,
+      "mark": 1909.59,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-13T22:02:43-05:00",
+      "unrealized_pnl": -33700.0,
+      "exposure": 4773975.0
+    }
+  ],
+  "open_count": 1,
   "closed_positions": [
     {
       "type": "close",
@@ -4298,7 +4326,7 @@ window.__DESK_STATE__ = {
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 253917.29,
+  "max_risk_usd": 220217.29,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -2539172.9,
   "paused": false,
@@ -4353,13 +4381,13 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-14T00:03:52-05:00",
-      "note": "last: closed BTC-USD"
+      "last_run": "2026-11-14T00:04:27-05:00",
+      "note": "last: paper fill ETH-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-13T22:02:33-05:00",
-      "note": "logged 2026-11-13_BTC-USD_513"
+      "last_run": "2026-11-14T00:04:27-05:00",
+      "note": "logged 2026-11-14_ETH-USD_516"
     },
     "Equity": {
       "status": "ready",
@@ -9352,18 +9380,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-14T00:03:52-05:00",
       "equity": 253917.29,
       "kind": "close"
+    },
+    {
+      "t": "2026-11-14T00:04:27-05:00",
+      "equity": 220217.29,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-11T04:02:13-05:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 492618 XRP-USD @ 1.0561 \u00b7 notional $520,253 (50x, margin $10,405) \u00b7 stop 1.0645 \u00b7 tgt 1.0455 \u00b7 risk $4,137.99",
-      "reason": "RACE redeploy 0402 ET: BTC/ETH tilt short. 24h -2.94%. XRP-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 1.0603; session 5m low 1.0502; 15m detail [('02:15', 1.0599, 1.0602, 1.0512), ('02:30', 1.054, 1.0601, 1.0536), ('02:45', 1.0584, 1.0592, 1.052), ('03:00', 1.0593, 1.0603, 1.0547), ('03:15', 1.0548, 1.06, 1.0546), ('03:30', 1.0584, 1.0591, 1.0531), ('03:45', 1.0554, 1.0585, 1.0547), ('04:00', 1.056, 1.0569, 1.0543)]. Notional $520,253 @ 50x (margin $10,405), risk $4,138 (11.9% eq, warn-only). T1 1.0455, T2 1.0355.",
-      "fill_id": "2026-11-11_XRP-USD_445",
-      "card": "RACE_XRP_SHORT_0402"
-    },
     {
       "t": "2026-11-11T04:02:13-05:00",
       "agent": "Executor",
@@ -10860,6 +10884,15 @@ window.__DESK_STATE__ = {
       "kind": "note",
       "text": "Nov 14 day baseline set to $253,917.29",
       "reason": "ETH/BTC T1 hits occurred 22:30 ET Nov 13 (closed on paper 00:03 Nov 14); gains belong to Nov 13"
+    },
+    {
+      "t": "2026-11-14T00:04:27-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 2500 ETH-USD @ 1896.11 \u00b7 notional $4,740,275 (50x, margin $94,806) \u00b7 stop 1904 \u00b7 tgt 1878 \u00b7 risk $19,725.00",
+      "reason": "Failed-bounce short #2: post-22:30 flush to 1,876.19, bounce capped 1,902.34 (23:45 ET) = lower high under 1,914.76; 00:00 15m rolling over. Desk lesson = short failed bounces. 50x paper.",
+      "fill_id": "2026-11-14_ETH-USD_516",
+      "card": null
     }
   ],
   "scanner_feed": [
@@ -11773,7 +11806,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-14T00:04:26-05:00",
+  "updated_at": "2026-11-14T00:04:27-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -11789,10 +11822,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 0,
-  "exposure": 0.0,
-  "buying_power": 12695864.5,
-  "effective_leverage": 0.0,
+  "margin_used": 94805.5,
+  "exposure": 4773975.0,
+  "buying_power": 6236889.5,
+  "effective_leverage": 21.68,
   "operating_timezone": "America/New_York",
   "events": [
     {
