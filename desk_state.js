@@ -6,44 +6,16 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 349374.74,
-  "cash": 307806.74,
-  "realized_pnl": 301174.74,
-  "unrealized_pnl": -1800.0,
-  "day_pnl": 95457.45,
-  "day_pnl_pct": 0.37594,
+  "equity": 320574.74,
+  "cash": 320574.74,
+  "realized_pnl": 270574.74,
+  "unrealized_pnl": 0.0,
+  "day_pnl": 66657.45,
+  "day_pnl_pct": 0.26252,
   "day_baseline_date": "2026-11-14",
   "day_baseline_equity": 253917.29,
-  "open_positions": [
-    {
-      "id": "2026-11-14_SOL-USD_536",
-      "symbol": "SOL-USD",
-      "side": "short",
-      "size": 30000.0,
-      "entry": 72.28,
-      "notional": 2168400.0,
-      "stop": 73.3,
-      "target": 71.5,
-      "target2": 71.0,
-      "invalidation": "15m close > 73.30 (above 11:15 lower-high 73.22)",
-      "risk_usd": 30600.0,
-      "risk_pct_equity": 0.07739,
-      "opened_at": "2026-11-14T12:03:55-05:00",
-      "card": null,
-      "reason": "Trend-continuation short: -9.5% 24h, fresh low 71.82 at 11:45 ET, bounces capped 73.04-73.22, 12:00 bar pressing lows. 50x paper.",
-      "price_source": "Coinbase Exchange public ticker bid 2026-11-14T12:03:55-05:00 (exch 2026-11-14T17:03:54.660506412Z) (unauthenticated)",
-      "override": null,
-      "paper_only": true,
-      "leverage": 50.0,
-      "margin": 43368.0,
-      "mark": 72.34,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-14T12:04:12-05:00",
-      "unrealized_pnl": -1800.0,
-      "exposure": 2170200.0
-    }
-  ],
-  "open_count": 1,
+  "open_positions": [],
+  "open_count": 0,
   "closed_positions": [
     {
       "type": "close",
@@ -4526,11 +4498,28 @@ window.__DESK_STATE__ = {
       "reason": "STOP hit: Coinbase public 5m 12:25 ET candle high 0.9657 >= stop 0.9635; T1 0.945 missed by 0.0002 (12:05/12:15 lows 0.9452).",
       "price_source": "Coinbase Exchange public 5m candles XRP-USD 12:25 ET 2026-11-14 (unauthenticated); fill at stop level 0.9635",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-14_SOL-USD_536",
+      "symbol": "SOL-USD",
+      "side": "short",
+      "size": 30000.0,
+      "entry": 72.28,
+      "exit": 73.3,
+      "pnl": -30600.0,
+      "notional": 2168400.0,
+      "leverage": 50.0,
+      "margin": 43368.0,
+      "closed_at": "2026-11-14T13:04:29-05:00",
+      "reason": "STOP hit: Coinbase public 5m 12:35 ET candle high 73.59 >= stop 73.30; T1 71.50 never reached (low since open 71.95).",
+      "price_source": "Coinbase Exchange public 5m candles SOL-USD 12:35 ET 2026-11-14 (unauthenticated); fill at stop level 73.30",
+      "paper_only": true
     }
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 349374.74,
+  "max_risk_usd": 320574.74,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -2539172.9,
   "paused": false,
@@ -4586,7 +4575,7 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-14T13:04:29-05:00",
-      "note": "last: closed XRP-USD"
+      "note": "last: closed SOL-USD"
     },
     "Logger": {
       "status": "ready",
@@ -9739,16 +9728,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-14T13:04:29-05:00",
       "equity": 349374.74,
       "kind": "close"
+    },
+    {
+      "t": "2026-11-14T13:04:29-05:00",
+      "equity": 320574.74,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-11T10:03:12-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "ETH-USD short 590.0288 @ 2057.4: HOLD \u2014 no trigger",
-      "reason": "Coinbase public 5m since 2026-11-11T04:02:13-05:00: maxH=2063.9 minL=2041.5 (stop 2073.86; T1 2036.83/T2 2011.83); 15m max close=2060.24 (inv 2066.04). No close trigger."
-    },
     {
       "t": "2026-11-11T10:03:13-05:00",
       "agent": "Risk",
@@ -11272,6 +11259,14 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE XRP-USD @ 0.9635 \u00b7 P&L $-23500.00",
       "reason": "STOP hit: Coinbase public 5m 12:25 ET candle high 0.9657 >= stop 0.9635; T1 0.945 missed by 0.0002 (12:05/12:15 lows 0.9452).",
       "fill_id": "2026-11-14_XRP-USD_537"
+    },
+    {
+      "t": "2026-11-14T13:04:29-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE SOL-USD @ 73.3 \u00b7 P&L $-30600.00",
+      "reason": "STOP hit: Coinbase public 5m 12:35 ET candle high 73.59 >= stop 73.30; T1 71.50 never reached (low since open 71.95).",
+      "fill_id": "2026-11-14_SOL-USD_536"
     }
   ],
   "scanner_feed": [
@@ -12203,10 +12198,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 43368.0,
-  "exposure": 2170200.0,
-  "buying_power": 15298537.0,
-  "effective_leverage": 6.21,
+  "margin_used": 0,
+  "exposure": 0.0,
+  "buying_power": 16028737.0,
+  "effective_leverage": 0.0,
   "operating_timezone": "America/New_York",
   "events": [
     {
