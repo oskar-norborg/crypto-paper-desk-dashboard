@@ -5,12 +5,12 @@
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 313201.24,
-  "cash": 281163.24,
+  "equity": 284201.24,
+  "cash": 232753.24,
   "realized_pnl": 304401.24,
-  "unrealized_pnl": -41200.0,
-  "day_pnl": 59283.95,
-  "day_pnl_pct": 0.23348,
+  "unrealized_pnl": -70200.0,
+  "day_pnl": 30283.95,
+  "day_pnl_pct": 0.11927,
   "day_baseline_date": "2026-11-14",
   "day_baseline_equity": 253917.29,
   "open_positions": [
@@ -40,9 +40,36 @@
       "mark_at": "2026-11-14T10:08:29-05:00",
       "unrealized_pnl": -41200.0,
       "exposure": 3703100.0
+    },
+    {
+      "id": "2026-11-14_XRP-USD_529",
+      "symbol": "XRP-USD",
+      "side": "short",
+      "size": 2500000.0,
+      "entry": 0.9682,
+      "notional": 2420500.0,
+      "stop": 0.9765,
+      "target": 0.958,
+      "target2": 0.95,
+      "invalidation": "15m close > 0.9765 (reclaim of broken level / failed-bounce highs)",
+      "risk_usd": 20750.0,
+      "risk_pct_equity": 0.06625,
+      "opened_at": "2026-11-14T11:09:02-05:00",
+      "card": null,
+      "reason": "Breakdown short: 10:15 ET 15m closed 0.9733 < 0.9768 pre-set trigger; two failed bounces at ~0.9759, new low 0.9655 area. 50x paper, size ~\u00b11% book depth (~$2.7M).",
+      "price_source": "Coinbase Exchange public ticker bid 2026-11-14T11:09:02-05:00 (exch 2026-11-14T16:09:01.494535543Z) (unauthenticated)",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 48410.0,
+      "mark": 0.9798,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-14T10:08:30-05:00",
+      "unrealized_pnl": -29000.0,
+      "exposure": 2449500.0
     }
   ],
-  "open_count": 1,
+  "open_count": 2,
   "closed_positions": [
     {
       "type": "close",
@@ -4427,7 +4454,7 @@
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 313201.24,
+  "max_risk_usd": 284201.24,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -2539172.9,
   "paused": false,
@@ -4483,12 +4510,12 @@
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-14T11:09:02-05:00",
-      "note": "last: paper fill ETH-USD"
+      "note": "last: paper fill XRP-USD"
     },
     "Logger": {
       "status": "ready",
       "last_run": "2026-11-14T11:09:02-05:00",
-      "note": "logged 2026-11-14_ETH-USD_528"
+      "note": "logged 2026-11-14_XRP-USD_529"
     },
     "Equity": {
       "status": "ready",
@@ -9566,16 +9593,14 @@
       "t": "2026-11-14T11:09:02-05:00",
       "equity": 313201.24,
       "kind": "fill"
+    },
+    {
+      "t": "2026-11-14T11:09:02-05:00",
+      "equity": 284201.24,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-11T09:00:13-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "ETH-USD short 590.0288 @ 2057.4: HOLD \u2014 no trigger",
-      "reason": "Coinbase public 5m since 2026-11-11T04:02:13-05:00: maxH=2063.9 minL=2044.69 (stop 2073.86; T1 2036.83/T2 2011.83); 15m max close=2060.24 (inv 2066.04). No close trigger."
-    },
     {
       "t": "2026-11-11T09:00:13-05:00",
       "agent": "Risk",
@@ -11087,6 +11112,15 @@
       "reason": "Re-short trigger: 10:15 ET 15m closed 1,831.61 < 1,841 pre-set level; 10:30/10:45 bounces capped below 1,846 (failed bounce), 11:00 bar rolling over. 50x paper.",
       "fill_id": "2026-11-14_ETH-USD_528",
       "card": null
+    },
+    {
+      "t": "2026-11-14T11:09:02-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 2.5e+06 XRP-USD @ 0.9682 \u00b7 notional $2,420,500 (50x, margin $48,410) \u00b7 stop 0.9765 \u00b7 tgt 0.958 \u00b7 risk $20,750.00",
+      "reason": "Breakdown short: 10:15 ET 15m closed 0.9733 < 0.9768 pre-set trigger; two failed bounces at ~0.9759, new low 0.9655 area. 50x paper, size ~\u00b11% book depth (~$2.7M).",
+      "fill_id": "2026-11-14_XRP-USD_529",
+      "card": null
     }
   ],
   "scanner_feed": [
@@ -12016,10 +12050,10 @@
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 73238.0,
-  "exposure": 3703100.0,
-  "buying_power": 11956962.0,
-  "effective_leverage": 11.82,
+  "margin_used": 121648.0,
+  "exposure": 6152600.0,
+  "buying_power": 8057462.0,
+  "effective_leverage": 21.65,
   "operating_timezone": "America/New_York",
   "events": [
     {
