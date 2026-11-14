@@ -6,12 +6,12 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 467648.74,
-  "cash": 449289.94,
+  "equity": 440375.94,
+  "cash": 398418.92,
   "realized_pnl": 451593.74,
-  "unrealized_pnl": -33945.0,
-  "day_pnl": 213731.45,
-  "day_pnl_pct": 0.84174,
+  "unrealized_pnl": -61217.8,
+  "day_pnl": 186458.65,
+  "day_pnl_pct": 0.73433,
   "day_baseline_date": "2026-11-14",
   "day_baseline_equity": 253917.29,
   "open_positions": [
@@ -41,9 +41,36 @@ window.__DESK_STATE__ = {
       "mark_at": "2026-11-14T17:01:22-05:00",
       "unrealized_pnl": -33945.0,
       "exposure": 2649135.0
+    },
+    {
+      "id": "2026-11-14_BTC-USD_559",
+      "symbol": "BTC-USD",
+      "side": "short",
+      "size": 40.0,
+      "entry": 63588.78,
+      "notional": 2543551.2,
+      "stop": 63990.0,
+      "target": 63280.0,
+      "target2": 63000.0,
+      "invalidation": "15m close > 63,990 (above 17:40 lower high 63,989.3)",
+      "risk_usd": 16048.8,
+      "risk_pct_equity": 0.03432,
+      "opened_at": "2026-11-14T18:04:58-05:00",
+      "card": null,
+      "reason": "Lower-high continuation short: 17:10 flush low 63,270, bounces capped 64,283.6 (17:20) then 64,102.6 / 63,989.3 / 63,889.7 descending; 17:50 low 63,279; 24h -6.9%. Target retest/break of 63,270. 50x paper.",
+      "price_source": "Coinbase Exchange public ticker bid 2026-11-14T18:04:57-05:00 (exch 2026-11-14T23:04:55.741916726Z) (unauthenticated)",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 50871.02,
+      "mark": 64270.6,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-14T17:01:21-05:00",
+      "unrealized_pnl": -27272.8,
+      "exposure": 2570824.0
     }
   ],
-  "open_count": 1,
+  "open_count": 2,
   "closed_positions": [
     {
       "type": "close",
@@ -4683,7 +4710,7 @@ window.__DESK_STATE__ = {
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 467648.74,
+  "max_risk_usd": 440375.94,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -2539172.9,
   "paused": false,
@@ -4738,13 +4765,13 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-14T18:04:57-05:00",
-      "note": "last: paper fill ETH-USD"
+      "last_run": "2026-11-14T18:04:58-05:00",
+      "note": "last: paper fill BTC-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-14T18:04:57-05:00",
-      "note": "logged 2026-11-14_ETH-USD_558"
+      "last_run": "2026-11-14T18:04:58-05:00",
+      "note": "logged 2026-11-14_BTC-USD_559"
     },
     "Equity": {
       "status": "ready",
@@ -10007,16 +10034,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-14T18:04:57-05:00",
       "equity": 467648.74,
       "kind": "fill"
+    },
+    {
+      "t": "2026-11-14T18:04:58-05:00",
+      "equity": 440375.94,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-11T12:00:50-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 1200 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
-      "reason": "scheduled race cycle; scan scans/2026-11-11_1200_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
-    },
     {
       "t": "2026-11-11T12:00:52-05:00",
       "agent": "Risk",
@@ -11560,6 +11585,15 @@ window.__DESK_STATE__ = {
       "reason": "Lower-high continuation short: 17:10 flush low 1,727.73, bounces capped 1,769.12 (17:20) then 1,765.32 / 1,761.2 / 1,760.41 / 1,753.94 descending; 24h -9.6%. Target retest/break of 1,727.73 low. 50x paper.",
       "fill_id": "2026-11-14_ETH-USD_558",
       "card": null
+    },
+    {
+      "t": "2026-11-14T18:04:58-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 40 BTC-USD @ 63588.8 \u00b7 notional $2,543,551 (50x, margin $50,871) \u00b7 stop 63990 \u00b7 tgt 63280 \u00b7 risk $16,048.80",
+      "reason": "Lower-high continuation short: 17:10 flush low 63,270, bounces capped 64,283.6 (17:20) then 64,102.6 / 63,989.3 / 63,889.7 descending; 17:50 low 63,279; 24h -6.9%. Target retest/break of 63,270. 50x paper.",
+      "fill_id": "2026-11-14_BTC-USD_559",
+      "card": null
     }
   ],
   "scanner_feed": [
@@ -12476,7 +12510,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-14T18:04:57-05:00",
+  "updated_at": "2026-11-14T18:04:58-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -12492,10 +12526,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 52303.8,
-  "exposure": 2649135.0,
-  "buying_power": 20733302.0,
-  "effective_leverage": 5.66,
+  "margin_used": 103174.82,
+  "exposure": 5219959.0,
+  "buying_power": 16798838.0,
+  "effective_leverage": 11.85,
   "operating_timezone": "America/New_York",
   "events": [
     {
