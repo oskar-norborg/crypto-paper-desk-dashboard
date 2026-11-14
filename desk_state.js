@@ -6,12 +6,12 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 409490.24,
-  "cash": 360958.64,
+  "equity": 395389.24,
+  "cash": 295800.95,
   "realized_pnl": 383710.24,
-  "unrealized_pnl": -24220.0,
-  "day_pnl": 155572.95,
-  "day_pnl_pct": 0.61269,
+  "unrealized_pnl": -38321.0,
+  "day_pnl": 141471.95,
+  "day_pnl_pct": 0.55716,
   "day_baseline_date": "2026-11-14",
   "day_baseline_equity": 253917.29,
   "open_positions": [
@@ -41,9 +41,36 @@ window.__DESK_STATE__ = {
       "mark_at": "2026-11-14T11:09:03-05:00",
       "unrealized_pnl": -24220.0,
       "exposure": 3661800.0
+    },
+    {
+      "id": "2026-11-14_BTC-USD_535",
+      "symbol": "BTC-USD",
+      "side": "short",
+      "size": 50.0,
+      "entry": 65157.69,
+      "notional": 3257884.5,
+      "stop": 65650.0,
+      "target": 64800.0,
+      "target2": 64500.0,
+      "invalidation": "15m close > 65,650 (above 11:15/11:50 lower highs)",
+      "risk_usd": 24615.5,
+      "risk_pct_equity": 0.06011,
+      "opened_at": "2026-11-14T12:03:55-05:00",
+      "card": null,
+      "reason": "Trend-continuation short: 11:45 ET broke 65,000 (low 64,978), 11:50 bounce capped 65,486 below 11:15 high 65,616, 12:00 rolling over. 50x paper.",
+      "price_source": "Coinbase Exchange public ticker bid 2026-11-14T12:03:55-05:00 (exch 2026-11-14T17:03:54.100093034Z) (unauthenticated)",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 65157.69,
+      "mark": 65439.71,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-14T11:09:02-05:00",
+      "unrealized_pnl": -14101.0,
+      "exposure": 3271985.5
     }
   ],
-  "open_count": 1,
+  "open_count": 2,
   "closed_positions": [
     {
       "type": "close",
@@ -4479,7 +4506,7 @@ window.__DESK_STATE__ = {
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 409490.24,
+  "max_risk_usd": 395389.24,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -2539172.9,
   "paused": false,
@@ -4535,12 +4562,12 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-14T12:03:55-05:00",
-      "note": "last: paper fill ETH-USD"
+      "note": "last: paper fill BTC-USD"
     },
     "Logger": {
       "status": "ready",
       "last_run": "2026-11-14T12:03:55-05:00",
-      "note": "logged 2026-11-14_ETH-USD_534"
+      "note": "logged 2026-11-14_BTC-USD_535"
     },
     "Equity": {
       "status": "ready",
@@ -9653,18 +9680,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-14T12:03:55-05:00",
       "equity": 409490.24,
       "kind": "fill"
+    },
+    {
+      "t": "2026-11-14T12:03:55-05:00",
+      "equity": 395389.24,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-11T09:00:20-05:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 163366 XRP-USD @ 1.0597 \u00b7 notional $173,119 (50x, margin $3,462) \u00b7 stop 1.0682 \u00b7 tgt 1.0475 \u00b7 risk $1,388.61",
-      "reason": "RACE redeploy 0900 ET: BTC/ETH tilt short. 24h -0.39%. XRP-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 1.0617; session 5m low 1.0505; 15m detail [('07:15', 1.0527, 1.0563, 1.0511), ('07:30', 1.0557, 1.0573, 1.0505), ('07:45', 1.0572, 1.0605, 1.0556), ('08:00', 1.0572, 1.058, 1.0535), ('08:15', 1.0582, 1.0607, 1.0554), ('08:30', 1.0559, 1.0583, 1.0533), ('08:45', 1.06, 1.0617, 1.0557), ('09:00', 1.0599, 1.0601, 1.0599)]. Notional $173,119 @ 50x (margin $3,462), risk $1,389 (4.6% eq, warn-only). T1 1.0475, T2 1.0375.",
-      "fill_id": "2026-11-11_XRP-USD_451",
-      "card": "RACE_XRP_SHORT_0900"
-    },
     {
       "t": "2026-11-11T09:00:21-05:00",
       "agent": "Rug Check",
@@ -11181,6 +11204,15 @@ window.__DESK_STATE__ = {
       "reason": "Trend-continuation short: lower highs all morning (1,845 -> 1,835 -> 1,831 -> 1,828), 11:45 ET new low 1,808.37, 12:00 rolling back toward lows. 50x paper.",
       "fill_id": "2026-11-14_ETH-USD_534",
       "card": null
+    },
+    {
+      "t": "2026-11-14T12:03:55-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 50 BTC-USD @ 65157.7 \u00b7 notional $3,257,884 (50x, margin $65,158) \u00b7 stop 65650 \u00b7 tgt 64800 \u00b7 risk $24,615.50",
+      "reason": "Trend-continuation short: 11:45 ET broke 65,000 (low 64,978), 11:50 bounce capped 65,486 below 11:15 high 65,616, 12:00 rolling over. 50x paper.",
+      "fill_id": "2026-11-14_BTC-USD_535",
+      "card": null
     }
   ],
   "scanner_feed": [
@@ -12112,10 +12144,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 72751.6,
-  "exposure": 3661800.0,
-  "buying_power": 16812712.0,
-  "effective_leverage": 8.94,
+  "margin_used": 137909.29,
+  "exposure": 6933785.5,
+  "buying_power": 12835676.5,
+  "effective_leverage": 17.54,
   "operating_timezone": "America/New_York",
   "events": [
     {
