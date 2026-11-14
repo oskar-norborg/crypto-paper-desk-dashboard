@@ -6,12 +6,12 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 366289.24,
-  "cash": 252432.95,
+  "equity": 331039.24,
+  "cash": 204727.95,
   "realized_pnl": 383710.24,
-  "unrealized_pnl": -67421.0,
-  "day_pnl": 112371.95,
-  "day_pnl_pct": 0.44255,
+  "unrealized_pnl": -102671.0,
+  "day_pnl": 77121.95,
+  "day_pnl_pct": 0.30373,
   "day_baseline_date": "2026-11-14",
   "day_baseline_equity": 253917.29,
   "open_positions": [
@@ -95,9 +95,36 @@ window.__DESK_STATE__ = {
       "mark_at": "2026-11-14T11:09:04-05:00",
       "unrealized_pnl": -29100.0,
       "exposure": 2197500.0
+    },
+    {
+      "id": "2026-11-14_XRP-USD_537",
+      "symbol": "XRP-USD",
+      "side": "short",
+      "size": 2500000.0,
+      "entry": 0.9541,
+      "notional": 2385250.0,
+      "stop": 0.9635,
+      "target": 0.945,
+      "target2": 0.938,
+      "invalidation": "15m close > 0.9635 (above 11:40 lower-high 0.963)",
+      "risk_usd": 23500.0,
+      "risk_pct_equity": 0.06416,
+      "opened_at": "2026-11-14T12:03:55-05:00",
+      "card": null,
+      "reason": "Trend-continuation short: fresh low 0.9501 at 11:45 ET, bounces capped 0.963 (11:40), 12:00 closing at lows 0.9543. 50x paper. SOFT-WARN ~\u00b11% book depth.",
+      "price_source": "Coinbase Exchange public ticker bid 2026-11-14T12:03:55-05:00 (exch 2026-11-14T17:03:53.456187658Z) (unauthenticated)",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 47705.0,
+      "mark": 0.9682,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-14T11:09:04-05:00",
+      "unrealized_pnl": -35250.0,
+      "exposure": 2420500.0
     }
   ],
-  "open_count": 3,
+  "open_count": 4,
   "closed_positions": [
     {
       "type": "close",
@@ -4533,7 +4560,7 @@ window.__DESK_STATE__ = {
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 366289.24,
+  "max_risk_usd": 331039.24,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -2539172.9,
   "paused": false,
@@ -4589,12 +4616,12 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-14T12:03:55-05:00",
-      "note": "last: paper fill SOL-USD"
+      "note": "last: paper fill XRP-USD"
     },
     "Logger": {
       "status": "ready",
       "last_run": "2026-11-14T12:03:55-05:00",
-      "note": "logged 2026-11-14_SOL-USD_536"
+      "note": "logged 2026-11-14_XRP-USD_537"
     },
     "Equity": {
       "status": "ready",
@@ -9717,18 +9744,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-14T12:03:55-05:00",
       "equity": 366289.24,
       "kind": "fill"
+    },
+    {
+      "t": "2026-11-14T12:03:55-05:00",
+      "equity": 331039.24,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-11T09:00:21-05:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 877.9 SOL-USD @ 84.51 \u00b7 notional $74,191 (50x, margin $1,484) \u00b7 stop 85.36 \u00b7 tgt 83.31 \u00b7 risk $746.21",
-      "reason": "RACE redeploy 0900 ET: BTC/ETH tilt short. 24h +0.57%. SOL-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 84.67; session 5m low 83.51; 15m detail [('07:15', 83.68, 83.83, 83.51), ('07:30', 83.8, 83.9, 83.58), ('07:45', 83.83, 84.09, 83.79), ('08:00', 84.1, 84.1, 83.59), ('08:15', 84.17, 84.52, 84.01), ('08:30', 84.19, 84.23, 83.97), ('08:45', 84.49, 84.67, 84.16), ('09:00', 84.51, 84.55, 84.5)]. Notional $74,191 @ 50x (margin $1,484), risk $746 (2.5% eq, warn-only). T1 83.31, T2 82.31.",
-      "fill_id": "2026-11-11_SOL-USD_452",
-      "card": "RACE_SOL_SHORT_0900"
-    },
     {
       "t": "2026-11-11T09:00:21-05:00",
       "agent": "Executor",
@@ -11247,6 +11270,15 @@ window.__DESK_STATE__ = {
       "reason": "Trend-continuation short: -9.5% 24h, fresh low 71.82 at 11:45 ET, bounces capped 73.04-73.22, 12:00 bar pressing lows. 50x paper.",
       "fill_id": "2026-11-14_SOL-USD_536",
       "card": null
+    },
+    {
+      "t": "2026-11-14T12:03:55-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 2.5e+06 XRP-USD @ 0.9541 \u00b7 notional $2,385,250 (50x, margin $47,705) \u00b7 stop 0.9635 \u00b7 tgt 0.945 \u00b7 risk $23,500.00",
+      "reason": "Trend-continuation short: fresh low 0.9501 at 11:45 ET, bounces capped 0.963 (11:40), 12:00 closing at lows 0.9543. 50x paper. SOFT-WARN ~\u00b11% book depth.",
+      "fill_id": "2026-11-14_XRP-USD_537",
+      "card": null
     }
   ],
   "scanner_feed": [
@@ -12178,10 +12210,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 181277.29,
-  "exposure": 9131285.5,
-  "buying_power": 9183176.5,
-  "effective_leverage": 24.93,
+  "margin_used": 228982.29,
+  "exposure": 11551785.5,
+  "buying_power": 5000176.5,
+  "effective_leverage": 34.9,
   "operating_timezone": "America/New_York",
   "events": [
     {
