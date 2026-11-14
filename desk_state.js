@@ -4397,8 +4397,8 @@ window.__DESK_STATE__ = {
     },
     "Equity": {
       "status": "ready",
-      "last_run": "2026-11-14T00:04:42-05:00",
-      "note": "equity $255517.54 \u00b7 day +1600.25"
+      "last_run": "2026-11-14T04:07:27-05:00",
+      "note": "equity $228948.04 \u00b7 day -24969.25"
     }
   },
   "equity_curve": [
