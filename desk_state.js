@@ -6,42 +6,15 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 178954.54,
-  "cash": 69760.75,
-  "realized_pnl": 129940.29,
-  "unrealized_pnl": -985.75,
-  "day_pnl": 68858.1,
-  "day_pnl_pct": 0.62543,
-  "day_baseline_date": "2026-11-13",
-  "day_baseline_equity": 110096.44,
+  "equity": 238134.54,
+  "cash": 204487.95,
+  "realized_pnl": 188300.29,
+  "unrealized_pnl": -165.75,
+  "day_pnl": 0.0,
+  "day_pnl_pct": 0.0,
+  "day_baseline_date": "2026-11-14",
+  "day_baseline_equity": 238134.54,
   "open_positions": [
-    {
-      "id": "2026-11-13_ETH-USD_512",
-      "symbol": "ETH-USD",
-      "side": "short",
-      "size": 2000.0,
-      "entry": 1909.18,
-      "notional": 3818360.0,
-      "stop": 1916.0,
-      "target": 1880.0,
-      "target2": 1875.0,
-      "invalidation": "15m close > 1,916 (above bounce high) or BTC 15m close > 67,800",
-      "risk_usd": 13640.0,
-      "risk_pct_equity": 0.0758,
-      "opened_at": "2026-11-13T22:02:33-05:00",
-      "card": null,
-      "reason": "Failed-bounce short after 21:25 ET flush to 1,875: bounce stalled under 1,914.76 (21:45-21:50 highs), lower high forming; desk lesson = short failed bounces. 50x paper.",
-      "price_source": "Coinbase Exchange public ticker bid 22:02:24 ET (unauthenticated)",
-      "override": null,
-      "paper_only": true,
-      "leverage": 50.0,
-      "margin": 76367.2,
-      "mark": 1909.59,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-13T22:02:43-05:00",
-      "unrealized_pnl": -820.0,
-      "exposure": 3819180.0
-    },
     {
       "id": "2026-11-13_BTC-USD_513",
       "symbol": "BTC-USD",
@@ -70,7 +43,7 @@ window.__DESK_STATE__ = {
       "exposure": 1690782.75
     }
   ],
-  "open_count": 2,
+  "open_count": 1,
   "closed_positions": [
     {
       "type": "close",
@@ -4315,13 +4288,30 @@ window.__DESK_STATE__ = {
       "reason": "TARGET HIT: 5m 21:25 ET low 75.00 <= T1 75.60; stop 77.65 never touched (hi since open 76.94)",
       "price_source": "Coinbase Exchange public 5m candle 21:25 ET (target touched; filled at target level)",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-13_ETH-USD_512",
+      "symbol": "ETH-USD",
+      "side": "short",
+      "size": 2000.0,
+      "entry": 1909.18,
+      "exit": 1880.0,
+      "pnl": 58360.0,
+      "notional": 3818360.0,
+      "leverage": 50.0,
+      "margin": 76367.2,
+      "closed_at": "2026-11-14T00:03:52-05:00",
+      "reason": "TARGET HIT: 5m 22:30 ET low 1,878.80 <= T1 1,880; stop 1,916 never touched (hi since open 1,913.90); filled at T1 level",
+      "price_source": "Coinbase Exchange public 5m candles (unauthenticated), 22:30 ET bar",
+      "paper_only": true
     }
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 178954.54,
+  "max_risk_usd": 238134.54,
   "daily_loss_pause_pct": -10.0,
-  "daily_loss_pause_usd": -1100964.4,
+  "daily_loss_pause_usd": -2381345.4,
   "paused": false,
   "pause_reason": null,
   "watchlist": [
@@ -4374,8 +4364,8 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-13T22:02:33-05:00",
-      "note": "last: paper fill BTC-USD"
+      "last_run": "2026-11-14T00:03:52-05:00",
+      "note": "last: closed ETH-USD"
     },
     "Logger": {
       "status": "ready",
@@ -9363,16 +9353,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-13T22:02:44-05:00",
       "equity": 178954.54,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-14T00:03:52-05:00",
+      "equity": 238134.54,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-11T04:02:13-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "ETH-USD PASS (chaos: non-blocking)",
-      "reason": "vol $342.4M, spread 0.0005%; Coinbase-listed CEX major; FULL CHAOS rug checks soft"
-    },
     {
       "t": "2026-11-11T04:02:13-05:00",
       "agent": "Executor",
@@ -10871,6 +10859,14 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "22:01 ET cycle: 3 targets hit (+$70,496), 2 new failed-bounce shorts (ETH/BTC)",
       "reason": "scans/2026-11-13_2201_scan.md"
+    },
+    {
+      "t": "2026-11-14T00:03:52-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE ETH-USD @ 1880 \u00b7 P&L $+58360.00",
+      "reason": "TARGET HIT: 5m 22:30 ET low 1,878.80 <= T1 1,880; stop 1,916 never touched (hi since open 1,913.90); filled at T1 level",
+      "fill_id": "2026-11-13_ETH-USD_512"
     }
   ],
   "scanner_feed": [
@@ -11784,7 +11780,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-13T22:02:56-05:00",
+  "updated_at": "2026-11-14T00:03:52-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -11800,10 +11796,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 110179.54,
-  "exposure": 5509962.75,
-  "buying_power": 3437764.25,
-  "effective_leverage": 30.79,
+  "margin_used": 33812.34,
+  "exposure": 1690782.75,
+  "buying_power": 10215944.25,
+  "effective_leverage": 7.1,
   "operating_timezone": "America/New_York",
   "events": [
     {
