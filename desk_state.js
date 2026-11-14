@@ -6,16 +6,44 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 408874.74,
-  "cash": 408874.74,
+  "equity": 331999.74,
+  "cash": 355425.24,
   "realized_pnl": 358874.74,
-  "unrealized_pnl": 0.0,
-  "day_pnl": 154957.45,
-  "day_pnl_pct": 0.61027,
+  "unrealized_pnl": -76875.0,
+  "day_pnl": 78082.45,
+  "day_pnl_pct": 0.30751,
   "day_baseline_date": "2026-11-14",
   "day_baseline_equity": 253917.29,
-  "open_positions": [],
-  "open_count": 0,
+  "open_positions": [
+    {
+      "id": "2026-11-14_ETH-USD_550",
+      "symbol": "ETH-USD",
+      "side": "short",
+      "size": 1500.0,
+      "entry": 1781.65,
+      "notional": 2672475.0,
+      "stop": 1797.0,
+      "target": 1765.0,
+      "target2": 1755.0,
+      "invalidation": "15m close > 1,797 (above 15:55 bounce high 1,795.27)",
+      "risk_usd": 23025.0,
+      "risk_pct_equity": 0.05631,
+      "opened_at": "2026-11-14T16:07:11-05:00",
+      "card": null,
+      "reason": "Breakdown + lower-high short: 15:45 15m bar broke 1,814.88 range low to 1,768; 15:55 bounce capped 1,795.27, 16:00 lower high 1,790.58; 24h -7.6%. 50x paper.",
+      "price_source": "Coinbase Exchange public ticker bid 2026-11-14T16:07:11-05:00 (exch 2026-11-14T21:07:11.605518302Z) (unauthenticated)",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 53449.5,
+      "mark": 1832.9,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-14T15:07:17-05:00",
+      "unrealized_pnl": -76875.0,
+      "exposure": 2749350.0
+    }
+  ],
+  "open_count": 1,
   "closed_positions": [
     {
       "type": "close",
@@ -4587,7 +4615,7 @@ window.__DESK_STATE__ = {
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 408874.74,
+  "max_risk_usd": 331999.74,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -2539172.9,
   "paused": false,
@@ -4643,12 +4671,12 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-14T16:07:11-05:00",
-      "note": "last: closed BTC-USD"
+      "note": "last: paper fill ETH-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-14T13:59:38-05:00",
-      "note": "logged 2026-11-14_XRP-USD_545"
+      "last_run": "2026-11-14T16:07:11-05:00",
+      "note": "logged 2026-11-14_ETH-USD_550"
     },
     "Equity": {
       "status": "ready",
@@ -9856,17 +9884,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-14T16:07:11-05:00",
       "equity": 408874.74,
       "kind": "close"
+    },
+    {
+      "t": "2026-11-14T16:07:11-05:00",
+      "equity": 331999.74,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-11T11:01:39-05:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE XRP-USD @ 1.0682 \u00b7 P&L $-1388.61",
-      "reason": "STOP 1.0682 hit (short): Coinbase public 5m 10:35 ET high 1.0782 (>= 1.0682). Paper close at stated stop.",
-      "fill_id": "2026-11-11_XRP-USD_451"
-    },
     {
       "t": "2026-11-11T11:01:39-05:00",
       "agent": "Risk",
@@ -11401,6 +11426,15 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE BTC-USD @ 65100 \u00b7 P&L $+25350.00",
       "reason": "T1 hit: Coinbase public 5m 15:50 ET candle low 64,416 <= T1 65,100 (and T2 64,980 same bar); stop 66,200 never touched (hi since 15:05 65,792.4). Banked at T1 per plan.",
       "fill_id": "2026-11-14_BTC-USD_543"
+    },
+    {
+      "t": "2026-11-14T16:07:11-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 1500 ETH-USD @ 1781.65 \u00b7 notional $2,672,475 (50x, margin $53,450) \u00b7 stop 1797 \u00b7 tgt 1765 \u00b7 risk $23,025.00",
+      "reason": "Breakdown + lower-high short: 15:45 15m bar broke 1,814.88 range low to 1,768; 15:55 bounce capped 1,795.27, 16:00 lower high 1,790.58; 24h -7.6%. 50x paper.",
+      "fill_id": "2026-11-14_ETH-USD_550",
+      "card": null
     }
   ],
   "scanner_feed": [
@@ -12333,10 +12367,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 0,
-  "exposure": 0.0,
-  "buying_power": 20443737.0,
-  "effective_leverage": 0.0,
+  "margin_used": 53449.5,
+  "exposure": 2749350.0,
+  "buying_power": 13850637.0,
+  "effective_leverage": 8.28,
   "operating_timezone": "America/New_York",
   "events": [
     {
