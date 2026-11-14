@@ -4358,9 +4358,9 @@ window.__DESK_STATE__ = {
   ],
   "agents": {
     "Scanner": {
-      "status": "ready",
-      "last_run": "2026-11-13T20:04:44-05:00",
-      "note": "20:04 ET scan: 30/30 marks; ETH/BTC shorts HOLD (no stop/target), no fills; SOL<77.50 / XRP<0.9961 armed"
+      "status": "idle",
+      "last_run": "2026-11-13T22:02:56-05:00",
+      "note": "22:01 ET cycle: 3 targets hit (+$70,496), 2 new failed-bounce shorts (ETH/BTC)"
     },
     "Rug Check": {
       "status": "idle",
@@ -9367,13 +9367,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-11T04:02:12-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
-      "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
-    },
-    {
       "t": "2026-11-11T04:02:13-05:00",
       "agent": "Rug Check",
       "kind": "check",
@@ -10871,6 +10864,13 @@ window.__DESK_STATE__ = {
       "reason": "Failed-bounce short after flush to 66,789: bounce capped at 67,769.8, 22:00 ET consolidating below; pairs with ETH. 50x paper.",
       "fill_id": "2026-11-13_BTC-USD_513",
       "card": null
+    },
+    {
+      "t": "2026-11-13T22:02:56-05:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "22:01 ET cycle: 3 targets hit (+$70,496), 2 new failed-bounce shorts (ETH/BTC)",
+      "reason": "scans/2026-11-13_2201_scan.md"
     }
   ],
   "scanner_feed": [
@@ -11784,7 +11784,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-13T22:02:44-05:00",
+  "updated_at": "2026-11-13T22:02:56-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
