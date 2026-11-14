@@ -4400,8 +4400,8 @@ window.__DESK_STATE__ = {
   "agents": {
     "Scanner": {
       "status": "idle",
-      "last_run": "2026-11-13T22:02:56-05:00",
-      "note": "22:01 ET cycle: 3 targets hit (+$70,496), 2 new failed-bounce shorts (ETH/BTC)"
+      "last_run": "2026-11-14T08:16:12-05:00",
+      "note": "08:05 ET cycle: BTC range-break short 80 @66,772.97 (trigger 15m close <66,740 hit)"
     },
     "Rug Check": {
       "status": "idle",
@@ -9453,14 +9453,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-11T07:59:48-05:00",
-      "agent": "Executor",
-      "kind": "close",
-      "text": "PAPER CLOSE XRP-USD @ 1.0645 \u00b7 P&L $-4137.99",
-      "reason": "STOP 1.0645 hit (short): Coinbase public 5m 05:30 ET high 1.0645 (>= 1.0645). Paper close at stated stop.",
-      "fill_id": "2026-11-11_XRP-USD_445"
-    },
-    {
       "t": "2026-11-11T07:59:54-05:00",
       "agent": "Rug Check",
       "kind": "check",
@@ -10963,6 +10955,13 @@ window.__DESK_STATE__ = {
       "reason": "Range-break short: 08:00 ET 15m closed 66,725.1 < 66,740 trigger (pre-set at 04:07), below 6h range 66,844-67,463 and Asia lows; ETH confirming weakness (08:00 low 1,887.36). Desk lesson = short breaks. 50x paper, ~10% equity risk.",
       "fill_id": "2026-11-14_BTC-USD_520",
       "card": null
+    },
+    {
+      "t": "2026-11-14T08:16:12-05:00",
+      "agent": "Scanner",
+      "kind": "note",
+      "text": "08:05 ET cycle: BTC range-break short 80 @66,772.97 (trigger 15m close <66,740 hit)",
+      "reason": "ETH 15m close 1,889.21 not <1,887; scan scans/2026-11-14_0805_scan.md"
     }
   ],
   "scanner_feed": [
@@ -11876,7 +11875,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-14T08:16:02-05:00",
+  "updated_at": "2026-11-14T08:16:12-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
