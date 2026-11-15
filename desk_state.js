@@ -6,12 +6,12 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 478280.34,
-  "cash": 443886.24,
+  "equity": 442025.94,
+  "cash": 393812.78,
   "realized_pnl": 445770.34,
-  "unrealized_pnl": -17490.0,
-  "day_pnl": 224363.05,
-  "day_pnl_pct": 0.88361,
+  "unrealized_pnl": -53744.4,
+  "day_pnl": 188108.65,
+  "day_pnl_pct": 0.74083,
   "day_baseline_date": "2026-11-14",
   "day_baseline_equity": 253917.29,
   "open_positions": [
@@ -41,9 +41,36 @@ window.__DESK_STATE__ = {
       "mark_at": "2026-11-14T18:05:14-05:00",
       "unrealized_pnl": -17490.0,
       "exposure": 2611695.0
+    },
+    {
+      "id": "2026-11-14_BTC-USD_567",
+      "symbol": "BTC-USD",
+      "side": "short",
+      "size": 40.0,
+      "entry": 62591.82,
+      "notional": 2503672.8,
+      "stop": 63060.0,
+      "target": 62250.0,
+      "target2": 61950.0,
+      "invalidation": "15m close > 63,060 (above 20:15 lower high 63,017)",
+      "risk_usd": 18727.2,
+      "risk_pct_equity": 0.03916,
+      "opened_at": "2026-11-14T20:59:21-05:00",
+      "card": null,
+      "reason": "Trend-continuation re-short: T1/T2 levels reached, 20:45 bounce off 61,946 day low capped below 20:15 lower high 63,017; lower highs 64,548 / 63,946 / 63,017; 24h -8%. Target retest of 61,946. 50x paper.",
+      "price_source": "Coinbase Exchange public ticker bid 2026-11-14T20:59:21-05:00 (exch 2026-11-15T01:59:20.944034961Z) (unauthenticated)",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 50073.46,
+      "mark": 63498.18,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-14T18:05:14-05:00",
+      "unrealized_pnl": -36254.4,
+      "exposure": 2539927.2
     }
   ],
-  "open_count": 1,
+  "open_count": 2,
   "closed_positions": [
     {
       "type": "close",
@@ -4751,7 +4778,7 @@ window.__DESK_STATE__ = {
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 478280.34,
+  "max_risk_usd": 442025.94,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -2539172.9,
   "paused": false,
@@ -4807,12 +4834,12 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-14T20:59:21-05:00",
-      "note": "last: paper fill ETH-USD"
+      "note": "last: paper fill BTC-USD"
     },
     "Logger": {
       "status": "ready",
       "last_run": "2026-11-14T20:59:21-05:00",
-      "note": "logged 2026-11-14_ETH-USD_566"
+      "note": "logged 2026-11-14_BTC-USD_567"
     },
     "Equity": {
       "status": "ready",
@@ -10120,16 +10147,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-14T20:59:21-05:00",
       "equity": 478280.34,
       "kind": "fill"
+    },
+    {
+      "t": "2026-11-14T20:59:21-05:00",
+      "equity": 442025.94,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-11T13:04:23-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "ETH-USD long 103.3799 @ 2074.57: HOLD \u2014 no trigger",
-      "reason": "Coinbase public 5m since 2026-11-11T11:01:47-05:00: maxH=2101.88 minL=2065.97 (stop 2042.56; T1 2105.72/T2 2135.72); 15m min close=2071.66 (inv 2050.56). No close trigger."
-    },
     {
       "t": "2026-11-11T13:04:29-05:00",
       "agent": "Rug Check",
@@ -11685,6 +11710,15 @@ window.__DESK_STATE__ = {
       "reason": "Trend-continuation re-short: T1 banked, 20:45 bounce off 1,709.48 day low capped below 20:15 lower high 1,741.23 (20:50 hi 1,735.51); lower-high sequence 1,778 / 1,760.79 / 1,741.23 intact; 24h -10%. Target retest/break of 1,709.48. 50x paper.",
       "fill_id": "2026-11-14_ETH-USD_566",
       "card": null
+    },
+    {
+      "t": "2026-11-14T20:59:21-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 40 BTC-USD @ 62591.8 \u00b7 notional $2,503,673 (50x, margin $50,073) \u00b7 stop 63060 \u00b7 tgt 62250 \u00b7 risk $18,727.20",
+      "reason": "Trend-continuation re-short: T1/T2 levels reached, 20:45 bounce off 61,946 day low capped below 20:15 lower high 63,017; lower highs 64,548 / 63,946 / 63,017; 24h -8%. Target retest of 61,946. 50x paper.",
+      "fill_id": "2026-11-14_BTC-USD_567",
+      "card": null
     }
   ],
   "scanner_feed": [
@@ -12617,10 +12651,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 51884.1,
-  "exposure": 2611695.0,
-  "buying_power": 21302322.0,
-  "effective_leverage": 5.46,
+  "margin_used": 101957.56,
+  "exposure": 5151622.2,
+  "buying_power": 16949674.8,
+  "effective_leverage": 11.65,
   "operating_timezone": "America/New_York",
   "events": [
     {
