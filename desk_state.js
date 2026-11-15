@@ -6,16 +6,44 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 433663.14,
-  "cash": 433663.14,
+  "equity": 376423.14,
+  "cash": 363916.74,
   "realized_pnl": 383663.14,
-  "unrealized_pnl": 0.0,
-  "day_pnl": -9390.0,
-  "day_pnl_pct": -0.02119,
+  "unrealized_pnl": -57240.0,
+  "day_pnl": -66630.0,
+  "day_pnl_pct": -0.15039,
   "day_baseline_date": "2026-11-15",
   "day_baseline_equity": 443053.14,
-  "open_positions": [],
-  "open_count": 0,
+  "open_positions": [
+    {
+      "id": "2026-11-15_XRP-USD_578",
+      "symbol": "XRP-USD",
+      "side": "long",
+      "size": 3600000.0,
+      "entry": 0.9687,
+      "notional": 3487320.0,
+      "stop": 0.957,
+      "target": 0.996,
+      "target2": 1.02,
+      "invalidation": "15m close < 0.9636 (back inside the 16:45 range) or 1h close < 0.9620",
+      "risk_usd": 42120.0,
+      "risk_pct_equity": 0.09713,
+      "opened_at": "2026-11-15T17:56:55-05:00",
+      "card": null,
+      "reason": "XRP 15m close >0.9650 confirmed (17:15 0.9692) and next bar held (17:30 0.9690); higher lows from 0.9597; reclaim toward 24h high 0.9792 then 0.996. Risk ~10% equity.",
+      "price_source": "Coinbase Exchange public XRP-USD ticker ask (unauthenticated) 17:56 ET",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 69746.4,
+      "mark": 0.9528,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-15T14:02:08-05:00",
+      "unrealized_pnl": -57240.0,
+      "exposure": 3430080.0
+    }
+  ],
+  "open_count": 1,
   "closed_positions": [
     {
       "type": "close",
@@ -4825,7 +4853,7 @@ window.__DESK_STATE__ = {
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 433663.14,
+  "max_risk_usd": 376423.14,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -4430531.4,
   "paused": false,
@@ -4880,13 +4908,13 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-15T15:02:07-05:00",
-      "note": "last: closed ETH-USD"
+      "last_run": "2026-11-15T17:56:55-05:00",
+      "note": "last: paper fill XRP-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-15T09:57:50-05:00",
-      "note": "logged 2026-11-15_ETH-USD_576"
+      "last_run": "2026-11-15T17:56:55-05:00",
+      "note": "logged 2026-11-15_XRP-USD_578"
     },
     "Equity": {
       "status": "ready",
@@ -10294,16 +10322,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-15T15:02:07-05:00",
       "equity": 433663.14,
       "kind": "close"
+    },
+    {
+      "t": "2026-11-15T17:56:55-05:00",
+      "equity": 376423.14,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-11T14:02:40-05:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: 1402 ET race cycle \u00b7 hold/rotate check \u00b7 eq $21,818 \u00b7 exposure $1,088,387 (49.89x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
     {
       "t": "2026-11-11T15:02:49-05:00",
       "agent": "Scanner",
@@ -11869,6 +11895,15 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "16:57 ET cycle: 30 marks, no opens, flat",
       "reason": "Sunday chop; BTC/XRP/SOL wicks over triggers without confirmed 15m closes; scan scans/2026-11-15_1657_scan.md"
+    },
+    {
+      "t": "2026-11-15T17:56:55-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 3.6e+06 XRP-USD @ 0.9687 \u00b7 notional $3,487,320 (50x, margin $69,746) \u00b7 stop 0.957 \u00b7 tgt 0.996 \u00b7 risk $42,120.00",
+      "reason": "XRP 15m close >0.9650 confirmed (17:15 0.9692) and next bar held (17:30 0.9690); higher lows from 0.9597; reclaim toward 24h high 0.9792 then 0.996. Risk ~10% equity.",
+      "fill_id": "2026-11-15_XRP-USD_578",
+      "card": null
     }
   ],
   "scanner_feed": [
@@ -12784,7 +12819,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-15T16:57:20-05:00",
+  "updated_at": "2026-11-15T17:56:55-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -12800,10 +12835,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 0,
-  "exposure": 0.0,
-  "buying_power": 21683157.0,
-  "effective_leverage": 0.0,
+  "margin_used": 69746.4,
+  "exposure": 3430080.0,
+  "buying_power": 15391077.0,
+  "effective_leverage": 9.11,
   "operating_timezone": "America/New_York",
   "events": [
     {
