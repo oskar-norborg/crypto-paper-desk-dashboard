@@ -5,44 +5,16 @@
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 473177.74,
-  "cash": 422401.88,
-  "realized_pnl": 422475.34,
-  "unrealized_pnl": 702.4,
-  "day_pnl": 219260.45,
-  "day_pnl_pct": 0.86351,
+  "equity": 453748.14,
+  "cash": 453748.14,
+  "realized_pnl": 403748.14,
+  "unrealized_pnl": 0.0,
+  "day_pnl": 199830.85,
+  "day_pnl_pct": 0.78699,
   "day_baseline_date": "2026-11-14",
   "day_baseline_equity": 253917.29,
-  "open_positions": [
-    {
-      "id": "2026-11-14_BTC-USD_567",
-      "symbol": "BTC-USD",
-      "side": "short",
-      "size": 40.0,
-      "entry": 62591.82,
-      "notional": 2503672.8,
-      "stop": 63060.0,
-      "target": 62250.0,
-      "target2": 61950.0,
-      "invalidation": "15m close > 63,060 (above 20:15 lower high 63,017)",
-      "risk_usd": 18727.2,
-      "risk_pct_equity": 0.03916,
-      "opened_at": "2026-11-14T20:59:21-05:00",
-      "card": null,
-      "reason": "Trend-continuation re-short: T1/T2 levels reached, 20:45 bounce off 61,946 day low capped below 20:15 lower high 63,017; lower highs 64,548 / 63,946 / 63,017; 24h -8%. Target retest of 61,946. 50x paper.",
-      "price_source": "Coinbase Exchange public ticker bid 2026-11-14T20:59:21-05:00 (exch 2026-11-15T01:59:20.944034961Z) (unauthenticated)",
-      "override": null,
-      "paper_only": true,
-      "leverage": 50.0,
-      "margin": 50073.46,
-      "mark": 62574.26,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-14T20:59:34-05:00",
-      "unrealized_pnl": 702.4,
-      "exposure": 2502970.4
-    }
-  ],
-  "open_count": 1,
+  "open_positions": [],
+  "open_count": 0,
   "closed_positions": [
     {
       "type": "close",
@@ -4763,11 +4735,28 @@
       "reason": "STOP HIT: 21:05 ET 5m candle high 1,765.48 > stop 1,745 (V-reversal squeeze off 1,709.48 low; lower-high structure broken)",
       "price_source": "Coinbase Exchange public 5m candles (unauthenticated) 21:05 ET bar",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-14_BTC-USD_567",
+      "symbol": "BTC-USD",
+      "side": "short",
+      "size": 40.0,
+      "entry": 62591.82,
+      "exit": 63060.0,
+      "pnl": -18727.2,
+      "notional": 2503672.8,
+      "leverage": 50.0,
+      "margin": 50073.46,
+      "closed_at": "2026-11-14T21:59:22-05:00",
+      "reason": "STOP HIT: 21:05 ET 5m candle high 63,835.44 > stop 63,060 (squeeze off 61,946 low; lower-high structure broken)",
+      "price_source": "Coinbase Exchange public 5m candles (unauthenticated) 21:05 ET bar",
+      "paper_only": true
     }
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 473177.74,
+  "max_risk_usd": 453748.14,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -2539172.9,
   "paused": false,
@@ -4823,7 +4812,7 @@
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-14T21:59:22-05:00",
-      "note": "last: closed ETH-USD"
+      "note": "last: closed BTC-USD"
     },
     "Logger": {
       "status": "ready",
@@ -10151,16 +10140,14 @@
       "t": "2026-11-14T21:59:22-05:00",
       "equity": 473177.74,
       "kind": "close"
+    },
+    {
+      "t": "2026-11-14T21:59:22-05:00",
+      "equity": 453748.14,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-11T13:04:29-05:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "1304 ET: closed 0; opened {}; held ['BTC-USD', 'ETH-USD']",
-      "reason": "race mode: direction=long; closes=0; opens_ok={}; cash_pool after cushion; plateau not acceptable"
-    },
     {
       "t": "2026-11-11T13:04:31-05:00",
       "agent": "Logger",
@@ -11719,6 +11706,14 @@
       "text": "PAPER CLOSE ETH-USD @ 1745 \u00b7 P&L $-23295.00",
       "reason": "STOP HIT: 21:05 ET 5m candle high 1,765.48 > stop 1,745 (V-reversal squeeze off 1,709.48 low; lower-high structure broken)",
       "fill_id": "2026-11-14_ETH-USD_566"
+    },
+    {
+      "t": "2026-11-14T21:59:22-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE BTC-USD @ 63060 \u00b7 P&L $-18727.20",
+      "reason": "STOP HIT: 21:05 ET 5m candle high 63,835.44 > stop 63,060 (squeeze off 61,946 low; lower-high structure broken)",
+      "fill_id": "2026-11-14_BTC-USD_567"
     }
   ],
   "scanner_feed": [
@@ -12651,10 +12646,10 @@
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 50073.46,
-  "exposure": 2502970.4,
-  "buying_power": 21155916.6,
-  "effective_leverage": 5.29,
+  "margin_used": 0,
+  "exposure": 0.0,
+  "buying_power": 22687407.0,
+  "effective_leverage": 0.0,
   "operating_timezone": "America/New_York",
   "events": [
     {
