@@ -6,12 +6,12 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 456834.94,
-  "cash": 405519.04,
+  "equity": 453148.14,
+  "cash": 354794.23,
   "realized_pnl": 407734.94,
-  "unrealized_pnl": -900.0,
-  "day_pnl": 202917.65,
-  "day_pnl_pct": 0.79915,
+  "unrealized_pnl": -4586.8,
+  "day_pnl": 199230.85,
+  "day_pnl_pct": 0.78463,
   "day_baseline_date": "2026-11-14",
   "day_baseline_equity": 253917.29,
   "open_positions": [
@@ -41,9 +41,36 @@ window.__DESK_STATE__ = {
       "mark_at": "2026-11-14T18:05:14-05:00",
       "unrealized_pnl": -900.0,
       "exposure": 2611695.0
+    },
+    {
+      "id": "2026-11-14_BTC-USD_563",
+      "symbol": "BTC-USD",
+      "side": "short",
+      "size": 40.0,
+      "entry": 63406.01,
+      "notional": 2536240.4,
+      "stop": 63960.0,
+      "target": 63150.0,
+      "target2": 62600.0,
+      "invalidation": "15m close > 63,960 (above 19:40 lower high 63,946)",
+      "risk_usd": 22159.6,
+      "risk_pct_equity": 0.04851,
+      "opened_at": "2026-11-14T19:59:57-05:00",
+      "card": null,
+      "reason": "Failed-bounce re-short (planned 19:05 trigger): 19:10 squeeze high 64,548 rejected, lower highs 64,518 / 63,946 / 63,899; 15m close 63,486 back below 63,800 trigger; 24h -7.0%. Target break of 63,270 day low. 50x paper.",
+      "price_source": "Coinbase Exchange public ticker bid 2026-11-14T19:59:57-05:00 (exch 2026-11-15T00:59:56.788434492Z) (unauthenticated)",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 50724.81,
+      "mark": 63498.18,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-14T18:05:14-05:00",
+      "unrealized_pnl": -3686.8,
+      "exposure": 2539927.2
     }
   ],
-  "open_count": 1,
+  "open_count": 2,
   "closed_positions": [
     {
       "type": "close",
@@ -4717,7 +4744,7 @@ window.__DESK_STATE__ = {
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 456834.94,
+  "max_risk_usd": 453148.14,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -2539172.9,
   "paused": false,
@@ -4773,12 +4800,12 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-14T19:59:57-05:00",
-      "note": "last: paper fill ETH-USD"
+      "note": "last: paper fill BTC-USD"
     },
     "Logger": {
       "status": "ready",
       "last_run": "2026-11-14T19:59:57-05:00",
-      "note": "logged 2026-11-14_ETH-USD_562"
+      "note": "logged 2026-11-14_BTC-USD_563"
     },
     "Equity": {
       "status": "ready",
@@ -10066,16 +10093,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-14T19:59:57-05:00",
       "equity": 456834.94,
       "kind": "fill"
+    },
+    {
+      "t": "2026-11-14T19:59:57-05:00",
+      "equity": 453148.14,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-11T12:01:00-05:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "1200 ET: closed 0; opened {}; held ['BTC-USD', 'ETH-USD']",
-      "reason": "race mode: direction=long; closes=0; opens_ok={}; cash_pool after cushion; plateau not acceptable"
-    },
     {
       "t": "2026-11-11T12:01:02-05:00",
       "agent": "Logger",
@@ -11625,6 +11650,15 @@ window.__DESK_STATE__ = {
       "reason": "Failed-bounce re-short (planned 19:05 trigger): 19:10 squeeze high 1,778.09 rejected, lower highs 1,773.35 / 1,760.79 / 1,758.63; 15m close 1,743.84 back below 1,750 trigger; 24h -9.8%. Target break of 1,727.73 day low. 50x paper.",
       "fill_id": "2026-11-14_ETH-USD_562",
       "card": null
+    },
+    {
+      "t": "2026-11-14T19:59:57-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 40 BTC-USD @ 63406 \u00b7 notional $2,536,240 (50x, margin $50,725) \u00b7 stop 63960 \u00b7 tgt 63150 \u00b7 risk $22,159.60",
+      "reason": "Failed-bounce re-short (planned 19:05 trigger): 19:10 squeeze high 64,548 rejected, lower highs 64,518 / 63,946 / 63,899; 15m close 63,486 back below 63,800 trigger; 24h -7.0%. Target break of 63,270 day low. 50x paper.",
+      "fill_id": "2026-11-14_BTC-USD_563",
+      "card": null
     }
   ],
   "scanner_feed": [
@@ -12557,10 +12591,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 52215.9,
-  "exposure": 2611695.0,
-  "buying_power": 20230052.0,
-  "effective_leverage": 5.72,
+  "margin_used": 102940.71,
+  "exposure": 5151622.2,
+  "buying_power": 17505784.8,
+  "effective_leverage": 11.37,
   "operating_timezone": "America/New_York",
   "events": [
     {
