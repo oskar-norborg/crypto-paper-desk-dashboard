@@ -5,42 +5,15 @@
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 495377.74,
-  "cash": 393812.78,
-  "realized_pnl": 445770.34,
-  "unrealized_pnl": -392.6,
-  "day_pnl": 241460.45,
-  "day_pnl_pct": 0.95094,
+  "equity": 473177.74,
+  "cash": 422401.88,
+  "realized_pnl": 422475.34,
+  "unrealized_pnl": 702.4,
+  "day_pnl": 219260.45,
+  "day_pnl_pct": 0.86351,
   "day_baseline_date": "2026-11-14",
   "day_baseline_equity": 253917.29,
   "open_positions": [
-    {
-      "id": "2026-11-14_ETH-USD_566",
-      "symbol": "ETH-USD",
-      "side": "short",
-      "size": 1500.0,
-      "entry": 1729.47,
-      "notional": 2594205.0,
-      "stop": 1745.0,
-      "target": 1712.0,
-      "target2": 1705.0,
-      "invalidation": "15m close > 1,745 (above 20:15 lower high 1,741.23)",
-      "risk_usd": 23295.0,
-      "risk_pct_equity": 0.04699,
-      "opened_at": "2026-11-14T20:59:21-05:00",
-      "card": null,
-      "reason": "Trend-continuation re-short: T1 banked, 20:45 bounce off 1,709.48 day low capped below 20:15 lower high 1,741.23 (20:50 hi 1,735.51); lower-high sequence 1,778 / 1,760.79 / 1,741.23 intact; 24h -10%. Target retest/break of 1,709.48. 50x paper.",
-      "price_source": "Coinbase Exchange public ticker bid 2026-11-14T20:59:21-05:00 (exch 2026-11-15T01:59:20.409314548Z) (unauthenticated)",
-      "override": null,
-      "paper_only": true,
-      "leverage": 50.0,
-      "margin": 51884.1,
-      "mark": 1730.2,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-14T20:59:34-05:00",
-      "unrealized_pnl": -1095.0,
-      "exposure": 2595300.0
-    },
     {
       "id": "2026-11-14_BTC-USD_567",
       "symbol": "BTC-USD",
@@ -69,7 +42,7 @@
       "exposure": 2502970.4
     }
   ],
-  "open_count": 2,
+  "open_count": 1,
   "closed_positions": [
     {
       "type": "close",
@@ -4773,11 +4746,28 @@
       "reason": "T1 HIT: 5m 20:00 ET low 62,800.6 <= T1 63,150 (T2 62,600 also reached later, low 61,946); stop 63,960 never touched (hi since open 63,452). Banked at T1 per plan.",
       "price_source": "Coinbase Exchange public 5m candles (unauthenticated) 20:00 ET bar low 62800.6",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-14_ETH-USD_566",
+      "symbol": "ETH-USD",
+      "side": "short",
+      "size": 1500.0,
+      "entry": 1729.47,
+      "exit": 1745.0,
+      "pnl": -23295.0,
+      "notional": 2594205.0,
+      "leverage": 50.0,
+      "margin": 51884.1,
+      "closed_at": "2026-11-14T21:59:22-05:00",
+      "reason": "STOP HIT: 21:05 ET 5m candle high 1,765.48 > stop 1,745 (V-reversal squeeze off 1,709.48 low; lower-high structure broken)",
+      "price_source": "Coinbase Exchange public 5m candles (unauthenticated) 21:05 ET bar",
+      "paper_only": true
     }
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 495377.74,
+  "max_risk_usd": 473177.74,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -2539172.9,
   "paused": false,
@@ -4832,8 +4822,8 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-14T20:59:21-05:00",
-      "note": "last: paper fill BTC-USD"
+      "last_run": "2026-11-14T21:59:22-05:00",
+      "note": "last: closed ETH-USD"
     },
     "Logger": {
       "status": "ready",
@@ -10156,16 +10146,14 @@
       "t": "2026-11-14T20:59:35-05:00",
       "equity": 495377.74,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-14T21:59:22-05:00",
+      "equity": 473177.74,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-11T13:04:29-05:00",
-      "agent": "Rug Check",
-      "kind": "check",
-      "text": "Watchlist scanned; prefer liquid CEX majors for new opens (chaos rug soft)",
-      "reason": "30/30 marks ok, failed=[]; BTC/ETH/SOL/XRP all >>$5M 24h vol"
-    },
     {
       "t": "2026-11-11T13:04:29-05:00",
       "agent": "Executor",
@@ -11723,6 +11711,14 @@
       "reason": "Trend-continuation re-short: T1/T2 levels reached, 20:45 bounce off 61,946 day low capped below 20:15 lower high 63,017; lower highs 64,548 / 63,946 / 63,017; 24h -8%. Target retest of 61,946. 50x paper.",
       "fill_id": "2026-11-14_BTC-USD_567",
       "card": null
+    },
+    {
+      "t": "2026-11-14T21:59:22-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE ETH-USD @ 1745 \u00b7 P&L $-23295.00",
+      "reason": "STOP HIT: 21:05 ET 5m candle high 1,765.48 > stop 1,745 (V-reversal squeeze off 1,709.48 low; lower-high structure broken)",
+      "fill_id": "2026-11-14_ETH-USD_566"
     }
   ],
   "scanner_feed": [
@@ -12639,7 +12635,7 @@
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-14T20:59:35-05:00",
+  "updated_at": "2026-11-14T21:59:22-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -12655,10 +12651,10 @@
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 101957.56,
-  "exposure": 5098270.4,
-  "buying_power": 19670616.6,
-  "effective_leverage": 10.29,
+  "margin_used": 50073.46,
+  "exposure": 2502970.4,
+  "buying_power": 21155916.6,
+  "effective_leverage": 5.29,
   "operating_timezone": "America/New_York",
   "events": [
     {
