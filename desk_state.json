@@ -5011,8 +5011,8 @@
   "agents": {
     "Scanner": {
       "status": "ready",
-      "last_run": "2026-11-16T10:58:12-05:00",
-      "note": "Scan 10:57 ET: 30 marks, 0 failed; opened ETH short 1,500 @ 1,822.03 on failed NY-open squeeze"
+      "last_run": "2026-11-16T11:58:26-05:00",
+      "note": "11:58 ET cycle: HOLD ETH short 1,500 @1,822.03 (no stop/target/invalidation hit); no new opens"
     },
     "Rug Check": {
       "status": "idle",
@@ -10569,13 +10569,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-11T17:08:27-05:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "1708 ET: closed 0; opened {}; held ['ETH-USD', 'SOL-USD', 'XRP-USD']",
-      "reason": "race mode: direction=short; closes=0; opens_ok={}; cash_pool after cushion; plateau not acceptable"
-    },
-    {
       "t": "2026-11-11T17:08:28-05:00",
       "agent": "Logger",
       "kind": "batch",
@@ -12158,6 +12151,13 @@
       "kind": "scan",
       "text": "Scan 10:57 ET: 30 marks, 0 failed; opened ETH short 1,500 @ 1,822.03 on failed NY-open squeeze",
       "reason": "v2.1-FULL-CHAOS cycle. scans/2026-11-16_1057_scan.md"
+    },
+    {
+      "t": "2026-11-16T11:58:26-05:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "11:58 ET cycle: HOLD ETH short 1,500 @1,822.03 (no stop/target/invalidation hit); no new opens",
+      "reason": "Bounce capped under 1,845 lower high; BTC 64,030 break trigger not hit"
     }
   ],
   "scanner_feed": [
