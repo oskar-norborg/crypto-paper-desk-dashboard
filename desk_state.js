@@ -6,44 +6,16 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 283420.84,
-  "cash": 223593.04,
-  "realized_pnl": 227720.84,
-  "unrealized_pnl": 5700.0,
-  "day_pnl": -39331.7,
-  "day_pnl_pct": -0.12186,
+  "equity": 248110.84,
+  "cash": 248110.84,
+  "realized_pnl": 198110.84,
+  "unrealized_pnl": 0.0,
+  "day_pnl": -74641.7,
+  "day_pnl_pct": -0.23127,
   "day_baseline_date": "2026-11-16",
   "day_baseline_equity": 322752.54,
-  "open_positions": [
-    {
-      "id": "2026-11-16_ETH-USD_587",
-      "symbol": "ETH-USD",
-      "side": "short",
-      "size": 1500.0,
-      "entry": 1804.26,
-      "notional": 2706390.0,
-      "stop": 1824.0,
-      "target": 1772.0,
-      "target2": 1750.0,
-      "invalidation": "15m close > 1,820 (back above the 02:15-02:45 shelf)",
-      "risk_usd": 29610.0,
-      "risk_pct_equity": 0.08778,
-      "opened_at": "2026-11-16T04:00:59-05:00",
-      "card": null,
-      "reason": "Watch trigger fired: ETH 15m closes below 1,811 since 01:00 ET (1,806.79) with lower highs 1,823.46 (02:45) -> 1,809.7 -> 1,807.7 -> 1,804.3 and session low 1,802; BTC short working in tandem, SOL/XRP pinned near lows. Short continuation toward 24h low 1,771.56.",
-      "price_source": "coinbase_exchange_public_ticker bid 2026-11-16T04:00:59-05:00 ET (exch 2026-11-16T09:00:56.350843882Z) api.exchange.coinbase.com",
-      "override": null,
-      "paper_only": true,
-      "leverage": 50.0,
-      "margin": 54127.8,
-      "mark": 1800.46,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-16T09:02:24-05:00",
-      "unrealized_pnl": 5700.0,
-      "exposure": 2700690.0
-    }
-  ],
-  "open_count": 1,
+  "open_positions": [],
+  "open_count": 0,
   "closed_positions": [
     {
       "type": "close",
@@ -4951,11 +4923,28 @@ window.__DESK_STATE__ = {
       "reason": "STOP HIT: 09:30 ET 5m bar high 65,210 > stop 65,080 (NY-open squeeze to 65,627); invalidation also hit (09:30 15m close 65,225 > 65,000)",
       "price_source": "coinbase_exchange_public 5m candles granularity=300, stop level fill, checked 2026-11-16T09:57:43-05:00 ET",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-16_ETH-USD_587",
+      "symbol": "ETH-USD",
+      "side": "short",
+      "size": 1500.0,
+      "entry": 1804.26,
+      "exit": 1824.0,
+      "pnl": -29610.0,
+      "notional": 2706390.0,
+      "leverage": 50.0,
+      "margin": 54127.8,
+      "closed_at": "2026-11-16T09:57:43-05:00",
+      "reason": "STOP HIT: 09:10 ET 5m bar high 1,824.13 > stop 1,824; invalidation then hit (09:00 15m close 1,822.8, 09:30 close 1,850.4 > 1,820) on NY-open squeeze",
+      "price_source": "coinbase_exchange_public 5m candles granularity=300, stop level fill, checked 2026-11-16T09:57:43-05:00 ET",
+      "paper_only": true
     }
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 283420.84,
+  "max_risk_usd": 248110.84,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -3227525.4,
   "paused": false,
@@ -5011,7 +5000,7 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-16T09:57:43-05:00",
-      "note": "last: closed BTC-USD"
+      "note": "last: closed ETH-USD"
     },
     "Logger": {
       "status": "ready",
@@ -10529,16 +10518,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-16T09:57:43-05:00",
       "equity": 283420.84,
       "kind": "close"
+    },
+    {
+      "t": "2026-11-16T09:57:43-05:00",
+      "equity": 248110.84,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-11T17:08:20-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "ETH-USD short 366.2717 @ 2080.07: HOLD \u2014 no trigger",
-      "reason": "Coinbase public 5m since 2026-11-11T14:02:39-05:00: maxH=2082.78 minL=2067.28 (stop 2096.71; T1 2059.27/T2 2034.27); 15m max close=2079.98 (inv 2088.74). No close trigger."
-    },
     {
       "t": "2026-11-11T17:08:20-05:00",
       "agent": "Risk",
@@ -12119,6 +12106,14 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE BTC-USD @ 65080 \u00b7 P&L $-31731.70",
       "reason": "STOP HIT: 09:30 ET 5m bar high 65,210 > stop 65,080 (NY-open squeeze to 65,627); invalidation also hit (09:30 15m close 65,225 > 65,000)",
       "fill_id": "2026-11-16_BTC-USD_586"
+    },
+    {
+      "t": "2026-11-16T09:57:43-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE ETH-USD @ 1824 \u00b7 P&L $-29610.00",
+      "reason": "STOP HIT: 09:10 ET 5m bar high 1,824.13 > stop 1,824; invalidation then hit (09:00 15m close 1,822.8, 09:30 close 1,850.4 > 1,820) on NY-open squeeze",
+      "fill_id": "2026-11-16_ETH-USD_587"
     }
   ],
   "scanner_feed": [
@@ -13062,10 +13057,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 54127.8,
-  "exposure": 2700690.0,
-  "buying_power": 11470352.0,
-  "effective_leverage": 9.53,
+  "margin_used": 0,
+  "exposure": 0.0,
+  "buying_power": 12405542.0,
+  "effective_leverage": 0.0,
   "operating_timezone": "America/New_York",
   "events": [
     {
