@@ -6,42 +6,15 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 393609.39,
-  "cash": 290629.18,
-  "realized_pnl": 341543.14,
-  "unrealized_pnl": 2066.25,
-  "day_pnl": -49443.75,
-  "day_pnl_pct": -0.1116,
+  "equity": 370145.29,
+  "cash": 339873.29,
+  "realized_pnl": 318945.29,
+  "unrealized_pnl": 1200.0,
+  "day_pnl": -72907.85,
+  "day_pnl_pct": -0.16456,
   "day_baseline_date": "2026-11-15",
   "day_baseline_equity": 443053.14,
   "open_positions": [
-    {
-      "id": "2026-11-15_BTC-USD_579",
-      "symbol": "BTC-USD",
-      "side": "long",
-      "size": 55.0,
-      "entry": 65310.87,
-      "notional": 3592097.85,
-      "stop": 64900.0,
-      "target": 66100.0,
-      "target2": 66800.0,
-      "invalidation": "15m close < 65,000 (back under reclaimed level) ",
-      "risk_usd": 22597.85,
-      "risk_pct_equity": 0.05207,
-      "opened_at": "2026-11-15T19:01:17-05:00",
-      "card": null,
-      "reason": "BTC watch trigger fired: 15m closes 18:30 (65,292) and 18:45 (65,315) ET above 65,200 after 18:15 flush to 64,791 held; reclaim toward 24h high 66,100. Risk ~5% equity.",
-      "price_source": "Coinbase Exchange public BTC-USD ticker ask (unauthenticated) 19:01 ET",
-      "override": null,
-      "paper_only": true,
-      "leverage": 50.0,
-      "margin": 71841.96,
-      "mark": 65326.62,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-15T19:01:18-05:00",
-      "unrealized_pnl": 866.25,
-      "exposure": 3592964.1
-    },
     {
       "id": "2026-11-15_SOL-USD_580",
       "symbol": "SOL-USD",
@@ -70,7 +43,7 @@ window.__DESK_STATE__ = {
       "exposure": 1454800.0
     }
   ],
-  "open_count": 2,
+  "open_count": 1,
   "closed_positions": [
     {
       "type": "close",
@@ -4893,11 +4866,28 @@ window.__DESK_STATE__ = {
       "reason": "STOP HIT: 5m low 0.9552 (19:30\u201319:45 bar) < stop 0.957; 15m 19:30 close 0.9570 also < 0.9636 invalidation",
       "price_source": "Coinbase Exchange public 5m candles (unauthenticated) 19:00\u201319:55 ET; paper stop fill at stop level",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-15_BTC-USD_579",
+      "symbol": "BTC-USD",
+      "side": "long",
+      "size": 55.0,
+      "entry": 65310.87,
+      "exit": 64900.0,
+      "pnl": -22597.85,
+      "notional": 3592097.85,
+      "leverage": 50.0,
+      "margin": 71841.96,
+      "closed_at": "2026-11-15T19:56:02-05:00",
+      "reason": "STOP HIT: 5m low 64,627 (19:30\u201319:45 bar) < stop 64,900; 15m 19:15 close 64,962 had already broken 65,000 invalidation",
+      "price_source": "Coinbase Exchange public 5m candles (unauthenticated) 19:00\u201319:55 ET; paper stop fill at stop level",
+      "paper_only": true
     }
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 393609.39,
+  "max_risk_usd": 370145.29,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -4430531.4,
   "paused": false,
@@ -4953,7 +4943,7 @@ window.__DESK_STATE__ = {
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-15T19:56:02-05:00",
-      "note": "last: closed XRP-USD"
+      "note": "last: closed BTC-USD"
     },
     "Logger": {
       "status": "ready",
@@ -10396,16 +10386,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-15T19:56:02-05:00",
       "equity": 393609.39,
       "kind": "close"
+    },
+    {
+      "t": "2026-11-15T19:56:02-05:00",
+      "equity": 370145.29,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-11T15:02:58-05:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "1502 ET: closed 0; opened {}; held ['ETH-USD', 'XRP-USD']",
-      "reason": "race mode: direction=short; closes=0; opens_ok={}; cash_pool after cushion; plateau not acceptable"
-    },
     {
       "t": "2026-11-11T15:03:00-05:00",
       "agent": "Logger",
@@ -11978,6 +11966,14 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE XRP-USD @ 0.957 \u00b7 P&L $-42120.00",
       "reason": "STOP HIT: 5m low 0.9552 (19:30\u201319:45 bar) < stop 0.957; 15m 19:30 close 0.9570 also < 0.9636 invalidation",
       "fill_id": "2026-11-15_XRP-USD_578"
+    },
+    {
+      "t": "2026-11-15T19:56:02-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE BTC-USD @ 64900 \u00b7 P&L $-22597.85",
+      "reason": "STOP HIT: 5m low 64,627 (19:30\u201319:45 bar) < stop 64,900; 15m 19:15 close 64,962 had already broken 65,000 invalidation",
+      "fill_id": "2026-11-15_BTC-USD_579"
     }
   ],
   "scanner_feed": [
@@ -12909,10 +12905,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 100913.96,
-  "exposure": 5047764.1,
-  "buying_power": 14632705.4,
-  "effective_leverage": 12.82,
+  "margin_used": 29072.0,
+  "exposure": 1454800.0,
+  "buying_power": 17052464.5,
+  "effective_leverage": 3.93,
   "operating_timezone": "America/New_York",
   "events": [
     {
