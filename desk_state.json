@@ -5,12 +5,12 @@
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 354979.14,
-  "cash": 128678.37,
-  "realized_pnl": 272752.54,
-  "unrealized_pnl": 32226.6,
-  "day_pnl": 32226.6,
-  "day_pnl_pct": 0.09985,
+  "equity": 345179.14,
+  "cash": 164847.37,
+  "realized_pnl": 259452.54,
+  "unrealized_pnl": 35726.6,
+  "day_pnl": 22426.6,
+  "day_pnl_pct": 0.06949,
   "day_baseline_date": "2026-11-16",
   "day_baseline_equity": 322752.54,
   "open_positions": [
@@ -67,36 +67,9 @@
       "mark_at": "2026-11-16T08:01:02-05:00",
       "unrealized_pnl": 5145.0,
       "exposure": 2701245.0
-    },
-    {
-      "id": "2026-11-16_SOL-USD_588",
-      "symbol": "SOL-USD",
-      "side": "short",
-      "size": 35000.0,
-      "entry": 70.67,
-      "notional": 2473450.0,
-      "stop": 71.05,
-      "target": 69.6,
-      "target2": 68.8,
-      "invalidation": "15m close > 70.95 (reclaims failed-bounce high)",
-      "risk_usd": 13300.0,
-      "risk_pct_equity": 0.03926,
-      "opened_at": "2026-11-16T08:01:01-05:00",
-      "card": null,
-      "reason": "Watch trigger fired: SOL 15m close < 70.6 at 07:15 ET (70.53) and 07:45 (70.56); 07:30 bounce to 70.89 failed (lower high under 06:00 71.88 / 07:00 71.33); new 24h low 70.36, BTC/ETH/XRP breaking together. Short continuation toward 69.6.",
-      "price_source": "coinbase_exchange_public_ticker bid 2026-11-16T08:00:52-05:00 ET (exch 2026-11-16T13:00:45.443872193Z) api.exchange.coinbase.com",
-      "override": null,
-      "paper_only": true,
-      "leverage": 50.0,
-      "margin": 49469.0,
-      "mark": 70.77,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-16T08:01:03-05:00",
-      "unrealized_pnl": -3500.0,
-      "exposure": 2476950.0
     }
   ],
-  "open_count": 3,
+  "open_count": 2,
   "closed_positions": [
     {
       "type": "close",
@@ -4970,11 +4943,28 @@
       "reason": "STOP HIT: 5m high 64,983.44 (21:10\u201321:15 bar) > stop 64,965; 15m 21:00 close 64,941.7 also > 64,890 invalidation",
       "price_source": "Coinbase Exchange public 5m candles (unauthenticated) 21:00\u201321:55 ET; paper stop fill at stop level",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-16_SOL-USD_588",
+      "symbol": "SOL-USD",
+      "side": "short",
+      "size": 35000.0,
+      "entry": 70.67,
+      "exit": 71.05,
+      "pnl": -13300.0,
+      "notional": 2473450.0,
+      "leverage": 50.0,
+      "margin": 49469.0,
+      "closed_at": "2026-11-16T09:02:24-05:00",
+      "reason": "STOP HIT: 5m high 71.15 (08:15\u201308:20 bar) > stop 71.05; later 5m highs 71.18 (08:30). 15m closes stayed \u2264 70.95 invalidation, but hard stop takes precedence",
+      "price_source": "Coinbase Exchange public 5m candles (unauthenticated) 08:00\u201309:00 ET; paper stop fill at stop level",
+      "paper_only": true
     }
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 354979.14,
+  "max_risk_usd": 345179.14,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -3227525.4,
   "paused": false,
@@ -5029,8 +5019,8 @@
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-16T08:01:01-05:00",
-      "note": "last: paper fill SOL-USD"
+      "last_run": "2026-11-16T09:02:24-05:00",
+      "note": "last: closed SOL-USD"
     },
     "Logger": {
       "status": "ready",
@@ -10533,16 +10523,14 @@
       "t": "2026-11-16T08:01:03-05:00",
       "equity": 354979.14,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-16T09:02:24-05:00",
+      "equity": 345179.14,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-11T16:03:44-05:00",
-      "agent": "Executor",
-      "kind": "plan",
-      "text": "1603 ET: closed 1; opened {'XRP-USD': True, 'SOL-USD': True}; held ['ETH-USD', 'SOL-USD', 'XRP-USD']",
-      "reason": "race mode: direction=short; closes=1; opens_ok={'XRP-USD': True, 'SOL-USD': True}; cash_pool after cushion; plateau not acceptable"
-    },
     {
       "t": "2026-11-11T16:03:45-05:00",
       "agent": "Logger",
@@ -12121,6 +12109,14 @@
       "kind": "scan",
       "text": "08:00 ET cycle: hold BTC/ETH shorts, open SOL short",
       "reason": "equity 354979.14, gap 645020.86; scans/2026-11-16_0800_scan.md"
+    },
+    {
+      "t": "2026-11-16T09:02:24-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE SOL-USD @ 71.05 \u00b7 P&L $-13300.00",
+      "reason": "STOP HIT: 5m high 71.15 (08:15\u201308:20 bar) > stop 71.05; later 5m highs 71.18 (08:30). 15m closes stayed \u2264 70.95 invalidation, but hard stop takes precedence",
+      "fill_id": "2026-11-16_SOL-USD_588"
     }
   ],
   "scanner_feed": [
@@ -13040,7 +13036,7 @@
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-16T08:01:33-05:00",
+  "updated_at": "2026-11-16T09:02:24-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -13056,10 +13052,10 @@
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 194074.17,
-  "exposure": 9671481.7,
-  "buying_power": 8077475.3,
-  "effective_leverage": 27.25,
+  "margin_used": 144605.17,
+  "exposure": 7194531.7,
+  "buying_power": 10064425.3,
+  "effective_leverage": 20.84,
   "operating_timezone": "America/New_York",
   "events": [
     {
