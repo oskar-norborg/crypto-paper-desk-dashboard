@@ -4915,8 +4915,8 @@
   "agents": {
     "Scanner": {
       "status": "ready",
-      "last_run": "2026-11-15T19:01:47-05:00",
-      "note": "19:01 ET cycle: 30 marks, opened BTC + SOL longs, XRP held"
+      "last_run": "2026-11-15T19:56:13-05:00",
+      "note": "last scan 19:55 ET"
     },
     "Rug Check": {
       "status": "idle",
@@ -10388,13 +10388,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-11T16:03:34-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 1603 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
-      "reason": "scheduled race cycle; scan scans/2026-11-11_1603_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
-    },
-    {
       "t": "2026-11-11T16:03:35-05:00",
       "agent": "Risk",
       "kind": "check",
@@ -11968,6 +11961,13 @@
       "text": "PAPER CLOSE SOL-USD @ 71.85 \u00b7 P&L $-16600.00",
       "reason": "STOP HIT: 5m low 71.39 (19:30\u201319:45 bar) < stop 71.85; 15m 19:15 close 72.03 had already broken 72.15 invalidation",
       "fill_id": "2026-11-15_SOL-USD_580"
+    },
+    {
+      "t": "2026-11-15T19:56:13-05:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "Scan 19:55 ET: 30 marks, 0 failed; 3 longs stopped (-1,317.85); flat; no new edge",
+      "reason": "scans/2026-11-15_1955_scan.md"
     }
   ],
   "scanner_feed": [
@@ -12883,7 +12883,7 @@
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-15T19:56:02-05:00",
+  "updated_at": "2026-11-15T19:56:13-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
