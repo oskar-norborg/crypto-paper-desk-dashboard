@@ -5014,8 +5014,8 @@
   "agents": {
     "Scanner": {
       "status": "ready",
-      "last_run": "2026-11-16T04:01:52-05:00",
-      "note": "04:00 ET cycle: BTC short held, ETH short opened"
+      "last_run": "2026-11-16T08:01:33-05:00",
+      "note": "08:00 ET cycle: hold BTC/ETH shorts, open SOL short"
     },
     "Rug Check": {
       "status": "idle",
@@ -10539,15 +10539,6 @@
     {
       "t": "2026-11-11T16:03:44-05:00",
       "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 953.2 SOL-USD @ 84.83 \u00b7 notional $80,860 (50x, margin $1,617) \u00b7 stop 85.68 \u00b7 tgt 83.81 \u00b7 risk $810.22",
-      "reason": "RACE redeploy 1603 ET: BTC/ETH tilt short. 24h +1.89%. SOL-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 85.08; session 5m low 84.42; 15m detail [('14:15', 84.81, 84.9, 84.42), ('14:30', 84.62, 84.81, 84.51), ('14:45', 84.76, 84.78, 84.54), ('15:00', 84.92, 85.03, 84.67), ('15:15', 84.85, 85.02, 84.79), ('15:30', 84.84, 84.91, 84.74), ('15:45', 84.96, 85.08, 84.78), ('16:00', 84.82, 84.97, 84.77)]. Notional $80,860 @ 50x (margin $1,617), risk $810 (3.7% eq, warn-only). T1 83.81, T2 82.81.",
-      "fill_id": "2026-11-11_SOL-USD_464",
-      "card": "RACE_SOL_SHORT_1603"
-    },
-    {
-      "t": "2026-11-11T16:03:44-05:00",
-      "agent": "Executor",
       "kind": "plan",
       "text": "1603 ET: closed 1; opened {'XRP-USD': True, 'SOL-USD': True}; held ['ETH-USD', 'SOL-USD', 'XRP-USD']",
       "reason": "race mode: direction=short; closes=1; opens_ok={'XRP-USD': True, 'SOL-USD': True}; cash_pool after cushion; plateau not acceptable"
@@ -12123,6 +12114,13 @@
       "reason": "Watch trigger fired: SOL 15m close < 70.6 at 07:15 ET (70.53) and 07:45 (70.56); 07:30 bounce to 70.89 failed (lower high under 06:00 71.88 / 07:00 71.33); new 24h low 70.36, BTC/ETH/XRP breaking together. Short continuation toward 69.6.",
       "fill_id": "2026-11-16_SOL-USD_588",
       "card": null
+    },
+    {
+      "t": "2026-11-16T08:01:33-05:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "08:00 ET cycle: hold BTC/ETH shorts, open SOL short",
+      "reason": "equity 354979.14, gap 645020.86; scans/2026-11-16_0800_scan.md"
     }
   ],
   "scanner_feed": [
@@ -13042,7 +13040,7 @@
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-16T08:01:03-05:00",
+  "updated_at": "2026-11-16T08:01:33-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
