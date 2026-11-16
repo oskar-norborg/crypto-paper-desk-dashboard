@@ -6,12 +6,12 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 434023.14,
-  "cash": 363916.74,
+  "equity": 423758.49,
+  "cash": 292074.78,
   "realized_pnl": 383663.14,
-  "unrealized_pnl": 360.0,
-  "day_pnl": -9030.0,
-  "day_pnl_pct": -0.02038,
+  "unrealized_pnl": -9904.65,
+  "day_pnl": -19294.65,
+  "day_pnl_pct": -0.04355,
   "day_baseline_date": "2026-11-15",
   "day_baseline_equity": 443053.14,
   "open_positions": [
@@ -41,9 +41,36 @@ window.__DESK_STATE__ = {
       "mark_at": "2026-11-15T17:57:06-05:00",
       "unrealized_pnl": 360.0,
       "exposure": 3487680.0
+    },
+    {
+      "id": "2026-11-15_BTC-USD_579",
+      "symbol": "BTC-USD",
+      "side": "long",
+      "size": 55.0,
+      "entry": 65310.87,
+      "notional": 3592097.85,
+      "stop": 64900.0,
+      "target": 66100.0,
+      "target2": 66800.0,
+      "invalidation": "15m close < 65,000 (back under reclaimed level) ",
+      "risk_usd": 22597.85,
+      "risk_pct_equity": 0.05207,
+      "opened_at": "2026-11-15T19:01:17-05:00",
+      "card": null,
+      "reason": "BTC watch trigger fired: 15m closes 18:30 (65,292) and 18:45 (65,315) ET above 65,200 after 18:15 flush to 64,791 held; reclaim toward 24h high 66,100. Risk ~5% equity.",
+      "price_source": "Coinbase Exchange public BTC-USD ticker ask (unauthenticated) 19:01 ET",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 71841.96,
+      "mark": 65124.24,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-15T17:57:05-05:00",
+      "unrealized_pnl": -10264.65,
+      "exposure": 3581833.2
     }
   ],
-  "open_count": 1,
+  "open_count": 2,
   "closed_positions": [
     {
       "type": "close",
@@ -4853,7 +4880,7 @@ window.__DESK_STATE__ = {
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 434023.14,
+  "max_risk_usd": 423758.49,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -4430531.4,
   "paused": false,
@@ -4908,13 +4935,13 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-15T17:56:55-05:00",
-      "note": "last: paper fill XRP-USD"
+      "last_run": "2026-11-15T19:01:17-05:00",
+      "note": "last: paper fill BTC-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-15T17:56:55-05:00",
-      "note": "logged 2026-11-15_XRP-USD_578"
+      "last_run": "2026-11-15T19:01:17-05:00",
+      "note": "logged 2026-11-15_BTC-USD_579"
     },
     "Equity": {
       "status": "ready",
@@ -10332,16 +10359,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-15T17:57:06-05:00",
       "equity": 434023.14,
       "kind": "mark"
+    },
+    {
+      "t": "2026-11-15T19:01:17-05:00",
+      "equity": 423758.49,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-11T15:02:49-05:00",
-      "agent": "Scanner",
-      "kind": "scan",
-      "text": "CHAOS race cycle 1502 ET: refresh public marks; check opens (long+short) vs 5m/15m; scan watchlist; redeploy if margin free",
-      "reason": "scheduled race cycle; scan scans/2026-11-11_1502_scan.md; public Coinbase ticker+stats+candles only; plateau not acceptable"
-    },
     {
       "t": "2026-11-11T15:02:51-05:00",
       "agent": "Risk",
@@ -11909,6 +11934,15 @@ window.__DESK_STATE__ = {
       "reason": "XRP 15m close >0.9650 confirmed (17:15 0.9692) and next bar held (17:30 0.9690); higher lows from 0.9597; reclaim toward 24h high 0.9792 then 0.996. Risk ~10% equity.",
       "fill_id": "2026-11-15_XRP-USD_578",
       "card": null
+    },
+    {
+      "t": "2026-11-15T19:01:17-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL long 55 BTC-USD @ 65310.9 \u00b7 notional $3,592,098 (50x, margin $71,842) \u00b7 stop 64900 \u00b7 tgt 66100 \u00b7 risk $22,597.85",
+      "reason": "BTC watch trigger fired: 15m closes 18:30 (65,292) and 18:45 (65,315) ET above 65,200 after 18:15 flush to 64,791 held; reclaim toward 24h high 66,100. Risk ~5% equity.",
+      "fill_id": "2026-11-15_BTC-USD_579",
+      "card": null
     }
   ],
   "scanner_feed": [
@@ -12824,7 +12858,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-15T17:57:06-05:00",
+  "updated_at": "2026-11-15T19:01:17-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -12840,10 +12874,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 69746.4,
-  "exposure": 3487680.0,
-  "buying_power": 18213477.0,
-  "effective_leverage": 8.04,
+  "margin_used": 141588.36,
+  "exposure": 7069513.2,
+  "buying_power": 14118411.3,
+  "effective_leverage": 16.68,
   "operating_timezone": "America/New_York",
   "events": [
     {
