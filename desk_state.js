@@ -6,16 +6,44 @@ window.__DESK_STATE__ = {
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 248110.84,
-  "cash": 248110.84,
+  "equity": 280465.84,
+  "cash": 193449.94,
   "realized_pnl": 198110.84,
-  "unrealized_pnl": 0.0,
-  "day_pnl": -74641.7,
-  "day_pnl_pct": -0.23127,
+  "unrealized_pnl": 32355.0,
+  "day_pnl": -42286.7,
+  "day_pnl_pct": -0.13102,
   "day_baseline_date": "2026-11-16",
   "day_baseline_equity": 322752.54,
-  "open_positions": [],
-  "open_count": 0,
+  "open_positions": [
+    {
+      "id": "2026-11-16_ETH-USD_592",
+      "symbol": "ETH-USD",
+      "side": "short",
+      "size": 1500.0,
+      "entry": 1822.03,
+      "notional": 2733045.0,
+      "stop": 1846.0,
+      "target": 1786.0,
+      "target2": null,
+      "invalidation": "15m close > 1,840 (reclaims squeeze midpoint)",
+      "risk_usd": 35955.0,
+      "risk_pct_equity": 0.14492,
+      "opened_at": "2026-11-16T10:57:46-05:00",
+      "card": null,
+      "reason": "Failed NY-open squeeze: 09:30 wick to 1,865 fully retraced (10:00 15m close 1,809.7 < 1,818 failed-bounce trigger); short the weak bounce into 1,820s under the 10:00 lower high 1,845",
+      "price_source": "coinbase_exchange_public_ticker 2026-11-16T10:57:37-05:00 ET (exch 2026-11-16T15:57:37Z) api.exchange.coinbase.com",
+      "override": null,
+      "paper_only": true,
+      "leverage": 50.0,
+      "margin": 54660.9,
+      "mark": 1800.46,
+      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
+      "mark_at": "2026-11-16T09:02:24-05:00",
+      "unrealized_pnl": 32355.0,
+      "exposure": 2700690.0
+    }
+  ],
+  "open_count": 1,
   "closed_positions": [
     {
       "type": "close",
@@ -4944,7 +4972,7 @@ window.__DESK_STATE__ = {
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 248110.84,
+  "max_risk_usd": 280465.84,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -3227525.4,
   "paused": false,
@@ -4999,13 +5027,13 @@ window.__DESK_STATE__ = {
     },
     "Executor": {
       "status": "ready",
-      "last_run": "2026-11-16T09:57:43-05:00",
-      "note": "last: closed ETH-USD"
+      "last_run": "2026-11-16T10:57:46-05:00",
+      "note": "last: paper fill ETH-USD"
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-16T08:01:01-05:00",
-      "note": "logged 2026-11-16_SOL-USD_588"
+      "last_run": "2026-11-16T10:57:46-05:00",
+      "note": "logged 2026-11-16_ETH-USD_592"
     },
     "Equity": {
       "status": "ready",
@@ -10523,16 +10551,14 @@ window.__DESK_STATE__ = {
       "t": "2026-11-16T09:57:43-05:00",
       "equity": 248110.84,
       "kind": "close"
+    },
+    {
+      "t": "2026-11-16T10:57:46-05:00",
+      "equity": 280465.84,
+      "kind": "fill"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-11T17:08:21-05:00",
-      "agent": "Risk",
-      "kind": "check",
-      "text": "SOL-USD short 953.2 @ 84.83: HOLD \u2014 no trigger",
-      "reason": "Coinbase public 5m since 2026-11-11T16:03:44-05:00: maxH=85.05 minL=84.42 (stop 85.68; T1 83.81/T2 82.81); 15m max close=84.88 (inv 85.03). No close trigger."
-    },
     {
       "t": "2026-11-11T17:08:27-05:00",
       "agent": "Rug Check",
@@ -12114,6 +12140,15 @@ window.__DESK_STATE__ = {
       "kind": "scan",
       "text": "Scan 09:57 ET: 30 marks, 0 failed; BTC/ETH shorts stopped on NY-open squeeze; flat, no new opens",
       "reason": "v2.1-FULL-CHAOS cycle; no clean long trigger (vertical bar into 24h highs). scans/2026-11-16_0957_scan.md"
+    },
+    {
+      "t": "2026-11-16T10:57:46-05:00",
+      "agent": "Executor",
+      "kind": "fill",
+      "text": "PAPER FILL short 1500 ETH-USD @ 1822.03 \u00b7 notional $2,733,045 (50x, margin $54,661) \u00b7 stop 1846 \u00b7 tgt 1786 \u00b7 risk $35,955.00",
+      "reason": "Failed NY-open squeeze: 09:30 wick to 1,865 fully retraced (10:00 15m close 1,809.7 < 1,818 failed-bounce trigger); short the weak bounce into 1,820s under the 10:00 lower high 1,845",
+      "fill_id": "2026-11-16_ETH-USD_592",
+      "card": null
     }
   ],
   "scanner_feed": [
@@ -13033,7 +13068,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-16T09:58:09-05:00",
+  "updated_at": "2026-11-16T10:57:46-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
@@ -13049,10 +13084,10 @@ window.__DESK_STATE__ = {
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 0,
-  "exposure": 0.0,
-  "buying_power": 12405542.0,
-  "effective_leverage": 0.0,
+  "margin_used": 54660.9,
+  "exposure": 2700690.0,
+  "buying_power": 11322602.0,
+  "effective_leverage": 9.63,
   "operating_timezone": "America/New_York",
   "events": [
     {
