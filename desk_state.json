@@ -5011,8 +5011,8 @@
   "agents": {
     "Scanner": {
       "status": "ready",
-      "last_run": "2026-11-16T11:58:26-05:00",
-      "note": "11:58 ET cycle: HOLD ETH short 1,500 @1,822.03 (no stop/target/invalidation hit); no new opens"
+      "last_run": "2026-11-16T14:04:51-05:00",
+      "note": "14:04 ET cycle: ETH short HOLD (no stop/target/invalidation); no new opens"
     },
     "Rug Check": {
       "status": "idle",
@@ -10582,14 +10582,6 @@
       "t": "2026-11-11T17:52:14-05:00",
       "agent": "Executor",
       "kind": "close",
-      "text": "PAPER CLOSE ETH-USD @ 2059.27 \u00b7 P&L $+7618.45",
-      "reason": "EOD review: T1 2059.27 hit (short): Coinbase public 5m 17:35 ET low 2058.09 (<= 2059.27); stop 2096.71 never touched (maxH since 17:05 2079.44). Paper close at stated T1 per desk exit convention.",
-      "fill_id": "2026-11-11_ETH-USD_460"
-    },
-    {
-      "t": "2026-11-11T17:52:14-05:00",
-      "agent": "Executor",
-      "kind": "close",
       "text": "PAPER CLOSE SOL-USD @ 83.81 \u00b7 P&L $+972.26",
       "reason": "EOD review: T1 83.81 hit (short): Coinbase public 5m 17:40 ET low 83.63 (<= 83.81); stop 85.68 never touched (maxH since 17:05 84.82). Paper close at stated T1 per desk exit convention.",
       "fill_id": "2026-11-11_SOL-USD_464"
@@ -12168,6 +12160,13 @@
       "kind": "scan",
       "text": "13:04 ET cycle: 30/30 marks; ETH short 1,500 @1,822.03 HOLD (5m hi 1,835.58 < stop 1,846; lo 1,813.60 > tgt 1,786); no new opens",
       "reason": "Bounce capped under 1,845 lower high; 15m closes rolling over. Scan: scans/2026-11-16_1304_scan.md"
+    },
+    {
+      "t": "2026-11-16T14:04:51-05:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "14:04 ET cycle: ETH short HOLD (no stop/target/invalidation); no new opens",
+      "reason": "Lower-high structure intact under 1,835.6; BTC/SOL/XRP no trigger breaks"
     }
   ],
   "scanner_feed": [
