@@ -5,44 +5,16 @@
   "currency": "USD",
   "rules_version": "2.1-full-chaos",
   "starting_equity": 50000,
-  "equity": 370145.29,
-  "cash": 339873.29,
-  "realized_pnl": 318945.29,
-  "unrealized_pnl": 1200.0,
-  "day_pnl": -72907.85,
-  "day_pnl_pct": -0.16456,
+  "equity": 352345.29,
+  "cash": 352345.29,
+  "realized_pnl": 302345.29,
+  "unrealized_pnl": 0.0,
+  "day_pnl": -90707.85,
+  "day_pnl_pct": -0.20473,
   "day_baseline_date": "2026-11-15",
   "day_baseline_equity": 443053.14,
-  "open_positions": [
-    {
-      "id": "2026-11-15_SOL-USD_580",
-      "symbol": "SOL-USD",
-      "side": "long",
-      "size": 20000.0,
-      "entry": 72.68,
-      "notional": 1453600.0,
-      "stop": 71.85,
-      "target": 74.0,
-      "target2": 75.0,
-      "invalidation": "15m close < 72.15",
-      "risk_usd": 16600.0,
-      "risk_pct_equity": 0.03917,
-      "opened_at": "2026-11-15T19:01:18-05:00",
-      "card": null,
-      "reason": "SOL watch trigger: 15m closes >72.25 held (18:15 72.37, 18:30 72.61, 18:45 72.63); higher low 71.88; break of 73.24 24h high toward 74. Risk ~4% equity.",
-      "price_source": "Coinbase Exchange public SOL-USD ticker ask (unauthenticated) 19:01 ET",
-      "override": null,
-      "paper_only": true,
-      "leverage": 50.0,
-      "margin": 29072.0,
-      "mark": 72.74,
-      "mark_source": "coinbase_exchange_public_ticker (unauthenticated, api.exchange.coinbase.com)",
-      "mark_at": "2026-11-15T19:01:19-05:00",
-      "unrealized_pnl": 1200.0,
-      "exposure": 1454800.0
-    }
-  ],
-  "open_count": 1,
+  "open_positions": [],
+  "open_count": 0,
   "closed_positions": [
     {
       "type": "close",
@@ -4882,11 +4854,28 @@
       "reason": "STOP HIT: 5m low 64,627 (19:30\u201319:45 bar) < stop 64,900; 15m 19:15 close 64,962 had already broken 65,000 invalidation",
       "price_source": "Coinbase Exchange public 5m candles (unauthenticated) 19:00\u201319:55 ET; paper stop fill at stop level",
       "paper_only": true
+    },
+    {
+      "type": "close",
+      "id": "2026-11-15_SOL-USD_580",
+      "symbol": "SOL-USD",
+      "side": "long",
+      "size": 20000.0,
+      "entry": 72.68,
+      "exit": 71.85,
+      "pnl": -16600.0,
+      "notional": 1453600.0,
+      "leverage": 50.0,
+      "margin": 29072.0,
+      "closed_at": "2026-11-15T19:56:02-05:00",
+      "reason": "STOP HIT: 5m low 71.39 (19:30\u201319:45 bar) < stop 71.85; 15m 19:15 close 72.03 had already broken 72.15 invalidation",
+      "price_source": "Coinbase Exchange public 5m candles (unauthenticated) 19:00\u201319:55 ET; paper stop fill at stop level",
+      "paper_only": true
     }
   ],
   "max_open": 200,
   "max_risk_pct": 1.0,
-  "max_risk_usd": 370145.29,
+  "max_risk_usd": 352345.29,
   "daily_loss_pause_pct": -10.0,
   "daily_loss_pause_usd": -4430531.4,
   "paused": false,
@@ -4942,7 +4931,7 @@
     "Executor": {
       "status": "ready",
       "last_run": "2026-11-15T19:56:02-05:00",
-      "note": "last: closed BTC-USD"
+      "note": "last: closed SOL-USD"
     },
     "Logger": {
       "status": "ready",
@@ -10390,16 +10379,14 @@
       "t": "2026-11-15T19:56:02-05:00",
       "equity": 370145.29,
       "kind": "close"
+    },
+    {
+      "t": "2026-11-15T19:56:02-05:00",
+      "equity": 352345.29,
+      "kind": "close"
     }
   ],
   "activity": [
-    {
-      "t": "2026-11-11T15:03:00-05:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: 1502 ET race cycle \u00b7 hold/rotate check \u00b7 eq $22,081 \u00b7 exposure $1,088,123 (49.28x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
     {
       "t": "2026-11-11T16:03:34-05:00",
       "agent": "Scanner",
@@ -11973,6 +11960,14 @@
       "text": "PAPER CLOSE BTC-USD @ 64900 \u00b7 P&L $-22597.85",
       "reason": "STOP HIT: 5m low 64,627 (19:30\u201319:45 bar) < stop 64,900; 15m 19:15 close 64,962 had already broken 65,000 invalidation",
       "fill_id": "2026-11-15_BTC-USD_579"
+    },
+    {
+      "t": "2026-11-15T19:56:02-05:00",
+      "agent": "Executor",
+      "kind": "close",
+      "text": "PAPER CLOSE SOL-USD @ 71.85 \u00b7 P&L $-16600.00",
+      "reason": "STOP HIT: 5m low 71.39 (19:30\u201319:45 bar) < stop 71.85; 15m 19:15 close 72.03 had already broken 72.15 invalidation",
+      "fill_id": "2026-11-15_SOL-USD_580"
     }
   ],
   "scanner_feed": [
@@ -12904,10 +12899,10 @@
     "after": "manual owner restore only \u2014 auto-restore routine deleted 2026-11-04",
     "upgraded_at": "2026-11-04T19:53:40.264682-05:00"
   },
-  "margin_used": 29072.0,
-  "exposure": 1454800.0,
-  "buying_power": 17052464.5,
-  "effective_leverage": 3.93,
+  "margin_used": 0,
+  "exposure": 0.0,
+  "buying_power": 17617264.5,
+  "effective_leverage": 0.0,
   "operating_timezone": "America/New_York",
   "events": [
     {
