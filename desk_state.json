@@ -4987,8 +4987,8 @@
   "agents": {
     "Scanner": {
       "status": "ready",
-      "last_run": "2026-11-16T00:06:30-05:00",
-      "note": "00:05 ET cycle: BTC short 70 @64,626.69 on 15m break < 64,900; scan scans/2026-11-16_0005_scan.md"
+      "last_run": "2026-11-16T04:01:52-05:00",
+      "note": "04:00 ET cycle: BTC short held, ETH short opened"
     },
     "Rug Check": {
       "status": "idle",
@@ -10501,15 +10501,6 @@
   "activity": [
     {
       "t": "2026-11-11T16:03:44-05:00",
-      "agent": "Executor",
-      "kind": "fill",
-      "text": "PAPER FILL short 177359 XRP-USD @ 1.0638 \u00b7 notional $188,674 (50x, margin $3,773) \u00b7 stop 1.0723 \u00b7 tgt 1.0508 \u00b7 risk $1,507.55",
-      "reason": "RACE redeploy 1603 ET: BTC/ETH tilt short. 24h +0.36%. XRP-USD continuation short under intact BTC/ETH bearish 15m tilt; stop above live bounce high 1.0666; session 5m low 1.0538; 15m detail [('14:15', 1.0589, 1.0605, 1.0548), ('14:30', 1.0563, 1.0593, 1.0538), ('14:45', 1.0586, 1.0599, 1.0554), ('15:00', 1.0605, 1.0612, 1.0573), ('15:15', 1.06, 1.0625, 1.0592), ('15:30', 1.0609, 1.0614, 1.0586), ('15:45', 1.0648, 1.0666, 1.0609), ('16:00', 1.0632, 1.0655, 1.0629)]. Notional $188,674 @ 50x (margin $3,773), risk $1,508 (6.8% eq, warn-only). T1 1.0508, T2 1.0408.",
-      "fill_id": "2026-11-11_XRP-USD_463",
-      "card": "RACE_XRP_SHORT_1603"
-    },
-    {
-      "t": "2026-11-11T16:03:44-05:00",
       "agent": "Rug Check",
       "kind": "check",
       "text": "SOL-USD PASS (chaos: non-blocking)",
@@ -12086,6 +12077,13 @@
       "reason": "Watch trigger fired: ETH 15m closes below 1,811 since 01:00 ET (1,806.79) with lower highs 1,823.46 (02:45) -> 1,809.7 -> 1,807.7 -> 1,804.3 and session low 1,802; BTC short working in tandem, SOL/XRP pinned near lows. Short continuation toward 24h low 1,771.56.",
       "fill_id": "2026-11-16_ETH-USD_587",
       "card": null
+    },
+    {
+      "t": "2026-11-16T04:01:52-05:00",
+      "agent": "Scanner",
+      "kind": "scan",
+      "text": "04:00 ET cycle: BTC short held, ETH short opened",
+      "reason": "ETH 15m < 1,811 trigger fired; BTC stop/invalidation intact; scan scans/2026-11-16_0400_scan.md"
     }
   ],
   "scanner_feed": [
@@ -13005,7 +13003,7 @@
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-16T04:01:07-05:00",
+  "updated_at": "2026-11-16T04:01:52-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
