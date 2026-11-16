@@ -5021,8 +5021,8 @@ window.__DESK_STATE__ = {
     },
     "Logger": {
       "status": "ready",
-      "last_run": "2026-11-16T10:57:46-05:00",
-      "note": "logged 2026-11-16_ETH-USD_592"
+      "last_run": "2026-11-16T17:54:51-05:00",
+      "note": "EOD review 2026-11-16: equity $234,325.84 \u00b7 day -$88,426.70 (-27.40%) \u00b7 gap to $1M $765,674.16 \u00b7 flat \u00b7 blown_up false"
     },
     "Equity": {
       "status": "ready",
@@ -10584,13 +10584,6 @@ window.__DESK_STATE__ = {
   ],
   "activity": [
     {
-      "t": "2026-11-11T17:52:54-05:00",
-      "agent": "Logger",
-      "kind": "review",
-      "text": "EOD review 2026-11-11: eq $31,574.50, gap $968,425.50 (3.16%), day -$6,822.04 (-17.77%), flat, blown_up=false",
-      "reason": "Scheduled EOD paper review; closed ETH/SOL/XRP shorts at stated T1 (+$10,896.38) on Coinbase public 5m evidence; review at reviews/2026-11-11.md"
-    },
-    {
       "t": "2026-11-11T18:02:33-05:00",
       "agent": "Scanner",
       "kind": "scan",
@@ -12171,6 +12164,13 @@ window.__DESK_STATE__ = {
       "text": "PAPER CLOSE ETH-USD @ 1831.22 \u00b7 P&L $-13785.00",
       "reason": "Early rotate (thesis broken): the 16:30 ET 15m close of 1,826.49 and the 16:45 close of 1,826.94 are above the 1,826 rotate line, clearing the 13:45 high of 1,826.3. The failed-bounce short is no longer valid. Cut before the 1,846 stop.",
       "fill_id": "2026-11-16_ETH-USD_592"
+    },
+    {
+      "t": "2026-11-16T17:54:51-05:00",
+      "agent": "Logger",
+      "kind": "review",
+      "text": "EOD review 2026-11-16: equity $234,325.84 \u00b7 day -$88,426.70 (-27.40%) \u00b7 gap to $1M $765,674.16 \u00b7 flat \u00b7 blown_up false",
+      "reason": "Scheduled weekday EOD paper review (reviews/2026-11-16.md); final public marks 30/30; plan: BTC long >65,627 or ETH reject short <1,826, range-break shorts <1,785/<64,030"
     }
   ],
   "scanner_feed": [
@@ -13088,7 +13088,7 @@ window.__DESK_STATE__ = {
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-16T17:53:52-05:00",
+  "updated_at": "2026-11-16T17:54:51-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
