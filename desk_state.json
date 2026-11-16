@@ -10574,13 +10574,6 @@
   ],
   "activity": [
     {
-      "t": "2026-11-11T17:08:28-05:00",
-      "agent": "Logger",
-      "kind": "batch",
-      "text": "CHAOS: 1708 ET race cycle \u00b7 hold/rotate check \u00b7 eq $24,287 \u00b7 exposure $1,027,796 (42.32x)",
-      "reason": "batch checkpoint \u2014 public marks refreshed, equity recomputed, dashboard synced"
-    },
-    {
       "t": "2026-11-11T17:52:14-05:00",
       "agent": "Executor",
       "kind": "close",
@@ -12163,6 +12156,13 @@
       "kind": "scan",
       "text": "11:58 ET cycle: HOLD ETH short 1,500 @1,822.03 (no stop/target/invalidation hit); no new opens",
       "reason": "Bounce capped under 1,845 lower high; BTC 64,030 break trigger not hit"
+    },
+    {
+      "t": "2026-11-16T13:04:25-05:00",
+      "agent": "scanner",
+      "kind": "scan",
+      "text": "13:04 ET cycle: 30/30 marks; ETH short 1,500 @1,822.03 HOLD (5m hi 1,835.58 < stop 1,846; lo 1,813.60 > tgt 1,786); no new opens",
+      "reason": "Bounce capped under 1,845 lower high; 15m closes rolling over. Scan: scans/2026-11-16_1304_scan.md"
     }
   ],
   "scanner_feed": [
@@ -13082,7 +13082,7 @@
     "total": 30,
     "note": "Public unauthenticated ticker reads for display and paper mark-to-market only. No keys. No orders."
   },
-  "updated_at": "2026-11-16T13:04:15-05:00",
+  "updated_at": "2026-11-16T13:04:25-05:00",
   "timezone_note": "All desk timestamps America/New_York (ET); exchange_time_utc fields are UTC as returned by the source.",
   "accounting": "v2.0-chaos margin model: on open reserve margin = notional / leverage from cash; equity = cash + \u03a3 margin + \u03a3 unrealized; exposure = \u03a3 |mark\u00d7size|; buying_power = equity\u00d720 \u2212 exposure; on close cash += margin + P&L. Legacy v1.x positions are fully reserved (margin = notional). PAPER ONLY.",
   "history_note": "v1.0 era ($1,000 start) closed with realized P&L $-1.45, final equity $998.55 on 2026-10-27; reset to $50,000 paper under RISK_RULES v1.1. closed_positions keeps v1.0 history.",
